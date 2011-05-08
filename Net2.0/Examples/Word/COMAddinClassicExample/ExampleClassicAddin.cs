@@ -199,7 +199,6 @@ namespace COMAddinClassicExample
             commandBarBtn.FaceId = 9;
             commandBarBtn.Caption = "ToolbarButton";
             commandBarBtn.ClickEvent += new LateBindingApi.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
-            commandBarBtn.GetType().InvokeMember("", BindingFlags.InvokeMethod, null, commandBarBtn, Array);
 
             /* create menu */
             commandBar = _wordApplication.CommandBars.get_Item("Menu Bar");
