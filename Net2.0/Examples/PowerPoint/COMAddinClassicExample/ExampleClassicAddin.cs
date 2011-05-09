@@ -5,11 +5,11 @@ using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-using PowerPoint = LateBindingApi.PowerPointApi;
-using Office = LateBindingApi.OfficeApi;
+using PowerPoint = NetOffice.PowerPointApi;
+using Office = NetOffice.OfficeApi;
 
-using LateBindingApi.PowerPointApi.Enums;
-using LateBindingApi.OfficeApi.Enums;
+using NetOffice.PowerPointApi.Enums;
+using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinClassicExample
 {
@@ -58,7 +58,7 @@ namespace COMAddinClassicExample
                 RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, true);
                 rk.SetValue("LoadBehavior", Convert.ToInt32(3));
                 rk.SetValue("FriendlyName", _addinName);
-                rk.SetValue("Description", "LateBindingApi COMAddinExample with classic UI");
+                rk.SetValue("Description", "NetOffice COMAddinExample with classic UI");
                 rk.Close();
             }
             catch (Exception ex)
@@ -158,7 +158,7 @@ namespace COMAddinClassicExample
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.FaceId = 9;
             commandBarBtn.Caption = "ToolbarButton";
-            commandBarBtn.ClickEvent += new LateBindingApi.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+            commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
             /* create menu */
             commandBar = _powerApplication.CommandBars.get_Item("Menu Bar");
@@ -173,7 +173,7 @@ namespace COMAddinClassicExample
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.FaceId = 9;
             commandBarBtn.Caption = "MenuButton";
-            commandBarBtn.ClickEvent += new LateBindingApi.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+            commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
             /* create context menu */ 
             commandBarPop = (Office.CommandBarPopup)_powerApplication.CommandBars.get_Item("Frames").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
@@ -185,7 +185,7 @@ namespace COMAddinClassicExample
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "ContextButton";
             commandBarBtn.FaceId = 9;
-            commandBarBtn.ClickEvent += new LateBindingApi.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+            commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace COMAddinClassicExample
         /// </summary>
         /// <param name="Ctrl"></param>
         /// <param name="CancelDefault"></param>
-        void commandBarBtn_ClickEvent(LateBindingApi.OfficeApi.CommandBarButton Ctrl, ref bool CancelDefault)
+        void commandBarBtn_ClickEvent(NetOffice.OfficeApi.CommandBarButton Ctrl, ref bool CancelDefault)
         {
             string message = string.Format("Click from Button {0}.", Ctrl.Caption);
             MessageBox.Show(message, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Information);

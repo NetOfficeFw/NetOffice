@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using LateBindingApi.Core;
-using Excel = LateBindingApi.ExcelApi;
+using Excel = NetOffice.ExcelApi;
 
 namespace Tutorial03
 {
@@ -30,7 +30,7 @@ namespace Tutorial03
 
             // create new Workbook & attach close event trigger
             Excel.Workbook book = application.Workbooks.Add();
-            book.BeforeCloseEvent += new LateBindingApi.ExcelApi.Workbook_BeforeCloseEventHandler(book_BeforeCloseEvent);
+            book.BeforeCloseEvent += new Excel.Workbook_BeforeCloseEventHandler(book_BeforeCloseEvent);
 
             // we dispose the instance. the parameter false signals to api dont release the event listener
             // set parameter to true and the event listener will stopped and you dont get events for the instance

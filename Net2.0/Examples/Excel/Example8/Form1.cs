@@ -8,8 +8,8 @@ using System.Windows.Forms;
 using System.Reflection;
 
 using LateBindingApi.Core;
-using Excel = LateBindingApi.ExcelApi;
-using LateBindingApi.ExcelApi.Enums;
+using Excel = NetOffice.ExcelApi;
+using NetOffice.ExcelApi.Enums;
 
 namespace Example8
 {

@@ -4,8 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 
 using LateBindingApi.Core;
-using Outlook = LateBindingApi.OutlookApi;
-using LateBindingApi.OutlookApi.Enums; 
+using Outlook = NetOffice.OutlookApi;
+using NetOffice.OutlookApi.Enums; 
 
 namespace Example1
 {

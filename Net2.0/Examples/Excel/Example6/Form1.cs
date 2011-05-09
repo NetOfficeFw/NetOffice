@@ -4,8 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 
 using LateBindingApi.Core;
-using Excel = LateBindingApi.ExcelApi;
-using LateBindingApi.ExcelApi.Enums;
+using Excel = NetOffice.ExcelApi;
+using NetOffice.ExcelApi.Enums;
 
 namespace Example6
 {

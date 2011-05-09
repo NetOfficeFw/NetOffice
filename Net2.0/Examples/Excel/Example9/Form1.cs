@@ -3,9 +3,9 @@ using System.Windows.Forms;
 using System.Reflection;
 
 using LateBindingApi.Core;
-using Excel = LateBindingApi.ExcelApi;
-using Office = LateBindingApi.OfficeApi;
-using LateBindingApi.OfficeApi.Enums;
+using Excel = NetOffice.ExcelApi;
+using Office = NetOffice.OfficeApi;
+using NetOffice.OfficeApi.Enums;
 
 namespace Example9
 {

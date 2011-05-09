@@ -4,8 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 
 using LateBindingApi.Core;
-using Access = LateBindingApi.AccessApi;
-using LateBindingApi.AccessApi.Enums; 
+using Access = NetOffice.AccessApi;
+using NetOffice.AccessApi.Enums; 
 
 namespace Example1
 {

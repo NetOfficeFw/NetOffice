@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using LateBindingApi.Core;
-using Excel = LateBindingApi.ExcelApi;
+using Excel = NetOffice.ExcelApi;
 
 namespace Tutorial02
 {

@@ -11,7 +11,7 @@ namespace SuperAddin
         #region Fields
 
         private IRibbonControl _ribbonControl;
-        private LateBindingApi.OfficeApi.CommandBarButton _buttonControl;
+        private NetOffice.OfficeApi.CommandBarButton _buttonControl;
         
         #endregion
 
@@ -22,7 +22,7 @@ namespace SuperAddin
             _ribbonControl = ribbonControl;
         }
 
-        internal ButtonClickArgs(LateBindingApi.OfficeApi.CommandBarButton buttonControl)
+        internal ButtonClickArgs(NetOffice.OfficeApi.CommandBarButton buttonControl)
         {
             _buttonControl = buttonControl;
         }
@@ -39,7 +39,7 @@ namespace SuperAddin
             }
         }
 
-        public LateBindingApi.OfficeApi.CommandBarButton ButtonControl
+        public NetOffice.OfficeApi.CommandBarButton ButtonControl
         {
             get 
             {

@@ -7,13 +7,13 @@ using System.Text;
 using System.Reflection;
 
 using LateBindingApi.Core;
-using Office = LateBindingApi.OfficeApi;
+using Office = NetOffice.OfficeApi;
 
-using Excel = LateBindingApi.ExcelApi;
-using Word = LateBindingApi.WordApi;
-using Outlook = LateBindingApi.OutlookApi;
-using PowerPoint = LateBindingApi.PowerPointApi;
-using Access = LateBindingApi.AccessApi;
+using Excel = NetOffice.ExcelApi;
+using Word = NetOffice.WordApi;
+using Outlook = NetOffice.OutlookApi;
+using PowerPoint = NetOffice.PowerPointApi;
+using Access = NetOffice.AccessApi;
   
 namespace SuperAddin.UIMapper
 {

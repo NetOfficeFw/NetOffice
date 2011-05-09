@@ -5,11 +5,11 @@ using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-using Outlook = LateBindingApi.OutlookApi;
-using Office = LateBindingApi.OfficeApi;
+using Outlook = NetOffice.OutlookApi;
+using Office = NetOffice.OfficeApi;
 
-using LateBindingApi.OutlookApi.Enums;
-using LateBindingApi.OfficeApi.Enums;
+using NetOffice.OutlookApi.Enums;
+using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinClassicExample
 {
@@ -162,7 +162,7 @@ namespace COMAddinClassicExample
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.FaceId = 9;
             commandBarBtn.Caption = "ToolbarButton";
-            commandBarBtn.ClickEvent += new LateBindingApi.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+            commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
             /* create menu */
             commandBar = _outlookApplication.ActiveExplorer().CommandBars.get_Item("Menu Bar");
@@ -177,7 +177,7 @@ namespace COMAddinClassicExample
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.FaceId = 9;
             commandBarBtn.Caption = "MenuButton";
-            commandBarBtn.ClickEvent += new LateBindingApi.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+            commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
         }
 
         /// <summary>
@@ -185,7 +185,7 @@ namespace COMAddinClassicExample
         /// </summary>
         /// <param name="Ctrl"></param>
         /// <param name="CancelDefault"></param>
-        void commandBarBtn_ClickEvent(LateBindingApi.OfficeApi.CommandBarButton Ctrl, ref bool CancelDefault)
+        void commandBarBtn_ClickEvent(NetOffice.OfficeApi.CommandBarButton Ctrl, ref bool CancelDefault)
         {
             string message = string.Format("Click from Button {0}.", Ctrl.Caption);
             MessageBox.Show(message, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Information);

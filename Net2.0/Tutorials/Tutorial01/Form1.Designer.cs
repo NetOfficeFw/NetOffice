@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.buttonStartExample = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.richTextBoxInfo = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // buttonStartExample
@@ -44,37 +44,31 @@
             this.buttonStartExample.UseVisualStyleBackColor = true;
             this.buttonStartExample.Click += new System.EventHandler(this.buttonStartExample_Click);
             // 
-            // textBox1
+            // richTextBoxInfo
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(25, 75);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(801, 227);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.Text = resources.GetString("textBox1.Text");
-            this.textBox1.WordWrap = false;
+            this.richTextBoxInfo.Location = new System.Drawing.Point(25, 80);
+            this.richTextBoxInfo.Name = "richTextBoxInfo";
+            this.richTextBoxInfo.Size = new System.Drawing.Size(801, 237);
+            this.richTextBoxInfo.TabIndex = 7;
+            this.richTextBoxInfo.Text = resources.GetString("richTextBoxInfo.Text");
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 329);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.richTextBoxInfo);
             this.Controls.Add(this.buttonStartExample);
             this.Name = "Form1";
             this.Text = "Tutorial01 - Understand COM Proxy Management";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button buttonStartExample;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxInfo;
     }
 }
 

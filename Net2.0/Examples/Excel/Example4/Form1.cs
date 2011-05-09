@@ -4,8 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 
 using LateBindingApi.Core;
-using Excel = LateBindingApi.ExcelApi;
-using LateBindingApi.OfficeApi.Enums;
+using Excel = NetOffice.ExcelApi;
+using NetOffice.OfficeApi.Enums;
 
 namespace Example4
 {
@@ -50,7 +50,7 @@ namespace Example4
             // save the book 
             string fileExtension = GetDefaultExtension(excelApplication);
             string workbookFile = string.Format("{0}\\Example04{1}", Environment.CurrentDirectory, fileExtension);
-            workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, LateBindingApi.ExcelApi.Enums.XlSaveAsAccessMode.xlExclusive);
+            workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode.xlExclusive);
 
             // close excel and dispose reference
             excelApplication.Quit();

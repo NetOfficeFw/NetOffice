@@ -117,19 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBoxInfo.Text" xml:space="preserve">
-    <value>In Tutorial01 you have seen, you must call the Dispose() method for a LateBindingApi Object there you not longer need.
-You have already seen the method dispose also all childs of the object.
-To help you to realize whats the count of open COM Proxies currently in your Application you the following options:
-
-public static int LateBindingApi.Core.Factory.ProxyCount;
-
-public static event Factory.ProxyCountChangedHandler ProxyCountChanged;
-
-
-This examples shows you using these 2 options.
-
-
-See source code for further info.</value>
-  </data>
 </root>

@@ -6,12 +6,12 @@ using System.Windows.Forms;
 using System.ComponentModel;
 
 using LateBindingApi.Core;
-using Office = LateBindingApi.OfficeApi;
-using Excel = LateBindingApi.ExcelApi;
-using Word = LateBindingApi.WordApi;
-using Outlook = LateBindingApi.OutlookApi;
-using PowerPoint = LateBindingApi.PowerPointApi;
-using Access = LateBindingApi.AccessApi;
+using Office = NetOffice.OfficeApi;
+using Excel = NetOffice.ExcelApi;
+using Word = NetOffice.WordApi;
+using Outlook = NetOffice.OutlookApi;
+using PowerPoint = NetOffice.PowerPointApi;
+using Access = NetOffice.AccessApi;
 
 namespace SuperAddin
 {

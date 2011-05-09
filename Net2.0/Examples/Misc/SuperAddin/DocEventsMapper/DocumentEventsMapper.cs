@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 
 using LateBindingApi.Core;
-using Excel = LateBindingApi.ExcelApi;
-using Word = LateBindingApi.WordApi;
+using Excel = NetOffice.ExcelApi;
+using Word = NetOffice.WordApi;
 
 namespace SuperAddin
 {

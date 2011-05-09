@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.buttonAddRemoveWorkbook = new System.Windows.Forms.Button();
-            this.textBoxInfo = new System.Windows.Forms.TextBox();
             this.buttonAddins = new System.Windows.Forms.Button();
             this.buttonWorkbook = new System.Windows.Forms.Button();
             this.buttonExcel = new System.Windows.Forms.Button();
             this.labelProxyCount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.richTextBoxInfo = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // buttonAddRemoveWorkbook
@@ -48,18 +47,6 @@
             this.buttonAddRemoveWorkbook.Text = "Add && Remove";
             this.buttonAddRemoveWorkbook.UseVisualStyleBackColor = true;
             this.buttonAddRemoveWorkbook.Click += new System.EventHandler(this.buttonAddRemoveWorkbook_Click);
-            // 
-            // textBoxInfo
-            // 
-            this.textBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInfo.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxInfo.Location = new System.Drawing.Point(143, 31);
-            this.textBoxInfo.Multiline = true;
-            this.textBoxInfo.Name = "textBoxInfo";
-            this.textBoxInfo.Size = new System.Drawing.Size(670, 312);
-            this.textBoxInfo.TabIndex = 12;
-            this.textBoxInfo.Text = resources.GetString("textBoxInfo.Text");
             // 
             // buttonAddins
             // 
@@ -114,13 +101,21 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Current COM Objects open in application";
             // 
+            // richTextBoxInfo
+            // 
+            this.richTextBoxInfo.Location = new System.Drawing.Point(153, 31);
+            this.richTextBoxInfo.Name = "richTextBoxInfo";
+            this.richTextBoxInfo.Size = new System.Drawing.Size(672, 312);
+            this.richTextBoxInfo.TabIndex = 14;
+            this.richTextBoxInfo.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(837, 399);
+            this.Controls.Add(this.richTextBoxInfo);
             this.Controls.Add(this.buttonAddRemoveWorkbook);
-            this.Controls.Add(this.textBoxInfo);
             this.Controls.Add(this.buttonAddins);
             this.Controls.Add(this.buttonWorkbook);
             this.Controls.Add(this.buttonExcel);
@@ -137,12 +132,12 @@
         #endregion
 
         private System.Windows.Forms.Button buttonAddRemoveWorkbook;
-        private System.Windows.Forms.TextBox textBoxInfo;
         private System.Windows.Forms.Button buttonAddins;
         private System.Windows.Forms.Button buttonWorkbook;
         private System.Windows.Forms.Button buttonExcel;
         private System.Windows.Forms.Label labelProxyCount;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox richTextBoxInfo;
     }
 }
 

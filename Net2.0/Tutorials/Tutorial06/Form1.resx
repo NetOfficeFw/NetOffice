@@ -117,15 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>All objects in LateBindingApi.Office there based on CoClasses or Interfaces are wrapping COM Proxies.
-It's necessary to release a created COM Proxy by client caller.
-In the MS Interop Assemblies you do that with Marshal.ReleaseComObject(object proxy);
-In LateBindingApi.Office any object has the Method Dispose() to do that.
-An implemented collection feature makes possible you dont must call Dispose() for any (implicitly) created object.
-
-This examples shows you using the Dispose() method to release an object and there created child objects.
-
-See source code for further info.</value>
-  </data>
 </root>

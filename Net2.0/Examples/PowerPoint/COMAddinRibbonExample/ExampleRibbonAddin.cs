@@ -4,11 +4,11 @@ using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-using PowerPoint = LateBindingApi.PowerPointApi;
-using Office = LateBindingApi.OfficeApi;
+using PowerPoint = NetOffice.PowerPointApi;
+using Office = NetOffice.OfficeApi;
 
-using LateBindingApi.PowerPointApi.Enums;
-using LateBindingApi.OfficeApi.Enums;
+using NetOffice.PowerPointApi.Enums;
+using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinRibbonExample
 {
@@ -43,7 +43,7 @@ namespace COMAddinRibbonExample
                 RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, true);
                 rk.SetValue("LoadBehavior", Convert.ToInt32(3));
                 rk.SetValue("FriendlyName", _addinName);
-                rk.SetValue("Description", "LateBindingApi COMAddinExample with ribbon UI");
+                rk.SetValue("Description", "NetOffice COMAddinExample with ribbon UI");
                 rk.Close();
             }
             catch (Exception ex)

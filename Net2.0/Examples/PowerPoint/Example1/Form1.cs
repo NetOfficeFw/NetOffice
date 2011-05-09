@@ -4,8 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 
 using LateBindingApi.Core;
-using PowerPoint = LateBindingApi.PowerPointApi;
-using LateBindingApi.PowerPointApi.Enums; 
+using PowerPoint = NetOffice.PowerPointApi;
+using NetOffice.PowerPointApi.Enums; 
 
 namespace Example1
 {

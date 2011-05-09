@@ -4,8 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 
 using LateBindingApi.Core;
-using Word = LateBindingApi.WordApi;
-using LateBindingApi.WordApi.Enums; 
+using Word = NetOffice.WordApi;
+using NetOffice.WordApi.Enums; 
 
 namespace Example1
 {
