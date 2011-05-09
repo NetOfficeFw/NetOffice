@@ -1,4 +1,4 @@
-﻿namespace Tutorial02
+﻿namespace Tutorial06
 {
     partial class Form1
     {
@@ -38,21 +38,21 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(21, 71);
+            this.textBox1.Location = new System.Drawing.Point(29, 73);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(801, 227);
-            this.textBox1.TabIndex = 8;
+            this.textBox1.TabIndex = 10;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             this.textBox1.WordWrap = false;
             // 
             // buttonStartExample
             // 
             this.buttonStartExample.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStartExample.Location = new System.Drawing.Point(21, 24);
+            this.buttonStartExample.Location = new System.Drawing.Point(29, 26);
             this.buttonStartExample.Name = "buttonStartExample";
             this.buttonStartExample.Size = new System.Drawing.Size(801, 30);
-            this.buttonStartExample.TabIndex = 7;
+            this.buttonStartExample.TabIndex = 9;
             this.buttonStartExample.Text = "Start example";
             this.buttonStartExample.UseVisualStyleBackColor = true;
             this.buttonStartExample.Click += new System.EventHandler(this.buttonStartExample_Click);
@@ -65,7 +65,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonStartExample);
             this.Name = "Form1";
-            this.Text = "Tutorial02 - Efficent using Dispose & DisposeChildInstances";
+            this.Text = "Tutorial06 - Understand Variant Type";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,7 +75,6 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonStartExample;
-
     }
 }
 
