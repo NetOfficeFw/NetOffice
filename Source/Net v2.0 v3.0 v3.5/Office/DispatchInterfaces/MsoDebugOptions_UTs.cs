@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface MsoDebugOptions_UTs SupportByLibrary OF12 OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.MsoDebugOptions_UT get_Item(Int32 index)
+		public NetOffice.OfficeApi.MsoDebugOptions_UT get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.MsoDebugOptions_UT newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.MsoDebugOptions_UT;
+			NetOffice.OfficeApi.MsoDebugOptions_UT newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.MsoDebugOptions_UT;
 			return newObject;
 		}
 
@@ -84,11 +84,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="bstrCollectionName">string bstrCollectionName</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.MsoDebugOptions_UTs GetUnitTestsInCollection(string bstrCollectionName)
+		public NetOffice.OfficeApi.MsoDebugOptions_UTs GetUnitTestsInCollection(string bstrCollectionName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrCollectionName);
 			object returnItem = Invoker.MethodReturn(this, "GetUnitTestsInCollection", paramsArray);
-			LateBindingApi.OfficeApi.MsoDebugOptions_UTs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.MsoDebugOptions_UTs;
+			NetOffice.OfficeApi.MsoDebugOptions_UTs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.MsoDebugOptions_UTs;
 			return newObject;
 		}
 
@@ -98,11 +98,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="bstrCollectionName">string bstrCollectionName</param>
 		/// <param name="bstrUnitTestName">string bstrUnitTestName</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.MsoDebugOptions_UT GetUnitTest(string bstrCollectionName, string bstrUnitTestName)
+		public NetOffice.OfficeApi.MsoDebugOptions_UT GetUnitTest(string bstrCollectionName, string bstrUnitTestName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrCollectionName, bstrUnitTestName);
 			object returnItem = Invoker.MethodReturn(this, "GetUnitTest", paramsArray);
-			LateBindingApi.OfficeApi.MsoDebugOptions_UT newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.MsoDebugOptions_UT;
+			NetOffice.OfficeApi.MsoDebugOptions_UT newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.MsoDebugOptions_UT;
 			return newObject;
 		}
 
@@ -112,11 +112,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="bstrCollectionName">string bstrCollectionName</param>
 		/// <param name="bstrUnitTestNameFilter">string bstrUnitTestNameFilter</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.MsoDebugOptions_UTs GetMatchingUnitTestsInCollection(string bstrCollectionName, string bstrUnitTestNameFilter)
+		public NetOffice.OfficeApi.MsoDebugOptions_UTs GetMatchingUnitTestsInCollection(string bstrCollectionName, string bstrUnitTestNameFilter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrCollectionName, bstrUnitTestNameFilter);
 			object returnItem = Invoker.MethodReturn(this, "GetMatchingUnitTestsInCollection", paramsArray);
-			LateBindingApi.OfficeApi.MsoDebugOptions_UTs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.MsoDebugOptions_UTs;
+			NetOffice.OfficeApi.MsoDebugOptions_UTs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.MsoDebugOptions_UTs;
 			return newObject;
 		}
 

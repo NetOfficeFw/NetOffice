@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SignatureSet SupportByLibrary OF10 OF11 OF12 OF14 
@@ -67,11 +67,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="iSig">Int32 iSig</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Signature get_Item(Int32 iSig)
+		public NetOffice.OfficeApi.Signature get_Item(Int32 iSig)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iSig);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.Signature;
+			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.Signature;
 			return newObject;
 		}
 
@@ -108,13 +108,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoSignatureSubset Subset
+		public NetOffice.OfficeApi.Enums.MsoSignatureSubset Subset
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Subset", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoSignatureSubset)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoSignatureSubset)returnItem;
 			}
 			set
 			{
@@ -150,11 +150,11 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Signature Add()
+		public NetOffice.OfficeApi.Signature Add()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.Signature;
+			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Signature;
 			return newObject;
 		}
 
@@ -173,11 +173,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="varSigProv">optional object varSigProv</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Signature AddNonVisibleSignature(object varSigProv)
+		public NetOffice.OfficeApi.Signature AddNonVisibleSignature(object varSigProv)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varSigProv);
 			object returnItem = Invoker.MethodReturn(this, "AddNonVisibleSignature", paramsArray);
-			LateBindingApi.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.Signature;
+			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Signature;
 			return newObject;
 		}
 
@@ -185,11 +185,11 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Signature AddNonVisibleSignature()
+		public NetOffice.OfficeApi.Signature AddNonVisibleSignature()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddNonVisibleSignature", paramsArray);
-			LateBindingApi.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.Signature;
+			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Signature;
 			return newObject;
 		}
 
@@ -198,11 +198,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="varSigProv">optional object varSigProv</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Signature AddSignatureLine(object varSigProv)
+		public NetOffice.OfficeApi.Signature AddSignatureLine(object varSigProv)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varSigProv);
 			object returnItem = Invoker.MethodReturn(this, "AddSignatureLine", paramsArray);
-			LateBindingApi.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.Signature;
+			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Signature;
 			return newObject;
 		}
 
@@ -210,11 +210,11 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Signature AddSignatureLine()
+		public NetOffice.OfficeApi.Signature AddSignatureLine()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddSignatureLine", paramsArray);
-			LateBindingApi.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.Signature;
+			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Signature;
 			return newObject;
 		}
 

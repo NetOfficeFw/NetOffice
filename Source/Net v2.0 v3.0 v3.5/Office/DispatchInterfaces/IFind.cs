@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface IFind SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -184,13 +184,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFileFindOptions Options
+		public NetOffice.OfficeApi.Enums.MsoFileFindOptions Options
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Options", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoFileFindOptions)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoFileFindOptions)returnItem;
 			}
 			set
 			{
@@ -391,13 +391,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFileFindView View
+		public NetOffice.OfficeApi.Enums.MsoFileFindView View
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "View", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoFileFindView)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoFileFindView)returnItem;
 			}
 			set
 			{
@@ -410,13 +410,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFileFindSortBy SortBy
+		public NetOffice.OfficeApi.Enums.MsoFileFindSortBy SortBy
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SortBy", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoFileFindSortBy)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoFileFindSortBy)returnItem;
 			}
 			set
 			{
@@ -429,13 +429,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFileFindListBy ListBy
+		public NetOffice.OfficeApi.Enums.MsoFileFindListBy ListBy
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListBy", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoFileFindListBy)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoFileFindListBy)returnItem;
 			}
 			set
 			{
@@ -467,13 +467,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.IFoundFiles Results
+		public NetOffice.OfficeApi.IFoundFiles Results
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Results", paramsArray);
-				LateBindingApi.OfficeApi.IFoundFiles newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IFoundFiles;
+				NetOffice.OfficeApi.IFoundFiles newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IFoundFiles;
 				return newObject;
 			}
 		}

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _References SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -86,11 +86,11 @@ namespace LateBindingApi.AccessApi
 		/// </summary>
 		/// <param name="var">object var</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Reference Item(object var)
+		public NetOffice.AccessApi.Reference Item(object var)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(var);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.AccessApi.Reference;
+			NetOffice.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi.Reference;
 			return newObject;
 		}
 
@@ -101,11 +101,11 @@ namespace LateBindingApi.AccessApi
 		/// <param name="Major">Int32 Major</param>
 		/// <param name="Minor">Int32 Minor</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Reference AddFromGuid(string guid, Int32 major, Int32 minor)
+		public NetOffice.AccessApi.Reference AddFromGuid(string guid, Int32 major, Int32 minor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(guid, major, minor);
 			object returnItem = Invoker.MethodReturn(this, "AddFromGuid", paramsArray);
-			LateBindingApi.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.AccessApi.Reference;
+			NetOffice.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi.Reference;
 			return newObject;
 		}
 
@@ -114,20 +114,20 @@ namespace LateBindingApi.AccessApi
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Reference AddFromFile(string fileName)
+		public NetOffice.AccessApi.Reference AddFromFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "AddFromFile", paramsArray);
-			LateBindingApi.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.AccessApi.Reference;
+			NetOffice.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi.Reference;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="Reference">LateBindingApi.AccessApi.Reference Reference</param>
+		/// <param name="Reference">NetOffice.AccessApi.Reference Reference</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void Remove(LateBindingApi.AccessApi.Reference reference)
+		public void Remove(NetOffice.AccessApi.Reference reference)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reference);
 			Invoker.Method(this, "Remove", paramsArray);

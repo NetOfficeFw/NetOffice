@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// Interface ISimpleDataConverter SupportByLibrary XWC1.0 

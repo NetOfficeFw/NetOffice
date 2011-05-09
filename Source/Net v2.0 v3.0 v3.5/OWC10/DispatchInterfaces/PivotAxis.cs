@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PivotAxis SupportByLibrary XWC1.0 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotView View
+		public NetOffice.OWC10Api.PivotView View
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "View", paramsArray);
-				LateBindingApi.OWC10Api.PivotView newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotView;
+				NetOffice.OWC10Api.PivotView newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotView;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotFieldSets FieldSets
+		public NetOffice.OWC10Api.PivotFieldSets FieldSets
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FieldSets", paramsArray);
-				LateBindingApi.OWC10Api.PivotFieldSets newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotFieldSets;
+				NetOffice.OWC10Api.PivotFieldSets newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotFieldSets;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotLabel Label
+		public NetOffice.OWC10Api.PivotLabel Label
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Label", paramsArray);
-				LateBindingApi.OWC10Api.PivotLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotLabel;
+				NetOffice.OWC10Api.PivotLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotLabel;
 				return newObject;
 			}
 		}
@@ -99,11 +99,11 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="FieldSet">LateBindingApi.OWC10Api.PivotFieldSet FieldSet</param>
+		/// <param name="FieldSet">NetOffice.OWC10Api.PivotFieldSet FieldSet</param>
 		/// <param name="Before">object Before</param>
 		/// <param name="Remove">bool Remove</param>
 		[SupportByLibrary("XWC1.0")]
-		public void InsertFieldSet(LateBindingApi.OWC10Api.PivotFieldSet fieldSet, object before, bool remove)
+		public void InsertFieldSet(NetOffice.OWC10Api.PivotFieldSet fieldSet, object before, bool remove)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldSet, before, remove);
 			Invoker.Method(this, "InsertFieldSet", paramsArray);

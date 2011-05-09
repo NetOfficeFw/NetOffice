@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ScopeFolder SupportByLibrary OF10 OF11 OF12 OF14 
@@ -79,13 +79,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.ScopeFolders ScopeFolders
+		public NetOffice.OfficeApi.ScopeFolders ScopeFolders
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScopeFolders", paramsArray);
-				LateBindingApi.OfficeApi.ScopeFolders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.ScopeFolders;
+				NetOffice.OfficeApi.ScopeFolders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ScopeFolders;
 				return newObject;
 			}
 		}

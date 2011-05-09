@@ -6,13 +6,13 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface ColorFormat SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-	public class ColorFormat : LateBindingApi.OfficeApi._IMsoDispObj
+	public class ColorFormat : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#pragma warning disable
 		#region Construction
@@ -104,13 +104,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoColorType Type
+		public NetOffice.OfficeApi.Enums.MsoColorType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoColorType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoColorType)returnItem;
 			}
 		}
 
@@ -137,13 +137,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoThemeColorIndex ObjectThemeColor
+		public NetOffice.OfficeApi.Enums.MsoThemeColorIndex ObjectThemeColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ObjectThemeColor", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoThemeColorIndex)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoThemeColorIndex)returnItem;
 			}
 			set
 			{

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface Properties SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Application Application
+		public NetOffice.AccessApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _VBComponents SupportByLibrary VBE5.3 VBE12 
@@ -56,11 +56,11 @@ namespace LateBindingApi.VBIDEApi
 		/// </summary>
 		/// <param name="ProgId">string ProgId</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBComponent AddCustom(string progId)
+		public NetOffice.VBIDEApi.VBComponent AddCustom(string progId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(progId);
 			object returnItem = Invoker.MethodReturn(this, "AddCustom", paramsArray);
-			LateBindingApi.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.VBIDEApi.VBComponent;
+			NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBComponent;
 			return newObject;
 		}
 
@@ -69,11 +69,11 @@ namespace LateBindingApi.VBIDEApi
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBComponent AddMTDesigner(Int32 index)
+		public NetOffice.VBIDEApi.VBComponent AddMTDesigner(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "AddMTDesigner", paramsArray);
-			LateBindingApi.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.VBIDEApi.VBComponent;
+			NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBComponent;
 			return newObject;
 		}
 

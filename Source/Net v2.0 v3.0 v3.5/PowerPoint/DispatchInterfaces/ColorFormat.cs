@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface ColorFormat SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -114,13 +114,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoColorType Type
+		public NetOffice.OfficeApi.Enums.MsoColorType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoColorType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoColorType)returnItem;
 			}
 		}
 
@@ -128,13 +128,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpColorSchemeIndex SchemeColor
+		public NetOffice.PowerPointApi.Enums.PpColorSchemeIndex SchemeColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemeColor", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpColorSchemeIndex)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpColorSchemeIndex)returnItem;
 			}
 			set
 			{
@@ -166,13 +166,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoThemeColorIndex ObjectThemeColor
+		public NetOffice.OfficeApi.Enums.MsoThemeColorIndex ObjectThemeColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ObjectThemeColor", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoThemeColorIndex)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoThemeColorIndex)returnItem;
 			}
 			set
 			{

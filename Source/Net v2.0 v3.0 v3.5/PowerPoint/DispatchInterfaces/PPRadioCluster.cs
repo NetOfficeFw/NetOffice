@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PPRadioCluster SupportByLibrary PP09 
@@ -65,13 +65,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPRadioButton Selected
+		public NetOffice.PowerPointApi.PPRadioButton Selected
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Selected", paramsArray);
-				LateBindingApi.PowerPointApi.PPRadioButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.PPRadioButton;
+				NetOffice.PowerPointApi.PPRadioButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.PPRadioButton;
 				return newObject;
 			}
 		}
@@ -104,11 +104,11 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPRadioButton Item(object index)
+		public NetOffice.PowerPointApi.PPRadioButton Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.PowerPointApi.PPRadioButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.PPRadioButton;
+			NetOffice.PowerPointApi.PPRadioButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPRadioButton;
 			return newObject;
 		}
 
@@ -120,11 +120,11 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPRadioButton Add(Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.PPRadioButton Add(Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.PowerPointApi.PPRadioButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.PPRadioButton;
+			NetOffice.PowerPointApi.PPRadioButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPRadioButton;
 			return newObject;
 		}
 

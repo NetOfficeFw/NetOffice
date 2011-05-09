@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IProgressBar SupportByLibrary WCC6.0 
@@ -108,13 +108,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.MousePointerConstants MousePointer
+		public NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MousePointer", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.MousePointerConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.MousePointerConstants)returnItem;
 			}
 			set
 			{
@@ -166,13 +166,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
+		public NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OLEDropMode", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.OLEDropConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.OLEDropConstants)returnItem;
 			}
 			set
 			{
@@ -185,13 +185,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.AppearanceConstants Appearance
+		public NetOffice.MSComctlLibApi.Enums.AppearanceConstants Appearance
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Appearance", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.AppearanceConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.AppearanceConstants)returnItem;
 			}
 			set
 			{
@@ -204,13 +204,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.BorderStyleConstants BorderStyle
+		public NetOffice.MSComctlLibApi.Enums.BorderStyleConstants BorderStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BorderStyle", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.BorderStyleConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.BorderStyleConstants)returnItem;
 			}
 			set
 			{
@@ -256,13 +256,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.OrientationConstants Orientation
+		public NetOffice.MSComctlLibApi.Enums.OrientationConstants Orientation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.OrientationConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.OrientationConstants)returnItem;
 			}
 			set
 			{
@@ -275,13 +275,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.ScrollingConstants Scrolling
+		public NetOffice.MSComctlLibApi.Enums.ScrollingConstants Scrolling
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Scrolling", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.ScrollingConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.ScrollingConstants)returnItem;
 			}
 			set
 			{

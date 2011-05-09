@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PPBitmapButton SupportByLibrary PP09 
@@ -89,13 +89,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState IsDefault
+		public NetOffice.OfficeApi.Enums.MsoTriState IsDefault
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "IsDefault", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -108,13 +108,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState IsEscape
+		public NetOffice.OfficeApi.Enums.MsoTriState IsEscape
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "IsEscape", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{

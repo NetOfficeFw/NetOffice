@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface SlideShowTransition SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState AdvanceOnClick
+		public NetOffice.OfficeApi.Enums.MsoTriState AdvanceOnClick
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AdvanceOnClick", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -100,13 +100,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState AdvanceOnTime
+		public NetOffice.OfficeApi.Enums.MsoTriState AdvanceOnTime
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AdvanceOnTime", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -138,13 +138,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpEntryEffect EntryEffect
+		public NetOffice.PowerPointApi.Enums.PpEntryEffect EntryEffect
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EntryEffect", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpEntryEffect)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpEntryEffect)returnItem;
 			}
 			set
 			{
@@ -157,13 +157,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState Hidden
+		public NetOffice.OfficeApi.Enums.MsoTriState Hidden
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Hidden", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -176,13 +176,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState LoopSoundUntilNext
+		public NetOffice.OfficeApi.Enums.MsoTriState LoopSoundUntilNext
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LoopSoundUntilNext", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -195,13 +195,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.SoundEffect SoundEffect
+		public NetOffice.PowerPointApi.SoundEffect SoundEffect
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SoundEffect", paramsArray);
-				LateBindingApi.PowerPointApi.SoundEffect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.SoundEffect;
+				NetOffice.PowerPointApi.SoundEffect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.SoundEffect;
 				return newObject;
 			}
 		}
@@ -210,13 +210,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpTransitionSpeed Speed
+		public NetOffice.PowerPointApi.Enums.PpTransitionSpeed Speed
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Speed", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpTransitionSpeed)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpTransitionSpeed)returnItem;
 			}
 			set
 			{

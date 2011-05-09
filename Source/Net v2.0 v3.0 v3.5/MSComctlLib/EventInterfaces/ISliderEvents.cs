@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {	
 	#pragma warning disable
 	
@@ -286,7 +286,7 @@ namespace LateBindingApi.MSComctlLibApi
 			foreach(Delegate delItem in recipients)
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
-			data = (LateBindingApi.MSComctlLibApi.DataObject)paramsArray[0];
+			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			allowedEffects = (Int32)paramsArray[1];
 		}
 
@@ -324,7 +324,7 @@ namespace LateBindingApi.MSComctlLibApi
 			foreach(Delegate delItem in recipients)
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
-			data = (LateBindingApi.MSComctlLibApi.DataObject)paramsArray[0];
+			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			dataFormat = (Int16)paramsArray[1];
 		}
 
@@ -365,7 +365,7 @@ namespace LateBindingApi.MSComctlLibApi
 			foreach(Delegate delItem in recipients)
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
-			data = (LateBindingApi.MSComctlLibApi.DataObject)paramsArray[0];
+			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			effect = (Int32)paramsArray[1];
 			button = (Int16)paramsArray[2];
 			shift = (Int16)paramsArray[3];
@@ -393,7 +393,7 @@ namespace LateBindingApi.MSComctlLibApi
 			foreach(Delegate delItem in recipients)
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
-			data = (LateBindingApi.MSComctlLibApi.DataObject)paramsArray[0];
+			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			effect = (Int32)paramsArray[1];
 			button = (Int16)paramsArray[2];
 			shift = (Int16)paramsArray[3];

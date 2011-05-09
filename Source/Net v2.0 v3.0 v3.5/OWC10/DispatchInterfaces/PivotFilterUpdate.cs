@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PivotFilterUpdate SupportByLibrary XWC1.0 
@@ -50,13 +50,13 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Member">LateBindingApi.OWC10Api.PivotMember Member</param>
+		/// <param name="Member">NetOffice.OWC10Api.PivotMember Member</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum get_StateOf(LateBindingApi.OWC10Api.PivotMember member)
+		public NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum get_StateOf(NetOffice.OWC10Api.PivotMember member)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(member);
 			object returnItem = Invoker.PropertyGet(this, "StateOf", paramsArray);
-			return (LateBindingApi.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum)returnItem;
+			return (NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum)returnItem;
 		}
 
 		/// <summary>
@@ -80,9 +80,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Member">LateBindingApi.OWC10Api.PivotMember Member</param>
+		/// <param name="Member">NetOffice.OWC10Api.PivotMember Member</param>
 		[SupportByLibrary("XWC1.0")]
-		public void Click(LateBindingApi.OWC10Api.PivotMember member)
+		public void Click(NetOffice.OWC10Api.PivotMember member)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(member);
 			Invoker.Method(this, "Click", paramsArray);
@@ -91,11 +91,11 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Member">LateBindingApi.OWC10Api.PivotMember Member</param>
-		/// <param name="OldMemberState">LateBindingApi.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum OldMemberState</param>
-		/// <param name="NewMemberState">LateBindingApi.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum NewMemberState</param>
+		/// <param name="Member">NetOffice.OWC10Api.PivotMember Member</param>
+		/// <param name="OldMemberState">NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum OldMemberState</param>
+		/// <param name="NewMemberState">NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum NewMemberState</param>
 		[SupportByLibrary("XWC1.0")]
-		public void ClickFromTo(LateBindingApi.OWC10Api.PivotMember member, LateBindingApi.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum oldMemberState, LateBindingApi.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum newMemberState)
+		public void ClickFromTo(NetOffice.OWC10Api.PivotMember member, NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum oldMemberState, NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum newMemberState)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(member, oldMemberState, newMemberState);
 			Invoker.Method(this, "ClickFromTo", paramsArray);

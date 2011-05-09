@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PickerField SupportByLibrary OF14 
@@ -65,13 +65,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPickerField Type
+		public NetOffice.OfficeApi.Enums.MsoPickerField Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPickerField)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPickerField)returnItem;
 			}
 		}
 

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Balloon SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -96,13 +96,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoBalloonType BalloonType
+		public NetOffice.OfficeApi.Enums.MsoBalloonType BalloonType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BalloonType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoBalloonType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoBalloonType)returnItem;
 			}
 			set
 			{
@@ -115,13 +115,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoIconType Icon
+		public NetOffice.OfficeApi.Enums.MsoIconType Icon
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Icon", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoIconType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoIconType)returnItem;
 			}
 			set
 			{
@@ -172,13 +172,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoModeType Mode
+		public NetOffice.OfficeApi.Enums.MsoModeType Mode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Mode", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoModeType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoModeType)returnItem;
 			}
 			set
 			{
@@ -191,13 +191,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoAnimationType Animation
+		public NetOffice.OfficeApi.Enums.MsoAnimationType Animation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Animation", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoAnimationType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoAnimationType)returnItem;
 			}
 			set
 			{
@@ -210,13 +210,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoButtonSetType Button
+		public NetOffice.OfficeApi.Enums.MsoButtonSetType Button
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Button", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoButtonSetType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoButtonSetType)returnItem;
 			}
 			set
 			{
@@ -299,11 +299,11 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoBalloonButtonType Show()
+		public NetOffice.OfficeApi.Enums.MsoBalloonButtonType Show()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return (LateBindingApi.OfficeApi.Enums.MsoBalloonButtonType)returnItem;
+			return (NetOffice.OfficeApi.Enums.MsoBalloonButtonType)returnItem;
 		}
 
 		/// <summary>

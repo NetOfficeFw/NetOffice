@@ -15,7 +15,7 @@ namespace PowerPointApi.Utils
     {
         #region Field
 
-        private string   _namespace     = "LateBindingApi.PowerPointApi";
+        private string   _namespace     = "NetOffice.PowerPointApi";
         private Guid     _componentGuid = new Guid("91493440-5A91-11CF-8700-00AA0060263B");
         private Assembly _assembly;
 

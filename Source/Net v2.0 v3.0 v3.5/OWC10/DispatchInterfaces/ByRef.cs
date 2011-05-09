@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ByRef SupportByLibrary XWC1.0 

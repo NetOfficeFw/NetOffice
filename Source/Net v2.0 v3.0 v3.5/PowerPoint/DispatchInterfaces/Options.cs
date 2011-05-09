@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Options SupportByLibrary PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState DisplayPasteOptions
+		public NetOffice.OfficeApi.Enums.MsoTriState DisplayPasteOptions
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DisplayPasteOptions", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -70,13 +70,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState DoNotPromptForConvert
+		public NetOffice.OfficeApi.Enums.MsoTriState DoNotPromptForConvert
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DoNotPromptForConvert", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{

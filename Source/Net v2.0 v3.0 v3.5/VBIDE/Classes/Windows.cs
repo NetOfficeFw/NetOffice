@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 
 	#region Delegates

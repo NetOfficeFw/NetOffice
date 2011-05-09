@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface ISparkline SupportByLibrary XL14 
@@ -50,13 +50,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -65,13 +65,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -94,13 +94,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Range Location
+		public NetOffice.ExcelApi.Range Location
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
-				LateBindingApi.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 			set
@@ -136,9 +136,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.ExcelApi.Range Range</param>
+		/// <param name="Range">NetOffice.ExcelApi.Range Range</param>
 		[SupportByLibrary("XL14")]
-		public Int32 ModifyLocation(LateBindingApi.ExcelApi.Range range)
+		public Int32 ModifyLocation(NetOffice.ExcelApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "ModifyLocation", paramsArray);

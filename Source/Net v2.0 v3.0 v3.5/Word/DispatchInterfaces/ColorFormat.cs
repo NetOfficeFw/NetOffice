@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface ColorFormat SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -133,13 +133,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoColorType Type
+		public NetOffice.OfficeApi.Enums.MsoColorType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoColorType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoColorType)returnItem;
 			}
 		}
 
@@ -185,13 +185,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState OverPrint
+		public NetOffice.OfficeApi.Enums.MsoTriState OverPrint
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OverPrint", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -212,6 +212,11 @@ namespace LateBindingApi.WordApi
 			return (Single)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// </summary>
+		/// <param name="Index">Int32 Index</param>
+		[SupportByLibrary("WD10","WD11","WD12","WD14")]
 		public void set_Ink(Int32 index, Single value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -298,13 +303,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdThemeColorIndex ObjectThemeColor
+		public NetOffice.WordApi.Enums.WdThemeColorIndex ObjectThemeColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ObjectThemeColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdThemeColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdThemeColorIndex)returnItem;
 			}
 			set
 			{

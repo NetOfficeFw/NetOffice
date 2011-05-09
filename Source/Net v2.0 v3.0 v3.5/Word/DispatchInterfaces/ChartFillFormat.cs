@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface ChartFillFormat SupportByLibrary WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.ChartColorFormat BackColor
+		public NetOffice.WordApi.ChartColorFormat BackColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BackColor", paramsArray);
-				LateBindingApi.WordApi.ChartColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ChartColorFormat;
+				NetOffice.WordApi.ChartColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartColorFormat;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.ChartColorFormat ForeColor
+		public NetOffice.WordApi.ChartColorFormat ForeColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ForeColor", paramsArray);
-				LateBindingApi.WordApi.ChartColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ChartColorFormat;
+				NetOffice.WordApi.ChartColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartColorFormat;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoGradientColorType GradientColorType
+		public NetOffice.OfficeApi.Enums.MsoGradientColorType GradientColorType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GradientColorType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoGradientColorType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoGradientColorType)returnItem;
 			}
 		}
 
@@ -109,13 +109,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoGradientStyle GradientStyle
+		public NetOffice.OfficeApi.Enums.MsoGradientStyle GradientStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GradientStyle", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoGradientStyle)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoGradientStyle)returnItem;
 			}
 		}
 
@@ -137,13 +137,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPatternType Pattern
+		public NetOffice.OfficeApi.Enums.MsoPatternType Pattern
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Pattern", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPatternType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPatternType)returnItem;
 			}
 		}
 
@@ -151,13 +151,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetGradientType PresetGradientType
+		public NetOffice.OfficeApi.Enums.MsoPresetGradientType PresetGradientType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetGradientType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetGradientType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetGradientType)returnItem;
 			}
 		}
 
@@ -165,13 +165,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetTexture PresetTexture
+		public NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetTexture", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetTexture)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetTexture)returnItem;
 			}
 		}
 
@@ -193,13 +193,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTextureType TextureType
+		public NetOffice.OfficeApi.Enums.MsoTextureType TextureType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextureType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTextureType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTextureType)returnItem;
 			}
 		}
 
@@ -207,13 +207,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFillType Type
+		public NetOffice.OfficeApi.Enums.MsoFillType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoFillType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoFillType)returnItem;
 			}
 		}
 
@@ -221,13 +221,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState Visible
+		public NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Visible", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -287,11 +287,11 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD14 
 		/// </summary>
-		/// <param name="Style">LateBindingApi.OfficeApi.Enums.MsoGradientStyle Style</param>
+		/// <param name="Style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="Variant">Int32 Variant</param>
 		/// <param name="Degree">Single Degree</param>
 		[SupportByLibrary("WD14")]
-		public void OneColorGradient(LateBindingApi.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, Single degree)
+		public void OneColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, Single degree)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, variant, degree);
 			Invoker.Method(this, "OneColorGradient", paramsArray);
@@ -300,10 +300,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD14 
 		/// </summary>
-		/// <param name="Style">LateBindingApi.OfficeApi.Enums.MsoGradientStyle Style</param>
+		/// <param name="Style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="Variant">Int32 Variant</param>
 		[SupportByLibrary("WD14")]
-		public void TwoColorGradient(LateBindingApi.OfficeApi.Enums.MsoGradientStyle style, Int32 variant)
+		public void TwoColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, variant);
 			Invoker.Method(this, "TwoColorGradient", paramsArray);
@@ -312,9 +312,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD14 
 		/// </summary>
-		/// <param name="PresetTexture">LateBindingApi.OfficeApi.Enums.MsoPresetTexture PresetTexture</param>
+		/// <param name="PresetTexture">NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture</param>
 		[SupportByLibrary("WD14")]
-		public void PresetTextured(LateBindingApi.OfficeApi.Enums.MsoPresetTexture presetTexture)
+		public void PresetTextured(NetOffice.OfficeApi.Enums.MsoPresetTexture presetTexture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(presetTexture);
 			Invoker.Method(this, "PresetTextured", paramsArray);
@@ -333,9 +333,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD14 
 		/// </summary>
-		/// <param name="Pattern">LateBindingApi.OfficeApi.Enums.MsoPatternType Pattern</param>
+		/// <param name="Pattern">NetOffice.OfficeApi.Enums.MsoPatternType Pattern</param>
 		[SupportByLibrary("WD14")]
-		public void Patterned(LateBindingApi.OfficeApi.Enums.MsoPatternType pattern)
+		public void Patterned(NetOffice.OfficeApi.Enums.MsoPatternType pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pattern);
 			Invoker.Method(this, "Patterned", paramsArray);
@@ -379,11 +379,11 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD14 
 		/// </summary>
-		/// <param name="Style">LateBindingApi.OfficeApi.Enums.MsoGradientStyle Style</param>
+		/// <param name="Style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="Variant">Int32 Variant</param>
-		/// <param name="PresetGradientType">LateBindingApi.OfficeApi.Enums.MsoPresetGradientType PresetGradientType</param>
+		/// <param name="PresetGradientType">NetOffice.OfficeApi.Enums.MsoPresetGradientType PresetGradientType</param>
 		[SupportByLibrary("WD14")]
-		public void PresetGradient(LateBindingApi.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, LateBindingApi.OfficeApi.Enums.MsoPresetGradientType presetGradientType)
+		public void PresetGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, NetOffice.OfficeApi.Enums.MsoPresetGradientType presetGradientType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, variant, presetGradientType);
 			Invoker.Method(this, "PresetGradient", paramsArray);

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Row SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.CellRange Cells
+		public NetOffice.PowerPointApi.CellRange Cells
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Cells", paramsArray);
-				LateBindingApi.PowerPointApi.CellRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.CellRange;
+				NetOffice.PowerPointApi.CellRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.CellRange;
 				return newObject;
 			}
 		}

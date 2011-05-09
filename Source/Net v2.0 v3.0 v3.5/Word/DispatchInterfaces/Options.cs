@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Options SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -266,13 +266,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdMeasurementUnits MeasurementUnit
+		public NetOffice.WordApi.Enums.WdMeasurementUnits MeasurementUnit
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MeasurementUnit", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdMeasurementUnits)returnItem;
+				return (NetOffice.WordApi.Enums.WdMeasurementUnits)returnItem;
 			}
 			set
 			{
@@ -660,13 +660,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdInsertedTextMark InsertedTextMark
+		public NetOffice.WordApi.Enums.WdInsertedTextMark InsertedTextMark
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "InsertedTextMark", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdInsertedTextMark)returnItem;
+				return (NetOffice.WordApi.Enums.WdInsertedTextMark)returnItem;
 			}
 			set
 			{
@@ -679,13 +679,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdDeletedTextMark DeletedTextMark
+		public NetOffice.WordApi.Enums.WdDeletedTextMark DeletedTextMark
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DeletedTextMark", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdDeletedTextMark)returnItem;
+				return (NetOffice.WordApi.Enums.WdDeletedTextMark)returnItem;
 			}
 			set
 			{
@@ -698,13 +698,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdRevisedLinesMark RevisedLinesMark
+		public NetOffice.WordApi.Enums.WdRevisedLinesMark RevisedLinesMark
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RevisedLinesMark", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdRevisedLinesMark)returnItem;
+				return (NetOffice.WordApi.Enums.WdRevisedLinesMark)returnItem;
 			}
 			set
 			{
@@ -717,13 +717,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex InsertedTextColor
+		public NetOffice.WordApi.Enums.WdColorIndex InsertedTextColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "InsertedTextColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -736,13 +736,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex DeletedTextColor
+		public NetOffice.WordApi.Enums.WdColorIndex DeletedTextColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DeletedTextColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -755,13 +755,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex RevisedLinesColor
+		public NetOffice.WordApi.Enums.WdColorIndex RevisedLinesColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RevisedLinesColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -773,16 +773,21 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Path">LateBindingApi.WordApi.Enums.WdDefaultFilePath Path</param>
+		/// <param name="Path">NetOffice.WordApi.Enums.WdDefaultFilePath Path</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public string get_DefaultFilePath(LateBindingApi.WordApi.Enums.WdDefaultFilePath path)
+		public string get_DefaultFilePath(NetOffice.WordApi.Enums.WdDefaultFilePath path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
 			object returnItem = Invoker.PropertyGet(this, "DefaultFilePath", paramsArray);
 			return (string)returnItem;
 		}
 
-		public void set_DefaultFilePath(LateBindingApi.WordApi.Enums.WdDefaultFilePath path, string value)
+		/// <summary>
+		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// </summary>
+		/// <param name="Path">NetOffice.WordApi.Enums.WdDefaultFilePath Path</param>
+		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		public void set_DefaultFilePath(NetOffice.WordApi.Enums.WdDefaultFilePath path, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
 			Invoker.PropertySet(this, "DefaultFilePath", paramsArray, value);
@@ -982,13 +987,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdRevisedPropertiesMark RevisedPropertiesMark
+		public NetOffice.WordApi.Enums.WdRevisedPropertiesMark RevisedPropertiesMark
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RevisedPropertiesMark", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdRevisedPropertiesMark)returnItem;
+				return (NetOffice.WordApi.Enums.WdRevisedPropertiesMark)returnItem;
 			}
 			set
 			{
@@ -1001,13 +1006,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex RevisedPropertiesColor
+		public NetOffice.WordApi.Enums.WdColorIndex RevisedPropertiesColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RevisedPropertiesColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -1628,13 +1633,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex DefaultHighlightColorIndex
+		public NetOffice.WordApi.Enums.WdColorIndex DefaultHighlightColorIndex
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultHighlightColorIndex", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -1647,13 +1652,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdLineStyle DefaultBorderLineStyle
+		public NetOffice.WordApi.Enums.WdLineStyle DefaultBorderLineStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultBorderLineStyle", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdLineStyle)returnItem;
+				return (NetOffice.WordApi.Enums.WdLineStyle)returnItem;
 			}
 			set
 			{
@@ -1818,13 +1823,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdLineWidth DefaultBorderLineWidth
+		public NetOffice.WordApi.Enums.WdLineWidth DefaultBorderLineWidth
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultBorderLineWidth", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdLineWidth)returnItem;
+				return (NetOffice.WordApi.Enums.WdLineWidth)returnItem;
 			}
 			set
 			{
@@ -1856,13 +1861,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdOpenFormat DefaultOpenFormat
+		public NetOffice.WordApi.Enums.WdOpenFormat DefaultOpenFormat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultOpenFormat", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdOpenFormat)returnItem;
+				return (NetOffice.WordApi.Enums.WdOpenFormat)returnItem;
 			}
 			set
 			{
@@ -2635,13 +2640,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex DefaultBorderColorIndex
+		public NetOffice.WordApi.Enums.WdColorIndex DefaultBorderColorIndex
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultBorderColorIndex", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -2749,13 +2754,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdMultipleWordConversionsMode MultipleWordConversionsMode
+		public NetOffice.WordApi.Enums.WdMultipleWordConversionsMode MultipleWordConversionsMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MultipleWordConversionsMode", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdMultipleWordConversionsMode)returnItem;
+				return (NetOffice.WordApi.Enums.WdMultipleWordConversionsMode)returnItem;
 			}
 			set
 			{
@@ -2768,13 +2773,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColor DefaultBorderColor
+		public NetOffice.WordApi.Enums.WdColor DefaultBorderColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultBorderColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColor)returnItem;
+				return (NetOffice.WordApi.Enums.WdColor)returnItem;
 			}
 			set
 			{
@@ -2863,13 +2868,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdDocumentViewDirection DocumentViewDirection
+		public NetOffice.WordApi.Enums.WdDocumentViewDirection DocumentViewDirection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DocumentViewDirection", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdDocumentViewDirection)returnItem;
+				return (NetOffice.WordApi.Enums.WdDocumentViewDirection)returnItem;
 			}
 			set
 			{
@@ -2882,13 +2887,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdArabicNumeral ArabicNumeral
+		public NetOffice.WordApi.Enums.WdArabicNumeral ArabicNumeral
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ArabicNumeral", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdArabicNumeral)returnItem;
+				return (NetOffice.WordApi.Enums.WdArabicNumeral)returnItem;
 			}
 			set
 			{
@@ -2901,13 +2906,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdMonthNames MonthNames
+		public NetOffice.WordApi.Enums.WdMonthNames MonthNames
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MonthNames", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdMonthNames)returnItem;
+				return (NetOffice.WordApi.Enums.WdMonthNames)returnItem;
 			}
 			set
 			{
@@ -2920,13 +2925,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdCursorMovement CursorMovement
+		public NetOffice.WordApi.Enums.WdCursorMovement CursorMovement
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CursorMovement", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdCursorMovement)returnItem;
+				return (NetOffice.WordApi.Enums.WdCursorMovement)returnItem;
 			}
 			set
 			{
@@ -2939,13 +2944,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdVisualSelection VisualSelection
+		public NetOffice.WordApi.Enums.WdVisualSelection VisualSelection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VisualSelection", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdVisualSelection)returnItem;
+				return (NetOffice.WordApi.Enums.WdVisualSelection)returnItem;
 			}
 			set
 			{
@@ -3072,13 +3077,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdHebSpellStart HebrewMode
+		public NetOffice.WordApi.Enums.WdHebSpellStart HebrewMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HebrewMode", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdHebSpellStart)returnItem;
+				return (NetOffice.WordApi.Enums.WdHebSpellStart)returnItem;
 			}
 			set
 			{
@@ -3091,13 +3096,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdAraSpeller ArabicMode
+		public NetOffice.WordApi.Enums.WdAraSpeller ArabicMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ArabicMode", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdAraSpeller)returnItem;
+				return (NetOffice.WordApi.Enums.WdAraSpeller)returnItem;
 			}
 			set
 			{
@@ -3148,13 +3153,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdHighAnsiText InterpretHighAnsi
+		public NetOffice.WordApi.Enums.WdHighAnsiText InterpretHighAnsi
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "InterpretHighAnsi", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdHighAnsiText)returnItem;
+				return (NetOffice.WordApi.Enums.WdHighAnsiText)returnItem;
 			}
 			set
 			{
@@ -3205,13 +3210,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColor DiacriticColorVal
+		public NetOffice.WordApi.Enums.WdColor DiacriticColorVal
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DiacriticColorVal", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColor)returnItem;
+				return (NetOffice.WordApi.Enums.WdColor)returnItem;
 			}
 			set
 			{
@@ -3471,13 +3476,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdWrapTypeMerged PictureWrapType
+		public NetOffice.WordApi.Enums.WdWrapTypeMerged PictureWrapType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PictureWrapType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdWrapTypeMerged)returnItem;
+				return (NetOffice.WordApi.Enums.WdWrapTypeMerged)returnItem;
 			}
 			set
 			{
@@ -3490,13 +3495,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdDisableFeaturesIntroducedAfter DisableFeaturesIntroducedAfterbyDefault
+		public NetOffice.WordApi.Enums.WdDisableFeaturesIntroducedAfter DisableFeaturesIntroducedAfterbyDefault
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DisableFeaturesIntroducedAfterbyDefault", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdDisableFeaturesIntroducedAfter)returnItem;
+				return (NetOffice.WordApi.Enums.WdDisableFeaturesIntroducedAfter)returnItem;
 			}
 			set
 			{
@@ -3585,13 +3590,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoEncoding DefaultTextEncoding
+		public NetOffice.OfficeApi.Enums.MsoEncoding DefaultTextEncoding
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultTextEncoding", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoEncoding)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoEncoding)returnItem;
 			}
 			set
 			{
@@ -3775,13 +3780,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdRevisionsBalloonPrintOrientation RevisionsBalloonPrintOrientation
+		public NetOffice.WordApi.Enums.WdRevisionsBalloonPrintOrientation RevisionsBalloonPrintOrientation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RevisionsBalloonPrintOrientation", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdRevisionsBalloonPrintOrientation)returnItem;
+				return (NetOffice.WordApi.Enums.WdRevisionsBalloonPrintOrientation)returnItem;
 			}
 			set
 			{
@@ -3794,13 +3799,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex CommentsColor
+		public NetOffice.WordApi.Enums.WdColorIndex CommentsColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommentsColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -3908,13 +3913,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdMoveToTextMark MoveToTextMark
+		public NetOffice.WordApi.Enums.WdMoveToTextMark MoveToTextMark
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MoveToTextMark", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdMoveToTextMark)returnItem;
+				return (NetOffice.WordApi.Enums.WdMoveToTextMark)returnItem;
 			}
 			set
 			{
@@ -3927,13 +3932,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdMoveFromTextMark MoveFromTextMark
+		public NetOffice.WordApi.Enums.WdMoveFromTextMark MoveFromTextMark
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MoveFromTextMark", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdMoveFromTextMark)returnItem;
+				return (NetOffice.WordApi.Enums.WdMoveFromTextMark)returnItem;
 			}
 			set
 			{
@@ -3984,13 +3989,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdCellColor InsertedCellColor
+		public NetOffice.WordApi.Enums.WdCellColor InsertedCellColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "InsertedCellColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdCellColor)returnItem;
+				return (NetOffice.WordApi.Enums.WdCellColor)returnItem;
 			}
 			set
 			{
@@ -4003,13 +4008,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdCellColor DeletedCellColor
+		public NetOffice.WordApi.Enums.WdCellColor DeletedCellColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DeletedCellColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdCellColor)returnItem;
+				return (NetOffice.WordApi.Enums.WdCellColor)returnItem;
 			}
 			set
 			{
@@ -4022,13 +4027,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdCellColor MergedCellColor
+		public NetOffice.WordApi.Enums.WdCellColor MergedCellColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MergedCellColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdCellColor)returnItem;
+				return (NetOffice.WordApi.Enums.WdCellColor)returnItem;
 			}
 			set
 			{
@@ -4041,13 +4046,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdCellColor SplitCellColor
+		public NetOffice.WordApi.Enums.WdCellColor SplitCellColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SplitCellColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdCellColor)returnItem;
+				return (NetOffice.WordApi.Enums.WdCellColor)returnItem;
 			}
 			set
 			{
@@ -4174,13 +4179,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdPasteOptions PasteFormatWithinDocument
+		public NetOffice.WordApi.Enums.WdPasteOptions PasteFormatWithinDocument
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PasteFormatWithinDocument", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdPasteOptions)returnItem;
+				return (NetOffice.WordApi.Enums.WdPasteOptions)returnItem;
 			}
 			set
 			{
@@ -4193,13 +4198,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdPasteOptions PasteFormatBetweenDocuments
+		public NetOffice.WordApi.Enums.WdPasteOptions PasteFormatBetweenDocuments
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PasteFormatBetweenDocuments", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdPasteOptions)returnItem;
+				return (NetOffice.WordApi.Enums.WdPasteOptions)returnItem;
 			}
 			set
 			{
@@ -4212,13 +4217,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdPasteOptions PasteFormatBetweenStyledDocuments
+		public NetOffice.WordApi.Enums.WdPasteOptions PasteFormatBetweenStyledDocuments
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PasteFormatBetweenStyledDocuments", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdPasteOptions)returnItem;
+				return (NetOffice.WordApi.Enums.WdPasteOptions)returnItem;
 			}
 			set
 			{
@@ -4231,13 +4236,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdPasteOptions PasteFormatFromExternalSource
+		public NetOffice.WordApi.Enums.WdPasteOptions PasteFormatFromExternalSource
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PasteFormatFromExternalSource", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdPasteOptions)returnItem;
+				return (NetOffice.WordApi.Enums.WdPasteOptions)returnItem;
 			}
 			set
 			{
@@ -4307,13 +4312,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdFrenchSpeller FrenchReform
+		public NetOffice.WordApi.Enums.WdFrenchSpeller FrenchReform
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FrenchReform", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdFrenchSpeller)returnItem;
+				return (NetOffice.WordApi.Enums.WdFrenchSpeller)returnItem;
 			}
 			set
 			{
@@ -4345,13 +4350,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex MoveToTextColor
+		public NetOffice.WordApi.Enums.WdColorIndex MoveToTextColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MoveToTextColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -4364,13 +4369,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex MoveFromTextColor
+		public NetOffice.WordApi.Enums.WdColorIndex MoveFromTextColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MoveFromTextColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -4497,13 +4502,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.WdUpdateStyleListBehavior UpdateStyleListBehavior
+		public NetOffice.WordApi.Enums.WdUpdateStyleListBehavior UpdateStyleListBehavior
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UpdateStyleListBehavior", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdUpdateStyleListBehavior)returnItem;
+				return (NetOffice.WordApi.Enums.WdUpdateStyleListBehavior)returnItem;
 			}
 			set
 			{
@@ -4554,13 +4559,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.WdSpanishSpeller SpanishMode
+		public NetOffice.WordApi.Enums.WdSpanishSpeller SpanishMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SpanishMode", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdSpanishSpeller)returnItem;
+				return (NetOffice.WordApi.Enums.WdSpanishSpeller)returnItem;
 			}
 			set
 			{
@@ -4573,13 +4578,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.WdPortugueseReform PortugalReform
+		public NetOffice.WordApi.Enums.WdPortugueseReform PortugalReform
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PortugalReform", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdPortugueseReform)returnItem;
+				return (NetOffice.WordApi.Enums.WdPortugueseReform)returnItem;
 			}
 			set
 			{
@@ -4592,13 +4597,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.WdPortugueseReform BrazilReform
+		public NetOffice.WordApi.Enums.WdPortugueseReform BrazilReform
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BrazilReform", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdPortugueseReform)returnItem;
+				return (NetOffice.WordApi.Enums.WdPortugueseReform)returnItem;
 			}
 			set
 			{

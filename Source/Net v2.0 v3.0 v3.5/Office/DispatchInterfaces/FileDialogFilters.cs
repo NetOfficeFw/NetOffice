@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface FileDialogFilters SupportByLibrary OF10 OF11 OF12 OF14 
@@ -86,11 +86,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.FileDialogFilter Item(Int32 index)
+		public NetOffice.OfficeApi.FileDialogFilter Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.FileDialogFilter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.FileDialogFilter;
+			NetOffice.OfficeApi.FileDialogFilter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.FileDialogFilter;
 			return newObject;
 		}
 
@@ -132,11 +132,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Extensions">string Extensions</param>
 		/// <param name="Position">optional object Position</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.FileDialogFilter Add(string description, string extensions, object position)
+		public NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(description, extensions, position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.FileDialogFilter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.FileDialogFilter;
+			NetOffice.OfficeApi.FileDialogFilter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.FileDialogFilter;
 			return newObject;
 		}
 
@@ -146,11 +146,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Description">string Description</param>
 		/// <param name="Extensions">string Extensions</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.FileDialogFilter Add(string description, string extensions)
+		public NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(description, extensions);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.FileDialogFilter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.FileDialogFilter;
+			NetOffice.OfficeApi.FileDialogFilter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.FileDialogFilter;
 			return newObject;
 		}
 

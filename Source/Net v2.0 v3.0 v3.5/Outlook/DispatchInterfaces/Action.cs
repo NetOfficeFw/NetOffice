@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface Action SupportByLibrary OL09 OL10 OL11 OL12 OL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi._Application Application
+		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._Application;
+				NetOffice.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlObjectClass Class
+		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Class", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlObjectClass)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlObjectClass)returnItem;
 			}
 		}
 
@@ -80,13 +80,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi._NameSpace Session
+		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				LateBindingApi.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._NameSpace;
+				NetOffice.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlActionCopyLike CopyLike
+		public NetOffice.OutlookApi.Enums.OlActionCopyLike CopyLike
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CopyLike", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlActionCopyLike)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlActionCopyLike)returnItem;
 			}
 			set
 			{
@@ -205,13 +205,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlActionReplyStyle ReplyStyle
+		public NetOffice.OutlookApi.Enums.OlActionReplyStyle ReplyStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ReplyStyle", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlActionReplyStyle)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlActionReplyStyle)returnItem;
 			}
 			set
 			{
@@ -224,13 +224,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlActionResponseStyle ResponseStyle
+		public NetOffice.OutlookApi.Enums.OlActionResponseStyle ResponseStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ResponseStyle", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlActionResponseStyle)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlActionResponseStyle)returnItem;
 			}
 			set
 			{
@@ -243,13 +243,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlActionShowOn ShowOn
+		public NetOffice.OutlookApi.Enums.OlActionShowOn ShowOn
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ShowOn", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlActionShowOn)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlActionShowOn)returnItem;
 			}
 			set
 			{

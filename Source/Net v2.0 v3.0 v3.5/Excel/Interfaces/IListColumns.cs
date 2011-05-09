@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IListColumns SupportByLibrary XL11 XL12 XL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -97,13 +97,13 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.ExcelApi.ListColumn this[object index]
+		public NetOffice.ExcelApi.ListColumn this[object index]
 		{
 			get
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			LateBindingApi.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.ListColumn;
+			NetOffice.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ListColumn;
 			return newObject;
 			}
 		}
@@ -113,11 +113,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.ListColumn get_Item(object index)
+		public NetOffice.ExcelApi.ListColumn get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.ListColumn;
+			NetOffice.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ListColumn;
 			return newObject;
 		}
 
@@ -144,11 +144,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Position">optional object Position</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.ListColumn Add(object position)
+		public NetOffice.ExcelApi.ListColumn Add(object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.ListColumn;
+			NetOffice.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListColumn;
 			return newObject;
 		}
 
@@ -156,11 +156,11 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.ListColumn Add()
+		public NetOffice.ExcelApi.ListColumn Add()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.ListColumn;
+			NetOffice.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListColumn;
 			return newObject;
 		}
 

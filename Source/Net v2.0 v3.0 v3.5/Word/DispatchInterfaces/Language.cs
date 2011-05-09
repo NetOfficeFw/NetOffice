@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Language SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdLanguageID ID
+		public NetOffice.WordApi.Enums.WdLanguageID ID
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ID", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdLanguageID)returnItem;
+				return (NetOffice.WordApi.Enums.WdLanguageID)returnItem;
 			}
 		}
 
@@ -137,13 +137,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Dictionary ActiveGrammarDictionary
+		public NetOffice.WordApi.Dictionary ActiveGrammarDictionary
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveGrammarDictionary", paramsArray);
-				LateBindingApi.WordApi.Dictionary newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Dictionary;
+				NetOffice.WordApi.Dictionary newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Dictionary;
 				return newObject;
 			}
 		}
@@ -152,13 +152,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Dictionary ActiveHyphenationDictionary
+		public NetOffice.WordApi.Dictionary ActiveHyphenationDictionary
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveHyphenationDictionary", paramsArray);
-				LateBindingApi.WordApi.Dictionary newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Dictionary;
+				NetOffice.WordApi.Dictionary newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Dictionary;
 				return newObject;
 			}
 		}
@@ -167,13 +167,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Dictionary ActiveSpellingDictionary
+		public NetOffice.WordApi.Dictionary ActiveSpellingDictionary
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveSpellingDictionary", paramsArray);
-				LateBindingApi.WordApi.Dictionary newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Dictionary;
+				NetOffice.WordApi.Dictionary newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Dictionary;
 				return newObject;
 			}
 		}
@@ -182,13 +182,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Dictionary ActiveThesaurusDictionary
+		public NetOffice.WordApi.Dictionary ActiveThesaurusDictionary
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveThesaurusDictionary", paramsArray);
-				LateBindingApi.WordApi.Dictionary newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Dictionary;
+				NetOffice.WordApi.Dictionary newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Dictionary;
 				return newObject;
 			}
 		}
@@ -239,13 +239,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdDictionaryType SpellingDictionaryType
+		public NetOffice.WordApi.Enums.WdDictionaryType SpellingDictionaryType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SpellingDictionaryType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdDictionaryType)returnItem;
+				return (NetOffice.WordApi.Enums.WdDictionaryType)returnItem;
 			}
 			set
 			{

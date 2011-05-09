@@ -15,7 +15,7 @@ namespace AccessApi.Utils
     {
         #region Field
 
-        private string   _namespace     = "LateBindingApi.AccessApi";
+        private string   _namespace     = "NetOffice.AccessApi";
         private Guid     _componentGuid = new Guid("4AFFC9A0-5F99-101B-AF4E-00AA003F0F07");
         private Assembly _assembly;
 

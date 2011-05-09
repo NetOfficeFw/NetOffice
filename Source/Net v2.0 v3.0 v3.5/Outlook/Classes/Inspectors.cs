@@ -3,13 +3,13 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Inspectors_NewInspectorEventHandler(LateBindingApi.OutlookApi._Inspector Inspector);
+	public delegate void Inspectors_NewInspectorEventHandler(NetOffice.OutlookApi._Inspector Inspector);
 	#pragma warning restore
 
 	#endregion

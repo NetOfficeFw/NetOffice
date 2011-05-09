@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface TablesOfFigures SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdTofFormat Format
+		public NetOffice.WordApi.Enums.WdTofFormat Format
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdTofFormat)returnItem;
+				return (NetOffice.WordApi.Enums.WdTofFormat)returnItem;
 			}
 			set
 			{
@@ -134,18 +134,18 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.TableOfFigures Item(Int32 index)
+		public NetOffice.WordApi.TableOfFigures Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Caption">ref optional object Caption</param>
 		/// <param name="IncludeLabel">ref optional object IncludeLabel</param>
 		/// <param name="UseHeadingStyles">ref optional object UseHeadingStyles</param>
@@ -157,12 +157,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="IncludePageNumbers">ref optional object IncludePageNumbers</param>
 		/// <param name="AddedStyles">ref optional object AddedStyles</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.TableOfFigures AddOld(LateBindingApi.WordApi.Range range, ref object caption, ref object includeLabel, ref object useHeadingStyles, ref object upperHeadingLevel, ref object lowerHeadingLevel, ref object useFields, ref object tableID, ref object rightAlignPageNumbers, ref object includePageNumbers, ref object addedStyles)
+		public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, ref object caption, ref object includeLabel, ref object useHeadingStyles, ref object upperHeadingLevel, ref object lowerHeadingLevel, ref object useFields, ref object tableID, ref object rightAlignPageNumbers, ref object includePageNumbers, ref object addedStyles)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray, modifiers);
-			LateBindingApi.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfFigures;
 			caption = (object)paramsArray[1];
 			includeLabel = (object)paramsArray[2];
 			useHeadingStyles = (object)paramsArray[3];
@@ -179,31 +179,31 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.TableOfFigures AddOld(LateBindingApi.WordApi.Range range)
+		public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			LateBindingApi.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Entry">ref optional object Entry</param>
 		/// <param name="EntryAutoText">ref optional object EntryAutoText</param>
 		/// <param name="TableID">ref optional object TableID</param>
 		/// <param name="Level">ref optional object Level</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Field MarkEntry(LateBindingApi.WordApi.Range range, ref object entry, ref object entryAutoText, ref object tableID, ref object level)
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, ref object entry, ref object entryAutoText, ref object tableID, ref object level)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, tableID, level);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray, modifiers);
-			LateBindingApi.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Field;
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Field;
 			entry = (object)paramsArray[1];
 			entryAutoText = (object)paramsArray[2];
 			tableID = (object)paramsArray[3];
@@ -214,20 +214,20 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Field MarkEntry(LateBindingApi.WordApi.Range range)
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
-			LateBindingApi.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Field;
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Caption">ref optional object Caption</param>
 		/// <param name="IncludeLabel">ref optional object IncludeLabel</param>
 		/// <param name="UseHeadingStyles">ref optional object UseHeadingStyles</param>
@@ -241,12 +241,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="UseHyperlinks">ref optional object UseHyperlinks</param>
 		/// <param name="HidePageNumbersInWeb">ref optional object HidePageNumbersInWeb</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.TableOfFigures Add(LateBindingApi.WordApi.Range range, ref object caption, ref object includeLabel, ref object useHeadingStyles, ref object upperHeadingLevel, ref object lowerHeadingLevel, ref object useFields, ref object tableID, ref object rightAlignPageNumbers, ref object includePageNumbers, ref object addedStyles, ref object useHyperlinks, ref object hidePageNumbersInWeb)
+		public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, ref object caption, ref object includeLabel, ref object useHeadingStyles, ref object upperHeadingLevel, ref object lowerHeadingLevel, ref object useFields, ref object tableID, ref object rightAlignPageNumbers, ref object includePageNumbers, ref object addedStyles, ref object useHyperlinks, ref object hidePageNumbersInWeb)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles, useHyperlinks, hidePageNumbersInWeb);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfFigures;
 			caption = (object)paramsArray[1];
 			includeLabel = (object)paramsArray[2];
 			useHeadingStyles = (object)paramsArray[3];
@@ -265,13 +265,13 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.TableOfFigures Add(LateBindingApi.WordApi.Range range)
+		public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 

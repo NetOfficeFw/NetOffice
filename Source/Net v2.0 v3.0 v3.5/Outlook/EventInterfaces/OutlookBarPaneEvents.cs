@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {	
 	#pragma warning disable
 	
@@ -65,7 +65,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.OutlookBarShortcut newShortcut = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, shortcut) as LateBindingApi.OutlookApi.OutlookBarShortcut;
+			NetOffice.OutlookApi.OutlookBarShortcut newShortcut = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, shortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newShortcut;
 			paramsArray.SetValue(cancel, 1);
@@ -84,7 +84,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.OutlookBarGroup newToGroup = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, toGroup) as LateBindingApi.OutlookApi.OutlookBarGroup;
+			NetOffice.OutlookApi.OutlookBarGroup newToGroup = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, toGroup) as NetOffice.OutlookApi.OutlookBarGroup;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newToGroup;
 			paramsArray.SetValue(cancel, 1);

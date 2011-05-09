@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface TextEffectFormat SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -95,13 +95,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTextEffectAlignment Alignment
+		public NetOffice.OfficeApi.Enums.MsoTextEffectAlignment Alignment
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Alignment", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTextEffectAlignment)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTextEffectAlignment)returnItem;
 			}
 			set
 			{
@@ -114,13 +114,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState FontBold
+		public NetOffice.OfficeApi.Enums.MsoTriState FontBold
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FontBold", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -133,13 +133,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState FontItalic
+		public NetOffice.OfficeApi.Enums.MsoTriState FontItalic
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FontItalic", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -190,13 +190,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState KernedPairs
+		public NetOffice.OfficeApi.Enums.MsoTriState KernedPairs
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "KernedPairs", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -209,13 +209,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState NormalizedHeight
+		public NetOffice.OfficeApi.Enums.MsoTriState NormalizedHeight
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NormalizedHeight", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -228,13 +228,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetTextEffectShape PresetShape
+		public NetOffice.OfficeApi.Enums.MsoPresetTextEffectShape PresetShape
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetShape", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetTextEffectShape)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetTextEffectShape)returnItem;
 			}
 			set
 			{
@@ -247,13 +247,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect
+		public NetOffice.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetTextEffect", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetTextEffect)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetTextEffect)returnItem;
 			}
 			set
 			{
@@ -266,13 +266,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState RotatedChars
+		public NetOffice.OfficeApi.Enums.MsoTriState RotatedChars
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RotatedChars", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IImage SupportByLibrary WCC6.0 

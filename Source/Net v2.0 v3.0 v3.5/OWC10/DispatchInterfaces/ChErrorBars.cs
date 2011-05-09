@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ChErrorBars SupportByLibrary XWC1.0 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartEndStyleEnum EndStyle
+		public NetOffice.OWC10Api.Enums.ChartEndStyleEnum EndStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EndStyle", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartEndStyleEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartEndStyleEnum)returnItem;
 			}
 			set
 			{
@@ -70,13 +70,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartErrorBarDirectionEnum Direction
+		public NetOffice.OWC10Api.Enums.ChartErrorBarDirectionEnum Direction
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Direction", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartErrorBarDirectionEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartErrorBarDirectionEnum)returnItem;
 			}
 			set
 			{
@@ -103,13 +103,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChLine Line
+		public NetOffice.OWC10Api.ChLine Line
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Line", paramsArray);
-				LateBindingApi.OWC10Api.ChLine newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChLine;
+				NetOffice.OWC10Api.ChLine newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChLine;
 				return newObject;
 			}
 		}
@@ -118,13 +118,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChSeries Parent
+		public NetOffice.OWC10Api.ChSeries Parent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				LateBindingApi.OWC10Api.ChSeries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChSeries;
+				NetOffice.OWC10Api.ChSeries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChSeries;
 				return newObject;
 			}
 		}
@@ -152,13 +152,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartErrorBarIncludeEnum Include
+		public NetOffice.OWC10Api.Enums.ChartErrorBarIncludeEnum Include
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Include", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartErrorBarIncludeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartErrorBarIncludeEnum)returnItem;
 			}
 			set
 			{
@@ -171,13 +171,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartErrorBarTypeEnum Type
+		public NetOffice.OWC10Api.Enums.ChartErrorBarTypeEnum Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartErrorBarTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartErrorBarTypeEnum)returnItem;
 			}
 			set
 			{
@@ -246,13 +246,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartSelectionsEnum ObjectType
+		public NetOffice.OWC10Api.Enums.ChartSelectionsEnum ObjectType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ObjectType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartSelectionsEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartSelectionsEnum)returnItem;
 			}
 		}
 
@@ -263,11 +263,11 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Dimension">LateBindingApi.OWC10Api.Enums.ChartErrorBarCustomValuesEnum Dimension</param>
+		/// <param name="Dimension">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum Dimension</param>
 		/// <param name="DataSourceIndex">Int32 DataSourceIndex</param>
 		/// <param name="DataReference">optional object DataReference</param>
 		[SupportByLibrary("XWC1.0")]
-		public void SetData(LateBindingApi.OWC10Api.Enums.ChartErrorBarCustomValuesEnum dimension, Int32 dataSourceIndex, object dataReference)
+		public void SetData(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum dimension, Int32 dataSourceIndex, object dataReference)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dimension, dataSourceIndex, dataReference);
 			Invoker.Method(this, "SetData", paramsArray);
@@ -276,10 +276,10 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Dimension">LateBindingApi.OWC10Api.Enums.ChartErrorBarCustomValuesEnum Dimension</param>
+		/// <param name="Dimension">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum Dimension</param>
 		/// <param name="DataSourceIndex">Int32 DataSourceIndex</param>
 		[SupportByLibrary("XWC1.0")]
-		public void SetData(LateBindingApi.OWC10Api.Enums.ChartErrorBarCustomValuesEnum dimension, Int32 dataSourceIndex)
+		public void SetData(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum dimension, Int32 dataSourceIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dimension, dataSourceIndex);
 			Invoker.Method(this, "SetData", paramsArray);
@@ -288,9 +288,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="ErrorBarDirection">LateBindingApi.OWC10Api.Enums.ChartErrorBarCustomValuesEnum ErrorBarDirection</param>
+		/// <param name="ErrorBarDirection">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum ErrorBarDirection</param>
 		[SupportByLibrary("XWC1.0")]
-		public string GetDataReference(LateBindingApi.OWC10Api.Enums.ChartErrorBarCustomValuesEnum errorBarDirection)
+		public string GetDataReference(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum errorBarDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(errorBarDirection);
 			object returnItem = Invoker.MethodReturn(this, "GetDataReference", paramsArray);
@@ -300,9 +300,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="ErrorBarDirection">LateBindingApi.OWC10Api.Enums.ChartErrorBarCustomValuesEnum ErrorBarDirection</param>
+		/// <param name="ErrorBarDirection">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum ErrorBarDirection</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 GetDataSourceIndex(LateBindingApi.OWC10Api.Enums.ChartErrorBarCustomValuesEnum errorBarDirection)
+		public Int32 GetDataSourceIndex(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum errorBarDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(errorBarDirection);
 			object returnItem = Invoker.MethodReturn(this, "GetDataSourceIndex", paramsArray);
@@ -312,11 +312,11 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="ErrorBarDirection">LateBindingApi.OWC10Api.Enums.ChartErrorBarCustomValuesEnum ErrorBarDirection</param>
+		/// <param name="ErrorBarDirection">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum ErrorBarDirection</param>
 		/// <param name="DataSourceIndex">ref object DataSourceIndex</param>
 		/// <param name="DataReference">ref object DataReference</param>
 		[SupportByLibrary("XWC1.0")]
-		public void GetData(LateBindingApi.OWC10Api.Enums.ChartErrorBarCustomValuesEnum errorBarDirection, ref object dataSourceIndex, ref object dataReference)
+		public void GetData(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum errorBarDirection, ref object dataSourceIndex, ref object dataReference)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(errorBarDirection, dataSourceIndex, dataReference);

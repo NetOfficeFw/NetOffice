@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface SeriesCollection SupportByLibrary PP14 
@@ -95,13 +95,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -159,11 +159,11 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Series Item(object index)
+		public NetOffice.PowerPointApi.Series Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Series;
+			NetOffice.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Series;
 			return newObject;
 		}
 
@@ -171,11 +171,11 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Series NewSeries()
+		public NetOffice.PowerPointApi.Series NewSeries()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NewSeries", paramsArray);
-			LateBindingApi.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Series;
+			NetOffice.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Series;
 			return newObject;
 		}
 
@@ -183,16 +183,16 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		/// <param name="Source">object Source</param>
-		/// <param name="Rowcol">LateBindingApi.PowerPointApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="Rowcol">NetOffice.PowerPointApi.Enums.XlRowCol Rowcol</param>
 		/// <param name="SeriesLabels">optional object SeriesLabels</param>
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Series Add(object source, LateBindingApi.PowerPointApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
+		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Series;
+			NetOffice.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Series;
 			return newObject;
 		}
 
@@ -200,13 +200,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		/// <param name="Source">object Source</param>
-		/// <param name="Rowcol">LateBindingApi.PowerPointApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="Rowcol">NetOffice.PowerPointApi.Enums.XlRowCol Rowcol</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Series Add(object source, LateBindingApi.PowerPointApi.Enums.XlRowCol rowcol)
+		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Series;
+			NetOffice.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Series;
 			return newObject;
 		}
 
@@ -216,13 +216,13 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("PP14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.PowerPointApi.Series this[object index]
+		public NetOffice.PowerPointApi.Series this[object index]
 		{
 			get
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				LateBindingApi.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Series;
+				NetOffice.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Series;
 				return newObject;
 			}
 		}

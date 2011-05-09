@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Cell SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Range Range
+		public NetOffice.WordApi.Range Range
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-				LateBindingApi.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Range;
+				NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -176,13 +176,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdRowHeightRule HeightRule
+		public NetOffice.WordApi.Enums.WdRowHeightRule HeightRule
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HeightRule", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdRowHeightRule)returnItem;
+				return (NetOffice.WordApi.Enums.WdRowHeightRule)returnItem;
 			}
 			set
 			{
@@ -195,13 +195,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdCellVerticalAlignment VerticalAlignment
+		public NetOffice.WordApi.Enums.WdCellVerticalAlignment VerticalAlignment
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VerticalAlignment", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdCellVerticalAlignment)returnItem;
+				return (NetOffice.WordApi.Enums.WdCellVerticalAlignment)returnItem;
 			}
 			set
 			{
@@ -214,13 +214,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Column Column
+		public NetOffice.WordApi.Column Column
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Column", paramsArray);
-				LateBindingApi.WordApi.Column newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Column;
+				NetOffice.WordApi.Column newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Column;
 				return newObject;
 			}
 		}
@@ -229,13 +229,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Row Row
+		public NetOffice.WordApi.Row Row
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Row", paramsArray);
-				LateBindingApi.WordApi.Row newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Row;
+				NetOffice.WordApi.Row newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Row;
 				return newObject;
 			}
 		}
@@ -244,13 +244,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Cell Next
+		public NetOffice.WordApi.Cell Next
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Next", paramsArray);
-				LateBindingApi.WordApi.Cell newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Cell;
+				NetOffice.WordApi.Cell newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Cell;
 				return newObject;
 			}
 		}
@@ -259,13 +259,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Cell Previous
+		public NetOffice.WordApi.Cell Previous
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Previous", paramsArray);
-				LateBindingApi.WordApi.Cell newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Cell;
+				NetOffice.WordApi.Cell newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Cell;
 				return newObject;
 			}
 		}
@@ -274,13 +274,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Shading Shading
+		public NetOffice.WordApi.Shading Shading
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shading", paramsArray);
-				LateBindingApi.WordApi.Shading newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Shading;
+				NetOffice.WordApi.Shading newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Shading;
 				return newObject;
 			}
 		}
@@ -289,13 +289,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Borders Borders
+		public NetOffice.WordApi.Borders Borders
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Borders", paramsArray);
-				LateBindingApi.WordApi.Borders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Borders;
+				NetOffice.WordApi.Borders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Borders;
 				return newObject;
 			}
 			set
@@ -309,13 +309,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Tables Tables
+		public NetOffice.WordApi.Tables Tables
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Tables", paramsArray);
-				LateBindingApi.WordApi.Tables newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Tables;
+				NetOffice.WordApi.Tables newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Tables;
 				return newObject;
 			}
 		}
@@ -490,13 +490,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdPreferredWidthType PreferredWidthType
+		public NetOffice.WordApi.Enums.WdPreferredWidthType PreferredWidthType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PreferredWidthType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdPreferredWidthType)returnItem;
+				return (NetOffice.WordApi.Enums.WdPreferredWidthType)returnItem;
 			}
 			set
 			{
@@ -571,9 +571,9 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		/// <param name="ColumnWidth">Single ColumnWidth</param>
-		/// <param name="RulerStyle">LateBindingApi.WordApi.Enums.WdRulerStyle RulerStyle</param>
+		/// <param name="RulerStyle">NetOffice.WordApi.Enums.WdRulerStyle RulerStyle</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void SetWidth(Single columnWidth, LateBindingApi.WordApi.Enums.WdRulerStyle rulerStyle)
+		public void SetWidth(Single columnWidth, NetOffice.WordApi.Enums.WdRulerStyle rulerStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(columnWidth, rulerStyle);
 			Invoker.Method(this, "SetWidth", paramsArray);
@@ -583,9 +583,9 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		/// <param name="RowHeight">ref object RowHeight</param>
-		/// <param name="HeightRule">LateBindingApi.WordApi.Enums.WdRowHeightRule HeightRule</param>
+		/// <param name="HeightRule">NetOffice.WordApi.Enums.WdRowHeightRule HeightRule</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void SetHeight(ref object rowHeight, LateBindingApi.WordApi.Enums.WdRowHeightRule heightRule)
+		public void SetHeight(ref object rowHeight, NetOffice.WordApi.Enums.WdRowHeightRule heightRule)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(rowHeight, heightRule);
@@ -596,9 +596,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="MergeTo">LateBindingApi.WordApi.Cell MergeTo</param>
+		/// <param name="MergeTo">NetOffice.WordApi.Cell MergeTo</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void Merge(LateBindingApi.WordApi.Cell mergeTo)
+		public void Merge(NetOffice.WordApi.Cell mergeTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(mergeTo);
 			Invoker.Method(this, "Merge", paramsArray);

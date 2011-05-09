@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {	
 	#pragma warning disable
 	
@@ -182,7 +182,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.PropertyPages newPages = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pages) as LateBindingApi.OutlookApi.PropertyPages;
+			NetOffice.OutlookApi.PropertyPages newPages = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pages) as NetOffice.OutlookApi.PropertyPages;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPages;
 			foreach(Delegate delItem in recipients)
@@ -226,7 +226,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Search newSearchObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, searchObject) as LateBindingApi.OutlookApi.Search;
+			NetOffice.OutlookApi.Search newSearchObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, searchObject) as NetOffice.OutlookApi.Search;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSearchObject;
 			foreach(Delegate delItem in recipients)
@@ -242,7 +242,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Search newSearchObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, searchObject) as LateBindingApi.OutlookApi.Search;
+			NetOffice.OutlookApi.Search newSearchObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, searchObject) as NetOffice.OutlookApi.Search;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSearchObject;
 			foreach(Delegate delItem in recipients)
@@ -288,8 +288,8 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as LateBindingApi.OfficeApi.CommandBar;
-			LateBindingApi.OutlookApi.AttachmentSelection newAttachments = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachments) as LateBindingApi.OutlookApi.AttachmentSelection;
+			NetOffice.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OutlookApi.AttachmentSelection newAttachments = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachments) as NetOffice.OutlookApi.AttachmentSelection;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommandBar;
 			paramsArray[1] = newAttachments;
@@ -306,8 +306,8 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as LateBindingApi.OfficeApi.CommandBar;
-			LateBindingApi.OutlookApi.Folder newFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, folder) as LateBindingApi.OutlookApi.Folder;
+			NetOffice.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OutlookApi.Folder newFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, folder) as NetOffice.OutlookApi.Folder;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommandBar;
 			paramsArray[1] = newFolder;
@@ -324,8 +324,8 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as LateBindingApi.OfficeApi.CommandBar;
-			LateBindingApi.OutlookApi.Store newStore = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, store) as LateBindingApi.OutlookApi.Store;
+			NetOffice.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OutlookApi.Store newStore = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi.Store;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommandBar;
 			paramsArray[1] = newStore;
@@ -342,8 +342,8 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as LateBindingApi.OfficeApi.CommandBar;
-			LateBindingApi.OutlookApi.OutlookBarShortcut newShortcut = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, shortcut) as LateBindingApi.OutlookApi.OutlookBarShortcut;
+			NetOffice.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OutlookApi.OutlookBarShortcut newShortcut = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, shortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommandBar;
 			paramsArray[1] = newShortcut;
@@ -360,8 +360,8 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as LateBindingApi.OfficeApi.CommandBar;
-			LateBindingApi.OutlookApi.View newView = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, view) as LateBindingApi.OutlookApi.View;
+			NetOffice.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OutlookApi.View newView = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommandBar;
 			paramsArray[1] = newView;
@@ -378,8 +378,8 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as LateBindingApi.OfficeApi.CommandBar;
-			LateBindingApi.OutlookApi.Selection newSelection = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, selection) as LateBindingApi.OutlookApi.Selection;
+			NetOffice.OfficeApi.CommandBar newCommandBar = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBar) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OutlookApi.Selection newSelection = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.OutlookApi.Selection;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommandBar;
 			paramsArray[1] = newSelection;
@@ -396,7 +396,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Enums.OlContextMenu newContextMenu = (LateBindingApi.OutlookApi.Enums.OlContextMenu)contextMenu;
+			NetOffice.OutlookApi.Enums.OlContextMenu newContextMenu = (NetOffice.OutlookApi.Enums.OlContextMenu)contextMenu;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newContextMenu;
 			foreach(Delegate delItem in recipients)
@@ -428,7 +428,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.MAPIFolder newFolderToShare = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, folderToShare) as LateBindingApi.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newFolderToShare = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, folderToShare) as NetOffice.OutlookApi.MAPIFolder;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newFolderToShare;
 			paramsArray.SetValue(cancel, 1);

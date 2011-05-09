@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PivotResultFilterAxis SupportByLibrary XWC1.0 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotFilterAxis SourceFilterAxis
+		public NetOffice.OWC10Api.PivotFilterAxis SourceFilterAxis
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SourceFilterAxis", paramsArray);
-				LateBindingApi.OWC10Api.PivotFilterAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotFilterAxis;
+				NetOffice.OWC10Api.PivotFilterAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotFilterAxis;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotFieldSets FieldSets
+		public NetOffice.OWC10Api.PivotFieldSets FieldSets
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FieldSets", paramsArray);
-				LateBindingApi.OWC10Api.PivotFieldSets newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotFieldSets;
+				NetOffice.OWC10Api.PivotFieldSets newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotFieldSets;
 				return newObject;
 			}
 		}

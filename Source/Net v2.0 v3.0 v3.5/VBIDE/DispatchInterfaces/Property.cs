@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface Property SupportByLibrary VBE5.3 VBE12 
@@ -99,6 +99,14 @@ namespace LateBindingApi.VBIDEApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByLibrary VBE5.3 VBE12 
+		/// </summary>
+		/// <param name="Index1">object Index1</param>
+		/// <param name="Index2">optional object Index2</param>
+		/// <param name="Index3">optional object Index3</param>
+		/// <param name="Index4">optional object Index4</param>
+		[SupportByLibrary("VBE5.3","VBE12")]
 		public void set_IndexedValue(object index1, object index2, object index3, object index4, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2, index3, index4);
@@ -126,6 +134,11 @@ namespace LateBindingApi.VBIDEApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByLibrary VBE5.3 VBE12 
+		/// </summary>
+		/// <param name="Index1">object Index1</param>
+		[SupportByLibrary("VBE5.3","VBE12")]
 		public void set_IndexedValue(object index1, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1);
@@ -150,13 +163,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.Application Application
+		public NetOffice.VBIDEApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.VBIDEApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.Application;
+				NetOffice.VBIDEApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Application;
 				return newObject;
 			}
 		}
@@ -165,13 +178,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.Properties Parent
+		public NetOffice.VBIDEApi.Properties Parent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				LateBindingApi.VBIDEApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.Properties;
+				NetOffice.VBIDEApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Properties;
 				return newObject;
 			}
 		}
@@ -194,13 +207,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBE VBE
+		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				LateBindingApi.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -209,13 +222,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.Properties Collection
+		public NetOffice.VBIDEApi.Properties Collection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Collection", paramsArray);
-				LateBindingApi.VBIDEApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.Properties;
+				NetOffice.VBIDEApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Properties;
 				return newObject;
 			}
 		}

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface _Collection SupportByLibrary ADO2.1 ADO2.5 

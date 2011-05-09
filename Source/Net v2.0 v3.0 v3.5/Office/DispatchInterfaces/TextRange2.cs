@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface TextRange2 SupportByLibrary OF12 OF14 
@@ -102,11 +102,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 get_Paragraphs(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Paragraphs", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -116,11 +116,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 get_Sentences(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Sentences(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Sentences", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -130,11 +130,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 get_Words(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Words(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Words", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -144,11 +144,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 get_Characters(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Characters(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -158,11 +158,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 get_Lines(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Lines(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Lines", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -172,11 +172,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 get_Runs(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Runs(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Runs", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -184,13 +184,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.ParagraphFormat2 ParagraphFormat
+		public NetOffice.OfficeApi.ParagraphFormat2 ParagraphFormat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ParagraphFormat", paramsArray);
-				LateBindingApi.OfficeApi.ParagraphFormat2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.ParagraphFormat2;
+				NetOffice.OfficeApi.ParagraphFormat2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ParagraphFormat2;
 				return newObject;
 			}
 		}
@@ -199,13 +199,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Font2 Font
+		public NetOffice.OfficeApi.Font2 Font
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				LateBindingApi.OfficeApi.Font2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.Font2;
+				NetOffice.OfficeApi.Font2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.Font2;
 				return newObject;
 			}
 		}
@@ -298,13 +298,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoLanguageID LanguageID
+		public NetOffice.OfficeApi.Enums.MsoLanguageID LanguageID
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LanguageID", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoLanguageID)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoLanguageID)returnItem;
 			}
 			set
 			{
@@ -319,11 +319,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 get_MathZones(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_MathZones(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "MathZones", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -336,11 +336,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 Item(object index)
+		public NetOffice.OfficeApi.TextRange2 Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -348,11 +348,11 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 TrimText()
+		public NetOffice.OfficeApi.TextRange2 TrimText()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "TrimText", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -361,11 +361,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="NewText">string NewText</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 InsertAfter(string newText)
+		public NetOffice.OfficeApi.TextRange2 InsertAfter(string newText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newText);
 			object returnItem = Invoker.MethodReturn(this, "InsertAfter", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -374,11 +374,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="NewText">string NewText</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 InsertBefore(string newText)
+		public NetOffice.OfficeApi.TextRange2 InsertBefore(string newText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newText);
 			object returnItem = Invoker.MethodReturn(this, "InsertBefore", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -387,13 +387,13 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="FontName">string FontName</param>
 		/// <param name="CharNumber">Int32 CharNumber</param>
-		/// <param name="Unicode">LateBindingApi.OfficeApi.Enums.MsoTriState Unicode</param>
+		/// <param name="Unicode">NetOffice.OfficeApi.Enums.MsoTriState Unicode</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 InsertSymbol(string fontName, Int32 charNumber, LateBindingApi.OfficeApi.Enums.MsoTriState unicode)
+		public NetOffice.OfficeApi.TextRange2 InsertSymbol(string fontName, Int32 charNumber, NetOffice.OfficeApi.Enums.MsoTriState unicode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName, charNumber, unicode);
 			object returnItem = Invoker.MethodReturn(this, "InsertSymbol", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -441,33 +441,33 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 Paste()
+		public NetOffice.OfficeApi.TextRange2 Paste()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Format">LateBindingApi.OfficeApi.Enums.MsoClipboardFormat Format</param>
+		/// <param name="Format">NetOffice.OfficeApi.Enums.MsoClipboardFormat Format</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 PasteSpecial(LateBindingApi.OfficeApi.Enums.MsoClipboardFormat format)
+		public NetOffice.OfficeApi.TextRange2 PasteSpecial(NetOffice.OfficeApi.Enums.MsoClipboardFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.OfficeApi.Enums.MsoTextChangeCase Type</param>
+		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoTextChangeCase Type</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void ChangeCase(LateBindingApi.OfficeApi.Enums.MsoTextChangeCase type)
+		public void ChangeCase(NetOffice.OfficeApi.Enums.MsoTextChangeCase type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "ChangeCase", paramsArray);
@@ -498,14 +498,14 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="FindWhat">string FindWhat</param>
 		/// <param name="After">Int32 After</param>
-		/// <param name="MatchCase">LateBindingApi.OfficeApi.Enums.MsoTriState MatchCase</param>
-		/// <param name="WholeWords">LateBindingApi.OfficeApi.Enums.MsoTriState WholeWords</param>
+		/// <param name="MatchCase">NetOffice.OfficeApi.Enums.MsoTriState MatchCase</param>
+		/// <param name="WholeWords">NetOffice.OfficeApi.Enums.MsoTriState WholeWords</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 Find(string findWhat, Int32 after, LateBindingApi.OfficeApi.Enums.MsoTriState matchCase, LateBindingApi.OfficeApi.Enums.MsoTriState wholeWords)
+		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase, NetOffice.OfficeApi.Enums.MsoTriState wholeWords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after, matchCase, wholeWords);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 
@@ -515,14 +515,14 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="FindWhat">string FindWhat</param>
 		/// <param name="ReplaceWhat">string ReplaceWhat</param>
 		/// <param name="After">Int32 After</param>
-		/// <param name="MatchCase">LateBindingApi.OfficeApi.Enums.MsoTriState MatchCase</param>
-		/// <param name="WholeWords">LateBindingApi.OfficeApi.Enums.MsoTriState WholeWords</param>
+		/// <param name="MatchCase">NetOffice.OfficeApi.Enums.MsoTriState MatchCase</param>
+		/// <param name="WholeWords">NetOffice.OfficeApi.Enums.MsoTriState WholeWords</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, Int32 after, LateBindingApi.OfficeApi.Enums.MsoTriState matchCase, LateBindingApi.OfficeApi.Enums.MsoTriState wholeWords)
+		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase, NetOffice.OfficeApi.Enums.MsoTriState wholeWords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after, matchCase, wholeWords);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
-			LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.TextRange2;
+			NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TextRange2;
 			return newObject;
 		}
 

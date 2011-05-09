@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Indexes SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdIndexFormat Format
+		public NetOffice.WordApi.Enums.WdIndexFormat Format
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdIndexFormat)returnItem;
+				return (NetOffice.WordApi.Enums.WdIndexFormat)returnItem;
 			}
 			set
 			{
@@ -134,30 +134,30 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Index Item(Int32 index)
+		public NetOffice.WordApi.Index Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Index;
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Index;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="HeadingSeparator">ref optional object HeadingSeparator</param>
 		/// <param name="RightAlignPageNumbers">ref optional object RightAlignPageNumbers</param>
 		/// <param name="Type">ref optional object Type</param>
 		/// <param name="NumberOfColumns">ref optional object NumberOfColumns</param>
 		/// <param name="AccentedLetters">ref optional object AccentedLetters</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Index AddOld(LateBindingApi.WordApi.Range range, ref object headingSeparator, ref object rightAlignPageNumbers, ref object type, ref object numberOfColumns, ref object accentedLetters)
+		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, ref object headingSeparator, ref object rightAlignPageNumbers, ref object type, ref object numberOfColumns, ref object accentedLetters)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray, modifiers);
-			LateBindingApi.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Index;
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Index;
 			headingSeparator = (object)paramsArray[1];
 			rightAlignPageNumbers = (object)paramsArray[2];
 			type = (object)paramsArray[3];
@@ -169,20 +169,20 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Index AddOld(LateBindingApi.WordApi.Range range)
+		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			LateBindingApi.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Index;
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Index;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Entry">ref optional object Entry</param>
 		/// <param name="EntryAutoText">ref optional object EntryAutoText</param>
 		/// <param name="CrossReference">ref optional object CrossReference</param>
@@ -192,12 +192,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="Italic">ref optional object Italic</param>
 		/// <param name="Reading">ref optional object Reading</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Field MarkEntry(LateBindingApi.WordApi.Range range, ref object entry, ref object entryAutoText, ref object crossReference, ref object crossReferenceAutoText, ref object bookmarkName, ref object bold, ref object italic, ref object reading)
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, ref object entry, ref object entryAutoText, ref object crossReference, ref object crossReferenceAutoText, ref object bookmarkName, ref object bold, ref object italic, ref object reading)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic, reading);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray, modifiers);
-			LateBindingApi.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Field;
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Field;
 			entry = (object)paramsArray[1];
 			entryAutoText = (object)paramsArray[2];
 			crossReference = (object)paramsArray[3];
@@ -212,20 +212,20 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Field MarkEntry(LateBindingApi.WordApi.Range range)
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
-			LateBindingApi.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Field;
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Entry">ref optional object Entry</param>
 		/// <param name="EntryAutoText">ref optional object EntryAutoText</param>
 		/// <param name="CrossReference">ref optional object CrossReference</param>
@@ -234,7 +234,7 @@ namespace LateBindingApi.WordApi
 		/// <param name="Bold">ref optional object Bold</param>
 		/// <param name="Italic">ref optional object Italic</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void MarkAllEntries(LateBindingApi.WordApi.Range range, ref object entry, ref object entryAutoText, ref object crossReference, ref object crossReferenceAutoText, ref object bookmarkName, ref object bold, ref object italic)
+		public void MarkAllEntries(NetOffice.WordApi.Range range, ref object entry, ref object entryAutoText, ref object crossReference, ref object crossReferenceAutoText, ref object bookmarkName, ref object bold, ref object italic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic);
@@ -251,9 +251,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void MarkAllEntries(LateBindingApi.WordApi.Range range)
+		public void MarkAllEntries(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			Invoker.Method(this, "MarkAllEntries", paramsArray);
@@ -273,7 +273,7 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="HeadingSeparator">ref optional object HeadingSeparator</param>
 		/// <param name="RightAlignPageNumbers">ref optional object RightAlignPageNumbers</param>
 		/// <param name="Type">ref optional object Type</param>
@@ -282,12 +282,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="SortBy">ref optional object SortBy</param>
 		/// <param name="IndexLanguage">ref optional object IndexLanguage</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Index Add(LateBindingApi.WordApi.Range range, ref object headingSeparator, ref object rightAlignPageNumbers, ref object type, ref object numberOfColumns, ref object accentedLetters, ref object sortBy, ref object indexLanguage)
+		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, ref object headingSeparator, ref object rightAlignPageNumbers, ref object type, ref object numberOfColumns, ref object accentedLetters, ref object sortBy, ref object indexLanguage)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters, sortBy, indexLanguage);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Index;
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Index;
 			headingSeparator = (object)paramsArray[1];
 			rightAlignPageNumbers = (object)paramsArray[2];
 			type = (object)paramsArray[3];
@@ -301,13 +301,13 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Index Add(LateBindingApi.WordApi.Range range)
+		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Index;
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Index;
 			return newObject;
 		}
 

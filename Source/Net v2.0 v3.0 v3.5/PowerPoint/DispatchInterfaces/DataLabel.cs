@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface DataLabel SupportByLibrary PP14 
@@ -80,13 +80,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.ChartBorder Border
+		public NetOffice.PowerPointApi.ChartBorder Border
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Border", paramsArray);
-				LateBindingApi.PowerPointApi.ChartBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.ChartBorder;
+				NetOffice.PowerPointApi.ChartBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ChartBorder;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Interior Interior
+		public NetOffice.PowerPointApi.Interior Interior
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Interior", paramsArray);
-				LateBindingApi.PowerPointApi.Interior newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Interior;
+				NetOffice.PowerPointApi.Interior newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Interior;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.ChartFillFormat Fill
+		public NetOffice.PowerPointApi.ChartFillFormat Fill
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fill", paramsArray);
-				LateBindingApi.PowerPointApi.ChartFillFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.ChartFillFormat;
+				NetOffice.PowerPointApi.ChartFillFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ChartFillFormat;
 				return newObject;
 			}
 		}
@@ -146,11 +146,11 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Start">optional object Start</param>
 		/// <param name="Length">optional object Length</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.ChartCharacters get_Characters(object start, object length)
+		public NetOffice.PowerPointApi.ChartCharacters get_Characters(object start, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-			LateBindingApi.PowerPointApi.ChartCharacters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.ChartCharacters;
+			NetOffice.PowerPointApi.ChartCharacters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ChartCharacters;
 			return newObject;
 		}
 
@@ -158,13 +158,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.ChartCharacters Characters
+		public NetOffice.PowerPointApi.ChartCharacters Characters
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-				LateBindingApi.PowerPointApi.ChartCharacters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.ChartCharacters;
+				NetOffice.PowerPointApi.ChartCharacters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ChartCharacters;
 				return newObject;
 			}
 		}
@@ -173,13 +173,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.ChartFont Font
+		public NetOffice.PowerPointApi.ChartFont Font
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				LateBindingApi.PowerPointApi.ChartFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.ChartFont;
+				NetOffice.PowerPointApi.ChartFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ChartFont;
 				return newObject;
 			}
 		}
@@ -527,13 +527,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Enums.XlDataLabelPosition Position
+		public NetOffice.PowerPointApi.Enums.XlDataLabelPosition Position
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Position", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.XlDataLabelPosition)returnItem;
+				return (NetOffice.PowerPointApi.Enums.XlDataLabelPosition)returnItem;
 			}
 			set
 			{
@@ -669,13 +669,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.ChartFormat Format
+		public NetOffice.PowerPointApi.ChartFormat Format
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				LateBindingApi.PowerPointApi.ChartFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.ChartFormat;
+				NetOffice.PowerPointApi.ChartFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ChartFormat;
 				return newObject;
 			}
 		}
@@ -698,13 +698,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SearchScopes SupportByLibrary OF10 OF11 OF12 OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SearchScope get_Item(Int32 index)
+		public NetOffice.OfficeApi.SearchScope get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.SearchScope newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SearchScope;
+			NetOffice.OfficeApi.SearchScope newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SearchScope;
 			return newObject;
 		}
 

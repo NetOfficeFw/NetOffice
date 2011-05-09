@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface OfficeDataSourceObject SupportByLibrary OF10 OF11 OF12 OF14 
@@ -155,10 +155,10 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="MsoMoveRow">LateBindingApi.OfficeApi.Enums.MsoMoveRow MsoMoveRow</param>
+		/// <param name="MsoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow MsoMoveRow</param>
 		/// <param name="RowNbr">Int32 RowNbr</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public Int32 Move(LateBindingApi.OfficeApi.Enums.MsoMoveRow msoMoveRow, Int32 rowNbr)
+		public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow, Int32 rowNbr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(msoMoveRow, rowNbr);
 			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);

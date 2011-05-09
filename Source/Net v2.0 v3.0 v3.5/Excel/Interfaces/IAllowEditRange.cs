@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IAllowEditRange SupportByLibrary XL10 XL11 XL12 XL14 
@@ -69,13 +69,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Range Range
+		public NetOffice.ExcelApi.Range Range
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-				LateBindingApi.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 			set
@@ -89,13 +89,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.UserAccessList Users
+		public NetOffice.ExcelApi.UserAccessList Users
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Users", paramsArray);
-				LateBindingApi.ExcelApi.UserAccessList newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.UserAccessList;
+				NetOffice.ExcelApi.UserAccessList newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.UserAccessList;
 				return newObject;
 			}
 		}

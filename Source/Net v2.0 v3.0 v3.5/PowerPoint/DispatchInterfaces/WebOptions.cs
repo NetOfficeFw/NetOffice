@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface WebOptions SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState IncludeNavigation
+		public NetOffice.OfficeApi.Enums.MsoTriState IncludeNavigation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "IncludeNavigation", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -70,13 +70,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpFrameColors FrameColors
+		public NetOffice.PowerPointApi.Enums.PpFrameColors FrameColors
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FrameColors", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpFrameColors)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpFrameColors)returnItem;
 			}
 			set
 			{
@@ -89,13 +89,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState ResizeGraphics
+		public NetOffice.OfficeApi.Enums.MsoTriState ResizeGraphics
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ResizeGraphics", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -108,13 +108,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState ShowSlideAnimation
+		public NetOffice.OfficeApi.Enums.MsoTriState ShowSlideAnimation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ShowSlideAnimation", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -127,13 +127,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState OrganizeInFolder
+		public NetOffice.OfficeApi.Enums.MsoTriState OrganizeInFolder
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OrganizeInFolder", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -146,13 +146,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState UseLongFileNames
+		public NetOffice.OfficeApi.Enums.MsoTriState UseLongFileNames
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UseLongFileNames", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -165,13 +165,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState RelyOnVML
+		public NetOffice.OfficeApi.Enums.MsoTriState RelyOnVML
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RelyOnVML", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -184,13 +184,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState AllowPNG
+		public NetOffice.OfficeApi.Enums.MsoTriState AllowPNG
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowPNG", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -203,13 +203,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoScreenSize ScreenSize
+		public NetOffice.OfficeApi.Enums.MsoScreenSize ScreenSize
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScreenSize", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoScreenSize)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoScreenSize)returnItem;
 			}
 			set
 			{
@@ -222,13 +222,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoEncoding Encoding
+		public NetOffice.OfficeApi.Enums.MsoEncoding Encoding
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Encoding", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoEncoding)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoEncoding)returnItem;
 			}
 			set
 			{
@@ -255,13 +255,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTargetBrowser TargetBrowser
+		public NetOffice.OfficeApi.Enums.MsoTargetBrowser TargetBrowser
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TargetBrowser", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTargetBrowser)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTargetBrowser)returnItem;
 			}
 			set
 			{
@@ -274,13 +274,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpHTMLVersion HTMLVersion
+		public NetOffice.PowerPointApi.Enums.PpHTMLVersion HTMLVersion
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HTMLVersion", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpHTMLVersion)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpHTMLVersion)returnItem;
 			}
 			set
 			{

@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IModule SupportByLibrary XL09 XL10 XL11 XL12 XL14 
@@ -50,13 +50,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -65,13 +65,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -232,13 +232,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.PageSetup PageSetup
+		public NetOffice.ExcelApi.PageSetup PageSetup
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PageSetup", paramsArray);
-				LateBindingApi.ExcelApi.PageSetup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.PageSetup;
+				NetOffice.ExcelApi.PageSetup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PageSetup;
 				return newObject;
 			}
 		}
@@ -290,13 +290,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlSheetVisibility Visible
+		public NetOffice.ExcelApi.Enums.XlSheetVisibility Visible
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Visible", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlSheetVisibility)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlSheetVisibility)returnItem;
 			}
 			set
 			{
@@ -309,13 +309,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Shapes Shapes
+		public NetOffice.ExcelApi.Shapes Shapes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shapes", paramsArray);
-				LateBindingApi.ExcelApi.Shapes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Shapes;
+				NetOffice.ExcelApi.Shapes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Shapes;
 				return newObject;
 			}
 		}

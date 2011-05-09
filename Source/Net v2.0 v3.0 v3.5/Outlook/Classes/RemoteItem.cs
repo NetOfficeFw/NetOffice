@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
@@ -21,15 +21,15 @@ namespace LateBindingApi.OutlookApi
 	public delegate void RemoteItem_SendEventHandler(ref bool Cancel);
 	public delegate void RemoteItem_WriteEventHandler(ref bool Cancel);
 	public delegate void RemoteItem_BeforeCheckNamesEventHandler(ref bool Cancel);
-	public delegate void RemoteItem_AttachmentAddEventHandler(LateBindingApi.OutlookApi.Attachment Attachment);
-	public delegate void RemoteItem_AttachmentReadEventHandler(LateBindingApi.OutlookApi.Attachment Attachment);
-	public delegate void RemoteItem_BeforeAttachmentSaveEventHandler(LateBindingApi.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void RemoteItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment);
+	public delegate void RemoteItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment);
+	public delegate void RemoteItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
 	public delegate void RemoteItem_BeforeDeleteEventHandler(COMObject Item, ref bool Cancel);
-	public delegate void RemoteItem_AttachmentRemoveEventHandler(LateBindingApi.OutlookApi.Attachment Attachment);
-	public delegate void RemoteItem_BeforeAttachmentAddEventHandler(LateBindingApi.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void RemoteItem_BeforeAttachmentPreviewEventHandler(LateBindingApi.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void RemoteItem_BeforeAttachmentReadEventHandler(LateBindingApi.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void RemoteItem_BeforeAttachmentWriteToTempFileEventHandler(LateBindingApi.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void RemoteItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment Attachment);
+	public delegate void RemoteItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void RemoteItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void RemoteItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void RemoteItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
 	public delegate void RemoteItem_UnloadEventHandler();
 	public delegate void RemoteItem_BeforeAutoSaveEventHandler(ref bool Cancel);
 	public delegate void RemoteItem_BeforeReadEventHandler();

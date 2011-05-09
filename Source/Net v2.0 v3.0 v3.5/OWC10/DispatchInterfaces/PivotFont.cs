@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PivotFont SupportByLibrary XWC1.0 
@@ -127,13 +127,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.UnderlineStyleEnum Underline
+		public NetOffice.OWC10Api.Enums.UnderlineStyleEnum Underline
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Underline", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.UnderlineStyleEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.UnderlineStyleEnum)returnItem;
 			}
 			set
 			{

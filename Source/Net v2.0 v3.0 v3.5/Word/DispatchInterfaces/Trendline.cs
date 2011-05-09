@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Trendline SupportByLibrary WD14 
@@ -85,13 +85,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.ChartBorder Border
+		public NetOffice.WordApi.ChartBorder Border
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Border", paramsArray);
-				LateBindingApi.WordApi.ChartBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ChartBorder;
+				NetOffice.WordApi.ChartBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartBorder;
 				return newObject;
 			}
 		}
@@ -100,13 +100,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.DataLabel DataLabel
+		public NetOffice.WordApi.DataLabel DataLabel
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataLabel", paramsArray);
-				LateBindingApi.WordApi.DataLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.DataLabel;
+				NetOffice.WordApi.DataLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.DataLabel;
 				return newObject;
 			}
 		}
@@ -300,13 +300,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlTrendlineType Type
+		public NetOffice.WordApi.Enums.XlTrendlineType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlTrendlineType)returnItem;
+				return (NetOffice.WordApi.Enums.XlTrendlineType)returnItem;
 			}
 			set
 			{
@@ -319,13 +319,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.ChartFormat Format
+		public NetOffice.WordApi.ChartFormat Format
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				LateBindingApi.WordApi.ChartFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ChartFormat;
+				NetOffice.WordApi.ChartFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartFormat;
 				return newObject;
 			}
 		}

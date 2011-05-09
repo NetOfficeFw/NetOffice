@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface GradientStops SupportByLibrary OF12 OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.GradientStop get_Item(Int32 index)
+		public NetOffice.OfficeApi.GradientStop get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.GradientStop newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.GradientStop;
+			NetOffice.OfficeApi.GradientStop newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.GradientStop;
 			return newObject;
 		}
 

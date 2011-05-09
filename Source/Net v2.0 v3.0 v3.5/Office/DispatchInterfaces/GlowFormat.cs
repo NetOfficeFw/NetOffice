@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface GlowFormat SupportByLibrary OF12 OF14 
@@ -70,13 +70,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.ColorFormat Color
+		public NetOffice.OfficeApi.ColorFormat Color
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Color", paramsArray);
-				LateBindingApi.OfficeApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.ColorFormat;
+				NetOffice.OfficeApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ColorFormat;
 				return newObject;
 			}
 		}

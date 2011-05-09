@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IWorksheetFunction SupportByLibrary XL09 XL10 XL11 XL12 XL14 
@@ -50,13 +50,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -65,13 +65,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -872,11 +872,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double DCount(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double DCount(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DCount", paramsArray);
@@ -886,11 +886,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double DSum(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double DSum(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DSum", paramsArray);
@@ -900,11 +900,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double DAverage(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double DAverage(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DAverage", paramsArray);
@@ -914,11 +914,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double DMin(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double DMin(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DMin", paramsArray);
@@ -928,11 +928,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double DMax(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double DMax(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DMax", paramsArray);
@@ -942,11 +942,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double DStDev(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double DStDev(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DStDev", paramsArray);
@@ -1009,11 +1009,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double DVar(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double DVar(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DVar", paramsArray);
@@ -2174,11 +2174,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double DProduct(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double DProduct(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DProduct", paramsArray);
@@ -2306,11 +2306,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double DStDevP(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double DStDevP(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DStDevP", paramsArray);
@@ -2320,11 +2320,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double DVarP(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double DVarP(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DVarP", paramsArray);
@@ -2346,11 +2346,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double DCountA(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double DCountA(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DCountA", paramsArray);
@@ -2469,10 +2469,10 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double Rank(Double arg1, LateBindingApi.ExcelApi.Range arg2, object arg3)
+		public Double Rank(Double arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Rank", paramsArray);
@@ -2483,9 +2483,9 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double Rank(Double arg1, LateBindingApi.ExcelApi.Range arg2)
+		public Double Rank(Double arg1, NetOffice.ExcelApi.Range arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Rank", paramsArray);
@@ -2734,11 +2734,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public object DGet(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public object DGet(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DGet", paramsArray);
@@ -4097,7 +4097,7 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
@@ -4127,7 +4127,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double Subtotal(Double arg1, LateBindingApi.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
+		public Double Subtotal(Double arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
@@ -4138,9 +4138,9 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double Subtotal(Double arg1, LateBindingApi.ExcelApi.Range arg2)
+		public Double Subtotal(Double arg1, NetOffice.ExcelApi.Range arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
@@ -4150,11 +4150,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double SumIf(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double SumIf(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "SumIf", paramsArray);
@@ -4164,10 +4164,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double SumIf(LateBindingApi.ExcelApi.Range arg1, object arg2)
+		public Double SumIf(NetOffice.ExcelApi.Range arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "SumIf", paramsArray);
@@ -4177,10 +4177,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double CountIf(LateBindingApi.ExcelApi.Range arg1, object arg2)
+		public Double CountIf(NetOffice.ExcelApi.Range arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "CountIf", paramsArray);
@@ -4190,9 +4190,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Double CountBlank(LateBindingApi.ExcelApi.Range arg1)
+		public Double CountBlank(NetOffice.ExcelApi.Range arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "CountBlank", paramsArray);
@@ -4266,9 +4266,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public string Phonetic(LateBindingApi.ExcelApi.Range arg1)
+		public string Phonetic(NetOffice.ExcelApi.Range arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Phonetic", paramsArray);
@@ -6610,8 +6610,8 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
@@ -6640,7 +6640,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		[SupportByLibrary("XL12","XL14")]
-		public Double SumIfs(LateBindingApi.ExcelApi.Range arg1, LateBindingApi.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
+		public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
@@ -6650,11 +6650,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL12","XL14")]
-		public Double SumIfs(LateBindingApi.ExcelApi.Range arg1, LateBindingApi.ExcelApi.Range arg2, object arg3)
+		public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
@@ -6664,7 +6664,7 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
@@ -6695,7 +6695,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
 		[SupportByLibrary("XL12","XL14")]
-		public Double CountIfs(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
+		public Double CountIfs(NetOffice.ExcelApi.Range arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
@@ -6705,10 +6705,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		[SupportByLibrary("XL12","XL14")]
-		public Double CountIfs(LateBindingApi.ExcelApi.Range arg1, object arg2)
+		public Double CountIfs(NetOffice.ExcelApi.Range arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
@@ -6718,11 +6718,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		[SupportByLibrary("XL12","XL14")]
-		public Double AverageIf(LateBindingApi.ExcelApi.Range arg1, object arg2, object arg3)
+		public Double AverageIf(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "AverageIf", paramsArray);
@@ -6732,10 +6732,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		[SupportByLibrary("XL12","XL14")]
-		public Double AverageIf(LateBindingApi.ExcelApi.Range arg1, object arg2)
+		public Double AverageIf(NetOffice.ExcelApi.Range arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "AverageIf", paramsArray);
@@ -6745,8 +6745,8 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
@@ -6775,7 +6775,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		[SupportByLibrary("XL12","XL14")]
-		public Double AverageIfs(LateBindingApi.ExcelApi.Range arg1, LateBindingApi.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
+		public Double AverageIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
@@ -6785,11 +6785,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.ExcelApi.Range Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		[SupportByLibrary("XL12","XL14")]
-		public Double AverageIfs(LateBindingApi.ExcelApi.Range arg1, LateBindingApi.ExcelApi.Range arg2, object arg3)
+		public Double AverageIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
@@ -6823,7 +6823,7 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		/// <param name="Arg3">LateBindingApi.ExcelApi.Range Arg3</param>
+		/// <param name="Arg3">NetOffice.ExcelApi.Range Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
 		/// <param name="Arg6">optional object Arg6</param>
@@ -6852,7 +6852,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
 		[SupportByLibrary("XL14")]
-		public Double Aggregate(Double arg1, Double arg2, LateBindingApi.ExcelApi.Range arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
+		public Double Aggregate(Double arg1, Double arg2, NetOffice.ExcelApi.Range arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
@@ -6864,9 +6864,9 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		/// <param name="Arg3">LateBindingApi.ExcelApi.Range Arg3</param>
+		/// <param name="Arg3">NetOffice.ExcelApi.Range Arg3</param>
 		[SupportByLibrary("XL14")]
-		public Double Aggregate(Double arg1, Double arg2, LateBindingApi.ExcelApi.Range arg3)
+		public Double Aggregate(Double arg1, Double arg2, NetOffice.ExcelApi.Range arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
@@ -7273,10 +7273,10 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		[SupportByLibrary("XL14")]
-		public Double Rank_Avg(Double arg1, LateBindingApi.ExcelApi.Range arg2, object arg3)
+		public Double Rank_Avg(Double arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Rank_Avg", paramsArray);
@@ -7287,9 +7287,9 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		[SupportByLibrary("XL14")]
-		public Double Rank_Avg(Double arg1, LateBindingApi.ExcelApi.Range arg2)
+		public Double Rank_Avg(Double arg1, NetOffice.ExcelApi.Range arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Rank_Avg", paramsArray);
@@ -7300,10 +7300,10 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		[SupportByLibrary("XL14")]
-		public Double Rank_Eq(Double arg1, LateBindingApi.ExcelApi.Range arg2, object arg3)
+		public Double Rank_Eq(Double arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Rank_Eq", paramsArray);
@@ -7314,9 +7314,9 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		/// <param name="Arg2">LateBindingApi.ExcelApi.Range Arg2</param>
+		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		[SupportByLibrary("XL14")]
-		public Double Rank_Eq(Double arg1, LateBindingApi.ExcelApi.Range arg2)
+		public Double Rank_Eq(Double arg1, NetOffice.ExcelApi.Range arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Rank_Eq", paramsArray);

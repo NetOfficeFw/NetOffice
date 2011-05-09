@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface IMsoContactCard SupportByLibrary OF14 
@@ -65,13 +65,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoContactCardAddressType AddressType
+		public NetOffice.OfficeApi.Enums.MsoContactCardAddressType AddressType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AddressType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoContactCardAddressType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoContactCardAddressType)returnItem;
 			}
 		}
 
@@ -79,13 +79,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoContactCardType CardType
+		public NetOffice.OfficeApi.Enums.MsoContactCardType CardType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CardType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoContactCardType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoContactCardType)returnItem;
 			}
 		}
 

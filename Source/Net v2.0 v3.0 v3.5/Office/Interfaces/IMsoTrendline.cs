@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface IMsoTrendline SupportByLibrary OF12 OF14 
@@ -84,13 +84,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.IMsoBorder Border
+		public NetOffice.OfficeApi.IMsoBorder Border
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Border", paramsArray);
-				LateBindingApi.OfficeApi.IMsoBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IMsoBorder;
+				NetOffice.OfficeApi.IMsoBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoBorder;
 				return newObject;
 			}
 		}
@@ -99,13 +99,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.IMsoDataLabel DataLabel
+		public NetOffice.OfficeApi.IMsoDataLabel DataLabel
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataLabel", paramsArray);
-				LateBindingApi.OfficeApi.IMsoDataLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IMsoDataLabel;
+				NetOffice.OfficeApi.IMsoDataLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoDataLabel;
 				return newObject;
 			}
 		}
@@ -299,13 +299,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.XlTrendlineType Type
+		public NetOffice.OfficeApi.Enums.XlTrendlineType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.XlTrendlineType)returnItem;
+				return (NetOffice.OfficeApi.Enums.XlTrendlineType)returnItem;
 			}
 			set
 			{
@@ -318,13 +318,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.IMsoChartFormat Format
+		public NetOffice.OfficeApi.IMsoChartFormat Format
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				LateBindingApi.OfficeApi.IMsoChartFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IMsoChartFormat;
+				NetOffice.OfficeApi.IMsoChartFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoChartFormat;
 				return newObject;
 			}
 		}

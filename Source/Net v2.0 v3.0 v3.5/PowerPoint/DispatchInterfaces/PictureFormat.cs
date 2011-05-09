@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PictureFormat SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -114,13 +114,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPictureColorType ColorType
+		public NetOffice.OfficeApi.Enums.MsoPictureColorType ColorType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColorType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPictureColorType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPictureColorType)returnItem;
 			}
 			set
 			{
@@ -247,13 +247,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState TransparentBackground
+		public NetOffice.OfficeApi.Enums.MsoTriState TransparentBackground
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TransparentBackground", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -266,13 +266,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.OfficeApi.Crop Crop
+		public NetOffice.OfficeApi.Crop Crop
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Crop", paramsArray);
-				LateBindingApi.OfficeApi.Crop newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.Crop;
+				NetOffice.OfficeApi.Crop newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.Crop;
 				return newObject;
 			}
 		}

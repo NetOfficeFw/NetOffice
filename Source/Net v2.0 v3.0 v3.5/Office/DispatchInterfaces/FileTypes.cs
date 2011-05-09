@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface FileTypes SupportByLibrary OF10 OF11 OF12 OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFileType get_Item(Int32 index)
+		public NetOffice.OfficeApi.Enums.MsoFileType get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			return (LateBindingApi.OfficeApi.Enums.MsoFileType)returnItem;
+			return (NetOffice.OfficeApi.Enums.MsoFileType)returnItem;
 		}
 
 		/// <summary>
@@ -81,9 +81,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="FileType">LateBindingApi.OfficeApi.Enums.MsoFileType FileType</param>
+		/// <param name="FileType">NetOffice.OfficeApi.Enums.MsoFileType FileType</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public void Add(LateBindingApi.OfficeApi.Enums.MsoFileType fileType)
+		public void Add(NetOffice.OfficeApi.Enums.MsoFileType fileType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileType);
 			Invoker.Method(this, "Add", paramsArray);

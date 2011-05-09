@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {	
 	#pragma warning disable
 	
@@ -65,7 +65,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi._Store newStore = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, store) as LateBindingApi.OutlookApi._Store;
+			NetOffice.OutlookApi._Store newStore = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newStore;
 			paramsArray.SetValue(cancel, 1);
@@ -84,7 +84,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi._Store newStore = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, store) as LateBindingApi.OutlookApi._Store;
+			NetOffice.OutlookApi._Store newStore = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newStore;
 			foreach(Delegate delItem in recipients)

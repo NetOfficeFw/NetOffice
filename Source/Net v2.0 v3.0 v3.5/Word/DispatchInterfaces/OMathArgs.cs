@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface OMathArgs SupportByLibrary WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -114,11 +114,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMath Item(Int32 index)
+		public NetOffice.WordApi.OMath Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.WordApi.OMath newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.OMath;
+			NetOffice.WordApi.OMath newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.OMath;
 			return newObject;
 		}
 
@@ -127,12 +127,12 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="BeforeArg">ref optional object BeforeArg</param>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMath Add(ref object beforeArg)
+		public NetOffice.WordApi.OMath Add(ref object beforeArg)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeArg);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.WordApi.OMath newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.OMath;
+			NetOffice.WordApi.OMath newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.OMath;
 			beforeArg = (object)paramsArray[0];
 			return newObject;
 		}
@@ -141,11 +141,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMath Add()
+		public NetOffice.WordApi.OMath Add()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.WordApi.OMath newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.OMath;
+			NetOffice.WordApi.OMath newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.OMath;
 			return newObject;
 		}
 

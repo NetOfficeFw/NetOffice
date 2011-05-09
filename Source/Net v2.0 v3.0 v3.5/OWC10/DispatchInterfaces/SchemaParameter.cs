@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface SchemaParameter SupportByLibrary XWC1.0 
@@ -79,13 +79,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.ADODBApi.Enums.ParameterDirectionEnum Direction
+		public NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Direction", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.ParameterDirectionEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.ParameterDirectionEnum)returnItem;
 			}
 		}
 

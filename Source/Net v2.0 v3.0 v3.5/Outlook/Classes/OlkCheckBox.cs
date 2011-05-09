@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
@@ -11,14 +11,14 @@ namespace LateBindingApi.OutlookApi
 	#pragma warning disable
 	public delegate void OlkCheckBox_ClickEventHandler();
 	public delegate void OlkCheckBox_DoubleClickEventHandler();
-	public delegate void OlkCheckBox_MouseDownEventHandler(LateBindingApi.OutlookApi.Enums.OlMouseButton Button, LateBindingApi.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkCheckBox_MouseMoveEventHandler(LateBindingApi.OutlookApi.Enums.OlMouseButton Button, LateBindingApi.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkCheckBox_MouseUpEventHandler(LateBindingApi.OutlookApi.Enums.OlMouseButton Button, LateBindingApi.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkCheckBox_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkCheckBox_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkCheckBox_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
 	public delegate void OlkCheckBox_EnterEventHandler();
 	public delegate void OlkCheckBox_ExitEventHandler(ref bool Cancel);
-	public delegate void OlkCheckBox_KeyDownEventHandler(ref Int32 KeyCode, LateBindingApi.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkCheckBox_KeyDownEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
 	public delegate void OlkCheckBox_KeyPressEventHandler(ref Int32 KeyAscii);
-	public delegate void OlkCheckBox_KeyUpEventHandler(ref Int32 KeyCode, LateBindingApi.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkCheckBox_KeyUpEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
 	public delegate void OlkCheckBox_ChangeEventHandler();
 	public delegate void OlkCheckBox_AfterUpdateEventHandler();
 	public delegate void OlkCheckBox_BeforeUpdateEventHandler(ref bool Cancel);

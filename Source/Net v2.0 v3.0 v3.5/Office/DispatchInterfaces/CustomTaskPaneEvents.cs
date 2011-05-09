@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface CustomTaskPaneEvents SupportByLibrary OF12 OF14 
@@ -54,9 +54,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="CustomTaskPaneInst">LateBindingApi.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
+		/// <param name="CustomTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void VisibleStateChange(LateBindingApi.OfficeApi._CustomTaskPane customTaskPaneInst)
+		public void VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customTaskPaneInst);
 			Invoker.Method(this, "VisibleStateChange", paramsArray);
@@ -65,9 +65,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="CustomTaskPaneInst">LateBindingApi.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
+		/// <param name="CustomTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void DockPositionStateChange(LateBindingApi.OfficeApi._CustomTaskPane customTaskPaneInst)
+		public void DockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customTaskPaneInst);
 			Invoker.Method(this, "DockPositionStateChange", paramsArray);

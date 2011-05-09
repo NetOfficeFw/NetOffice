@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface GroupLevel SupportByLibrary XWC1.0 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscGroupOnEnum GroupOn
+		public NetOffice.OWC10Api.Enums.DscGroupOnEnum GroupOn
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupOn", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscGroupOnEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscGroupOnEnum)returnItem;
 			}
 			set
 			{
@@ -336,13 +336,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageField GroupedOnField
+		public NetOffice.OWC10Api.PageField GroupedOnField
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupedOnField", paramsArray);
-				LateBindingApi.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PageField;
+				NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageField;
 				return newObject;
 			}
 		}

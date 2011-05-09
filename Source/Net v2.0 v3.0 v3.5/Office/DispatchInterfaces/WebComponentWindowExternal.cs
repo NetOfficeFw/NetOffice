@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface WebComponentWindowExternal SupportByLibrary OF10 OF11 OF12 OF14 
@@ -108,13 +108,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.WebComponent WebComponent
+		public NetOffice.OfficeApi.WebComponent WebComponent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WebComponent", paramsArray);
-				LateBindingApi.OfficeApi.WebComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.WebComponent;
+				NetOffice.OfficeApi.WebComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.WebComponent;
 				return newObject;
 			}
 		}

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PageRelatedFields SupportByLibrary XWC1.0 
@@ -67,11 +67,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageRelatedField get_Item(object index)
+		public NetOffice.OWC10Api.PageRelatedField get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.PageRelatedField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PageRelatedField;
+			NetOffice.OWC10Api.PageRelatedField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageRelatedField;
 			return newObject;
 		}
 

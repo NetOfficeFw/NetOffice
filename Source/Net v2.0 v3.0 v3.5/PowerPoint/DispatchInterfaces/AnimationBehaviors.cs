@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface AnimationBehaviors SupportByLibrary PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -86,25 +86,25 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.AnimationBehavior Item(Int32 index)
+		public NetOffice.PowerPointApi.AnimationBehavior Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.PowerPointApi.AnimationBehavior newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.AnimationBehavior;
+			NetOffice.PowerPointApi.AnimationBehavior newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.AnimationBehavior;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.PowerPointApi.Enums.MsoAnimType Type</param>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.MsoAnimType Type</param>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.AnimationBehavior Add(LateBindingApi.PowerPointApi.Enums.MsoAnimType type, Int32 index)
+		public NetOffice.PowerPointApi.AnimationBehavior Add(NetOffice.PowerPointApi.Enums.MsoAnimType type, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.PowerPointApi.AnimationBehavior newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.AnimationBehavior;
+			NetOffice.PowerPointApi.AnimationBehavior newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.AnimationBehavior;
 			return newObject;
 		}
 

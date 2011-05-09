@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface Page SupportByLibrary XL12 XL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.HeaderFooter LeftHeader
+		public NetOffice.ExcelApi.HeaderFooter LeftHeader
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LeftHeader", paramsArray);
-				LateBindingApi.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.HeaderFooter CenterHeader
+		public NetOffice.ExcelApi.HeaderFooter CenterHeader
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CenterHeader", paramsArray);
-				LateBindingApi.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.HeaderFooter RightHeader
+		public NetOffice.ExcelApi.HeaderFooter RightHeader
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RightHeader", paramsArray);
-				LateBindingApi.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}
@@ -96,13 +96,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.HeaderFooter LeftFooter
+		public NetOffice.ExcelApi.HeaderFooter LeftFooter
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LeftFooter", paramsArray);
-				LateBindingApi.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}
@@ -111,13 +111,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.HeaderFooter CenterFooter
+		public NetOffice.ExcelApi.HeaderFooter CenterFooter
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CenterFooter", paramsArray);
-				LateBindingApi.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}
@@ -126,13 +126,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.HeaderFooter RightFooter
+		public NetOffice.ExcelApi.HeaderFooter RightFooter
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RightFooter", paramsArray);
-				LateBindingApi.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface EmailOptions SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -152,13 +152,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.EmailSignature EmailSignature
+		public NetOffice.WordApi.EmailSignature EmailSignature
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EmailSignature", paramsArray);
-				LateBindingApi.WordApi.EmailSignature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.EmailSignature;
+				NetOffice.WordApi.EmailSignature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.EmailSignature;
 				return newObject;
 			}
 		}
@@ -167,13 +167,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Style ComposeStyle
+		public NetOffice.WordApi.Style ComposeStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ComposeStyle", paramsArray);
-				LateBindingApi.WordApi.Style newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Style;
+				NetOffice.WordApi.Style newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Style;
 				return newObject;
 			}
 		}
@@ -182,13 +182,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Style ReplyStyle
+		public NetOffice.WordApi.Style ReplyStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ReplyStyle", paramsArray);
-				LateBindingApi.WordApi.Style newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Style;
+				NetOffice.WordApi.Style newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Style;
 				return newObject;
 			}
 		}
@@ -263,13 +263,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Style PlainTextStyle
+		public NetOffice.WordApi.Style PlainTextStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PlainTextStyle", paramsArray);
-				LateBindingApi.WordApi.Style newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Style;
+				NetOffice.WordApi.Style newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Style;
 				return newObject;
 			}
 		}
@@ -734,13 +734,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdEmailHTMLFidelity HTMLFidelity
+		public NetOffice.WordApi.Enums.WdEmailHTMLFidelity HTMLFidelity
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HTMLFidelity", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdEmailHTMLFidelity)returnItem;
+				return (NetOffice.WordApi.Enums.WdEmailHTMLFidelity)returnItem;
 			}
 			set
 			{

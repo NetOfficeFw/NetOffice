@@ -3,15 +3,15 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void OutlookBarGroups_GroupAddEventHandler(LateBindingApi.OutlookApi.OutlookBarGroup NewGroup);
+	public delegate void OutlookBarGroups_GroupAddEventHandler(NetOffice.OutlookApi.OutlookBarGroup NewGroup);
 	public delegate void OutlookBarGroups_BeforeGroupAddEventHandler(ref bool Cancel);
-	public delegate void OutlookBarGroups_BeforeGroupRemoveEventHandler(LateBindingApi.OutlookApi.OutlookBarGroup Group, ref bool Cancel);
+	public delegate void OutlookBarGroups_BeforeGroupRemoveEventHandler(NetOffice.OutlookApi.OutlookBarGroup Group, ref bool Cancel);
 	#pragma warning restore
 
 	#endregion

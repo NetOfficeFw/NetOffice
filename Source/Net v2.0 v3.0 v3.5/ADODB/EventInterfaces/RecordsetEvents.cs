@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {	
 	#pragma warning disable
 	
@@ -103,8 +103,8 @@ namespace LateBindingApi.ADODBApi
 
 			Int32 newcFields = (Int32)cFields;
 			object newFields = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, fields) as object;
-			LateBindingApi.ADODBApi.Enums.EventStatusEnum newadStatus = (LateBindingApi.ADODBApi.Enums.EventStatusEnum)adStatus;
-			LateBindingApi.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
+			NetOffice.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newcFields;
 			paramsArray[1] = newFields;
@@ -125,9 +125,9 @@ namespace LateBindingApi.ADODBApi
 
 			Int32 newcFields = (Int32)cFields;
 			object newFields = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, fields) as object;
-			LateBindingApi.ADODBApi.Error newpError = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pError) as LateBindingApi.ADODBApi.Error;
-			LateBindingApi.ADODBApi.Enums.EventStatusEnum newadStatus = (LateBindingApi.ADODBApi.Enums.EventStatusEnum)adStatus;
-			LateBindingApi.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi.Error newpError = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
+			NetOffice.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newcFields;
 			paramsArray[1] = newFields;
@@ -147,10 +147,10 @@ namespace LateBindingApi.ADODBApi
 				return;
 			}
 
-			LateBindingApi.ADODBApi.Enums.EventReasonEnum newadReason = (LateBindingApi.ADODBApi.Enums.EventReasonEnum)adReason;
+			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
 			Int32 newcRecords = (Int32)cRecords;
-			LateBindingApi.ADODBApi.Enums.EventStatusEnum newadStatus = (LateBindingApi.ADODBApi.Enums.EventStatusEnum)adStatus;
-			LateBindingApi.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
+			NetOffice.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newcRecords;
@@ -169,11 +169,11 @@ namespace LateBindingApi.ADODBApi
 				return;
 			}
 
-			LateBindingApi.ADODBApi.Enums.EventReasonEnum newadReason = (LateBindingApi.ADODBApi.Enums.EventReasonEnum)adReason;
+			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
 			Int32 newcRecords = (Int32)cRecords;
-			LateBindingApi.ADODBApi.Error newpError = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pError) as LateBindingApi.ADODBApi.Error;
-			LateBindingApi.ADODBApi.Enums.EventStatusEnum newadStatus = (LateBindingApi.ADODBApi.Enums.EventStatusEnum)adStatus;
-			LateBindingApi.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi.Error newpError = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
+			NetOffice.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newcRecords;
@@ -193,9 +193,9 @@ namespace LateBindingApi.ADODBApi
 				return;
 			}
 
-			LateBindingApi.ADODBApi.Enums.EventReasonEnum newadReason = (LateBindingApi.ADODBApi.Enums.EventReasonEnum)adReason;
-			LateBindingApi.ADODBApi.Enums.EventStatusEnum newadStatus = (LateBindingApi.ADODBApi.Enums.EventStatusEnum)adStatus;
-			LateBindingApi.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
+			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
+			NetOffice.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newadStatus;
@@ -213,10 +213,10 @@ namespace LateBindingApi.ADODBApi
 				return;
 			}
 
-			LateBindingApi.ADODBApi.Enums.EventReasonEnum newadReason = (LateBindingApi.ADODBApi.Enums.EventReasonEnum)adReason;
-			LateBindingApi.ADODBApi.Error newpError = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pError) as LateBindingApi.ADODBApi.Error;
-			LateBindingApi.ADODBApi.Enums.EventStatusEnum newadStatus = (LateBindingApi.ADODBApi.Enums.EventStatusEnum)adStatus;
-			LateBindingApi.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
+			NetOffice.ADODBApi.Error newpError = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
+			NetOffice.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newpError;
@@ -235,9 +235,9 @@ namespace LateBindingApi.ADODBApi
 				return;
 			}
 
-			LateBindingApi.ADODBApi.Enums.EventReasonEnum newadReason = (LateBindingApi.ADODBApi.Enums.EventReasonEnum)adReason;
-			LateBindingApi.ADODBApi.Enums.EventStatusEnum newadStatus = (LateBindingApi.ADODBApi.Enums.EventStatusEnum)adStatus;
-			LateBindingApi.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
+			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
+			NetOffice.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newadStatus;
@@ -255,10 +255,10 @@ namespace LateBindingApi.ADODBApi
 				return;
 			}
 
-			LateBindingApi.ADODBApi.Enums.EventReasonEnum newadReason = (LateBindingApi.ADODBApi.Enums.EventReasonEnum)adReason;
-			LateBindingApi.ADODBApi.Error newpError = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pError) as LateBindingApi.ADODBApi.Error;
-			LateBindingApi.ADODBApi.Enums.EventStatusEnum newadStatus = (LateBindingApi.ADODBApi.Enums.EventStatusEnum)adStatus;
-			LateBindingApi.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
+			NetOffice.ADODBApi.Error newpError = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
+			NetOffice.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newpError;
@@ -277,8 +277,8 @@ namespace LateBindingApi.ADODBApi
 				return;
 			}
 
-			LateBindingApi.ADODBApi.Enums.EventStatusEnum newadStatus = (LateBindingApi.ADODBApi.Enums.EventStatusEnum)adStatus;
-			LateBindingApi.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
+			NetOffice.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[3];
 			paramsArray.SetValue(fMoreData, 0);
 			paramsArray[1] = newadStatus;
@@ -300,8 +300,8 @@ namespace LateBindingApi.ADODBApi
 
 			Int32 newProgress = (Int32)progress;
 			Int32 newMaxProgress = (Int32)maxProgress;
-			LateBindingApi.ADODBApi.Enums.EventStatusEnum newadStatus = (LateBindingApi.ADODBApi.Enums.EventStatusEnum)adStatus;
-			LateBindingApi.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
+			NetOffice.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newProgress;
 			paramsArray[1] = newMaxProgress;
@@ -320,9 +320,9 @@ namespace LateBindingApi.ADODBApi
 				return;
 			}
 
-			LateBindingApi.ADODBApi.Error newpError = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pError) as LateBindingApi.ADODBApi.Error;
-			LateBindingApi.ADODBApi.Enums.EventStatusEnum newadStatus = (LateBindingApi.ADODBApi.Enums.EventStatusEnum)adStatus;
-			LateBindingApi.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi.Error newpError = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
+			NetOffice.ADODBApi._Recordset newpRecordset = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;

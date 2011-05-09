@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface _Record SupportByLibrary ADO2.5 
@@ -79,13 +79,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.ObjectStateEnum State
+		public NetOffice.ADODBApi.Enums.ObjectStateEnum State
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "State", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.ObjectStateEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.ObjectStateEnum)returnItem;
 			}
 		}
 
@@ -121,13 +121,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.ConnectModeEnum Mode
+		public NetOffice.ADODBApi.Enums.ConnectModeEnum Mode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Mode", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.ConnectModeEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.ConnectModeEnum)returnItem;
 			}
 			set
 			{
@@ -154,13 +154,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Fields Fields
+		public NetOffice.ADODBApi.Fields Fields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				LateBindingApi.ADODBApi.Fields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Fields;
+				NetOffice.ADODBApi.Fields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Fields;
 				return newObject;
 			}
 		}
@@ -169,13 +169,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.RecordTypeEnum RecordType
+		public NetOffice.ADODBApi.Enums.RecordTypeEnum RecordType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecordType", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.RecordTypeEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.RecordTypeEnum)returnItem;
 			}
 		}
 
@@ -190,10 +190,10 @@ namespace LateBindingApi.ADODBApi
 		/// <param name="Destination">string Destination</param>
 		/// <param name="UserName">string UserName</param>
 		/// <param name="Password">string Password</param>
-		/// <param name="Options">LateBindingApi.ADODBApi.Enums.MoveRecordOptionsEnum Options</param>
+		/// <param name="Options">NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum Options</param>
 		/// <param name="Async">bool Async</param>
 		[SupportByLibrary("ADO2.5")]
-		public string MoveRecord(string source, string destination, string userName, string password, LateBindingApi.ADODBApi.Enums.MoveRecordOptionsEnum options, bool async)
+		public string MoveRecord(string source, string destination, string userName, string password, NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum options, bool async)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination, userName, password, options, async);
 			object returnItem = Invoker.MethodReturn(this, "MoveRecord", paramsArray);
@@ -207,10 +207,10 @@ namespace LateBindingApi.ADODBApi
 		/// <param name="Destination">string Destination</param>
 		/// <param name="UserName">string UserName</param>
 		/// <param name="Password">string Password</param>
-		/// <param name="Options">LateBindingApi.ADODBApi.Enums.CopyRecordOptionsEnum Options</param>
+		/// <param name="Options">NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum Options</param>
 		/// <param name="Async">bool Async</param>
 		[SupportByLibrary("ADO2.5")]
-		public string CopyRecord(string source, string destination, string userName, string password, LateBindingApi.ADODBApi.Enums.CopyRecordOptionsEnum options, bool async)
+		public string CopyRecord(string source, string destination, string userName, string password, NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum options, bool async)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination, userName, password, options, async);
 			object returnItem = Invoker.MethodReturn(this, "CopyRecord", paramsArray);
@@ -234,13 +234,13 @@ namespace LateBindingApi.ADODBApi
 		/// </summary>
 		/// <param name="Source">object Source</param>
 		/// <param name="ActiveConnection">object ActiveConnection</param>
-		/// <param name="Mode">LateBindingApi.ADODBApi.Enums.ConnectModeEnum Mode</param>
-		/// <param name="CreateOptions">LateBindingApi.ADODBApi.Enums.RecordCreateOptionsEnum CreateOptions</param>
-		/// <param name="Options">LateBindingApi.ADODBApi.Enums.RecordOpenOptionsEnum Options</param>
+		/// <param name="Mode">NetOffice.ADODBApi.Enums.ConnectModeEnum Mode</param>
+		/// <param name="CreateOptions">NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum CreateOptions</param>
+		/// <param name="Options">NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum Options</param>
 		/// <param name="UserName">string UserName</param>
 		/// <param name="Password">string Password</param>
 		[SupportByLibrary("ADO2.5")]
-		public void Open(object source, object activeConnection, LateBindingApi.ADODBApi.Enums.ConnectModeEnum mode, LateBindingApi.ADODBApi.Enums.RecordCreateOptionsEnum createOptions, LateBindingApi.ADODBApi.Enums.RecordOpenOptionsEnum options, string userName, string password)
+		public void Open(object source, object activeConnection, NetOffice.ADODBApi.Enums.ConnectModeEnum mode, NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum createOptions, NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum options, string userName, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, activeConnection, mode, createOptions, options, userName, password);
 			Invoker.Method(this, "Open", paramsArray);
@@ -260,11 +260,11 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi._Recordset GetChildren()
+		public NetOffice.ADODBApi._Recordset GetChildren()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetChildren", paramsArray);
-			LateBindingApi.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 

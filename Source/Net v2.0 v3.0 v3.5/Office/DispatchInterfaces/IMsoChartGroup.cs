@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface IMsoChartGroup SupportByLibrary OF12 OF14 
@@ -89,13 +89,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.IMsoDownBars DownBars
+		public NetOffice.OfficeApi.IMsoDownBars DownBars
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DownBars", paramsArray);
-				LateBindingApi.OfficeApi.IMsoDownBars newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IMsoDownBars;
+				NetOffice.OfficeApi.IMsoDownBars newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoDownBars;
 				return newObject;
 			}
 		}
@@ -104,13 +104,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.IMsoDropLines DropLines
+		public NetOffice.OfficeApi.IMsoDropLines DropLines
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DropLines", paramsArray);
-				LateBindingApi.OfficeApi.IMsoDropLines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IMsoDropLines;
+				NetOffice.OfficeApi.IMsoDropLines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoDropLines;
 				return newObject;
 			}
 		}
@@ -252,13 +252,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.IMsoHiLoLines HiLoLines
+		public NetOffice.OfficeApi.IMsoHiLoLines HiLoLines
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HiLoLines", paramsArray);
-				LateBindingApi.OfficeApi.IMsoHiLoLines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IMsoHiLoLines;
+				NetOffice.OfficeApi.IMsoHiLoLines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoHiLoLines;
 				return newObject;
 			}
 		}
@@ -315,13 +315,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.IMsoSeriesLines SeriesLines
+		public NetOffice.OfficeApi.IMsoSeriesLines SeriesLines
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SeriesLines", paramsArray);
-				LateBindingApi.OfficeApi.IMsoSeriesLines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IMsoSeriesLines;
+				NetOffice.OfficeApi.IMsoSeriesLines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoSeriesLines;
 				return newObject;
 			}
 		}
@@ -368,13 +368,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.IMsoUpBars UpBars
+		public NetOffice.OfficeApi.IMsoUpBars UpBars
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UpBars", paramsArray);
-				LateBindingApi.OfficeApi.IMsoUpBars newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IMsoUpBars;
+				NetOffice.OfficeApi.IMsoUpBars newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoUpBars;
 				return newObject;
 			}
 		}
@@ -402,13 +402,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.XlSizeRepresents SizeRepresents
+		public NetOffice.OfficeApi.Enums.XlSizeRepresents SizeRepresents
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SizeRepresents", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.XlSizeRepresents)returnItem;
+				return (NetOffice.OfficeApi.Enums.XlSizeRepresents)returnItem;
 			}
 			set
 			{
@@ -459,13 +459,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.XlChartSplitType SplitType
+		public NetOffice.OfficeApi.Enums.XlChartSplitType SplitType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SplitType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.XlChartSplitType)returnItem;
+				return (NetOffice.OfficeApi.Enums.XlChartSplitType)returnItem;
 			}
 			set
 			{

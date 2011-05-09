@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface Workbooks SupportByLibrary XL09 XL10 XL11 XL12 XL14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -67,13 +67,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -111,11 +111,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook get_Item(object index)
+		public NetOffice.ExcelApi.Workbook get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -125,13 +125,13 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.ExcelApi.Workbook this[object index]
+		public NetOffice.ExcelApi.Workbook this[object index]
 		{
 			get
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 			}
 		}
@@ -145,11 +145,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Template">optional object Template</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook Add(object template)
+		public NetOffice.ExcelApi.Workbook Add(object template)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -157,11 +157,11 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook Add()
+		public NetOffice.ExcelApi.Workbook Add()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -192,11 +192,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Converter">optional object Converter</param>
 		/// <param name="AddToMru">optional object AddToMru</param>
 		[SupportByLibrary("XL09")]
-		public LateBindingApi.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru)
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -219,11 +219,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Local">optional object Local</param>
 		/// <param name="CorruptLoad">optional object CorruptLoad</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru, object local, object corruptLoad)
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru, object local, object corruptLoad)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru, local, corruptLoad);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -232,11 +232,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook Open(string filename)
+		public NetOffice.ExcelApi.Workbook Open(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -247,7 +247,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Origin">object Origin</param>
 		/// <param name="StartRow">object StartRow</param>
 		/// <param name="DataType">object DataType</param>
-		/// <param name="TextQualifier">LateBindingApi.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
 		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
 		/// <param name="Tab">optional object Tab</param>
 		/// <param name="Semicolon">optional object Semicolon</param>
@@ -258,7 +258,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="FieldInfo">optional object FieldInfo</param>
 		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
 		[SupportByLibrary("XL09")]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, LateBindingApi.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -271,7 +271,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Origin">object Origin</param>
 		/// <param name="StartRow">object StartRow</param>
 		/// <param name="DataType">object DataType</param>
-		/// <param name="TextQualifier">LateBindingApi.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
 		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
 		/// <param name="Tab">optional object Tab</param>
 		/// <param name="Semicolon">optional object Semicolon</param>
@@ -284,7 +284,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="DecimalSeparator">optional object DecimalSeparator</param>
 		/// <param name="ThousandsSeparator">optional object ThousandsSeparator</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, LateBindingApi.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -297,9 +297,9 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Origin">object Origin</param>
 		/// <param name="StartRow">object StartRow</param>
 		/// <param name="DataType">object DataType</param>
-		/// <param name="TextQualifier">LateBindingApi.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, LateBindingApi.ExcelApi.Enums.XlTextQualifier textQualifier)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -312,7 +312,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Origin">object Origin</param>
 		/// <param name="StartRow">object StartRow</param>
 		/// <param name="DataType">object DataType</param>
-		/// <param name="TextQualifier">LateBindingApi.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
 		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
 		/// <param name="Tab">optional object Tab</param>
 		/// <param name="Semicolon">optional object Semicolon</param>
@@ -325,7 +325,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="DecimalSeparator">optional object DecimalSeparator</param>
 		/// <param name="ThousandsSeparator">optional object ThousandsSeparator</param>
 		[SupportByLibrary("XL09")]
-		public void OpenText(string filename, object origin, object startRow, object dataType, LateBindingApi.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -338,7 +338,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Origin">object Origin</param>
 		/// <param name="StartRow">object StartRow</param>
 		/// <param name="DataType">object DataType</param>
-		/// <param name="TextQualifier">LateBindingApi.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
 		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
 		/// <param name="Tab">optional object Tab</param>
 		/// <param name="Semicolon">optional object Semicolon</param>
@@ -353,7 +353,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="TrailingMinusNumbers">optional object TrailingMinusNumbers</param>
 		/// <param name="Local">optional object Local</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public void OpenText(string filename, object origin, object startRow, object dataType, LateBindingApi.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers, object local)
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers, object local)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator, trailingMinusNumbers, local);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -366,9 +366,9 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Origin">object Origin</param>
 		/// <param name="StartRow">object StartRow</param>
 		/// <param name="DataType">object DataType</param>
-		/// <param name="TextQualifier">LateBindingApi.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public void OpenText(string filename, object origin, object startRow, object dataType, LateBindingApi.ExcelApi.Enums.XlTextQualifier textQualifier)
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -391,11 +391,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Converter">optional object Converter</param>
 		/// <param name="AddToMru">optional object AddToMru</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru)
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru);
 			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -404,11 +404,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook _Open(string filename)
+		public NetOffice.ExcelApi.Workbook _Open(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -419,7 +419,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Origin">object Origin</param>
 		/// <param name="StartRow">object StartRow</param>
 		/// <param name="DataType">object DataType</param>
-		/// <param name="TextQualifier">LateBindingApi.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
 		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
 		/// <param name="Tab">optional object Tab</param>
 		/// <param name="Semicolon">optional object Semicolon</param>
@@ -430,7 +430,7 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="FieldInfo">optional object FieldInfo</param>
 		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, LateBindingApi.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout);
 			Invoker.Method(this, "__OpenText", paramsArray);
@@ -443,9 +443,9 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Origin">object Origin</param>
 		/// <param name="StartRow">object StartRow</param>
 		/// <param name="DataType">object DataType</param>
-		/// <param name="TextQualifier">LateBindingApi.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, LateBindingApi.ExcelApi.Enums.XlTextQualifier textQualifier)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier);
 			Invoker.Method(this, "__OpenText", paramsArray);
@@ -460,11 +460,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="BackgroundQuery">optional object BackgroundQuery</param>
 		/// <param name="ImportDataAs">optional object ImportDataAs</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType, object backgroundQuery, object importDataAs)
+		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType, object backgroundQuery, object importDataAs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, commandText, commandType, backgroundQuery, importDataAs);
 			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -473,11 +473,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook OpenDatabase(string filename)
+		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -510,11 +510,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Filename">string Filename</param>
 		/// <param name="Stylesheets">optional object Stylesheets</param>
 		[SupportByLibrary("XL10")]
-		public LateBindingApi.ExcelApi.Workbook OpenXML(string filename, object stylesheets)
+		public NetOffice.ExcelApi.Workbook OpenXML(string filename, object stylesheets)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, stylesheets);
 			object returnItem = Invoker.MethodReturn(this, "OpenXML", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -525,11 +525,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Stylesheets">optional object Stylesheets</param>
 		/// <param name="LoadOption">optional object LoadOption</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook OpenXML(string filename, object stylesheets, object loadOption)
+		public NetOffice.ExcelApi.Workbook OpenXML(string filename, object stylesheets, object loadOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, stylesheets, loadOption);
 			object returnItem = Invoker.MethodReturn(this, "OpenXML", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -538,11 +538,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook OpenXML(string filename)
+		public NetOffice.ExcelApi.Workbook OpenXML(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "OpenXML", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -552,11 +552,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Filename">string Filename</param>
 		/// <param name="Stylesheets">optional object Stylesheets</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook _OpenXML(string filename, object stylesheets)
+		public NetOffice.ExcelApi.Workbook _OpenXML(string filename, object stylesheets)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, stylesheets);
 			object returnItem = Invoker.MethodReturn(this, "_OpenXML", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -565,11 +565,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Workbook _OpenXML(string filename)
+		public NetOffice.ExcelApi.Workbook _OpenXML(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "_OpenXML", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 

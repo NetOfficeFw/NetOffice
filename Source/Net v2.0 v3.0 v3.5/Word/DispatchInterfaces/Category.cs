@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Category SupportByLibrary WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -123,13 +123,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.BuildingBlocks BuildingBlocks
+		public NetOffice.WordApi.BuildingBlocks BuildingBlocks
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BuildingBlocks", paramsArray);
-				LateBindingApi.WordApi.BuildingBlocks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.BuildingBlocks;
+				NetOffice.WordApi.BuildingBlocks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.BuildingBlocks;
 				return newObject;
 			}
 		}
@@ -138,13 +138,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.BuildingBlockType Type
+		public NetOffice.WordApi.BuildingBlockType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				LateBindingApi.WordApi.BuildingBlockType newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.BuildingBlockType;
+				NetOffice.WordApi.BuildingBlockType newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.BuildingBlockType;
 				return newObject;
 			}
 		}

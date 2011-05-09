@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface LineFormat SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -66,13 +66,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.ColorFormat BackColor
+		public NetOffice.OfficeApi.ColorFormat BackColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BackColor", paramsArray);
-				LateBindingApi.OfficeApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.ColorFormat;
+				NetOffice.OfficeApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ColorFormat;
 				return newObject;
 			}
 			set
@@ -86,13 +86,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoArrowheadLength BeginArrowheadLength
+		public NetOffice.OfficeApi.Enums.MsoArrowheadLength BeginArrowheadLength
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeginArrowheadLength", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoArrowheadLength)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoArrowheadLength)returnItem;
 			}
 			set
 			{
@@ -105,13 +105,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoArrowheadStyle BeginArrowheadStyle
+		public NetOffice.OfficeApi.Enums.MsoArrowheadStyle BeginArrowheadStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeginArrowheadStyle", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoArrowheadStyle)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoArrowheadStyle)returnItem;
 			}
 			set
 			{
@@ -124,13 +124,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoArrowheadWidth BeginArrowheadWidth
+		public NetOffice.OfficeApi.Enums.MsoArrowheadWidth BeginArrowheadWidth
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeginArrowheadWidth", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoArrowheadWidth)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoArrowheadWidth)returnItem;
 			}
 			set
 			{
@@ -143,13 +143,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoLineDashStyle DashStyle
+		public NetOffice.OfficeApi.Enums.MsoLineDashStyle DashStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DashStyle", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoLineDashStyle)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoLineDashStyle)returnItem;
 			}
 			set
 			{
@@ -162,13 +162,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoArrowheadLength EndArrowheadLength
+		public NetOffice.OfficeApi.Enums.MsoArrowheadLength EndArrowheadLength
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EndArrowheadLength", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoArrowheadLength)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoArrowheadLength)returnItem;
 			}
 			set
 			{
@@ -181,13 +181,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoArrowheadStyle EndArrowheadStyle
+		public NetOffice.OfficeApi.Enums.MsoArrowheadStyle EndArrowheadStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EndArrowheadStyle", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoArrowheadStyle)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoArrowheadStyle)returnItem;
 			}
 			set
 			{
@@ -200,13 +200,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoArrowheadWidth EndArrowheadWidth
+		public NetOffice.OfficeApi.Enums.MsoArrowheadWidth EndArrowheadWidth
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EndArrowheadWidth", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoArrowheadWidth)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoArrowheadWidth)returnItem;
 			}
 			set
 			{
@@ -219,13 +219,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.ColorFormat ForeColor
+		public NetOffice.OfficeApi.ColorFormat ForeColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ForeColor", paramsArray);
-				LateBindingApi.OfficeApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.ColorFormat;
+				NetOffice.OfficeApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ColorFormat;
 				return newObject;
 			}
 			set
@@ -239,13 +239,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPatternType Pattern
+		public NetOffice.OfficeApi.Enums.MsoPatternType Pattern
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Pattern", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPatternType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPatternType)returnItem;
 			}
 			set
 			{
@@ -258,13 +258,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoLineStyle Style
+		public NetOffice.OfficeApi.Enums.MsoLineStyle Style
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoLineStyle)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoLineStyle)returnItem;
 			}
 			set
 			{
@@ -296,13 +296,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState Visible
+		public NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Visible", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -334,13 +334,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState InsetPen
+		public NetOffice.OfficeApi.Enums.MsoTriState InsetPen
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "InsetPen", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{

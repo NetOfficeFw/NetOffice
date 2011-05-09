@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface AccessObjectProperties SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Application Application
+		public NetOffice.AccessApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}
@@ -83,11 +83,11 @@ namespace LateBindingApi.AccessApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.AccessObjectProperty get_Item(object index)
+		public NetOffice.AccessApi.AccessObjectProperty get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.AccessApi.AccessObjectProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.AccessObjectProperty;
+			NetOffice.AccessApi.AccessObjectProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.AccessObjectProperty;
 			return newObject;
 		}
 

@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface DocumentProperty SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -112,13 +112,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoDocProperties Type
+		public NetOffice.OfficeApi.Enums.MsoDocProperties Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoDocProperties)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoDocProperties)returnItem;
 			}
 			set
 			{

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface EncryptionProvider SupportByLibrary OF12 OF14 
@@ -54,9 +54,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="encprovdet">LateBindingApi.OfficeApi.Enums.EncryptionProviderDetail encprovdet</param>
+		/// <param name="encprovdet">NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet</param>
 		[SupportByLibrary("OF12","OF14")]
-		public object GetProviderDetail(LateBindingApi.OfficeApi.Enums.EncryptionProviderDetail encprovdet)
+		public object GetProviderDetail(NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(encprovdet);
 			object returnItem = Invoker.MethodReturn(this, "GetProviderDetail", paramsArray);

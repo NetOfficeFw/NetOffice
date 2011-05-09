@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface LegendEntries SupportByLibrary OF12 OF14 
@@ -111,13 +111,13 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.OfficeApi.LegendEntry this[object index]
+		public NetOffice.OfficeApi.LegendEntry this[object index]
 		{
 			get
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			LateBindingApi.OfficeApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.LegendEntry;
+			NetOffice.OfficeApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.LegendEntry;
 			return newObject;
 			}
 		}
@@ -131,11 +131,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.LegendEntry Item(object index)
+		public NetOffice.OfficeApi.LegendEntry Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.LegendEntry;
+			NetOffice.OfficeApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.LegendEntry;
 			return newObject;
 		}
 

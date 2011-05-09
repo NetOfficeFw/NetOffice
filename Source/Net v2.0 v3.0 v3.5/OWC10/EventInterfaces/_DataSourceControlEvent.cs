@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {	
 	#pragma warning disable
 	
@@ -145,7 +145,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -161,7 +161,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -177,7 +177,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -193,7 +193,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -209,7 +209,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -225,7 +225,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -241,7 +241,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -257,7 +257,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -273,7 +273,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -289,7 +289,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -305,7 +305,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -321,7 +321,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -337,7 +337,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -353,7 +353,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -369,7 +369,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -385,7 +385,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -401,7 +401,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -417,7 +417,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -433,7 +433,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -449,7 +449,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -465,7 +465,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)
@@ -481,7 +481,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as LateBindingApi.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			foreach(Delegate delItem in recipients)

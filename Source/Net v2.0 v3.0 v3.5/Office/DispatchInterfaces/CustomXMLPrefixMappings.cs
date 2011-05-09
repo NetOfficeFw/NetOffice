@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface CustomXMLPrefixMappings SupportByLibrary OF12 OF14 
@@ -82,11 +82,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLPrefixMapping get_Item(object index)
+		public NetOffice.OfficeApi.CustomXMLPrefixMapping get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.CustomXMLPrefixMapping newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLPrefixMapping;
+			NetOffice.OfficeApi.CustomXMLPrefixMapping newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLPrefixMapping;
 			return newObject;
 		}
 

@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IParameter SupportByLibrary XL09 XL10 XL11 XL12 XL14 
@@ -50,13 +50,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -65,13 +65,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -94,13 +94,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlParameterDataType DataType
+		public NetOffice.ExcelApi.Enums.XlParameterDataType DataType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataType", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlParameterDataType)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlParameterDataType)returnItem;
 			}
 			set
 			{
@@ -113,13 +113,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlParameterType Type
+		public NetOffice.ExcelApi.Enums.XlParameterType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlParameterType)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlParameterType)returnItem;
 			}
 		}
 
@@ -164,13 +164,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Range SourceRange
+		public NetOffice.ExcelApi.Range SourceRange
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SourceRange", paramsArray);
-				LateBindingApi.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 		}
@@ -220,10 +220,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.ExcelApi.Enums.XlParameterType Type</param>
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlParameterType Type</param>
 		/// <param name="Value">object Value</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 SetParam(LateBindingApi.ExcelApi.Enums.XlParameterType type, object value)
+		public Int32 SetParam(NetOffice.ExcelApi.Enums.XlParameterType type, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, value);
 			object returnItem = Invoker.MethodReturn(this, "SetParam", paramsArray);

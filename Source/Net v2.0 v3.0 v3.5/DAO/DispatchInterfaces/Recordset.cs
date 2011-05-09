@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.DAOApi
+namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Recordset SupportByLibrary DAO3.6 DAO12 
@@ -492,13 +492,13 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Database Parent
+		public NetOffice.DAOApi.Database Parent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				LateBindingApi.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.Database;
+				NetOffice.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Database;
 				return newObject;
 			}
 		}
@@ -507,13 +507,13 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Fields Fields
+		public NetOffice.DAOApi.Fields Fields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				LateBindingApi.DAOApi.Fields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.Fields;
+				NetOffice.DAOApi.Fields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Fields;
 				return newObject;
 			}
 		}
@@ -522,13 +522,13 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Indexes Indexes
+		public NetOffice.DAOApi.Indexes Indexes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Indexes", paramsArray);
-				LateBindingApi.DAOApi.Indexes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.Indexes;
+				NetOffice.DAOApi.Indexes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Indexes;
 				return newObject;
 			}
 		}
@@ -554,6 +554,11 @@ namespace LateBindingApi.DAOApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByLibrary DAO3.6 DAO12 
+		/// </summary>
+		/// <param name="Item">object Item</param>
+		[SupportByLibrary("DAO3.6","DAO12")]
 		public void set_Collect(object item, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -648,13 +653,13 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Connection Connection
+		public NetOffice.DAOApi.Connection Connection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Connection", paramsArray);
-				LateBindingApi.DAOApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.Connection;
+				NetOffice.DAOApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Connection;
 				return newObject;
 			}
 			set
@@ -737,11 +742,11 @@ namespace LateBindingApi.DAOApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Recordset OpenRecordset(object type, object options)
+		public NetOffice.DAOApi.Recordset OpenRecordset(object type, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options);
 			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
-			LateBindingApi.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 
@@ -749,11 +754,11 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Recordset OpenRecordset()
+		public NetOffice.DAOApi.Recordset OpenRecordset()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
-			LateBindingApi.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 
@@ -911,11 +916,11 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Recordset Clone()
+		public NetOffice.DAOApi.Recordset Clone()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
-			LateBindingApi.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 
@@ -991,11 +996,11 @@ namespace LateBindingApi.DAOApi
 		/// <param name="Options">optional object Options</param>
 		/// <param name="Inconsistent">optional object Inconsistent</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Recordset CreateDynaset(object options, object inconsistent)
+		public NetOffice.DAOApi.Recordset CreateDynaset(object options, object inconsistent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options, inconsistent);
 			object returnItem = Invoker.MethodReturn(this, "CreateDynaset", paramsArray);
-			LateBindingApi.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 
@@ -1003,11 +1008,11 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Recordset CreateDynaset()
+		public NetOffice.DAOApi.Recordset CreateDynaset()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateDynaset", paramsArray);
-			LateBindingApi.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 
@@ -1016,11 +1021,11 @@ namespace LateBindingApi.DAOApi
 		/// </summary>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Recordset CreateSnapshot(object options)
+		public NetOffice.DAOApi.Recordset CreateSnapshot(object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);
 			object returnItem = Invoker.MethodReturn(this, "CreateSnapshot", paramsArray);
-			LateBindingApi.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 
@@ -1028,11 +1033,11 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Recordset CreateSnapshot()
+		public NetOffice.DAOApi.Recordset CreateSnapshot()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateSnapshot", paramsArray);
-			LateBindingApi.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 
@@ -1040,11 +1045,11 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.QueryDef CopyQueryDef()
+		public NetOffice.DAOApi.QueryDef CopyQueryDef()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CopyQueryDef", paramsArray);
-			LateBindingApi.DAOApi.QueryDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.QueryDef;
+			NetOffice.DAOApi.QueryDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.QueryDef;
 			return newObject;
 		}
 
@@ -1052,11 +1057,11 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Recordset ListFields()
+		public NetOffice.DAOApi.Recordset ListFields()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ListFields", paramsArray);
-			LateBindingApi.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 
@@ -1064,11 +1069,11 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Recordset ListIndexes()
+		public NetOffice.DAOApi.Recordset ListIndexes()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ListIndexes", paramsArray);
-			LateBindingApi.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 

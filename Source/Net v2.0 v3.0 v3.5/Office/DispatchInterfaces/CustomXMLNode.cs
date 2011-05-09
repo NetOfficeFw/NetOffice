@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface CustomXMLNode SupportByLibrary OF12 OF14 
@@ -66,13 +66,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNodes Attributes
+		public NetOffice.OfficeApi.CustomXMLNodes Attributes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Attributes", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLNodes;
+				NetOffice.OfficeApi.CustomXMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLNodes;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNodes ChildNodes
+		public NetOffice.OfficeApi.CustomXMLNodes ChildNodes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ChildNodes", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLNodes;
+				NetOffice.OfficeApi.CustomXMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLNodes;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNode FirstChild
+		public NetOffice.OfficeApi.CustomXMLNode FirstChild
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FirstChild", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLNode;
+				NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLNode;
 				return newObject;
 			}
 		}
@@ -125,13 +125,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNode LastChild
+		public NetOffice.OfficeApi.CustomXMLNode LastChild
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LastChild", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLNode;
+				NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLNode;
 				return newObject;
 			}
 		}
@@ -154,13 +154,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNode NextSibling
+		public NetOffice.OfficeApi.CustomXMLNode NextSibling
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NextSibling", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLNode;
+				NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLNode;
 				return newObject;
 			}
 		}
@@ -169,13 +169,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoCustomXMLNodeType NodeType
+		public NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NodeType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoCustomXMLNodeType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType)returnItem;
 			}
 		}
 
@@ -217,13 +217,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLPart OwnerPart
+		public NetOffice.OfficeApi.CustomXMLPart OwnerPart
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OwnerPart", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLPart;
+				NetOffice.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLPart;
 				return newObject;
 			}
 		}
@@ -232,13 +232,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNode PreviousSibling
+		public NetOffice.OfficeApi.CustomXMLNode PreviousSibling
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PreviousSibling", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLNode;
+				NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLNode;
 				return newObject;
 			}
 		}
@@ -247,13 +247,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNode ParentNode
+		public NetOffice.OfficeApi.CustomXMLNode ParentNode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ParentNode", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLNode;
+				NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLNode;
 				return newObject;
 			}
 		}
@@ -314,10 +314,10 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="NamespaceURI">string NamespaceURI</param>
-		/// <param name="NodeType">LateBindingApi.OfficeApi.Enums.MsoCustomXMLNodeType NodeType</param>
+		/// <param name="NodeType">NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType</param>
 		/// <param name="NodeValue">string NodeValue</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void AppendChildNode(string name, string namespaceURI, LateBindingApi.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue)
+		public void AppendChildNode(string name, string namespaceURI, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, namespaceURI, nodeType, nodeValue);
 			Invoker.Method(this, "AppendChildNode", paramsArray);
@@ -360,11 +360,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="NamespaceURI">string NamespaceURI</param>
-		/// <param name="NodeType">LateBindingApi.OfficeApi.Enums.MsoCustomXMLNodeType NodeType</param>
+		/// <param name="NodeType">NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType</param>
 		/// <param name="NodeValue">string NodeValue</param>
-		/// <param name="NextSibling">LateBindingApi.OfficeApi.CustomXMLNode NextSibling</param>
+		/// <param name="NextSibling">NetOffice.OfficeApi.CustomXMLNode NextSibling</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void InsertNodeBefore(string name, string namespaceURI, LateBindingApi.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue, LateBindingApi.OfficeApi.CustomXMLNode nextSibling)
+		public void InsertNodeBefore(string name, string namespaceURI, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue, NetOffice.OfficeApi.CustomXMLNode nextSibling)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, namespaceURI, nodeType, nodeValue, nextSibling);
 			Invoker.Method(this, "InsertNodeBefore", paramsArray);
@@ -374,9 +374,9 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		/// <param name="XML">string XML</param>
-		/// <param name="NextSibling">LateBindingApi.OfficeApi.CustomXMLNode NextSibling</param>
+		/// <param name="NextSibling">NetOffice.OfficeApi.CustomXMLNode NextSibling</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void InsertSubtreeBefore(string xML, LateBindingApi.OfficeApi.CustomXMLNode nextSibling)
+		public void InsertSubtreeBefore(string xML, NetOffice.OfficeApi.CustomXMLNode nextSibling)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xML, nextSibling);
 			Invoker.Method(this, "InsertSubtreeBefore", paramsArray);
@@ -385,9 +385,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Child">LateBindingApi.OfficeApi.CustomXMLNode Child</param>
+		/// <param name="Child">NetOffice.OfficeApi.CustomXMLNode Child</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void RemoveChild(LateBindingApi.OfficeApi.CustomXMLNode child)
+		public void RemoveChild(NetOffice.OfficeApi.CustomXMLNode child)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(child);
 			Invoker.Method(this, "RemoveChild", paramsArray);
@@ -396,13 +396,13 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="OldNode">LateBindingApi.OfficeApi.CustomXMLNode OldNode</param>
+		/// <param name="OldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
 		/// <param name="Name">string Name</param>
 		/// <param name="NamespaceURI">string NamespaceURI</param>
-		/// <param name="NodeType">LateBindingApi.OfficeApi.Enums.MsoCustomXMLNodeType NodeType</param>
+		/// <param name="NodeType">NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType</param>
 		/// <param name="NodeValue">string NodeValue</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void ReplaceChildNode(LateBindingApi.OfficeApi.CustomXMLNode oldNode, string name, string namespaceURI, LateBindingApi.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue)
+		public void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, string name, string namespaceURI, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, name, namespaceURI, nodeType, nodeValue);
 			Invoker.Method(this, "ReplaceChildNode", paramsArray);
@@ -412,9 +412,9 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		/// <param name="XML">string XML</param>
-		/// <param name="OldNode">LateBindingApi.OfficeApi.CustomXMLNode OldNode</param>
+		/// <param name="OldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void ReplaceChildSubtree(string xML, LateBindingApi.OfficeApi.CustomXMLNode oldNode)
+		public void ReplaceChildSubtree(string xML, NetOffice.OfficeApi.CustomXMLNode oldNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xML, oldNode);
 			Invoker.Method(this, "ReplaceChildSubtree", paramsArray);
@@ -425,11 +425,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="XPath">string XPath</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNodes SelectNodes(string xPath)
+		public NetOffice.OfficeApi.CustomXMLNodes SelectNodes(string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
 			object returnItem = Invoker.MethodReturn(this, "SelectNodes", paramsArray);
-			LateBindingApi.OfficeApi.CustomXMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.CustomXMLNodes;
+			NetOffice.OfficeApi.CustomXMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLNodes;
 			return newObject;
 		}
 
@@ -438,11 +438,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="XPath">string XPath</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNode SelectSingleNode(string xPath)
+		public NetOffice.OfficeApi.CustomXMLNode SelectSingleNode(string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
 			object returnItem = Invoker.MethodReturn(this, "SelectSingleNode", paramsArray);
-			LateBindingApi.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.CustomXMLNode;
+			NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLNode;
 			return newObject;
 		}
 

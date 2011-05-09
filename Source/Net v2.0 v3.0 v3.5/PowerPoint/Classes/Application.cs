@@ -3,43 +3,43 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Application_WindowSelectionChangeEventHandler(LateBindingApi.PowerPointApi.Selection Sel);
-	public delegate void Application_WindowBeforeRightClickEventHandler(LateBindingApi.PowerPointApi.Selection Sel, ref bool Cancel);
-	public delegate void Application_WindowBeforeDoubleClickEventHandler(LateBindingApi.PowerPointApi.Selection Sel, ref bool Cancel);
-	public delegate void Application_PresentationCloseEventHandler(LateBindingApi.PowerPointApi.Presentation Pres);
-	public delegate void Application_PresentationSaveEventHandler(LateBindingApi.PowerPointApi.Presentation Pres);
-	public delegate void Application_PresentationOpenEventHandler(LateBindingApi.PowerPointApi.Presentation Pres);
-	public delegate void Application_NewPresentationEventHandler(LateBindingApi.PowerPointApi.Presentation Pres);
-	public delegate void Application_PresentationNewSlideEventHandler(LateBindingApi.PowerPointApi.Slide Sld);
-	public delegate void Application_WindowActivateEventHandler(LateBindingApi.PowerPointApi.Presentation Pres, LateBindingApi.PowerPointApi.DocumentWindow Wn);
-	public delegate void Application_WindowDeactivateEventHandler(LateBindingApi.PowerPointApi.Presentation Pres, LateBindingApi.PowerPointApi.DocumentWindow Wn);
-	public delegate void Application_SlideShowBeginEventHandler(LateBindingApi.PowerPointApi.SlideShowWindow Wn);
-	public delegate void Application_SlideShowNextBuildEventHandler(LateBindingApi.PowerPointApi.SlideShowWindow Wn);
-	public delegate void Application_SlideShowNextSlideEventHandler(LateBindingApi.PowerPointApi.SlideShowWindow Wn);
-	public delegate void Application_SlideShowEndEventHandler(LateBindingApi.PowerPointApi.Presentation Pres);
-	public delegate void Application_PresentationPrintEventHandler(LateBindingApi.PowerPointApi.Presentation Pres);
-	public delegate void Application_SlideSelectionChangedEventHandler(LateBindingApi.PowerPointApi.SlideRange SldRange);
-	public delegate void Application_ColorSchemeChangedEventHandler(LateBindingApi.PowerPointApi.SlideRange SldRange);
-	public delegate void Application_PresentationBeforeSaveEventHandler(LateBindingApi.PowerPointApi.Presentation Pres, ref bool Cancel);
-	public delegate void Application_SlideShowNextClickEventHandler(LateBindingApi.PowerPointApi.SlideShowWindow Wn, LateBindingApi.PowerPointApi.Effect nEffect);
-	public delegate void Application_AfterNewPresentationEventHandler(LateBindingApi.PowerPointApi.Presentation Pres);
-	public delegate void Application_AfterPresentationOpenEventHandler(LateBindingApi.PowerPointApi.Presentation Pres);
-	public delegate void Application_PresentationSyncEventHandler(LateBindingApi.PowerPointApi.Presentation Pres, LateBindingApi.OfficeApi.Enums.MsoSyncEventType SyncEventType);
-	public delegate void Application_SlideShowOnNextEventHandler(LateBindingApi.PowerPointApi.SlideShowWindow Wn);
-	public delegate void Application_SlideShowOnPreviousEventHandler(LateBindingApi.PowerPointApi.SlideShowWindow Wn);
-	public delegate void Application_PresentationBeforeCloseEventHandler(LateBindingApi.PowerPointApi.Presentation Pres, ref bool Cancel);
-	public delegate void Application_ProtectedViewWindowOpenEventHandler(LateBindingApi.PowerPointApi.ProtectedViewWindow ProtViewWindow);
-	public delegate void Application_ProtectedViewWindowBeforeEditEventHandler(LateBindingApi.PowerPointApi.ProtectedViewWindow ProtViewWindow, ref bool Cancel);
-	public delegate void Application_ProtectedViewWindowBeforeCloseEventHandler(LateBindingApi.PowerPointApi.ProtectedViewWindow ProtViewWindow, LateBindingApi.PowerPointApi.Enums.PpProtectedViewCloseReason ProtectedViewCloseReason, ref bool Cancel);
-	public delegate void Application_ProtectedViewWindowActivateEventHandler(LateBindingApi.PowerPointApi.ProtectedViewWindow ProtViewWindow);
-	public delegate void Application_ProtectedViewWindowDeactivateEventHandler(LateBindingApi.PowerPointApi.ProtectedViewWindow ProtViewWindow);
-	public delegate void Application_PresentationCloseFinalEventHandler(LateBindingApi.PowerPointApi.Presentation Pres);
+	public delegate void Application_WindowSelectionChangeEventHandler(NetOffice.PowerPointApi.Selection Sel);
+	public delegate void Application_WindowBeforeRightClickEventHandler(NetOffice.PowerPointApi.Selection Sel, ref bool Cancel);
+	public delegate void Application_WindowBeforeDoubleClickEventHandler(NetOffice.PowerPointApi.Selection Sel, ref bool Cancel);
+	public delegate void Application_PresentationCloseEventHandler(NetOffice.PowerPointApi.Presentation Pres);
+	public delegate void Application_PresentationSaveEventHandler(NetOffice.PowerPointApi.Presentation Pres);
+	public delegate void Application_PresentationOpenEventHandler(NetOffice.PowerPointApi.Presentation Pres);
+	public delegate void Application_NewPresentationEventHandler(NetOffice.PowerPointApi.Presentation Pres);
+	public delegate void Application_PresentationNewSlideEventHandler(NetOffice.PowerPointApi.Slide Sld);
+	public delegate void Application_WindowActivateEventHandler(NetOffice.PowerPointApi.Presentation Pres, NetOffice.PowerPointApi.DocumentWindow Wn);
+	public delegate void Application_WindowDeactivateEventHandler(NetOffice.PowerPointApi.Presentation Pres, NetOffice.PowerPointApi.DocumentWindow Wn);
+	public delegate void Application_SlideShowBeginEventHandler(NetOffice.PowerPointApi.SlideShowWindow Wn);
+	public delegate void Application_SlideShowNextBuildEventHandler(NetOffice.PowerPointApi.SlideShowWindow Wn);
+	public delegate void Application_SlideShowNextSlideEventHandler(NetOffice.PowerPointApi.SlideShowWindow Wn);
+	public delegate void Application_SlideShowEndEventHandler(NetOffice.PowerPointApi.Presentation Pres);
+	public delegate void Application_PresentationPrintEventHandler(NetOffice.PowerPointApi.Presentation Pres);
+	public delegate void Application_SlideSelectionChangedEventHandler(NetOffice.PowerPointApi.SlideRange SldRange);
+	public delegate void Application_ColorSchemeChangedEventHandler(NetOffice.PowerPointApi.SlideRange SldRange);
+	public delegate void Application_PresentationBeforeSaveEventHandler(NetOffice.PowerPointApi.Presentation Pres, ref bool Cancel);
+	public delegate void Application_SlideShowNextClickEventHandler(NetOffice.PowerPointApi.SlideShowWindow Wn, NetOffice.PowerPointApi.Effect nEffect);
+	public delegate void Application_AfterNewPresentationEventHandler(NetOffice.PowerPointApi.Presentation Pres);
+	public delegate void Application_AfterPresentationOpenEventHandler(NetOffice.PowerPointApi.Presentation Pres);
+	public delegate void Application_PresentationSyncEventHandler(NetOffice.PowerPointApi.Presentation Pres, NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType);
+	public delegate void Application_SlideShowOnNextEventHandler(NetOffice.PowerPointApi.SlideShowWindow Wn);
+	public delegate void Application_SlideShowOnPreviousEventHandler(NetOffice.PowerPointApi.SlideShowWindow Wn);
+	public delegate void Application_PresentationBeforeCloseEventHandler(NetOffice.PowerPointApi.Presentation Pres, ref bool Cancel);
+	public delegate void Application_ProtectedViewWindowOpenEventHandler(NetOffice.PowerPointApi.ProtectedViewWindow ProtViewWindow);
+	public delegate void Application_ProtectedViewWindowBeforeEditEventHandler(NetOffice.PowerPointApi.ProtectedViewWindow ProtViewWindow, ref bool Cancel);
+	public delegate void Application_ProtectedViewWindowBeforeCloseEventHandler(NetOffice.PowerPointApi.ProtectedViewWindow ProtViewWindow, NetOffice.PowerPointApi.Enums.PpProtectedViewCloseReason ProtectedViewCloseReason, ref bool Cancel);
+	public delegate void Application_ProtectedViewWindowActivateEventHandler(NetOffice.PowerPointApi.ProtectedViewWindow ProtViewWindow);
+	public delegate void Application_ProtectedViewWindowDeactivateEventHandler(NetOffice.PowerPointApi.ProtectedViewWindow ProtViewWindow);
+	public delegate void Application_PresentationCloseFinalEventHandler(NetOffice.PowerPointApi.Presentation Pres);
 	#pragma warning restore
 
 	#endregion

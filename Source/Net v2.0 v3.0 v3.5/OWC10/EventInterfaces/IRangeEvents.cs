@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {	
 	#pragma warning disable
 	

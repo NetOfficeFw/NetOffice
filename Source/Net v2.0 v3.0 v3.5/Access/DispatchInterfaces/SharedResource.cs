@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface SharedResource SupportByLibrary AC14 
@@ -85,13 +85,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC14 
 		/// </summary>
 		[SupportByLibrary("AC14")]
-		public LateBindingApi.AccessApi.Enums.AcResourceType Type
+		public NetOffice.AccessApi.Enums.AcResourceType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcResourceType)returnItem;
+				return (NetOffice.AccessApi.Enums.AcResourceType)returnItem;
 			}
 		}
 

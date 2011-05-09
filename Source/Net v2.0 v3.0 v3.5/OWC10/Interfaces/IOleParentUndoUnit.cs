@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// Interface IOleParentUndoUnit SupportByLibrary XWC1.0 
@@ -53,9 +53,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pPUU">LateBindingApi.OWC10Api.IOleParentUndoUnit pPUU</param>
+		/// <param name="pPUU">NetOffice.OWC10Api.IOleParentUndoUnit pPUU</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 Open(LateBindingApi.OWC10Api.IOleParentUndoUnit pPUU)
+		public Int32 Open(NetOffice.OWC10Api.IOleParentUndoUnit pPUU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPUU);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
@@ -65,10 +65,10 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pPUU">LateBindingApi.OWC10Api.IOleParentUndoUnit pPUU</param>
+		/// <param name="pPUU">NetOffice.OWC10Api.IOleParentUndoUnit pPUU</param>
 		/// <param name="fCommit">Int32 fCommit</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 Close(LateBindingApi.OWC10Api.IOleParentUndoUnit pPUU, Int32 fCommit)
+		public Int32 Close(NetOffice.OWC10Api.IOleParentUndoUnit pPUU, Int32 fCommit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPUU, fCommit);
 			object returnItem = Invoker.MethodReturn(this, "Close", paramsArray);
@@ -78,9 +78,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pUU">LateBindingApi.OWC10Api.IOleUndoUnit pUU</param>
+		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 Add(LateBindingApi.OWC10Api.IOleUndoUnit pUU)
+		public Int32 Add(NetOffice.OWC10Api.IOleUndoUnit pUU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUU);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -90,9 +90,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pUU">LateBindingApi.OWC10Api.IOleUndoUnit pUU</param>
+		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 FindUnit(LateBindingApi.OWC10Api.IOleUndoUnit pUU)
+		public Int32 FindUnit(NetOffice.OWC10Api.IOleUndoUnit pUU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUU);
 			object returnItem = Invoker.MethodReturn(this, "FindUnit", paramsArray);

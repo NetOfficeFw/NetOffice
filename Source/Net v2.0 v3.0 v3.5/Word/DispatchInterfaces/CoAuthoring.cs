@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface CoAuthoring SupportByLibrary WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.CoAuthors Authors
+		public NetOffice.WordApi.CoAuthors Authors
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Authors", paramsArray);
-				LateBindingApi.WordApi.CoAuthors newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.CoAuthors;
+				NetOffice.WordApi.CoAuthors newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.CoAuthors;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.CoAuthor Me
+		public NetOffice.WordApi.CoAuthor Me
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Me", paramsArray);
-				LateBindingApi.WordApi.CoAuthor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.CoAuthor;
+				NetOffice.WordApi.CoAuthor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.CoAuthor;
 				return newObject;
 			}
 		}
@@ -139,13 +139,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.CoAuthLocks Locks
+		public NetOffice.WordApi.CoAuthLocks Locks
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Locks", paramsArray);
-				LateBindingApi.WordApi.CoAuthLocks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.CoAuthLocks;
+				NetOffice.WordApi.CoAuthLocks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.CoAuthLocks;
 				return newObject;
 			}
 		}
@@ -154,13 +154,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.CoAuthUpdates Updates
+		public NetOffice.WordApi.CoAuthUpdates Updates
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Updates", paramsArray);
-				LateBindingApi.WordApi.CoAuthUpdates newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.CoAuthUpdates;
+				NetOffice.WordApi.CoAuthUpdates newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.CoAuthUpdates;
 				return newObject;
 			}
 		}
@@ -169,13 +169,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Conflicts Conflicts
+		public NetOffice.WordApi.Conflicts Conflicts
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Conflicts", paramsArray);
-				LateBindingApi.WordApi.Conflicts newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Conflicts;
+				NetOffice.WordApi.Conflicts newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Conflicts;
 				return newObject;
 			}
 		}

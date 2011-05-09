@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _DefaultWebOptions SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Application Application
+		public NetOffice.AccessApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcColorIndex HyperlinkColor
+		public NetOffice.AccessApi.Enums.AcColorIndex HyperlinkColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HyperlinkColor", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcColorIndex)returnItem;
+				return (NetOffice.AccessApi.Enums.AcColorIndex)returnItem;
 			}
 			set
 			{
@@ -100,13 +100,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcColorIndex FollowedHyperlinkColor
+		public NetOffice.AccessApi.Enums.AcColorIndex FollowedHyperlinkColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FollowedHyperlinkColor", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcColorIndex)returnItem;
+				return (NetOffice.AccessApi.Enums.AcColorIndex)returnItem;
 			}
 			set
 			{
@@ -233,13 +233,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.OfficeApi.Enums.MsoEncoding Encoding
+		public NetOffice.OfficeApi.Enums.MsoEncoding Encoding
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Encoding", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoEncoding)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoEncoding)returnItem;
 			}
 			set
 			{
@@ -285,13 +285,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTargetBrowser TargetBrowser
+		public NetOffice.OfficeApi.Enums.MsoTargetBrowser TargetBrowser
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TargetBrowser", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTargetBrowser)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTargetBrowser)returnItem;
 			}
 			set
 			{

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ThemeColorScheme SupportByLibrary OF12 OF14 
@@ -84,13 +84,13 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Index">LateBindingApi.OfficeApi.Enums.MsoThemeColorSchemeIndex Index</param>
+		/// <param name="Index">NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.ThemeColor Colors(LateBindingApi.OfficeApi.Enums.MsoThemeColorSchemeIndex index)
+		public NetOffice.OfficeApi.ThemeColor Colors(NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Colors", paramsArray);
-			LateBindingApi.OfficeApi.ThemeColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.ThemeColor;
+			NetOffice.OfficeApi.ThemeColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.ThemeColor;
 			return newObject;
 		}
 

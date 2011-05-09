@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface EndnoteOptions SupportByLibrary WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdEndnoteLocation Location
+		public NetOffice.WordApi.Enums.WdEndnoteLocation Location
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdEndnoteLocation)returnItem;
+				return (NetOffice.WordApi.Enums.WdEndnoteLocation)returnItem;
 			}
 			set
 			{
@@ -114,13 +114,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdNoteNumberStyle NumberStyle
+		public NetOffice.WordApi.Enums.WdNoteNumberStyle NumberStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NumberStyle", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdNoteNumberStyle)returnItem;
+				return (NetOffice.WordApi.Enums.WdNoteNumberStyle)returnItem;
 			}
 			set
 			{
@@ -152,13 +152,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdNumberingRule NumberingRule
+		public NetOffice.WordApi.Enums.WdNumberingRule NumberingRule
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NumberingRule", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdNumberingRule)returnItem;
+				return (NetOffice.WordApi.Enums.WdNumberingRule)returnItem;
 			}
 			set
 			{

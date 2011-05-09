@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ICustomTaskPaneConsumer SupportByLibrary OF12 OF14 
@@ -54,9 +54,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="CTPFactoryInst">LateBindingApi.OfficeApi.ICTPFactory CTPFactoryInst</param>
+		/// <param name="CTPFactoryInst">NetOffice.OfficeApi.ICTPFactory CTPFactoryInst</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void CTPFactoryAvailable(LateBindingApi.OfficeApi.ICTPFactory cTPFactoryInst)
+		public void CTPFactoryAvailable(NetOffice.OfficeApi.ICTPFactory cTPFactoryInst)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPFactoryInst);
 			Invoker.Method(this, "CTPFactoryAvailable", paramsArray);

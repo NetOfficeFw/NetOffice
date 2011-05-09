@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// Interface ADORecordConstruction SupportByLibrary ADO2.5 

@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
@@ -21,15 +21,15 @@ namespace LateBindingApi.OutlookApi
 	public delegate void ContactItem_SendEventHandler(ref bool Cancel);
 	public delegate void ContactItem_WriteEventHandler(ref bool Cancel);
 	public delegate void ContactItem_BeforeCheckNamesEventHandler(ref bool Cancel);
-	public delegate void ContactItem_AttachmentAddEventHandler(LateBindingApi.OutlookApi.Attachment Attachment);
-	public delegate void ContactItem_AttachmentReadEventHandler(LateBindingApi.OutlookApi.Attachment Attachment);
-	public delegate void ContactItem_BeforeAttachmentSaveEventHandler(LateBindingApi.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void ContactItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment);
+	public delegate void ContactItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment);
+	public delegate void ContactItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
 	public delegate void ContactItem_BeforeDeleteEventHandler(COMObject Item, ref bool Cancel);
-	public delegate void ContactItem_AttachmentRemoveEventHandler(LateBindingApi.OutlookApi.Attachment Attachment);
-	public delegate void ContactItem_BeforeAttachmentAddEventHandler(LateBindingApi.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void ContactItem_BeforeAttachmentPreviewEventHandler(LateBindingApi.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void ContactItem_BeforeAttachmentReadEventHandler(LateBindingApi.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void ContactItem_BeforeAttachmentWriteToTempFileEventHandler(LateBindingApi.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void ContactItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment Attachment);
+	public delegate void ContactItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void ContactItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void ContactItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void ContactItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
 	public delegate void ContactItem_UnloadEventHandler();
 	public delegate void ContactItem_BeforeAutoSaveEventHandler(ref bool Cancel);
 	public delegate void ContactItem_BeforeReadEventHandler();

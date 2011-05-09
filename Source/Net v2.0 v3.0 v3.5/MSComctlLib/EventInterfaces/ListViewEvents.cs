@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {	
 	#pragma warning disable
 	
@@ -169,7 +169,7 @@ namespace LateBindingApi.MSComctlLibApi
 				return;
 			}
 
-			LateBindingApi.MSComctlLibApi.ColumnHeader newColumnHeader = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, columnHeader) as LateBindingApi.MSComctlLibApi.ColumnHeader;
+			NetOffice.MSComctlLibApi.ColumnHeader newColumnHeader = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, columnHeader) as NetOffice.MSComctlLibApi.ColumnHeader;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newColumnHeader;
 			foreach(Delegate delItem in recipients)
@@ -185,7 +185,7 @@ namespace LateBindingApi.MSComctlLibApi
 				return;
 			}
 
-			LateBindingApi.MSComctlLibApi.ListItem newItem = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, item) as LateBindingApi.MSComctlLibApi.ListItem;
+			NetOffice.MSComctlLibApi.ListItem newItem = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, item) as NetOffice.MSComctlLibApi.ListItem;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
 			foreach(Delegate delItem in recipients)
@@ -356,7 +356,7 @@ namespace LateBindingApi.MSComctlLibApi
 			foreach(Delegate delItem in recipients)
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
-			data = (LateBindingApi.MSComctlLibApi.DataObject)paramsArray[0];
+			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			allowedEffects = (Int32)paramsArray[1];
 		}
 
@@ -394,7 +394,7 @@ namespace LateBindingApi.MSComctlLibApi
 			foreach(Delegate delItem in recipients)
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
-			data = (LateBindingApi.MSComctlLibApi.DataObject)paramsArray[0];
+			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			dataFormat = (Int16)paramsArray[1];
 		}
 
@@ -435,7 +435,7 @@ namespace LateBindingApi.MSComctlLibApi
 			foreach(Delegate delItem in recipients)
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
-			data = (LateBindingApi.MSComctlLibApi.DataObject)paramsArray[0];
+			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			effect = (Int32)paramsArray[1];
 			button = (Int16)paramsArray[2];
 			shift = (Int16)paramsArray[3];
@@ -463,7 +463,7 @@ namespace LateBindingApi.MSComctlLibApi
 			foreach(Delegate delItem in recipients)
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
-			data = (LateBindingApi.MSComctlLibApi.DataObject)paramsArray[0];
+			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			effect = (Int32)paramsArray[1];
 			button = (Int16)paramsArray[2];
 			shift = (Int16)paramsArray[3];
@@ -480,7 +480,7 @@ namespace LateBindingApi.MSComctlLibApi
 				return;
 			}
 
-			LateBindingApi.MSComctlLibApi.ListItem newItem = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, item) as LateBindingApi.MSComctlLibApi.ListItem;
+			NetOffice.MSComctlLibApi.ListItem newItem = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, item) as NetOffice.MSComctlLibApi.ListItem;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
 			foreach(Delegate delItem in recipients)

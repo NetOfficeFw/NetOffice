@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {	
 	#pragma warning disable
 	
@@ -69,7 +69,7 @@ namespace LateBindingApi.OfficeApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi.CustomXMLPart newNewPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, newPart) as LateBindingApi.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newNewPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, newPart) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewPart;
 			foreach(Delegate delItem in recipients)
@@ -85,7 +85,7 @@ namespace LateBindingApi.OfficeApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi.CustomXMLPart newOldPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, oldPart) as LateBindingApi.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newOldPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, oldPart) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newOldPart;
 			foreach(Delegate delItem in recipients)
@@ -101,7 +101,7 @@ namespace LateBindingApi.OfficeApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi.CustomXMLPart newPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, part) as LateBindingApi.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, part) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPart;
 			foreach(Delegate delItem in recipients)

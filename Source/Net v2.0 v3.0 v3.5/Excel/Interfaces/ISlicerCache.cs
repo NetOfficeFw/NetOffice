@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface ISlicerCache SupportByLibrary XL14 
@@ -50,13 +50,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -65,13 +65,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -122,13 +122,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlPivotTableSourceType SourceType
+		public NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SourceType", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlPivotTableSourceType)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlPivotTableSourceType)returnItem;
 			}
 		}
 
@@ -136,13 +136,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.WorkbookConnection WorkbookConnection
+		public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WorkbookConnection", paramsArray);
-				LateBindingApi.ExcelApi.WorkbookConnection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.WorkbookConnection;
+				NetOffice.ExcelApi.WorkbookConnection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.WorkbookConnection;
 				return newObject;
 			}
 		}
@@ -151,13 +151,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Slicers Slicers
+		public NetOffice.ExcelApi.Slicers Slicers
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Slicers", paramsArray);
-				LateBindingApi.ExcelApi.Slicers newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Slicers;
+				NetOffice.ExcelApi.Slicers newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Slicers;
 				return newObject;
 			}
 		}
@@ -166,13 +166,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.SlicerPivotTables PivotTables
+		public NetOffice.ExcelApi.SlicerPivotTables PivotTables
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotTables", paramsArray);
-				LateBindingApi.ExcelApi.SlicerPivotTables newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.SlicerPivotTables;
+				NetOffice.ExcelApi.SlicerPivotTables newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerPivotTables;
 				return newObject;
 			}
 		}
@@ -181,13 +181,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.SlicerCacheLevels SlicerCacheLevels
+		public NetOffice.ExcelApi.SlicerCacheLevels SlicerCacheLevels
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SlicerCacheLevels", paramsArray);
-				LateBindingApi.ExcelApi.SlicerCacheLevels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.SlicerCacheLevels;
+				NetOffice.ExcelApi.SlicerCacheLevels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerCacheLevels;
 				return newObject;
 			}
 		}
@@ -215,13 +215,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.SlicerItems VisibleSlicerItems
+		public NetOffice.ExcelApi.SlicerItems VisibleSlicerItems
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VisibleSlicerItems", paramsArray);
-				LateBindingApi.ExcelApi.SlicerItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.SlicerItems;
+				NetOffice.ExcelApi.SlicerItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerItems;
 				return newObject;
 			}
 		}
@@ -258,13 +258,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.SlicerItems SlicerItems
+		public NetOffice.ExcelApi.SlicerItems SlicerItems
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SlicerItems", paramsArray);
-				LateBindingApi.ExcelApi.SlicerItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.SlicerItems;
+				NetOffice.ExcelApi.SlicerItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerItems;
 				return newObject;
 			}
 		}
@@ -273,13 +273,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlSlicerCrossFilterType CrossFilterType
+		public NetOffice.ExcelApi.Enums.XlSlicerCrossFilterType CrossFilterType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CrossFilterType", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlSlicerCrossFilterType)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlSlicerCrossFilterType)returnItem;
 			}
 			set
 			{
@@ -292,13 +292,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlSlicerSort SortItems
+		public NetOffice.ExcelApi.Enums.XlSlicerSort SortItems
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SortItems", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlSlicerSort)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlSlicerSort)returnItem;
 			}
 			set
 			{

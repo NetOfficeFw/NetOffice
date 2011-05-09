@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _VBProjects_Old SupportByLibrary VBE5.3 VBE12 
@@ -52,13 +52,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBE VBE
+		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				LateBindingApi.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -67,13 +67,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBE Parent
+		public NetOffice.VBIDEApi.VBE Parent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				LateBindingApi.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -101,11 +101,11 @@ namespace LateBindingApi.VBIDEApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBProject Item(object index)
+		public NetOffice.VBIDEApi.VBProject Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.VBIDEApi.VBProject;
+			NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBProject;
 			return newObject;
 		}
 

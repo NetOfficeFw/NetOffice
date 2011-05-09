@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PageField SupportByLibrary XWC1.0 
@@ -70,13 +70,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscFieldTypeEnum FieldType
+		public NetOffice.OWC10Api.Enums.DscFieldTypeEnum FieldType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FieldType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscFieldTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscFieldTypeEnum)returnItem;
 			}
 		}
 
@@ -84,13 +84,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum TotalType
+		public NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TotalType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscTotalTypeEnum)returnItem;
 			}
 			set
 			{
@@ -103,13 +103,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscGroupOnEnum GroupOn
+		public NetOffice.OWC10Api.Enums.DscGroupOnEnum GroupOn
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupOn", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscGroupOnEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscGroupOnEnum)returnItem;
 			}
 			set
 			{
@@ -141,13 +141,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageRowsource PageRowsource
+		public NetOffice.OWC10Api.PageRowsource PageRowsource
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PageRowsource", paramsArray);
-				LateBindingApi.OWC10Api.PageRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PageRowsource;
+				NetOffice.OWC10Api.PageRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageRowsource;
 				return newObject;
 			}
 		}
@@ -156,13 +156,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.RecordsetDef RecordsetDef
+		public NetOffice.OWC10Api.RecordsetDef RecordsetDef
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecordsetDef", paramsArray);
-				LateBindingApi.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.RecordsetDef;
+				NetOffice.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.RecordsetDef;
 				return newObject;
 			}
 		}
@@ -171,13 +171,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscLocationEnum Location
+		public NetOffice.OWC10Api.Enums.DscLocationEnum Location
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscLocationEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscLocationEnum)returnItem;
 			}
 			set
 			{
@@ -209,13 +209,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.ADODBApi.Enums.DataTypeEnum DataType
+		public NetOffice.ADODBApi.Enums.DataTypeEnum DataType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataType", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.DataTypeEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.DataTypeEnum)returnItem;
 			}
 		}
 
@@ -237,13 +237,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaField SchemaField
+		public NetOffice.OWC10Api.SchemaField SchemaField
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaField", paramsArray);
-				LateBindingApi.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaField;
+				NetOffice.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaField;
 				return newObject;
 			}
 		}
@@ -258,11 +258,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="GroupingDefDest">string GroupingDefDest</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.GroupingDef MoveGrouping(string groupingDefDest, object index)
+		public NetOffice.OWC10Api.GroupingDef MoveGrouping(string groupingDefDest, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefDest, index);
 			object returnItem = Invoker.MethodReturn(this, "MoveGrouping", paramsArray);
-			LateBindingApi.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 
@@ -271,11 +271,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="GroupingDefDest">string GroupingDefDest</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.GroupingDef MoveGrouping(string groupingDefDest)
+		public NetOffice.OWC10Api.GroupingDef MoveGrouping(string groupingDefDest)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefDest);
 			object returnItem = Invoker.MethodReturn(this, "MoveGrouping", paramsArray);
-			LateBindingApi.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 
@@ -303,9 +303,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="TotalType">LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
+		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		[SupportByLibrary("XWC1.0")]
-		public void ValidateTotalType(LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum totalType)
+		public void ValidateTotalType(NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(totalType);
 			Invoker.Method(this, "ValidateTotalType", paramsArray);

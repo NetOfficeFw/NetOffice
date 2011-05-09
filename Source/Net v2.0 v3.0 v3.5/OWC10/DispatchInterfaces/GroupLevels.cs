@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface GroupLevels SupportByLibrary XWC1.0 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.GroupLevel get_Item(object index)
+		public NetOffice.OWC10Api.GroupLevel get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.GroupLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.GroupLevel;
+			NetOffice.OWC10Api.GroupLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.GroupLevel;
 			return newObject;
 		}
 
@@ -85,11 +85,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="RecordSource">string RecordSource</param>
 		/// <param name="FailIfThere">bool FailIfThere</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.GroupLevel Add(string recordSource, bool failIfThere)
+		public NetOffice.OWC10Api.GroupLevel Add(string recordSource, bool failIfThere)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordSource, failIfThere);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.GroupLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.GroupLevel;
+			NetOffice.OWC10Api.GroupLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupLevel;
 			return newObject;
 		}
 

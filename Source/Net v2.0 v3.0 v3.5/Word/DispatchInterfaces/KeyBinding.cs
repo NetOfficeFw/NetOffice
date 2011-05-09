@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface KeyBinding SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -137,13 +137,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdKeyCategory KeyCategory
+		public NetOffice.WordApi.Enums.WdKeyCategory KeyCategory
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "KeyCategory", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdKeyCategory)returnItem;
+				return (NetOffice.WordApi.Enums.WdKeyCategory)returnItem;
 			}
 		}
 
@@ -241,11 +241,11 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="KeyCategory">LateBindingApi.WordApi.Enums.WdKeyCategory KeyCategory</param>
+		/// <param name="KeyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="Command">string Command</param>
 		/// <param name="CommandParameter">ref optional object CommandParameter</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void Rebind(LateBindingApi.WordApi.Enums.WdKeyCategory keyCategory, string command, ref object commandParameter)
+		public void Rebind(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, ref object commandParameter)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCategory, command, commandParameter);
@@ -256,10 +256,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="KeyCategory">LateBindingApi.WordApi.Enums.WdKeyCategory KeyCategory</param>
+		/// <param name="KeyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="Command">string Command</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void Rebind(LateBindingApi.WordApi.Enums.WdKeyCategory keyCategory, string command)
+		public void Rebind(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCategory, command);
 			Invoker.Method(this, "Rebind", paramsArray);

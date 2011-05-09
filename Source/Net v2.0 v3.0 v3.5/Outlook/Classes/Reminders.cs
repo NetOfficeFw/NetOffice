@@ -3,18 +3,18 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Reminders_BeforeReminderShowEventHandler(ref bool Cancel);
-	public delegate void Reminders_ReminderAddEventHandler(LateBindingApi.OutlookApi._Reminder ReminderObject);
-	public delegate void Reminders_ReminderChangeEventHandler(LateBindingApi.OutlookApi._Reminder ReminderObject);
-	public delegate void Reminders_ReminderFireEventHandler(LateBindingApi.OutlookApi._Reminder ReminderObject);
+	public delegate void Reminders_ReminderAddEventHandler(NetOffice.OutlookApi._Reminder ReminderObject);
+	public delegate void Reminders_ReminderChangeEventHandler(NetOffice.OutlookApi._Reminder ReminderObject);
+	public delegate void Reminders_ReminderFireEventHandler(NetOffice.OutlookApi._Reminder ReminderObject);
 	public delegate void Reminders_ReminderRemoveEventHandler();
-	public delegate void Reminders_SnoozeEventHandler(LateBindingApi.OutlookApi._Reminder ReminderObject);
+	public delegate void Reminders_SnoozeEventHandler(NetOffice.OutlookApi._Reminder ReminderObject);
 	#pragma warning restore
 
 	#endregion

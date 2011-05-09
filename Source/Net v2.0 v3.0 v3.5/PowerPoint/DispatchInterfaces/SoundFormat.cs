@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface SoundFormat SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpSoundFormatType Type
+		public NetOffice.PowerPointApi.Enums.PpSoundFormatType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpSoundFormatType)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpSoundFormatType)returnItem;
 			}
 		}
 
@@ -105,11 +105,11 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpSoundFormatType Export(string fileName)
+		public NetOffice.PowerPointApi.Enums.PpSoundFormatType Export(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
-			return (LateBindingApi.PowerPointApi.Enums.PpSoundFormatType)returnItem;
+			return (NetOffice.PowerPointApi.Enums.PpSoundFormatType)returnItem;
 		}
 
 		#endregion

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface INode SupportByLibrary WCC6.0 
@@ -70,13 +70,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.INode Child
+		public NetOffice.MSComctlLibApi.INode Child
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Child", paramsArray);
-				LateBindingApi.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.INode;
+				NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
 				return newObject;
 			}
 			set
@@ -156,13 +156,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.INode FirstSibling
+		public NetOffice.MSComctlLibApi.INode FirstSibling
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FirstSibling", paramsArray);
-				LateBindingApi.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.INode;
+				NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
 				return newObject;
 			}
 			set
@@ -261,13 +261,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.INode LastSibling
+		public NetOffice.MSComctlLibApi.INode LastSibling
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LastSibling", paramsArray);
-				LateBindingApi.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.INode;
+				NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
 				return newObject;
 			}
 			set
@@ -281,13 +281,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.INode Next
+		public NetOffice.MSComctlLibApi.INode Next
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Next", paramsArray);
-				LateBindingApi.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.INode;
+				NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
 				return newObject;
 			}
 			set
@@ -301,13 +301,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.INode Parent
+		public NetOffice.MSComctlLibApi.INode Parent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				LateBindingApi.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.INode;
+				NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
 				return newObject;
 			}
 			set
@@ -321,13 +321,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.INode Previous
+		public NetOffice.MSComctlLibApi.INode Previous
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Previous", paramsArray);
-				LateBindingApi.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.INode;
+				NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
 				return newObject;
 			}
 			set
@@ -341,13 +341,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.INode Root
+		public NetOffice.MSComctlLibApi.INode Root
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Root", paramsArray);
-				LateBindingApi.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.INode;
+				NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
 				return newObject;
 			}
 			set

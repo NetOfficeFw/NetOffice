@@ -6,13 +6,13 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface DiagramNode SupportByLibrary XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL10","XL11","XL12","XL14")]
-	public class DiagramNode : LateBindingApi.OfficeApi._IMsoDispObj
+	public class DiagramNode : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#pragma warning disable
 		#region Construction
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.DiagramNodeChildren Children
+		public NetOffice.ExcelApi.DiagramNodeChildren Children
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Children", paramsArray);
-				LateBindingApi.ExcelApi.DiagramNodeChildren newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.DiagramNodeChildren;
+				NetOffice.ExcelApi.DiagramNodeChildren newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.DiagramNodeChildren;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Shape Shape
+		public NetOffice.ExcelApi.Shape Shape
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shape", paramsArray);
-				LateBindingApi.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Shape;
+				NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Shape;
 				return newObject;
 			}
 		}
@@ -96,13 +96,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.DiagramNode Root
+		public NetOffice.ExcelApi.DiagramNode Root
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Root", paramsArray);
-				LateBindingApi.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.DiagramNode;
+				NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.DiagramNode;
 				return newObject;
 			}
 		}
@@ -111,13 +111,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.IMsoDiagram Diagram
+		public NetOffice.OfficeApi.IMsoDiagram Diagram
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Diagram", paramsArray);
-				LateBindingApi.OfficeApi.IMsoDiagram newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IMsoDiagram;
+				NetOffice.OfficeApi.IMsoDiagram newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoDiagram;
 				return newObject;
 			}
 		}
@@ -126,13 +126,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoOrgChartLayoutType Layout
+		public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType Layout
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Layout", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoOrgChartLayoutType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType)returnItem;
 			}
 			set
 			{
@@ -145,13 +145,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Shape TextShape
+		public NetOffice.ExcelApi.Shape TextShape
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextShape", paramsArray);
-				LateBindingApi.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Shape;
+				NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Shape;
 				return newObject;
 			}
 		}
@@ -163,14 +163,14 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="pos">LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos</param>
-		/// <param name="nodeType">LateBindingApi.OfficeApi.Enums.MsoDiagramNodeType nodeType</param>
+		/// <param name="pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos</param>
+		/// <param name="nodeType">NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.DiagramNode AddNode(LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos, LateBindingApi.OfficeApi.Enums.MsoDiagramNodeType nodeType)
+		public NetOffice.ExcelApi.DiagramNode AddNode(NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos, NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			LateBindingApi.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.DiagramNode;
+			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.DiagramNode;
 			return newObject;
 		}
 
@@ -187,10 +187,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="pTargetNode">LateBindingApi.ExcelApi.DiagramNode pTargetNode</param>
-		/// <param name="pos">LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos</param>
+		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
+		/// <param name="pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public void MoveNode(LateBindingApi.ExcelApi.DiagramNode pTargetNode, LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public void MoveNode(NetOffice.ExcelApi.DiagramNode pTargetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pTargetNode, pos);
 			Invoker.Method(this, "MoveNode", paramsArray);
@@ -199,9 +199,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="pTargetNode">LateBindingApi.ExcelApi.DiagramNode pTargetNode</param>
+		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public void ReplaceNode(LateBindingApi.ExcelApi.DiagramNode pTargetNode)
+		public void ReplaceNode(NetOffice.ExcelApi.DiagramNode pTargetNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pTargetNode);
 			Invoker.Method(this, "ReplaceNode", paramsArray);
@@ -210,10 +210,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="pTargetNode">LateBindingApi.ExcelApi.DiagramNode pTargetNode</param>
+		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
 		/// <param name="swapChildren">bool swapChildren</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public void SwapNode(LateBindingApi.ExcelApi.DiagramNode pTargetNode, bool swapChildren)
+		public void SwapNode(NetOffice.ExcelApi.DiagramNode pTargetNode, bool swapChildren)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pTargetNode, swapChildren);
 			Invoker.Method(this, "SwapNode", paramsArray);
@@ -223,23 +223,23 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		/// <param name="copyChildren">bool copyChildren</param>
-		/// <param name="pTargetNode">LateBindingApi.ExcelApi.DiagramNode pTargetNode</param>
-		/// <param name="pos">LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos</param>
+		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
+		/// <param name="pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.DiagramNode CloneNode(bool copyChildren, LateBindingApi.ExcelApi.DiagramNode pTargetNode, LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public NetOffice.ExcelApi.DiagramNode CloneNode(bool copyChildren, NetOffice.ExcelApi.DiagramNode pTargetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, pTargetNode, pos);
 			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);
-			LateBindingApi.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.DiagramNode;
+			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.DiagramNode;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="pReceivingNode">LateBindingApi.ExcelApi.DiagramNode pReceivingNode</param>
+		/// <param name="pReceivingNode">NetOffice.ExcelApi.DiagramNode pReceivingNode</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public void TransferChildren(LateBindingApi.ExcelApi.DiagramNode pReceivingNode)
+		public void TransferChildren(NetOffice.ExcelApi.DiagramNode pReceivingNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pReceivingNode);
 			Invoker.Method(this, "TransferChildren", paramsArray);
@@ -249,11 +249,11 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.DiagramNode NextNode()
+		public NetOffice.ExcelApi.DiagramNode NextNode()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NextNode", paramsArray);
-			LateBindingApi.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.DiagramNode;
+			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.DiagramNode;
 			return newObject;
 		}
 
@@ -261,11 +261,11 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.DiagramNode PrevNode()
+		public NetOffice.ExcelApi.DiagramNode PrevNode()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "PrevNode", paramsArray);
-			LateBindingApi.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.DiagramNode;
+			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.DiagramNode;
 			return newObject;
 		}
 

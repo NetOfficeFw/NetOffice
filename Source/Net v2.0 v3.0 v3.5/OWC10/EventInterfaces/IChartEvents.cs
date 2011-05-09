@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {	
 	#pragma warning disable
 	
@@ -257,7 +257,7 @@ namespace LateBindingApi.OWC10Api
 
 			Int32 newKeyCode = (Int32)keyCode;
 			Int32 newShift = (Int32)shift;
-			LateBindingApi.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as LateBindingApi.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
@@ -277,7 +277,7 @@ namespace LateBindingApi.OWC10Api
 
 			Int32 newKeyCode = (Int32)keyCode;
 			Int32 newShift = (Int32)shift;
-			LateBindingApi.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as LateBindingApi.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
@@ -296,7 +296,7 @@ namespace LateBindingApi.OWC10Api
 			}
 
 			Int32 newKeyAscii = (Int32)keyAscii;
-			LateBindingApi.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as LateBindingApi.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyAscii;
 			paramsArray[1] = newCancel;
@@ -411,7 +411,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.ByRef newTipText = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, tipText) as LateBindingApi.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newTipText = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, tipText) as NetOffice.OWC10Api.ByRef;
 			object newContextObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, contextObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newTipText;
@@ -430,7 +430,7 @@ namespace LateBindingApi.OWC10Api
 			}
 
 			object newCommand = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
-			LateBindingApi.OWC10Api.ByRef newEnabled = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, enabled) as LateBindingApi.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newEnabled = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, enabled) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newEnabled;
@@ -448,7 +448,7 @@ namespace LateBindingApi.OWC10Api
 			}
 
 			object newCommand = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
-			LateBindingApi.OWC10Api.ByRef newChecked = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, _checked) as LateBindingApi.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newChecked = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, _checked) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newChecked;
@@ -466,7 +466,7 @@ namespace LateBindingApi.OWC10Api
 			}
 
 			object newCommand = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
-			LateBindingApi.OWC10Api.ByRef newCaption = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, caption) as LateBindingApi.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCaption = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, caption) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCaption;
@@ -484,7 +484,7 @@ namespace LateBindingApi.OWC10Api
 			}
 
 			object newCommand = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
-			LateBindingApi.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as LateBindingApi.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCancel;
@@ -521,8 +521,8 @@ namespace LateBindingApi.OWC10Api
 
 			Int32 newx = (Int32)x;
 			Int32 newy = (Int32)y;
-			LateBindingApi.OWC10Api.ByRef newMenu = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, menu) as LateBindingApi.OWC10Api.ByRef;
-			LateBindingApi.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as LateBindingApi.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newMenu = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, menu) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newx;
 			paramsArray[1] = newy;
@@ -541,9 +541,9 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.ChChartDraw newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as LateBindingApi.OWC10Api.ChChartDraw;
+			NetOffice.OWC10Api.ChChartDraw newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
 			object newchartObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
-			LateBindingApi.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as LateBindingApi.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newdrawObject;
 			paramsArray[1] = newchartObject;
@@ -561,7 +561,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.ChChartDraw newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as LateBindingApi.OWC10Api.ChChartDraw;
+			NetOffice.OWC10Api.ChChartDraw newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
 			object newchartObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newdrawObject;
@@ -579,7 +579,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.ChChartDraw newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as LateBindingApi.OWC10Api.ChChartDraw;
+			NetOffice.OWC10Api.ChChartDraw newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
 			foreach(Delegate delItem in recipients)
@@ -595,7 +595,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.ChChartDraw newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as LateBindingApi.OWC10Api.ChChartDraw;
+			NetOffice.OWC10Api.ChChartDraw newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
 			foreach(Delegate delItem in recipients)

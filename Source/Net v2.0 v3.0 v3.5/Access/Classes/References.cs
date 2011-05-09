@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void References_ItemAddedEventHandler(LateBindingApi.AccessApi.Reference Reference);
-	public delegate void References_ItemRemovedEventHandler(LateBindingApi.AccessApi.Reference Reference);
+	public delegate void References_ItemAddedEventHandler(NetOffice.AccessApi.Reference Reference);
+	public delegate void References_ItemRemovedEventHandler(NetOffice.AccessApi.Reference Reference);
 	#pragma warning restore
 
 	#endregion

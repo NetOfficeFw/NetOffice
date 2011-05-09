@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface Command15 SupportByLibrary ADO2.1 ADO2.5 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.1 ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public LateBindingApi.ADODBApi._Connection ActiveConnection
+		public NetOffice.ADODBApi._Connection ActiveConnection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveConnection", paramsArray);
-				LateBindingApi.ADODBApi._Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi._Connection;
+				NetOffice.ADODBApi._Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Connection;
 				return newObject;
 			}
 			set
@@ -128,13 +128,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.1 ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public LateBindingApi.ADODBApi.Parameters Parameters
+		public NetOffice.ADODBApi.Parameters Parameters
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parameters", paramsArray);
-				LateBindingApi.ADODBApi.Parameters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Parameters;
+				NetOffice.ADODBApi.Parameters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Parameters;
 				return newObject;
 			}
 		}
@@ -143,13 +143,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.1 ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.CommandTypeEnum CommandType
+		public NetOffice.ADODBApi.Enums.CommandTypeEnum CommandType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandType", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.CommandTypeEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.CommandTypeEnum)returnItem;
 			}
 			set
 			{
@@ -188,12 +188,12 @@ namespace LateBindingApi.ADODBApi
 		/// <param name="Parameters">ref object Parameters</param>
 		/// <param name="Options">Int32 Options</param>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public LateBindingApi.ADODBApi._Recordset Execute(ref object recordsAffected, ref object parameters, Int32 options)
+		public NetOffice.ADODBApi._Recordset Execute(ref object recordsAffected, ref object parameters, Int32 options)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected, parameters, options);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray, modifiers);
-			LateBindingApi.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
 			recordsAffected = (object)paramsArray[0];
 			parameters = (object)paramsArray[1];
 			return newObject;
@@ -203,16 +203,16 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.1 ADO2.5 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="Type">LateBindingApi.ADODBApi.Enums.DataTypeEnum Type</param>
-		/// <param name="Direction">LateBindingApi.ADODBApi.Enums.ParameterDirectionEnum Direction</param>
+		/// <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+		/// <param name="Direction">NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction</param>
 		/// <param name="Size">Int32 Size</param>
 		/// <param name="Value">optional object Value</param>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public LateBindingApi.ADODBApi._Parameter CreateParameter(string name, LateBindingApi.ADODBApi.Enums.DataTypeEnum type, LateBindingApi.ADODBApi.Enums.ParameterDirectionEnum direction, Int32 size, object value)
+		public NetOffice.ADODBApi._Parameter CreateParameter(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, NetOffice.ADODBApi.Enums.ParameterDirectionEnum direction, Int32 size, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size, value);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			LateBindingApi.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 
@@ -220,15 +220,15 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.1 ADO2.5 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="Type">LateBindingApi.ADODBApi.Enums.DataTypeEnum Type</param>
-		/// <param name="Direction">LateBindingApi.ADODBApi.Enums.ParameterDirectionEnum Direction</param>
+		/// <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+		/// <param name="Direction">NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction</param>
 		/// <param name="Size">Int32 Size</param>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public LateBindingApi.ADODBApi._Parameter CreateParameter(string name, LateBindingApi.ADODBApi.Enums.DataTypeEnum type, LateBindingApi.ADODBApi.Enums.ParameterDirectionEnum direction, Int32 size)
+		public NetOffice.ADODBApi._Parameter CreateParameter(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, NetOffice.ADODBApi.Enums.ParameterDirectionEnum direction, Int32 size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			LateBindingApi.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 

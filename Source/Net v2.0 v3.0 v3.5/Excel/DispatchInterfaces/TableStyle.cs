@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface TableStyle SupportByLibrary XL12 XL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -151,13 +151,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.TableStyleElements TableStyleElements
+		public NetOffice.ExcelApi.TableStyleElements TableStyleElements
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TableStyleElements", paramsArray);
-				LateBindingApi.ExcelApi.TableStyleElements newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.TableStyleElements;
+				NetOffice.ExcelApi.TableStyleElements newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.TableStyleElements;
 				return newObject;
 			}
 		}
@@ -238,11 +238,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="NewTableStyleName">optional object NewTableStyleName</param>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.TableStyle Duplicate(object newTableStyleName)
+		public NetOffice.ExcelApi.TableStyle Duplicate(object newTableStyleName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newTableStyleName);
 			object returnItem = Invoker.MethodReturn(this, "Duplicate", paramsArray);
-			LateBindingApi.ExcelApi.TableStyle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.TableStyle;
+			NetOffice.ExcelApi.TableStyle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.TableStyle;
 			return newObject;
 		}
 
@@ -250,11 +250,11 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.TableStyle Duplicate()
+		public NetOffice.ExcelApi.TableStyle Duplicate()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Duplicate", paramsArray);
-			LateBindingApi.ExcelApi.TableStyle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.TableStyle;
+			NetOffice.ExcelApi.TableStyle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.TableStyle;
 			return newObject;
 		}
 

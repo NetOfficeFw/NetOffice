@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface SchemaParameters SupportByLibrary XWC1.0 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaParameter get_Item(object index)
+		public NetOffice.OWC10Api.SchemaParameter get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.SchemaParameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaParameter;
+			NetOffice.OWC10Api.SchemaParameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaParameter;
 			return newObject;
 		}
 
@@ -89,11 +89,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="Precision">optional object Precision</param>
 		/// <param name="Direction">optional object Direction</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaParameter Add(string name, object dataType, object size, object scale, object precision, object direction)
+		public NetOffice.OWC10Api.SchemaParameter Add(string name, object dataType, object size, object scale, object precision, object direction)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType, size, scale, precision, direction);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.SchemaParameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.SchemaParameter;
+			NetOffice.OWC10Api.SchemaParameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaParameter;
 			return newObject;
 		}
 
@@ -102,11 +102,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaParameter Add(string name)
+		public NetOffice.OWC10Api.SchemaParameter Add(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.SchemaParameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.SchemaParameter;
+			NetOffice.OWC10Api.SchemaParameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaParameter;
 			return newObject;
 		}
 

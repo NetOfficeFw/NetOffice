@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface TableStyle SupportByLibrary WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -114,13 +114,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Borders Borders
+		public NetOffice.WordApi.Borders Borders
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Borders", paramsArray);
-				LateBindingApi.WordApi.Borders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Borders;
+				NetOffice.WordApi.Borders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Borders;
 				return newObject;
 			}
 			set
@@ -210,13 +210,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdRowAlignment Alignment
+		public NetOffice.WordApi.Enums.WdRowAlignment Alignment
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Alignment", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdRowAlignment)returnItem;
+				return (NetOffice.WordApi.Enums.WdRowAlignment)returnItem;
 			}
 			set
 			{
@@ -248,13 +248,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdTableDirection TableDirection
+		public NetOffice.WordApi.Enums.WdTableDirection TableDirection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TableDirection", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdTableDirection)returnItem;
+				return (NetOffice.WordApi.Enums.WdTableDirection)returnItem;
 			}
 			set
 			{
@@ -305,13 +305,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Shading Shading
+		public NetOffice.WordApi.Shading Shading
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shading", paramsArray);
-				LateBindingApi.WordApi.Shading newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Shading;
+				NetOffice.WordApi.Shading newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Shading;
 				return newObject;
 			}
 		}
@@ -361,13 +361,13 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="ConditionCode">LateBindingApi.WordApi.Enums.WdConditionCode ConditionCode</param>
+		/// <param name="ConditionCode">NetOffice.WordApi.Enums.WdConditionCode ConditionCode</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.ConditionalStyle Condition(LateBindingApi.WordApi.Enums.WdConditionCode conditionCode)
+		public NetOffice.WordApi.ConditionalStyle Condition(NetOffice.WordApi.Enums.WdConditionCode conditionCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(conditionCode);
 			object returnItem = Invoker.MethodReturn(this, "Condition", paramsArray);
-			LateBindingApi.WordApi.ConditionalStyle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.ConditionalStyle;
+			NetOffice.WordApi.ConditionalStyle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ConditionalStyle;
 			return newObject;
 		}
 

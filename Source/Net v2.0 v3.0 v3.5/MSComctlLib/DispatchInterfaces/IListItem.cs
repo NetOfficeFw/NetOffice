@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IListItem SupportByLibrary WCC6.0 
@@ -333,6 +333,11 @@ namespace LateBindingApi.MSComctlLibApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary WCC6.0 
+		/// </summary>
+		/// <param name="Index">Int16 Index</param>
+		[SupportByLibrary("WCC6.0")]
 		public void set_SubItems(Int16 index, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -343,13 +348,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IListSubItems ListSubItems
+		public NetOffice.MSComctlLibApi.IListSubItems ListSubItems
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListSubItems", paramsArray);
-				LateBindingApi.MSComctlLibApi.IListSubItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.IListSubItems;
+				NetOffice.MSComctlLibApi.IListSubItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItems;
 				return newObject;
 			}
 			set

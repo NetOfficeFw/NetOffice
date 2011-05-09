@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface ITabs SupportByLibrary WCC6.0 
@@ -72,17 +72,22 @@ namespace LateBindingApi.MSComctlLibApi
 		/// </summary>
 		/// <param name="pvIndex">ref object pvIndex</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.ITab get_ControlDefault(ref object pvIndex)
+		public NetOffice.MSComctlLibApi.ITab get_ControlDefault(ref object pvIndex)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
 			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.ITab;
+			NetOffice.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
 			pvIndex = (object)paramsArray[0];
 			return newObject;
 		}
 
-		public void set_ControlDefault(ref object pvIndex, LateBindingApi.MSComctlLibApi.ITab value)
+		/// <summary>
+		/// SupportByLibrary WCC6.0 
+		/// </summary>
+		/// <param name="pvIndex">ref object pvIndex</param>
+		[SupportByLibrary("WCC6.0")]
+		public void set_ControlDefault(ref object pvIndex, NetOffice.MSComctlLibApi.ITab value)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
@@ -95,17 +100,22 @@ namespace LateBindingApi.MSComctlLibApi
 		/// </summary>
 		/// <param name="pvIndex">ref object pvIndex</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.ITab get_Item(ref object pvIndex)
+		public NetOffice.MSComctlLibApi.ITab get_Item(ref object pvIndex)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.ITab;
+			NetOffice.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
 			pvIndex = (object)paramsArray[0];
 			return newObject;
 		}
 
-		public void set_Item(ref object pvIndex, LateBindingApi.MSComctlLibApi.ITab value)
+		/// <summary>
+		/// SupportByLibrary WCC6.0 
+		/// </summary>
+		/// <param name="pvIndex">ref object pvIndex</param>
+		[SupportByLibrary("WCC6.0")]
+		public void set_Item(ref object pvIndex, NetOffice.MSComctlLibApi.ITab value)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
@@ -148,12 +158,12 @@ namespace LateBindingApi.MSComctlLibApi
 		/// <param name="pvCaption">ref optional object pvCaption</param>
 		/// <param name="pvImage">ref optional object pvImage</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.ITab Add(ref object pvIndex, ref object pvKey, ref object pvCaption, ref object pvImage)
+		public NetOffice.MSComctlLibApi.ITab Add(ref object pvIndex, ref object pvKey, ref object pvCaption, ref object pvImage)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex, pvKey, pvCaption, pvImage);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.MSComctlLibApi.ITab;
+			NetOffice.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.ITab;
 			pvIndex = (object)paramsArray[0];
 			pvKey = (object)paramsArray[1];
 			pvCaption = (object)paramsArray[2];
@@ -165,11 +175,11 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.ITab Add()
+		public NetOffice.MSComctlLibApi.ITab Add()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.MSComctlLibApi.ITab;
+			NetOffice.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.ITab;
 			return newObject;
 		}
 

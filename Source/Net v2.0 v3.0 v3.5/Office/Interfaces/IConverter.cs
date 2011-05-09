@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface IConverter SupportByLibrary OF14 
@@ -53,25 +53,25 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF14 
 		/// </summary>
-		/// <param name="pcap">LateBindingApi.OfficeApi.IConverterApplicationPreferences pcap</param>
-		/// <param name="ppcp">ref LateBindingApi.OfficeApi.IConverterPreferences ppcp</param>
-		/// <param name="pcuic">LateBindingApi.OfficeApi.IConverterUICallback pcuic</param>
+		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
+		/// <param name="ppcp">ref NetOffice.OfficeApi.IConverterPreferences ppcp</param>
+		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
 		[SupportByLibrary("OF14")]
-		public Int32 HrInitConverter(LateBindingApi.OfficeApi.IConverterApplicationPreferences pcap, ref LateBindingApi.OfficeApi.IConverterPreferences ppcp, LateBindingApi.OfficeApi.IConverterUICallback pcuic)
+		public Int32 HrInitConverter(NetOffice.OfficeApi.IConverterApplicationPreferences pcap, ref NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(pcap, ppcp, pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrInitConverter", paramsArray);
-			ppcp = (LateBindingApi.OfficeApi.IConverterPreferences)paramsArray[1];
+			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OF14 
 		/// </summary>
-		/// <param name="pcuic">LateBindingApi.OfficeApi.IConverterUICallback pcuic</param>
+		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
 		[SupportByLibrary("OF14")]
-		public Int32 HrUninitConverter(LateBindingApi.OfficeApi.IConverterUICallback pcuic)
+		public Int32 HrUninitConverter(NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrUninitConverter", paramsArray);
@@ -83,16 +83,16 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="bstrSourcePath">string bstrSourcePath</param>
 		/// <param name="bstrDestPath">string bstrDestPath</param>
-		/// <param name="pcap">LateBindingApi.OfficeApi.IConverterApplicationPreferences pcap</param>
-		/// <param name="ppcp">ref LateBindingApi.OfficeApi.IConverterPreferences ppcp</param>
-		/// <param name="pcuic">LateBindingApi.OfficeApi.IConverterUICallback pcuic</param>
+		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
+		/// <param name="ppcp">ref NetOffice.OfficeApi.IConverterPreferences ppcp</param>
+		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
 		[SupportByLibrary("OF14")]
-		public Int32 HrImport(string bstrSourcePath, string bstrDestPath, LateBindingApi.OfficeApi.IConverterApplicationPreferences pcap, ref LateBindingApi.OfficeApi.IConverterPreferences ppcp, LateBindingApi.OfficeApi.IConverterUICallback pcuic)
+		public Int32 HrImport(string bstrSourcePath, string bstrDestPath, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, ref NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, pcap, ppcp, pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrImport", paramsArray);
-			ppcp = (LateBindingApi.OfficeApi.IConverterPreferences)paramsArray[3];
+			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[3];
 			return (Int32)returnItem;
 		}
 
@@ -102,16 +102,16 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="bstrSourcePath">string bstrSourcePath</param>
 		/// <param name="bstrDestPath">string bstrDestPath</param>
 		/// <param name="bstrClass">string bstrClass</param>
-		/// <param name="pcap">LateBindingApi.OfficeApi.IConverterApplicationPreferences pcap</param>
-		/// <param name="ppcp">ref LateBindingApi.OfficeApi.IConverterPreferences ppcp</param>
-		/// <param name="pcuic">LateBindingApi.OfficeApi.IConverterUICallback pcuic</param>
+		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
+		/// <param name="ppcp">ref NetOffice.OfficeApi.IConverterPreferences ppcp</param>
+		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
 		[SupportByLibrary("OF14")]
-		public Int32 HrExport(string bstrSourcePath, string bstrDestPath, string bstrClass, LateBindingApi.OfficeApi.IConverterApplicationPreferences pcap, ref LateBindingApi.OfficeApi.IConverterPreferences ppcp, LateBindingApi.OfficeApi.IConverterUICallback pcuic)
+		public Int32 HrExport(string bstrSourcePath, string bstrDestPath, string bstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, ref NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, bstrClass, pcap, ppcp, pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrExport", paramsArray);
-			ppcp = (LateBindingApi.OfficeApi.IConverterPreferences)paramsArray[4];
+			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[4];
 			return (Int32)returnItem;
 		}
 
@@ -120,17 +120,17 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="bstrPath">string bstrPath</param>
 		/// <param name="pbstrClass">ref string pbstrClass</param>
-		/// <param name="pcap">LateBindingApi.OfficeApi.IConverterApplicationPreferences pcap</param>
-		/// <param name="ppcp">ref LateBindingApi.OfficeApi.IConverterPreferences ppcp</param>
-		/// <param name="pcuic">LateBindingApi.OfficeApi.IConverterUICallback pcuic</param>
+		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
+		/// <param name="ppcp">ref NetOffice.OfficeApi.IConverterPreferences ppcp</param>
+		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
 		[SupportByLibrary("OF14")]
-		public Int32 HrGetFormat(string bstrPath, ref string pbstrClass, LateBindingApi.OfficeApi.IConverterApplicationPreferences pcap, ref LateBindingApi.OfficeApi.IConverterPreferences ppcp, LateBindingApi.OfficeApi.IConverterUICallback pcuic)
+		public Int32 HrGetFormat(string bstrPath, ref string pbstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, ref NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrPath, pbstrClass, pcap, ppcp, pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrGetFormat", paramsArray);
 			pbstrClass = (string)paramsArray[1];
-			ppcp = (LateBindingApi.OfficeApi.IConverterPreferences)paramsArray[3];
+			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[3];
 			return (Int32)returnItem;
 		}
 
@@ -139,9 +139,9 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="hrErr">Int32 hrErr</param>
 		/// <param name="pbstrErrorMsg">ref string pbstrErrorMsg</param>
-		/// <param name="pcap">LateBindingApi.OfficeApi.IConverterApplicationPreferences pcap</param>
+		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		[SupportByLibrary("OF14")]
-		public Int32 HrGetErrorString(Int32 hrErr, ref string pbstrErrorMsg, LateBindingApi.OfficeApi.IConverterApplicationPreferences pcap)
+		public Int32 HrGetErrorString(Int32 hrErr, ref string pbstrErrorMsg, NetOffice.OfficeApi.IConverterApplicationPreferences pcap)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(hrErr, pbstrErrorMsg, pcap);

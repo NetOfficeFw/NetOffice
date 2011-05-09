@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PropertyTest SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -65,13 +65,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoCondition Condition
+		public NetOffice.OfficeApi.Enums.MsoCondition Condition
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Condition", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoCondition)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoCondition)returnItem;
 			}
 		}
 
@@ -125,13 +125,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoConnector Connector
+		public NetOffice.OfficeApi.Enums.MsoConnector Connector
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Connector", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoConnector)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoConnector)returnItem;
 			}
 		}
 

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Cells SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -66,13 +66,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -148,13 +148,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdRowHeightRule HeightRule
+		public NetOffice.WordApi.Enums.WdRowHeightRule HeightRule
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HeightRule", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdRowHeightRule)returnItem;
+				return (NetOffice.WordApi.Enums.WdRowHeightRule)returnItem;
 			}
 			set
 			{
@@ -167,13 +167,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdCellVerticalAlignment VerticalAlignment
+		public NetOffice.WordApi.Enums.WdCellVerticalAlignment VerticalAlignment
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VerticalAlignment", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdCellVerticalAlignment)returnItem;
+				return (NetOffice.WordApi.Enums.WdCellVerticalAlignment)returnItem;
 			}
 			set
 			{
@@ -186,13 +186,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Borders Borders
+		public NetOffice.WordApi.Borders Borders
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Borders", paramsArray);
-				LateBindingApi.WordApi.Borders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Borders;
+				NetOffice.WordApi.Borders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Borders;
 				return newObject;
 			}
 			set
@@ -206,13 +206,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Shading Shading
+		public NetOffice.WordApi.Shading Shading
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shading", paramsArray);
-				LateBindingApi.WordApi.Shading newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Shading;
+				NetOffice.WordApi.Shading newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Shading;
 				return newObject;
 			}
 		}
@@ -254,13 +254,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdPreferredWidthType PreferredWidthType
+		public NetOffice.WordApi.Enums.WdPreferredWidthType PreferredWidthType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PreferredWidthType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdPreferredWidthType)returnItem;
+				return (NetOffice.WordApi.Enums.WdPreferredWidthType)returnItem;
 			}
 			set
 			{
@@ -278,11 +278,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Cell Item(Int32 index)
+		public NetOffice.WordApi.Cell Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.WordApi.Cell newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Cell;
+			NetOffice.WordApi.Cell newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Cell;
 			return newObject;
 		}
 
@@ -291,12 +291,12 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="BeforeCell">ref optional object BeforeCell</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Cell Add(ref object beforeCell)
+		public NetOffice.WordApi.Cell Add(ref object beforeCell)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeCell);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.WordApi.Cell newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Cell;
+			NetOffice.WordApi.Cell newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Cell;
 			beforeCell = (object)paramsArray[0];
 			return newObject;
 		}
@@ -305,11 +305,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Cell Add()
+		public NetOffice.WordApi.Cell Add()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.WordApi.Cell newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Cell;
+			NetOffice.WordApi.Cell newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Cell;
 			return newObject;
 		}
 
@@ -340,9 +340,9 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		/// <param name="ColumnWidth">Single ColumnWidth</param>
-		/// <param name="RulerStyle">LateBindingApi.WordApi.Enums.WdRulerStyle RulerStyle</param>
+		/// <param name="RulerStyle">NetOffice.WordApi.Enums.WdRulerStyle RulerStyle</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void SetWidth(Single columnWidth, LateBindingApi.WordApi.Enums.WdRulerStyle rulerStyle)
+		public void SetWidth(Single columnWidth, NetOffice.WordApi.Enums.WdRulerStyle rulerStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(columnWidth, rulerStyle);
 			Invoker.Method(this, "SetWidth", paramsArray);
@@ -352,9 +352,9 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		/// <param name="RowHeight">ref object RowHeight</param>
-		/// <param name="HeightRule">LateBindingApi.WordApi.Enums.WdRowHeightRule HeightRule</param>
+		/// <param name="HeightRule">NetOffice.WordApi.Enums.WdRowHeightRule HeightRule</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void SetHeight(ref object rowHeight, LateBindingApi.WordApi.Enums.WdRowHeightRule heightRule)
+		public void SetHeight(ref object rowHeight, NetOffice.WordApi.Enums.WdRowHeightRule heightRule)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(rowHeight, heightRule);

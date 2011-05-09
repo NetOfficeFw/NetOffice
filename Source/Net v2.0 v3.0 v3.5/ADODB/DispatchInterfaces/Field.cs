@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface Field SupportByLibrary ADO2.1 ADO2.5 
@@ -117,13 +117,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.1 
 		/// </summary>
 		[SupportByLibrary("ADO2.1")]
-		public LateBindingApi.ADODBApi.Enums.DataTypeEnum Type
+		public NetOffice.ADODBApi.Enums.DataTypeEnum Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.DataTypeEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.DataTypeEnum)returnItem;
 			}
 			set
 			{
@@ -268,13 +268,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Properties Properties
+		public NetOffice.ADODBApi.Properties Properties
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				LateBindingApi.ADODBApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Properties;
+				NetOffice.ADODBApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Properties;
 				return newObject;
 			}
 		}

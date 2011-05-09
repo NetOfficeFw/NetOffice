@@ -3,15 +3,15 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void OutlookBarShortcuts_ShortcutAddEventHandler(LateBindingApi.OutlookApi.OutlookBarShortcut NewShortcut);
+	public delegate void OutlookBarShortcuts_ShortcutAddEventHandler(NetOffice.OutlookApi.OutlookBarShortcut NewShortcut);
 	public delegate void OutlookBarShortcuts_BeforeShortcutAddEventHandler(ref bool Cancel);
-	public delegate void OutlookBarShortcuts_BeforeShortcutRemoveEventHandler(LateBindingApi.OutlookApi.OutlookBarShortcut Shortcut, ref bool Cancel);
+	public delegate void OutlookBarShortcuts_BeforeShortcutRemoveEventHandler(NetOffice.OutlookApi.OutlookBarShortcut Shortcut, ref bool Cancel);
 	#pragma warning restore
 
 	#endregion

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface Validation SupportByLibrary XL09 XL10 XL11 XL12 XL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -353,13 +353,13 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.ExcelApi.Enums.XlDVType Type</param>
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlDVType Type</param>
 		/// <param name="AlertStyle">optional object AlertStyle</param>
 		/// <param name="Operator">optional object Operator</param>
 		/// <param name="Formula1">optional object Formula1</param>
 		/// <param name="Formula2">optional object Formula2</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public void Add(LateBindingApi.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator, object formula1, object formula2)
+		public void Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator, object formula1, object formula2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, alertStyle, _operator, formula1, formula2);
 			Invoker.Method(this, "Add", paramsArray);
@@ -368,9 +368,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.ExcelApi.Enums.XlDVType Type</param>
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlDVType Type</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public void Add(LateBindingApi.ExcelApi.Enums.XlDVType type)
+		public void Add(NetOffice.ExcelApi.Enums.XlDVType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "Add", paramsArray);

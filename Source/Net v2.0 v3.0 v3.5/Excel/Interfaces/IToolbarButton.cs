@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IToolbarButton SupportByLibrary XL09 XL10 XL11 XL12 XL14 
@@ -50,13 +50,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -65,13 +65,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -310,10 +310,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Toolbar">LateBindingApi.ExcelApi.Toolbar Toolbar</param>
+		/// <param name="Toolbar">NetOffice.ExcelApi.Toolbar Toolbar</param>
 		/// <param name="Before">Int32 Before</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 Copy(LateBindingApi.ExcelApi.Toolbar toolbar, Int32 before)
+		public Int32 Copy(NetOffice.ExcelApi.Toolbar toolbar, Int32 before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(toolbar, before);
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
@@ -356,10 +356,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Toolbar">LateBindingApi.ExcelApi.Toolbar Toolbar</param>
+		/// <param name="Toolbar">NetOffice.ExcelApi.Toolbar Toolbar</param>
 		/// <param name="Before">Int32 Before</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 Move(LateBindingApi.ExcelApi.Toolbar toolbar, Int32 before)
+		public Int32 Move(NetOffice.ExcelApi.Toolbar toolbar, Int32 before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(toolbar, before);
 			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Adjustments SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -117,6 +117,11 @@ namespace LateBindingApi.PowerPointApi
 			return (Single)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// </summary>
+		/// <param name="index">Int32 index</param>
+		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
 		public void set_Item(Int32 index, Single value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

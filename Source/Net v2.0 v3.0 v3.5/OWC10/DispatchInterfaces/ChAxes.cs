@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ChAxes SupportByLibrary XWC1.0 
@@ -66,13 +66,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChChart Parent
+		public NetOffice.OWC10Api.ChChart Parent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				LateBindingApi.OWC10Api.ChChart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChChart;
+				NetOffice.OWC10Api.ChChart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChChart;
 				return newObject;
 			}
 		}
@@ -82,11 +82,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChAxis get_Item(object index)
+		public NetOffice.OWC10Api.ChAxis get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.ChAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChAxis;
+			NetOffice.OWC10Api.ChAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChAxis;
 			return newObject;
 		}
 
@@ -97,13 +97,13 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Scaling">LateBindingApi.OWC10Api.ChScaling Scaling</param>
+		/// <param name="Scaling">NetOffice.OWC10Api.ChScaling Scaling</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChAxis Add(LateBindingApi.OWC10Api.ChScaling scaling)
+		public NetOffice.OWC10Api.ChAxis Add(NetOffice.OWC10Api.ChScaling scaling)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scaling);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.ChAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.ChAxis;
+			NetOffice.OWC10Api.ChAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.ChAxis;
 			return newObject;
 		}
 

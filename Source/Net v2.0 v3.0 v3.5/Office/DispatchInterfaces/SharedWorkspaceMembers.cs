@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SharedWorkspaceMembers SupportByLibrary OF11 OF12 OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceMember get_Item(Int32 index)
+		public NetOffice.OfficeApi.SharedWorkspaceMember get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.SharedWorkspaceMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceMember;
+			NetOffice.OfficeApi.SharedWorkspaceMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SharedWorkspaceMember;
 			return newObject;
 		}
 
@@ -116,11 +116,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="DisplayName">string DisplayName</param>
 		/// <param name="Role">optional object Role</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName, object role)
+		public NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName, object role)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(email, domainName, displayName, role);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.SharedWorkspaceMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceMember;
+			NetOffice.OfficeApi.SharedWorkspaceMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.SharedWorkspaceMember;
 			return newObject;
 		}
 
@@ -131,11 +131,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="DomainName">string DomainName</param>
 		/// <param name="DisplayName">string DisplayName</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName)
+		public NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(email, domainName, displayName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.SharedWorkspaceMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceMember;
+			NetOffice.OfficeApi.SharedWorkspaceMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.SharedWorkspaceMember;
 			return newObject;
 		}
 

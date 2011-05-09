@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Frameset SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -96,13 +96,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Frameset ParentFrameset
+		public NetOffice.WordApi.Frameset ParentFrameset
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ParentFrameset", paramsArray);
-				LateBindingApi.WordApi.Frameset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Frameset;
+				NetOffice.WordApi.Frameset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Frameset;
 				return newObject;
 			}
 		}
@@ -111,13 +111,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdFramesetType Type
+		public NetOffice.WordApi.Enums.WdFramesetType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdFramesetType)returnItem;
+				return (NetOffice.WordApi.Enums.WdFramesetType)returnItem;
 			}
 		}
 
@@ -125,13 +125,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdFramesetSizeType WidthType
+		public NetOffice.WordApi.Enums.WdFramesetSizeType WidthType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WidthType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdFramesetSizeType)returnItem;
+				return (NetOffice.WordApi.Enums.WdFramesetSizeType)returnItem;
 			}
 			set
 			{
@@ -144,13 +144,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdFramesetSizeType HeightType
+		public NetOffice.WordApi.Enums.WdFramesetSizeType HeightType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HeightType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdFramesetSizeType)returnItem;
+				return (NetOffice.WordApi.Enums.WdFramesetSizeType)returnItem;
 			}
 			set
 			{
@@ -216,11 +216,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Frameset get_ChildFramesetItem(Int32 index)
+		public NetOffice.WordApi.Frameset get_ChildFramesetItem(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "ChildFramesetItem", paramsArray);
-			LateBindingApi.WordApi.Frameset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Frameset;
+			NetOffice.WordApi.Frameset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Frameset;
 			return newObject;
 		}
 
@@ -247,13 +247,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColor FramesetBorderColor
+		public NetOffice.WordApi.Enums.WdColor FramesetBorderColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FramesetBorderColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColor)returnItem;
+				return (NetOffice.WordApi.Enums.WdColor)returnItem;
 			}
 			set
 			{
@@ -266,13 +266,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdScrollbarType FrameScrollbarType
+		public NetOffice.WordApi.Enums.WdScrollbarType FrameScrollbarType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FrameScrollbarType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdScrollbarType)returnItem;
+				return (NetOffice.WordApi.Enums.WdScrollbarType)returnItem;
 			}
 			set
 			{
@@ -383,13 +383,13 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Where">LateBindingApi.WordApi.Enums.WdFramesetNewFrameLocation Where</param>
+		/// <param name="Where">NetOffice.WordApi.Enums.WdFramesetNewFrameLocation Where</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Frameset AddNewFrame(LateBindingApi.WordApi.Enums.WdFramesetNewFrameLocation where)
+		public NetOffice.WordApi.Frameset AddNewFrame(NetOffice.WordApi.Enums.WdFramesetNewFrameLocation where)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(where);
 			object returnItem = Invoker.MethodReturn(this, "AddNewFrame", paramsArray);
-			LateBindingApi.WordApi.Frameset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Frameset;
+			NetOffice.WordApi.Frameset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Frameset;
 			return newObject;
 		}
 

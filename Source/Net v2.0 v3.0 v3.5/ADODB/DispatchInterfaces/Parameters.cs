@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface Parameters SupportByLibrary ADO2.1 ADO2.5 
@@ -67,11 +67,11 @@ namespace LateBindingApi.ADODBApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public LateBindingApi.ADODBApi._Parameter get_Item(object index)
+		public NetOffice.ADODBApi._Parameter get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 

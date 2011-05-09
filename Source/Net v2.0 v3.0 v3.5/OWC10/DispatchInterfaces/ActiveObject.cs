@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ActiveObject SupportByLibrary XWC1.0 
@@ -59,6 +59,10 @@ namespace LateBindingApi.OWC10Api
 				return newObject;
 		}
 
+		/// <summary>
+		/// SupportByLibrary XWC1.0 
+		/// </summary>
+		[SupportByLibrary("XWC1.0")]
 		public void set_ActiveObject(COMObject value)
 		{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);

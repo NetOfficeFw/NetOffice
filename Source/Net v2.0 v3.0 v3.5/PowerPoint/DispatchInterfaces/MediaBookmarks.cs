@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface MediaBookmarks SupportByLibrary PP14 
@@ -56,11 +56,11 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.MediaBookmark Item(Int32 index)
+		public NetOffice.PowerPointApi.MediaBookmark Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.PowerPointApi.MediaBookmark newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.MediaBookmark;
+			NetOffice.PowerPointApi.MediaBookmark newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.MediaBookmark;
 			return newObject;
 		}
 
@@ -70,11 +70,11 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Position">Int32 Position</param>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.MediaBookmark Add(Int32 position, string name)
+		public NetOffice.PowerPointApi.MediaBookmark Add(Int32 position, string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.PowerPointApi.MediaBookmark newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.MediaBookmark;
+			NetOffice.PowerPointApi.MediaBookmark newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.MediaBookmark;
 			return newObject;
 		}
 

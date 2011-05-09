@@ -15,7 +15,7 @@ namespace MSDATASRCApi.Utils
     {
         #region Field
 
-        private string   _namespace     = "LateBindingApi.MSDATASRCApi";
+        private string   _namespace     = "NetOffice.MSDATASRCApi";
         private Guid     _componentGuid = new Guid("7C0FFAB0-CD84-11D0-949A-00A0C91110ED");
         private Assembly _assembly;
 

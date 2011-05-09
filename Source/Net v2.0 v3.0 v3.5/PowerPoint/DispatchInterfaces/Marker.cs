@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Marker SupportByLibrary PP09 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.Enums.PpMarkerType MarkerType
+		public NetOffice.PowerPointApi.Enums.PpMarkerType MarkerType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MarkerType", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpMarkerType)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpMarkerType)returnItem;
 			}
 			set
 			{

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IColumnHeader SupportByLibrary WCC6.0 
@@ -89,13 +89,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.ListColumnAlignmentConstants Alignment
+		public NetOffice.MSComctlLibApi.Enums.ListColumnAlignmentConstants Alignment
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Alignment", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.ListColumnAlignmentConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.ListColumnAlignmentConstants)returnItem;
 			}
 			set
 			{

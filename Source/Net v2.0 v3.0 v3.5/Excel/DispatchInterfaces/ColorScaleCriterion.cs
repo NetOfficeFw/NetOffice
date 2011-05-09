@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface ColorScaleCriterion SupportByLibrary XL12 XL14 
@@ -65,13 +65,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlConditionValueTypes Type
+		public NetOffice.ExcelApi.Enums.XlConditionValueTypes Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlConditionValueTypes)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlConditionValueTypes)returnItem;
 			}
 			set
 			{
@@ -112,13 +112,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.FormatColor FormatColor
+		public NetOffice.ExcelApi.FormatColor FormatColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FormatColor", paramsArray);
-				LateBindingApi.ExcelApi.FormatColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.FormatColor;
+				NetOffice.ExcelApi.FormatColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.FormatColor;
 				return newObject;
 			}
 		}

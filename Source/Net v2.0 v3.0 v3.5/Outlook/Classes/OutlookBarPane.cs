@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void OutlookBarPane_BeforeNavigateEventHandler(LateBindingApi.OutlookApi.OutlookBarShortcut Shortcut, ref bool Cancel);
-	public delegate void OutlookBarPane_BeforeGroupSwitchEventHandler(LateBindingApi.OutlookApi.OutlookBarGroup ToGroup, ref bool Cancel);
+	public delegate void OutlookBarPane_BeforeNavigateEventHandler(NetOffice.OutlookApi.OutlookBarShortcut Shortcut, ref bool Cancel);
+	public delegate void OutlookBarPane_BeforeGroupSwitchEventHandler(NetOffice.OutlookApi.OutlookBarGroup ToGroup, ref bool Cancel);
 	#pragma warning restore
 
 	#endregion

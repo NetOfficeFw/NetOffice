@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface PivotCell SupportByLibrary XL10 XL11 XL12 XL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -95,13 +95,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlPivotCellType PivotCellType
+		public NetOffice.ExcelApi.Enums.XlPivotCellType PivotCellType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotCellType", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlPivotCellType)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlPivotCellType)returnItem;
 			}
 		}
 
@@ -109,13 +109,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.PivotTable PivotTable
+		public NetOffice.ExcelApi.PivotTable PivotTable
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotTable", paramsArray);
-				LateBindingApi.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.PivotTable;
+				NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotTable;
 				return newObject;
 			}
 		}
@@ -124,13 +124,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.PivotField DataField
+		public NetOffice.ExcelApi.PivotField DataField
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataField", paramsArray);
-				LateBindingApi.ExcelApi.PivotField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.PivotField;
+				NetOffice.ExcelApi.PivotField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotField;
 				return newObject;
 			}
 		}
@@ -139,13 +139,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.PivotField PivotField
+		public NetOffice.ExcelApi.PivotField PivotField
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotField", paramsArray);
-				LateBindingApi.ExcelApi.PivotField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.PivotField;
+				NetOffice.ExcelApi.PivotField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotField;
 				return newObject;
 			}
 		}
@@ -154,13 +154,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.PivotItem PivotItem
+		public NetOffice.ExcelApi.PivotItem PivotItem
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotItem", paramsArray);
-				LateBindingApi.ExcelApi.PivotItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.PivotItem;
+				NetOffice.ExcelApi.PivotItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotItem;
 				return newObject;
 			}
 		}
@@ -169,13 +169,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.PivotItemList RowItems
+		public NetOffice.ExcelApi.PivotItemList RowItems
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RowItems", paramsArray);
-				LateBindingApi.ExcelApi.PivotItemList newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.PivotItemList;
+				NetOffice.ExcelApi.PivotItemList newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotItemList;
 				return newObject;
 			}
 		}
@@ -184,13 +184,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.PivotItemList ColumnItems
+		public NetOffice.ExcelApi.PivotItemList ColumnItems
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColumnItems", paramsArray);
-				LateBindingApi.ExcelApi.PivotItemList newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.PivotItemList;
+				NetOffice.ExcelApi.PivotItemList newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotItemList;
 				return newObject;
 			}
 		}
@@ -199,13 +199,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Range Range
+		public NetOffice.ExcelApi.Range Range
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-				LateBindingApi.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 		}
@@ -228,13 +228,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlConsolidationFunction CustomSubtotalFunction
+		public NetOffice.ExcelApi.Enums.XlConsolidationFunction CustomSubtotalFunction
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CustomSubtotalFunction", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlConsolidationFunction)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlConsolidationFunction)returnItem;
 			}
 		}
 
@@ -242,13 +242,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.PivotLine PivotRowLine
+		public NetOffice.ExcelApi.PivotLine PivotRowLine
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotRowLine", paramsArray);
-				LateBindingApi.ExcelApi.PivotLine newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.PivotLine;
+				NetOffice.ExcelApi.PivotLine newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotLine;
 				return newObject;
 			}
 		}
@@ -257,13 +257,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.PivotLine PivotColumnLine
+		public NetOffice.ExcelApi.PivotLine PivotColumnLine
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotColumnLine", paramsArray);
-				LateBindingApi.ExcelApi.PivotLine newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.PivotLine;
+				NetOffice.ExcelApi.PivotLine newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotLine;
 				return newObject;
 			}
 		}
@@ -295,13 +295,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCellChangedState CellChanged
+		public NetOffice.ExcelApi.Enums.XlCellChangedState CellChanged
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CellChanged", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCellChangedState)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCellChangedState)returnItem;
 			}
 		}
 

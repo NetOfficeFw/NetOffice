@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSDATASRCApi
+namespace NetOffice.MSDATASRCApi
 {
 	///<summary>
 	/// Interface DataSource SupportByLibrary DSI1.0 
@@ -90,9 +90,9 @@ namespace LateBindingApi.MSDATASRCApi
 		/// <summary>
 		/// SupportByLibrary DSI1.0 
 		/// </summary>
-		/// <param name="pDSL">LateBindingApi.MSDATASRCApi.DataSourceListener pDSL</param>
+		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
 		[SupportByLibrary("DSI1.0")]
-		public Int32 addDataSourceListener(LateBindingApi.MSDATASRCApi.DataSourceListener pDSL)
+		public Int32 addDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDSL);
 			object returnItem = Invoker.MethodReturn(this, "addDataSourceListener", paramsArray);
@@ -102,9 +102,9 @@ namespace LateBindingApi.MSDATASRCApi
 		/// <summary>
 		/// SupportByLibrary DSI1.0 
 		/// </summary>
-		/// <param name="pDSL">LateBindingApi.MSDATASRCApi.DataSourceListener pDSL</param>
+		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
 		[SupportByLibrary("DSI1.0")]
-		public Int32 removeDataSourceListener(LateBindingApi.MSDATASRCApi.DataSourceListener pDSL)
+		public Int32 removeDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDSL);
 			object returnItem = Invoker.MethodReturn(this, "removeDataSourceListener", paramsArray);

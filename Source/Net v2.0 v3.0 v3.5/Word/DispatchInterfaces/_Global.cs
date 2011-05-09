@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface _Global SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -109,13 +109,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Documents Documents
+		public NetOffice.WordApi.Documents Documents
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Documents", paramsArray);
-				LateBindingApi.WordApi.Documents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Documents;
+				NetOffice.WordApi.Documents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Documents;
 				return newObject;
 			}
 		}
@@ -124,13 +124,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Windows Windows
+		public NetOffice.WordApi.Windows Windows
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Windows", paramsArray);
-				LateBindingApi.WordApi.Windows newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Windows;
+				NetOffice.WordApi.Windows newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Windows;
 				return newObject;
 			}
 		}
@@ -139,13 +139,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Document ActiveDocument
+		public NetOffice.WordApi.Document ActiveDocument
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveDocument", paramsArray);
-				LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Document;
+				NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Document;
 				return newObject;
 			}
 		}
@@ -154,13 +154,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Window ActiveWindow
+		public NetOffice.WordApi.Window ActiveWindow
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveWindow", paramsArray);
-				LateBindingApi.WordApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Window;
+				NetOffice.WordApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Window;
 				return newObject;
 			}
 		}
@@ -169,13 +169,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Selection Selection
+		public NetOffice.WordApi.Selection Selection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Selection", paramsArray);
-				LateBindingApi.WordApi.Selection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Selection;
+				NetOffice.WordApi.Selection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Selection;
 				return newObject;
 			}
 		}
@@ -218,13 +218,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.RecentFiles RecentFiles
+		public NetOffice.WordApi.RecentFiles RecentFiles
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecentFiles", paramsArray);
-				LateBindingApi.WordApi.RecentFiles newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.RecentFiles;
+				NetOffice.WordApi.RecentFiles newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.RecentFiles;
 				return newObject;
 			}
 		}
@@ -233,13 +233,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Template NormalTemplate
+		public NetOffice.WordApi.Template NormalTemplate
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NormalTemplate", paramsArray);
-				LateBindingApi.WordApi.Template newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Template;
+				NetOffice.WordApi.Template newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Template;
 				return newObject;
 			}
 		}
@@ -248,13 +248,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.System System
+		public NetOffice.WordApi.System System
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "System", paramsArray);
-				LateBindingApi.WordApi.System newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.System;
+				NetOffice.WordApi.System newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.System;
 				return newObject;
 			}
 		}
@@ -263,13 +263,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.AutoCorrect AutoCorrect
+		public NetOffice.WordApi.AutoCorrect AutoCorrect
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AutoCorrect", paramsArray);
-				LateBindingApi.WordApi.AutoCorrect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.AutoCorrect;
+				NetOffice.WordApi.AutoCorrect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.AutoCorrect;
 				return newObject;
 			}
 		}
@@ -278,13 +278,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.FontNames FontNames
+		public NetOffice.WordApi.FontNames FontNames
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FontNames", paramsArray);
-				LateBindingApi.WordApi.FontNames newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.FontNames;
+				NetOffice.WordApi.FontNames newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.FontNames;
 				return newObject;
 			}
 		}
@@ -293,13 +293,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.FontNames LandscapeFontNames
+		public NetOffice.WordApi.FontNames LandscapeFontNames
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LandscapeFontNames", paramsArray);
-				LateBindingApi.WordApi.FontNames newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.FontNames;
+				NetOffice.WordApi.FontNames newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.FontNames;
 				return newObject;
 			}
 		}
@@ -308,13 +308,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.FontNames PortraitFontNames
+		public NetOffice.WordApi.FontNames PortraitFontNames
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PortraitFontNames", paramsArray);
-				LateBindingApi.WordApi.FontNames newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.FontNames;
+				NetOffice.WordApi.FontNames newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.FontNames;
 				return newObject;
 			}
 		}
@@ -323,13 +323,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Languages Languages
+		public NetOffice.WordApi.Languages Languages
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Languages", paramsArray);
-				LateBindingApi.WordApi.Languages newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Languages;
+				NetOffice.WordApi.Languages newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Languages;
 				return newObject;
 			}
 		}
@@ -338,13 +338,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.OfficeApi.Assistant Assistant
+		public NetOffice.OfficeApi.Assistant Assistant
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Assistant", paramsArray);
-				LateBindingApi.OfficeApi.Assistant newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.Assistant;
+				NetOffice.OfficeApi.Assistant newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.Assistant;
 				return newObject;
 			}
 		}
@@ -353,13 +353,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.FileConverters FileConverters
+		public NetOffice.WordApi.FileConverters FileConverters
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FileConverters", paramsArray);
-				LateBindingApi.WordApi.FileConverters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.FileConverters;
+				NetOffice.WordApi.FileConverters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.FileConverters;
 				return newObject;
 			}
 		}
@@ -368,13 +368,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Dialogs Dialogs
+		public NetOffice.WordApi.Dialogs Dialogs
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Dialogs", paramsArray);
-				LateBindingApi.WordApi.Dialogs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Dialogs;
+				NetOffice.WordApi.Dialogs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Dialogs;
 				return newObject;
 			}
 		}
@@ -383,13 +383,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.CaptionLabels CaptionLabels
+		public NetOffice.WordApi.CaptionLabels CaptionLabels
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CaptionLabels", paramsArray);
-				LateBindingApi.WordApi.CaptionLabels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.CaptionLabels;
+				NetOffice.WordApi.CaptionLabels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.CaptionLabels;
 				return newObject;
 			}
 		}
@@ -398,13 +398,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.AutoCaptions AutoCaptions
+		public NetOffice.WordApi.AutoCaptions AutoCaptions
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AutoCaptions", paramsArray);
-				LateBindingApi.WordApi.AutoCaptions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.AutoCaptions;
+				NetOffice.WordApi.AutoCaptions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.AutoCaptions;
 				return newObject;
 			}
 		}
@@ -413,13 +413,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.AddIns AddIns
+		public NetOffice.WordApi.AddIns AddIns
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AddIns", paramsArray);
-				LateBindingApi.WordApi.AddIns newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.AddIns;
+				NetOffice.WordApi.AddIns newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.AddIns;
 				return newObject;
 			}
 		}
@@ -428,13 +428,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Tasks Tasks
+		public NetOffice.WordApi.Tasks Tasks
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Tasks", paramsArray);
-				LateBindingApi.WordApi.Tasks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Tasks;
+				NetOffice.WordApi.Tasks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Tasks;
 				return newObject;
 			}
 		}
@@ -458,13 +458,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.OfficeApi.CommandBars CommandBars
+		public NetOffice.OfficeApi.CommandBars CommandBars
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandBars", paramsArray);
-				LateBindingApi.OfficeApi.CommandBars newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CommandBars;
+				NetOffice.OfficeApi.CommandBars newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBars;
 				return newObject;
 			}
 		}
@@ -475,12 +475,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="Word">string Word</param>
 		/// <param name="LanguageID">ref optional object LanguageID</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.SynonymInfo get_SynonymInfo(string word, ref object languageID)
+		public NetOffice.WordApi.SynonymInfo get_SynonymInfo(string word, ref object languageID)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(word, languageID);
 			object returnItem = Invoker.PropertyGet(this, "SynonymInfo", paramsArray, modifiers);
-			LateBindingApi.WordApi.SynonymInfo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.SynonymInfo;
+			NetOffice.WordApi.SynonymInfo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.SynonymInfo;
 			languageID = (object)paramsArray[1];
 			return newObject;
 		}
@@ -490,11 +490,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Word">string Word</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.SynonymInfo get_SynonymInfo(string word)
+		public NetOffice.WordApi.SynonymInfo get_SynonymInfo(string word)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word);
 			object returnItem = Invoker.PropertyGet(this, "SynonymInfo", paramsArray);
-			LateBindingApi.WordApi.SynonymInfo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.SynonymInfo;
+			NetOffice.WordApi.SynonymInfo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.SynonymInfo;
 			return newObject;
 		}
 
@@ -502,13 +502,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.VBIDEApi.VBE VBE
+		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				LateBindingApi.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -517,13 +517,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.ListGalleries ListGalleries
+		public NetOffice.WordApi.ListGalleries ListGalleries
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListGalleries", paramsArray);
-				LateBindingApi.WordApi.ListGalleries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ListGalleries;
+				NetOffice.WordApi.ListGalleries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ListGalleries;
 				return newObject;
 			}
 		}
@@ -551,13 +551,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Templates Templates
+		public NetOffice.WordApi.Templates Templates
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Templates", paramsArray);
-				LateBindingApi.WordApi.Templates newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Templates;
+				NetOffice.WordApi.Templates newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Templates;
 				return newObject;
 			}
 		}
@@ -586,13 +586,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.KeyBindings KeyBindings
+		public NetOffice.WordApi.KeyBindings KeyBindings
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "KeyBindings", paramsArray);
-				LateBindingApi.WordApi.KeyBindings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.KeyBindings;
+				NetOffice.WordApi.KeyBindings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.KeyBindings;
 				return newObject;
 			}
 		}
@@ -600,16 +600,16 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="KeyCategory">LateBindingApi.WordApi.Enums.WdKeyCategory KeyCategory</param>
+		/// <param name="KeyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="Command">string Command</param>
 		/// <param name="CommandParameter">ref optional object CommandParameter</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.KeysBoundTo get_KeysBoundTo(LateBindingApi.WordApi.Enums.WdKeyCategory keyCategory, string command, ref object commandParameter)
+		public NetOffice.WordApi.KeysBoundTo get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, ref object commandParameter)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCategory, command, commandParameter);
 			object returnItem = Invoker.PropertyGet(this, "KeysBoundTo", paramsArray, modifiers);
-			LateBindingApi.WordApi.KeysBoundTo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.KeysBoundTo;
+			NetOffice.WordApi.KeysBoundTo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.KeysBoundTo;
 			commandParameter = (object)paramsArray[2];
 			return newObject;
 		}
@@ -617,14 +617,14 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="KeyCategory">LateBindingApi.WordApi.Enums.WdKeyCategory KeyCategory</param>
+		/// <param name="KeyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="Command">string Command</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.KeysBoundTo get_KeysBoundTo(LateBindingApi.WordApi.Enums.WdKeyCategory keyCategory, string command)
+		public NetOffice.WordApi.KeysBoundTo get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCategory, command);
 			object returnItem = Invoker.PropertyGet(this, "KeysBoundTo", paramsArray);
-			LateBindingApi.WordApi.KeysBoundTo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.KeysBoundTo;
+			NetOffice.WordApi.KeysBoundTo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.KeysBoundTo;
 			return newObject;
 		}
 
@@ -634,12 +634,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="KeyCode">Int32 KeyCode</param>
 		/// <param name="KeyCode2">ref optional object KeyCode2</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.KeyBinding get_FindKey(Int32 keyCode, ref object keyCode2)
+		public NetOffice.WordApi.KeyBinding get_FindKey(Int32 keyCode, ref object keyCode2)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
 			object returnItem = Invoker.PropertyGet(this, "FindKey", paramsArray, modifiers);
-			LateBindingApi.WordApi.KeyBinding newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.KeyBinding;
+			NetOffice.WordApi.KeyBinding newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.KeyBinding;
 			keyCode2 = (object)paramsArray[1];
 			return newObject;
 		}
@@ -649,11 +649,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="KeyCode">Int32 KeyCode</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.KeyBinding get_FindKey(Int32 keyCode)
+		public NetOffice.WordApi.KeyBinding get_FindKey(Int32 keyCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode);
 			object returnItem = Invoker.PropertyGet(this, "FindKey", paramsArray);
-			LateBindingApi.WordApi.KeyBinding newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.KeyBinding;
+			NetOffice.WordApi.KeyBinding newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.KeyBinding;
 			return newObject;
 		}
 
@@ -661,13 +661,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Options Options
+		public NetOffice.WordApi.Options Options
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Options", paramsArray);
-				LateBindingApi.WordApi.Options newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Options;
+				NetOffice.WordApi.Options newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Options;
 				return newObject;
 			}
 		}
@@ -676,13 +676,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Dictionaries CustomDictionaries
+		public NetOffice.WordApi.Dictionaries CustomDictionaries
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CustomDictionaries", paramsArray);
-				LateBindingApi.WordApi.Dictionaries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Dictionaries;
+				NetOffice.WordApi.Dictionaries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Dictionaries;
 				return newObject;
 			}
 		}
@@ -741,13 +741,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.HangulHanjaConversionDictionaries HangulHanjaDictionaries
+		public NetOffice.WordApi.HangulHanjaConversionDictionaries HangulHanjaDictionaries
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HangulHanjaDictionaries", paramsArray);
-				LateBindingApi.WordApi.HangulHanjaConversionDictionaries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.HangulHanjaConversionDictionaries;
+				NetOffice.WordApi.HangulHanjaConversionDictionaries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.HangulHanjaConversionDictionaries;
 				return newObject;
 			}
 		}
@@ -756,13 +756,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.OfficeApi.LanguageSettings LanguageSettings
+		public NetOffice.OfficeApi.LanguageSettings LanguageSettings
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LanguageSettings", paramsArray);
-				LateBindingApi.OfficeApi.LanguageSettings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.LanguageSettings;
+				NetOffice.OfficeApi.LanguageSettings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.LanguageSettings;
 				return newObject;
 			}
 		}
@@ -771,13 +771,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.OfficeApi.AnswerWizard AnswerWizard
+		public NetOffice.OfficeApi.AnswerWizard AnswerWizard
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AnswerWizard", paramsArray);
-				LateBindingApi.OfficeApi.AnswerWizard newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.AnswerWizard;
+				NetOffice.OfficeApi.AnswerWizard newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.AnswerWizard;
 				return newObject;
 			}
 		}
@@ -786,13 +786,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.AutoCorrect AutoCorrectEmail
+		public NetOffice.WordApi.AutoCorrect AutoCorrectEmail
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AutoCorrectEmail", paramsArray);
-				LateBindingApi.WordApi.AutoCorrect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.AutoCorrect;
+				NetOffice.WordApi.AutoCorrect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.AutoCorrect;
 				return newObject;
 			}
 		}
@@ -801,13 +801,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.ProtectedViewWindows ProtectedViewWindows
+		public NetOffice.WordApi.ProtectedViewWindows ProtectedViewWindows
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ProtectedViewWindows", paramsArray);
-				LateBindingApi.WordApi.ProtectedViewWindows newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ProtectedViewWindows;
+				NetOffice.WordApi.ProtectedViewWindows newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ProtectedViewWindows;
 				return newObject;
 			}
 		}
@@ -816,13 +816,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.ProtectedViewWindow ActiveProtectedViewWindow
+		public NetOffice.WordApi.ProtectedViewWindow ActiveProtectedViewWindow
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveProtectedViewWindow", paramsArray);
-				LateBindingApi.WordApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ProtectedViewWindow;
+				NetOffice.WordApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ProtectedViewWindow;
 				return newObject;
 			}
 		}
@@ -945,12 +945,12 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.WordApi.Enums.WdKey Arg1</param>
+		/// <param name="Arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		/// <param name="Arg2">ref optional object Arg2</param>
 		/// <param name="Arg3">ref optional object Arg3</param>
 		/// <param name="Arg4">ref optional object Arg4</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public Int32 BuildKeyCode(LateBindingApi.WordApi.Enums.WdKey arg1, ref object arg2, ref object arg3, ref object arg4)
+		public Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, ref object arg2, ref object arg3, ref object arg4)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -964,9 +964,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Arg1">LateBindingApi.WordApi.Enums.WdKey Arg1</param>
+		/// <param name="Arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public Int32 BuildKeyCode(LateBindingApi.WordApi.Enums.WdKey arg1)
+		public Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "BuildKeyCode", paramsArray);
@@ -1067,12 +1067,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="CustomDictionary9">ref optional object CustomDictionary9</param>
 		/// <param name="CustomDictionary10">ref optional object CustomDictionary10</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, ref object customDictionary, ref object ignoreUppercase, ref object mainDictionary, ref object suggestionMode, ref object customDictionary2, ref object customDictionary3, ref object customDictionary4, ref object customDictionary5, ref object customDictionary6, ref object customDictionary7, ref object customDictionary8, ref object customDictionary9, ref object customDictionary10)
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, ref object customDictionary, ref object ignoreUppercase, ref object mainDictionary, ref object suggestionMode, ref object customDictionary2, ref object customDictionary3, ref object customDictionary4, ref object customDictionary5, ref object customDictionary6, ref object customDictionary7, ref object customDictionary8, ref object customDictionary9, ref object customDictionary10)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
 			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray, modifiers);
-			LateBindingApi.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.SpellingSuggestions;
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.SpellingSuggestions;
 			customDictionary = (object)paramsArray[1];
 			ignoreUppercase = (object)paramsArray[2];
 			mainDictionary = (object)paramsArray[3];
@@ -1094,11 +1094,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Word">string Word</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.SpellingSuggestions GetSpellingSuggestions(string word)
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word);
 			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			LateBindingApi.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.SpellingSuggestions;
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.SpellingSuggestions;
 			return newObject;
 		}
 
@@ -1119,11 +1119,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Window NewWindow()
+		public NetOffice.WordApi.Window NewWindow()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NewWindow", paramsArray);
-			LateBindingApi.WordApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Window;
+			NetOffice.WordApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Window;
 			return newObject;
 		}
 

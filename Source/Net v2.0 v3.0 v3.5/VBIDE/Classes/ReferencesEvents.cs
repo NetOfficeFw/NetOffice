@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void ReferencesEvents_ItemAddedEventHandler(LateBindingApi.VBIDEApi.Reference Reference);
-	public delegate void ReferencesEvents_ItemRemovedEventHandler(LateBindingApi.VBIDEApi.Reference Reference);
+	public delegate void ReferencesEvents_ItemAddedEventHandler(NetOffice.VBIDEApi.Reference Reference);
+	public delegate void ReferencesEvents_ItemRemovedEventHandler(NetOffice.VBIDEApi.Reference Reference);
 	#pragma warning restore
 
 	#endregion

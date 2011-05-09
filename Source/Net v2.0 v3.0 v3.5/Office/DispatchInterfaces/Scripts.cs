@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Scripts SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -86,11 +86,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Script Item(object index)
+		public NetOffice.OfficeApi.Script Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.Script newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.Script;
+			NetOffice.OfficeApi.Script newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Script;
 			return newObject;
 		}
 
@@ -98,17 +98,17 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		/// <param name="Anchor">object Anchor</param>
-		/// <param name="Location">LateBindingApi.OfficeApi.Enums.MsoScriptLocation Location</param>
-		/// <param name="Language">LateBindingApi.OfficeApi.Enums.MsoScriptLanguage Language</param>
+		/// <param name="Location">NetOffice.OfficeApi.Enums.MsoScriptLocation Location</param>
+		/// <param name="Language">NetOffice.OfficeApi.Enums.MsoScriptLanguage Language</param>
 		/// <param name="Id">string Id</param>
 		/// <param name="Extended">string Extended</param>
 		/// <param name="ScriptText">string ScriptText</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Script Add(object anchor, LateBindingApi.OfficeApi.Enums.MsoScriptLocation location, LateBindingApi.OfficeApi.Enums.MsoScriptLanguage language, string id, string extended, string scriptText)
+		public NetOffice.OfficeApi.Script Add(object anchor, NetOffice.OfficeApi.Enums.MsoScriptLocation location, NetOffice.OfficeApi.Enums.MsoScriptLanguage language, string id, string extended, string scriptText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, location, language, id, extended, scriptText);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.Script newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.Script;
+			NetOffice.OfficeApi.Script newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Script;
 			return newObject;
 		}
 

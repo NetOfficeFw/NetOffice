@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _dispVBComponentsEvents SupportByLibrary VBE5.3 VBE12 
@@ -54,9 +54,9 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="VBComponent">LateBindingApi.VBIDEApi.VBComponent VBComponent</param>
+		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void ItemAdded(LateBindingApi.VBIDEApi.VBComponent vBComponent)
+		public void ItemAdded(NetOffice.VBIDEApi.VBComponent vBComponent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent);
 			Invoker.Method(this, "ItemAdded", paramsArray);
@@ -65,9 +65,9 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="VBComponent">LateBindingApi.VBIDEApi.VBComponent VBComponent</param>
+		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void ItemRemoved(LateBindingApi.VBIDEApi.VBComponent vBComponent)
+		public void ItemRemoved(NetOffice.VBIDEApi.VBComponent vBComponent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent);
 			Invoker.Method(this, "ItemRemoved", paramsArray);
@@ -76,10 +76,10 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="VBComponent">LateBindingApi.VBIDEApi.VBComponent VBComponent</param>
+		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		/// <param name="OldName">string OldName</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void ItemRenamed(LateBindingApi.VBIDEApi.VBComponent vBComponent, string oldName)
+		public void ItemRenamed(NetOffice.VBIDEApi.VBComponent vBComponent, string oldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent, oldName);
 			Invoker.Method(this, "ItemRenamed", paramsArray);
@@ -88,9 +88,9 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="VBComponent">LateBindingApi.VBIDEApi.VBComponent VBComponent</param>
+		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void ItemSelected(LateBindingApi.VBIDEApi.VBComponent vBComponent)
+		public void ItemSelected(NetOffice.VBIDEApi.VBComponent vBComponent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent);
 			Invoker.Method(this, "ItemSelected", paramsArray);
@@ -99,9 +99,9 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="VBComponent">LateBindingApi.VBIDEApi.VBComponent VBComponent</param>
+		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void ItemActivated(LateBindingApi.VBIDEApi.VBComponent vBComponent)
+		public void ItemActivated(NetOffice.VBIDEApi.VBComponent vBComponent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent);
 			Invoker.Method(this, "ItemActivated", paramsArray);
@@ -110,9 +110,9 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="VBComponent">LateBindingApi.VBIDEApi.VBComponent VBComponent</param>
+		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void ItemReloaded(LateBindingApi.VBIDEApi.VBComponent vBComponent)
+		public void ItemReloaded(NetOffice.VBIDEApi.VBComponent vBComponent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent);
 			Invoker.Method(this, "ItemReloaded", paramsArray);

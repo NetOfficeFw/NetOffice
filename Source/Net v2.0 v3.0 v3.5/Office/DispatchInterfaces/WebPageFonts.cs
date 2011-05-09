@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface WebPageFonts SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -65,13 +65,13 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="Index">LateBindingApi.OfficeApi.Enums.MsoCharacterSet Index</param>
+		/// <param name="Index">NetOffice.OfficeApi.Enums.MsoCharacterSet Index</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.WebPageFont get_Item(LateBindingApi.OfficeApi.Enums.MsoCharacterSet index)
+		public NetOffice.OfficeApi.WebPageFont get_Item(NetOffice.OfficeApi.Enums.MsoCharacterSet index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.WebPageFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.WebPageFont;
+			NetOffice.OfficeApi.WebPageFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.WebPageFont;
 			return newObject;
 		}
 

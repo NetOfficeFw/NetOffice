@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface HTMLProjectItem SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -127,9 +127,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="OpenKind">LateBindingApi.OfficeApi.Enums.MsoHTMLProjectOpen OpenKind</param>
+		/// <param name="OpenKind">NetOffice.OfficeApi.Enums.MsoHTMLProjectOpen OpenKind</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void Open(LateBindingApi.OfficeApi.Enums.MsoHTMLProjectOpen openKind)
+		public void Open(NetOffice.OfficeApi.Enums.MsoHTMLProjectOpen openKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(openKind);
 			Invoker.Method(this, "Open", paramsArray);

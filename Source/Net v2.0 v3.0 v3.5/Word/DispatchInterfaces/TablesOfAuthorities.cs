@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface TablesOfAuthorities SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdToaFormat Format
+		public NetOffice.WordApi.Enums.WdToaFormat Format
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdToaFormat)returnItem;
+				return (NetOffice.WordApi.Enums.WdToaFormat)returnItem;
 			}
 			set
 			{
@@ -134,18 +134,18 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.TableOfAuthorities Item(Int32 index)
+		public NetOffice.WordApi.TableOfAuthorities Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Category">ref optional object Category</param>
 		/// <param name="Bookmark">ref optional object Bookmark</param>
 		/// <param name="Passim">ref optional object Passim</param>
@@ -157,12 +157,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="IncludeCategoryHeader">ref optional object IncludeCategoryHeader</param>
 		/// <param name="PageNumberSeparator">ref optional object PageNumberSeparator</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.TableOfAuthorities Add(LateBindingApi.WordApi.Range range, ref object category, ref object bookmark, ref object passim, ref object keepEntryFormatting, ref object separator, ref object includeSequenceName, ref object entrySeparator, ref object pageRangeSeparator, ref object includeCategoryHeader, ref object pageNumberSeparator)
+		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, ref object category, ref object bookmark, ref object passim, ref object keepEntryFormatting, ref object separator, ref object includeSequenceName, ref object entrySeparator, ref object pageRangeSeparator, ref object includeCategoryHeader, ref object pageNumberSeparator)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader, pageNumberSeparator);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfAuthorities;
 			category = (object)paramsArray[1];
 			bookmark = (object)paramsArray[2];
 			passim = (object)paramsArray[3];
@@ -179,13 +179,13 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.TableOfAuthorities Add(LateBindingApi.WordApi.Range range)
+		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -203,18 +203,18 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="ShortCitation">string ShortCitation</param>
 		/// <param name="LongCitation">ref optional object LongCitation</param>
 		/// <param name="LongCitationAutoText">ref optional object LongCitationAutoText</param>
 		/// <param name="Category">ref optional object Category</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Field MarkCitation(LateBindingApi.WordApi.Range range, string shortCitation, ref object longCitation, ref object longCitationAutoText, ref object category)
+		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, ref object longCitation, ref object longCitationAutoText, ref object category)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation, longCitation, longCitationAutoText, category);
 			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray, modifiers);
-			LateBindingApi.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Field;
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Field;
 			longCitation = (object)paramsArray[2];
 			longCitationAutoText = (object)paramsArray[3];
 			category = (object)paramsArray[4];
@@ -224,14 +224,14 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="ShortCitation">string ShortCitation</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Field MarkCitation(LateBindingApi.WordApi.Range range, string shortCitation)
+		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation);
 			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray);
-			LateBindingApi.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Field;
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 

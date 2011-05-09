@@ -15,7 +15,7 @@ namespace WordApi.Utils
     {
         #region Field
 
-        private string   _namespace     = "LateBindingApi.WordApi";
+        private string   _namespace     = "NetOffice.WordApi";
         private Guid     _componentGuid = new Guid("00020905-0000-0000-C000-000000000046");
         private Assembly _assembly;
 

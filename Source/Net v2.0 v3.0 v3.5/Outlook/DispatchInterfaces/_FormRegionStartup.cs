@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _FormRegionStartup SupportByLibrary OL12 OL14 
@@ -57,10 +57,10 @@ namespace LateBindingApi.OutlookApi
 		/// <param name="FormRegionName">string FormRegionName</param>
 		/// <param name="Item">object Item</param>
 		/// <param name="LCID">Int32 LCID</param>
-		/// <param name="FormRegionMode">LateBindingApi.OutlookApi.Enums.OlFormRegionMode FormRegionMode</param>
-		/// <param name="FormRegionSize">LateBindingApi.OutlookApi.Enums.OlFormRegionSize FormRegionSize</param>
+		/// <param name="FormRegionMode">NetOffice.OutlookApi.Enums.OlFormRegionMode FormRegionMode</param>
+		/// <param name="FormRegionSize">NetOffice.OutlookApi.Enums.OlFormRegionSize FormRegionSize</param>
 		[SupportByLibrary("OL12","OL14")]
-		public object GetFormRegionStorage(string formRegionName, object item, Int32 lCID, LateBindingApi.OutlookApi.Enums.OlFormRegionMode formRegionMode, LateBindingApi.OutlookApi.Enums.OlFormRegionSize formRegionSize)
+		public object GetFormRegionStorage(string formRegionName, object item, Int32 lCID, NetOffice.OutlookApi.Enums.OlFormRegionMode formRegionMode, NetOffice.OutlookApi.Enums.OlFormRegionSize formRegionSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formRegionName, item, lCID, formRegionMode, formRegionSize);
 			object returnItem = Invoker.MethodReturn(this, "GetFormRegionStorage", paramsArray);
@@ -79,9 +79,9 @@ namespace LateBindingApi.OutlookApi
 		/// <summary>
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
-		/// <param name="FormRegion">LateBindingApi.OutlookApi.FormRegion FormRegion</param>
+		/// <param name="FormRegion">NetOffice.OutlookApi.FormRegion FormRegion</param>
 		[SupportByLibrary("OL12","OL14")]
-		public void BeforeFormRegionShow(LateBindingApi.OutlookApi.FormRegion formRegion)
+		public void BeforeFormRegionShow(NetOffice.OutlookApi.FormRegion formRegion)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formRegion);
 			Invoker.Method(this, "BeforeFormRegionShow", paramsArray);
@@ -114,9 +114,9 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="FormRegionName">string FormRegionName</param>
 		/// <param name="LCID">Int32 LCID</param>
-		/// <param name="Icon">LateBindingApi.OutlookApi.Enums.OlFormRegionIcon Icon</param>
+		/// <param name="Icon">NetOffice.OutlookApi.Enums.OlFormRegionIcon Icon</param>
 		[SupportByLibrary("OL12","OL14")]
-		public object GetFormRegionIcon(string formRegionName, Int32 lCID, LateBindingApi.OutlookApi.Enums.OlFormRegionIcon icon)
+		public object GetFormRegionIcon(string formRegionName, Int32 lCID, NetOffice.OutlookApi.Enums.OlFormRegionIcon icon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formRegionName, lCID, icon);
 			object returnItem = Invoker.MethodReturn(this, "GetFormRegionIcon", paramsArray);

@@ -6,13 +6,13 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface PictureFormat SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-	public class PictureFormat : LateBindingApi.OfficeApi._IMsoDispObj
+	public class PictureFormat : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#pragma warning disable
 		#region Construction
@@ -85,13 +85,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPictureColorType ColorType
+		public NetOffice.OfficeApi.Enums.MsoPictureColorType ColorType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColorType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPictureColorType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPictureColorType)returnItem;
 			}
 			set
 			{
@@ -218,13 +218,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState TransparentBackground
+		public NetOffice.OfficeApi.Enums.MsoTriState TransparentBackground
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TransparentBackground", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -237,13 +237,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.OfficeApi.Crop Crop
+		public NetOffice.OfficeApi.Crop Crop
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Crop", paramsArray);
-				LateBindingApi.OfficeApi.Crop newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.Crop;
+				NetOffice.OfficeApi.Crop newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.Crop;
 				return newObject;
 			}
 		}

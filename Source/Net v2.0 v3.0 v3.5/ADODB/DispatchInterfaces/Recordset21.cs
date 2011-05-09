@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface Recordset21 SupportByLibrary ADO2.5 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Properties Properties
+		public NetOffice.ADODBApi.Properties Properties
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				LateBindingApi.ADODBApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Properties;
+				NetOffice.ADODBApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Properties;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.PositionEnum AbsolutePosition
+		public NetOffice.ADODBApi.Enums.PositionEnum AbsolutePosition
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AbsolutePosition", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.PositionEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.PositionEnum)returnItem;
 			}
 			set
 			{
@@ -166,13 +166,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.CursorTypeEnum CursorType
+		public NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CursorType", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.CursorTypeEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.CursorTypeEnum)returnItem;
 			}
 			set
 			{
@@ -199,13 +199,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Fields Fields
+		public NetOffice.ADODBApi.Fields Fields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				LateBindingApi.ADODBApi.Fields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Fields;
+				NetOffice.ADODBApi.Fields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Fields;
 				return newObject;
 			}
 		}
@@ -214,13 +214,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.LockTypeEnum LockType
+		public NetOffice.ADODBApi.Enums.LockTypeEnum LockType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LockType", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.LockTypeEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.LockTypeEnum)returnItem;
 			}
 			set
 			{
@@ -286,13 +286,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.PositionEnum AbsolutePage
+		public NetOffice.ADODBApi.Enums.PositionEnum AbsolutePage
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AbsolutePage", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.PositionEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.PositionEnum)returnItem;
 			}
 			set
 			{
@@ -305,13 +305,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.EditModeEnum EditMode
+		public NetOffice.ADODBApi.Enums.EditModeEnum EditMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EditMode", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.EditModeEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.EditModeEnum)returnItem;
 			}
 		}
 
@@ -427,13 +427,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.CursorLocationEnum CursorLocation
+		public NetOffice.ADODBApi.Enums.CursorLocationEnum CursorLocation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CursorLocation", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.CursorLocationEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.CursorLocationEnum)returnItem;
 			}
 			set
 			{
@@ -463,6 +463,11 @@ namespace LateBindingApi.ADODBApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByLibrary ADO2.5 
+		/// </summary>
+		/// <param name="Index">object Index</param>
+		[SupportByLibrary("ADO2.5")]
 		public void set_Collect(object index, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -473,13 +478,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.MarshalOptionsEnum MarshalOptions
+		public NetOffice.ADODBApi.Enums.MarshalOptionsEnum MarshalOptions
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MarshalOptions", paramsArray);
-				return (LateBindingApi.ADODBApi.Enums.MarshalOptionsEnum)returnItem;
+				return (NetOffice.ADODBApi.Enums.MarshalOptionsEnum)returnItem;
 			}
 			set
 			{
@@ -556,9 +561,9 @@ namespace LateBindingApi.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
-		/// <param name="AffectRecords">LateBindingApi.ADODBApi.Enums.AffectEnum AffectRecords</param>
+		/// <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
 		[SupportByLibrary("ADO2.5")]
-		public void Delete(LateBindingApi.ADODBApi.Enums.AffectEnum affectRecords)
+		public void Delete(NetOffice.ADODBApi.Enums.AffectEnum affectRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords);
 			Invoker.Method(this, "Delete", paramsArray);
@@ -676,11 +681,11 @@ namespace LateBindingApi.ADODBApi
 		/// </summary>
 		/// <param name="Source">object Source</param>
 		/// <param name="ActiveConnection">object ActiveConnection</param>
-		/// <param name="CursorType">LateBindingApi.ADODBApi.Enums.CursorTypeEnum CursorType</param>
-		/// <param name="LockType">LateBindingApi.ADODBApi.Enums.LockTypeEnum LockType</param>
+		/// <param name="CursorType">NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType</param>
+		/// <param name="LockType">NetOffice.ADODBApi.Enums.LockTypeEnum LockType</param>
 		/// <param name="Options">Int32 Options</param>
 		[SupportByLibrary("ADO2.5")]
-		public void Open(object source, object activeConnection, LateBindingApi.ADODBApi.Enums.CursorTypeEnum cursorType, LateBindingApi.ADODBApi.Enums.LockTypeEnum lockType, Int32 options)
+		public void Open(object source, object activeConnection, NetOffice.ADODBApi.Enums.CursorTypeEnum cursorType, NetOffice.ADODBApi.Enums.LockTypeEnum lockType, Int32 options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, activeConnection, cursorType, lockType, options);
 			Invoker.Method(this, "Open", paramsArray);
@@ -700,9 +705,9 @@ namespace LateBindingApi.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
-		/// <param name="AffectRecords">LateBindingApi.ADODBApi.Enums.AffectEnum AffectRecords</param>
+		/// <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
 		[SupportByLibrary("ADO2.5")]
-		public void _xResync(LateBindingApi.ADODBApi.Enums.AffectEnum affectRecords)
+		public void _xResync(NetOffice.ADODBApi.Enums.AffectEnum affectRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords);
 			Invoker.Method(this, "_xResync", paramsArray);
@@ -734,20 +739,20 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi._Recordset _xClone()
+		public NetOffice.ADODBApi._Recordset _xClone()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "_xClone", paramsArray);
-			LateBindingApi.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
-		/// <param name="AffectRecords">LateBindingApi.ADODBApi.Enums.AffectEnum AffectRecords</param>
+		/// <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
 		[SupportByLibrary("ADO2.5")]
-		public void UpdateBatch(LateBindingApi.ADODBApi.Enums.AffectEnum affectRecords)
+		public void UpdateBatch(NetOffice.ADODBApi.Enums.AffectEnum affectRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords);
 			Invoker.Method(this, "UpdateBatch", paramsArray);
@@ -756,9 +761,9 @@ namespace LateBindingApi.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
-		/// <param name="AffectRecords">LateBindingApi.ADODBApi.Enums.AffectEnum AffectRecords</param>
+		/// <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
 		[SupportByLibrary("ADO2.5")]
-		public void CancelBatch(LateBindingApi.ADODBApi.Enums.AffectEnum affectRecords)
+		public void CancelBatch(NetOffice.ADODBApi.Enums.AffectEnum affectRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords);
 			Invoker.Method(this, "CancelBatch", paramsArray);
@@ -769,12 +774,12 @@ namespace LateBindingApi.ADODBApi
 		/// </summary>
 		/// <param name="RecordsAffected">ref optional object RecordsAffected</param>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi._Recordset NextRecordset(ref object recordsAffected)
+		public NetOffice.ADODBApi._Recordset NextRecordset(ref object recordsAffected)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected);
 			object returnItem = Invoker.MethodReturn(this, "NextRecordset", paramsArray, modifiers);
-			LateBindingApi.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
 			recordsAffected = (object)paramsArray[0];
 			return newObject;
 		}
@@ -783,20 +788,20 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi._Recordset NextRecordset()
+		public NetOffice.ADODBApi._Recordset NextRecordset()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NextRecordset", paramsArray);
-			LateBindingApi.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
-		/// <param name="CursorOptions">LateBindingApi.ADODBApi.Enums.CursorOptionEnum CursorOptions</param>
+		/// <param name="CursorOptions">NetOffice.ADODBApi.Enums.CursorOptionEnum CursorOptions</param>
 		[SupportByLibrary("ADO2.5")]
-		public bool Supports(LateBindingApi.ADODBApi.Enums.CursorOptionEnum cursorOptions)
+		public bool Supports(NetOffice.ADODBApi.Enums.CursorOptionEnum cursorOptions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cursorOptions);
 			object returnItem = Invoker.MethodReturn(this, "Supports", paramsArray);
@@ -808,10 +813,10 @@ namespace LateBindingApi.ADODBApi
 		/// </summary>
 		/// <param name="Criteria">string Criteria</param>
 		/// <param name="SkipRecords">Int32 SkipRecords</param>
-		/// <param name="SearchDirection">LateBindingApi.ADODBApi.Enums.SearchDirectionEnum SearchDirection</param>
+		/// <param name="SearchDirection">NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection</param>
 		/// <param name="Start">optional object Start</param>
 		[SupportByLibrary("ADO2.5")]
-		public void Find(string criteria, Int32 skipRecords, LateBindingApi.ADODBApi.Enums.SearchDirectionEnum searchDirection, object start)
+		public void Find(string criteria, Int32 skipRecords, NetOffice.ADODBApi.Enums.SearchDirectionEnum searchDirection, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(criteria, skipRecords, searchDirection, start);
 			Invoker.Method(this, "Find", paramsArray);
@@ -822,9 +827,9 @@ namespace LateBindingApi.ADODBApi
 		/// </summary>
 		/// <param name="Criteria">string Criteria</param>
 		/// <param name="SkipRecords">Int32 SkipRecords</param>
-		/// <param name="SearchDirection">LateBindingApi.ADODBApi.Enums.SearchDirectionEnum SearchDirection</param>
+		/// <param name="SearchDirection">NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection</param>
 		[SupportByLibrary("ADO2.5")]
-		public void Find(string criteria, Int32 skipRecords, LateBindingApi.ADODBApi.Enums.SearchDirectionEnum searchDirection)
+		public void Find(string criteria, Int32 skipRecords, NetOffice.ADODBApi.Enums.SearchDirectionEnum searchDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(criteria, skipRecords, searchDirection);
 			Invoker.Method(this, "Find", paramsArray);
@@ -834,9 +839,9 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		/// <param name="KeyValues">object KeyValues</param>
-		/// <param name="SeekOption">LateBindingApi.ADODBApi.Enums.SeekEnum SeekOption</param>
+		/// <param name="SeekOption">NetOffice.ADODBApi.Enums.SeekEnum SeekOption</param>
 		[SupportByLibrary("ADO2.5")]
-		public void Seek(object keyValues, LateBindingApi.ADODBApi.Enums.SeekEnum seekOption)
+		public void Seek(object keyValues, NetOffice.ADODBApi.Enums.SeekEnum seekOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyValues, seekOption);
 			Invoker.Method(this, "Seek", paramsArray);

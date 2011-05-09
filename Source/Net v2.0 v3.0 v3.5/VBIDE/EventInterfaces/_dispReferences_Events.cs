@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {	
 	#pragma warning disable
 	
@@ -65,7 +65,7 @@ namespace LateBindingApi.VBIDEApi
 				return;
 			}
 
-			LateBindingApi.VBIDEApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as LateBindingApi.VBIDEApi.Reference;
+			NetOffice.VBIDEApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.VBIDEApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
 			foreach(Delegate delItem in recipients)
@@ -81,7 +81,7 @@ namespace LateBindingApi.VBIDEApi
 				return;
 			}
 
-			LateBindingApi.VBIDEApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as LateBindingApi.VBIDEApi.Reference;
+			NetOffice.VBIDEApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.VBIDEApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
 			foreach(Delegate delItem in recipients)

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.DAOApi
+namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface _Collection SupportByLibrary DAO3.6 DAO12 

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ODSOFilter SupportByLibrary OF10 OF11 OF12 OF14 
@@ -99,13 +99,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFilterComparison Comparison
+		public NetOffice.OfficeApi.Enums.MsoFilterComparison Comparison
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Comparison", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoFilterComparison)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoFilterComparison)returnItem;
 			}
 			set
 			{
@@ -137,13 +137,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFilterConjunction Conjunction
+		public NetOffice.OfficeApi.Enums.MsoFilterConjunction Conjunction
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Conjunction", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoFilterConjunction)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoFilterConjunction)returnItem;
 			}
 			set
 			{

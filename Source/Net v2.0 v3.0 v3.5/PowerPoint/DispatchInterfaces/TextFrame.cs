@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface TextFrame SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -171,13 +171,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTextOrientation Orientation
+		public NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTextOrientation)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTextOrientation)returnItem;
 			}
 			set
 			{
@@ -190,13 +190,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState HasText
+		public NetOffice.OfficeApi.Enums.MsoTriState HasText
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HasText", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 		}
 
@@ -204,13 +204,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange TextRange
+		public NetOffice.PowerPointApi.TextRange TextRange
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextRange", paramsArray);
-				LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.TextRange;
+				NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.TextRange;
 				return newObject;
 			}
 		}
@@ -219,13 +219,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Ruler Ruler
+		public NetOffice.PowerPointApi.Ruler Ruler
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Ruler", paramsArray);
-				LateBindingApi.PowerPointApi.Ruler newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Ruler;
+				NetOffice.PowerPointApi.Ruler newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Ruler;
 				return newObject;
 			}
 		}
@@ -234,13 +234,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoHorizontalAnchor HorizontalAnchor
+		public NetOffice.OfficeApi.Enums.MsoHorizontalAnchor HorizontalAnchor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HorizontalAnchor", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoHorizontalAnchor)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoHorizontalAnchor)returnItem;
 			}
 			set
 			{
@@ -253,13 +253,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoVerticalAnchor VerticalAnchor
+		public NetOffice.OfficeApi.Enums.MsoVerticalAnchor VerticalAnchor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VerticalAnchor", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoVerticalAnchor)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoVerticalAnchor)returnItem;
 			}
 			set
 			{
@@ -272,13 +272,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpAutoSize AutoSize
+		public NetOffice.PowerPointApi.Enums.PpAutoSize AutoSize
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AutoSize", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpAutoSize)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpAutoSize)returnItem;
 			}
 			set
 			{
@@ -291,13 +291,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState WordWrap
+		public NetOffice.OfficeApi.Enums.MsoTriState WordWrap
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WordWrap", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{

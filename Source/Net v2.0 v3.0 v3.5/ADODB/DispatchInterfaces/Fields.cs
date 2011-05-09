@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface Fields SupportByLibrary ADO2.1 ADO2.5 
@@ -67,11 +67,11 @@ namespace LateBindingApi.ADODBApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("ADO2.5")]
-		public LateBindingApi.ADODBApi.Field get_Item(object index)
+		public NetOffice.ADODBApi.Field get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.ADODBApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Field;
+			NetOffice.ADODBApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Field;
 			return newObject;
 		}
 
@@ -93,11 +93,11 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.1 ADO2.5 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="Type">LateBindingApi.ADODBApi.Enums.DataTypeEnum Type</param>
+		/// <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
 		/// <param name="DefinedSize">Int32 DefinedSize</param>
-		/// <param name="Attrib">LateBindingApi.ADODBApi.Enums.FieldAttributeEnum Attrib</param>
+		/// <param name="Attrib">NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib</param>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public void Append(string name, LateBindingApi.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, LateBindingApi.ADODBApi.Enums.FieldAttributeEnum attrib)
+		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib);
 			Invoker.Method(this, "Append", paramsArray);
@@ -107,12 +107,12 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="Type">LateBindingApi.ADODBApi.Enums.DataTypeEnum Type</param>
+		/// <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
 		/// <param name="DefinedSize">Int32 DefinedSize</param>
-		/// <param name="Attrib">LateBindingApi.ADODBApi.Enums.FieldAttributeEnum Attrib</param>
+		/// <param name="Attrib">NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib</param>
 		/// <param name="FieldValue">optional object FieldValue</param>
 		[SupportByLibrary("ADO2.5")]
-		public void Append(string name, LateBindingApi.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, LateBindingApi.ADODBApi.Enums.FieldAttributeEnum attrib, object fieldValue)
+		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib, object fieldValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib, fieldValue);
 			Invoker.Method(this, "Append", paramsArray);
@@ -142,9 +142,9 @@ namespace LateBindingApi.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
-		/// <param name="ResyncValues">LateBindingApi.ADODBApi.Enums.ResyncEnum ResyncValues</param>
+		/// <param name="ResyncValues">NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues</param>
 		[SupportByLibrary("ADO2.5")]
-		public void Resync(LateBindingApi.ADODBApi.Enums.ResyncEnum resyncValues)
+		public void Resync(NetOffice.ADODBApi.Enums.ResyncEnum resyncValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resyncValues);
 			Invoker.Method(this, "Resync", paramsArray);

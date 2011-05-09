@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface XMLMapping SupportByLibrary WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -109,13 +109,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.OfficeApi.CustomXMLPart CustomXMLPart
+		public NetOffice.OfficeApi.CustomXMLPart CustomXMLPart
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CustomXMLPart", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLPart;
+				NetOffice.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLPart;
 				return newObject;
 			}
 		}
@@ -124,13 +124,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.OfficeApi.CustomXMLNode CustomXMLNode
+		public NetOffice.OfficeApi.CustomXMLNode CustomXMLNode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CustomXMLNode", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLNode;
+				NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLNode;
 				return newObject;
 			}
 		}
@@ -172,9 +172,9 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="XPath">string XPath</param>
 		/// <param name="PrefixMapping">string PrefixMapping</param>
-		/// <param name="Source">LateBindingApi.OfficeApi.CustomXMLPart Source</param>
+		/// <param name="Source">NetOffice.OfficeApi.CustomXMLPart Source</param>
 		[SupportByLibrary("WD12","WD14")]
-		public bool SetMapping(string xPath, string prefixMapping, LateBindingApi.OfficeApi.CustomXMLPart source)
+		public bool SetMapping(string xPath, string prefixMapping, NetOffice.OfficeApi.CustomXMLPart source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping, source);
 			object returnItem = Invoker.MethodReturn(this, "SetMapping", paramsArray);
@@ -194,9 +194,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
-		/// <param name="Node">LateBindingApi.OfficeApi.CustomXMLNode Node</param>
+		/// <param name="Node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		[SupportByLibrary("WD12","WD14")]
-		public bool SetMappingByNode(LateBindingApi.OfficeApi.CustomXMLNode node)
+		public bool SetMappingByNode(NetOffice.OfficeApi.CustomXMLNode node)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node);
 			object returnItem = Invoker.MethodReturn(this, "SetMappingByNode", paramsArray);

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PivotMemberProperty SupportByLibrary XWC1.0 
@@ -103,13 +103,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.PivotMemberPropertyDisplayEnum DisplayIn
+		public NetOffice.OWC10Api.Enums.PivotMemberPropertyDisplayEnum DisplayIn
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DisplayIn", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.PivotMemberPropertyDisplayEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.PivotMemberPropertyDisplayEnum)returnItem;
 			}
 			set
 			{

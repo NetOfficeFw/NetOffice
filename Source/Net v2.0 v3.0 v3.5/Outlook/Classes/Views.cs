@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Views_ViewAddEventHandler(LateBindingApi.OutlookApi.View View);
-	public delegate void Views_ViewRemoveEventHandler(LateBindingApi.OutlookApi.View View);
+	public delegate void Views_ViewAddEventHandler(NetOffice.OutlookApi.View View);
+	public delegate void Views_ViewRemoveEventHandler(NetOffice.OutlookApi.View View);
 	#pragma warning restore
 
 	#endregion

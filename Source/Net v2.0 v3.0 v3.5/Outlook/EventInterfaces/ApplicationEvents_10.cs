@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {	
 	#pragma warning disable
 	
@@ -142,7 +142,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.PropertyPages newPages = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pages) as LateBindingApi.OutlookApi.PropertyPages;
+			NetOffice.OutlookApi.PropertyPages newPages = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pages) as NetOffice.OutlookApi.PropertyPages;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPages;
 			foreach(Delegate delItem in recipients)
@@ -186,7 +186,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Search newSearchObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, searchObject) as LateBindingApi.OutlookApi.Search;
+			NetOffice.OutlookApi.Search newSearchObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, searchObject) as NetOffice.OutlookApi.Search;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSearchObject;
 			foreach(Delegate delItem in recipients)
@@ -202,7 +202,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Search newSearchObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, searchObject) as LateBindingApi.OutlookApi.Search;
+			NetOffice.OutlookApi.Search newSearchObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, searchObject) as NetOffice.OutlookApi.Search;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSearchObject;
 			foreach(Delegate delItem in recipients)

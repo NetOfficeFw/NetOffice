@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface IXRangeEnum SupportByLibrary XWC1.0 
@@ -119,14 +119,14 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="ppEnum">ref LateBindingApi.OWC10Api.IXRangeEnum ppEnum</param>
+		/// <param name="ppEnum">ref NetOffice.OWC10Api.IXRangeEnum ppEnum</param>
 		[SupportByLibrary("XWC1.0")]
-		public void Clone(ref LateBindingApi.OWC10Api.IXRangeEnum ppEnum)
+		public void Clone(ref NetOffice.OWC10Api.IXRangeEnum ppEnum)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
 			Invoker.Method(this, "Clone", paramsArray, modifiers);
-			ppEnum = (LateBindingApi.OWC10Api.IXRangeEnum)paramsArray[0];
+			ppEnum = (NetOffice.OWC10Api.IXRangeEnum)paramsArray[0];
 		}
 
 		/// <summary>

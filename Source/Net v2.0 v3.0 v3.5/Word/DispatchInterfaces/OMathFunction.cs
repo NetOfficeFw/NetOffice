@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface OMathFunction SupportByLibrary WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdOMathFunctionType Type
+		public NetOffice.WordApi.Enums.WdOMathFunctionType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdOMathFunctionType)returnItem;
+				return (NetOffice.WordApi.Enums.WdOMathFunctionType)returnItem;
 			}
 		}
 
@@ -65,13 +65,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -109,13 +109,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Range Range
+		public NetOffice.WordApi.Range Range
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-				LateBindingApi.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Range;
+				NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 				return newObject;
 			}
 		}
@@ -124,13 +124,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathArgs Args
+		public NetOffice.WordApi.OMathArgs Args
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Args", paramsArray);
-				LateBindingApi.WordApi.OMathArgs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathArgs;
+				NetOffice.WordApi.OMathArgs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathArgs;
 				return newObject;
 			}
 		}
@@ -139,13 +139,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathAcc Acc
+		public NetOffice.WordApi.OMathAcc Acc
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Acc", paramsArray);
-				LateBindingApi.WordApi.OMathAcc newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathAcc;
+				NetOffice.WordApi.OMathAcc newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathAcc;
 				return newObject;
 			}
 		}
@@ -154,13 +154,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathBar Bar
+		public NetOffice.WordApi.OMathBar Bar
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Bar", paramsArray);
-				LateBindingApi.WordApi.OMathBar newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathBar;
+				NetOffice.WordApi.OMathBar newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathBar;
 				return newObject;
 			}
 		}
@@ -169,13 +169,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathBox Box
+		public NetOffice.WordApi.OMathBox Box
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Box", paramsArray);
-				LateBindingApi.WordApi.OMathBox newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathBox;
+				NetOffice.WordApi.OMathBox newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathBox;
 				return newObject;
 			}
 		}
@@ -184,13 +184,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathBorderBox BorderBox
+		public NetOffice.WordApi.OMathBorderBox BorderBox
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BorderBox", paramsArray);
-				LateBindingApi.WordApi.OMathBorderBox newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathBorderBox;
+				NetOffice.WordApi.OMathBorderBox newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathBorderBox;
 				return newObject;
 			}
 		}
@@ -199,13 +199,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathDelim Delim
+		public NetOffice.WordApi.OMathDelim Delim
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Delim", paramsArray);
-				LateBindingApi.WordApi.OMathDelim newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathDelim;
+				NetOffice.WordApi.OMathDelim newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathDelim;
 				return newObject;
 			}
 		}
@@ -214,13 +214,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathEqArray EqArray
+		public NetOffice.WordApi.OMathEqArray EqArray
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EqArray", paramsArray);
-				LateBindingApi.WordApi.OMathEqArray newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathEqArray;
+				NetOffice.WordApi.OMathEqArray newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathEqArray;
 				return newObject;
 			}
 		}
@@ -229,13 +229,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathFrac Frac
+		public NetOffice.WordApi.OMathFrac Frac
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Frac", paramsArray);
-				LateBindingApi.WordApi.OMathFrac newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathFrac;
+				NetOffice.WordApi.OMathFrac newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathFrac;
 				return newObject;
 			}
 		}
@@ -244,13 +244,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathFunc Func
+		public NetOffice.WordApi.OMathFunc Func
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Func", paramsArray);
-				LateBindingApi.WordApi.OMathFunc newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathFunc;
+				NetOffice.WordApi.OMathFunc newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathFunc;
 				return newObject;
 			}
 		}
@@ -259,13 +259,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathGroupChar GroupChar
+		public NetOffice.WordApi.OMathGroupChar GroupChar
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupChar", paramsArray);
-				LateBindingApi.WordApi.OMathGroupChar newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathGroupChar;
+				NetOffice.WordApi.OMathGroupChar newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathGroupChar;
 				return newObject;
 			}
 		}
@@ -274,13 +274,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathLimLow LimLow
+		public NetOffice.WordApi.OMathLimLow LimLow
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LimLow", paramsArray);
-				LateBindingApi.WordApi.OMathLimLow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathLimLow;
+				NetOffice.WordApi.OMathLimLow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathLimLow;
 				return newObject;
 			}
 		}
@@ -289,13 +289,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathLimUpp LimUpp
+		public NetOffice.WordApi.OMathLimUpp LimUpp
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LimUpp", paramsArray);
-				LateBindingApi.WordApi.OMathLimUpp newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathLimUpp;
+				NetOffice.WordApi.OMathLimUpp newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathLimUpp;
 				return newObject;
 			}
 		}
@@ -304,13 +304,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathMat Mat
+		public NetOffice.WordApi.OMathMat Mat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Mat", paramsArray);
-				LateBindingApi.WordApi.OMathMat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathMat;
+				NetOffice.WordApi.OMathMat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathMat;
 				return newObject;
 			}
 		}
@@ -319,13 +319,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathNary Nary
+		public NetOffice.WordApi.OMathNary Nary
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Nary", paramsArray);
-				LateBindingApi.WordApi.OMathNary newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathNary;
+				NetOffice.WordApi.OMathNary newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathNary;
 				return newObject;
 			}
 		}
@@ -334,13 +334,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathPhantom Phantom
+		public NetOffice.WordApi.OMathPhantom Phantom
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Phantom", paramsArray);
-				LateBindingApi.WordApi.OMathPhantom newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathPhantom;
+				NetOffice.WordApi.OMathPhantom newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathPhantom;
 				return newObject;
 			}
 		}
@@ -349,13 +349,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathScrPre ScrPre
+		public NetOffice.WordApi.OMathScrPre ScrPre
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScrPre", paramsArray);
-				LateBindingApi.WordApi.OMathScrPre newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathScrPre;
+				NetOffice.WordApi.OMathScrPre newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathScrPre;
 				return newObject;
 			}
 		}
@@ -364,13 +364,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathRad Rad
+		public NetOffice.WordApi.OMathRad Rad
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Rad", paramsArray);
-				LateBindingApi.WordApi.OMathRad newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathRad;
+				NetOffice.WordApi.OMathRad newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathRad;
 				return newObject;
 			}
 		}
@@ -379,13 +379,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathScrSub ScrSub
+		public NetOffice.WordApi.OMathScrSub ScrSub
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScrSub", paramsArray);
-				LateBindingApi.WordApi.OMathScrSub newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathScrSub;
+				NetOffice.WordApi.OMathScrSub newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathScrSub;
 				return newObject;
 			}
 		}
@@ -394,13 +394,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathScrSubSup ScrSubSup
+		public NetOffice.WordApi.OMathScrSubSup ScrSubSup
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScrSubSup", paramsArray);
-				LateBindingApi.WordApi.OMathScrSubSup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathScrSubSup;
+				NetOffice.WordApi.OMathScrSubSup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathScrSubSup;
 				return newObject;
 			}
 		}
@@ -409,13 +409,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathScrSup ScrSup
+		public NetOffice.WordApi.OMathScrSup ScrSup
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScrSup", paramsArray);
-				LateBindingApi.WordApi.OMathScrSup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathScrSup;
+				NetOffice.WordApi.OMathScrSup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathScrSup;
 				return newObject;
 			}
 		}
@@ -424,13 +424,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMath OMath
+		public NetOffice.WordApi.OMath OMath
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OMath", paramsArray);
-				LateBindingApi.WordApi.OMath newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMath;
+				NetOffice.WordApi.OMath newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMath;
 				return newObject;
 			}
 		}
@@ -443,11 +443,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathFunction Remove()
+		public NetOffice.WordApi.OMathFunction Remove()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			LateBindingApi.WordApi.OMathFunction newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.OMathFunction;
+			NetOffice.WordApi.OMathFunction newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.OMathFunction;
 			return newObject;
 		}
 

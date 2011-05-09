@@ -3,13 +3,13 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void RecordNavigationControl_ButtonClickEventHandler(LateBindingApi.OWC10Api.Enums.NavButtonEnum NavButton);
+	public delegate void RecordNavigationControl_ButtonClickEventHandler(NetOffice.OWC10Api.Enums.NavButtonEnum NavButton);
 	#pragma warning restore
 
 	#endregion

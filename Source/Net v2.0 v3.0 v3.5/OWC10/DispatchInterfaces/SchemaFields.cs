@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface SchemaFields SupportByLibrary XWC1.0 
@@ -67,11 +67,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaField get_Item(object index)
+		public NetOffice.OWC10Api.SchemaField get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaField;
+			NetOffice.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaField;
 			return newObject;
 		}
 
@@ -83,14 +83,14 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="DataType">LateBindingApi.ADODBApi.Enums.DataTypeEnum DataType</param>
+		/// <param name="DataType">NetOffice.ADODBApi.Enums.DataTypeEnum DataType</param>
 		/// <param name="Length">optional object Length</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaField Add(string name, LateBindingApi.ADODBApi.Enums.DataTypeEnum dataType, object length)
+		public NetOffice.OWC10Api.SchemaField Add(string name, NetOffice.ADODBApi.Enums.DataTypeEnum dataType, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType, length);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.SchemaField;
+			NetOffice.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaField;
 			return newObject;
 		}
 
@@ -98,13 +98,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="DataType">LateBindingApi.ADODBApi.Enums.DataTypeEnum DataType</param>
+		/// <param name="DataType">NetOffice.ADODBApi.Enums.DataTypeEnum DataType</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaField Add(string name, LateBindingApi.ADODBApi.Enums.DataTypeEnum dataType)
+		public NetOffice.OWC10Api.SchemaField Add(string name, NetOffice.ADODBApi.Enums.DataTypeEnum dataType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.SchemaField;
+			NetOffice.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaField;
 			return newObject;
 		}
 

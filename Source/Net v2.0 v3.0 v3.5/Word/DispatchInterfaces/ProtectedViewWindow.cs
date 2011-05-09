@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface ProtectedViewWindow SupportByLibrary WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -114,13 +114,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Document Document
+		public NetOffice.WordApi.Document Document
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Document", paramsArray);
-				LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Document;
+				NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Document;
 				return newObject;
 			}
 		}
@@ -205,13 +205,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.WdWindowState WindowState
+		public NetOffice.WordApi.Enums.WdWindowState WindowState
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WindowState", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdWindowState)returnItem;
+				return (NetOffice.WordApi.Enums.WdWindowState)returnItem;
 			}
 			set
 			{
@@ -316,12 +316,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="WritePasswordDocument">ref optional object WritePasswordDocument</param>
 		/// <param name="WritePasswordTemplate">ref optional object WritePasswordTemplate</param>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Document Edit(ref object passwordTemplate, ref object writePasswordDocument, ref object writePasswordTemplate)
+		public NetOffice.WordApi.Document Edit(ref object passwordTemplate, ref object writePasswordDocument, ref object writePasswordTemplate)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(passwordTemplate, writePasswordDocument, writePasswordTemplate);
 			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray, modifiers);
-			LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
 			passwordTemplate = (object)paramsArray[0];
 			writePasswordDocument = (object)paramsArray[1];
 			writePasswordTemplate = (object)paramsArray[2];
@@ -332,11 +332,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Document Edit()
+		public NetOffice.WordApi.Document Edit()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray);
-			LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
 			return newObject;
 		}
 

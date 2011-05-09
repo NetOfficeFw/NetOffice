@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface SchemaRowsources SupportByLibrary XWC1.0 
@@ -67,11 +67,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRowsource get_Item(object index)
+		public NetOffice.OWC10Api.SchemaRowsource get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.SchemaRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaRowsource;
+			NetOffice.OWC10Api.SchemaRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaRowsource;
 			return newObject;
 		}
 
@@ -83,14 +83,14 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="RowsourceType">LateBindingApi.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
+		/// <param name="RowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
 		/// <param name="CommandText">optional object CommandText</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRowsource Add(string name, LateBindingApi.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText)
+		public NetOffice.OWC10Api.SchemaRowsource Add(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType, commandText);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.SchemaRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.SchemaRowsource;
+			NetOffice.OWC10Api.SchemaRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaRowsource;
 			return newObject;
 		}
 
@@ -98,13 +98,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="RowsourceType">LateBindingApi.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
+		/// <param name="RowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRowsource Add(string name, LateBindingApi.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType)
+		public NetOffice.OWC10Api.SchemaRowsource Add(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.SchemaRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.SchemaRowsource;
+			NetOffice.OWC10Api.SchemaRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaRowsource;
 			return newObject;
 		}
 
@@ -112,14 +112,14 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="RowsourceType">LateBindingApi.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
+		/// <param name="RowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
 		/// <param name="CommandText">optional object CommandText</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRowsource AddNew(string name, LateBindingApi.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText)
+		public NetOffice.OWC10Api.SchemaRowsource AddNew(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType, commandText);
 			object returnItem = Invoker.MethodReturn(this, "AddNew", paramsArray);
-			LateBindingApi.OWC10Api.SchemaRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.SchemaRowsource;
+			NetOffice.OWC10Api.SchemaRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaRowsource;
 			return newObject;
 		}
 
@@ -127,13 +127,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="RowsourceType">LateBindingApi.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
+		/// <param name="RowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRowsource AddNew(string name, LateBindingApi.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType)
+		public NetOffice.OWC10Api.SchemaRowsource AddNew(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType);
 			object returnItem = Invoker.MethodReturn(this, "AddNew", paramsArray);
-			LateBindingApi.OWC10Api.SchemaRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.SchemaRowsource;
+			NetOffice.OWC10Api.SchemaRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaRowsource;
 			return newObject;
 		}
 

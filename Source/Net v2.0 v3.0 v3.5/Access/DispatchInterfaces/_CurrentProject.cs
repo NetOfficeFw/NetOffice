@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _CurrentProject SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.AllForms AllForms
+		public NetOffice.AccessApi.AllForms AllForms
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllForms", paramsArray);
-				LateBindingApi.AccessApi.AllForms newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.AllForms;
+				NetOffice.AccessApi.AllForms newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.AllForms;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.AllReports AllReports
+		public NetOffice.AccessApi.AllReports AllReports
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllReports", paramsArray);
-				LateBindingApi.AccessApi.AllReports newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.AllReports;
+				NetOffice.AccessApi.AllReports newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.AllReports;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.AllMacros AllMacros
+		public NetOffice.AccessApi.AllMacros AllMacros
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllMacros", paramsArray);
-				LateBindingApi.AccessApi.AllMacros newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.AllMacros;
+				NetOffice.AccessApi.AllMacros newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.AllMacros;
 				return newObject;
 			}
 		}
@@ -96,13 +96,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.AllModules AllModules
+		public NetOffice.AccessApi.AllModules AllModules
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllModules", paramsArray);
-				LateBindingApi.AccessApi.AllModules newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.AllModules;
+				NetOffice.AccessApi.AllModules newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.AllModules;
 				return newObject;
 			}
 		}
@@ -111,13 +111,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.AllDataAccessPages AllDataAccessPages
+		public NetOffice.AccessApi.AllDataAccessPages AllDataAccessPages
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllDataAccessPages", paramsArray);
-				LateBindingApi.AccessApi.AllDataAccessPages newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.AllDataAccessPages;
+				NetOffice.AccessApi.AllDataAccessPages newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.AllDataAccessPages;
 				return newObject;
 			}
 		}
@@ -126,13 +126,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcProjectType ProjectType
+		public NetOffice.AccessApi.Enums.AcProjectType ProjectType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ProjectType", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcProjectType)returnItem;
+				return (NetOffice.AccessApi.Enums.AcProjectType)returnItem;
 			}
 		}
 
@@ -210,13 +210,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.ADODBApi.Connection Connection
+		public NetOffice.ADODBApi.Connection Connection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Connection", paramsArray);
-				LateBindingApi.ADODBApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Connection;
+				NetOffice.ADODBApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Connection;
 				return newObject;
 			}
 		}
@@ -225,13 +225,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.AccessObjectProperties Properties
+		public NetOffice.AccessApi.AccessObjectProperties Properties
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				LateBindingApi.AccessApi.AccessObjectProperties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.AccessObjectProperties;
+				NetOffice.AccessApi.AccessObjectProperties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.AccessObjectProperties;
 				return newObject;
 			}
 		}
@@ -240,13 +240,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Application Application
+		public NetOffice.AccessApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}
@@ -289,13 +289,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcFileFormat FileFormat
+		public NetOffice.AccessApi.Enums.AcFileFormat FileFormat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FileFormat", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcFileFormat)returnItem;
+				return (NetOffice.AccessApi.Enums.AcFileFormat)returnItem;
 			}
 		}
 
@@ -303,13 +303,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public LateBindingApi.ADODBApi.Connection AccessConnection
+		public NetOffice.ADODBApi.Connection AccessConnection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AccessConnection", paramsArray);
-				LateBindingApi.ADODBApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Connection;
+				NetOffice.ADODBApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Connection;
 				return newObject;
 			}
 		}
@@ -318,13 +318,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.ImportExportSpecifications ImportExportSpecifications
+		public NetOffice.AccessApi.ImportExportSpecifications ImportExportSpecifications
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ImportExportSpecifications", paramsArray);
-				LateBindingApi.AccessApi.ImportExportSpecifications newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.ImportExportSpecifications;
+				NetOffice.AccessApi.ImportExportSpecifications newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.ImportExportSpecifications;
 				return newObject;
 			}
 		}
@@ -375,13 +375,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC14 
 		/// </summary>
 		[SupportByLibrary("AC14")]
-		public LateBindingApi.AccessApi.SharedResources Resources
+		public NetOffice.AccessApi.SharedResources Resources
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Resources", paramsArray);
-				LateBindingApi.AccessApi.SharedResources newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.SharedResources;
+				NetOffice.AccessApi.SharedResources newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.SharedResources;
 				return newObject;
 			}
 		}

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface SelectionHighlight SupportByLibrary XWC1.0 
@@ -54,9 +54,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="ViewSurface">LateBindingApi.OWC10Api.ViewSurface ViewSurface</param>
+		/// <param name="ViewSurface">NetOffice.OWC10Api.ViewSurface ViewSurface</param>
 		[SupportByLibrary("XWC1.0")]
-		public void Highlight(LateBindingApi.OWC10Api.ViewSurface viewSurface)
+		public void Highlight(NetOffice.OWC10Api.ViewSurface viewSurface)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(viewSurface);
 			Invoker.Method(this, "Highlight", paramsArray);

@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {	
 	#pragma warning disable
 	
@@ -65,7 +65,7 @@ namespace LateBindingApi.OfficeApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi._CustomTaskPane newCustomTaskPaneInst = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as LateBindingApi.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
 			foreach(Delegate delItem in recipients)
@@ -81,7 +81,7 @@ namespace LateBindingApi.OfficeApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi._CustomTaskPane newCustomTaskPaneInst = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as LateBindingApi.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
 			foreach(Delegate delItem in recipients)

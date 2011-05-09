@@ -7,13 +7,13 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface DiagramNodes SupportByLibrary XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL10","XL11","XL12","XL14")]
-	public class DiagramNodes : LateBindingApi.OfficeApi._IMsoDispObj ,IEnumerable
+	public class DiagramNodes : NetOffice.OfficeApi._IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable
 		#region Construction
@@ -86,11 +86,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.DiagramNode Item(object index)
+		public NetOffice.ExcelApi.DiagramNode Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.DiagramNode;
+			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.DiagramNode;
 			return newObject;
 		}
 

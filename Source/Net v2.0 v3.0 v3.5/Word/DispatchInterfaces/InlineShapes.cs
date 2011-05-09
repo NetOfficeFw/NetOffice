@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface InlineShapes SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -115,11 +115,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape Item(Int32 index)
+		public NetOffice.WordApi.InlineShape Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -131,12 +131,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="SaveWithDocument">ref optional object SaveWithDocument</param>
 		/// <param name="Range">ref optional object Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddPicture(string fileName, ref object linkToFile, ref object saveWithDocument, ref object range)
+		public NetOffice.WordApi.InlineShape AddPicture(string fileName, ref object linkToFile, ref object saveWithDocument, ref object range)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, range);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray, modifiers);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			linkToFile = (object)paramsArray[1];
 			saveWithDocument = (object)paramsArray[2];
 			range = (object)paramsArray[3];
@@ -148,11 +148,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddPicture(string fileName)
+		public NetOffice.WordApi.InlineShape AddPicture(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -168,12 +168,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="IconLabel">ref optional object IconLabel</param>
 		/// <param name="Range">ref optional object Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddOLEObject(ref object classType, ref object fileName, ref object linkToFile, ref object displayAsIcon, ref object iconFileName, ref object iconIndex, ref object iconLabel, ref object range)
+		public NetOffice.WordApi.InlineShape AddOLEObject(ref object classType, ref object fileName, ref object linkToFile, ref object displayAsIcon, ref object iconFileName, ref object iconIndex, ref object iconLabel, ref object range)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, range);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray, modifiers);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			classType = (object)paramsArray[0];
 			fileName = (object)paramsArray[1];
 			linkToFile = (object)paramsArray[2];
@@ -189,11 +189,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddOLEObject()
+		public NetOffice.WordApi.InlineShape AddOLEObject()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -203,12 +203,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="ClassType">ref optional object ClassType</param>
 		/// <param name="Range">ref optional object Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddOLEControl(ref object classType, ref object range)
+		public NetOffice.WordApi.InlineShape AddOLEControl(ref object classType, ref object range)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, range);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEControl", paramsArray, modifiers);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			classType = (object)paramsArray[0];
 			range = (object)paramsArray[1];
 			return newObject;
@@ -218,24 +218,24 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddOLEControl()
+		public NetOffice.WordApi.InlineShape AddOLEControl()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddOLEControl", paramsArray);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape New(LateBindingApi.WordApi.Range range)
+		public NetOffice.WordApi.InlineShape New(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "New", paramsArray);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -245,12 +245,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Range">ref optional object Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddHorizontalLine(string fileName, ref object range)
+		public NetOffice.WordApi.InlineShape AddHorizontalLine(string fileName, ref object range)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range);
 			object returnItem = Invoker.MethodReturn(this, "AddHorizontalLine", paramsArray, modifiers);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			range = (object)paramsArray[1];
 			return newObject;
 		}
@@ -260,11 +260,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddHorizontalLine(string fileName)
+		public NetOffice.WordApi.InlineShape AddHorizontalLine(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "AddHorizontalLine", paramsArray);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -273,12 +273,12 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Range">ref optional object Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddHorizontalLineStandard(ref object range)
+		public NetOffice.WordApi.InlineShape AddHorizontalLineStandard(ref object range)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "AddHorizontalLineStandard", paramsArray, modifiers);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			range = (object)paramsArray[0];
 			return newObject;
 		}
@@ -287,11 +287,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddHorizontalLineStandard()
+		public NetOffice.WordApi.InlineShape AddHorizontalLineStandard()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddHorizontalLineStandard", paramsArray);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -301,12 +301,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Range">ref optional object Range</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddPictureBullet(string fileName, ref object range)
+		public NetOffice.WordApi.InlineShape AddPictureBullet(string fileName, ref object range)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range);
 			object returnItem = Invoker.MethodReturn(this, "AddPictureBullet", paramsArray, modifiers);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			range = (object)paramsArray[1];
 			return newObject;
 		}
@@ -316,26 +316,26 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddPictureBullet(string fileName)
+		public NetOffice.WordApi.InlineShape AddPictureBullet(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "AddPictureBullet", paramsArray);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.OfficeApi.Enums.XlChartType Type</param>
+		/// <param name="Type">NetOffice.OfficeApi.Enums.XlChartType Type</param>
 		/// <param name="Range">ref optional object Range</param>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddChart(LateBindingApi.OfficeApi.Enums.XlChartType type, ref object range)
+		public NetOffice.WordApi.InlineShape AddChart(NetOffice.OfficeApi.Enums.XlChartType type, ref object range)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(type, range);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray, modifiers);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			range = (object)paramsArray[1];
 			return newObject;
 		}
@@ -343,28 +343,28 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.OfficeApi.Enums.XlChartType Type</param>
+		/// <param name="Type">NetOffice.OfficeApi.Enums.XlChartType Type</param>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.InlineShape AddChart(LateBindingApi.OfficeApi.Enums.XlChartType type)
+		public NetOffice.WordApi.InlineShape AddChart(NetOffice.OfficeApi.Enums.XlChartType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD14 
 		/// </summary>
-		/// <param name="Layout">LateBindingApi.OfficeApi.SmartArtLayout Layout</param>
+		/// <param name="Layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		/// <param name="Range">ref optional object Range</param>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.InlineShape AddSmartArt(LateBindingApi.OfficeApi.SmartArtLayout layout, ref object range)
+		public NetOffice.WordApi.InlineShape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, ref object range)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, range);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray, modifiers);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			range = (object)paramsArray[1];
 			return newObject;
 		}
@@ -372,13 +372,13 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD14 
 		/// </summary>
-		/// <param name="Layout">LateBindingApi.OfficeApi.SmartArtLayout Layout</param>
+		/// <param name="Layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.InlineShape AddSmartArt(LateBindingApi.OfficeApi.SmartArtLayout layout)
+		public NetOffice.WordApi.InlineShape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
-			LateBindingApi.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 

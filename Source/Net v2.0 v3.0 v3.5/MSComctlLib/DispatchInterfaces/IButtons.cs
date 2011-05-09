@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IButtons SupportByLibrary WCC6.0 
@@ -72,17 +72,22 @@ namespace LateBindingApi.MSComctlLibApi
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IButton get_ControlDefault(ref object index)
+		public NetOffice.MSComctlLibApi.IButton get_ControlDefault(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
 			index = (object)paramsArray[0];
 			return newObject;
 		}
 
-		public void set_ControlDefault(ref object index, LateBindingApi.MSComctlLibApi.IButton value)
+		/// <summary>
+		/// SupportByLibrary WCC6.0 
+		/// </summary>
+		/// <param name="Index">ref object Index</param>
+		[SupportByLibrary("WCC6.0")]
+		public void set_ControlDefault(ref object index, NetOffice.MSComctlLibApi.IButton value)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -95,17 +100,22 @@ namespace LateBindingApi.MSComctlLibApi
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IButton get_Item(ref object index)
+		public NetOffice.MSComctlLibApi.IButton get_Item(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
 			index = (object)paramsArray[0];
 			return newObject;
 		}
 
-		public void set_Item(ref object index, LateBindingApi.MSComctlLibApi.IButton value)
+		/// <summary>
+		/// SupportByLibrary WCC6.0 
+		/// </summary>
+		/// <param name="Index">ref object Index</param>
+		[SupportByLibrary("WCC6.0")]
+		public void set_Item(ref object index, NetOffice.MSComctlLibApi.IButton value)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -149,12 +159,12 @@ namespace LateBindingApi.MSComctlLibApi
 		/// <param name="Style">ref optional object Style</param>
 		/// <param name="Image">ref optional object Image</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IButton Add(ref object index, ref object key, ref object caption, ref object style, ref object image)
+		public NetOffice.MSComctlLibApi.IButton Add(ref object index, ref object key, ref object caption, ref object style, ref object image)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, caption, style, image);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IButton;
 			index = (object)paramsArray[0];
 			key = (object)paramsArray[1];
 			caption = (object)paramsArray[2];
@@ -167,11 +177,11 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IButton Add()
+		public NetOffice.MSComctlLibApi.IButton Add()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IButton;
 			return newObject;
 		}
 

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _CodeModule SupportByLibrary VBE5.3 VBE12 
@@ -51,13 +51,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBComponent Parent
+		public NetOffice.VBIDEApi.VBComponent Parent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				LateBindingApi.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.VBComponent;
+				NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBComponent;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBE VBE
+		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				LateBindingApi.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -127,9 +127,9 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		/// <param name="ProcName">string ProcName</param>
-		/// <param name="ProcKind">LateBindingApi.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
+		/// <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public Int32 get_ProcStartLine(string procName, LateBindingApi.VBIDEApi.Enums.vbext_ProcKind procKind)
+		public Int32 get_ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
 			object returnItem = Invoker.PropertyGet(this, "ProcStartLine", paramsArray);
@@ -140,9 +140,9 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		/// <param name="ProcName">string ProcName</param>
-		/// <param name="ProcKind">LateBindingApi.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
+		/// <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public Int32 get_ProcCountLines(string procName, LateBindingApi.VBIDEApi.Enums.vbext_ProcKind procKind)
+		public Int32 get_ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
 			object returnItem = Invoker.PropertyGet(this, "ProcCountLines", paramsArray);
@@ -153,9 +153,9 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		/// <param name="ProcName">string ProcName</param>
-		/// <param name="ProcKind">LateBindingApi.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
+		/// <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public Int32 get_ProcBodyLine(string procName, LateBindingApi.VBIDEApi.Enums.vbext_ProcKind procKind)
+		public Int32 get_ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
 			object returnItem = Invoker.PropertyGet(this, "ProcBodyLine", paramsArray);
@@ -166,9 +166,9 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		/// <param name="Line">Int32 Line</param>
-		/// <param name="ProcKind">LateBindingApi.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
+		/// <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public string get_ProcOfLine(Int32 line, LateBindingApi.VBIDEApi.Enums.vbext_ProcKind procKind)
+		public string get_ProcOfLine(Int32 line, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(line, procKind);
 			object returnItem = Invoker.PropertyGet(this, "ProcOfLine", paramsArray);
@@ -193,13 +193,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.CodePane CodePane
+		public NetOffice.VBIDEApi.CodePane CodePane
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CodePane", paramsArray);
-				LateBindingApi.VBIDEApi.CodePane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.CodePane;
+				NetOffice.VBIDEApi.CodePane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.CodePane;
 				return newObject;
 			}
 		}

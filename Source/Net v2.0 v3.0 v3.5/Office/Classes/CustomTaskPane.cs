@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void CustomTaskPane_VisibleStateChangeEventHandler(LateBindingApi.OfficeApi._CustomTaskPane CustomTaskPaneInst);
-	public delegate void CustomTaskPane_DockPositionStateChangeEventHandler(LateBindingApi.OfficeApi._CustomTaskPane CustomTaskPaneInst);
+	public delegate void CustomTaskPane_VisibleStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst);
+	public delegate void CustomTaskPane_DockPositionStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst);
 	#pragma warning restore
 
 	#endregion

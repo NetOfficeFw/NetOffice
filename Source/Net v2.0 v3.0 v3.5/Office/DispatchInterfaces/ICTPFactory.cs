@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ICTPFactory SupportByLibrary OF12 OF14 
@@ -58,11 +58,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="CTPTitle">string CTPTitle</param>
 		/// <param name="CTPParentWindow">optional object CTPParentWindow</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle, object cTPParentWindow)
+		public NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle, object cTPParentWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle, cTPParentWindow);
 			object returnItem = Invoker.MethodReturn(this, "CreateCTP", paramsArray);
-			LateBindingApi.OfficeApi._CustomTaskPane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi._CustomTaskPane;
 			return newObject;
 		}
 
@@ -72,11 +72,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="CTPAxID">string CTPAxID</param>
 		/// <param name="CTPTitle">string CTPTitle</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle)
+		public NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle);
 			object returnItem = Invoker.MethodReturn(this, "CreateCTP", paramsArray);
-			LateBindingApi.OfficeApi._CustomTaskPane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi._CustomTaskPane;
 			return newObject;
 		}
 

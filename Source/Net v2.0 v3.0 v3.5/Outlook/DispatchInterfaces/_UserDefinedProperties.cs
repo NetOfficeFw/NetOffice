@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _UserDefinedProperties SupportByLibrary OL12 OL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi._Application Application
+		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._Application;
+				NetOffice.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlObjectClass Class
+		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Class", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlObjectClass)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlObjectClass)returnItem;
 			}
 		}
 
@@ -80,13 +80,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi._NameSpace Session
+		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				LateBindingApi.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._NameSpace;
+				NetOffice.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
 				return newObject;
 			}
 		}
@@ -129,11 +129,11 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi._UserDefinedProperty Item(object index)
+		public NetOffice.OutlookApi._UserDefinedProperty Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.OutlookApi._UserDefinedProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi._UserDefinedProperty;
+			NetOffice.OutlookApi._UserDefinedProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._UserDefinedProperty;
 			return newObject;
 		}
 
@@ -141,15 +141,15 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="Type">LateBindingApi.OutlookApi.Enums.OlUserPropertyType Type</param>
+		/// <param name="Type">NetOffice.OutlookApi.Enums.OlUserPropertyType Type</param>
 		/// <param name="DisplayFormat">optional object DisplayFormat</param>
 		/// <param name="Formula">optional object Formula</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.UserDefinedProperty Add(string name, LateBindingApi.OutlookApi.Enums.OlUserPropertyType type, object displayFormat, object formula)
+		public NetOffice.OutlookApi.UserDefinedProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object displayFormat, object formula)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, displayFormat, formula);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OutlookApi.UserDefinedProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.UserDefinedProperty;
+			NetOffice.OutlookApi.UserDefinedProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.UserDefinedProperty;
 			return newObject;
 		}
 
@@ -157,13 +157,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="Type">LateBindingApi.OutlookApi.Enums.OlUserPropertyType Type</param>
+		/// <param name="Type">NetOffice.OutlookApi.Enums.OlUserPropertyType Type</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.UserDefinedProperty Add(string name, LateBindingApi.OutlookApi.Enums.OlUserPropertyType type)
+		public NetOffice.OutlookApi.UserDefinedProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OutlookApi.UserDefinedProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.UserDefinedProperty;
+			NetOffice.OutlookApi.UserDefinedProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.UserDefinedProperty;
 			return newObject;
 		}
 
@@ -172,11 +172,11 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.UserDefinedProperty Find(string name)
+		public NetOffice.OutlookApi.UserDefinedProperty Find(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			LateBindingApi.OutlookApi.UserDefinedProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.UserDefinedProperty;
+			NetOffice.OutlookApi.UserDefinedProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.UserDefinedProperty;
 			return newObject;
 		}
 

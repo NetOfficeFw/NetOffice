@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface _CommandBarButton SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -101,6 +101,11 @@ namespace LateBindingApi.OfficeApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// </summary>
+		/// <param name="varChild">optional object varChild</param>
+		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
 		public void set_accName(object varChild, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -138,6 +143,11 @@ namespace LateBindingApi.OfficeApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// </summary>
+		/// <param name="varChild">optional object varChild</param>
+		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
 		public void set_accValue(object varChild, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -520,13 +530,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoButtonState State
+		public NetOffice.OfficeApi.Enums.MsoButtonState State
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "State", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoButtonState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoButtonState)returnItem;
 			}
 			set
 			{
@@ -539,13 +549,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoButtonStyle Style
+		public NetOffice.OfficeApi.Enums.MsoButtonStyle Style
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoButtonStyle)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoButtonStyle)returnItem;
 			}
 			set
 			{
@@ -558,13 +568,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoCommandBarButtonHyperlinkType HyperlinkType
+		public NetOffice.OfficeApi.Enums.MsoCommandBarButtonHyperlinkType HyperlinkType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HyperlinkType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoCommandBarButtonHyperlinkType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoCommandBarButtonHyperlinkType)returnItem;
 			}
 			set
 			{

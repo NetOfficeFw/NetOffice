@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {	
 	#pragma warning disable
 	
@@ -65,7 +65,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.MAPIFolder newMoveTo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, moveTo) as LateBindingApi.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newMoveTo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, moveTo) as NetOffice.OutlookApi.MAPIFolder;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newMoveTo;
 			paramsArray.SetValue(cancel, 1);
@@ -85,7 +85,7 @@ namespace LateBindingApi.OutlookApi
 			}
 
 			object newItem = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
-			LateBindingApi.OutlookApi.MAPIFolder newMoveTo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, moveTo) as LateBindingApi.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newMoveTo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, moveTo) as NetOffice.OutlookApi.MAPIFolder;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newItem;
 			paramsArray[1] = newMoveTo;

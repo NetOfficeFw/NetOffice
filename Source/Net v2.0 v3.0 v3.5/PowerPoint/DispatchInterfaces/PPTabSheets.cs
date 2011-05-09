@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PPTabSheets SupportByLibrary PP09 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPTabSheet ActiveSheet
+		public NetOffice.PowerPointApi.PPTabSheet ActiveSheet
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveSheet", paramsArray);
-				LateBindingApi.PowerPointApi.PPTabSheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.PPTabSheet;
+				NetOffice.PowerPointApi.PPTabSheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.PPTabSheet;
 				return newObject;
 			}
 		}
@@ -90,11 +90,11 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPTabSheet Item(object index)
+		public NetOffice.PowerPointApi.PPTabSheet Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.PowerPointApi.PPTabSheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.PPTabSheet;
+			NetOffice.PowerPointApi.PPTabSheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPTabSheet;
 			return newObject;
 		}
 
@@ -103,11 +103,11 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPTabSheet Add(string name)
+		public NetOffice.PowerPointApi.PPTabSheet Add(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.PowerPointApi.PPTabSheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.PPTabSheet;
+			NetOffice.PowerPointApi.PPTabSheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPTabSheet;
 			return newObject;
 		}
 

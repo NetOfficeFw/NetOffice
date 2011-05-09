@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface DocumentWindows SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -86,20 +86,20 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.DocumentWindow Item(Int32 index)
+		public NetOffice.PowerPointApi.DocumentWindow Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.PowerPointApi.DocumentWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.DocumentWindow;
+			NetOffice.PowerPointApi.DocumentWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.DocumentWindow;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="arrangeStyle">LateBindingApi.PowerPointApi.Enums.PpArrangeStyle arrangeStyle</param>
+		/// <param name="arrangeStyle">NetOffice.PowerPointApi.Enums.PpArrangeStyle arrangeStyle</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public void Arrange(LateBindingApi.PowerPointApi.Enums.PpArrangeStyle arrangeStyle)
+		public void Arrange(NetOffice.PowerPointApi.Enums.PpArrangeStyle arrangeStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle);
 			Invoker.Method(this, "Arrange", paramsArray);

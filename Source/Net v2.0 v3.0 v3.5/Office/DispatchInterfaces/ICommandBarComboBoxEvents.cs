@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ICommandBarComboBoxEvents SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -54,9 +54,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="Ctrl">LateBindingApi.OfficeApi.CommandBarComboBox Ctrl</param>
+		/// <param name="Ctrl">NetOffice.OfficeApi.CommandBarComboBox Ctrl</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void Change(LateBindingApi.OfficeApi.CommandBarComboBox ctrl)
+		public void Change(NetOffice.OfficeApi.CommandBarComboBox ctrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ctrl);
 			Invoker.Method(this, "Change", paramsArray);

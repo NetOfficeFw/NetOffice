@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface OfficeTheme SupportByLibrary OF12 OF14 
@@ -66,13 +66,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.ThemeColorScheme ThemeColorScheme
+		public NetOffice.OfficeApi.ThemeColorScheme ThemeColorScheme
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ThemeColorScheme", paramsArray);
-				LateBindingApi.OfficeApi.ThemeColorScheme newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.ThemeColorScheme;
+				NetOffice.OfficeApi.ThemeColorScheme newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ThemeColorScheme;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.ThemeFontScheme ThemeFontScheme
+		public NetOffice.OfficeApi.ThemeFontScheme ThemeFontScheme
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ThemeFontScheme", paramsArray);
-				LateBindingApi.OfficeApi.ThemeFontScheme newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.ThemeFontScheme;
+				NetOffice.OfficeApi.ThemeFontScheme newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ThemeFontScheme;
 				return newObject;
 			}
 		}
@@ -96,13 +96,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.ThemeEffectScheme ThemeEffectScheme
+		public NetOffice.OfficeApi.ThemeEffectScheme ThemeEffectScheme
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ThemeEffectScheme", paramsArray);
-				LateBindingApi.OfficeApi.ThemeEffectScheme newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.ThemeEffectScheme;
+				NetOffice.OfficeApi.ThemeEffectScheme newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ThemeEffectScheme;
 				return newObject;
 			}
 		}

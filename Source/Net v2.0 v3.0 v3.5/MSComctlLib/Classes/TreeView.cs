@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 
 	#region Delegates
@@ -11,9 +11,9 @@ namespace LateBindingApi.MSComctlLibApi
 	#pragma warning disable
 	public delegate void TreeView_BeforeLabelEditEventHandler(ref Int16 Cancel);
 	public delegate void TreeView_AfterLabelEditEventHandler(ref Int16 Cancel, ref string NewString);
-	public delegate void TreeView_CollapseEventHandler(LateBindingApi.MSComctlLibApi.Node Node);
-	public delegate void TreeView_ExpandEventHandler(LateBindingApi.MSComctlLibApi.Node Node);
-	public delegate void TreeView_NodeClickEventHandler(LateBindingApi.MSComctlLibApi.Node Node);
+	public delegate void TreeView_CollapseEventHandler(NetOffice.MSComctlLibApi.Node Node);
+	public delegate void TreeView_ExpandEventHandler(NetOffice.MSComctlLibApi.Node Node);
+	public delegate void TreeView_NodeClickEventHandler(NetOffice.MSComctlLibApi.Node Node);
 	public delegate void TreeView_KeyDownEventHandler(ref Int16 KeyCode, Int16 Shift);
 	public delegate void TreeView_KeyUpEventHandler(ref Int16 KeyCode, Int16 Shift);
 	public delegate void TreeView_KeyPressEventHandler(ref Int16 KeyAscii);
@@ -22,13 +22,13 @@ namespace LateBindingApi.MSComctlLibApi
 	public delegate void TreeView_MouseUpEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
 	public delegate void TreeView_ClickEventHandler();
 	public delegate void TreeView_DblClickEventHandler();
-	public delegate void TreeView_NodeCheckEventHandler(LateBindingApi.MSComctlLibApi.Node Node);
-	public delegate void TreeView_OLEStartDragEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
+	public delegate void TreeView_NodeCheckEventHandler(NetOffice.MSComctlLibApi.Node Node);
+	public delegate void TreeView_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
 	public delegate void TreeView_OLEGiveFeedbackEventHandler(ref Int32 Effect, ref bool DefaultCursors);
-	public delegate void TreeView_OLESetDataEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
+	public delegate void TreeView_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
 	public delegate void TreeView_OLECompleteDragEventHandler(ref Int32 Effect);
-	public delegate void TreeView_OLEDragOverEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
-	public delegate void TreeView_OLEDragDropEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
+	public delegate void TreeView_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
+	public delegate void TreeView_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion

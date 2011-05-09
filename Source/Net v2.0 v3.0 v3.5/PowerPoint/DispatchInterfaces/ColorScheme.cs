@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface ColorScheme SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -84,13 +84,13 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="SchemeColor">LateBindingApi.PowerPointApi.Enums.PpColorSchemeIndex SchemeColor</param>
+		/// <param name="SchemeColor">NetOffice.PowerPointApi.Enums.PpColorSchemeIndex SchemeColor</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.RGBColor Colors(LateBindingApi.PowerPointApi.Enums.PpColorSchemeIndex schemeColor)
+		public NetOffice.PowerPointApi.RGBColor Colors(NetOffice.PowerPointApi.Enums.PpColorSchemeIndex schemeColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemeColor);
 			object returnItem = Invoker.MethodReturn(this, "Colors", paramsArray);
-			LateBindingApi.PowerPointApi.RGBColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.RGBColor;
+			NetOffice.PowerPointApi.RGBColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.RGBColor;
 			return newObject;
 		}
 

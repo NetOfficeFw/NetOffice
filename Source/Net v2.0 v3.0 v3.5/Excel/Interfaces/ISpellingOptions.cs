@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface ISpellingOptions SupportByLibrary XL10 XL11 XL12 XL14 
@@ -240,13 +240,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlHebrewModes HebrewModes
+		public NetOffice.ExcelApi.Enums.XlHebrewModes HebrewModes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HebrewModes", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlHebrewModes)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlHebrewModes)returnItem;
 			}
 			set
 			{
@@ -259,13 +259,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlArabicModes ArabicModes
+		public NetOffice.ExcelApi.Enums.XlArabicModes ArabicModes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ArabicModes", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlArabicModes)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlArabicModes)returnItem;
 			}
 			set
 			{
@@ -354,13 +354,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlSpanishModes SpanishModes
+		public NetOffice.ExcelApi.Enums.XlSpanishModes SpanishModes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SpanishModes", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlSpanishModes)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlSpanishModes)returnItem;
 			}
 			set
 			{
@@ -373,13 +373,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlPortugueseReform PortugalReform
+		public NetOffice.ExcelApi.Enums.XlPortugueseReform PortugalReform
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PortugalReform", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlPortugueseReform)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlPortugueseReform)returnItem;
 			}
 			set
 			{
@@ -392,13 +392,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlPortugueseReform BrazilReform
+		public NetOffice.ExcelApi.Enums.XlPortugueseReform BrazilReform
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BrazilReform", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlPortugueseReform)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlPortugueseReform)returnItem;
 			}
 			set
 			{

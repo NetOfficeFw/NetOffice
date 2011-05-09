@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface MsoDebugOptions_UTManager SupportByLibrary OF12 OF14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.MsoDebugOptions_UTs UnitTests
+		public NetOffice.OfficeApi.MsoDebugOptions_UTs UnitTests
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UnitTests", paramsArray);
-				LateBindingApi.OfficeApi.MsoDebugOptions_UTs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.MsoDebugOptions_UTs;
+				NetOffice.OfficeApi.MsoDebugOptions_UTs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.MsoDebugOptions_UTs;
 				return newObject;
 			}
 		}

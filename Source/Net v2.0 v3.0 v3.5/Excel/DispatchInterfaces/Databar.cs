@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface Databar SupportByLibrary XL12 XL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -128,13 +128,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.Range AppliesTo
+		public NetOffice.ExcelApi.Range AppliesTo
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AppliesTo", paramsArray);
-				LateBindingApi.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 		}
@@ -143,13 +143,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.ConditionValue MinPoint
+		public NetOffice.ExcelApi.ConditionValue MinPoint
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MinPoint", paramsArray);
-				LateBindingApi.ExcelApi.ConditionValue newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.ConditionValue;
+				NetOffice.ExcelApi.ConditionValue newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ConditionValue;
 				return newObject;
 			}
 		}
@@ -158,13 +158,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.ConditionValue MaxPoint
+		public NetOffice.ExcelApi.ConditionValue MaxPoint
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MaxPoint", paramsArray);
-				LateBindingApi.ExcelApi.ConditionValue newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.ConditionValue;
+				NetOffice.ExcelApi.ConditionValue newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ConditionValue;
 				return newObject;
 			}
 		}
@@ -292,13 +292,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlPivotConditionScope ScopeType
+		public NetOffice.ExcelApi.Enums.XlPivotConditionScope ScopeType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScopeType", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlPivotConditionScope)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlPivotConditionScope)returnItem;
 			}
 			set
 			{
@@ -330,13 +330,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlDataBarFillType BarFillType
+		public NetOffice.ExcelApi.Enums.XlDataBarFillType BarFillType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BarFillType", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlDataBarFillType)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlDataBarFillType)returnItem;
 			}
 			set
 			{
@@ -349,13 +349,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlDataBarAxisPosition AxisPosition
+		public NetOffice.ExcelApi.Enums.XlDataBarAxisPosition AxisPosition
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AxisPosition", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlDataBarAxisPosition)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlDataBarAxisPosition)returnItem;
 			}
 			set
 			{
@@ -383,13 +383,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.DataBarBorder BarBorder
+		public NetOffice.ExcelApi.DataBarBorder BarBorder
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BarBorder", paramsArray);
-				LateBindingApi.ExcelApi.DataBarBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.DataBarBorder;
+				NetOffice.ExcelApi.DataBarBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.DataBarBorder;
 				return newObject;
 			}
 		}
@@ -398,13 +398,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.NegativeBarFormat NegativeBarFormat
+		public NetOffice.ExcelApi.NegativeBarFormat NegativeBarFormat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NegativeBarFormat", paramsArray);
-				LateBindingApi.ExcelApi.NegativeBarFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.NegativeBarFormat;
+				NetOffice.ExcelApi.NegativeBarFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.NegativeBarFormat;
 				return newObject;
 			}
 		}
@@ -446,9 +446,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="Range">LateBindingApi.ExcelApi.Range Range</param>
+		/// <param name="Range">NetOffice.ExcelApi.Range Range</param>
 		[SupportByLibrary("XL12","XL14")]
-		public void ModifyAppliesToRange(LateBindingApi.ExcelApi.Range range)
+		public void ModifyAppliesToRange(NetOffice.ExcelApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			Invoker.Method(this, "ModifyAppliesToRange", paramsArray);

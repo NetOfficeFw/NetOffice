@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PivotView SupportByLibrary XWC1.0 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotFieldSets FieldSets
+		public NetOffice.OWC10Api.PivotFieldSets FieldSets
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FieldSets", paramsArray);
-				LateBindingApi.OWC10Api.PivotFieldSets newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotFieldSets;
+				NetOffice.OWC10Api.PivotFieldSets newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotFieldSets;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotGroupAxis RowAxis
+		public NetOffice.OWC10Api.PivotGroupAxis RowAxis
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RowAxis", paramsArray);
-				LateBindingApi.OWC10Api.PivotGroupAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotGroupAxis;
+				NetOffice.OWC10Api.PivotGroupAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotGroupAxis;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotGroupAxis ColumnAxis
+		public NetOffice.OWC10Api.PivotGroupAxis ColumnAxis
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColumnAxis", paramsArray);
-				LateBindingApi.OWC10Api.PivotGroupAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotGroupAxis;
+				NetOffice.OWC10Api.PivotGroupAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotGroupAxis;
 				return newObject;
 			}
 		}
@@ -96,13 +96,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotDataAxis DataAxis
+		public NetOffice.OWC10Api.PivotDataAxis DataAxis
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataAxis", paramsArray);
-				LateBindingApi.OWC10Api.PivotDataAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotDataAxis;
+				NetOffice.OWC10Api.PivotDataAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotDataAxis;
 				return newObject;
 			}
 		}
@@ -111,13 +111,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotFilterAxis FilterAxis
+		public NetOffice.OWC10Api.PivotFilterAxis FilterAxis
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FilterAxis", paramsArray);
-				LateBindingApi.OWC10Api.PivotFilterAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotFilterAxis;
+				NetOffice.OWC10Api.PivotFilterAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotFilterAxis;
 				return newObject;
 			}
 		}
@@ -126,13 +126,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotLabel Label
+		public NetOffice.OWC10Api.PivotLabel Label
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Label", paramsArray);
-				LateBindingApi.OWC10Api.PivotLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotLabel;
+				NetOffice.OWC10Api.PivotLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotLabel;
 				return newObject;
 			}
 		}
@@ -141,13 +141,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotLabel TitleBar
+		public NetOffice.OWC10Api.PivotLabel TitleBar
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TitleBar", paramsArray);
-				LateBindingApi.OWC10Api.PivotLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotLabel;
+				NetOffice.OWC10Api.PivotLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotLabel;
 				return newObject;
 			}
 		}
@@ -156,13 +156,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotTotals Totals
+		public NetOffice.OWC10Api.PivotTotals Totals
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Totals", paramsArray);
-				LateBindingApi.OWC10Api.PivotTotals newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotTotals;
+				NetOffice.OWC10Api.PivotTotals newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotTotals;
 				return newObject;
 			}
 		}
@@ -171,13 +171,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotFont TotalFont
+		public NetOffice.OWC10Api.PivotFont TotalFont
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TotalFont", paramsArray);
-				LateBindingApi.OWC10Api.PivotFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotFont;
+				NetOffice.OWC10Api.PivotFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotFont;
 				return newObject;
 			}
 		}
@@ -242,13 +242,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotFont HeaderFont
+		public NetOffice.OWC10Api.PivotFont HeaderFont
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HeaderFont", paramsArray);
-				LateBindingApi.OWC10Api.PivotFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotFont;
+				NetOffice.OWC10Api.PivotFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotFont;
 				return newObject;
 			}
 		}
@@ -313,13 +313,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.PivotHAlignmentEnum HeaderHAlignment
+		public NetOffice.OWC10Api.Enums.PivotHAlignmentEnum HeaderHAlignment
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HeaderHAlignment", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.PivotHAlignmentEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.PivotHAlignmentEnum)returnItem;
 			}
 			set
 			{
@@ -346,13 +346,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotFont FieldLabelFont
+		public NetOffice.OWC10Api.PivotFont FieldLabelFont
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FieldLabelFont", paramsArray);
-				LateBindingApi.OWC10Api.PivotFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotFont;
+				NetOffice.OWC10Api.PivotFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotFont;
 				return newObject;
 			}
 		}
@@ -478,13 +478,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.PivotViewTotalOrientationEnum TotalOrientation
+		public NetOffice.OWC10Api.Enums.PivotViewTotalOrientationEnum TotalOrientation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TotalOrientation", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.PivotViewTotalOrientationEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.PivotViewTotalOrientationEnum)returnItem;
 			}
 			set
 			{
@@ -630,13 +630,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.PivotTableExpandEnum ExpandDetails
+		public NetOffice.OWC10Api.Enums.PivotTableExpandEnum ExpandDetails
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ExpandDetails", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.PivotTableExpandEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.PivotTableExpandEnum)returnItem;
 			}
 			set
 			{
@@ -649,13 +649,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.IPivotControl Control
+		public NetOffice.OWC10Api.IPivotControl Control
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Control", paramsArray);
-				LateBindingApi.OWC10Api.IPivotControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.IPivotControl;
+				NetOffice.OWC10Api.IPivotControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.IPivotControl;
 				return newObject;
 			}
 		}
@@ -664,13 +664,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotGroupAxis PageAxis
+		public NetOffice.OWC10Api.PivotGroupAxis PageAxis
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PageAxis", paramsArray);
-				LateBindingApi.OWC10Api.PivotGroupAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotGroupAxis;
+				NetOffice.OWC10Api.PivotGroupAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotGroupAxis;
 				return newObject;
 			}
 		}
@@ -679,13 +679,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.PivotTableExpandEnum ExpandMembers
+		public NetOffice.OWC10Api.Enums.PivotTableExpandEnum ExpandMembers
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ExpandMembers", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.PivotTableExpandEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.PivotTableExpandEnum)returnItem;
 			}
 			set
 			{
@@ -755,13 +755,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotFont PropertyCaptionFont
+		public NetOffice.OWC10Api.PivotFont PropertyCaptionFont
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PropertyCaptionFont", paramsArray);
-				LateBindingApi.OWC10Api.PivotFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotFont;
+				NetOffice.OWC10Api.PivotFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotFont;
 				return newObject;
 			}
 		}
@@ -770,13 +770,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotFont PropertyValueFont
+		public NetOffice.OWC10Api.PivotFont PropertyValueFont
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PropertyValueFont", paramsArray);
-				LateBindingApi.OWC10Api.PivotFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotFont;
+				NetOffice.OWC10Api.PivotFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotFont;
 				return newObject;
 			}
 		}
@@ -785,13 +785,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.PivotHAlignmentEnum PropertyCaptionHAlignment
+		public NetOffice.OWC10Api.Enums.PivotHAlignmentEnum PropertyCaptionHAlignment
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PropertyCaptionHAlignment", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.PivotHAlignmentEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.PivotHAlignmentEnum)returnItem;
 			}
 			set
 			{
@@ -804,13 +804,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.PivotHAlignmentEnum PropertyValueHAlignment
+		public NetOffice.OWC10Api.Enums.PivotHAlignmentEnum PropertyValueHAlignment
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PropertyValueHAlignment", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.PivotHAlignmentEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.PivotHAlignmentEnum)returnItem;
 			}
 			set
 			{
@@ -865,14 +865,14 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="Field">LateBindingApi.OWC10Api.PivotField Field</param>
-		/// <param name="Function">LateBindingApi.OWC10Api.Enums.PivotTotalFunctionEnum Function</param>
+		/// <param name="Field">NetOffice.OWC10Api.PivotField Field</param>
+		/// <param name="Function">NetOffice.OWC10Api.Enums.PivotTotalFunctionEnum Function</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotTotal AddTotal(string name, LateBindingApi.OWC10Api.PivotField field, LateBindingApi.OWC10Api.Enums.PivotTotalFunctionEnum function)
+		public NetOffice.OWC10Api.PivotTotal AddTotal(string name, NetOffice.OWC10Api.PivotField field, NetOffice.OWC10Api.Enums.PivotTotalFunctionEnum function)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, field, function);
 			object returnItem = Invoker.MethodReturn(this, "AddTotal", paramsArray);
-			LateBindingApi.OWC10Api.PivotTotal newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.PivotTotal;
+			NetOffice.OWC10Api.PivotTotal newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PivotTotal;
 			return newObject;
 		}
 
@@ -892,11 +892,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotFieldSet AddFieldSet(string name)
+		public NetOffice.OWC10Api.PivotFieldSet AddFieldSet(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "AddFieldSet", paramsArray);
-			LateBindingApi.OWC10Api.PivotFieldSet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.PivotFieldSet;
+			NetOffice.OWC10Api.PivotFieldSet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PivotFieldSet;
 			return newObject;
 		}
 
@@ -930,11 +930,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="Expression">string Expression</param>
 		/// <param name="SolveOrder">Int32 SolveOrder</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotTotal AddCalculatedTotal(string name, string caption, string expression, Int32 solveOrder)
+		public NetOffice.OWC10Api.PivotTotal AddCalculatedTotal(string name, string caption, string expression, Int32 solveOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, caption, expression, solveOrder);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedTotal", paramsArray);
-			LateBindingApi.OWC10Api.PivotTotal newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.PivotTotal;
+			NetOffice.OWC10Api.PivotTotal newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PivotTotal;
 			return newObject;
 		}
 

@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
@@ -11,14 +11,14 @@ namespace LateBindingApi.OutlookApi
 	#pragma warning disable
 	public delegate void OlkListBox_ClickEventHandler();
 	public delegate void OlkListBox_DoubleClickEventHandler();
-	public delegate void OlkListBox_MouseDownEventHandler(LateBindingApi.OutlookApi.Enums.OlMouseButton Button, LateBindingApi.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkListBox_MouseMoveEventHandler(LateBindingApi.OutlookApi.Enums.OlMouseButton Button, LateBindingApi.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkListBox_MouseUpEventHandler(LateBindingApi.OutlookApi.Enums.OlMouseButton Button, LateBindingApi.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkListBox_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkListBox_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkListBox_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
 	public delegate void OlkListBox_EnterEventHandler();
 	public delegate void OlkListBox_ExitEventHandler(ref bool Cancel);
-	public delegate void OlkListBox_KeyDownEventHandler(ref Int32 KeyCode, LateBindingApi.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkListBox_KeyDownEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
 	public delegate void OlkListBox_KeyPressEventHandler(ref Int32 KeyAscii);
-	public delegate void OlkListBox_KeyUpEventHandler(ref Int32 KeyCode, LateBindingApi.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkListBox_KeyUpEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
 	public delegate void OlkListBox_ChangeEventHandler();
 	public delegate void OlkListBox_AfterUpdateEventHandler();
 	public delegate void OlkListBox_BeforeUpdateEventHandler(ref bool Cancel);

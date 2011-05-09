@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface Reference SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.References Collection
+		public NetOffice.AccessApi.References Collection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Collection", paramsArray);
-				LateBindingApi.AccessApi.References newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.References;
+				NetOffice.AccessApi.References newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.References;
 				return newObject;
 			}
 		}
@@ -164,13 +164,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.VBIDEApi.Enums.vbext_RefKind Kind
+		public NetOffice.VBIDEApi.Enums.vbext_RefKind Kind
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Kind", paramsArray);
-				return (LateBindingApi.VBIDEApi.Enums.vbext_RefKind)returnItem;
+				return (NetOffice.VBIDEApi.Enums.vbext_RefKind)returnItem;
 			}
 		}
 

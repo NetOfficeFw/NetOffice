@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _SmartTag SupportByLibrary AC11 AC12 AC14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Application Application
+		public NetOffice.AccessApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi._SmartTagProperties Properties
+		public NetOffice.AccessApi._SmartTagProperties Properties
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				LateBindingApi.AccessApi._SmartTagProperties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi._SmartTagProperties;
+				NetOffice.AccessApi._SmartTagProperties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._SmartTagProperties;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi._SmartTagActions SmartTagActions
+		public NetOffice.AccessApi._SmartTagActions SmartTagActions
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmartTagActions", paramsArray);
-				LateBindingApi.AccessApi._SmartTagActions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi._SmartTagActions;
+				NetOffice.AccessApi._SmartTagActions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._SmartTagActions;
 				return newObject;
 			}
 		}

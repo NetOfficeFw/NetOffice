@@ -7,13 +7,13 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _Form3 SupportByLibrary AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC12","AC14")]
-	public class _Form3 : LateBindingApi.OfficeApi.IAccessible ,IEnumerable
+	public class _Form3 : NetOffice.OfficeApi.IAccessible ,IEnumerable
 	{
 		#pragma warning disable
 		#region Construction
@@ -2879,13 +2879,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Application Application
+		public NetOffice.AccessApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}
@@ -2923,13 +2923,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Control ActiveControl
+		public NetOffice.AccessApi.Control ActiveControl
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveControl", paramsArray);
-				LateBindingApi.AccessApi.Control newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Control;
+				NetOffice.AccessApi.Control newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Control;
 				return newObject;
 			}
 		}
@@ -2939,11 +2939,11 @@ namespace LateBindingApi.AccessApi
 		/// </summary>
 		/// <param name="ControlType">Int32 ControlType</param>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Control get_DefaultControl(Int32 controlType)
+		public NetOffice.AccessApi.Control get_DefaultControl(Int32 controlType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(controlType);
 			object returnItem = Invoker.PropertyGet(this, "DefaultControl", paramsArray);
-			LateBindingApi.AccessApi.Control newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Control;
+			NetOffice.AccessApi.Control newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Control;
 			return newObject;
 		}
 
@@ -3002,11 +3002,11 @@ namespace LateBindingApi.AccessApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("AC12")]
-		public LateBindingApi.AccessApi.Section get__SectionOld(object index)
+		public NetOffice.AccessApi.Section get__SectionOld(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_SectionOld", paramsArray);
-			LateBindingApi.AccessApi.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Section;
+			NetOffice.AccessApi.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Section;
 			return newObject;
 		}
 
@@ -3014,13 +3014,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Form Form
+		public NetOffice.AccessApi.Form Form
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Form", paramsArray);
-				LateBindingApi.AccessApi.Form newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Form;
+				NetOffice.AccessApi.Form newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Form;
 				return newObject;
 			}
 		}
@@ -3029,13 +3029,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Module Module
+		public NetOffice.AccessApi.Module Module
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Module", paramsArray);
-				LateBindingApi.AccessApi.Module newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Module;
+				NetOffice.AccessApi.Module newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Module;
 				return newObject;
 			}
 		}
@@ -3044,13 +3044,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Properties Properties
+		public NetOffice.AccessApi.Properties Properties
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				LateBindingApi.AccessApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Properties;
+				NetOffice.AccessApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Properties;
 				return newObject;
 			}
 		}
@@ -3059,13 +3059,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Control ConnectControl
+		public NetOffice.AccessApi.Control ConnectControl
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ConnectControl", paramsArray);
-				LateBindingApi.AccessApi.Control newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Control;
+				NetOffice.AccessApi.Control newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Control;
 				return newObject;
 			}
 		}
@@ -3074,13 +3074,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Controls Controls
+		public NetOffice.AccessApi.Controls Controls
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Controls", paramsArray);
-				LateBindingApi.AccessApi.Controls newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Controls;
+				NetOffice.AccessApi.Controls newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Controls;
 				return newObject;
 			}
 		}
@@ -3318,13 +3318,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi._Printer Printer
+		public NetOffice.AccessApi._Printer Printer
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Printer", paramsArray);
-				LateBindingApi.AccessApi._Printer newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi._Printer;
+				NetOffice.AccessApi._Printer newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._Printer;
 				return newObject;
 			}
 			set
@@ -4079,13 +4079,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcSplitFormOrientation SplitFormOrientation
+		public NetOffice.AccessApi.Enums.AcSplitFormOrientation SplitFormOrientation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SplitFormOrientation", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcSplitFormOrientation)returnItem;
+				return (NetOffice.AccessApi.Enums.AcSplitFormOrientation)returnItem;
 			}
 			set
 			{
@@ -4098,13 +4098,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcSplitFormDatasheet SplitFormDatasheet
+		public NetOffice.AccessApi.Enums.AcSplitFormDatasheet SplitFormDatasheet
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SplitFormDatasheet", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcSplitFormDatasheet)returnItem;
+				return (NetOffice.AccessApi.Enums.AcSplitFormDatasheet)returnItem;
 			}
 			set
 			{
@@ -4136,13 +4136,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcSplitFormPrinting SplitFormPrinting
+		public NetOffice.AccessApi.Enums.AcSplitFormPrinting SplitFormPrinting
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SplitFormPrinting", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcSplitFormPrinting)returnItem;
+				return (NetOffice.AccessApi.Enums.AcSplitFormPrinting)returnItem;
 			}
 			set
 			{
@@ -5372,11 +5372,11 @@ namespace LateBindingApi.AccessApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi._Section get_Section(object index)
+		public NetOffice.AccessApi._Section get_Section(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Section", paramsArray);
-			LateBindingApi.AccessApi._Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi._Section;
+			NetOffice.AccessApi._Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._Section;
 			return newObject;
 		}
 
@@ -5423,11 +5423,11 @@ namespace LateBindingApi.AccessApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("AC14")]
-		public LateBindingApi.AccessApi.Section get_SectionOld(object index)
+		public NetOffice.AccessApi.Section get_SectionOld(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "SectionOld", paramsArray);
-			LateBindingApi.AccessApi.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Section;
+			NetOffice.AccessApi.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Section;
 			return newObject;
 		}
 

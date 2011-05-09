@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _Hyperlink SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -162,10 +162,10 @@ namespace LateBindingApi.AccessApi
 		/// <param name="NewWindow">bool NewWindow</param>
 		/// <param name="AddHistory">bool AddHistory</param>
 		/// <param name="ExtraInfo">object ExtraInfo</param>
-		/// <param name="Method">LateBindingApi.OfficeApi.Enums.MsoExtraInfoMethod Method</param>
+		/// <param name="Method">NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method</param>
 		/// <param name="HeaderInfo">string HeaderInfo</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void Follow(bool newWindow, bool addHistory, object extraInfo, LateBindingApi.OfficeApi.Enums.MsoExtraInfoMethod method, string headerInfo)
+		public void Follow(bool newWindow, bool addHistory, object extraInfo, NetOffice.OfficeApi.Enums.MsoExtraInfoMethod method, string headerInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method, headerInfo);
 			Invoker.Method(this, "Follow", paramsArray);

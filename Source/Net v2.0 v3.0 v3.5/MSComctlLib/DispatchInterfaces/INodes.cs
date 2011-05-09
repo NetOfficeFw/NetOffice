@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface INodes SupportByLibrary WCC6.0 
@@ -72,17 +72,22 @@ namespace LateBindingApi.MSComctlLibApi
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.INode get_ControlDefault(ref object index)
+		public NetOffice.MSComctlLibApi.INode get_ControlDefault(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.INode;
+			NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
 			index = (object)paramsArray[0];
 			return newObject;
 		}
 
-		public void set_ControlDefault(ref object index, LateBindingApi.MSComctlLibApi.INode value)
+		/// <summary>
+		/// SupportByLibrary WCC6.0 
+		/// </summary>
+		/// <param name="Index">ref object Index</param>
+		[SupportByLibrary("WCC6.0")]
+		public void set_ControlDefault(ref object index, NetOffice.MSComctlLibApi.INode value)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -95,17 +100,22 @@ namespace LateBindingApi.MSComctlLibApi
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.INode get_Item(ref object index)
+		public NetOffice.MSComctlLibApi.INode get_Item(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.INode;
+			NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
 			index = (object)paramsArray[0];
 			return newObject;
 		}
 
-		public void set_Item(ref object index, LateBindingApi.MSComctlLibApi.INode value)
+		/// <summary>
+		/// SupportByLibrary WCC6.0 
+		/// </summary>
+		/// <param name="Index">ref object Index</param>
+		[SupportByLibrary("WCC6.0")]
+		public void set_Item(ref object index, NetOffice.MSComctlLibApi.INode value)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -127,12 +137,12 @@ namespace LateBindingApi.MSComctlLibApi
 		/// <param name="Image">ref optional object Image</param>
 		/// <param name="SelectedImage">ref optional object SelectedImage</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.INode Add(ref object relative, ref object relationship, ref object key, ref object text, ref object image, ref object selectedImage)
+		public NetOffice.MSComctlLibApi.INode Add(ref object relative, ref object relationship, ref object key, ref object text, ref object image, ref object selectedImage)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship, key, text, image, selectedImage);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.MSComctlLibApi.INode;
+			NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.INode;
 			relative = (object)paramsArray[0];
 			relationship = (object)paramsArray[1];
 			key = (object)paramsArray[2];
@@ -146,11 +156,11 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.INode Add()
+		public NetOffice.MSComctlLibApi.INode Add()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.MSComctlLibApi.INode;
+			NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.INode;
 			return newObject;
 		}
 

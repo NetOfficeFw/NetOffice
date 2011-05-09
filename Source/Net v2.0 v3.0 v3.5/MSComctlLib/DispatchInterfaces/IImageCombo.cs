@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IImageCombo SupportByLibrary WCC6.0 
@@ -205,13 +205,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IComboItems ComboItems
+		public NetOffice.MSComctlLibApi.IComboItems ComboItems
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ComboItems", paramsArray);
-				LateBindingApi.MSComctlLibApi.IComboItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.IComboItems;
+				NetOffice.MSComctlLibApi.IComboItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItems;
 				return newObject;
 			}
 			set
@@ -264,13 +264,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.MousePointerConstants MousePointer
+		public NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MousePointer", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.MousePointerConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.MousePointerConstants)returnItem;
 			}
 			set
 			{
@@ -283,13 +283,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.OLEDragConstants OLEDragMode
+		public NetOffice.MSComctlLibApi.Enums.OLEDragConstants OLEDragMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OLEDragMode", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.OLEDragConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.OLEDragConstants)returnItem;
 			}
 			set
 			{
@@ -302,13 +302,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
+		public NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OLEDropMode", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.OLEDropConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.OLEDropConstants)returnItem;
 			}
 			set
 			{
@@ -321,13 +321,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IComboItem SelectedItem
+		public NetOffice.MSComctlLibApi.IComboItem SelectedItem
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SelectedItem", paramsArray);
-				LateBindingApi.MSComctlLibApi.IComboItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.IComboItem;
+				NetOffice.MSComctlLibApi.IComboItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
 				return newObject;
 			}
 			set
@@ -398,13 +398,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.ImageComboStyleConstants Style
+		public NetOffice.MSComctlLibApi.Enums.ImageComboStyleConstants Style
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.ImageComboStyleConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.ImageComboStyleConstants)returnItem;
 			}
 			set
 			{
@@ -450,11 +450,11 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IComboItem GetFirstVisible()
+		public NetOffice.MSComctlLibApi.IComboItem GetFirstVisible()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetFirstVisible", paramsArray);
-			LateBindingApi.MSComctlLibApi.IComboItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.MSComctlLibApi.IComboItem;
+			NetOffice.MSComctlLibApi.IComboItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IComboItem;
 			return newObject;
 		}
 

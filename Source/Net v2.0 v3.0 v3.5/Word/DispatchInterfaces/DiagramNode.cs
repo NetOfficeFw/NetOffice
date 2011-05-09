@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface DiagramNode SupportByLibrary WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.DiagramNodeChildren Children
+		public NetOffice.WordApi.DiagramNodeChildren Children
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Children", paramsArray);
-				LateBindingApi.WordApi.DiagramNodeChildren newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.DiagramNodeChildren;
+				NetOffice.WordApi.DiagramNodeChildren newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.DiagramNodeChildren;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Shape Shape
+		public NetOffice.WordApi.Shape Shape
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shape", paramsArray);
-				LateBindingApi.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Shape;
+				NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Shape;
 				return newObject;
 			}
 		}
@@ -125,13 +125,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.DiagramNode Root
+		public NetOffice.WordApi.DiagramNode Root
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Root", paramsArray);
-				LateBindingApi.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.DiagramNode;
+				NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.DiagramNode;
 				return newObject;
 			}
 		}
@@ -140,13 +140,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Diagram Diagram
+		public NetOffice.WordApi.Diagram Diagram
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Diagram", paramsArray);
-				LateBindingApi.WordApi.Diagram newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Diagram;
+				NetOffice.WordApi.Diagram newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Diagram;
 				return newObject;
 			}
 		}
@@ -155,13 +155,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.OfficeApi.Enums.MsoOrgChartLayoutType Layout
+		public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType Layout
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Layout", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoOrgChartLayoutType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType)returnItem;
 			}
 			set
 			{
@@ -174,13 +174,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Shape TextShape
+		public NetOffice.WordApi.Shape TextShape
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextShape", paramsArray);
-				LateBindingApi.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Shape;
+				NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Shape;
 				return newObject;
 			}
 		}
@@ -192,14 +192,14 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Pos">LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
-		/// <param name="NodeType">LateBindingApi.OfficeApi.Enums.MsoDiagramNodeType NodeType</param>
+		/// <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
+		/// <param name="NodeType">NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.DiagramNode AddNode(LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos, LateBindingApi.OfficeApi.Enums.MsoDiagramNodeType nodeType)
+		public NetOffice.WordApi.DiagramNode AddNode(NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos, NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			LateBindingApi.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.DiagramNode;
+			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.DiagramNode;
 			return newObject;
 		}
 
@@ -216,83 +216,83 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="TargetNode">ref LateBindingApi.WordApi.DiagramNode TargetNode</param>
-		/// <param name="Pos">LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
+		/// <param name="TargetNode">ref NetOffice.WordApi.DiagramNode TargetNode</param>
+		/// <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void MoveNode(ref LateBindingApi.WordApi.DiagramNode targetNode, LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public void MoveNode(ref NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode, pos);
 			Invoker.Method(this, "MoveNode", paramsArray, modifiers);
-			targetNode = (LateBindingApi.WordApi.DiagramNode)paramsArray[0];
+			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="TargetNode">ref LateBindingApi.WordApi.DiagramNode TargetNode</param>
+		/// <param name="TargetNode">ref NetOffice.WordApi.DiagramNode TargetNode</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void ReplaceNode(ref LateBindingApi.WordApi.DiagramNode targetNode)
+		public void ReplaceNode(ref NetOffice.WordApi.DiagramNode targetNode)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode);
 			Invoker.Method(this, "ReplaceNode", paramsArray, modifiers);
-			targetNode = (LateBindingApi.WordApi.DiagramNode)paramsArray[0];
+			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="TargetNode">ref LateBindingApi.WordApi.DiagramNode TargetNode</param>
-		/// <param name="Pos">LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
+		/// <param name="TargetNode">ref NetOffice.WordApi.DiagramNode TargetNode</param>
+		/// <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void SwapNode(ref LateBindingApi.WordApi.DiagramNode targetNode, LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public void SwapNode(ref NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode, pos);
 			Invoker.Method(this, "SwapNode", paramsArray, modifiers);
-			targetNode = (LateBindingApi.WordApi.DiagramNode)paramsArray[0];
+			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		/// <param name="copyChildren">bool copyChildren</param>
-		/// <param name="TargetNode">ref LateBindingApi.WordApi.DiagramNode TargetNode</param>
-		/// <param name="Pos">LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
+		/// <param name="TargetNode">ref NetOffice.WordApi.DiagramNode TargetNode</param>
+		/// <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.DiagramNode CloneNode(bool copyChildren, ref LateBindingApi.WordApi.DiagramNode targetNode, LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public NetOffice.WordApi.DiagramNode CloneNode(bool copyChildren, ref NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode, pos);
 			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray, modifiers);
-			LateBindingApi.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.DiagramNode;
-			targetNode = (LateBindingApi.WordApi.DiagramNode)paramsArray[1];
+			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.DiagramNode;
+			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[1];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="ReceivingNode">ref LateBindingApi.WordApi.DiagramNode ReceivingNode</param>
+		/// <param name="ReceivingNode">ref NetOffice.WordApi.DiagramNode ReceivingNode</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void TransferChildren(ref LateBindingApi.WordApi.DiagramNode receivingNode)
+		public void TransferChildren(ref NetOffice.WordApi.DiagramNode receivingNode)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(receivingNode);
 			Invoker.Method(this, "TransferChildren", paramsArray, modifiers);
-			receivingNode = (LateBindingApi.WordApi.DiagramNode)paramsArray[0];
+			receivingNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.DiagramNode NextNode()
+		public NetOffice.WordApi.DiagramNode NextNode()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NextNode", paramsArray);
-			LateBindingApi.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.DiagramNode;
+			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.DiagramNode;
 			return newObject;
 		}
 
@@ -300,11 +300,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.DiagramNode PrevNode()
+		public NetOffice.WordApi.DiagramNode PrevNode()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "PrevNode", paramsArray);
-			LateBindingApi.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.DiagramNode;
+			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.DiagramNode;
 			return newObject;
 		}
 

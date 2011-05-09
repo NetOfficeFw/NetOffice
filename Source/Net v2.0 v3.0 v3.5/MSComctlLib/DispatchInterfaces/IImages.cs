@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IImages SupportByLibrary WCC6.0 
@@ -72,17 +72,22 @@ namespace LateBindingApi.MSComctlLibApi
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IImage get_ControlDefault(ref object index)
+		public NetOffice.MSComctlLibApi.IImage get_ControlDefault(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.IImage;
+			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
 			index = (object)paramsArray[0];
 			return newObject;
 		}
 
-		public void set_ControlDefault(ref object index, LateBindingApi.MSComctlLibApi.IImage value)
+		/// <summary>
+		/// SupportByLibrary WCC6.0 
+		/// </summary>
+		/// <param name="Index">ref object Index</param>
+		[SupportByLibrary("WCC6.0")]
+		public void set_ControlDefault(ref object index, NetOffice.MSComctlLibApi.IImage value)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -95,17 +100,22 @@ namespace LateBindingApi.MSComctlLibApi
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IImage get_Item(ref object index)
+		public NetOffice.MSComctlLibApi.IImage get_Item(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.IImage;
+			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
 			index = (object)paramsArray[0];
 			return newObject;
 		}
 
-		public void set_Item(ref object index, LateBindingApi.MSComctlLibApi.IImage value)
+		/// <summary>
+		/// SupportByLibrary WCC6.0 
+		/// </summary>
+		/// <param name="Index">ref object Index</param>
+		[SupportByLibrary("WCC6.0")]
+		public void set_Item(ref object index, NetOffice.MSComctlLibApi.IImage value)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -124,12 +134,12 @@ namespace LateBindingApi.MSComctlLibApi
 		/// <param name="Key">ref optional object Key</param>
 		/// <param name="Picture">ref optional object Picture</param>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IImage Add(ref object index, ref object key, ref object picture)
+		public NetOffice.MSComctlLibApi.IImage Add(ref object index, ref object key, ref object picture)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, picture);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.MSComctlLibApi.IImage;
+			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IImage;
 			index = (object)paramsArray[0];
 			key = (object)paramsArray[1];
 			picture = (object)paramsArray[2];
@@ -140,11 +150,11 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IImage Add()
+		public NetOffice.MSComctlLibApi.IImage Add()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.MSComctlLibApi.IImage;
+			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IImage;
 			return newObject;
 		}
 

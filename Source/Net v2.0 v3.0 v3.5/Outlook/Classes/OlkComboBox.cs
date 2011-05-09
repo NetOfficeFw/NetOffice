@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
@@ -11,14 +11,14 @@ namespace LateBindingApi.OutlookApi
 	#pragma warning disable
 	public delegate void OlkComboBox_ClickEventHandler();
 	public delegate void OlkComboBox_DoubleClickEventHandler();
-	public delegate void OlkComboBox_MouseDownEventHandler(LateBindingApi.OutlookApi.Enums.OlMouseButton Button, LateBindingApi.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkComboBox_MouseMoveEventHandler(LateBindingApi.OutlookApi.Enums.OlMouseButton Button, LateBindingApi.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkComboBox_MouseUpEventHandler(LateBindingApi.OutlookApi.Enums.OlMouseButton Button, LateBindingApi.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkComboBox_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkComboBox_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkComboBox_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
 	public delegate void OlkComboBox_EnterEventHandler();
 	public delegate void OlkComboBox_ExitEventHandler(ref bool Cancel);
-	public delegate void OlkComboBox_KeyDownEventHandler(ref Int32 KeyCode, LateBindingApi.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkComboBox_KeyDownEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
 	public delegate void OlkComboBox_KeyPressEventHandler(ref Int32 KeyAscii);
-	public delegate void OlkComboBox_KeyUpEventHandler(ref Int32 KeyCode, LateBindingApi.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkComboBox_KeyUpEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
 	public delegate void OlkComboBox_ChangeEventHandler();
 	public delegate void OlkComboBox_DropButtonClickEventHandler();
 	public delegate void OlkComboBox_AfterUpdateEventHandler();

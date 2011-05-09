@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface MetaProperty SupportByLibrary OF12 OF14 
@@ -135,13 +135,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoMetaPropertyType Type
+		public NetOffice.OfficeApi.Enums.MsoMetaPropertyType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoMetaPropertyType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoMetaPropertyType)returnItem;
 			}
 		}
 

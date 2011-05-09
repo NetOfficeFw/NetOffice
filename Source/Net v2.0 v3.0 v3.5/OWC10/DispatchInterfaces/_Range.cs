@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface _Range SupportByLibrary XWC1.0 
@@ -79,11 +79,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="RowAbsolute">ref object RowAbsolute</param>
 		/// <param name="ColumnAbsolute">ref object ColumnAbsolute</param>
-		/// <param name="ReferenceStyle">LateBindingApi.OWC10Api.Enums.XlReferenceStyle ReferenceStyle</param>
+		/// <param name="ReferenceStyle">NetOffice.OWC10Api.Enums.XlReferenceStyle ReferenceStyle</param>
 		/// <param name="External">ref optional object External</param>
 		/// <param name="RelativeTo">ref optional object RelativeTo</param>
 		[SupportByLibrary("XWC1.0")]
-		public string get_Address(ref object rowAbsolute, ref object columnAbsolute, LateBindingApi.OWC10Api.Enums.XlReferenceStyle referenceStyle, ref object external, ref object relativeTo)
+		public string get_Address(ref object rowAbsolute, ref object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle, ref object external, ref object relativeTo)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
@@ -100,9 +100,9 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="RowAbsolute">ref object RowAbsolute</param>
 		/// <param name="ColumnAbsolute">ref object ColumnAbsolute</param>
-		/// <param name="ReferenceStyle">LateBindingApi.OWC10Api.Enums.XlReferenceStyle ReferenceStyle</param>
+		/// <param name="ReferenceStyle">NetOffice.OWC10Api.Enums.XlReferenceStyle ReferenceStyle</param>
 		[SupportByLibrary("XWC1.0")]
-		public string get_Address(ref object rowAbsolute, ref object columnAbsolute, LateBindingApi.OWC10Api.Enums.XlReferenceStyle referenceStyle)
+		public string get_Address(ref object rowAbsolute, ref object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle);
@@ -116,13 +116,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ISpreadsheet Application
+		public NetOffice.OWC10Api.ISpreadsheet Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.OWC10Api.ISpreadsheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ISpreadsheet;
+				NetOffice.OWC10Api.ISpreadsheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ISpreadsheet;
 				return newObject;
 			}
 		}
@@ -131,13 +131,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Borders Borders
+		public NetOffice.OWC10Api.Borders Borders
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Borders", paramsArray);
-				LateBindingApi.OWC10Api.Borders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.Borders;
+				NetOffice.OWC10Api.Borders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Borders;
 				return newObject;
 			}
 		}
@@ -146,13 +146,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range Cells
+		public NetOffice.OWC10Api._Range Cells
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Cells", paramsArray);
-				LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+				NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 				return newObject;
 			}
 		}
@@ -175,13 +175,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range Columns
+		public NetOffice.OWC10Api._Range Columns
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Columns", paramsArray);
-				LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+				NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 				return newObject;
 			}
 		}
@@ -232,13 +232,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range CurrentArray
+		public NetOffice.OWC10Api._Range CurrentArray
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CurrentArray", paramsArray);
-				LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+				NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 				return newObject;
 			}
 		}
@@ -247,13 +247,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range CurrentRegion
+		public NetOffice.OWC10Api._Range CurrentRegion
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CurrentRegion", paramsArray);
-				LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+				NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 				return newObject;
 			}
 		}
@@ -261,13 +261,13 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Direction">LateBindingApi.OWC10Api.Enums.XlDirection Direction</param>
+		/// <param name="Direction">NetOffice.OWC10Api.Enums.XlDirection Direction</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range get_End(LateBindingApi.OWC10Api.Enums.XlDirection direction)
+		public NetOffice.OWC10Api._Range get_End(NetOffice.OWC10Api.Enums.XlDirection direction)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(direction);
 			object returnItem = Invoker.PropertyGet(this, "End", paramsArray);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 			return newObject;
 		}
 
@@ -275,13 +275,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range EntireColumn
+		public NetOffice.OWC10Api._Range EntireColumn
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EntireColumn", paramsArray);
-				LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+				NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 				return newObject;
 			}
 		}
@@ -290,13 +290,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range EntireRow
+		public NetOffice.OWC10Api._Range EntireRow
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EntireRow", paramsArray);
-				LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+				NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 				return newObject;
 			}
 		}
@@ -305,13 +305,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Font Font
+		public NetOffice.OWC10Api.Font Font
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				LateBindingApi.OWC10Api.Font newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.Font;
+				NetOffice.OWC10Api.Font newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Font;
 				return newObject;
 			}
 		}
@@ -534,13 +534,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Hyperlink Hyperlink
+		public NetOffice.OWC10Api.Hyperlink Hyperlink
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Hyperlink", paramsArray);
-				LateBindingApi.OWC10Api.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.Hyperlink;
+				NetOffice.OWC10Api.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Hyperlink;
 				return newObject;
 			}
 		}
@@ -549,13 +549,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Interior Interior
+		public NetOffice.OWC10Api.Interior Interior
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Interior", paramsArray);
-				LateBindingApi.OWC10Api.Interior newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.Interior;
+				NetOffice.OWC10Api.Interior newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Interior;
 				return newObject;
 			}
 		}
@@ -566,11 +566,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="RowIndex">object RowIndex</param>
 		/// <param name="ColumnIndex">optional object ColumnIndex</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range get_Item(object rowIndex, object columnIndex)
+		public NetOffice.OWC10Api._Range get_Item(object rowIndex, object columnIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex, columnIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 			return newObject;
 		}
 
@@ -579,11 +579,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="RowIndex">object RowIndex</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range get_Item(object rowIndex)
+		public NetOffice.OWC10Api._Range get_Item(object rowIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 			return newObject;
 		}
 
@@ -642,13 +642,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range MergeArea
+		public NetOffice.OWC10Api._Range MergeArea
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MergeArea", paramsArray);
-				LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+				NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 				return newObject;
 			}
 		}
@@ -685,13 +685,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Name Name
+		public NetOffice.OWC10Api.Name Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				LateBindingApi.OWC10Api.Name newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.Name;
+				NetOffice.OWC10Api.Name newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Name;
 				return newObject;
 			}
 			set
@@ -705,13 +705,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range Next
+		public NetOffice.OWC10Api._Range Next
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Next", paramsArray);
-				LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+				NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 				return newObject;
 			}
 		}
@@ -750,11 +750,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="RowOffset">optional object RowOffset</param>
 		/// <param name="ColumnOffset">optional object ColumnOffset</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range get_Offset(object rowOffset, object columnOffset)
+		public NetOffice.OWC10Api._Range get_Offset(object rowOffset, object columnOffset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowOffset, columnOffset);
 			object returnItem = Invoker.PropertyGet(this, "Offset", paramsArray);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 			return newObject;
 		}
 
@@ -762,13 +762,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range Offset
+		public NetOffice.OWC10Api._Range Offset
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Offset", paramsArray);
-				LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+				NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 				return newObject;
 			}
 		}
@@ -777,13 +777,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Worksheet Parent
+		public NetOffice.OWC10Api.Worksheet Parent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				LateBindingApi.OWC10Api.Worksheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.Worksheet;
+				NetOffice.OWC10Api.Worksheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Worksheet;
 				return newObject;
 			}
 		}
@@ -815,13 +815,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range Previous
+		public NetOffice.OWC10Api._Range Previous
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Previous", paramsArray);
-				LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+				NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 				return newObject;
 			}
 		}
@@ -832,11 +832,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="Cell1">object Cell1</param>
 		/// <param name="Cell2">optional object Cell2</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range get_Range(object cell1, object cell2)
+		public NetOffice.OWC10Api._Range get_Range(object cell1, object cell2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cell1, cell2);
 			object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 			return newObject;
 		}
 
@@ -845,11 +845,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Cell1">object Cell1</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range get_Range(object cell1)
+		public NetOffice.OWC10Api._Range get_Range(object cell1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cell1);
 			object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 			return newObject;
 		}
 
@@ -927,13 +927,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range Rows
+		public NetOffice.OWC10Api._Range Rows
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Rows", paramsArray);
-				LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api._Range;
+				NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 				return newObject;
 			}
 		}
@@ -1061,6 +1061,11 @@ namespace LateBindingApi.OWC10Api
 			}
 		}
 
+		/// <summary>
+		/// SupportByLibrary XWC1.0 
+		/// </summary>
+		/// <param name="RangeValueDataType">optional object RangeValueDataType</param>
+		[SupportByLibrary("XWC1.0")]
 		public void set_Value(object rangeValueDataType, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rangeValueDataType);
@@ -1178,13 +1183,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Worksheet Worksheet
+		public NetOffice.OWC10Api.Worksheet Worksheet
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Worksheet", paramsArray);
-				LateBindingApi.OWC10Api.Worksheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.Worksheet;
+				NetOffice.OWC10Api.Worksheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Worksheet;
 				return newObject;
 			}
 		}
@@ -1248,11 +1253,11 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="LineStyle">object LineStyle</param>
-		/// <param name="Weight">LateBindingApi.OWC10Api.Enums.XlBorderWeight Weight</param>
-		/// <param name="ColorIndex">LateBindingApi.OWC10Api.Enums.XlColorIndex ColorIndex</param>
+		/// <param name="Weight">NetOffice.OWC10Api.Enums.XlBorderWeight Weight</param>
+		/// <param name="ColorIndex">NetOffice.OWC10Api.Enums.XlColorIndex ColorIndex</param>
 		/// <param name="Color">optional object Color</param>
 		[SupportByLibrary("XWC1.0")]
-		public void BorderAround(object lineStyle, LateBindingApi.OWC10Api.Enums.XlBorderWeight weight, LateBindingApi.OWC10Api.Enums.XlColorIndex colorIndex, object color)
+		public void BorderAround(object lineStyle, NetOffice.OWC10Api.Enums.XlBorderWeight weight, NetOffice.OWC10Api.Enums.XlColorIndex colorIndex, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color);
 			Invoker.Method(this, "BorderAround", paramsArray);
@@ -1262,10 +1267,10 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="LineStyle">object LineStyle</param>
-		/// <param name="Weight">LateBindingApi.OWC10Api.Enums.XlBorderWeight Weight</param>
-		/// <param name="ColorIndex">LateBindingApi.OWC10Api.Enums.XlColorIndex ColorIndex</param>
+		/// <param name="Weight">NetOffice.OWC10Api.Enums.XlBorderWeight Weight</param>
+		/// <param name="ColorIndex">NetOffice.OWC10Api.Enums.XlColorIndex ColorIndex</param>
 		[SupportByLibrary("XWC1.0")]
-		public void BorderAround(object lineStyle, LateBindingApi.OWC10Api.Enums.XlBorderWeight weight, LateBindingApi.OWC10Api.Enums.XlColorIndex colorIndex)
+		public void BorderAround(object lineStyle, NetOffice.OWC10Api.Enums.XlBorderWeight weight, NetOffice.OWC10Api.Enums.XlColorIndex colorIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex);
 			Invoker.Method(this, "BorderAround", paramsArray);
@@ -1430,16 +1435,16 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="LookIn">ref object LookIn</param>
 		/// <param name="LookAt">ref object LookAt</param>
 		/// <param name="SearchOrder">ref object SearchOrder</param>
-		/// <param name="SearchDirection">LateBindingApi.OWC10Api.Enums.XlSearchDirection SearchDirection</param>
+		/// <param name="SearchDirection">NetOffice.OWC10Api.Enums.XlSearchDirection SearchDirection</param>
 		/// <param name="MatchCase">ref optional object MatchCase</param>
 		/// <param name="MatchByte">ref optional object MatchByte</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range Find(object what, ref object after, ref object lookIn, ref object lookAt, ref object searchOrder, LateBindingApi.OWC10Api.Enums.XlSearchDirection searchDirection, ref object matchCase, ref object matchByte)
+		public NetOffice.OWC10Api._Range Find(object what, ref object after, ref object lookIn, ref object lookAt, ref object searchOrder, NetOffice.OWC10Api.Enums.XlSearchDirection searchDirection, ref object matchCase, ref object matchByte)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray, modifiers);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
 			after = (object)paramsArray[1];
 			lookIn = (object)paramsArray[2];
 			lookAt = (object)paramsArray[3];
@@ -1457,14 +1462,14 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="LookIn">ref object LookIn</param>
 		/// <param name="LookAt">ref object LookAt</param>
 		/// <param name="SearchOrder">ref object SearchOrder</param>
-		/// <param name="SearchDirection">LateBindingApi.OWC10Api.Enums.XlSearchDirection SearchDirection</param>
+		/// <param name="SearchDirection">NetOffice.OWC10Api.Enums.XlSearchDirection SearchDirection</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range Find(object what, ref object after, ref object lookIn, ref object lookAt, ref object searchOrder, LateBindingApi.OWC10Api.Enums.XlSearchDirection searchDirection)
+		public NetOffice.OWC10Api._Range Find(object what, ref object after, ref object lookIn, ref object lookAt, ref object searchOrder, NetOffice.OWC10Api.Enums.XlSearchDirection searchDirection)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray, modifiers);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
 			after = (object)paramsArray[1];
 			lookIn = (object)paramsArray[2];
 			lookAt = (object)paramsArray[3];
@@ -1477,12 +1482,12 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="After">ref optional object After</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range FindNext(ref object after)
+		public NetOffice.OWC10Api._Range FindNext(ref object after)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(after);
 			object returnItem = Invoker.MethodReturn(this, "FindNext", paramsArray, modifiers);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
 			after = (object)paramsArray[0];
 			return newObject;
 		}
@@ -1491,11 +1496,11 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range FindNext()
+		public NetOffice.OWC10Api._Range FindNext()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "FindNext", paramsArray);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
 			return newObject;
 		}
 
@@ -1504,12 +1509,12 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="After">ref optional object After</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range FindPrevious(ref object after)
+		public NetOffice.OWC10Api._Range FindPrevious(ref object after)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(after);
 			object returnItem = Invoker.MethodReturn(this, "FindPrevious", paramsArray, modifiers);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
 			after = (object)paramsArray[0];
 			return newObject;
 		}
@@ -1518,11 +1523,11 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api._Range FindPrevious()
+		public NetOffice.OWC10Api._Range FindPrevious()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "FindPrevious", paramsArray);
-			LateBindingApi.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
 			return newObject;
 		}
 
@@ -1634,10 +1639,10 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="ColumnKey">Int32 ColumnKey</param>
-		/// <param name="Order">LateBindingApi.OWC10Api.Enums.XlSortOrder Order</param>
-		/// <param name="Header">LateBindingApi.OWC10Api.Enums.XlYesNoGuess Header</param>
+		/// <param name="Order">NetOffice.OWC10Api.Enums.XlSortOrder Order</param>
+		/// <param name="Header">NetOffice.OWC10Api.Enums.XlYesNoGuess Header</param>
 		[SupportByLibrary("XWC1.0")]
-		public void Sort(Int32 columnKey, LateBindingApi.OWC10Api.Enums.XlSortOrder order, LateBindingApi.OWC10Api.Enums.XlYesNoGuess header)
+		public void Sort(Int32 columnKey, NetOffice.OWC10Api.Enums.XlSortOrder order, NetOffice.OWC10Api.Enums.XlYesNoGuess header)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(columnKey, order, header);
 			Invoker.Method(this, "Sort", paramsArray);

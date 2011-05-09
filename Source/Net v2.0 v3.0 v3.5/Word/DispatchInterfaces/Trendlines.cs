@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Trendlines SupportByLibrary WD14 
@@ -113,7 +113,7 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.WordApi.Enums.XlTrendlineType Type</param>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlTrendlineType Type</param>
 		/// <param name="Order">optional object Order</param>
 		/// <param name="Period">optional object Period</param>
 		/// <param name="Forward">optional object Forward</param>
@@ -123,24 +123,24 @@ namespace LateBindingApi.WordApi
 		/// <param name="DisplayRSquared">optional object DisplayRSquared</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Trendline Add(LateBindingApi.WordApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
+		public NetOffice.WordApi.Trendline Add(NetOffice.WordApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.WordApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Trendline;
+			NetOffice.WordApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Trendline;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.WordApi.Enums.XlTrendlineType Type</param>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlTrendlineType Type</param>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Trendline Add(LateBindingApi.WordApi.Enums.XlTrendlineType type)
+		public NetOffice.WordApi.Trendline Add(NetOffice.WordApi.Enums.XlTrendlineType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.WordApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Trendline;
+			NetOffice.WordApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Trendline;
 			return newObject;
 		}
 
@@ -149,11 +149,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Trendline Item(object index)
+		public NetOffice.WordApi.Trendline Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.WordApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Trendline;
+			NetOffice.WordApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Trendline;
 			return newObject;
 		}
 
@@ -161,11 +161,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Trendline Item()
+		public NetOffice.WordApi.Trendline Item()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.WordApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Trendline;
+			NetOffice.WordApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Trendline;
 			return newObject;
 		}
 
@@ -175,13 +175,13 @@ namespace LateBindingApi.WordApi
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("WD14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.WordApi.Trendline this[object index]
+		public NetOffice.WordApi.Trendline this[object index]
 		{
 			get
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				LateBindingApi.WordApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Trendline;
+				NetOffice.WordApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Trendline;
 				return newObject;
 			}
 		}

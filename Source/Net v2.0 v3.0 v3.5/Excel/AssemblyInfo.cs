@@ -28,6 +28,7 @@ using LateBindingApi.Core;
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: ComVisibleAttribute(false)]
 [assembly: LateBindingAttribute("1.0")]
 
 
@@ -35,4 +36,3 @@ using LateBindingApi.Core;
 Alias Table
  
 */
-[assembly: ComVisibleAttribute(false)]

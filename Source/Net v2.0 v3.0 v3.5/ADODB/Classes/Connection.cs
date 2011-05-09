@@ -3,21 +3,21 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Connection_InfoMessageEventHandler(LateBindingApi.ADODBApi.Error pError, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Connection pConnection);
-	public delegate void Connection_BeginTransCompleteEventHandler(Int32 TransactionLevel, LateBindingApi.ADODBApi.Error pError, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Connection pConnection);
-	public delegate void Connection_CommitTransCompleteEventHandler(LateBindingApi.ADODBApi.Error pError, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Connection pConnection);
-	public delegate void Connection_RollbackTransCompleteEventHandler(LateBindingApi.ADODBApi.Error pError, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Connection pConnection);
-	public delegate void Connection_WillExecuteEventHandler(ref string Source, LateBindingApi.ADODBApi.Enums.CursorTypeEnum CursorType, LateBindingApi.ADODBApi.Enums.LockTypeEnum LockType, ref Int32 Options, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Command pCommand, LateBindingApi.ADODBApi._Recordset pRecordset, LateBindingApi.ADODBApi._Connection pConnection);
-	public delegate void Connection_ExecuteCompleteEventHandler(Int32 RecordsAffected, LateBindingApi.ADODBApi.Error pError, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Command pCommand, LateBindingApi.ADODBApi._Recordset pRecordset, LateBindingApi.ADODBApi._Connection pConnection);
-	public delegate void Connection_WillConnectEventHandler(ref string ConnectionString, ref string UserID, ref string Password, ref Int32 Options, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Connection pConnection);
-	public delegate void Connection_ConnectCompleteEventHandler(LateBindingApi.ADODBApi.Error pError, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Connection pConnection);
-	public delegate void Connection_DisconnectEventHandler(LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Connection pConnection);
+	public delegate void Connection_InfoMessageEventHandler(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_BeginTransCompleteEventHandler(Int32 TransactionLevel, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_CommitTransCompleteEventHandler(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_RollbackTransCompleteEventHandler(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_WillExecuteEventHandler(ref string Source, NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType, NetOffice.ADODBApi.Enums.LockTypeEnum LockType, ref Int32 Options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_ExecuteCompleteEventHandler(Int32 RecordsAffected, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_WillConnectEventHandler(ref string ConnectionString, ref string UserID, ref string Password, ref Int32 Options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_ConnectCompleteEventHandler(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_DisconnectEventHandler(NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
 	#pragma warning restore
 
 	#endregion

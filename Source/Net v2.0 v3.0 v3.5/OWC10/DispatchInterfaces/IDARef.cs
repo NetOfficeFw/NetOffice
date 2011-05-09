@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface IDARef SupportByLibrary XWC1.0 
@@ -93,13 +93,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.FieldListRelationshipTypeEnum Reltype
+		public NetOffice.OWC10Api.Enums.FieldListRelationshipTypeEnum Reltype
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Reltype", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.FieldListRelationshipTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.FieldListRelationshipTypeEnum)returnItem;
 			}
 		}
 

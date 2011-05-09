@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface DiagramNode SupportByLibrary PP10 PP11 PP12 PP14 
@@ -95,13 +95,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.DiagramNodeChildren Children
+		public NetOffice.PowerPointApi.DiagramNodeChildren Children
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Children", paramsArray);
-				LateBindingApi.PowerPointApi.DiagramNodeChildren newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.DiagramNodeChildren;
+				NetOffice.PowerPointApi.DiagramNodeChildren newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.DiagramNodeChildren;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Shape Shape
+		public NetOffice.PowerPointApi.Shape Shape
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shape", paramsArray);
-				LateBindingApi.PowerPointApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Shape;
+				NetOffice.PowerPointApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Shape;
 				return newObject;
 			}
 		}
@@ -125,13 +125,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.DiagramNode Root
+		public NetOffice.PowerPointApi.DiagramNode Root
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Root", paramsArray);
-				LateBindingApi.PowerPointApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.DiagramNode;
+				NetOffice.PowerPointApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.DiagramNode;
 				return newObject;
 			}
 		}
@@ -140,13 +140,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Diagram Diagram
+		public NetOffice.PowerPointApi.Diagram Diagram
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Diagram", paramsArray);
-				LateBindingApi.PowerPointApi.Diagram newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Diagram;
+				NetOffice.PowerPointApi.Diagram newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Diagram;
 				return newObject;
 			}
 		}
@@ -155,13 +155,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoOrgChartLayoutType Layout
+		public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType Layout
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Layout", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoOrgChartLayoutType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType)returnItem;
 			}
 			set
 			{
@@ -174,13 +174,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Shape TextShape
+		public NetOffice.PowerPointApi.Shape TextShape
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextShape", paramsArray);
-				LateBindingApi.PowerPointApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Shape;
+				NetOffice.PowerPointApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Shape;
 				return newObject;
 			}
 		}
@@ -192,14 +192,14 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="Pos">LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
-		/// <param name="NodeType">LateBindingApi.OfficeApi.Enums.MsoDiagramNodeType NodeType</param>
+		/// <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
+		/// <param name="NodeType">NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.DiagramNode AddNode(LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos, LateBindingApi.OfficeApi.Enums.MsoDiagramNodeType nodeType)
+		public NetOffice.PowerPointApi.DiagramNode AddNode(NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos, NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			LateBindingApi.PowerPointApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.DiagramNode;
+			NetOffice.PowerPointApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.DiagramNode;
 			return newObject;
 		}
 
@@ -216,10 +216,10 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="TargetNode">LateBindingApi.PowerPointApi.DiagramNode TargetNode</param>
-		/// <param name="Pos">LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
+		/// <param name="TargetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
+		/// <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public void MoveNode(LateBindingApi.PowerPointApi.DiagramNode targetNode, LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public void MoveNode(NetOffice.PowerPointApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode, pos);
 			Invoker.Method(this, "MoveNode", paramsArray);
@@ -228,9 +228,9 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="TargetNode">LateBindingApi.PowerPointApi.DiagramNode TargetNode</param>
+		/// <param name="TargetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public void ReplaceNode(LateBindingApi.PowerPointApi.DiagramNode targetNode)
+		public void ReplaceNode(NetOffice.PowerPointApi.DiagramNode targetNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode);
 			Invoker.Method(this, "ReplaceNode", paramsArray);
@@ -239,10 +239,10 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="TargetNode">LateBindingApi.PowerPointApi.DiagramNode TargetNode</param>
+		/// <param name="TargetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
 		/// <param name="SwapChildren">bool SwapChildren</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public void SwapNode(LateBindingApi.PowerPointApi.DiagramNode targetNode, bool swapChildren)
+		public void SwapNode(NetOffice.PowerPointApi.DiagramNode targetNode, bool swapChildren)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode, swapChildren);
 			Invoker.Method(this, "SwapNode", paramsArray);
@@ -252,23 +252,23 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		/// <param name="CopyChildren">bool CopyChildren</param>
-		/// <param name="TargetNode">LateBindingApi.PowerPointApi.DiagramNode TargetNode</param>
-		/// <param name="Pos">LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
+		/// <param name="TargetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
+		/// <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.DiagramNode CloneNode(bool copyChildren, LateBindingApi.PowerPointApi.DiagramNode targetNode, LateBindingApi.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public NetOffice.PowerPointApi.DiagramNode CloneNode(bool copyChildren, NetOffice.PowerPointApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode, pos);
 			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);
-			LateBindingApi.PowerPointApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.DiagramNode;
+			NetOffice.PowerPointApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.DiagramNode;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="ReceivingNode">LateBindingApi.PowerPointApi.DiagramNode ReceivingNode</param>
+		/// <param name="ReceivingNode">NetOffice.PowerPointApi.DiagramNode ReceivingNode</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public void TransferChildren(LateBindingApi.PowerPointApi.DiagramNode receivingNode)
+		public void TransferChildren(NetOffice.PowerPointApi.DiagramNode receivingNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(receivingNode);
 			Invoker.Method(this, "TransferChildren", paramsArray);
@@ -278,11 +278,11 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.DiagramNode NextNode()
+		public NetOffice.PowerPointApi.DiagramNode NextNode()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NextNode", paramsArray);
-			LateBindingApi.PowerPointApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.DiagramNode;
+			NetOffice.PowerPointApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.DiagramNode;
 			return newObject;
 		}
 
@@ -290,11 +290,11 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.DiagramNode PrevNode()
+		public NetOffice.PowerPointApi.DiagramNode PrevNode()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "PrevNode", paramsArray);
-			LateBindingApi.PowerPointApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.DiagramNode;
+			NetOffice.PowerPointApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.DiagramNode;
 			return newObject;
 		}
 

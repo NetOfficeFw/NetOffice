@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface HTMLProject SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoHTMLProjectState State
+		public NetOffice.OfficeApi.Enums.MsoHTMLProjectState State
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "State", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoHTMLProjectState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoHTMLProjectState)returnItem;
 			}
 		}
 
@@ -65,13 +65,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.HTMLProjectItems HTMLProjectItems
+		public NetOffice.OfficeApi.HTMLProjectItems HTMLProjectItems
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HTMLProjectItems", paramsArray);
-				LateBindingApi.OfficeApi.HTMLProjectItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.HTMLProjectItems;
+				NetOffice.OfficeApi.HTMLProjectItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.HTMLProjectItems;
 				return newObject;
 			}
 		}
@@ -120,9 +120,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="OpenKind">LateBindingApi.OfficeApi.Enums.MsoHTMLProjectOpen OpenKind</param>
+		/// <param name="OpenKind">NetOffice.OfficeApi.Enums.MsoHTMLProjectOpen OpenKind</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void Open(LateBindingApi.OfficeApi.Enums.MsoHTMLProjectOpen openKind)
+		public void Open(NetOffice.OfficeApi.Enums.MsoHTMLProjectOpen openKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(openKind);
 			Invoker.Method(this, "Open", paramsArray);

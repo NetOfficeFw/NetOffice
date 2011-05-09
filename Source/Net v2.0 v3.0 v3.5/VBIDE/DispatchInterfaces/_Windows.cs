@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _Windows SupportByLibrary VBE5.3 VBE12 
@@ -54,18 +54,18 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="AddInInst">LateBindingApi.VBIDEApi.AddIn AddInInst</param>
+		/// <param name="AddInInst">NetOffice.VBIDEApi.AddIn AddInInst</param>
 		/// <param name="ProgId">string ProgId</param>
 		/// <param name="Caption">string Caption</param>
 		/// <param name="GuidPosition">string GuidPosition</param>
 		/// <param name="DocObj">ref object DocObj</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.Window CreateToolWindow(LateBindingApi.VBIDEApi.AddIn addInInst, string progId, string caption, string guidPosition, ref object docObj)
+		public NetOffice.VBIDEApi.Window CreateToolWindow(NetOffice.VBIDEApi.AddIn addInInst, string progId, string caption, string guidPosition, ref object docObj)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(addInInst, progId, caption, guidPosition, docObj);
 			object returnItem = Invoker.MethodReturn(this, "CreateToolWindow", paramsArray, modifiers);
-			LateBindingApi.VBIDEApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.VBIDEApi.Window;
+			NetOffice.VBIDEApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.Window;
 			docObj = (object)paramsArray[4];
 			return newObject;
 		}

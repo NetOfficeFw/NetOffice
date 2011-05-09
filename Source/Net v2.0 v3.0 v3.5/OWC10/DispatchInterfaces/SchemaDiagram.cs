@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface SchemaDiagram SupportByLibrary XWC1.0 
@@ -65,13 +65,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRowsources SchemaRowsources
+		public NetOffice.OWC10Api.SchemaRowsources SchemaRowsources
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaRowsources", paramsArray);
-				LateBindingApi.OWC10Api.SchemaRowsources newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaRowsources;
+				NetOffice.OWC10Api.SchemaRowsources newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaRowsources;
 				return newObject;
 			}
 		}

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface DataPage SupportByLibrary XWC1.0 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.GroupLevel GroupLevel
+		public NetOffice.OWC10Api.GroupLevel GroupLevel
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupLevel", paramsArray);
-				LateBindingApi.OWC10Api.GroupLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.GroupLevel;
+				NetOffice.OWC10Api.GroupLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.GroupLevel;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.ADODBApi.Recordset Recordset
+		public NetOffice.ADODBApi.Recordset Recordset
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Recordset", paramsArray);
-				LateBindingApi.ADODBApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Recordset;
+				NetOffice.ADODBApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Recordset;
 				return newObject;
 			}
 		}
@@ -128,13 +128,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Section FirstSection
+		public NetOffice.OWC10Api.Section FirstSection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FirstSection", paramsArray);
-				LateBindingApi.OWC10Api.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.Section;
+				NetOffice.OWC10Api.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Section;
 				return newObject;
 			}
 		}
@@ -286,9 +286,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Button">LateBindingApi.OWC10Api.Enums.NavButtonEnum Button</param>
+		/// <param name="Button">NetOffice.OWC10Api.Enums.NavButtonEnum Button</param>
 		[SupportByLibrary("XWC1.0")]
-		public bool IsButtonEnabled(LateBindingApi.OWC10Api.Enums.NavButtonEnum button)
+		public bool IsButtonEnabled(NetOffice.OWC10Api.Enums.NavButtonEnum button)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(button);
 			object returnItem = Invoker.MethodReturn(this, "IsButtonEnabled", paramsArray);

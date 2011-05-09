@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface XMLNodes SupportByLibrary WD11 WD12 WD14 
@@ -66,13 +66,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -115,11 +115,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.XMLNode Item(Int32 index)
+		public NetOffice.WordApi.XMLNode Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.XMLNode;
+			NetOffice.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLNode;
 			return newObject;
 		}
 
@@ -130,12 +130,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="Namespace">string Namespace</param>
 		/// <param name="Range">ref optional object Range</param>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.XMLNode Add(string name, string _namespace, ref object range)
+		public NetOffice.WordApi.XMLNode Add(string name, string _namespace, ref object range)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, _namespace, range);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.XMLNode;
+			NetOffice.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLNode;
 			range = (object)paramsArray[2];
 			return newObject;
 		}
@@ -146,11 +146,11 @@ namespace LateBindingApi.WordApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Namespace">string Namespace</param>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.XMLNode Add(string name, string _namespace)
+		public NetOffice.WordApi.XMLNode Add(string name, string _namespace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, _namespace);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.XMLNode;
+			NetOffice.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLNode;
 			return newObject;
 		}
 

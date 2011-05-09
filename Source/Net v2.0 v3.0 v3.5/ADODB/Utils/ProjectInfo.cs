@@ -15,7 +15,7 @@ namespace ADODBApi.Utils
     {
         #region Field
 
-        private string   _namespace     = "LateBindingApi.ADODBApi";
+        private string   _namespace     = "NetOffice.ADODBApi";
         private Guid     _componentGuid = new Guid("00000201-0000-0010-8000-00AA006D2EA4");
         private Assembly _assembly;
 

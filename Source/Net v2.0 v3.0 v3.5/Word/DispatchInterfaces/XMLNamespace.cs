@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface XMLNamespace SupportByLibrary WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -117,6 +117,11 @@ namespace LateBindingApi.WordApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary WD11 WD12 WD14 
+		/// </summary>
+		/// <param name="AllUsers">bool AllUsers</param>
+		[SupportByLibrary("WD11","WD12","WD14")]
 		public void set_Location(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -135,6 +140,11 @@ namespace LateBindingApi.WordApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary WD11 WD12 WD14 
+		/// </summary>
+		/// <param name="AllUsers">bool AllUsers</param>
+		[SupportByLibrary("WD11","WD12","WD14")]
 		public void set_Alias(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -145,13 +155,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.XSLTransforms XSLTransforms
+		public NetOffice.WordApi.XSLTransforms XSLTransforms
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "XSLTransforms", paramsArray);
-				LateBindingApi.WordApi.XSLTransforms newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.XSLTransforms;
+				NetOffice.WordApi.XSLTransforms newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.XSLTransforms;
 				return newObject;
 			}
 		}
@@ -161,15 +171,20 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="AllUsers">bool AllUsers</param>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.XSLTransform get_DefaultTransform(bool allUsers)
+		public NetOffice.WordApi.XSLTransform get_DefaultTransform(bool allUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "DefaultTransform", paramsArray);
-			LateBindingApi.WordApi.XSLTransform newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.XSLTransform;
+			NetOffice.WordApi.XSLTransform newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.XSLTransform;
 			return newObject;
 		}
 
-		public void set_DefaultTransform(bool allUsers, LateBindingApi.WordApi.XSLTransform value)
+		/// <summary>
+		/// SupportByLibrary WD11 WD12 WD14 
+		/// </summary>
+		/// <param name="AllUsers">bool AllUsers</param>
+		[SupportByLibrary("WD11","WD12","WD14")]
+		public void set_DefaultTransform(bool allUsers, NetOffice.WordApi.XSLTransform value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "DefaultTransform", paramsArray, value);

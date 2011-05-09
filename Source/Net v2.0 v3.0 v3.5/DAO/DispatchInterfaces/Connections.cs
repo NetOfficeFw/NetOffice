@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.DAOApi
+namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Connections SupportByLibrary DAO3.6 DAO12 
@@ -52,11 +52,11 @@ namespace LateBindingApi.DAOApi
 		/// </summary>
 		/// <param name="Item">object Item</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Connection get_Item(object item)
+		public NetOffice.DAOApi.Connection get_Item(object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.DAOApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.Connection;
+			NetOffice.DAOApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Connection;
 			return newObject;
 		}
 

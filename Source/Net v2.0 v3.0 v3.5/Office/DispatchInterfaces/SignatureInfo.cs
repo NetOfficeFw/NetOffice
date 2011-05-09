@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SignatureInfo SupportByLibrary OF12 OF14 
@@ -137,13 +137,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.ContentVerificationResults ContentVerificationResults
+		public NetOffice.OfficeApi.Enums.ContentVerificationResults ContentVerificationResults
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ContentVerificationResults", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.ContentVerificationResults)returnItem;
+				return (NetOffice.OfficeApi.Enums.ContentVerificationResults)returnItem;
 			}
 		}
 
@@ -151,13 +151,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.CertificateVerificationResults CertificateVerificationResults
+		public NetOffice.OfficeApi.Enums.CertificateVerificationResults CertificateVerificationResults
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CertificateVerificationResults", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.CertificateVerificationResults)returnItem;
+				return (NetOffice.OfficeApi.Enums.CertificateVerificationResults)returnItem;
 			}
 		}
 
@@ -224,9 +224,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="sigdet">LateBindingApi.OfficeApi.Enums.SignatureDetail sigdet</param>
+		/// <param name="sigdet">NetOffice.OfficeApi.Enums.SignatureDetail sigdet</param>
 		[SupportByLibrary("OF12","OF14")]
-		public object GetSignatureDetail(LateBindingApi.OfficeApi.Enums.SignatureDetail sigdet)
+		public object GetSignatureDetail(NetOffice.OfficeApi.Enums.SignatureDetail sigdet)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sigdet);
 			object returnItem = Invoker.MethodReturn(this, "GetSignatureDetail", paramsArray);
@@ -245,9 +245,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="certdet">LateBindingApi.OfficeApi.Enums.CertificateDetail certdet</param>
+		/// <param name="certdet">NetOffice.OfficeApi.Enums.CertificateDetail certdet</param>
 		[SupportByLibrary("OF12","OF14")]
-		public object GetCertificateDetail(LateBindingApi.OfficeApi.Enums.CertificateDetail certdet)
+		public object GetCertificateDetail(NetOffice.OfficeApi.Enums.CertificateDetail certdet)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(certdet);
 			object returnItem = Invoker.MethodReturn(this, "GetCertificateDetail", paramsArray);

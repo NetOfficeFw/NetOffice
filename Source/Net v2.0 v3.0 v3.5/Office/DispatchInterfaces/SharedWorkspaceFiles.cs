@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SharedWorkspaceFiles SupportByLibrary OF11 OF12 OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceFile get_Item(Int32 index)
+		public NetOffice.OfficeApi.SharedWorkspaceFile get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.SharedWorkspaceFile newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceFile;
+			NetOffice.OfficeApi.SharedWorkspaceFile newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SharedWorkspaceFile;
 			return newObject;
 		}
 
@@ -116,11 +116,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="OverwriteIfFileAlreadyExists">optional object OverwriteIfFileAlreadyExists</param>
 		/// <param name="KeepInSync">optional object KeepInSync</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists, object keepInSync)
+		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists, object keepInSync)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, parentFolder, overwriteIfFileAlreadyExists, keepInSync);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.SharedWorkspaceFile newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceFile;
+			NetOffice.OfficeApi.SharedWorkspaceFile newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.SharedWorkspaceFile;
 			return newObject;
 		}
 
@@ -129,11 +129,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceFile Add(string fileName)
+		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.SharedWorkspaceFile newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceFile;
+			NetOffice.OfficeApi.SharedWorkspaceFile newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.SharedWorkspaceFile;
 			return newObject;
 		}
 

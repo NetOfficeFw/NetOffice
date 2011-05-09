@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface List SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Range Range
+		public NetOffice.WordApi.Range Range
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-				LateBindingApi.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Range;
+				NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.ListParagraphs ListParagraphs
+		public NetOffice.WordApi.ListParagraphs ListParagraphs
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListParagraphs", paramsArray);
-				LateBindingApi.WordApi.ListParagraphs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ListParagraphs;
+				NetOffice.WordApi.ListParagraphs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ListParagraphs;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -229,10 +229,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="ListTemplate">LateBindingApi.WordApi.ListTemplate ListTemplate</param>
+		/// <param name="ListTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
 		/// <param name="ContinuePreviousList">ref optional object ContinuePreviousList</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void ApplyListTemplateOld(LateBindingApi.WordApi.ListTemplate listTemplate, ref object continuePreviousList)
+		public void ApplyListTemplateOld(NetOffice.WordApi.ListTemplate listTemplate, ref object continuePreviousList)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList);
@@ -243,9 +243,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="ListTemplate">LateBindingApi.WordApi.ListTemplate ListTemplate</param>
+		/// <param name="ListTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void ApplyListTemplateOld(LateBindingApi.WordApi.ListTemplate listTemplate)
+		public void ApplyListTemplateOld(NetOffice.WordApi.ListTemplate listTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate);
 			Invoker.Method(this, "ApplyListTemplateOld", paramsArray);
@@ -254,23 +254,23 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="ListTemplate">LateBindingApi.WordApi.ListTemplate ListTemplate</param>
+		/// <param name="ListTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdContinue CanContinuePreviousList(LateBindingApi.WordApi.ListTemplate listTemplate)
+		public NetOffice.WordApi.Enums.WdContinue CanContinuePreviousList(NetOffice.WordApi.ListTemplate listTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate);
 			object returnItem = Invoker.MethodReturn(this, "CanContinuePreviousList", paramsArray);
-			return (LateBindingApi.WordApi.Enums.WdContinue)returnItem;
+			return (NetOffice.WordApi.Enums.WdContinue)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="ListTemplate">LateBindingApi.WordApi.ListTemplate ListTemplate</param>
+		/// <param name="ListTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
 		/// <param name="ContinuePreviousList">ref optional object ContinuePreviousList</param>
 		/// <param name="DefaultListBehavior">ref optional object DefaultListBehavior</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void ApplyListTemplate(LateBindingApi.WordApi.ListTemplate listTemplate, ref object continuePreviousList, ref object defaultListBehavior)
+		public void ApplyListTemplate(NetOffice.WordApi.ListTemplate listTemplate, ref object continuePreviousList, ref object defaultListBehavior)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList, defaultListBehavior);
@@ -282,9 +282,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="ListTemplate">LateBindingApi.WordApi.ListTemplate ListTemplate</param>
+		/// <param name="ListTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void ApplyListTemplate(LateBindingApi.WordApi.ListTemplate listTemplate)
+		public void ApplyListTemplate(NetOffice.WordApi.ListTemplate listTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate);
 			Invoker.Method(this, "ApplyListTemplate", paramsArray);
@@ -293,12 +293,12 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
-		/// <param name="ListTemplate">LateBindingApi.WordApi.ListTemplate ListTemplate</param>
+		/// <param name="ListTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
 		/// <param name="ContinuePreviousList">ref optional object ContinuePreviousList</param>
 		/// <param name="DefaultListBehavior">ref optional object DefaultListBehavior</param>
 		/// <param name="ApplyLevel">ref optional object ApplyLevel</param>
 		[SupportByLibrary("WD12","WD14")]
-		public void ApplyListTemplateWithLevel(LateBindingApi.WordApi.ListTemplate listTemplate, ref object continuePreviousList, ref object defaultListBehavior, ref object applyLevel)
+		public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate, ref object continuePreviousList, ref object defaultListBehavior, ref object applyLevel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList, defaultListBehavior, applyLevel);
@@ -311,9 +311,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
-		/// <param name="ListTemplate">LateBindingApi.WordApi.ListTemplate ListTemplate</param>
+		/// <param name="ListTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
 		[SupportByLibrary("WD12","WD14")]
-		public void ApplyListTemplateWithLevel(LateBindingApi.WordApi.ListTemplate listTemplate)
+		public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate);
 			Invoker.Method(this, "ApplyListTemplateWithLevel", paramsArray);

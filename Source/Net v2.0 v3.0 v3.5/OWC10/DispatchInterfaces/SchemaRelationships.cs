@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface SchemaRelationships SupportByLibrary XWC1.0 
@@ -67,11 +67,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRelationship get_Item(object index)
+		public NetOffice.OWC10Api.SchemaRelationship get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.SchemaRelationship newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaRelationship;
+			NetOffice.OWC10Api.SchemaRelationship newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaRelationship;
 			return newObject;
 		}
 
@@ -88,11 +88,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="ManySchemaField">string ManySchemaField</param>
 		/// <param name="OneSchemaField">string OneSchemaField</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRelationship Add(string name, string manySchemaRowsource, string oneSchemaRowsource, string manySchemaField, string oneSchemaField)
+		public NetOffice.OWC10Api.SchemaRelationship Add(string name, string manySchemaRowsource, string oneSchemaRowsource, string manySchemaField, string oneSchemaField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, manySchemaRowsource, oneSchemaRowsource, manySchemaField, oneSchemaField);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.SchemaRelationship newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.SchemaRelationship;
+			NetOffice.OWC10Api.SchemaRelationship newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaRelationship;
 			return newObject;
 		}
 
@@ -105,11 +105,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="ManySchemaField">string ManySchemaField</param>
 		/// <param name="OneSchemaField">string OneSchemaField</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRelationship AddNew(string name, string manySchemaRowsource, string oneSchemaRowsource, string manySchemaField, string oneSchemaField)
+		public NetOffice.OWC10Api.SchemaRelationship AddNew(string name, string manySchemaRowsource, string oneSchemaRowsource, string manySchemaField, string oneSchemaField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, manySchemaRowsource, oneSchemaRowsource, manySchemaField, oneSchemaField);
 			object returnItem = Invoker.MethodReturn(this, "AddNew", paramsArray);
-			LateBindingApi.OWC10Api.SchemaRelationship newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.SchemaRelationship;
+			NetOffice.OWC10Api.SchemaRelationship newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaRelationship;
 			return newObject;
 		}
 

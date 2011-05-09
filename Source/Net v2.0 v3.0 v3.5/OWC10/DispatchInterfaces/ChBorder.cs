@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ChBorder SupportByLibrary XWC1.0 
@@ -79,13 +79,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartLineDashStyleEnum DashStyle
+		public NetOffice.OWC10Api.Enums.ChartLineDashStyleEnum DashStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DashStyle", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartLineDashStyleEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartLineDashStyleEnum)returnItem;
 			}
 			set
 			{

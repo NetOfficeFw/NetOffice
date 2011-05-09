@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface FormatConditions SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Application Application
+		public NetOffice.AccessApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}
@@ -83,11 +83,11 @@ namespace LateBindingApi.AccessApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi._FormatCondition get_Item(object index)
+		public NetOffice.AccessApi._FormatCondition get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.AccessApi._FormatCondition newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi._FormatCondition;
+			NetOffice.AccessApi._FormatCondition newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._FormatCondition;
 			return newObject;
 		}
 
@@ -112,30 +112,30 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.AccessApi.Enums.AcFormatConditionType Type</param>
-		/// <param name="Operator">LateBindingApi.AccessApi.Enums.AcFormatConditionOperator Operator</param>
+		/// <param name="Type">NetOffice.AccessApi.Enums.AcFormatConditionType Type</param>
+		/// <param name="Operator">NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator</param>
 		/// <param name="Expression1">optional object Expression1</param>
 		/// <param name="Expression2">optional object Expression2</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi._FormatCondition Add(LateBindingApi.AccessApi.Enums.AcFormatConditionType type, LateBindingApi.AccessApi.Enums.AcFormatConditionOperator _operator, object expression1, object expression2)
+		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator, object expression1, object expression2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, expression1, expression2);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.AccessApi._FormatCondition newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.AccessApi._FormatCondition;
+			NetOffice.AccessApi._FormatCondition newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi._FormatCondition;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.AccessApi.Enums.AcFormatConditionType Type</param>
-		/// <param name="Operator">LateBindingApi.AccessApi.Enums.AcFormatConditionOperator Operator</param>
+		/// <param name="Type">NetOffice.AccessApi.Enums.AcFormatConditionType Type</param>
+		/// <param name="Operator">NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi._FormatCondition Add(LateBindingApi.AccessApi.Enums.AcFormatConditionType type, LateBindingApi.AccessApi.Enums.AcFormatConditionOperator _operator)
+		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.AccessApi._FormatCondition newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.AccessApi._FormatCondition;
+			NetOffice.AccessApi._FormatCondition newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi._FormatCondition;
 			return newObject;
 		}
 

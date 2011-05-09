@@ -15,7 +15,7 @@ namespace OutlookApi.Utils
     {
         #region Field
 
-        private string   _namespace     = "LateBindingApi.OutlookApi";
+        private string   _namespace     = "NetOffice.OutlookApi";
         private Guid     _componentGuid = new Guid("00062FFF-0000-0000-C000-000000000046");
         private Assembly _assembly;
 

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface SchemaRelationship SupportByLibrary XWC1.0 
@@ -93,13 +93,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRelatedFields SchemaRelatedFields
+		public NetOffice.OWC10Api.SchemaRelatedFields SchemaRelatedFields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaRelatedFields", paramsArray);
-				LateBindingApi.OWC10Api.SchemaRelatedFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaRelatedFields;
+				NetOffice.OWC10Api.SchemaRelatedFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaRelatedFields;
 				return newObject;
 			}
 		}
@@ -108,13 +108,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscLocationEnum Location
+		public NetOffice.OWC10Api.Enums.DscLocationEnum Location
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscLocationEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscLocationEnum)returnItem;
 			}
 			set
 			{

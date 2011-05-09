@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {	
 	#pragma warning disable
 	
@@ -65,7 +65,7 @@ namespace LateBindingApi.AccessApi
 				return;
 			}
 
-			LateBindingApi.AccessApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as LateBindingApi.AccessApi.Reference;
+			NetOffice.AccessApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.AccessApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
 			foreach(Delegate delItem in recipients)
@@ -81,7 +81,7 @@ namespace LateBindingApi.AccessApi
 				return;
 			}
 
-			LateBindingApi.AccessApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as LateBindingApi.AccessApi.Reference;
+			NetOffice.AccessApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.AccessApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
 			foreach(Delegate delItem in recipients)

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IButton SupportByLibrary WCC6.0 
@@ -288,13 +288,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.ValueConstants Value
+		public NetOffice.MSComctlLibApi.Enums.ValueConstants Value
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.ValueConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.ValueConstants)returnItem;
 			}
 			set
 			{
@@ -307,13 +307,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.ButtonStyleConstants Style
+		public NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants Style
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.ButtonStyleConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants)returnItem;
 			}
 			set
 			{
@@ -392,13 +392,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IButtonMenus ButtonMenus
+		public NetOffice.MSComctlLibApi.IButtonMenus ButtonMenus
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ButtonMenus", paramsArray);
-				LateBindingApi.MSComctlLibApi.IButtonMenus newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.IButtonMenus;
+				NetOffice.MSComctlLibApi.IButtonMenus newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButtonMenus;
 				return newObject;
 			}
 			set

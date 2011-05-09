@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Sequence SupportByLibrary PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -86,55 +86,55 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Effect Item(Int32 index)
+		public NetOffice.PowerPointApi.Effect Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="Shape">LateBindingApi.PowerPointApi.Shape Shape</param>
-		/// <param name="effectId">LateBindingApi.PowerPointApi.Enums.MsoAnimEffect effectId</param>
-		/// <param name="Level">LateBindingApi.PowerPointApi.Enums.MsoAnimateByLevel Level</param>
-		/// <param name="trigger">LateBindingApi.PowerPointApi.Enums.MsoAnimTriggerType trigger</param>
+		/// <param name="Shape">NetOffice.PowerPointApi.Shape Shape</param>
+		/// <param name="effectId">NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId</param>
+		/// <param name="Level">NetOffice.PowerPointApi.Enums.MsoAnimateByLevel Level</param>
+		/// <param name="trigger">NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger</param>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Effect AddEffect(LateBindingApi.PowerPointApi.Shape shape, LateBindingApi.PowerPointApi.Enums.MsoAnimEffect effectId, LateBindingApi.PowerPointApi.Enums.MsoAnimateByLevel level, LateBindingApi.PowerPointApi.Enums.MsoAnimTriggerType trigger, Int32 index)
+		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shape, effectId, level, trigger, index);
 			object returnItem = Invoker.MethodReturn(this, "AddEffect", paramsArray);
-			LateBindingApi.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="Effect">LateBindingApi.PowerPointApi.Effect Effect</param>
+		/// <param name="Effect">NetOffice.PowerPointApi.Effect Effect</param>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Effect Clone(LateBindingApi.PowerPointApi.Effect effect, Int32 index)
+		public NetOffice.PowerPointApi.Effect Clone(NetOffice.PowerPointApi.Effect effect, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, index);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
-			LateBindingApi.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="Shape">LateBindingApi.PowerPointApi.Shape Shape</param>
+		/// <param name="Shape">NetOffice.PowerPointApi.Shape Shape</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Effect FindFirstAnimationFor(LateBindingApi.PowerPointApi.Shape shape)
+		public NetOffice.PowerPointApi.Effect FindFirstAnimationFor(NetOffice.PowerPointApi.Shape shape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shape);
 			object returnItem = Invoker.MethodReturn(this, "FindFirstAnimationFor", paramsArray);
-			LateBindingApi.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
@@ -143,101 +143,101 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="click">Int32 click</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Effect FindFirstAnimationForClick(Int32 click)
+		public NetOffice.PowerPointApi.Effect FindFirstAnimationForClick(Int32 click)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(click);
 			object returnItem = Invoker.MethodReturn(this, "FindFirstAnimationForClick", paramsArray);
-			LateBindingApi.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="Effect">LateBindingApi.PowerPointApi.Effect Effect</param>
-		/// <param name="Level">LateBindingApi.PowerPointApi.Enums.MsoAnimateByLevel Level</param>
+		/// <param name="Effect">NetOffice.PowerPointApi.Effect Effect</param>
+		/// <param name="Level">NetOffice.PowerPointApi.Enums.MsoAnimateByLevel Level</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Effect ConvertToBuildLevel(LateBindingApi.PowerPointApi.Effect effect, LateBindingApi.PowerPointApi.Enums.MsoAnimateByLevel level)
+		public NetOffice.PowerPointApi.Effect ConvertToBuildLevel(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, level);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToBuildLevel", paramsArray);
-			LateBindingApi.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="Effect">LateBindingApi.PowerPointApi.Effect Effect</param>
-		/// <param name="After">LateBindingApi.PowerPointApi.Enums.MsoAnimAfterEffect After</param>
+		/// <param name="Effect">NetOffice.PowerPointApi.Effect Effect</param>
+		/// <param name="After">NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect After</param>
 		/// <param name="DimColor">Int32 DimColor</param>
-		/// <param name="DimSchemeColor">LateBindingApi.PowerPointApi.Enums.PpColorSchemeIndex DimSchemeColor</param>
+		/// <param name="DimSchemeColor">NetOffice.PowerPointApi.Enums.PpColorSchemeIndex DimSchemeColor</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Effect ConvertToAfterEffect(LateBindingApi.PowerPointApi.Effect effect, LateBindingApi.PowerPointApi.Enums.MsoAnimAfterEffect after, Int32 dimColor, LateBindingApi.PowerPointApi.Enums.PpColorSchemeIndex dimSchemeColor)
+		public NetOffice.PowerPointApi.Effect ConvertToAfterEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after, Int32 dimColor, NetOffice.PowerPointApi.Enums.PpColorSchemeIndex dimSchemeColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, after, dimColor, dimSchemeColor);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToAfterEffect", paramsArray);
-			LateBindingApi.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="Effect">LateBindingApi.PowerPointApi.Effect Effect</param>
-		/// <param name="AnimateBackground">LateBindingApi.OfficeApi.Enums.MsoTriState AnimateBackground</param>
+		/// <param name="Effect">NetOffice.PowerPointApi.Effect Effect</param>
+		/// <param name="AnimateBackground">NetOffice.OfficeApi.Enums.MsoTriState AnimateBackground</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Effect ConvertToAnimateBackground(LateBindingApi.PowerPointApi.Effect effect, LateBindingApi.OfficeApi.Enums.MsoTriState animateBackground)
+		public NetOffice.PowerPointApi.Effect ConvertToAnimateBackground(NetOffice.PowerPointApi.Effect effect, NetOffice.OfficeApi.Enums.MsoTriState animateBackground)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, animateBackground);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToAnimateBackground", paramsArray);
-			LateBindingApi.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="Effect">LateBindingApi.PowerPointApi.Effect Effect</param>
-		/// <param name="animateInReverse">LateBindingApi.OfficeApi.Enums.MsoTriState animateInReverse</param>
+		/// <param name="Effect">NetOffice.PowerPointApi.Effect Effect</param>
+		/// <param name="animateInReverse">NetOffice.OfficeApi.Enums.MsoTriState animateInReverse</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Effect ConvertToAnimateInReverse(LateBindingApi.PowerPointApi.Effect effect, LateBindingApi.OfficeApi.Enums.MsoTriState animateInReverse)
+		public NetOffice.PowerPointApi.Effect ConvertToAnimateInReverse(NetOffice.PowerPointApi.Effect effect, NetOffice.OfficeApi.Enums.MsoTriState animateInReverse)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, animateInReverse);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToAnimateInReverse", paramsArray);
-			LateBindingApi.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="Effect">LateBindingApi.PowerPointApi.Effect Effect</param>
-		/// <param name="unitEffect">LateBindingApi.PowerPointApi.Enums.MsoAnimTextUnitEffect unitEffect</param>
+		/// <param name="Effect">NetOffice.PowerPointApi.Effect Effect</param>
+		/// <param name="unitEffect">NetOffice.PowerPointApi.Enums.MsoAnimTextUnitEffect unitEffect</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Effect ConvertToTextUnitEffect(LateBindingApi.PowerPointApi.Effect effect, LateBindingApi.PowerPointApi.Enums.MsoAnimTextUnitEffect unitEffect)
+		public NetOffice.PowerPointApi.Effect ConvertToTextUnitEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimTextUnitEffect unitEffect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, unitEffect);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToTextUnitEffect", paramsArray);
-			LateBindingApi.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP14 
 		/// </summary>
-		/// <param name="pShape">LateBindingApi.PowerPointApi.Shape pShape</param>
-		/// <param name="effectId">LateBindingApi.PowerPointApi.Enums.MsoAnimEffect effectId</param>
-		/// <param name="trigger">LateBindingApi.PowerPointApi.Enums.MsoAnimTriggerType trigger</param>
-		/// <param name="pTriggerShape">LateBindingApi.PowerPointApi.Shape pTriggerShape</param>
+		/// <param name="pShape">NetOffice.PowerPointApi.Shape pShape</param>
+		/// <param name="effectId">NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId</param>
+		/// <param name="trigger">NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger</param>
+		/// <param name="pTriggerShape">NetOffice.PowerPointApi.Shape pTriggerShape</param>
 		/// <param name="bookmark">string bookmark</param>
-		/// <param name="Level">LateBindingApi.PowerPointApi.Enums.MsoAnimateByLevel Level</param>
+		/// <param name="Level">NetOffice.PowerPointApi.Enums.MsoAnimateByLevel Level</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Effect AddTriggerEffect(LateBindingApi.PowerPointApi.Shape pShape, LateBindingApi.PowerPointApi.Enums.MsoAnimEffect effectId, LateBindingApi.PowerPointApi.Enums.MsoAnimTriggerType trigger, LateBindingApi.PowerPointApi.Shape pTriggerShape, string bookmark, LateBindingApi.PowerPointApi.Enums.MsoAnimateByLevel level)
+		public NetOffice.PowerPointApi.Effect AddTriggerEffect(NetOffice.PowerPointApi.Shape pShape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, NetOffice.PowerPointApi.Shape pTriggerShape, string bookmark, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pShape, effectId, trigger, pTriggerShape, bookmark, level);
 			object returnItem = Invoker.MethodReturn(this, "AddTriggerEffect", paramsArray);
-			LateBindingApi.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 

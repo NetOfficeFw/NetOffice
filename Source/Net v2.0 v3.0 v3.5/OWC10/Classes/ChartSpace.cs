@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 
 	#region Delegates
@@ -15,25 +15,25 @@ namespace LateBindingApi.OWC10Api
 	public delegate void ChartSpace_KeyDownEventHandler(Int32 KeyCode, Int32 Shift);
 	public delegate void ChartSpace_KeyUpEventHandler(Int32 KeyCode, Int32 Shift);
 	public delegate void ChartSpace_KeyPressEventHandler(Int32 KeyAscii);
-	public delegate void ChartSpace_BeforeKeyDownEventHandler(Int32 KeyCode, Int32 Shift, LateBindingApi.OWC10Api.ByRef Cancel);
-	public delegate void ChartSpace_BeforeKeyUpEventHandler(Int32 KeyCode, Int32 Shift, LateBindingApi.OWC10Api.ByRef Cancel);
-	public delegate void ChartSpace_BeforeKeyPressEventHandler(Int32 KeyAscii, LateBindingApi.OWC10Api.ByRef Cancel);
+	public delegate void ChartSpace_BeforeKeyDownEventHandler(Int32 KeyCode, Int32 Shift, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void ChartSpace_BeforeKeyUpEventHandler(Int32 KeyCode, Int32 Shift, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void ChartSpace_BeforeKeyPressEventHandler(Int32 KeyAscii, NetOffice.OWC10Api.ByRef Cancel);
 	public delegate void ChartSpace_MouseDownEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
 	public delegate void ChartSpace_MouseMoveEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
 	public delegate void ChartSpace_MouseUpEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
 	public delegate void ChartSpace_MouseWheelEventHandler(bool Page, Int32 Count);
 	public delegate void ChartSpace_SelectionChangeEventHandler();
-	public delegate void ChartSpace_BeforeScreenTipEventHandler(LateBindingApi.OWC10Api.ByRef TipText, COMObject ContextObject);
-	public delegate void ChartSpace_CommandEnabledEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Enabled);
-	public delegate void ChartSpace_CommandCheckedEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Checked);
-	public delegate void ChartSpace_CommandTipTextEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Caption);
-	public delegate void ChartSpace_CommandBeforeExecuteEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Cancel);
+	public delegate void ChartSpace_BeforeScreenTipEventHandler(NetOffice.OWC10Api.ByRef TipText, COMObject ContextObject);
+	public delegate void ChartSpace_CommandEnabledEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Enabled);
+	public delegate void ChartSpace_CommandCheckedEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Checked);
+	public delegate void ChartSpace_CommandTipTextEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Caption);
+	public delegate void ChartSpace_CommandBeforeExecuteEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Cancel);
 	public delegate void ChartSpace_CommandExecuteEventHandler(COMObject Command, bool Succeeded);
-	public delegate void ChartSpace_BeforeContextMenuEventHandler(Int32 x, Int32 y, LateBindingApi.OWC10Api.ByRef Menu, LateBindingApi.OWC10Api.ByRef Cancel);
-	public delegate void ChartSpace_BeforeRenderEventHandler(LateBindingApi.OWC10Api.ChChartDraw drawObject, COMObject chartObject, LateBindingApi.OWC10Api.ByRef Cancel);
-	public delegate void ChartSpace_AfterRenderEventHandler(LateBindingApi.OWC10Api.ChChartDraw drawObject, COMObject chartObject);
-	public delegate void ChartSpace_AfterFinalRenderEventHandler(LateBindingApi.OWC10Api.ChChartDraw drawObject);
-	public delegate void ChartSpace_AfterLayoutEventHandler(LateBindingApi.OWC10Api.ChChartDraw drawObject);
+	public delegate void ChartSpace_BeforeContextMenuEventHandler(Int32 x, Int32 y, NetOffice.OWC10Api.ByRef Menu, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void ChartSpace_BeforeRenderEventHandler(NetOffice.OWC10Api.ChChartDraw drawObject, COMObject chartObject, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void ChartSpace_AfterRenderEventHandler(NetOffice.OWC10Api.ChChartDraw drawObject, COMObject chartObject);
+	public delegate void ChartSpace_AfterFinalRenderEventHandler(NetOffice.OWC10Api.ChChartDraw drawObject);
+	public delegate void ChartSpace_AfterLayoutEventHandler(NetOffice.OWC10Api.ChChartDraw drawObject);
 	public delegate void ChartSpace_ViewChangeEventHandler();
 	#pragma warning restore
 

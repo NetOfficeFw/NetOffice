@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ODSOFilters SupportByLibrary OF10 OF11 OF12 OF14 
@@ -97,12 +97,12 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		/// <param name="Column">string Column</param>
-		/// <param name="Comparison">LateBindingApi.OfficeApi.Enums.MsoFilterComparison Comparison</param>
-		/// <param name="Conjunction">LateBindingApi.OfficeApi.Enums.MsoFilterConjunction Conjunction</param>
+		/// <param name="Comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison Comparison</param>
+		/// <param name="Conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction Conjunction</param>
 		/// <param name="bstrCompareTo">string bstrCompareTo</param>
 		/// <param name="DeferUpdate">bool DeferUpdate</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public void Add(string column, LateBindingApi.OfficeApi.Enums.MsoFilterComparison comparison, LateBindingApi.OfficeApi.Enums.MsoFilterConjunction conjunction, string bstrCompareTo, bool deferUpdate)
+		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, string bstrCompareTo, bool deferUpdate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(column, comparison, conjunction, bstrCompareTo, deferUpdate);
 			Invoker.Method(this, "Add", paramsArray);

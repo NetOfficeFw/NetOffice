@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Script SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -104,13 +104,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoScriptLanguage Language
+		public NetOffice.OfficeApi.Enums.MsoScriptLanguage Language
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Language", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoScriptLanguage)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoScriptLanguage)returnItem;
 			}
 			set
 			{
@@ -123,13 +123,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoScriptLocation Location
+		public NetOffice.OfficeApi.Enums.MsoScriptLocation Location
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoScriptLocation)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoScriptLocation)returnItem;
 			}
 		}
 

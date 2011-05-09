@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ShapeNodes SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -86,11 +86,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.ShapeNode Item(object index)
+		public NetOffice.OfficeApi.ShapeNode Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.ShapeNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.ShapeNode;
+			NetOffice.OfficeApi.ShapeNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.ShapeNode;
 			return newObject;
 		}
 
@@ -109,8 +109,8 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		/// <param name="SegmentType">LateBindingApi.OfficeApi.Enums.MsoSegmentType SegmentType</param>
-		/// <param name="EditingType">LateBindingApi.OfficeApi.Enums.MsoEditingType EditingType</param>
+		/// <param name="SegmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
+		/// <param name="EditingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
 		/// <param name="X1">Single X1</param>
 		/// <param name="Y1">Single Y1</param>
 		/// <param name="X2">Single X2</param>
@@ -118,7 +118,7 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="X3">Single X3</param>
 		/// <param name="Y3">Single Y3</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void Insert(Int32 index, LateBindingApi.OfficeApi.Enums.MsoSegmentType segmentType, LateBindingApi.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, Single x2, Single y2, Single x3, Single y3)
+		public void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, Single x2, Single y2, Single x3, Single y3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, segmentType, editingType, x1, y1, x2, y2, x3, y3);
 			Invoker.Method(this, "Insert", paramsArray);
@@ -128,9 +128,9 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		/// <param name="EditingType">LateBindingApi.OfficeApi.Enums.MsoEditingType EditingType</param>
+		/// <param name="EditingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void SetEditingType(Int32 index, LateBindingApi.OfficeApi.Enums.MsoEditingType editingType)
+		public void SetEditingType(Int32 index, NetOffice.OfficeApi.Enums.MsoEditingType editingType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, editingType);
 			Invoker.Method(this, "SetEditingType", paramsArray);
@@ -153,9 +153,9 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		/// <param name="SegmentType">LateBindingApi.OfficeApi.Enums.MsoSegmentType SegmentType</param>
+		/// <param name="SegmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void SetSegmentType(Int32 index, LateBindingApi.OfficeApi.Enums.MsoSegmentType segmentType)
+		public void SetSegmentType(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, segmentType);
 			Invoker.Method(this, "SetSegmentType", paramsArray);

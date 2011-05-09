@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface IApplicationEvents3 SupportByLibrary WD10 WD11 WD12 WD14 
@@ -84,9 +84,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void DocumentOpen(LateBindingApi.WordApi.Document doc)
+		public void DocumentOpen(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
 			Invoker.Method(this, "DocumentOpen", paramsArray);
@@ -95,10 +95,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void DocumentBeforeClose(LateBindingApi.WordApi.Document doc, ref bool cancel)
+		public void DocumentBeforeClose(NetOffice.WordApi.Document doc, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
@@ -109,10 +109,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void DocumentBeforePrint(LateBindingApi.WordApi.Document doc, ref bool cancel)
+		public void DocumentBeforePrint(NetOffice.WordApi.Document doc, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
@@ -123,11 +123,11 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="SaveAsUI">ref bool SaveAsUI</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void DocumentBeforeSave(LateBindingApi.WordApi.Document doc, ref bool saveAsUI, ref bool cancel)
+		public void DocumentBeforeSave(NetOffice.WordApi.Document doc, ref bool saveAsUI, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, saveAsUI, cancel);
@@ -139,9 +139,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void NewDocument(LateBindingApi.WordApi.Document doc)
+		public void NewDocument(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
 			Invoker.Method(this, "NewDocument", paramsArray);
@@ -150,10 +150,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
-		/// <param name="Wn">LateBindingApi.WordApi.Window Wn</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
+		/// <param name="Wn">NetOffice.WordApi.Window Wn</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void WindowActivate(LateBindingApi.WordApi.Document doc, LateBindingApi.WordApi.Window wn)
+		public void WindowActivate(NetOffice.WordApi.Document doc, NetOffice.WordApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, wn);
 			Invoker.Method(this, "WindowActivate", paramsArray);
@@ -162,10 +162,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
-		/// <param name="Wn">LateBindingApi.WordApi.Window Wn</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
+		/// <param name="Wn">NetOffice.WordApi.Window Wn</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void WindowDeactivate(LateBindingApi.WordApi.Document doc, LateBindingApi.WordApi.Window wn)
+		public void WindowDeactivate(NetOffice.WordApi.Document doc, NetOffice.WordApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, wn);
 			Invoker.Method(this, "WindowDeactivate", paramsArray);
@@ -174,9 +174,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Sel">LateBindingApi.WordApi.Selection Sel</param>
+		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void WindowSelectionChange(LateBindingApi.WordApi.Selection sel)
+		public void WindowSelectionChange(NetOffice.WordApi.Selection sel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sel);
 			Invoker.Method(this, "WindowSelectionChange", paramsArray);
@@ -185,10 +185,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Sel">LateBindingApi.WordApi.Selection Sel</param>
+		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void WindowBeforeRightClick(LateBindingApi.WordApi.Selection sel, ref bool cancel)
+		public void WindowBeforeRightClick(NetOffice.WordApi.Selection sel, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sel, cancel);
@@ -199,10 +199,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Sel">LateBindingApi.WordApi.Selection Sel</param>
+		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void WindowBeforeDoubleClick(LateBindingApi.WordApi.Selection sel, ref bool cancel)
+		public void WindowBeforeDoubleClick(NetOffice.WordApi.Selection sel, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sel, cancel);
@@ -213,9 +213,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void EPostagePropertyDialog(LateBindingApi.WordApi.Document doc)
+		public void EPostagePropertyDialog(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
 			Invoker.Method(this, "EPostagePropertyDialog", paramsArray);
@@ -224,9 +224,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void EPostageInsert(LateBindingApi.WordApi.Document doc)
+		public void EPostageInsert(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
 			Invoker.Method(this, "EPostageInsert", paramsArray);
@@ -235,10 +235,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
-		/// <param name="DocResult">LateBindingApi.WordApi.Document DocResult</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
+		/// <param name="DocResult">NetOffice.WordApi.Document DocResult</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void MailMergeAfterMerge(LateBindingApi.WordApi.Document doc, LateBindingApi.WordApi.Document docResult)
+		public void MailMergeAfterMerge(NetOffice.WordApi.Document doc, NetOffice.WordApi.Document docResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, docResult);
 			Invoker.Method(this, "MailMergeAfterMerge", paramsArray);
@@ -247,9 +247,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void MailMergeAfterRecordMerge(LateBindingApi.WordApi.Document doc)
+		public void MailMergeAfterRecordMerge(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
 			Invoker.Method(this, "MailMergeAfterRecordMerge", paramsArray);
@@ -258,12 +258,12 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="StartRecord">Int32 StartRecord</param>
 		/// <param name="EndRecord">Int32 EndRecord</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void MailMergeBeforeMerge(LateBindingApi.WordApi.Document doc, Int32 startRecord, Int32 endRecord, ref bool cancel)
+		public void MailMergeBeforeMerge(NetOffice.WordApi.Document doc, Int32 startRecord, Int32 endRecord, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, startRecord, endRecord, cancel);
@@ -274,10 +274,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void MailMergeBeforeRecordMerge(LateBindingApi.WordApi.Document doc, ref bool cancel)
+		public void MailMergeBeforeRecordMerge(NetOffice.WordApi.Document doc, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
@@ -288,9 +288,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void MailMergeDataSourceLoad(LateBindingApi.WordApi.Document doc)
+		public void MailMergeDataSourceLoad(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
 			Invoker.Method(this, "MailMergeDataSourceLoad", paramsArray);
@@ -299,10 +299,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Handled">ref bool Handled</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void MailMergeDataSourceValidate(LateBindingApi.WordApi.Document doc, ref bool handled)
+		public void MailMergeDataSourceValidate(NetOffice.WordApi.Document doc, ref bool handled)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, handled);
@@ -313,9 +313,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void MailMergeWizardSendToCustom(LateBindingApi.WordApi.Document doc)
+		public void MailMergeWizardSendToCustom(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
 			Invoker.Method(this, "MailMergeWizardSendToCustom", paramsArray);
@@ -324,12 +324,12 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="FromState">ref Int32 FromState</param>
 		/// <param name="ToState">ref Int32 ToState</param>
 		/// <param name="Handled">ref bool Handled</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void MailMergeWizardStateChange(LateBindingApi.WordApi.Document doc, ref Int32 fromState, ref Int32 toState, ref bool handled)
+		public void MailMergeWizardStateChange(NetOffice.WordApi.Document doc, ref Int32 fromState, ref Int32 toState, ref bool handled)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, fromState, toState, handled);
@@ -342,10 +342,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Doc">LateBindingApi.WordApi.Document Doc</param>
-		/// <param name="Wn">LateBindingApi.WordApi.Window Wn</param>
+		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
+		/// <param name="Wn">NetOffice.WordApi.Window Wn</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public void WindowSize(LateBindingApi.WordApi.Document doc, LateBindingApi.WordApi.Window wn)
+		public void WindowSize(NetOffice.WordApi.Document doc, NetOffice.WordApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, wn);
 			Invoker.Method(this, "WindowSize", paramsArray);

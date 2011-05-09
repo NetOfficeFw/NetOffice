@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface MailMergeDataSource SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -123,13 +123,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdMailMergeDataSource Type
+		public NetOffice.WordApi.Enums.WdMailMergeDataSource Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdMailMergeDataSource)returnItem;
+				return (NetOffice.WordApi.Enums.WdMailMergeDataSource)returnItem;
 			}
 		}
 
@@ -137,13 +137,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdMailMergeDataSource HeaderSourceType
+		public NetOffice.WordApi.Enums.WdMailMergeDataSource HeaderSourceType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HeaderSourceType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdMailMergeDataSource)returnItem;
+				return (NetOffice.WordApi.Enums.WdMailMergeDataSource)returnItem;
 			}
 		}
 
@@ -184,13 +184,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdMailMergeActiveRecord ActiveRecord
+		public NetOffice.WordApi.Enums.WdMailMergeActiveRecord ActiveRecord
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveRecord", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdMailMergeActiveRecord)returnItem;
+				return (NetOffice.WordApi.Enums.WdMailMergeActiveRecord)returnItem;
 			}
 			set
 			{
@@ -241,13 +241,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.MailMergeFieldNames FieldNames
+		public NetOffice.WordApi.MailMergeFieldNames FieldNames
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FieldNames", paramsArray);
-				LateBindingApi.WordApi.MailMergeFieldNames newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.MailMergeFieldNames;
+				NetOffice.WordApi.MailMergeFieldNames newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.MailMergeFieldNames;
 				return newObject;
 			}
 		}
@@ -256,13 +256,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.MailMergeDataFields DataFields
+		public NetOffice.WordApi.MailMergeDataFields DataFields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataFields", paramsArray);
-				LateBindingApi.WordApi.MailMergeDataFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.MailMergeDataFields;
+				NetOffice.WordApi.MailMergeDataFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.MailMergeDataFields;
 				return newObject;
 			}
 		}
@@ -342,13 +342,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.MappedDataFields MappedDataFields
+		public NetOffice.WordApi.MappedDataFields MappedDataFields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MappedDataFields", paramsArray);
-				LateBindingApi.WordApi.MappedDataFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.MappedDataFields;
+				NetOffice.WordApi.MappedDataFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.MappedDataFields;
 				return newObject;
 			}
 		}

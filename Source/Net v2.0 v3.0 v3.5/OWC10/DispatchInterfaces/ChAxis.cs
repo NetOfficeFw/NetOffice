@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ChAxis SupportByLibrary XWC1.0 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartAxisCrossesEnum Crosses
+		public NetOffice.OWC10Api.Enums.ChartAxisCrossesEnum Crosses
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Crosses", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartAxisCrossesEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartAxisCrossesEnum)returnItem;
 			}
 			set
 			{
@@ -89,13 +89,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChAxis CrossingAxis
+		public NetOffice.OWC10Api.ChAxis CrossingAxis
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CrossingAxis", paramsArray);
-				LateBindingApi.OWC10Api.ChAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChAxis;
+				NetOffice.OWC10Api.ChAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChAxis;
 				return newObject;
 			}
 			set
@@ -109,13 +109,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChFont Font
+		public NetOffice.OWC10Api.ChFont Font
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				LateBindingApi.OWC10Api.ChFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChFont;
+				NetOffice.OWC10Api.ChFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChFont;
 				return newObject;
 			}
 		}
@@ -219,13 +219,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChLine Line
+		public NetOffice.OWC10Api.ChLine Line
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Line", paramsArray);
-				LateBindingApi.OWC10Api.ChLine newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChLine;
+				NetOffice.OWC10Api.ChLine newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChLine;
 				return newObject;
 			}
 		}
@@ -234,13 +234,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChGridlines MajorGridlines
+		public NetOffice.OWC10Api.ChGridlines MajorGridlines
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MajorGridlines", paramsArray);
-				LateBindingApi.OWC10Api.ChGridlines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChGridlines;
+				NetOffice.OWC10Api.ChGridlines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChGridlines;
 				return newObject;
 			}
 		}
@@ -249,13 +249,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartTickMarkEnum MajorTickMarks
+		public NetOffice.OWC10Api.Enums.ChartTickMarkEnum MajorTickMarks
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MajorTickMarks", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartTickMarkEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartTickMarkEnum)returnItem;
 			}
 			set
 			{
@@ -287,13 +287,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChGridlines MinorGridlines
+		public NetOffice.OWC10Api.ChGridlines MinorGridlines
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MinorGridlines", paramsArray);
-				LateBindingApi.OWC10Api.ChGridlines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChGridlines;
+				NetOffice.OWC10Api.ChGridlines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChGridlines;
 				return newObject;
 			}
 		}
@@ -302,13 +302,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartTickMarkEnum MinorTickMarks
+		public NetOffice.OWC10Api.Enums.ChartTickMarkEnum MinorTickMarks
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MinorTickMarks", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartTickMarkEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartTickMarkEnum)returnItem;
 			}
 			set
 			{
@@ -359,13 +359,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChChart Parent
+		public NetOffice.OWC10Api.ChChart Parent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				LateBindingApi.OWC10Api.ChChart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChChart;
+				NetOffice.OWC10Api.ChChart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChChart;
 				return newObject;
 			}
 		}
@@ -374,13 +374,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartAxisPositionEnum Position
+		public NetOffice.OWC10Api.Enums.ChartAxisPositionEnum Position
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Position", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartAxisPositionEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartAxisPositionEnum)returnItem;
 			}
 			set
 			{
@@ -393,13 +393,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChScaling Scaling
+		public NetOffice.OWC10Api.ChScaling Scaling
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Scaling", paramsArray);
-				LateBindingApi.OWC10Api.ChScaling newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChScaling;
+				NetOffice.OWC10Api.ChScaling newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChScaling;
 				return newObject;
 			}
 		}
@@ -465,13 +465,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChTitle Title
+		public NetOffice.OWC10Api.ChTitle Title
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Title", paramsArray);
-				LateBindingApi.OWC10Api.ChTitle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChTitle;
+				NetOffice.OWC10Api.ChTitle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChTitle;
 				return newObject;
 			}
 		}
@@ -480,13 +480,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartAxisTypeEnum Type
+		public NetOffice.OWC10Api.Enums.ChartAxisTypeEnum Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartAxisTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartAxisTypeEnum)returnItem;
 			}
 		}
 
@@ -527,13 +527,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartAxisGroupingEnum GroupingType
+		public NetOffice.OWC10Api.Enums.ChartAxisGroupingEnum GroupingType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupingType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartAxisGroupingEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartAxisGroupingEnum)returnItem;
 			}
 			set
 			{
@@ -546,13 +546,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartAxisUnitTypeEnum TickLabelUnitType
+		public NetOffice.OWC10Api.Enums.ChartAxisUnitTypeEnum TickLabelUnitType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TickLabelUnitType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartAxisUnitTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartAxisUnitTypeEnum)returnItem;
 			}
 			set
 			{
@@ -565,13 +565,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartAxisUnitTypeEnum TickMarkUnitType
+		public NetOffice.OWC10Api.Enums.ChartAxisUnitTypeEnum TickMarkUnitType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TickMarkUnitType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartAxisUnitTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartAxisUnitTypeEnum)returnItem;
 			}
 			set
 			{
@@ -603,13 +603,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartAxisUnitTypeEnum GroupingUnitType
+		public NetOffice.OWC10Api.Enums.ChartAxisUnitTypeEnum GroupingUnitType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupingUnitType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartAxisUnitTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartAxisUnitTypeEnum)returnItem;
 			}
 			set
 			{
@@ -622,13 +622,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartGroupingTotalFunctionEnum GroupingTotalFunction
+		public NetOffice.OWC10Api.Enums.ChartGroupingTotalFunctionEnum GroupingTotalFunction
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupingTotalFunction", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartGroupingTotalFunctionEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartGroupingTotalFunctionEnum)returnItem;
 			}
 			set
 			{
@@ -726,13 +726,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ChCategoryLabels CategoryLabels
+		public NetOffice.OWC10Api.ChCategoryLabels CategoryLabels
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CategoryLabels", paramsArray);
-				LateBindingApi.OWC10Api.ChCategoryLabels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ChCategoryLabels;
+				NetOffice.OWC10Api.ChCategoryLabels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChCategoryLabels;
 				return newObject;
 			}
 		}
@@ -741,13 +741,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartSelectionsEnum ObjectType
+		public NetOffice.OWC10Api.Enums.ChartSelectionsEnum ObjectType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ObjectType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartSelectionsEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartSelectionsEnum)returnItem;
 			}
 		}
 
@@ -770,11 +770,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Value">object Value</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Coordinate ValueToPoint(object value)
+		public NetOffice.OWC10Api.Coordinate ValueToPoint(object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
 			object returnItem = Invoker.MethodReturn(this, "ValueToPoint", paramsArray);
-			LateBindingApi.OWC10Api.Coordinate newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.Coordinate;
+			NetOffice.OWC10Api.Coordinate newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.Coordinate;
 			return newObject;
 		}
 

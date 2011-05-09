@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.DAOApi
+namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Container SupportByLibrary DAO3.6 DAO12 
@@ -141,13 +141,13 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Documents Documents
+		public NetOffice.DAOApi.Documents Documents
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Documents", paramsArray);
-				LateBindingApi.DAOApi.Documents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.Documents;
+				NetOffice.DAOApi.Documents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Documents;
 				return newObject;
 			}
 		}

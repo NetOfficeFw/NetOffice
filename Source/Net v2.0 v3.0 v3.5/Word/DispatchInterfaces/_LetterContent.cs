@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface _LetterContent SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.LetterContent Duplicate
+		public NetOffice.WordApi.LetterContent Duplicate
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Duplicate", paramsArray);
-				LateBindingApi.WordApi.LetterContent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.LetterContent;
+				NetOffice.WordApi.LetterContent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.LetterContent;
 				return newObject;
 			}
 		}
@@ -167,13 +167,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdLetterStyle LetterStyle
+		public NetOffice.WordApi.Enums.WdLetterStyle LetterStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LetterStyle", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdLetterStyle)returnItem;
+				return (NetOffice.WordApi.Enums.WdLetterStyle)returnItem;
 			}
 			set
 			{
@@ -205,13 +205,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdLetterheadLocation LetterheadLocation
+		public NetOffice.WordApi.Enums.WdLetterheadLocation LetterheadLocation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LetterheadLocation", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdLetterheadLocation)returnItem;
+				return (NetOffice.WordApi.Enums.WdLetterheadLocation)returnItem;
 			}
 			set
 			{
@@ -300,13 +300,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdSalutationType SalutationType
+		public NetOffice.WordApi.Enums.WdSalutationType SalutationType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SalutationType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdSalutationType)returnItem;
+				return (NetOffice.WordApi.Enums.WdSalutationType)returnItem;
 			}
 			set
 			{
@@ -585,13 +585,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdSalutationGender RecipientGender
+		public NetOffice.WordApi.Enums.WdSalutationGender RecipientGender
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecipientGender", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdSalutationGender)returnItem;
+				return (NetOffice.WordApi.Enums.WdSalutationGender)returnItem;
 			}
 			set
 			{
@@ -661,13 +661,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdSalutationGender SenderGender
+		public NetOffice.WordApi.Enums.WdSalutationGender SenderGender
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SenderGender", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdSalutationGender)returnItem;
+				return (NetOffice.WordApi.Enums.WdSalutationGender)returnItem;
 			}
 			set
 			{

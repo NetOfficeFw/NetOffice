@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.DAOApi
+namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface _User SupportByLibrary DAO3.6 DAO12 
@@ -108,13 +108,13 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Groups Groups
+		public NetOffice.DAOApi.Groups Groups
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Groups", paramsArray);
-				LateBindingApi.DAOApi.Groups newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.Groups;
+				NetOffice.DAOApi.Groups newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Groups;
 				return newObject;
 			}
 		}
@@ -141,11 +141,11 @@ namespace LateBindingApi.DAOApi
 		/// <param name="Name">optional object Name</param>
 		/// <param name="PID">optional object PID</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Group CreateGroup(object name, object pID)
+		public NetOffice.DAOApi.Group CreateGroup(object name, object pID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID);
 			object returnItem = Invoker.MethodReturn(this, "CreateGroup", paramsArray);
-			LateBindingApi.DAOApi.Group newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Group;
+			NetOffice.DAOApi.Group newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Group;
 			return newObject;
 		}
 
@@ -153,11 +153,11 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Group CreateGroup()
+		public NetOffice.DAOApi.Group CreateGroup()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateGroup", paramsArray);
-			LateBindingApi.DAOApi.Group newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Group;
+			NetOffice.DAOApi.Group newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Group;
 			return newObject;
 		}
 

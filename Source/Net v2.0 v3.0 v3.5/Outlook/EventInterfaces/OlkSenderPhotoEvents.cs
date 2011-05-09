@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {	
 	#pragma warning disable
 	
@@ -109,8 +109,8 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Enums.OlMouseButton newButton = (LateBindingApi.OutlookApi.Enums.OlMouseButton)button;
-			LateBindingApi.OutlookApi.Enums.OlShiftState newShift = (LateBindingApi.OutlookApi.Enums.OlShiftState)shift;
+			NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
+			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
 			Single newX = (Single)x;
 			Single newY = (Single)y;
 			object[] paramsArray = new object[4];
@@ -131,8 +131,8 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Enums.OlMouseButton newButton = (LateBindingApi.OutlookApi.Enums.OlMouseButton)button;
-			LateBindingApi.OutlookApi.Enums.OlShiftState newShift = (LateBindingApi.OutlookApi.Enums.OlShiftState)shift;
+			NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
+			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
 			Single newX = (Single)x;
 			Single newY = (Single)y;
 			object[] paramsArray = new object[4];
@@ -153,8 +153,8 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Enums.OlMouseButton newButton = (LateBindingApi.OutlookApi.Enums.OlMouseButton)button;
-			LateBindingApi.OutlookApi.Enums.OlShiftState newShift = (LateBindingApi.OutlookApi.Enums.OlShiftState)shift;
+			NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
+			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
 			Single newX = (Single)x;
 			Single newY = (Single)y;
 			object[] paramsArray = new object[4];

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _NameSpace SupportByLibrary OL09 OL10 OL11 OL12 OL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi._Application Application
+		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._Application;
+				NetOffice.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlObjectClass Class
+		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Class", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlObjectClass)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlObjectClass)returnItem;
 			}
 		}
 
@@ -80,13 +80,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi._NameSpace Session
+		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				LateBindingApi.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._NameSpace;
+				NetOffice.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Recipient CurrentUser
+		public NetOffice.OutlookApi.Recipient CurrentUser
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CurrentUser", paramsArray);
-				LateBindingApi.OutlookApi.Recipient newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi.Recipient;
+				NetOffice.OutlookApi.Recipient newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.Recipient;
 				return newObject;
 			}
 		}
@@ -125,13 +125,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi._Folders Folders
+		public NetOffice.OutlookApi._Folders Folders
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Folders", paramsArray);
-				LateBindingApi.OutlookApi._Folders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._Folders;
+				NetOffice.OutlookApi._Folders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Folders;
 				return newObject;
 			}
 		}
@@ -154,13 +154,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.AddressLists AddressLists
+		public NetOffice.OutlookApi.AddressLists AddressLists
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AddressLists", paramsArray);
-				LateBindingApi.OutlookApi.AddressLists newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi.AddressLists;
+				NetOffice.OutlookApi.AddressLists newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressLists;
 				return newObject;
 			}
 		}
@@ -169,13 +169,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.SyncObjects SyncObjects
+		public NetOffice.OutlookApi.SyncObjects SyncObjects
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SyncObjects", paramsArray);
-				LateBindingApi.OutlookApi.SyncObjects newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi.SyncObjects;
+				NetOffice.OutlookApi.SyncObjects newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.SyncObjects;
 				return newObject;
 			}
 		}
@@ -213,13 +213,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlExchangeConnectionMode ExchangeConnectionMode
+		public NetOffice.OutlookApi.Enums.OlExchangeConnectionMode ExchangeConnectionMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ExchangeConnectionMode", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlExchangeConnectionMode)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlExchangeConnectionMode)returnItem;
 			}
 		}
 
@@ -227,13 +227,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Accounts Accounts
+		public NetOffice.OutlookApi.Accounts Accounts
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Accounts", paramsArray);
-				LateBindingApi.OutlookApi.Accounts newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi.Accounts;
+				NetOffice.OutlookApi.Accounts newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.Accounts;
 				return newObject;
 			}
 		}
@@ -256,13 +256,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Stores Stores
+		public NetOffice.OutlookApi.Stores Stores
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Stores", paramsArray);
-				LateBindingApi.OutlookApi.Stores newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi.Stores;
+				NetOffice.OutlookApi.Stores newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.Stores;
 				return newObject;
 			}
 		}
@@ -271,13 +271,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Store DefaultStore
+		public NetOffice.OutlookApi.Store DefaultStore
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultStore", paramsArray);
-				LateBindingApi.OutlookApi.Store newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi.Store;
+				NetOffice.OutlookApi.Store newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.Store;
 				return newObject;
 			}
 		}
@@ -286,13 +286,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Categories Categories
+		public NetOffice.OutlookApi.Categories Categories
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Categories", paramsArray);
-				LateBindingApi.OutlookApi.Categories newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi.Categories;
+				NetOffice.OutlookApi.Categories newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.Categories;
 				return newObject;
 			}
 		}
@@ -343,13 +343,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlAutoDiscoverConnectionMode AutoDiscoverConnectionMode
+		public NetOffice.OutlookApi.Enums.OlAutoDiscoverConnectionMode AutoDiscoverConnectionMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AutoDiscoverConnectionMode", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlAutoDiscoverConnectionMode)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlAutoDiscoverConnectionMode)returnItem;
 			}
 		}
 
@@ -362,24 +362,24 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="RecipientName">string RecipientName</param>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Recipient CreateRecipient(string recipientName)
+		public NetOffice.OutlookApi.Recipient CreateRecipient(string recipientName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipientName);
 			object returnItem = Invoker.MethodReturn(this, "CreateRecipient", paramsArray);
-			LateBindingApi.OutlookApi.Recipient newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.Recipient;
+			NetOffice.OutlookApi.Recipient newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Recipient;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
-		/// <param name="FolderType">LateBindingApi.OutlookApi.Enums.OlDefaultFolders FolderType</param>
+		/// <param name="FolderType">NetOffice.OutlookApi.Enums.OlDefaultFolders FolderType</param>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.MAPIFolder GetDefaultFolder(LateBindingApi.OutlookApi.Enums.OlDefaultFolders folderType)
+		public NetOffice.OutlookApi.MAPIFolder GetDefaultFolder(NetOffice.OutlookApi.Enums.OlDefaultFolders folderType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(folderType);
 			object returnItem = Invoker.MethodReturn(this, "GetDefaultFolder", paramsArray);
-			LateBindingApi.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MAPIFolder;
 			return newObject;
 		}
 
@@ -389,11 +389,11 @@ namespace LateBindingApi.OutlookApi
 		/// <param name="EntryIDFolder">string EntryIDFolder</param>
 		/// <param name="EntryIDStore">optional object EntryIDStore</param>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.MAPIFolder GetFolderFromID(string entryIDFolder, object entryIDStore)
+		public NetOffice.OutlookApi.MAPIFolder GetFolderFromID(string entryIDFolder, object entryIDStore)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(entryIDFolder, entryIDStore);
 			object returnItem = Invoker.MethodReturn(this, "GetFolderFromID", paramsArray);
-			LateBindingApi.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MAPIFolder;
 			return newObject;
 		}
 
@@ -402,11 +402,11 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="EntryIDFolder">string EntryIDFolder</param>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.MAPIFolder GetFolderFromID(string entryIDFolder)
+		public NetOffice.OutlookApi.MAPIFolder GetFolderFromID(string entryIDFolder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(entryIDFolder);
 			object returnItem = Invoker.MethodReturn(this, "GetFolderFromID", paramsArray);
-			LateBindingApi.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MAPIFolder;
 			return newObject;
 		}
 
@@ -442,25 +442,25 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="EntryID">string EntryID</param>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Recipient GetRecipientFromID(string entryID)
+		public NetOffice.OutlookApi.Recipient GetRecipientFromID(string entryID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(entryID);
 			object returnItem = Invoker.MethodReturn(this, "GetRecipientFromID", paramsArray);
-			LateBindingApi.OutlookApi.Recipient newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.Recipient;
+			NetOffice.OutlookApi.Recipient newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Recipient;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
-		/// <param name="Recipient">LateBindingApi.OutlookApi.Recipient Recipient</param>
-		/// <param name="FolderType">LateBindingApi.OutlookApi.Enums.OlDefaultFolders FolderType</param>
+		/// <param name="Recipient">NetOffice.OutlookApi.Recipient Recipient</param>
+		/// <param name="FolderType">NetOffice.OutlookApi.Enums.OlDefaultFolders FolderType</param>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.MAPIFolder GetSharedDefaultFolder(LateBindingApi.OutlookApi.Recipient recipient, LateBindingApi.OutlookApi.Enums.OlDefaultFolders folderType)
+		public NetOffice.OutlookApi.MAPIFolder GetSharedDefaultFolder(NetOffice.OutlookApi.Recipient recipient, NetOffice.OutlookApi.Enums.OlDefaultFolders folderType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipient, folderType);
 			object returnItem = Invoker.MethodReturn(this, "GetSharedDefaultFolder", paramsArray);
-			LateBindingApi.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MAPIFolder;
 			return newObject;
 		}
 
@@ -502,11 +502,11 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.MAPIFolder PickFolder()
+		public NetOffice.OutlookApi.MAPIFolder PickFolder()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "PickFolder", paramsArray);
-			LateBindingApi.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MAPIFolder;
 			return newObject;
 		}
 
@@ -534,9 +534,9 @@ namespace LateBindingApi.OutlookApi
 		/// <summary>
 		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 		/// </summary>
-		/// <param name="Folder">LateBindingApi.OutlookApi.MAPIFolder Folder</param>
+		/// <param name="Folder">NetOffice.OutlookApi.MAPIFolder Folder</param>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public void RemoveStore(LateBindingApi.OutlookApi.MAPIFolder folder)
+		public void RemoveStore(NetOffice.OutlookApi.MAPIFolder folder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(folder);
 			Invoker.Method(this, "RemoveStore", paramsArray);
@@ -567,9 +567,9 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL11 OL12 OL14 
 		/// </summary>
 		/// <param name="Store">object Store</param>
-		/// <param name="Type">LateBindingApi.OutlookApi.Enums.OlStoreType Type</param>
+		/// <param name="Type">NetOffice.OutlookApi.Enums.OlStoreType Type</param>
 		[SupportByLibrary("OL11","OL12","OL14")]
-		public void AddStoreEx(object store, LateBindingApi.OutlookApi.Enums.OlStoreType type)
+		public void AddStoreEx(object store, NetOffice.OutlookApi.Enums.OlStoreType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store, type);
 			Invoker.Method(this, "AddStoreEx", paramsArray);
@@ -579,11 +579,11 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.SelectNamesDialog GetSelectNamesDialog()
+		public NetOffice.OutlookApi.SelectNamesDialog GetSelectNamesDialog()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetSelectNamesDialog", paramsArray);
-			LateBindingApi.OutlookApi.SelectNamesDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.SelectNamesDialog;
+			NetOffice.OutlookApi.SelectNamesDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.SelectNamesDialog;
 			return newObject;
 		}
 
@@ -603,11 +603,11 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="ID">string ID</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.AddressEntry GetAddressEntryFromID(string iD)
+		public NetOffice.OutlookApi.AddressEntry GetAddressEntryFromID(string iD)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iD);
 			object returnItem = Invoker.MethodReturn(this, "GetAddressEntryFromID", paramsArray);
-			LateBindingApi.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.AddressEntry;
+			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntry;
 			return newObject;
 		}
 
@@ -615,11 +615,11 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.AddressList GetGlobalAddressList()
+		public NetOffice.OutlookApi.AddressList GetGlobalAddressList()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetGlobalAddressList", paramsArray);
-			LateBindingApi.OutlookApi.AddressList newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.AddressList;
+			NetOffice.OutlookApi.AddressList newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressList;
 			return newObject;
 		}
 
@@ -628,11 +628,11 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="ID">string ID</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Store GetStoreFromID(string iD)
+		public NetOffice.OutlookApi.Store GetStoreFromID(string iD)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iD);
 			object returnItem = Invoker.MethodReturn(this, "GetStoreFromID", paramsArray);
-			LateBindingApi.OutlookApi.Store newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.Store;
+			NetOffice.OutlookApi.Store newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Store;
 			return newObject;
 		}
 
@@ -644,11 +644,11 @@ namespace LateBindingApi.OutlookApi
 		/// <param name="DownloadAttachments">optional object DownloadAttachments</param>
 		/// <param name="UseTTL">optional object UseTTL</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.MAPIFolder OpenSharedFolder(string path, object name, object downloadAttachments, object useTTL)
+		public NetOffice.OutlookApi.MAPIFolder OpenSharedFolder(string path, object name, object downloadAttachments, object useTTL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, name, downloadAttachments, useTTL);
 			object returnItem = Invoker.MethodReturn(this, "OpenSharedFolder", paramsArray);
-			LateBindingApi.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MAPIFolder;
 			return newObject;
 		}
 
@@ -657,11 +657,11 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.MAPIFolder OpenSharedFolder(string path)
+		public NetOffice.OutlookApi.MAPIFolder OpenSharedFolder(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
 			object returnItem = Invoker.MethodReturn(this, "OpenSharedFolder", paramsArray);
-			LateBindingApi.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MAPIFolder;
 			return newObject;
 		}
 
@@ -684,11 +684,11 @@ namespace LateBindingApi.OutlookApi
 		/// <param name="Context">object Context</param>
 		/// <param name="Provider">optional object Provider</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.SharingItem CreateSharingItem(object context, object provider)
+		public NetOffice.OutlookApi.SharingItem CreateSharingItem(object context, object provider)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(context, provider);
 			object returnItem = Invoker.MethodReturn(this, "CreateSharingItem", paramsArray);
-			LateBindingApi.OutlookApi.SharingItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.SharingItem;
+			NetOffice.OutlookApi.SharingItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.SharingItem;
 			return newObject;
 		}
 
@@ -697,11 +697,11 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="Context">object Context</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.SharingItem CreateSharingItem(object context)
+		public NetOffice.OutlookApi.SharingItem CreateSharingItem(object context)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(context);
 			object returnItem = Invoker.MethodReturn(this, "CreateSharingItem", paramsArray);
-			LateBindingApi.OutlookApi.SharingItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.SharingItem;
+			NetOffice.OutlookApi.SharingItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.SharingItem;
 			return newObject;
 		}
 
@@ -721,13 +721,13 @@ namespace LateBindingApi.OutlookApi
 		/// <summary>
 		/// SupportByLibrary OL14 
 		/// </summary>
-		/// <param name="AddressEntry">LateBindingApi.OutlookApi.AddressEntry AddressEntry</param>
+		/// <param name="AddressEntry">NetOffice.OutlookApi.AddressEntry AddressEntry</param>
 		[SupportByLibrary("OL14")]
-		public LateBindingApi.OfficeApi.ContactCard CreateContactCard(LateBindingApi.OutlookApi.AddressEntry addressEntry)
+		public NetOffice.OfficeApi.ContactCard CreateContactCard(NetOffice.OutlookApi.AddressEntry addressEntry)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(addressEntry);
 			object returnItem = Invoker.MethodReturn(this, "CreateContactCard", paramsArray);
-			LateBindingApi.OfficeApi.ContactCard newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.ContactCard;
+			NetOffice.OfficeApi.ContactCard newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.ContactCard;
 			return newObject;
 		}
 

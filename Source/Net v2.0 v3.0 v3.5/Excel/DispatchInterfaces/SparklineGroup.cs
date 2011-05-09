@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface SparklineGroup SupportByLibrary XL14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -67,13 +67,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -111,11 +111,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Sparkline get_Item(object index)
+		public NetOffice.ExcelApi.Sparkline get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.ExcelApi.Sparkline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Sparkline;
+			NetOffice.ExcelApi.Sparkline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Sparkline;
 			return newObject;
 		}
 
@@ -123,13 +123,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Range Location
+		public NetOffice.ExcelApi.Range Location
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
-				LateBindingApi.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 			set
@@ -181,13 +181,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlSparkType Type
+		public NetOffice.ExcelApi.Enums.XlSparkType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlSparkType)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlSparkType)returnItem;
 			}
 			set
 			{
@@ -200,13 +200,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.FormatColor SeriesColor
+		public NetOffice.ExcelApi.FormatColor SeriesColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SeriesColor", paramsArray);
-				LateBindingApi.ExcelApi.FormatColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.FormatColor;
+				NetOffice.ExcelApi.FormatColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.FormatColor;
 				return newObject;
 			}
 		}
@@ -215,13 +215,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.SparkPoints Points
+		public NetOffice.ExcelApi.SparkPoints Points
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Points", paramsArray);
-				LateBindingApi.ExcelApi.SparkPoints newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.SparkPoints;
+				NetOffice.ExcelApi.SparkPoints newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SparkPoints;
 				return newObject;
 			}
 		}
@@ -230,13 +230,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.SparkAxes Axes
+		public NetOffice.ExcelApi.SparkAxes Axes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Axes", paramsArray);
-				LateBindingApi.ExcelApi.SparkAxes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.SparkAxes;
+				NetOffice.ExcelApi.SparkAxes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SparkAxes;
 				return newObject;
 			}
 		}
@@ -245,13 +245,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlDisplayBlanksAs DisplayBlanksAs
+		public NetOffice.ExcelApi.Enums.XlDisplayBlanksAs DisplayBlanksAs
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DisplayBlanksAs", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlDisplayBlanksAs)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlDisplayBlanksAs)returnItem;
 			}
 			set
 			{
@@ -311,13 +311,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlSparklineRowCol PlotBy
+		public NetOffice.ExcelApi.Enums.XlSparklineRowCol PlotBy
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PlotBy", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlSparklineRowCol)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlSparklineRowCol)returnItem;
 			}
 			set
 			{
@@ -333,9 +333,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL14 
 		/// </summary>
-		/// <param name="Location">LateBindingApi.ExcelApi.Range Location</param>
+		/// <param name="Location">NetOffice.ExcelApi.Range Location</param>
 		[SupportByLibrary("XL14")]
-		public void ModifyLocation(LateBindingApi.ExcelApi.Range location)
+		public void ModifyLocation(NetOffice.ExcelApi.Range location)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(location);
 			Invoker.Method(this, "ModifyLocation", paramsArray);
@@ -355,10 +355,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL14 
 		/// </summary>
-		/// <param name="Location">LateBindingApi.ExcelApi.Range Location</param>
+		/// <param name="Location">NetOffice.ExcelApi.Range Location</param>
 		/// <param name="SourceData">string SourceData</param>
 		[SupportByLibrary("XL14")]
-		public void Modify(LateBindingApi.ExcelApi.Range location, string sourceData)
+		public void Modify(NetOffice.ExcelApi.Range location, string sourceData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(location, sourceData);
 			Invoker.Method(this, "Modify", paramsArray);

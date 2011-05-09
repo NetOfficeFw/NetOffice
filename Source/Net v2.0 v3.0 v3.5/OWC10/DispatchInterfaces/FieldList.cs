@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface FieldList SupportByLibrary XWC1.0 
@@ -118,13 +118,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.FieldListSelectRestriction SelectRestriction
+		public NetOffice.OWC10Api.Enums.FieldListSelectRestriction SelectRestriction
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SelectRestriction", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.FieldListSelectRestriction)returnItem;
+				return (NetOffice.OWC10Api.Enums.FieldListSelectRestriction)returnItem;
 			}
 			set
 			{
@@ -142,11 +142,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="bVisible">bool bVisible</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.FieldListHierarchy CreateHierarchy(bool bVisible)
+		public NetOffice.OWC10Api.FieldListHierarchy CreateHierarchy(bool bVisible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bVisible);
 			object returnItem = Invoker.MethodReturn(this, "CreateHierarchy", paramsArray);
-			LateBindingApi.OWC10Api.FieldListHierarchy newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.FieldListHierarchy;
+			NetOffice.OWC10Api.FieldListHierarchy newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.FieldListHierarchy;
 			return newObject;
 		}
 
@@ -168,13 +168,13 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pfln">LateBindingApi.OWC10Api.FieldListNode pfln</param>
+		/// <param name="pfln">NetOffice.OWC10Api.FieldListNode pfln</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.FieldListNode GetNextSelected(LateBindingApi.OWC10Api.FieldListNode pfln)
+		public NetOffice.OWC10Api.FieldListNode GetNextSelected(NetOffice.OWC10Api.FieldListNode pfln)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfln);
 			object returnItem = Invoker.MethodReturn(this, "GetNextSelected", paramsArray);
-			LateBindingApi.OWC10Api.FieldListNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.FieldListNode;
+			NetOffice.OWC10Api.FieldListNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.FieldListNode;
 			return newObject;
 		}
 

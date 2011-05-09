@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Axes SupportByLibrary WD14 
@@ -113,31 +113,31 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.WordApi.Enums.XlAxisType Type</param>
-		/// <param name="AxisGroup">LateBindingApi.WordApi.Enums.XlAxisGroup AxisGroup</param>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlAxisType Type</param>
+		/// <param name="AxisGroup">NetOffice.WordApi.Enums.XlAxisGroup AxisGroup</param>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Axis Item(LateBindingApi.WordApi.Enums.XlAxisType type, LateBindingApi.WordApi.Enums.XlAxisGroup axisGroup)
+		public NetOffice.WordApi.Axis Item(NetOffice.WordApi.Enums.XlAxisType type, NetOffice.WordApi.Enums.XlAxisGroup axisGroup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.WordApi.Axis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Axis;
+			NetOffice.WordApi.Axis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Axis;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary WD14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.WordApi.Enums.XlAxisType Type</param>
-		/// <param name="AxisGroup">LateBindingApi.WordApi.Enums.XlAxisGroup AxisGroup</param>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlAxisType Type</param>
+		/// <param name="AxisGroup">NetOffice.WordApi.Enums.XlAxisGroup AxisGroup</param>
 		[SupportByLibrary("WD14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.WordApi.Axis this[LateBindingApi.WordApi.Enums.XlAxisType type, LateBindingApi.WordApi.Enums.XlAxisGroup axisGroup]
+		public NetOffice.WordApi.Axis this[NetOffice.WordApi.Enums.XlAxisType type, NetOffice.WordApi.Enums.XlAxisGroup axisGroup]
 		{
 			get
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				LateBindingApi.WordApi.Axis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Axis;
+				NetOffice.WordApi.Axis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Axis;
 				return newObject;
 			}
 		}

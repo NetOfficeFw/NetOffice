@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PickerProperties SupportByLibrary OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PickerProperty get_Item(Int32 index)
+		public NetOffice.OfficeApi.PickerProperty get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.PickerProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.PickerProperty;
+			NetOffice.OfficeApi.PickerProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PickerProperty;
 			return newObject;
 		}
 
@@ -84,13 +84,13 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Id">string Id</param>
 		/// <param name="Value">string Value</param>
-		/// <param name="Type">LateBindingApi.OfficeApi.Enums.MsoPickerField Type</param>
+		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoPickerField Type</param>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PickerProperty Add(string id, string value, LateBindingApi.OfficeApi.Enums.MsoPickerField type)
+		public NetOffice.OfficeApi.PickerProperty Add(string id, string value, NetOffice.OfficeApi.Enums.MsoPickerField type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, value, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.PickerProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.PickerProperty;
+			NetOffice.OfficeApi.PickerProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.PickerProperty;
 			return newObject;
 		}
 

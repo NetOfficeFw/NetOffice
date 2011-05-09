@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Permission SupportByLibrary OF11 OF12 OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.UserPermission get_Item(object index)
+		public NetOffice.OfficeApi.UserPermission get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.UserPermission newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.UserPermission;
+			NetOffice.OfficeApi.UserPermission newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.UserPermission;
 			return newObject;
 		}
 
@@ -238,11 +238,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Permission">optional object Permission</param>
 		/// <param name="ExpirationDate">optional object ExpirationDate</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.UserPermission Add(string userId, object permission, object expirationDate)
+		public NetOffice.OfficeApi.UserPermission Add(string userId, object permission, object expirationDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(userId, permission, expirationDate);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.UserPermission newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.UserPermission;
+			NetOffice.OfficeApi.UserPermission newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.UserPermission;
 			return newObject;
 		}
 
@@ -251,11 +251,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="UserId">string UserId</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.UserPermission Add(string userId)
+		public NetOffice.OfficeApi.UserPermission Add(string userId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(userId);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.UserPermission newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.UserPermission;
+			NetOffice.OfficeApi.UserPermission newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.UserPermission;
 			return newObject;
 		}
 

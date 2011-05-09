@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 
 	#region Delegates
@@ -11,8 +11,8 @@ namespace LateBindingApi.MSComctlLibApi
 	#pragma warning disable
 	public delegate void ListView_BeforeLabelEditEventHandler(ref Int16 Cancel);
 	public delegate void ListView_AfterLabelEditEventHandler(ref Int16 Cancel, ref string NewString);
-	public delegate void ListView_ColumnClickEventHandler(LateBindingApi.MSComctlLibApi.ColumnHeader ColumnHeader);
-	public delegate void ListView_ItemClickEventHandler(LateBindingApi.MSComctlLibApi.ListItem Item);
+	public delegate void ListView_ColumnClickEventHandler(NetOffice.MSComctlLibApi.ColumnHeader ColumnHeader);
+	public delegate void ListView_ItemClickEventHandler(NetOffice.MSComctlLibApi.ListItem Item);
 	public delegate void ListView_KeyDownEventHandler(ref Int16 KeyCode, Int16 Shift);
 	public delegate void ListView_KeyUpEventHandler(ref Int16 KeyCode, Int16 Shift);
 	public delegate void ListView_KeyPressEventHandler(ref Int16 KeyAscii);
@@ -21,13 +21,13 @@ namespace LateBindingApi.MSComctlLibApi
 	public delegate void ListView_MouseUpEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
 	public delegate void ListView_ClickEventHandler();
 	public delegate void ListView_DblClickEventHandler();
-	public delegate void ListView_OLEStartDragEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
+	public delegate void ListView_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
 	public delegate void ListView_OLEGiveFeedbackEventHandler(ref Int32 Effect, ref bool DefaultCursors);
-	public delegate void ListView_OLESetDataEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
+	public delegate void ListView_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
 	public delegate void ListView_OLECompleteDragEventHandler(ref Int32 Effect);
-	public delegate void ListView_OLEDragOverEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
-	public delegate void ListView_OLEDragDropEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
-	public delegate void ListView_ItemCheckEventHandler(LateBindingApi.MSComctlLibApi.ListItem Item);
+	public delegate void ListView_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
+	public delegate void ListView_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
+	public delegate void ListView_ItemCheckEventHandler(NetOffice.MSComctlLibApi.ListItem Item);
 	#pragma warning restore
 
 	#endregion

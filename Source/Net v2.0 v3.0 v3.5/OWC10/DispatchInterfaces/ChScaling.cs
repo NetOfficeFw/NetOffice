@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ChScaling SupportByLibrary XWC1.0 
@@ -165,13 +165,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartScaleOrientationEnum Orientation
+		public NetOffice.OWC10Api.Enums.ChartScaleOrientationEnum Orientation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartScaleOrientationEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartScaleOrientationEnum)returnItem;
 			}
 			set
 			{
@@ -184,13 +184,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartScaleTypeEnum Type
+		public NetOffice.OWC10Api.Enums.ChartScaleTypeEnum Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartScaleTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartScaleTypeEnum)returnItem;
 			}
 			set
 			{

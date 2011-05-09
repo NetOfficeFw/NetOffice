@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PPListBox SupportByLibrary PP09 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPStrings Strings
+		public NetOffice.PowerPointApi.PPStrings Strings
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Strings", paramsArray);
-				LateBindingApi.PowerPointApi.PPStrings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.PPStrings;
+				NetOffice.PowerPointApi.PPStrings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.PPStrings;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.Enums.PpListBoxSelectionStyle SelectionStyle
+		public NetOffice.PowerPointApi.Enums.PpListBoxSelectionStyle SelectionStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SelectionStyle", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpListBoxSelectionStyle)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpListBoxSelectionStyle)returnItem;
 			}
 			set
 			{
@@ -157,14 +157,19 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState get_IsSelected(Int32 index)
+		public NetOffice.OfficeApi.Enums.MsoTriState get_IsSelected(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "IsSelected", paramsArray);
-			return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+			return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 		}
 
-		public void set_IsSelected(Int32 index, LateBindingApi.OfficeApi.Enums.MsoTriState value)
+		/// <summary>
+		/// SupportByLibrary PP09 
+		/// </summary>
+		/// <param name="index">Int32 index</param>
+		[SupportByLibrary("PP09")]
+		public void set_IsSelected(Int32 index, NetOffice.OfficeApi.Enums.MsoTriState value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			Invoker.PropertySet(this, "IsSelected", paramsArray, value);
@@ -174,13 +179,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.Enums.PpListBoxAbbreviationStyle IsAbbreviated
+		public NetOffice.PowerPointApi.Enums.PpListBoxAbbreviationStyle IsAbbreviated
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "IsAbbreviated", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpListBoxAbbreviationStyle)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpListBoxAbbreviationStyle)returnItem;
 			}
 		}
 
@@ -202,9 +207,9 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP09 
 		/// </summary>
-		/// <param name="Style">LateBindingApi.PowerPointApi.Enums.PpListBoxAbbreviationStyle Style</param>
+		/// <param name="Style">NetOffice.PowerPointApi.Enums.PpListBoxAbbreviationStyle Style</param>
 		[SupportByLibrary("PP09")]
-		public void Abbreviate(LateBindingApi.PowerPointApi.Enums.PpListBoxAbbreviationStyle style)
+		public void Abbreviate(NetOffice.PowerPointApi.Enums.PpListBoxAbbreviationStyle style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style);
 			Invoker.Method(this, "Abbreviate", paramsArray);

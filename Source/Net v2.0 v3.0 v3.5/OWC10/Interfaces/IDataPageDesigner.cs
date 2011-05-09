@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// Interface IDataPageDesigner SupportByLibrary XWC1.0 
@@ -53,9 +53,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pDataSourceControl">LateBindingApi.OWC10Api.IDataSourceControl pDataSourceControl</param>
+		/// <param name="pDataSourceControl">NetOffice.OWC10Api.IDataSourceControl pDataSourceControl</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 ConnectDataComponents(LateBindingApi.OWC10Api.IDataSourceControl pDataSourceControl)
+		public Int32 ConnectDataComponents(NetOffice.OWC10Api.IDataSourceControl pDataSourceControl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDataSourceControl);
 			object returnItem = Invoker.MethodReturn(this, "ConnectDataComponents", paramsArray);
@@ -65,10 +65,10 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="SectType">LateBindingApi.OWC10Api.Enums.SectTypeEnum SectType</param>
+		/// <param name="SectType">NetOffice.OWC10Api.Enums.SectTypeEnum SectType</param>
 		/// <param name="wzRecordsetName">string wzRecordsetName</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 CreateSection(LateBindingApi.OWC10Api.Enums.SectTypeEnum sectType, string wzRecordsetName)
+		public Int32 CreateSection(NetOffice.OWC10Api.Enums.SectTypeEnum sectType, string wzRecordsetName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectType, wzRecordsetName);
 			object returnItem = Invoker.MethodReturn(this, "CreateSection", paramsArray);
@@ -78,11 +78,11 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="SectType">LateBindingApi.OWC10Api.Enums.SectTypeEnum SectType</param>
+		/// <param name="SectType">NetOffice.OWC10Api.Enums.SectTypeEnum SectType</param>
 		/// <param name="wzRecordsetName">string wzRecordsetName</param>
 		/// <param name="fInGroupingDefDelete">Int32 fInGroupingDefDelete</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 DeleteSection(LateBindingApi.OWC10Api.Enums.SectTypeEnum sectType, string wzRecordsetName, Int32 fInGroupingDefDelete)
+		public Int32 DeleteSection(NetOffice.OWC10Api.Enums.SectTypeEnum sectType, string wzRecordsetName, Int32 fInGroupingDefDelete)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectType, wzRecordsetName, fInGroupingDefDelete);
 			object returnItem = Invoker.MethodReturn(this, "DeleteSection", paramsArray);
@@ -92,9 +92,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pGroupLevel">LateBindingApi.OWC10Api.GroupLevel pGroupLevel</param>
+		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 OnGroupLevelAdded(LateBindingApi.OWC10Api.GroupLevel pGroupLevel)
+		public Int32 OnGroupLevelAdded(NetOffice.OWC10Api.GroupLevel pGroupLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pGroupLevel);
 			object returnItem = Invoker.MethodReturn(this, "OnGroupLevelAdded", paramsArray);
@@ -115,11 +115,11 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pGroupLevel">LateBindingApi.OWC10Api.GroupLevel pGroupLevel</param>
+		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		/// <param name="wzRecordsetNameOld">string wzRecordsetNameOld</param>
 		/// <param name="wzRecordsetNameNew">string wzRecordsetNameNew</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 RebindGroupLevel(LateBindingApi.OWC10Api.GroupLevel pGroupLevel, string wzRecordsetNameOld, string wzRecordsetNameNew)
+		public Int32 RebindGroupLevel(NetOffice.OWC10Api.GroupLevel pGroupLevel, string wzRecordsetNameOld, string wzRecordsetNameNew)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pGroupLevel, wzRecordsetNameOld, wzRecordsetNameNew);
 			object returnItem = Invoker.MethodReturn(this, "RebindGroupLevel", paramsArray);
@@ -226,11 +226,11 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pRequestingDSC">LateBindingApi.OWC10Api.IDataSourceControl pRequestingDSC</param>
+		/// <param name="pRequestingDSC">NetOffice.OWC10Api.IDataSourceControl pRequestingDSC</param>
 		/// <param name="vfForceRefresh">bool vfForceRefresh</param>
-		/// <param name="rt">LateBindingApi.OWC10Api.Enums.RefreshType rt</param>
+		/// <param name="rt">NetOffice.OWC10Api.Enums.RefreshType rt</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 RefreshDataTools(LateBindingApi.OWC10Api.IDataSourceControl pRequestingDSC, bool vfForceRefresh, LateBindingApi.OWC10Api.Enums.RefreshType rt)
+		public Int32 RefreshDataTools(NetOffice.OWC10Api.IDataSourceControl pRequestingDSC, bool vfForceRefresh, NetOffice.OWC10Api.Enums.RefreshType rt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pRequestingDSC, vfForceRefresh, rt);
 			object returnItem = Invoker.MethodReturn(this, "RefreshDataTools", paramsArray);
@@ -254,35 +254,35 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pioum">ref LateBindingApi.OWC10Api.IOleUndoManager pioum</param>
+		/// <param name="pioum">ref NetOffice.OWC10Api.IOleUndoManager pioum</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 GetUndoManager(ref LateBindingApi.OWC10Api.IOleUndoManager pioum)
+		public Int32 GetUndoManager(ref NetOffice.OWC10Api.IOleUndoManager pioum)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pioum);
 			object returnItem = Invoker.MethodReturn(this, "GetUndoManager", paramsArray);
-			pioum = (LateBindingApi.OWC10Api.IOleUndoManager)paramsArray[0];
+			pioum = (NetOffice.OWC10Api.IOleUndoManager)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pDSC">LateBindingApi.OWC10Api.IDataSourceControl pDSC</param>
+		/// <param name="pDSC">NetOffice.OWC10Api.IDataSourceControl pDSC</param>
 		/// <param name="bstrRecordSetDef">string bstrRecordSetDef</param>
 		/// <param name="bstrDropRowsource">string bstrDropRowsource</param>
 		/// <param name="varRowsources">object varRowsources</param>
 		/// <param name="varRelationships">object varRelationships</param>
-		/// <param name="ppprs">ref LateBindingApi.OWC10Api.PageRowsource ppprs</param>
-		/// <param name="ppsr">ref LateBindingApi.OWC10Api.SchemaRelationship ppsr</param>
+		/// <param name="ppprs">ref NetOffice.OWC10Api.PageRowsource ppprs</param>
+		/// <param name="ppsr">ref NetOffice.OWC10Api.SchemaRelationship ppsr</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 DoRelWiz(LateBindingApi.OWC10Api.IDataSourceControl pDSC, string bstrRecordSetDef, string bstrDropRowsource, object varRowsources, object varRelationships, ref LateBindingApi.OWC10Api.PageRowsource ppprs, ref LateBindingApi.OWC10Api.SchemaRelationship ppsr)
+		public Int32 DoRelWiz(NetOffice.OWC10Api.IDataSourceControl pDSC, string bstrRecordSetDef, string bstrDropRowsource, object varRowsources, object varRelationships, ref NetOffice.OWC10Api.PageRowsource ppprs, ref NetOffice.OWC10Api.SchemaRelationship ppsr)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pDSC, bstrRecordSetDef, bstrDropRowsource, varRowsources, varRelationships, ppprs, ppsr);
 			object returnItem = Invoker.MethodReturn(this, "DoRelWiz", paramsArray);
-			ppprs = (LateBindingApi.OWC10Api.PageRowsource)paramsArray[5];
-			ppsr = (LateBindingApi.OWC10Api.SchemaRelationship)paramsArray[6];
+			ppprs = (NetOffice.OWC10Api.PageRowsource)paramsArray[5];
+			ppsr = (NetOffice.OWC10Api.SchemaRelationship)paramsArray[6];
 			return (Int32)returnItem;
 		}
 

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Trendlines SupportByLibrary PP14 
@@ -95,13 +95,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -113,7 +113,7 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.PowerPointApi.Enums.XlTrendlineType Type</param>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlTrendlineType Type</param>
 		/// <param name="Order">optional object Order</param>
 		/// <param name="Period">optional object Period</param>
 		/// <param name="Forward">optional object Forward</param>
@@ -123,24 +123,24 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="DisplayRSquared">optional object DisplayRSquared</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Trendline Add(LateBindingApi.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.PowerPointApi.Enums.XlTrendlineType Type</param>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlTrendlineType Type</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Trendline Add(LateBindingApi.PowerPointApi.Enums.XlTrendlineType type)
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -149,11 +149,11 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Trendline Item(object index)
+		public NetOffice.PowerPointApi.Trendline Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -161,11 +161,11 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Trendline Item()
+		public NetOffice.PowerPointApi.Trendline Item()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -175,13 +175,13 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PP14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.PowerPointApi.Trendline this[object index]
+		public NetOffice.PowerPointApi.Trendline this[object index]
 		{
 			get
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				LateBindingApi.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Trendline;
+				NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Trendline;
 				return newObject;
 			}
 		}

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface System SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -151,13 +151,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdCountry Country
+		public NetOffice.WordApi.Enums.WdCountry Country
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Country", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdCountry)returnItem;
+				return (NetOffice.WordApi.Enums.WdCountry)returnItem;
 			}
 		}
 
@@ -216,6 +216,12 @@ namespace LateBindingApi.WordApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// </summary>
+		/// <param name="Section">string Section</param>
+		/// <param name="Key">string Key</param>
+		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
 		public void set_ProfileString(string section, string key, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(section, key);
@@ -236,6 +242,13 @@ namespace LateBindingApi.WordApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// </summary>
+		/// <param name="FileName">string FileName</param>
+		/// <param name="Section">string Section</param>
+		/// <param name="Key">string Key</param>
+		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
 		public void set_PrivateProfileString(string fileName, string section, string key, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, key);
@@ -302,13 +315,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdCursorType Cursor
+		public NetOffice.WordApi.Enums.WdCursorType Cursor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Cursor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdCursorType)returnItem;
+				return (NetOffice.WordApi.Enums.WdCursorType)returnItem;
 			}
 			set
 			{
@@ -321,13 +334,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdCountry CountryRegion
+		public NetOffice.WordApi.Enums.WdCountry CountryRegion
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CountryRegion", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdCountry)returnItem;
+				return (NetOffice.WordApi.Enums.WdCountry)returnItem;
 			}
 		}
 

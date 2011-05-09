@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Assistant SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -104,13 +104,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Balloon NewBalloon
+		public NetOffice.OfficeApi.Balloon NewBalloon
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NewBalloon", paramsArray);
-				LateBindingApi.OfficeApi.Balloon newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.Balloon;
+				NetOffice.OfficeApi.Balloon newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.Balloon;
 				return newObject;
 			}
 		}
@@ -119,13 +119,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoBalloonErrorType BalloonError
+		public NetOffice.OfficeApi.Enums.MsoBalloonErrorType BalloonError
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BalloonError", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoBalloonErrorType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoBalloonErrorType)returnItem;
 			}
 		}
 
@@ -152,13 +152,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoAnimationType Animation
+		public NetOffice.OfficeApi.Enums.MsoAnimationType Animation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Animation", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoAnimationType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoAnimationType)returnItem;
 			}
 			set
 			{
@@ -569,10 +569,10 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		/// <param name="WizardID">Int32 WizardID</param>
-		/// <param name="act">LateBindingApi.OfficeApi.Enums.MsoWizardActType act</param>
+		/// <param name="act">NetOffice.OfficeApi.Enums.MsoWizardActType act</param>
 		/// <param name="Animation">optional object Animation</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void ActivateWizard(Int32 wizardID, LateBindingApi.OfficeApi.Enums.MsoWizardActType act, object animation)
+		public void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act, object animation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wizardID, act, animation);
 			Invoker.Method(this, "ActivateWizard", paramsArray);
@@ -582,9 +582,9 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		/// <param name="WizardID">Int32 WizardID</param>
-		/// <param name="act">LateBindingApi.OfficeApi.Enums.MsoWizardActType act</param>
+		/// <param name="act">NetOffice.OfficeApi.Enums.MsoWizardActType act</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void ActivateWizard(Int32 wizardID, LateBindingApi.OfficeApi.Enums.MsoWizardActType act)
+		public void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wizardID, act);
 			Invoker.Method(this, "ActivateWizard", paramsArray);
@@ -605,13 +605,13 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="bstrAlertTitle">string bstrAlertTitle</param>
 		/// <param name="bstrAlertText">string bstrAlertText</param>
-		/// <param name="alb">LateBindingApi.OfficeApi.Enums.MsoAlertButtonType alb</param>
-		/// <param name="alc">LateBindingApi.OfficeApi.Enums.MsoAlertIconType alc</param>
-		/// <param name="ald">LateBindingApi.OfficeApi.Enums.MsoAlertDefaultType ald</param>
-		/// <param name="alq">LateBindingApi.OfficeApi.Enums.MsoAlertCancelType alq</param>
+		/// <param name="alb">NetOffice.OfficeApi.Enums.MsoAlertButtonType alb</param>
+		/// <param name="alc">NetOffice.OfficeApi.Enums.MsoAlertIconType alc</param>
+		/// <param name="ald">NetOffice.OfficeApi.Enums.MsoAlertDefaultType ald</param>
+		/// <param name="alq">NetOffice.OfficeApi.Enums.MsoAlertCancelType alq</param>
 		/// <param name="varfSysAlert">bool varfSysAlert</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public Int32 DoAlert(string bstrAlertTitle, string bstrAlertText, LateBindingApi.OfficeApi.Enums.MsoAlertButtonType alb, LateBindingApi.OfficeApi.Enums.MsoAlertIconType alc, LateBindingApi.OfficeApi.Enums.MsoAlertDefaultType ald, LateBindingApi.OfficeApi.Enums.MsoAlertCancelType alq, bool varfSysAlert)
+		public Int32 DoAlert(string bstrAlertTitle, string bstrAlertText, NetOffice.OfficeApi.Enums.MsoAlertButtonType alb, NetOffice.OfficeApi.Enums.MsoAlertIconType alc, NetOffice.OfficeApi.Enums.MsoAlertDefaultType ald, NetOffice.OfficeApi.Enums.MsoAlertCancelType alq, bool varfSysAlert)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrAlertTitle, bstrAlertText, alb, alc, ald, alq, varfSysAlert);
 			object returnItem = Invoker.MethodReturn(this, "DoAlert", paramsArray);

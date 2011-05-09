@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PivotClassFactory SupportByLibrary XWC1.0 
@@ -50,9 +50,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="DetailCell">LateBindingApi.OWC10Api.PivotDetailCell DetailCell</param>
+		/// <param name="DetailCell">NetOffice.OWC10Api.PivotDetailCell DetailCell</param>
 		[SupportByLibrary("XWC1.0")]
-		public COMObject get_NewDetailCell(LateBindingApi.OWC10Api.PivotDetailCell detailCell)
+		public COMObject get_NewDetailCell(NetOffice.OWC10Api.PivotDetailCell detailCell)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(detailCell);
 			object returnItem = Invoker.PropertyGet(this, "NewDetailCell", paramsArray);
@@ -63,9 +63,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Aggregate">LateBindingApi.OWC10Api.PivotAggregate Aggregate</param>
+		/// <param name="Aggregate">NetOffice.OWC10Api.PivotAggregate Aggregate</param>
 		[SupportByLibrary("XWC1.0")]
-		public COMObject get_NewAggregate(LateBindingApi.OWC10Api.PivotAggregate aggregate)
+		public COMObject get_NewAggregate(NetOffice.OWC10Api.PivotAggregate aggregate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(aggregate);
 			object returnItem = Invoker.PropertyGet(this, "NewAggregate", paramsArray);
@@ -76,9 +76,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="RowMember">LateBindingApi.OWC10Api.PivotRowMember RowMember</param>
+		/// <param name="RowMember">NetOffice.OWC10Api.PivotRowMember RowMember</param>
 		[SupportByLibrary("XWC1.0")]
-		public COMObject get_NewRowMember(LateBindingApi.OWC10Api.PivotRowMember rowMember)
+		public COMObject get_NewRowMember(NetOffice.OWC10Api.PivotRowMember rowMember)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowMember);
 			object returnItem = Invoker.PropertyGet(this, "NewRowMember", paramsArray);
@@ -89,9 +89,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="ColumnMember">LateBindingApi.OWC10Api.PivotColumnMember ColumnMember</param>
+		/// <param name="ColumnMember">NetOffice.OWC10Api.PivotColumnMember ColumnMember</param>
 		[SupportByLibrary("XWC1.0")]
-		public COMObject get_NewColumnMember(LateBindingApi.OWC10Api.PivotColumnMember columnMember)
+		public COMObject get_NewColumnMember(NetOffice.OWC10Api.PivotColumnMember columnMember)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(columnMember);
 			object returnItem = Invoker.PropertyGet(this, "NewColumnMember", paramsArray);
@@ -102,9 +102,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Cell">LateBindingApi.OWC10Api.PivotCell Cell</param>
+		/// <param name="Cell">NetOffice.OWC10Api.PivotCell Cell</param>
 		[SupportByLibrary("XWC1.0")]
-		public COMObject get_NewCell(LateBindingApi.OWC10Api.PivotCell cell)
+		public COMObject get_NewCell(NetOffice.OWC10Api.PivotCell cell)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cell);
 			object returnItem = Invoker.PropertyGet(this, "NewCell", paramsArray);

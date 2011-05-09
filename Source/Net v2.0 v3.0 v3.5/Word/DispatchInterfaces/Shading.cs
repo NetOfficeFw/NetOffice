@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Shading SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex ForegroundPatternColorIndex
+		public NetOffice.WordApi.Enums.WdColorIndex ForegroundPatternColorIndex
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ForegroundPatternColorIndex", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -114,13 +114,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex BackgroundPatternColorIndex
+		public NetOffice.WordApi.Enums.WdColorIndex BackgroundPatternColorIndex
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BackgroundPatternColorIndex", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -133,13 +133,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdTextureIndex Texture
+		public NetOffice.WordApi.Enums.WdTextureIndex Texture
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Texture", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdTextureIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdTextureIndex)returnItem;
 			}
 			set
 			{
@@ -152,13 +152,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColor ForegroundPatternColor
+		public NetOffice.WordApi.Enums.WdColor ForegroundPatternColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ForegroundPatternColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColor)returnItem;
+				return (NetOffice.WordApi.Enums.WdColor)returnItem;
 			}
 			set
 			{
@@ -171,13 +171,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColor BackgroundPatternColor
+		public NetOffice.WordApi.Enums.WdColor BackgroundPatternColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BackgroundPatternColor", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColor)returnItem;
+				return (NetOffice.WordApi.Enums.WdColor)returnItem;
 			}
 			set
 			{

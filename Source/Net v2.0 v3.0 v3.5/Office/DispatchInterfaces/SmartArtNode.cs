@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SmartArtNode SupportByLibrary OF14 
@@ -66,13 +66,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoOrgChartLayoutType OrgChartLayout
+		public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType OrgChartLayout
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OrgChartLayout", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoOrgChartLayoutType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType)returnItem;
 			}
 			set
 			{
@@ -85,13 +85,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.ShapeRange Shapes
+		public NetOffice.OfficeApi.ShapeRange Shapes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shapes", paramsArray);
-				LateBindingApi.OfficeApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.ShapeRange;
+				NetOffice.OfficeApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ShapeRange;
 				return newObject;
 			}
 		}
@@ -100,13 +100,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.TextFrame2 TextFrame2
+		public NetOffice.OfficeApi.TextFrame2 TextFrame2
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextFrame2", paramsArray);
-				LateBindingApi.OfficeApi.TextFrame2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.TextFrame2;
+				NetOffice.OfficeApi.TextFrame2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextFrame2;
 				return newObject;
 			}
 		}
@@ -129,13 +129,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState Hidden
+		public NetOffice.OfficeApi.Enums.MsoTriState Hidden
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Hidden", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 		}
 
@@ -143,13 +143,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.SmartArtNodes Nodes
+		public NetOffice.OfficeApi.SmartArtNodes Nodes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Nodes", paramsArray);
-				LateBindingApi.OfficeApi.SmartArtNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SmartArtNodes;
+				NetOffice.OfficeApi.SmartArtNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SmartArtNodes;
 				return newObject;
 			}
 		}
@@ -158,13 +158,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.SmartArtNode ParentNode
+		public NetOffice.OfficeApi.SmartArtNode ParentNode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ParentNode", paramsArray);
-				LateBindingApi.OfficeApi.SmartArtNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SmartArtNode;
+				NetOffice.OfficeApi.SmartArtNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SmartArtNode;
 				return newObject;
 			}
 		}
@@ -173,13 +173,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoSmartArtNodeType Type
+		public NetOffice.OfficeApi.Enums.MsoSmartArtNodeType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoSmartArtNodeType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoSmartArtNodeType)returnItem;
 			}
 		}
 
@@ -190,14 +190,14 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF14 
 		/// </summary>
-		/// <param name="Position">LateBindingApi.OfficeApi.Enums.MsoSmartArtNodePosition Position</param>
-		/// <param name="Type">LateBindingApi.OfficeApi.Enums.MsoSmartArtNodeType Type</param>
+		/// <param name="Position">NetOffice.OfficeApi.Enums.MsoSmartArtNodePosition Position</param>
+		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoSmartArtNodeType Type</param>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.SmartArtNode AddNode(LateBindingApi.OfficeApi.Enums.MsoSmartArtNodePosition position, LateBindingApi.OfficeApi.Enums.MsoSmartArtNodeType type)
+		public NetOffice.OfficeApi.SmartArtNode AddNode(NetOffice.OfficeApi.Enums.MsoSmartArtNodePosition position, NetOffice.OfficeApi.Enums.MsoSmartArtNodeType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, type);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			LateBindingApi.OfficeApi.SmartArtNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.SmartArtNode;
+			NetOffice.OfficeApi.SmartArtNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.SmartArtNode;
 			return newObject;
 		}
 

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SharedWorkspace SupportByLibrary OF11 OF12 OF14 
@@ -70,13 +70,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceMembers Members
+		public NetOffice.OfficeApi.SharedWorkspaceMembers Members
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Members", paramsArray);
-				LateBindingApi.OfficeApi.SharedWorkspaceMembers newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceMembers;
+				NetOffice.OfficeApi.SharedWorkspaceMembers newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SharedWorkspaceMembers;
 				return newObject;
 			}
 		}
@@ -85,13 +85,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceTasks Tasks
+		public NetOffice.OfficeApi.SharedWorkspaceTasks Tasks
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Tasks", paramsArray);
-				LateBindingApi.OfficeApi.SharedWorkspaceTasks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceTasks;
+				NetOffice.OfficeApi.SharedWorkspaceTasks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SharedWorkspaceTasks;
 				return newObject;
 			}
 		}
@@ -100,13 +100,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceFiles Files
+		public NetOffice.OfficeApi.SharedWorkspaceFiles Files
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Files", paramsArray);
-				LateBindingApi.OfficeApi.SharedWorkspaceFiles newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceFiles;
+				NetOffice.OfficeApi.SharedWorkspaceFiles newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SharedWorkspaceFiles;
 				return newObject;
 			}
 		}
@@ -115,13 +115,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceFolders Folders
+		public NetOffice.OfficeApi.SharedWorkspaceFolders Folders
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Folders", paramsArray);
-				LateBindingApi.OfficeApi.SharedWorkspaceFolders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceFolders;
+				NetOffice.OfficeApi.SharedWorkspaceFolders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SharedWorkspaceFolders;
 				return newObject;
 			}
 		}
@@ -130,13 +130,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceLinks Links
+		public NetOffice.OfficeApi.SharedWorkspaceLinks Links
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Links", paramsArray);
-				LateBindingApi.OfficeApi.SharedWorkspaceLinks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceLinks;
+				NetOffice.OfficeApi.SharedWorkspaceLinks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SharedWorkspaceLinks;
 				return newObject;
 			}
 		}

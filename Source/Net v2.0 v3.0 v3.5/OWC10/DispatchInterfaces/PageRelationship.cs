@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PageRelationship SupportByLibrary XWC1.0 
@@ -65,13 +65,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscPageRelTypeEnum Type
+		public NetOffice.OWC10Api.Enums.DscPageRelTypeEnum Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscPageRelTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscPageRelTypeEnum)returnItem;
 			}
 		}
 
@@ -79,13 +79,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscJoinTypeEnum JoinType
+		public NetOffice.OWC10Api.Enums.DscJoinTypeEnum JoinType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "JoinType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscJoinTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscJoinTypeEnum)returnItem;
 			}
 			set
 			{
@@ -98,13 +98,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageRowsource ManySide
+		public NetOffice.OWC10Api.PageRowsource ManySide
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ManySide", paramsArray);
-				LateBindingApi.OWC10Api.PageRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PageRowsource;
+				NetOffice.OWC10Api.PageRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageRowsource;
 				return newObject;
 			}
 		}
@@ -113,13 +113,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageRowsource OneSide
+		public NetOffice.OWC10Api.PageRowsource OneSide
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OneSide", paramsArray);
-				LateBindingApi.OWC10Api.PageRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PageRowsource;
+				NetOffice.OWC10Api.PageRowsource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageRowsource;
 				return newObject;
 			}
 		}
@@ -128,13 +128,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageRelatedFields PageRelatedFields
+		public NetOffice.OWC10Api.PageRelatedFields PageRelatedFields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PageRelatedFields", paramsArray);
-				LateBindingApi.OWC10Api.PageRelatedFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PageRelatedFields;
+				NetOffice.OWC10Api.PageRelatedFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageRelatedFields;
 				return newObject;
 			}
 		}

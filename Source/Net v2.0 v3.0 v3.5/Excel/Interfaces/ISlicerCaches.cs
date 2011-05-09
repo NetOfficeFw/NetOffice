@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface ISlicerCaches SupportByLibrary XL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -110,11 +110,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.SlicerCache get_Item(object index)
+		public NetOffice.ExcelApi.SlicerCache get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.ExcelApi.SlicerCache newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.SlicerCache;
+			NetOffice.ExcelApi.SlicerCache newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerCache;
 			return newObject;
 		}
 
@@ -124,13 +124,13 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.ExcelApi.SlicerCache this[object index]
+		public NetOffice.ExcelApi.SlicerCache this[object index]
 		{
 			get
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			LateBindingApi.ExcelApi.SlicerCache newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.SlicerCache;
+			NetOffice.ExcelApi.SlicerCache newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerCache;
 			return newObject;
 			}
 		}
@@ -146,11 +146,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="SourceField">object SourceField</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.SlicerCache Add(object source, object sourceField, object name)
+		public NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, sourceField, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.SlicerCache newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.SlicerCache;
+			NetOffice.ExcelApi.SlicerCache newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.SlicerCache;
 			return newObject;
 		}
 
@@ -160,11 +160,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Source">object Source</param>
 		/// <param name="SourceField">object SourceField</param>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.SlicerCache Add(object source, object sourceField)
+		public NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, sourceField);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.SlicerCache newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.SlicerCache;
+			NetOffice.ExcelApi.SlicerCache newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.SlicerCache;
 			return newObject;
 		}
 

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface View SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpViewType Type
+		public NetOffice.PowerPointApi.Enums.PpViewType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpViewType)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpViewType)returnItem;
 			}
 		}
 
@@ -134,13 +134,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState DisplaySlideMiniature
+		public NetOffice.OfficeApi.Enums.MsoTriState DisplaySlideMiniature
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DisplaySlideMiniature", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -153,13 +153,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState ZoomToFit
+		public NetOffice.OfficeApi.Enums.MsoTriState ZoomToFit
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ZoomToFit", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -172,13 +172,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.PrintOptions PrintOptions
+		public NetOffice.PowerPointApi.PrintOptions PrintOptions
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PrintOptions", paramsArray);
-				LateBindingApi.PowerPointApi.PrintOptions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.PrintOptions;
+				NetOffice.PowerPointApi.PrintOptions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.PrintOptions;
 				return newObject;
 			}
 		}
@@ -187,13 +187,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState MediaControlsVisible
+		public NetOffice.OfficeApi.Enums.MsoTriState MediaControlsVisible
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MediaControlsVisible", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 		}
 
@@ -281,14 +281,14 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="DataType">LateBindingApi.PowerPointApi.Enums.PpPasteDataType DataType</param>
-		/// <param name="DisplayAsIcon">LateBindingApi.OfficeApi.Enums.MsoTriState DisplayAsIcon</param>
+		/// <param name="DataType">NetOffice.PowerPointApi.Enums.PpPasteDataType DataType</param>
+		/// <param name="DisplayAsIcon">NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon</param>
 		/// <param name="IconFileName">string IconFileName</param>
 		/// <param name="IconIndex">Int32 IconIndex</param>
 		/// <param name="IconLabel">string IconLabel</param>
-		/// <param name="Link">LateBindingApi.OfficeApi.Enums.MsoTriState Link</param>
+		/// <param name="Link">NetOffice.OfficeApi.Enums.MsoTriState Link</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public void PasteSpecial(LateBindingApi.PowerPointApi.Enums.PpPasteDataType dataType, LateBindingApi.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel, LateBindingApi.OfficeApi.Enums.MsoTriState link)
+		public void PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel, NetOffice.OfficeApi.Enums.MsoTriState link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex, iconLabel, link);
 			Invoker.Method(this, "PasteSpecial", paramsArray);
@@ -301,9 +301,9 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="To">Int32 To</param>
 		/// <param name="PrintToFile">string PrintToFile</param>
 		/// <param name="Copies">Int32 Copies</param>
-		/// <param name="Collate">LateBindingApi.OfficeApi.Enums.MsoTriState Collate</param>
+		/// <param name="Collate">NetOffice.OfficeApi.Enums.MsoTriState Collate</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public void PrintOut(Int32 from, Int32 to, string printToFile, Int32 copies, LateBindingApi.OfficeApi.Enums.MsoTriState collate)
+		public void PrintOut(Int32 from, Int32 to, string printToFile, Int32 copies, NetOffice.OfficeApi.Enums.MsoTriState collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, printToFile, copies, collate);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -314,11 +314,11 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="ShapeId">object ShapeId</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Player Player(object shapeId)
+		public NetOffice.PowerPointApi.Player Player(object shapeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shapeId);
 			object returnItem = Invoker.MethodReturn(this, "Player", paramsArray);
-			LateBindingApi.PowerPointApi.Player newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Player;
+			NetOffice.PowerPointApi.Player newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Player;
 			return newObject;
 		}
 

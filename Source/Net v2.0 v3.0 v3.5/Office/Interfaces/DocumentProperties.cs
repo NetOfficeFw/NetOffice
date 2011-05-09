@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface DocumentProperties SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -67,11 +67,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.DocumentProperty get_Item(object index)
+		public NetOffice.OfficeApi.DocumentProperty get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.DocumentProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.DocumentProperty;
+			NetOffice.OfficeApi.DocumentProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.DocumentProperty;
 			return newObject;
 		}
 
@@ -131,11 +131,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Value">optional object Value</param>
 		/// <param name="LinkSource">optional object LinkSource</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value, object linkSource)
+		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value, object linkSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent, type, value, linkSource);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.DocumentProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.DocumentProperty;
+			NetOffice.OfficeApi.DocumentProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.DocumentProperty;
 			return newObject;
 		}
 
@@ -145,11 +145,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Name">string Name</param>
 		/// <param name="LinkToContent">bool LinkToContent</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.DocumentProperty Add(string name, bool linkToContent)
+		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.DocumentProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.DocumentProperty;
+			NetOffice.OfficeApi.DocumentProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.DocumentProperty;
 			return newObject;
 		}
 

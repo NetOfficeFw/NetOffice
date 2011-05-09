@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _OlkPageControl SupportByLibrary OL12 OL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlPageType Page
+		public NetOffice.OutlookApi.Enums.OlPageType Page
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Page", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlPageType)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlPageType)returnItem;
 			}
 			set
 			{

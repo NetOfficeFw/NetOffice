@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _Printer SupportByLibrary AC10 AC11 AC12 AC14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcPrintColor ColorMode
+		public NetOffice.AccessApi.Enums.AcPrintColor ColorMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColorMode", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcPrintColor)returnItem;
+				return (NetOffice.AccessApi.Enums.AcPrintColor)returnItem;
 			}
 			set
 			{
@@ -117,13 +117,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcPrintDuplex Duplex
+		public NetOffice.AccessApi.Enums.AcPrintDuplex Duplex
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Duplex", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcPrintDuplex)returnItem;
+				return (NetOffice.AccessApi.Enums.AcPrintDuplex)returnItem;
 			}
 			set
 			{
@@ -136,13 +136,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcPrintOrientation Orientation
+		public NetOffice.AccessApi.Enums.AcPrintOrientation Orientation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcPrintOrientation)returnItem;
+				return (NetOffice.AccessApi.Enums.AcPrintOrientation)returnItem;
 			}
 			set
 			{
@@ -155,13 +155,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcPrintPaperBin PaperBin
+		public NetOffice.AccessApi.Enums.AcPrintPaperBin PaperBin
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PaperBin", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcPrintPaperBin)returnItem;
+				return (NetOffice.AccessApi.Enums.AcPrintPaperBin)returnItem;
 			}
 			set
 			{
@@ -174,13 +174,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcPrintPaperSize PaperSize
+		public NetOffice.AccessApi.Enums.AcPrintPaperSize PaperSize
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PaperSize", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcPrintPaperSize)returnItem;
+				return (NetOffice.AccessApi.Enums.AcPrintPaperSize)returnItem;
 			}
 			set
 			{
@@ -207,13 +207,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcPrintObjQuality PrintQuality
+		public NetOffice.AccessApi.Enums.AcPrintObjQuality PrintQuality
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PrintQuality", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcPrintObjQuality)returnItem;
+				return (NetOffice.AccessApi.Enums.AcPrintObjQuality)returnItem;
 			}
 			set
 			{
@@ -435,13 +435,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcPrintItemLayout ItemLayout
+		public NetOffice.AccessApi.Enums.AcPrintItemLayout ItemLayout
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ItemLayout", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcPrintItemLayout)returnItem;
+				return (NetOffice.AccessApi.Enums.AcPrintItemLayout)returnItem;
 			}
 			set
 			{

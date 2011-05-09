@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PickerResult SupportByLibrary OF14 
@@ -201,13 +201,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PickerFields Fields
+		public NetOffice.OfficeApi.PickerFields Fields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				LateBindingApi.OfficeApi.PickerFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.PickerFields;
+				NetOffice.OfficeApi.PickerFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PickerFields;
 				return newObject;
 			}
 			set

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SharedWorkspaceLinks SupportByLibrary OF11 OF12 OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceLink get_Item(Int32 index)
+		public NetOffice.OfficeApi.SharedWorkspaceLink get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.SharedWorkspaceLink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceLink;
+			NetOffice.OfficeApi.SharedWorkspaceLink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SharedWorkspaceLink;
 			return newObject;
 		}
 
@@ -115,11 +115,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Description">optional object Description</param>
 		/// <param name="Notes">optional object Notes</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceLink Add(string uRL, object description, object notes)
+		public NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL, object description, object notes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uRL, description, notes);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.SharedWorkspaceLink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceLink;
+			NetOffice.OfficeApi.SharedWorkspaceLink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.SharedWorkspaceLink;
 			return newObject;
 		}
 
@@ -128,11 +128,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="URL">string URL</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SharedWorkspaceLink Add(string uRL)
+		public NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uRL);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.SharedWorkspaceLink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.SharedWorkspaceLink;
+			NetOffice.OfficeApi.SharedWorkspaceLink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.SharedWorkspaceLink;
 			return newObject;
 		}
 

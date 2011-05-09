@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _Conversation SupportByLibrary OL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL14 
 		/// </summary>
 		[SupportByLibrary("OL14")]
-		public LateBindingApi.OutlookApi._Application Application
+		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._Application;
+				NetOffice.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL14 
 		/// </summary>
 		[SupportByLibrary("OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlObjectClass Class
+		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Class", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlObjectClass)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlObjectClass)returnItem;
 			}
 		}
 
@@ -80,13 +80,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL14 
 		/// </summary>
 		[SupportByLibrary("OL14")]
-		public LateBindingApi.OutlookApi._NameSpace Session
+		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				LateBindingApi.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._NameSpace;
+				NetOffice.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
 				return newObject;
 			}
 		}
@@ -128,11 +128,11 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL14 
 		/// </summary>
 		[SupportByLibrary("OL14")]
-		public LateBindingApi.OutlookApi.Table GetTable()
+		public NetOffice.OutlookApi.Table GetTable()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetTable", paramsArray);
-			LateBindingApi.OutlookApi.Table newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.Table;
+			NetOffice.OutlookApi.Table newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Table;
 			return newObject;
 		}
 
@@ -141,11 +141,11 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="Item">object Item</param>
 		[SupportByLibrary("OL14")]
-		public LateBindingApi.OutlookApi.SimpleItems GetChildren(object item)
+		public NetOffice.OutlookApi.SimpleItems GetChildren(object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
 			object returnItem = Invoker.MethodReturn(this, "GetChildren", paramsArray);
-			LateBindingApi.OutlookApi.SimpleItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.SimpleItems;
+			NetOffice.OutlookApi.SimpleItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.SimpleItems;
 			return newObject;
 		}
 
@@ -166,20 +166,20 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL14 
 		/// </summary>
 		[SupportByLibrary("OL14")]
-		public LateBindingApi.OutlookApi.SimpleItems GetRootItems()
+		public NetOffice.OutlookApi.SimpleItems GetRootItems()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetRootItems", paramsArray);
-			LateBindingApi.OutlookApi.SimpleItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.SimpleItems;
+			NetOffice.OutlookApi.SimpleItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.SimpleItems;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OL14 
 		/// </summary>
-		/// <param name="Store">LateBindingApi.OutlookApi._Store Store</param>
+		/// <param name="Store">NetOffice.OutlookApi._Store Store</param>
 		[SupportByLibrary("OL14")]
-		public string GetAlwaysAssignCategories(LateBindingApi.OutlookApi._Store store)
+		public string GetAlwaysAssignCategories(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
 			object returnItem = Invoker.MethodReturn(this, "GetAlwaysAssignCategories", paramsArray);
@@ -189,25 +189,25 @@ namespace LateBindingApi.OutlookApi
 		/// <summary>
 		/// SupportByLibrary OL14 
 		/// </summary>
-		/// <param name="Store">LateBindingApi.OutlookApi._Store Store</param>
+		/// <param name="Store">NetOffice.OutlookApi._Store Store</param>
 		[SupportByLibrary("OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlAlwaysDeleteConversation GetAlwaysDelete(LateBindingApi.OutlookApi._Store store)
+		public NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation GetAlwaysDelete(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
 			object returnItem = Invoker.MethodReturn(this, "GetAlwaysDelete", paramsArray);
-			return (LateBindingApi.OutlookApi.Enums.OlAlwaysDeleteConversation)returnItem;
+			return (NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OL14 
 		/// </summary>
-		/// <param name="Store">LateBindingApi.OutlookApi._Store Store</param>
+		/// <param name="Store">NetOffice.OutlookApi._Store Store</param>
 		[SupportByLibrary("OL14")]
-		public LateBindingApi.OutlookApi.MAPIFolder GetAlwaysMoveToFolder(LateBindingApi.OutlookApi._Store store)
+		public NetOffice.OutlookApi.MAPIFolder GetAlwaysMoveToFolder(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
 			object returnItem = Invoker.MethodReturn(this, "GetAlwaysMoveToFolder", paramsArray);
-			LateBindingApi.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MAPIFolder;
 			return newObject;
 		}
 
@@ -235,9 +235,9 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL14 
 		/// </summary>
 		/// <param name="Categories">string Categories</param>
-		/// <param name="Store">LateBindingApi.OutlookApi._Store Store</param>
+		/// <param name="Store">NetOffice.OutlookApi._Store Store</param>
 		[SupportByLibrary("OL14")]
-		public void SetAlwaysAssignCategories(string categories, LateBindingApi.OutlookApi._Store store)
+		public void SetAlwaysAssignCategories(string categories, NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(categories, store);
 			Invoker.Method(this, "SetAlwaysAssignCategories", paramsArray);
@@ -246,10 +246,10 @@ namespace LateBindingApi.OutlookApi
 		/// <summary>
 		/// SupportByLibrary OL14 
 		/// </summary>
-		/// <param name="AlwaysDelete">LateBindingApi.OutlookApi.Enums.OlAlwaysDeleteConversation AlwaysDelete</param>
-		/// <param name="Store">LateBindingApi.OutlookApi._Store Store</param>
+		/// <param name="AlwaysDelete">NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation AlwaysDelete</param>
+		/// <param name="Store">NetOffice.OutlookApi._Store Store</param>
 		[SupportByLibrary("OL14")]
-		public void SetAlwaysDelete(LateBindingApi.OutlookApi.Enums.OlAlwaysDeleteConversation alwaysDelete, LateBindingApi.OutlookApi._Store store)
+		public void SetAlwaysDelete(NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation alwaysDelete, NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(alwaysDelete, store);
 			Invoker.Method(this, "SetAlwaysDelete", paramsArray);
@@ -258,10 +258,10 @@ namespace LateBindingApi.OutlookApi
 		/// <summary>
 		/// SupportByLibrary OL14 
 		/// </summary>
-		/// <param name="MoveToFolder">LateBindingApi.OutlookApi.MAPIFolder MoveToFolder</param>
-		/// <param name="Store">LateBindingApi.OutlookApi._Store Store</param>
+		/// <param name="MoveToFolder">NetOffice.OutlookApi.MAPIFolder MoveToFolder</param>
+		/// <param name="Store">NetOffice.OutlookApi._Store Store</param>
 		[SupportByLibrary("OL14")]
-		public void SetAlwaysMoveToFolder(LateBindingApi.OutlookApi.MAPIFolder moveToFolder, LateBindingApi.OutlookApi._Store store)
+		public void SetAlwaysMoveToFolder(NetOffice.OutlookApi.MAPIFolder moveToFolder, NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveToFolder, store);
 			Invoker.Method(this, "SetAlwaysMoveToFolder", paramsArray);
@@ -270,9 +270,9 @@ namespace LateBindingApi.OutlookApi
 		/// <summary>
 		/// SupportByLibrary OL14 
 		/// </summary>
-		/// <param name="Store">LateBindingApi.OutlookApi._Store Store</param>
+		/// <param name="Store">NetOffice.OutlookApi._Store Store</param>
 		[SupportByLibrary("OL14")]
-		public void ClearAlwaysAssignCategories(LateBindingApi.OutlookApi._Store store)
+		public void ClearAlwaysAssignCategories(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
 			Invoker.Method(this, "ClearAlwaysAssignCategories", paramsArray);
@@ -281,9 +281,9 @@ namespace LateBindingApi.OutlookApi
 		/// <summary>
 		/// SupportByLibrary OL14 
 		/// </summary>
-		/// <param name="Store">LateBindingApi.OutlookApi._Store Store</param>
+		/// <param name="Store">NetOffice.OutlookApi._Store Store</param>
 		[SupportByLibrary("OL14")]
-		public void StopAlwaysDelete(LateBindingApi.OutlookApi._Store store)
+		public void StopAlwaysDelete(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
 			Invoker.Method(this, "StopAlwaysDelete", paramsArray);
@@ -292,9 +292,9 @@ namespace LateBindingApi.OutlookApi
 		/// <summary>
 		/// SupportByLibrary OL14 
 		/// </summary>
-		/// <param name="Store">LateBindingApi.OutlookApi._Store Store</param>
+		/// <param name="Store">NetOffice.OutlookApi._Store Store</param>
 		[SupportByLibrary("OL14")]
-		public void StopAlwaysMoveToFolder(LateBindingApi.OutlookApi._Store store)
+		public void StopAlwaysMoveToFolder(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
 			Invoker.Method(this, "StopAlwaysMoveToFolder", paramsArray);

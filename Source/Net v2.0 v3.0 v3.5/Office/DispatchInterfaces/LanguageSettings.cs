@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface LanguageSettings SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -50,9 +50,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="Id">LateBindingApi.OfficeApi.Enums.MsoAppLanguageID Id</param>
+		/// <param name="Id">NetOffice.OfficeApi.Enums.MsoAppLanguageID Id</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public Int32 get_LanguageID(LateBindingApi.OfficeApi.Enums.MsoAppLanguageID id)
+		public Int32 get_LanguageID(NetOffice.OfficeApi.Enums.MsoAppLanguageID id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id);
 			object returnItem = Invoker.PropertyGet(this, "LanguageID", paramsArray);
@@ -62,9 +62,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="lid">LateBindingApi.OfficeApi.Enums.MsoLanguageID lid</param>
+		/// <param name="lid">NetOffice.OfficeApi.Enums.MsoLanguageID lid</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public bool get_LanguagePreferredForEditing(LateBindingApi.OfficeApi.Enums.MsoLanguageID lid)
+		public bool get_LanguagePreferredForEditing(NetOffice.OfficeApi.Enums.MsoLanguageID lid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lid);
 			object returnItem = Invoker.PropertyGet(this, "LanguagePreferredForEditing", paramsArray);

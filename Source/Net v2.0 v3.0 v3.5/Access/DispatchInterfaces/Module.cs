@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface Module SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Application Application
+		public NetOffice.AccessApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}
@@ -127,9 +127,9 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="ProcName">string ProcName</param>
-		/// <param name="ProcKind">LateBindingApi.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
+		/// <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public Int32 get_ProcStartLine(string procName, LateBindingApi.VBIDEApi.Enums.vbext_ProcKind procKind)
+		public Int32 get_ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
 			object returnItem = Invoker.PropertyGet(this, "ProcStartLine", paramsArray);
@@ -140,9 +140,9 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="ProcName">string ProcName</param>
-		/// <param name="ProcKind">LateBindingApi.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
+		/// <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public Int32 get_ProcCountLines(string procName, LateBindingApi.VBIDEApi.Enums.vbext_ProcKind procKind)
+		public Int32 get_ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
 			object returnItem = Invoker.PropertyGet(this, "ProcCountLines", paramsArray);
@@ -153,9 +153,9 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="ProcName">string ProcName</param>
-		/// <param name="ProcKind">LateBindingApi.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
+		/// <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public Int32 get_ProcBodyLine(string procName, LateBindingApi.VBIDEApi.Enums.vbext_ProcKind procKind)
+		public Int32 get_ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
 			object returnItem = Invoker.PropertyGet(this, "ProcBodyLine", paramsArray);
@@ -166,9 +166,9 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="Line">Int32 Line</param>
-		/// <param name="pprockind">LateBindingApi.VBIDEApi.Enums.vbext_ProcKind pprockind</param>
+		/// <param name="pprockind">NetOffice.VBIDEApi.Enums.vbext_ProcKind pprockind</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public string get_ProcOfLine(Int32 line, LateBindingApi.VBIDEApi.Enums.vbext_ProcKind pprockind)
+		public string get_ProcOfLine(Int32 line, NetOffice.VBIDEApi.Enums.vbext_ProcKind pprockind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(line, pprockind);
 			object returnItem = Invoker.PropertyGet(this, "ProcOfLine", paramsArray);
@@ -193,13 +193,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcModuleType Type
+		public NetOffice.AccessApi.Enums.AcModuleType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcModuleType)returnItem;
+				return (NetOffice.AccessApi.Enums.AcModuleType)returnItem;
 			}
 		}
 

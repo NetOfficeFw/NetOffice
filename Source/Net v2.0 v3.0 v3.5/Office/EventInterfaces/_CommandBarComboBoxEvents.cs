@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {	
 	#pragma warning disable
 	
@@ -61,7 +61,7 @@ namespace LateBindingApi.OfficeApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi.CommandBarComboBox newCtrl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, ctrl) as LateBindingApi.OfficeApi.CommandBarComboBox;
+			NetOffice.OfficeApi.CommandBarComboBox newCtrl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, ctrl) as NetOffice.OfficeApi.CommandBarComboBox;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCtrl;
 			foreach(Delegate delItem in recipients)

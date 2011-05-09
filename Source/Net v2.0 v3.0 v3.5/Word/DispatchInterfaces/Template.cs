@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Template SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -65,13 +65,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -123,13 +123,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.AutoTextEntries AutoTextEntries
+		public NetOffice.WordApi.AutoTextEntries AutoTextEntries
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AutoTextEntries", paramsArray);
-				LateBindingApi.WordApi.AutoTextEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.AutoTextEntries;
+				NetOffice.WordApi.AutoTextEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.AutoTextEntries;
 				return newObject;
 			}
 		}
@@ -138,13 +138,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdLanguageID LanguageID
+		public NetOffice.WordApi.Enums.WdLanguageID LanguageID
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LanguageID", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdLanguageID)returnItem;
+				return (NetOffice.WordApi.Enums.WdLanguageID)returnItem;
 			}
 			set
 			{
@@ -176,13 +176,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdTemplateType Type
+		public NetOffice.WordApi.Enums.WdTemplateType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdTemplateType)returnItem;
+				return (NetOffice.WordApi.Enums.WdTemplateType)returnItem;
 			}
 		}
 
@@ -234,13 +234,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.ListTemplates ListTemplates
+		public NetOffice.WordApi.ListTemplates ListTemplates
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListTemplates", paramsArray);
-				LateBindingApi.WordApi.ListTemplates newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ListTemplates;
+				NetOffice.WordApi.ListTemplates newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ListTemplates;
 				return newObject;
 			}
 		}
@@ -249,13 +249,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdLanguageID LanguageIDFarEast
+		public NetOffice.WordApi.Enums.WdLanguageID LanguageIDFarEast
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LanguageIDFarEast", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdLanguageID)returnItem;
+				return (NetOffice.WordApi.Enums.WdLanguageID)returnItem;
 			}
 			set
 			{
@@ -268,13 +268,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.VBIDEApi.VBProject VBProject
+		public NetOffice.VBIDEApi.VBProject VBProject
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBProject", paramsArray);
-				LateBindingApi.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.VBProject;
+				NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBProject;
 				return newObject;
 			}
 		}
@@ -302,13 +302,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdJustificationMode JustificationMode
+		public NetOffice.WordApi.Enums.WdJustificationMode JustificationMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "JustificationMode", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdJustificationMode)returnItem;
+				return (NetOffice.WordApi.Enums.WdJustificationMode)returnItem;
 			}
 			set
 			{
@@ -321,13 +321,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdFarEastLineBreakLevel FarEastLineBreakLevel
+		public NetOffice.WordApi.Enums.WdFarEastLineBreakLevel FarEastLineBreakLevel
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FarEastLineBreakLevel", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdFarEastLineBreakLevel)returnItem;
+				return (NetOffice.WordApi.Enums.WdFarEastLineBreakLevel)returnItem;
 			}
 			set
 			{
@@ -397,13 +397,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdFarEastLineBreakLanguageID FarEastLineBreakLanguage
+		public NetOffice.WordApi.Enums.WdFarEastLineBreakLanguageID FarEastLineBreakLanguage
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FarEastLineBreakLanguage", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdFarEastLineBreakLanguageID)returnItem;
+				return (NetOffice.WordApi.Enums.WdFarEastLineBreakLanguageID)returnItem;
 			}
 			set
 			{
@@ -416,13 +416,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.BuildingBlockEntries BuildingBlockEntries
+		public NetOffice.WordApi.BuildingBlockEntries BuildingBlockEntries
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BuildingBlockEntries", paramsArray);
-				LateBindingApi.WordApi.BuildingBlockEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.BuildingBlockEntries;
+				NetOffice.WordApi.BuildingBlockEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.BuildingBlockEntries;
 				return newObject;
 			}
 		}
@@ -431,13 +431,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.BuildingBlockTypes BuildingBlockTypes
+		public NetOffice.WordApi.BuildingBlockTypes BuildingBlockTypes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BuildingBlockTypes", paramsArray);
-				LateBindingApi.WordApi.BuildingBlockTypes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.BuildingBlockTypes;
+				NetOffice.WordApi.BuildingBlockTypes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.BuildingBlockTypes;
 				return newObject;
 			}
 		}
@@ -450,11 +450,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Document OpenAsDocument()
+		public NetOffice.WordApi.Document OpenAsDocument()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "OpenAsDocument", paramsArray);
-			LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
 			return newObject;
 		}
 

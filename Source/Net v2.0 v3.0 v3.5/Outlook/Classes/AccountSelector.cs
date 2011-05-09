@@ -3,13 +3,13 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void AccountSelector_SelectedAccountChangeEventHandler(LateBindingApi.OutlookApi.Account SelectedAccount);
+	public delegate void AccountSelector_SelectedAccountChangeEventHandler(NetOffice.OutlookApi.Account SelectedAccount);
 	#pragma warning restore
 
 	#endregion

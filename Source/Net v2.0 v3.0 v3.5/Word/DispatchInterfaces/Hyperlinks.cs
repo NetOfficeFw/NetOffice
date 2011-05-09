@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Hyperlinks SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -115,12 +115,12 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Hyperlink Item(ref object index)
+		public NetOffice.WordApi.Hyperlink Item(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray, modifiers);
-			LateBindingApi.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Hyperlink;
+			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Hyperlink;
 			index = (object)paramsArray[0];
 			return newObject;
 		}
@@ -132,12 +132,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="Address">ref optional object Address</param>
 		/// <param name="SubAddress">ref optional object SubAddress</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Hyperlink _Add(object anchor, ref object address, ref object subAddress)
+		public NetOffice.WordApi.Hyperlink _Add(object anchor, ref object address, ref object subAddress)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray, modifiers);
-			LateBindingApi.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Hyperlink;
+			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Hyperlink;
 			address = (object)paramsArray[1];
 			subAddress = (object)paramsArray[2];
 			return newObject;
@@ -148,11 +148,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Anchor">object Anchor</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Hyperlink _Add(object anchor)
+		public NetOffice.WordApi.Hyperlink _Add(object anchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			LateBindingApi.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Hyperlink;
+			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Hyperlink;
 			return newObject;
 		}
 
@@ -166,12 +166,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="TextToDisplay">ref optional object TextToDisplay</param>
 		/// <param name="Target">ref optional object Target</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Hyperlink Add(object anchor, ref object address, ref object subAddress, ref object screenTip, ref object textToDisplay, ref object target)
+		public NetOffice.WordApi.Hyperlink Add(object anchor, ref object address, ref object subAddress, ref object screenTip, ref object textToDisplay, ref object target)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress, screenTip, textToDisplay, target);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Hyperlink;
+			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Hyperlink;
 			address = (object)paramsArray[1];
 			subAddress = (object)paramsArray[2];
 			screenTip = (object)paramsArray[3];
@@ -185,11 +185,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Anchor">object Anchor</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Hyperlink Add(object anchor)
+		public NetOffice.WordApi.Hyperlink Add(object anchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Hyperlink;
+			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Hyperlink;
 			return newObject;
 		}
 

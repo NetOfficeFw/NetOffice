@@ -3,13 +3,13 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void NameSpace_OptionsPagesAddEventHandler(LateBindingApi.OutlookApi.PropertyPages Pages, LateBindingApi.OutlookApi.MAPIFolder Folder);
+	public delegate void NameSpace_OptionsPagesAddEventHandler(NetOffice.OutlookApi.PropertyPages Pages, NetOffice.OutlookApi.MAPIFolder Folder);
 	public delegate void NameSpace_AutoDiscoverCompleteEventHandler();
 	#pragma warning restore
 

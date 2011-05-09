@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {	
 	#pragma warning disable
 	
@@ -61,7 +61,7 @@ namespace LateBindingApi.OWC10Api
 				return;
 			}
 
-			LateBindingApi.OWC10Api.Enums.NavButtonEnum newNavButton = (LateBindingApi.OWC10Api.Enums.NavButtonEnum)navButton;
+			NetOffice.OWC10Api.Enums.NavButtonEnum newNavButton = (NetOffice.OWC10Api.Enums.NavButtonEnum)navButton;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNavButton;
 			foreach(Delegate delItem in recipients)

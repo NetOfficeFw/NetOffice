@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PPDialogs SupportByLibrary PP09 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.Tags Tags
+		public NetOffice.PowerPointApi.Tags Tags
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Tags", paramsArray);
-				LateBindingApi.PowerPointApi.Tags newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Tags;
+				NetOffice.PowerPointApi.Tags newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Tags;
 				return newObject;
 			}
 		}
@@ -105,11 +105,11 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPDialog Item(object index)
+		public NetOffice.PowerPointApi.PPDialog Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.PowerPointApi.PPDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.PPDialog;
+			NetOffice.PowerPointApi.PPDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPDialog;
 			return newObject;
 		}
 
@@ -120,16 +120,16 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		/// <param name="Modal">LateBindingApi.OfficeApi.Enums.MsoTriState Modal</param>
+		/// <param name="Modal">NetOffice.OfficeApi.Enums.MsoTriState Modal</param>
 		/// <param name="ParentWindow">object ParentWindow</param>
-		/// <param name="Position">LateBindingApi.PowerPointApi.Enums.PpDialogPositioning Position</param>
-		/// <param name="DisplayHelp">LateBindingApi.OfficeApi.Enums.MsoTriState DisplayHelp</param>
+		/// <param name="Position">NetOffice.PowerPointApi.Enums.PpDialogPositioning Position</param>
+		/// <param name="DisplayHelp">NetOffice.OfficeApi.Enums.MsoTriState DisplayHelp</param>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, LateBindingApi.OfficeApi.Enums.MsoTriState modal, object parentWindow, LateBindingApi.PowerPointApi.Enums.PpDialogPositioning position, LateBindingApi.OfficeApi.Enums.MsoTriState displayHelp)
+		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState modal, object parentWindow, NetOffice.PowerPointApi.Enums.PpDialogPositioning position, NetOffice.OfficeApi.Enums.MsoTriState displayHelp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow, position, displayHelp);
 			object returnItem = Invoker.MethodReturn(this, "AddDialog", paramsArray);
-			LateBindingApi.PowerPointApi.PPDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.PPDialog;
+			NetOffice.PowerPointApi.PPDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPDialog;
 			return newObject;
 		}
 
@@ -140,16 +140,16 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		/// <param name="Modal">LateBindingApi.OfficeApi.Enums.MsoTriState Modal</param>
+		/// <param name="Modal">NetOffice.OfficeApi.Enums.MsoTriState Modal</param>
 		/// <param name="ParentWindow">object ParentWindow</param>
-		/// <param name="Position">LateBindingApi.PowerPointApi.Enums.PpDialogPositioning Position</param>
-		/// <param name="DisplayHelp">LateBindingApi.OfficeApi.Enums.MsoTriState DisplayHelp</param>
+		/// <param name="Position">NetOffice.PowerPointApi.Enums.PpDialogPositioning Position</param>
+		/// <param name="DisplayHelp">NetOffice.OfficeApi.Enums.MsoTriState DisplayHelp</param>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, LateBindingApi.OfficeApi.Enums.MsoTriState modal, object parentWindow, LateBindingApi.PowerPointApi.Enums.PpDialogPositioning position, LateBindingApi.OfficeApi.Enums.MsoTriState displayHelp)
+		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState modal, object parentWindow, NetOffice.PowerPointApi.Enums.PpDialogPositioning position, NetOffice.OfficeApi.Enums.MsoTriState displayHelp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow, position, displayHelp);
 			object returnItem = Invoker.MethodReturn(this, "AddTabDialog", paramsArray);
-			LateBindingApi.PowerPointApi.PPDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.PPDialog;
+			NetOffice.PowerPointApi.PPDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPDialog;
 			return newObject;
 		}
 
@@ -158,15 +158,15 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
-		/// <param name="bModal">LateBindingApi.OfficeApi.Enums.MsoTriState bModal</param>
+		/// <param name="bModal">NetOffice.OfficeApi.Enums.MsoTriState bModal</param>
 		/// <param name="ParentWindow">object ParentWindow</param>
-		/// <param name="Position">LateBindingApi.PowerPointApi.Enums.PpDialogPositioning Position</param>
+		/// <param name="Position">NetOffice.PowerPointApi.Enums.PpDialogPositioning Position</param>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID, LateBindingApi.OfficeApi.Enums.MsoTriState bModal, object parentWindow, LateBindingApi.PowerPointApi.Enums.PpDialogPositioning position)
+		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID, NetOffice.OfficeApi.Enums.MsoTriState bModal, object parentWindow, NetOffice.PowerPointApi.Enums.PpDialogPositioning position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resourceDLL, nResID, bModal, parentWindow, position);
 			object returnItem = Invoker.MethodReturn(this, "LoadDialog", paramsArray);
-			LateBindingApi.PowerPointApi.PPDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.PPDialog;
+			NetOffice.PowerPointApi.PPDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPDialog;
 			return newObject;
 		}
 
@@ -174,11 +174,11 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.PPAlert AddAlert()
+		public NetOffice.PowerPointApi.PPAlert AddAlert()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddAlert", paramsArray);
-			LateBindingApi.PowerPointApi.PPAlert newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.PPAlert;
+			NetOffice.PowerPointApi.PPAlert newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPAlert;
 			return newObject;
 		}
 
@@ -186,15 +186,15 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 
 		/// </summary>
 		/// <param name="Text">string Text</param>
-		/// <param name="Type">LateBindingApi.PowerPointApi.Enums.PpAlertType Type</param>
-		/// <param name="icon">LateBindingApi.PowerPointApi.Enums.PpAlertIcon icon</param>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.PpAlertType Type</param>
+		/// <param name="icon">NetOffice.PowerPointApi.Enums.PpAlertIcon icon</param>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		[SupportByLibrary("PP09")]
-		public LateBindingApi.PowerPointApi.Enums.PpAlertButton RunCharacterAlert(string text, LateBindingApi.PowerPointApi.Enums.PpAlertType type, LateBindingApi.PowerPointApi.Enums.PpAlertIcon icon, object parentWindow)
+		public NetOffice.PowerPointApi.Enums.PpAlertButton RunCharacterAlert(string text, NetOffice.PowerPointApi.Enums.PpAlertType type, NetOffice.PowerPointApi.Enums.PpAlertIcon icon, object parentWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, type, icon, parentWindow);
 			object returnItem = Invoker.MethodReturn(this, "RunCharacterAlert", paramsArray);
-			return (LateBindingApi.PowerPointApi.Enums.PpAlertButton)returnItem;
+			return (NetOffice.PowerPointApi.Enums.PpAlertButton)returnItem;
 		}
 
 		#endregion

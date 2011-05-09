@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface CubeField SupportByLibrary XL09 XL10 XL11 XL12 XL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -95,13 +95,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCubeFieldType CubeFieldType
+		public NetOffice.ExcelApi.Enums.XlCubeFieldType CubeFieldType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CubeFieldType", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCubeFieldType)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCubeFieldType)returnItem;
 			}
 		}
 
@@ -156,13 +156,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlPivotFieldOrientation Orientation
+		public NetOffice.ExcelApi.Enums.XlPivotFieldOrientation Orientation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlPivotFieldOrientation)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlPivotFieldOrientation)returnItem;
 			}
 			set
 			{
@@ -194,13 +194,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.TreeviewControl TreeviewControl
+		public NetOffice.ExcelApi.TreeviewControl TreeviewControl
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TreeviewControl", paramsArray);
-				LateBindingApi.ExcelApi.TreeviewControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.TreeviewControl;
+				NetOffice.ExcelApi.TreeviewControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.TreeviewControl;
 				return newObject;
 			}
 		}
@@ -337,13 +337,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlLayoutFormType LayoutForm
+		public NetOffice.ExcelApi.Enums.XlLayoutFormType LayoutForm
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LayoutForm", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlLayoutFormType)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlLayoutFormType)returnItem;
 			}
 			set
 			{
@@ -356,13 +356,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.PivotFields PivotFields
+		public NetOffice.ExcelApi.PivotFields PivotFields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotFields", paramsArray);
-				LateBindingApi.ExcelApi.PivotFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.PivotFields;
+				NetOffice.ExcelApi.PivotFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotFields;
 				return newObject;
 			}
 		}
@@ -390,13 +390,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.xLSubtototalLocationType LayoutSubtotalLocation
+		public NetOffice.ExcelApi.Enums.xLSubtototalLocationType LayoutSubtotalLocation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LayoutSubtotalLocation", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.xLSubtototalLocationType)returnItem;
+				return (NetOffice.ExcelApi.Enums.xLSubtototalLocationType)returnItem;
 			}
 			set
 			{
@@ -461,13 +461,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCubeFieldSubType CubeFieldSubType
+		public NetOffice.ExcelApi.Enums.XlCubeFieldSubType CubeFieldSubType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CubeFieldSubType", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCubeFieldSubType)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCubeFieldSubType)returnItem;
 			}
 		}
 

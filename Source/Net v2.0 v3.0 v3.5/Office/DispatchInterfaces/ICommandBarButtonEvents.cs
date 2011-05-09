@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ICommandBarButtonEvents SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -54,10 +54,10 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="Ctrl">LateBindingApi.OfficeApi.CommandBarButton Ctrl</param>
+		/// <param name="Ctrl">NetOffice.OfficeApi.CommandBarButton Ctrl</param>
 		/// <param name="CancelDefault">ref bool CancelDefault</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void Click(LateBindingApi.OfficeApi.CommandBarButton ctrl, ref bool cancelDefault)
+		public void Click(NetOffice.OfficeApi.CommandBarButton ctrl, ref bool cancelDefault)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(ctrl, cancelDefault);

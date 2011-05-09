@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface IPivotControl SupportByLibrary XWC1.0 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotView ActiveView
+		public NetOffice.OWC10Api.PivotView ActiveView
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveView", paramsArray);
-				LateBindingApi.OWC10Api.PivotView newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotView;
+				NetOffice.OWC10Api.PivotView newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotView;
 				return newObject;
 			}
 		}
@@ -105,13 +105,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotData ActiveData
+		public NetOffice.OWC10Api.PivotData ActiveData
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveData", paramsArray);
-				LateBindingApi.OWC10Api.PivotData newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotData;
+				NetOffice.OWC10Api.PivotData newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotData;
 				return newObject;
 			}
 		}
@@ -281,13 +281,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.MSDATASRCApi.DataSource DataSource
+		public NetOffice.MSDATASRCApi.DataSource DataSource
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataSource", paramsArray);
-				LateBindingApi.MSDATASRCApi.DataSource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSDATASRCApi.DataSource;
+				NetOffice.MSDATASRCApi.DataSource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSDATASRCApi.DataSource;
 				return newObject;
 			}
 			set
@@ -595,13 +595,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ProviderType ProviderType
+		public NetOffice.OWC10Api.Enums.ProviderType ProviderType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ProviderType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ProviderType)returnItem;
+				return (NetOffice.OWC10Api.Enums.ProviderType)returnItem;
 			}
 		}
 
@@ -624,13 +624,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.PivotTableMemberExpandEnum MemberExpand
+		public NetOffice.OWC10Api.Enums.PivotTableMemberExpandEnum MemberExpand
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MemberExpand", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.PivotTableMemberExpandEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.PivotTableMemberExpandEnum)returnItem;
 			}
 			set
 			{
@@ -643,13 +643,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.ADODBApi.Connection Connection
+		public NetOffice.ADODBApi.Connection Connection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Connection", paramsArray);
-				LateBindingApi.ADODBApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Connection;
+				NetOffice.ADODBApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Connection;
 				return newObject;
 			}
 			set
@@ -719,13 +719,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotClassFactory ClassFactory
+		public NetOffice.OWC10Api.PivotClassFactory ClassFactory
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ClassFactory", paramsArray);
-				LateBindingApi.OWC10Api.PivotClassFactory newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotClassFactory;
+				NetOffice.OWC10Api.PivotClassFactory newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotClassFactory;
 				return newObject;
 			}
 			set
@@ -801,13 +801,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.OCCommands Commands
+		public NetOffice.OWC10Api.OCCommands Commands
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Commands", paramsArray);
-				LateBindingApi.OWC10Api.OCCommands newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.OCCommands;
+				NetOffice.OWC10Api.OCCommands newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.OCCommands;
 				return newObject;
 			}
 		}
@@ -973,13 +973,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.MSComctlLibApi.IToolbar Toolbar
+		public NetOffice.MSComctlLibApi.IToolbar Toolbar
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Toolbar", paramsArray);
-				LateBindingApi.MSComctlLibApi.IToolbar newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.IToolbar;
+				NetOffice.MSComctlLibApi.IToolbar newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IToolbar;
 				return newObject;
 			}
 		}
@@ -988,13 +988,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.PivotEditModeEnum EditMode
+		public NetOffice.OWC10Api.Enums.PivotEditModeEnum EditMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EditMode", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.PivotEditModeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.PivotEditModeEnum)returnItem;
 			}
 		}
 
@@ -1077,9 +1077,9 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
-		/// <param name="Action">LateBindingApi.OWC10Api.Enums.PivotExportActionEnum Action</param>
+		/// <param name="Action">NetOffice.OWC10Api.Enums.PivotExportActionEnum Action</param>
 		[SupportByLibrary("XWC1.0")]
-		public void Export(string filename, LateBindingApi.OWC10Api.Enums.PivotExportActionEnum action)
+		public void Export(string filename, NetOffice.OWC10Api.Enums.PivotExportActionEnum action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, action);
 			Invoker.Method(this, "Export", paramsArray);
@@ -1133,12 +1133,12 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Source">LateBindingApi.OWC10Api.DropSource Source</param>
+		/// <param name="Source">NetOffice.OWC10Api.DropSource Source</param>
 		/// <param name="DragItem">object DragItem</param>
-		/// <param name="Target">LateBindingApi.OWC10Api.DropTarget Target</param>
+		/// <param name="Target">NetOffice.OWC10Api.DropTarget Target</param>
 		/// <param name="dwLegalEffect">Int32 dwLegalEffect</param>
 		[SupportByLibrary("XWC1.0")]
-		public void DoDragDrop(LateBindingApi.OWC10Api.DropSource source, object dragItem, LateBindingApi.OWC10Api.DropTarget target, Int32 dwLegalEffect)
+		public void DoDragDrop(NetOffice.OWC10Api.DropSource source, object dragItem, NetOffice.OWC10Api.DropTarget target, Int32 dwLegalEffect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, dragItem, target, dwLegalEffect);
 			Invoker.Method(this, "DoDragDrop", paramsArray);
@@ -1149,11 +1149,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Selection">object Selection</param>
 		/// <param name="ActiveObject">object ActiveObject</param>
-		/// <param name="ScrollType">LateBindingApi.OWC10Api.Enums.PivotScrollTypeEnum ScrollType</param>
+		/// <param name="ScrollType">NetOffice.OWC10Api.Enums.PivotScrollTypeEnum ScrollType</param>
 		/// <param name="Update">bool Update</param>
 		/// <param name="Notify">bool Notify</param>
 		[SupportByLibrary("XWC1.0")]
-		public void Select(object selection, object activeObject, LateBindingApi.OWC10Api.Enums.PivotScrollTypeEnum scrollType, bool update, bool notify)
+		public void Select(object selection, object activeObject, NetOffice.OWC10Api.Enums.PivotScrollTypeEnum scrollType, bool update, bool notify)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selection, activeObject, scrollType, update, notify);
 			Invoker.Method(this, "Select", paramsArray);
@@ -1197,10 +1197,10 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="InitialValue">object InitialValue</param>
-		/// <param name="ArrowMode">LateBindingApi.OWC10Api.Enums.PivotArrowModeEnum ArrowMode</param>
-		/// <param name="CaretPosition">LateBindingApi.OWC10Api.Enums.PivotCaretPositionEnum CaretPosition</param>
+		/// <param name="ArrowMode">NetOffice.OWC10Api.Enums.PivotArrowModeEnum ArrowMode</param>
+		/// <param name="CaretPosition">NetOffice.OWC10Api.Enums.PivotCaretPositionEnum CaretPosition</param>
 		[SupportByLibrary("XWC1.0")]
-		public void StartEdit(object initialValue, LateBindingApi.OWC10Api.Enums.PivotArrowModeEnum arrowMode, LateBindingApi.OWC10Api.Enums.PivotCaretPositionEnum caretPosition)
+		public void StartEdit(object initialValue, NetOffice.OWC10Api.Enums.PivotArrowModeEnum arrowMode, NetOffice.OWC10Api.Enums.PivotCaretPositionEnum caretPosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(initialValue, arrowMode, caretPosition);
 			Invoker.Method(this, "StartEdit", paramsArray);

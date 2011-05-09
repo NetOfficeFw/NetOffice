@@ -15,7 +15,7 @@ namespace OWC10Api.Utils
     {
         #region Field
 
-        private string   _namespace     = "LateBindingApi.OWC10Api";
+        private string   _namespace     = "NetOffice.OWC10Api";
         private Guid     _componentGuid = new Guid("0002E550-0000-0000-C000-000000000046");
         private Assembly _assembly;
 

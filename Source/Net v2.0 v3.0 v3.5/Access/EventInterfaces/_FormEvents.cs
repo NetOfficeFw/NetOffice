@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {	
 	#pragma warning disable
 	
@@ -868,7 +868,7 @@ namespace LateBindingApi.AccessApi
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
 			cancel = (Int16)paramsArray[0];
-			connection = (LateBindingApi.ADODBApi.Connection)paramsArray[1];
+			connection = (NetOffice.ADODBApi.Connection)paramsArray[1];
 		}
 
 		public void AfterBeginTransaction([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object connection)
@@ -885,7 +885,7 @@ namespace LateBindingApi.AccessApi
 			foreach(Delegate delItem in recipients)
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
-			connection = (LateBindingApi.ADODBApi.Connection)paramsArray[0];
+			connection = (NetOffice.ADODBApi.Connection)paramsArray[0];
 		}
 
 		public void BeforeCommitTransaction([In] [Out] ref object cancel, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object connection)
@@ -904,7 +904,7 @@ namespace LateBindingApi.AccessApi
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
 			cancel = (Int16)paramsArray[0];
-			connection = (LateBindingApi.ADODBApi.Connection)paramsArray[1];
+			connection = (NetOffice.ADODBApi.Connection)paramsArray[1];
 		}
 
 		public void AfterCommitTransaction([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object connection)
@@ -921,7 +921,7 @@ namespace LateBindingApi.AccessApi
 			foreach(Delegate delItem in recipients)
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
-			connection = (LateBindingApi.ADODBApi.Connection)paramsArray[0];
+			connection = (NetOffice.ADODBApi.Connection)paramsArray[0];
 		}
 
 		public void RollbackTransaction([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object connection)
@@ -938,7 +938,7 @@ namespace LateBindingApi.AccessApi
 			foreach(Delegate delItem in recipients)
 				delItem.Method.Invoke(delItem.Target, paramsArray);
 
-			connection = (LateBindingApi.ADODBApi.Connection)paramsArray[0];
+			connection = (NetOffice.ADODBApi.Connection)paramsArray[0];
 		}
 
 		public void OnConnect()

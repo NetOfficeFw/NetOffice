@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {	
 	#pragma warning disable
 	
@@ -181,7 +181,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Selection newSel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sel) as LateBindingApi.PowerPointApi.Selection;
+			NetOffice.PowerPointApi.Selection newSel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSel;
 			foreach(Delegate delItem in recipients)
@@ -197,7 +197,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Selection newSel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sel) as LateBindingApi.PowerPointApi.Selection;
+			NetOffice.PowerPointApi.Selection newSel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
@@ -216,7 +216,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Selection newSel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sel) as LateBindingApi.PowerPointApi.Selection;
+			NetOffice.PowerPointApi.Selection newSel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
@@ -235,7 +235,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			foreach(Delegate delItem in recipients)
@@ -251,7 +251,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			foreach(Delegate delItem in recipients)
@@ -267,7 +267,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			foreach(Delegate delItem in recipients)
@@ -283,7 +283,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			foreach(Delegate delItem in recipients)
@@ -299,7 +299,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Slide newSld = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sld) as LateBindingApi.PowerPointApi.Slide;
+			NetOffice.PowerPointApi.Slide newSld = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sld) as NetOffice.PowerPointApi.Slide;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSld;
 			foreach(Delegate delItem in recipients)
@@ -315,8 +315,8 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
-			LateBindingApi.PowerPointApi.DocumentWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as LateBindingApi.PowerPointApi.DocumentWindow;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.DocumentWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.DocumentWindow;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray[1] = newWn;
@@ -333,8 +333,8 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
-			LateBindingApi.PowerPointApi.DocumentWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as LateBindingApi.PowerPointApi.DocumentWindow;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.DocumentWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.DocumentWindow;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray[1] = newWn;
@@ -351,7 +351,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as LateBindingApi.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			foreach(Delegate delItem in recipients)
@@ -367,7 +367,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as LateBindingApi.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			foreach(Delegate delItem in recipients)
@@ -383,7 +383,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as LateBindingApi.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			foreach(Delegate delItem in recipients)
@@ -399,7 +399,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			foreach(Delegate delItem in recipients)
@@ -415,7 +415,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			foreach(Delegate delItem in recipients)
@@ -431,7 +431,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.SlideRange newSldRange = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sldRange) as LateBindingApi.PowerPointApi.SlideRange;
+			NetOffice.PowerPointApi.SlideRange newSldRange = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sldRange) as NetOffice.PowerPointApi.SlideRange;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSldRange;
 			foreach(Delegate delItem in recipients)
@@ -447,7 +447,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.SlideRange newSldRange = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sldRange) as LateBindingApi.PowerPointApi.SlideRange;
+			NetOffice.PowerPointApi.SlideRange newSldRange = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sldRange) as NetOffice.PowerPointApi.SlideRange;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSldRange;
 			foreach(Delegate delItem in recipients)
@@ -463,7 +463,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray.SetValue(cancel, 1);
@@ -482,8 +482,8 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as LateBindingApi.PowerPointApi.SlideShowWindow;
-			LateBindingApi.PowerPointApi.Effect newnEffect = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, nEffect) as LateBindingApi.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.Effect newnEffect = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, nEffect) as NetOffice.PowerPointApi.Effect;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWn;
 			paramsArray[1] = newnEffect;
@@ -500,7 +500,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			foreach(Delegate delItem in recipients)
@@ -516,7 +516,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			foreach(Delegate delItem in recipients)
@@ -532,8 +532,8 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
-			LateBindingApi.OfficeApi.Enums.MsoSyncEventType newSyncEventType = (LateBindingApi.OfficeApi.Enums.MsoSyncEventType)syncEventType;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.OfficeApi.Enums.MsoSyncEventType newSyncEventType = (NetOffice.OfficeApi.Enums.MsoSyncEventType)syncEventType;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray[1] = newSyncEventType;
@@ -550,7 +550,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as LateBindingApi.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			foreach(Delegate delItem in recipients)
@@ -566,7 +566,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as LateBindingApi.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			foreach(Delegate delItem in recipients)
@@ -582,7 +582,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray.SetValue(cancel, 1);
@@ -601,7 +601,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as LateBindingApi.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
 			foreach(Delegate delItem in recipients)
@@ -617,7 +617,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as LateBindingApi.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newProtViewWindow;
 			paramsArray.SetValue(cancel, 1);
@@ -636,8 +636,8 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as LateBindingApi.PowerPointApi.ProtectedViewWindow;
-			LateBindingApi.PowerPointApi.Enums.PpProtectedViewCloseReason newProtectedViewCloseReason = (LateBindingApi.PowerPointApi.Enums.PpProtectedViewCloseReason)protectedViewCloseReason;
+			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.Enums.PpProtectedViewCloseReason newProtectedViewCloseReason = (NetOffice.PowerPointApi.Enums.PpProtectedViewCloseReason)protectedViewCloseReason;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newProtViewWindow;
 			paramsArray[1] = newProtectedViewCloseReason;
@@ -657,7 +657,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as LateBindingApi.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
 			foreach(Delegate delItem in recipients)
@@ -673,7 +673,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as LateBindingApi.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
 			foreach(Delegate delItem in recipients)
@@ -689,7 +689,7 @@ namespace LateBindingApi.PowerPointApi
 				return;
 			}
 
-			LateBindingApi.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as LateBindingApi.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			foreach(Delegate delItem in recipients)

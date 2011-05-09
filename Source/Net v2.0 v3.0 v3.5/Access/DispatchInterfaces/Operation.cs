@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface Operation SupportByLibrary AC14 
@@ -80,13 +80,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC14 
 		/// </summary>
 		[SupportByLibrary("AC14")]
-		public LateBindingApi.AccessApi.WSParameters WSParameters
+		public NetOffice.AccessApi.WSParameters WSParameters
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WSParameters", paramsArray);
-				LateBindingApi.AccessApi.WSParameters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.WSParameters;
+				NetOffice.AccessApi.WSParameters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.WSParameters;
 				return newObject;
 			}
 		}

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PivotDataAxis SupportByLibrary XWC1.0 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotTotals Totals
+		public NetOffice.OWC10Api.PivotTotals Totals
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Totals", paramsArray);
-				LateBindingApi.OWC10Api.PivotTotals newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotTotals;
+				NetOffice.OWC10Api.PivotTotals newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotTotals;
 				return newObject;
 			}
 		}
@@ -69,10 +69,10 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Total">LateBindingApi.OWC10Api.PivotTotal Total</param>
+		/// <param name="Total">NetOffice.OWC10Api.PivotTotal Total</param>
 		/// <param name="Before">optional object Before</param>
 		[SupportByLibrary("XWC1.0")]
-		public void InsertTotal(LateBindingApi.OWC10Api.PivotTotal total, object before)
+		public void InsertTotal(NetOffice.OWC10Api.PivotTotal total, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(total, before);
 			Invoker.Method(this, "InsertTotal", paramsArray);
@@ -81,9 +81,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Total">LateBindingApi.OWC10Api.PivotTotal Total</param>
+		/// <param name="Total">NetOffice.OWC10Api.PivotTotal Total</param>
 		[SupportByLibrary("XWC1.0")]
-		public void InsertTotal(LateBindingApi.OWC10Api.PivotTotal total)
+		public void InsertTotal(NetOffice.OWC10Api.PivotTotal total)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(total);
 			Invoker.Method(this, "InsertTotal", paramsArray);

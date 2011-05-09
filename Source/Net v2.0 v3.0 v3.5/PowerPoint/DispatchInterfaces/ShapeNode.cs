@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface ShapeNode SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -95,13 +95,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoEditingType EditingType
+		public NetOffice.OfficeApi.Enums.MsoEditingType EditingType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EditingType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoEditingType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoEditingType)returnItem;
 			}
 		}
 
@@ -132,13 +132,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoSegmentType SegmentType
+		public NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SegmentType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoSegmentType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoSegmentType)returnItem;
 			}
 		}
 

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ColorFormat SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -104,13 +104,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoColorType Type
+		public NetOffice.OfficeApi.Enums.MsoColorType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoColorType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoColorType)returnItem;
 			}
 		}
 
@@ -137,13 +137,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoThemeColorIndex ObjectThemeColor
+		public NetOffice.OfficeApi.Enums.MsoThemeColorIndex ObjectThemeColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ObjectThemeColor", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoThemeColorIndex)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoThemeColorIndex)returnItem;
 			}
 			set
 			{

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface SlideShowView SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Slide Slide
+		public NetOffice.PowerPointApi.Slide Slide
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Slide", paramsArray);
-				LateBindingApi.PowerPointApi.Slide newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Slide;
+				NetOffice.PowerPointApi.Slide newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Slide;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpSlideShowPointerType PointerType
+		public NetOffice.PowerPointApi.Enums.PpSlideShowPointerType PointerType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PointerType", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpSlideShowPointerType)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpSlideShowPointerType)returnItem;
 			}
 			set
 			{
@@ -129,13 +129,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpSlideShowState State
+		public NetOffice.PowerPointApi.Enums.PpSlideShowState State
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "State", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpSlideShowState)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpSlideShowState)returnItem;
 			}
 			set
 			{
@@ -148,13 +148,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState AcceleratorsEnabled
+		public NetOffice.OfficeApi.Enums.MsoTriState AcceleratorsEnabled
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AcceleratorsEnabled", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -200,13 +200,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Slide LastSlideViewed
+		public NetOffice.PowerPointApi.Slide LastSlideViewed
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LastSlideViewed", paramsArray);
-				LateBindingApi.PowerPointApi.Slide newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Slide;
+				NetOffice.PowerPointApi.Slide newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Slide;
 				return newObject;
 			}
 		}
@@ -215,13 +215,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Enums.PpSlideShowAdvanceMode AdvanceMode
+		public NetOffice.PowerPointApi.Enums.PpSlideShowAdvanceMode AdvanceMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AdvanceMode", paramsArray);
-				return (LateBindingApi.PowerPointApi.Enums.PpSlideShowAdvanceMode)returnItem;
+				return (NetOffice.PowerPointApi.Enums.PpSlideShowAdvanceMode)returnItem;
 			}
 		}
 
@@ -229,13 +229,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.ColorFormat PointerColor
+		public NetOffice.PowerPointApi.ColorFormat PointerColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PointerColor", paramsArray);
-				LateBindingApi.PowerPointApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.ColorFormat;
+				NetOffice.PowerPointApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ColorFormat;
 				return newObject;
 			}
 		}
@@ -244,13 +244,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState IsNamedShow
+		public NetOffice.OfficeApi.Enums.MsoTriState IsNamedShow
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "IsNamedShow", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 		}
 
@@ -286,13 +286,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP14 
 		/// </summary>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState MediaControlsVisible
+		public NetOffice.OfficeApi.Enums.MsoTriState MediaControlsVisible
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MediaControlsVisible", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 		}
 
@@ -424,9 +424,9 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		/// <param name="ResetSlide">LateBindingApi.OfficeApi.Enums.MsoTriState ResetSlide</param>
+		/// <param name="ResetSlide">NetOffice.OfficeApi.Enums.MsoTriState ResetSlide</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public void GotoSlide(Int32 index, LateBindingApi.OfficeApi.Enums.MsoTriState resetSlide)
+		public void GotoSlide(Int32 index, NetOffice.OfficeApi.Enums.MsoTriState resetSlide)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, resetSlide);
 			Invoker.Method(this, "GotoSlide", paramsArray);
@@ -476,10 +476,10 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="pTracker">LateBindingApi.PowerPointApi.MouseTracker pTracker</param>
-		/// <param name="Presenter">LateBindingApi.OfficeApi.Enums.MsoTriState Presenter</param>
+		/// <param name="pTracker">NetOffice.PowerPointApi.MouseTracker pTracker</param>
+		/// <param name="Presenter">NetOffice.OfficeApi.Enums.MsoTriState Presenter</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public void InstallTracker(LateBindingApi.PowerPointApi.MouseTracker pTracker, LateBindingApi.OfficeApi.Enums.MsoTriState presenter)
+		public void InstallTracker(NetOffice.PowerPointApi.MouseTracker pTracker, NetOffice.OfficeApi.Enums.MsoTriState presenter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pTracker, presenter);
 			Invoker.Method(this, "InstallTracker", paramsArray);
@@ -534,11 +534,11 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="ShapeId">object ShapeId</param>
 		[SupportByLibrary("PP14")]
-		public LateBindingApi.PowerPointApi.Player Player(object shapeId)
+		public NetOffice.PowerPointApi.Player Player(object shapeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shapeId);
 			object returnItem = Invoker.MethodReturn(this, "Player", paramsArray);
-			LateBindingApi.PowerPointApi.Player newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.Player;
+			NetOffice.PowerPointApi.Player newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Player;
 			return newObject;
 		}
 

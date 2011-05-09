@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface Recordset20 SupportByLibrary ADO2.1 ADO2.5 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.1 ADO2.5 
 		/// </summary>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public LateBindingApi.ADODBApi.Properties Properties
+		public NetOffice.ADODBApi.Properties Properties
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				LateBindingApi.ADODBApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Properties;
+				NetOffice.ADODBApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Properties;
 				return newObject;
 			}
 		}
@@ -153,9 +153,9 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.1 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		/// <param name="PersistFormat">LateBindingApi.ADODBApi.Enums.PersistFormatEnum PersistFormat</param>
+		/// <param name="PersistFormat">NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat</param>
 		[SupportByLibrary("ADO2.1")]
-		public void Save(string fileName, LateBindingApi.ADODBApi.Enums.PersistFormatEnum persistFormat)
+		public void Save(string fileName, NetOffice.ADODBApi.Enums.PersistFormatEnum persistFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, persistFormat);
 			Invoker.Method(this, "Save", paramsArray);
@@ -164,13 +164,13 @@ namespace LateBindingApi.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADO2.1 ADO2.5 
 		/// </summary>
-		/// <param name="StringFormat">LateBindingApi.ADODBApi.Enums.StringFormatEnum StringFormat</param>
+		/// <param name="StringFormat">NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat</param>
 		/// <param name="NumRows">Int32 NumRows</param>
 		/// <param name="ColumnDelimeter">string ColumnDelimeter</param>
 		/// <param name="RowDelimeter">string RowDelimeter</param>
 		/// <param name="NullExpr">string NullExpr</param>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public string GetString(LateBindingApi.ADODBApi.Enums.StringFormatEnum stringFormat, Int32 numRows, string columnDelimeter, string rowDelimeter, string nullExpr)
+		public string GetString(NetOffice.ADODBApi.Enums.StringFormatEnum stringFormat, Int32 numRows, string columnDelimeter, string rowDelimeter, string nullExpr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stringFormat, numRows, columnDelimeter, rowDelimeter, nullExpr);
 			object returnItem = Invoker.MethodReturn(this, "GetString", paramsArray);
@@ -183,33 +183,33 @@ namespace LateBindingApi.ADODBApi
 		/// <param name="Bookmark1">object Bookmark1</param>
 		/// <param name="Bookmark2">object Bookmark2</param>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public LateBindingApi.ADODBApi.Enums.CompareEnum CompareBookmarks(object bookmark1, object bookmark2)
+		public NetOffice.ADODBApi.Enums.CompareEnum CompareBookmarks(object bookmark1, object bookmark2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bookmark1, bookmark2);
 			object returnItem = Invoker.MethodReturn(this, "CompareBookmarks", paramsArray);
-			return (LateBindingApi.ADODBApi.Enums.CompareEnum)returnItem;
+			return (NetOffice.ADODBApi.Enums.CompareEnum)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary ADO2.1 ADO2.5 
 		/// </summary>
-		/// <param name="LockType">LateBindingApi.ADODBApi.Enums.LockTypeEnum LockType</param>
+		/// <param name="LockType">NetOffice.ADODBApi.Enums.LockTypeEnum LockType</param>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public LateBindingApi.ADODBApi._Recordset Clone(LateBindingApi.ADODBApi.Enums.LockTypeEnum lockType)
+		public NetOffice.ADODBApi._Recordset Clone(NetOffice.ADODBApi.Enums.LockTypeEnum lockType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lockType);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
-			LateBindingApi.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary ADO2.1 ADO2.5 
 		/// </summary>
-		/// <param name="AffectRecords">LateBindingApi.ADODBApi.Enums.AffectEnum AffectRecords</param>
-		/// <param name="ResyncValues">LateBindingApi.ADODBApi.Enums.ResyncEnum ResyncValues</param>
+		/// <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+		/// <param name="ResyncValues">NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues</param>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public void Resync(LateBindingApi.ADODBApi.Enums.AffectEnum affectRecords, LateBindingApi.ADODBApi.Enums.ResyncEnum resyncValues)
+		public void Resync(NetOffice.ADODBApi.Enums.AffectEnum affectRecords, NetOffice.ADODBApi.Enums.ResyncEnum resyncValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords, resyncValues);
 			Invoker.Method(this, "Resync", paramsArray);
@@ -219,9 +219,9 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		/// <param name="PersistFormat">LateBindingApi.ADODBApi.Enums.PersistFormatEnum PersistFormat</param>
+		/// <param name="PersistFormat">NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat</param>
 		[SupportByLibrary("ADO2.5")]
-		public void _xSave(string fileName, LateBindingApi.ADODBApi.Enums.PersistFormatEnum persistFormat)
+		public void _xSave(string fileName, NetOffice.ADODBApi.Enums.PersistFormatEnum persistFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, persistFormat);
 			Invoker.Method(this, "_xSave", paramsArray);

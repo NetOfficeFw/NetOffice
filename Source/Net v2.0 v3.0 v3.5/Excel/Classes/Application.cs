@@ -3,55 +3,55 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Application_NewWorkbookEventHandler(LateBindingApi.ExcelApi.Workbook Wb);
-	public delegate void Application_SheetSelectionChangeEventHandler(COMObject Sh, LateBindingApi.ExcelApi.Range Target);
-	public delegate void Application_SheetBeforeDoubleClickEventHandler(COMObject Sh, LateBindingApi.ExcelApi.Range Target, ref bool Cancel);
-	public delegate void Application_SheetBeforeRightClickEventHandler(COMObject Sh, LateBindingApi.ExcelApi.Range Target, ref bool Cancel);
+	public delegate void Application_NewWorkbookEventHandler(NetOffice.ExcelApi.Workbook Wb);
+	public delegate void Application_SheetSelectionChangeEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target);
+	public delegate void Application_SheetBeforeDoubleClickEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target, ref bool Cancel);
+	public delegate void Application_SheetBeforeRightClickEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target, ref bool Cancel);
 	public delegate void Application_SheetActivateEventHandler(COMObject Sh);
 	public delegate void Application_SheetDeactivateEventHandler(COMObject Sh);
 	public delegate void Application_SheetCalculateEventHandler(COMObject Sh);
-	public delegate void Application_SheetChangeEventHandler(COMObject Sh, LateBindingApi.ExcelApi.Range Target);
-	public delegate void Application_WorkbookOpenEventHandler(LateBindingApi.ExcelApi.Workbook Wb);
-	public delegate void Application_WorkbookActivateEventHandler(LateBindingApi.ExcelApi.Workbook Wb);
-	public delegate void Application_WorkbookDeactivateEventHandler(LateBindingApi.ExcelApi.Workbook Wb);
-	public delegate void Application_WorkbookBeforeCloseEventHandler(LateBindingApi.ExcelApi.Workbook Wb, ref bool Cancel);
-	public delegate void Application_WorkbookBeforeSaveEventHandler(LateBindingApi.ExcelApi.Workbook Wb, bool SaveAsUI, ref bool Cancel);
-	public delegate void Application_WorkbookBeforePrintEventHandler(LateBindingApi.ExcelApi.Workbook Wb, ref bool Cancel);
-	public delegate void Application_WorkbookNewSheetEventHandler(LateBindingApi.ExcelApi.Workbook Wb, COMObject Sh);
-	public delegate void Application_WorkbookAddinInstallEventHandler(LateBindingApi.ExcelApi.Workbook Wb);
-	public delegate void Application_WorkbookAddinUninstallEventHandler(LateBindingApi.ExcelApi.Workbook Wb);
-	public delegate void Application_WindowResizeEventHandler(LateBindingApi.ExcelApi.Workbook Wb, LateBindingApi.ExcelApi.Window Wn);
-	public delegate void Application_WindowActivateEventHandler(LateBindingApi.ExcelApi.Workbook Wb, LateBindingApi.ExcelApi.Window Wn);
-	public delegate void Application_WindowDeactivateEventHandler(LateBindingApi.ExcelApi.Workbook Wb, LateBindingApi.ExcelApi.Window Wn);
-	public delegate void Application_SheetFollowHyperlinkEventHandler(COMObject Sh, LateBindingApi.ExcelApi.Hyperlink Target);
-	public delegate void Application_SheetPivotTableUpdateEventHandler(COMObject Sh, LateBindingApi.ExcelApi.PivotTable Target);
-	public delegate void Application_WorkbookPivotTableCloseConnectionEventHandler(LateBindingApi.ExcelApi.Workbook Wb, LateBindingApi.ExcelApi.PivotTable Target);
-	public delegate void Application_WorkbookPivotTableOpenConnectionEventHandler(LateBindingApi.ExcelApi.Workbook Wb, LateBindingApi.ExcelApi.PivotTable Target);
-	public delegate void Application_WorkbookSyncEventHandler(LateBindingApi.ExcelApi.Workbook Wb, LateBindingApi.OfficeApi.Enums.MsoSyncEventType SyncEventType);
-	public delegate void Application_WorkbookBeforeXmlImportEventHandler(LateBindingApi.ExcelApi.Workbook Wb, LateBindingApi.ExcelApi.XmlMap Map, string Url, bool IsRefresh, ref bool Cancel);
-	public delegate void Application_WorkbookAfterXmlImportEventHandler(LateBindingApi.ExcelApi.Workbook Wb, LateBindingApi.ExcelApi.XmlMap Map, bool IsRefresh, LateBindingApi.ExcelApi.Enums.XlXmlImportResult Result);
-	public delegate void Application_WorkbookBeforeXmlExportEventHandler(LateBindingApi.ExcelApi.Workbook Wb, LateBindingApi.ExcelApi.XmlMap Map, string Url, ref bool Cancel);
-	public delegate void Application_WorkbookAfterXmlExportEventHandler(LateBindingApi.ExcelApi.Workbook Wb, LateBindingApi.ExcelApi.XmlMap Map, string Url, LateBindingApi.ExcelApi.Enums.XlXmlExportResult Result);
-	public delegate void Application_WorkbookRowsetCompleteEventHandler(LateBindingApi.ExcelApi.Workbook Wb, string Description, string Sheet, bool Success);
+	public delegate void Application_SheetChangeEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target);
+	public delegate void Application_WorkbookOpenEventHandler(NetOffice.ExcelApi.Workbook Wb);
+	public delegate void Application_WorkbookActivateEventHandler(NetOffice.ExcelApi.Workbook Wb);
+	public delegate void Application_WorkbookDeactivateEventHandler(NetOffice.ExcelApi.Workbook Wb);
+	public delegate void Application_WorkbookBeforeCloseEventHandler(NetOffice.ExcelApi.Workbook Wb, ref bool Cancel);
+	public delegate void Application_WorkbookBeforeSaveEventHandler(NetOffice.ExcelApi.Workbook Wb, bool SaveAsUI, ref bool Cancel);
+	public delegate void Application_WorkbookBeforePrintEventHandler(NetOffice.ExcelApi.Workbook Wb, ref bool Cancel);
+	public delegate void Application_WorkbookNewSheetEventHandler(NetOffice.ExcelApi.Workbook Wb, COMObject Sh);
+	public delegate void Application_WorkbookAddinInstallEventHandler(NetOffice.ExcelApi.Workbook Wb);
+	public delegate void Application_WorkbookAddinUninstallEventHandler(NetOffice.ExcelApi.Workbook Wb);
+	public delegate void Application_WindowResizeEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.ExcelApi.Window Wn);
+	public delegate void Application_WindowActivateEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.ExcelApi.Window Wn);
+	public delegate void Application_WindowDeactivateEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.ExcelApi.Window Wn);
+	public delegate void Application_SheetFollowHyperlinkEventHandler(COMObject Sh, NetOffice.ExcelApi.Hyperlink Target);
+	public delegate void Application_SheetPivotTableUpdateEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable Target);
+	public delegate void Application_WorkbookPivotTableCloseConnectionEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.ExcelApi.PivotTable Target);
+	public delegate void Application_WorkbookPivotTableOpenConnectionEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.ExcelApi.PivotTable Target);
+	public delegate void Application_WorkbookSyncEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType);
+	public delegate void Application_WorkbookBeforeXmlImportEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.ExcelApi.XmlMap Map, string Url, bool IsRefresh, ref bool Cancel);
+	public delegate void Application_WorkbookAfterXmlImportEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.ExcelApi.XmlMap Map, bool IsRefresh, NetOffice.ExcelApi.Enums.XlXmlImportResult Result);
+	public delegate void Application_WorkbookBeforeXmlExportEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.ExcelApi.XmlMap Map, string Url, ref bool Cancel);
+	public delegate void Application_WorkbookAfterXmlExportEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.ExcelApi.XmlMap Map, string Url, NetOffice.ExcelApi.Enums.XlXmlExportResult Result);
+	public delegate void Application_WorkbookRowsetCompleteEventHandler(NetOffice.ExcelApi.Workbook Wb, string Description, string Sheet, bool Success);
 	public delegate void Application_AfterCalculateEventHandler();
-	public delegate void Application_SheetPivotTableAfterValueChangeEventHandler(COMObject Sh, LateBindingApi.ExcelApi.PivotTable TargetPivotTable, LateBindingApi.ExcelApi.Range TargetRange);
-	public delegate void Application_SheetPivotTableBeforeAllocateChangesEventHandler(COMObject Sh, LateBindingApi.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
-	public delegate void Application_SheetPivotTableBeforeCommitChangesEventHandler(COMObject Sh, LateBindingApi.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
-	public delegate void Application_SheetPivotTableBeforeDiscardChangesEventHandler(COMObject Sh, LateBindingApi.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd);
-	public delegate void Application_ProtectedViewWindowOpenEventHandler(LateBindingApi.ExcelApi.ProtectedViewWindow Pvw);
-	public delegate void Application_ProtectedViewWindowBeforeEditEventHandler(LateBindingApi.ExcelApi.ProtectedViewWindow Pvw, ref bool Cancel);
-	public delegate void Application_ProtectedViewWindowBeforeCloseEventHandler(LateBindingApi.ExcelApi.ProtectedViewWindow Pvw, LateBindingApi.ExcelApi.Enums.XlProtectedViewCloseReason Reason, ref bool Cancel);
-	public delegate void Application_ProtectedViewWindowResizeEventHandler(LateBindingApi.ExcelApi.ProtectedViewWindow Pvw);
-	public delegate void Application_ProtectedViewWindowActivateEventHandler(LateBindingApi.ExcelApi.ProtectedViewWindow Pvw);
-	public delegate void Application_ProtectedViewWindowDeactivateEventHandler(LateBindingApi.ExcelApi.ProtectedViewWindow Pvw);
-	public delegate void Application_WorkbookAfterSaveEventHandler(LateBindingApi.ExcelApi.Workbook Wb, bool Success);
-	public delegate void Application_WorkbookNewChartEventHandler(LateBindingApi.ExcelApi.Workbook Wb, LateBindingApi.ExcelApi.Chart Ch);
+	public delegate void Application_SheetPivotTableAfterValueChangeEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, NetOffice.ExcelApi.Range TargetRange);
+	public delegate void Application_SheetPivotTableBeforeAllocateChangesEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
+	public delegate void Application_SheetPivotTableBeforeCommitChangesEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
+	public delegate void Application_SheetPivotTableBeforeDiscardChangesEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd);
+	public delegate void Application_ProtectedViewWindowOpenEventHandler(NetOffice.ExcelApi.ProtectedViewWindow Pvw);
+	public delegate void Application_ProtectedViewWindowBeforeEditEventHandler(NetOffice.ExcelApi.ProtectedViewWindow Pvw, ref bool Cancel);
+	public delegate void Application_ProtectedViewWindowBeforeCloseEventHandler(NetOffice.ExcelApi.ProtectedViewWindow Pvw, NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason Reason, ref bool Cancel);
+	public delegate void Application_ProtectedViewWindowResizeEventHandler(NetOffice.ExcelApi.ProtectedViewWindow Pvw);
+	public delegate void Application_ProtectedViewWindowActivateEventHandler(NetOffice.ExcelApi.ProtectedViewWindow Pvw);
+	public delegate void Application_ProtectedViewWindowDeactivateEventHandler(NetOffice.ExcelApi.ProtectedViewWindow Pvw);
+	public delegate void Application_WorkbookAfterSaveEventHandler(NetOffice.ExcelApi.Workbook Wb, bool Success);
+	public delegate void Application_WorkbookNewChartEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.ExcelApi.Chart Ch);
 	#pragma warning restore
 
 	#endregion

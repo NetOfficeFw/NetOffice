@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface CustomXMLValidationErrors SupportByLibrary OF12 OF14 
@@ -82,11 +82,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLValidationError get_Item(Int32 index)
+		public NetOffice.OfficeApi.CustomXMLValidationError get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.CustomXMLValidationError newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLValidationError;
+			NetOffice.OfficeApi.CustomXMLValidationError newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLValidationError;
 			return newObject;
 		}
 
@@ -97,12 +97,12 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Node">LateBindingApi.OfficeApi.CustomXMLNode Node</param>
+		/// <param name="Node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		/// <param name="ErrorName">string ErrorName</param>
 		/// <param name="ErrorText">string ErrorText</param>
 		/// <param name="ClearedOnUpdate">bool ClearedOnUpdate</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void Add(LateBindingApi.OfficeApi.CustomXMLNode node, string errorName, string errorText, bool clearedOnUpdate)
+		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, string errorText, bool clearedOnUpdate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node, errorName, errorText, clearedOnUpdate);
 			Invoker.Method(this, "Add", paramsArray);

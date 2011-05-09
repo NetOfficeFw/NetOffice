@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {	
 	#pragma warning disable
 	
@@ -61,7 +61,7 @@ namespace LateBindingApi.OfficeApi
 				return;
 			}
 
-			LateBindingApi.OfficeApi.CommandBarButton newCtrl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, ctrl) as LateBindingApi.OfficeApi.CommandBarButton;
+			NetOffice.OfficeApi.CommandBarButton newCtrl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, ctrl) as NetOffice.OfficeApi.CommandBarButton;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCtrl;
 			paramsArray.SetValue(cancelDefault, 1);

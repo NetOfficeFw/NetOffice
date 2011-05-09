@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IPanel SupportByLibrary WCC6.0 
@@ -70,13 +70,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.PanelAlignmentConstants Alignment
+		public NetOffice.MSComctlLibApi.Enums.PanelAlignmentConstants Alignment
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Alignment", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.PanelAlignmentConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.PanelAlignmentConstants)returnItem;
 			}
 			set
 			{
@@ -89,13 +89,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.PanelAutoSizeConstants AutoSize
+		public NetOffice.MSComctlLibApi.Enums.PanelAutoSizeConstants AutoSize
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AutoSize", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.PanelAutoSizeConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.PanelAutoSizeConstants)returnItem;
 			}
 			set
 			{
@@ -108,13 +108,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.PanelBevelConstants Bevel
+		public NetOffice.MSComctlLibApi.Enums.PanelBevelConstants Bevel
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Bevel", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.PanelBevelConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.PanelBevelConstants)returnItem;
 			}
 			set
 			{
@@ -242,13 +242,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.PanelStyleConstants Style
+		public NetOffice.MSComctlLibApi.Enums.PanelStyleConstants Style
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.PanelStyleConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.PanelStyleConstants)returnItem;
 			}
 			set
 			{

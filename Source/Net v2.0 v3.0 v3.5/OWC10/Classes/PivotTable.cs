@@ -3,16 +3,16 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void PivotTable_SelectionChangeEventHandler();
-	public delegate void PivotTable_ViewChangeEventHandler(LateBindingApi.OWC10Api.Enums.PivotViewReasonEnum Reason);
-	public delegate void PivotTable_DataChangeEventHandler(LateBindingApi.OWC10Api.Enums.PivotDataReasonEnum Reason);
-	public delegate void PivotTable_PivotTableChangeEventHandler(LateBindingApi.OWC10Api.Enums.PivotTableReasonEnum Reason);
+	public delegate void PivotTable_ViewChangeEventHandler(NetOffice.OWC10Api.Enums.PivotViewReasonEnum Reason);
+	public delegate void PivotTable_DataChangeEventHandler(NetOffice.OWC10Api.Enums.PivotDataReasonEnum Reason);
+	public delegate void PivotTable_PivotTableChangeEventHandler(NetOffice.OWC10Api.Enums.PivotTableReasonEnum Reason);
 	public delegate void PivotTable_BeforeQueryEventHandler();
 	public delegate void PivotTable_QueryEventHandler();
 	public delegate void PivotTable_OnConnectEventHandler();
@@ -23,21 +23,21 @@ namespace LateBindingApi.OWC10Api
 	public delegate void PivotTable_MouseWheelEventHandler(bool Page, Int32 Count);
 	public delegate void PivotTable_ClickEventHandler();
 	public delegate void PivotTable_DblClickEventHandler();
-	public delegate void PivotTable_CommandEnabledEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Enabled);
-	public delegate void PivotTable_CommandCheckedEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Checked);
-	public delegate void PivotTable_CommandTipTextEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Caption);
-	public delegate void PivotTable_CommandBeforeExecuteEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Cancel);
+	public delegate void PivotTable_CommandEnabledEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Enabled);
+	public delegate void PivotTable_CommandCheckedEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Checked);
+	public delegate void PivotTable_CommandTipTextEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Caption);
+	public delegate void PivotTable_CommandBeforeExecuteEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Cancel);
 	public delegate void PivotTable_CommandExecuteEventHandler(COMObject Command, bool Succeeded);
 	public delegate void PivotTable_KeyDownEventHandler(Int32 KeyCode, Int32 Shift);
 	public delegate void PivotTable_KeyUpEventHandler(Int32 KeyCode, Int32 Shift);
 	public delegate void PivotTable_KeyPressEventHandler(Int32 KeyAscii);
-	public delegate void PivotTable_BeforeKeyDownEventHandler(Int32 KeyCode, Int32 Shift, LateBindingApi.OWC10Api.ByRef Cancel);
-	public delegate void PivotTable_BeforeKeyUpEventHandler(Int32 KeyCode, Int32 Shift, LateBindingApi.OWC10Api.ByRef Cancel);
-	public delegate void PivotTable_BeforeKeyPressEventHandler(Int32 KeyAscii, LateBindingApi.OWC10Api.ByRef Cancel);
-	public delegate void PivotTable_BeforeContextMenuEventHandler(Int32 x, Int32 y, LateBindingApi.OWC10Api.ByRef Menu, LateBindingApi.OWC10Api.ByRef Cancel);
-	public delegate void PivotTable_StartEditEventHandler(COMObject Selection, COMObject ActiveObject, LateBindingApi.OWC10Api.ByRef InitialValue, LateBindingApi.OWC10Api.ByRef ArrowMode, LateBindingApi.OWC10Api.ByRef CaretPosition, LateBindingApi.OWC10Api.ByRef Cancel, LateBindingApi.OWC10Api.ByRef ErrorDescription);
-	public delegate void PivotTable_EndEditEventHandler(bool Accept, LateBindingApi.OWC10Api.ByRef FinalValue, LateBindingApi.OWC10Api.ByRef Cancel, LateBindingApi.OWC10Api.ByRef ErrorDescription);
-	public delegate void PivotTable_BeforeScreenTipEventHandler(LateBindingApi.OWC10Api.ByRef ScreenTipText, COMObject SourceObject);
+	public delegate void PivotTable_BeforeKeyDownEventHandler(Int32 KeyCode, Int32 Shift, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void PivotTable_BeforeKeyUpEventHandler(Int32 KeyCode, Int32 Shift, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void PivotTable_BeforeKeyPressEventHandler(Int32 KeyAscii, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void PivotTable_BeforeContextMenuEventHandler(Int32 x, Int32 y, NetOffice.OWC10Api.ByRef Menu, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void PivotTable_StartEditEventHandler(COMObject Selection, COMObject ActiveObject, NetOffice.OWC10Api.ByRef InitialValue, NetOffice.OWC10Api.ByRef ArrowMode, NetOffice.OWC10Api.ByRef CaretPosition, NetOffice.OWC10Api.ByRef Cancel, NetOffice.OWC10Api.ByRef ErrorDescription);
+	public delegate void PivotTable_EndEditEventHandler(bool Accept, NetOffice.OWC10Api.ByRef FinalValue, NetOffice.OWC10Api.ByRef Cancel, NetOffice.OWC10Api.ByRef ErrorDescription);
+	public delegate void PivotTable_BeforeScreenTipEventHandler(NetOffice.OWC10Api.ByRef ScreenTipText, COMObject SourceObject);
 	#pragma warning restore
 
 	#endregion

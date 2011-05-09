@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Folders_FolderAddEventHandler(LateBindingApi.OutlookApi.MAPIFolder Folder);
-	public delegate void Folders_FolderChangeEventHandler(LateBindingApi.OutlookApi.MAPIFolder Folder);
+	public delegate void Folders_FolderAddEventHandler(NetOffice.OutlookApi.MAPIFolder Folder);
+	public delegate void Folders_FolderChangeEventHandler(NetOffice.OutlookApi.MAPIFolder Folder);
 	public delegate void Folders_FolderRemoveEventHandler();
 	#pragma warning restore
 

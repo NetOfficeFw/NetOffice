@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Axes SupportByLibrary OF12 OF14 
@@ -65,14 +65,14 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.OfficeApi.Enums.XlAxisType Type</param>
-		/// <param name="AxisGroup">LateBindingApi.OfficeApi.Enums.XlAxisGroup AxisGroup</param>
+		/// <param name="Type">NetOffice.OfficeApi.Enums.XlAxisType Type</param>
+		/// <param name="AxisGroup">NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.IMsoAxis get_Item(LateBindingApi.OfficeApi.Enums.XlAxisType type, LateBindingApi.OfficeApi.Enums.XlAxisGroup axisGroup)
+		public NetOffice.OfficeApi.IMsoAxis get_Item(NetOffice.OfficeApi.Enums.XlAxisType type, NetOffice.OfficeApi.Enums.XlAxisGroup axisGroup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.IMsoAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IMsoAxis;
+			NetOffice.OfficeApi.IMsoAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoAxis;
 			return newObject;
 		}
 
@@ -108,17 +108,17 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.OfficeApi.Enums.XlAxisType Type</param>
-		/// <param name="AxisGroup">LateBindingApi.OfficeApi.Enums.XlAxisGroup AxisGroup</param>
+		/// <param name="Type">NetOffice.OfficeApi.Enums.XlAxisType Type</param>
+		/// <param name="AxisGroup">NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup</param>
 		[SupportByLibrary("OF14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.OfficeApi.IMsoAxis this[LateBindingApi.OfficeApi.Enums.XlAxisType type, LateBindingApi.OfficeApi.Enums.XlAxisGroup axisGroup]
+		public NetOffice.OfficeApi.IMsoAxis this[NetOffice.OfficeApi.Enums.XlAxisType type, NetOffice.OfficeApi.Enums.XlAxisGroup axisGroup]
 		{
 			get
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			LateBindingApi.OfficeApi.IMsoAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.IMsoAxis;
+			NetOffice.OfficeApi.IMsoAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoAxis;
 			return newObject;
 			}
 		}

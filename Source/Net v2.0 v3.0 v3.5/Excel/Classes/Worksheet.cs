@@ -3,26 +3,26 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Worksheet_SelectionChangeEventHandler(LateBindingApi.ExcelApi.Range Target);
-	public delegate void Worksheet_BeforeDoubleClickEventHandler(LateBindingApi.ExcelApi.Range Target, ref bool Cancel);
-	public delegate void Worksheet_BeforeRightClickEventHandler(LateBindingApi.ExcelApi.Range Target, ref bool Cancel);
+	public delegate void Worksheet_SelectionChangeEventHandler(NetOffice.ExcelApi.Range Target);
+	public delegate void Worksheet_BeforeDoubleClickEventHandler(NetOffice.ExcelApi.Range Target, ref bool Cancel);
+	public delegate void Worksheet_BeforeRightClickEventHandler(NetOffice.ExcelApi.Range Target, ref bool Cancel);
 	public delegate void Worksheet_ActivateEventHandler();
 	public delegate void Worksheet_DeactivateEventHandler();
 	public delegate void Worksheet_CalculateEventHandler();
-	public delegate void Worksheet_ChangeEventHandler(LateBindingApi.ExcelApi.Range Target);
-	public delegate void Worksheet_FollowHyperlinkEventHandler(LateBindingApi.ExcelApi.Hyperlink Target);
-	public delegate void Worksheet_PivotTableUpdateEventHandler(LateBindingApi.ExcelApi.PivotTable Target);
-	public delegate void Worksheet_PivotTableAfterValueChangeEventHandler(LateBindingApi.ExcelApi.PivotTable TargetPivotTable, LateBindingApi.ExcelApi.Range TargetRange);
-	public delegate void Worksheet_PivotTableBeforeAllocateChangesEventHandler(LateBindingApi.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
-	public delegate void Worksheet_PivotTableBeforeCommitChangesEventHandler(LateBindingApi.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
-	public delegate void Worksheet_PivotTableBeforeDiscardChangesEventHandler(LateBindingApi.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd);
-	public delegate void Worksheet_PivotTableChangeSyncEventHandler(LateBindingApi.ExcelApi.PivotTable Target);
+	public delegate void Worksheet_ChangeEventHandler(NetOffice.ExcelApi.Range Target);
+	public delegate void Worksheet_FollowHyperlinkEventHandler(NetOffice.ExcelApi.Hyperlink Target);
+	public delegate void Worksheet_PivotTableUpdateEventHandler(NetOffice.ExcelApi.PivotTable Target);
+	public delegate void Worksheet_PivotTableAfterValueChangeEventHandler(NetOffice.ExcelApi.PivotTable TargetPivotTable, NetOffice.ExcelApi.Range TargetRange);
+	public delegate void Worksheet_PivotTableBeforeAllocateChangesEventHandler(NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
+	public delegate void Worksheet_PivotTableBeforeCommitChangesEventHandler(NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
+	public delegate void Worksheet_PivotTableBeforeDiscardChangesEventHandler(NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd);
+	public delegate void Worksheet_PivotTableChangeSyncEventHandler(NetOffice.ExcelApi.PivotTable Target);
 	#pragma warning restore
 
 	#endregion

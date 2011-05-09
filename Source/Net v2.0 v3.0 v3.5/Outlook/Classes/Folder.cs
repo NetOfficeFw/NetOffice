@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Folder_BeforeFolderMoveEventHandler(LateBindingApi.OutlookApi.MAPIFolder MoveTo, ref bool Cancel);
-	public delegate void Folder_BeforeItemMoveEventHandler(COMObject Item, LateBindingApi.OutlookApi.MAPIFolder MoveTo, ref bool Cancel);
+	public delegate void Folder_BeforeFolderMoveEventHandler(NetOffice.OutlookApi.MAPIFolder MoveTo, ref bool Cancel);
+	public delegate void Folder_BeforeItemMoveEventHandler(COMObject Item, NetOffice.OutlookApi.MAPIFolder MoveTo, ref bool Cancel);
 	#pragma warning restore
 
 	#endregion

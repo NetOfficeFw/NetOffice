@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {	
 	#pragma warning disable
 	
@@ -98,7 +98,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as LateBindingApi.OutlookApi._Reminder;
+			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
 			foreach(Delegate delItem in recipients)
@@ -114,7 +114,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as LateBindingApi.OutlookApi._Reminder;
+			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
 			foreach(Delegate delItem in recipients)
@@ -130,7 +130,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as LateBindingApi.OutlookApi._Reminder;
+			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
 			foreach(Delegate delItem in recipients)
@@ -160,7 +160,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as LateBindingApi.OutlookApi._Reminder;
+			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
 			foreach(Delegate delItem in recipients)

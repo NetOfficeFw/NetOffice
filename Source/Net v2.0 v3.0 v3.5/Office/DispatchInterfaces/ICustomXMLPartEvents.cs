@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ICustomXMLPartEvents SupportByLibrary OF12 OF14 
@@ -54,10 +54,10 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="NewNode">LateBindingApi.OfficeApi.CustomXMLNode NewNode</param>
+		/// <param name="NewNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>
 		/// <param name="InUndoRedo">bool InUndoRedo</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void NodeAfterInsert(LateBindingApi.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
+		public void NodeAfterInsert(NetOffice.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newNode, inUndoRedo);
 			Invoker.Method(this, "NodeAfterInsert", paramsArray);
@@ -66,12 +66,12 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="OldNode">LateBindingApi.OfficeApi.CustomXMLNode OldNode</param>
-		/// <param name="OldParentNode">LateBindingApi.OfficeApi.CustomXMLNode OldParentNode</param>
-		/// <param name="OldNextSibling">LateBindingApi.OfficeApi.CustomXMLNode OldNextSibling</param>
+		/// <param name="OldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
+		/// <param name="OldParentNode">NetOffice.OfficeApi.CustomXMLNode OldParentNode</param>
+		/// <param name="OldNextSibling">NetOffice.OfficeApi.CustomXMLNode OldNextSibling</param>
 		/// <param name="InUndoRedo">bool InUndoRedo</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void NodeAfterDelete(LateBindingApi.OfficeApi.CustomXMLNode oldNode, LateBindingApi.OfficeApi.CustomXMLNode oldParentNode, LateBindingApi.OfficeApi.CustomXMLNode oldNextSibling, bool inUndoRedo)
+		public void NodeAfterDelete(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode oldParentNode, NetOffice.OfficeApi.CustomXMLNode oldNextSibling, bool inUndoRedo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, oldParentNode, oldNextSibling, inUndoRedo);
 			Invoker.Method(this, "NodeAfterDelete", paramsArray);
@@ -80,11 +80,11 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="OldNode">LateBindingApi.OfficeApi.CustomXMLNode OldNode</param>
-		/// <param name="NewNode">LateBindingApi.OfficeApi.CustomXMLNode NewNode</param>
+		/// <param name="OldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
+		/// <param name="NewNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>
 		/// <param name="InUndoRedo">bool InUndoRedo</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void NodeAfterReplace(LateBindingApi.OfficeApi.CustomXMLNode oldNode, LateBindingApi.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
+		public void NodeAfterReplace(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, newNode, inUndoRedo);
 			Invoker.Method(this, "NodeAfterReplace", paramsArray);

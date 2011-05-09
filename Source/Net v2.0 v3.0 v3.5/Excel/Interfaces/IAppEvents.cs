@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IAppEvents SupportByLibrary XL09 XL10 XL11 XL12 XL14 
@@ -53,9 +53,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 NewWorkbook(LateBindingApi.ExcelApi.Workbook wb)
+		public Int32 NewWorkbook(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
 			object returnItem = Invoker.MethodReturn(this, "NewWorkbook", paramsArray);
@@ -66,9 +66,9 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		/// <param name="Target">LateBindingApi.ExcelApi.Range Target</param>
+		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 SheetSelectionChange(object sh, LateBindingApi.ExcelApi.Range target)
+		public Int32 SheetSelectionChange(object sh, NetOffice.ExcelApi.Range target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
 			object returnItem = Invoker.MethodReturn(this, "SheetSelectionChange", paramsArray);
@@ -79,10 +79,10 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		/// <param name="Target">LateBindingApi.ExcelApi.Range Target</param>
+		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 SheetBeforeDoubleClick(object sh, LateBindingApi.ExcelApi.Range target, ref bool cancel)
+		public Int32 SheetBeforeDoubleClick(object sh, NetOffice.ExcelApi.Range target, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target, cancel);
@@ -95,10 +95,10 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		/// <param name="Target">LateBindingApi.ExcelApi.Range Target</param>
+		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 SheetBeforeRightClick(object sh, LateBindingApi.ExcelApi.Range target, ref bool cancel)
+		public Int32 SheetBeforeRightClick(object sh, NetOffice.ExcelApi.Range target, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target, cancel);
@@ -147,9 +147,9 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		/// <param name="Target">LateBindingApi.ExcelApi.Range Target</param>
+		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 SheetChange(object sh, LateBindingApi.ExcelApi.Range target)
+		public Int32 SheetChange(object sh, NetOffice.ExcelApi.Range target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
 			object returnItem = Invoker.MethodReturn(this, "SheetChange", paramsArray);
@@ -159,9 +159,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WorkbookOpen(LateBindingApi.ExcelApi.Workbook wb)
+		public Int32 WorkbookOpen(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookOpen", paramsArray);
@@ -171,9 +171,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WorkbookActivate(LateBindingApi.ExcelApi.Workbook wb)
+		public Int32 WorkbookActivate(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookActivate", paramsArray);
@@ -183,9 +183,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WorkbookDeactivate(LateBindingApi.ExcelApi.Workbook wb)
+		public Int32 WorkbookDeactivate(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookDeactivate", paramsArray);
@@ -195,10 +195,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WorkbookBeforeClose(LateBindingApi.ExcelApi.Workbook wb, ref bool cancel)
+		public Int32 WorkbookBeforeClose(NetOffice.ExcelApi.Workbook wb, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, cancel);
@@ -210,11 +210,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="SaveAsUI">bool SaveAsUI</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WorkbookBeforeSave(LateBindingApi.ExcelApi.Workbook wb, bool saveAsUI, ref bool cancel)
+		public Int32 WorkbookBeforeSave(NetOffice.ExcelApi.Workbook wb, bool saveAsUI, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, saveAsUI, cancel);
@@ -226,10 +226,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WorkbookBeforePrint(LateBindingApi.ExcelApi.Workbook wb, ref bool cancel)
+		public Int32 WorkbookBeforePrint(NetOffice.ExcelApi.Workbook wb, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, cancel);
@@ -241,10 +241,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Sh">object Sh</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WorkbookNewSheet(LateBindingApi.ExcelApi.Workbook wb, object sh)
+		public Int32 WorkbookNewSheet(NetOffice.ExcelApi.Workbook wb, object sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, sh);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookNewSheet", paramsArray);
@@ -254,9 +254,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WorkbookAddinInstall(LateBindingApi.ExcelApi.Workbook wb)
+		public Int32 WorkbookAddinInstall(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookAddinInstall", paramsArray);
@@ -266,9 +266,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WorkbookAddinUninstall(LateBindingApi.ExcelApi.Workbook wb)
+		public Int32 WorkbookAddinUninstall(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookAddinUninstall", paramsArray);
@@ -278,10 +278,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
-		/// <param name="Wn">LateBindingApi.ExcelApi.Window Wn</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
+		/// <param name="Wn">NetOffice.ExcelApi.Window Wn</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WindowResize(LateBindingApi.ExcelApi.Workbook wb, LateBindingApi.ExcelApi.Window wn)
+		public Int32 WindowResize(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, wn);
 			object returnItem = Invoker.MethodReturn(this, "WindowResize", paramsArray);
@@ -291,10 +291,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
-		/// <param name="Wn">LateBindingApi.ExcelApi.Window Wn</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
+		/// <param name="Wn">NetOffice.ExcelApi.Window Wn</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WindowActivate(LateBindingApi.ExcelApi.Workbook wb, LateBindingApi.ExcelApi.Window wn)
+		public Int32 WindowActivate(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, wn);
 			object returnItem = Invoker.MethodReturn(this, "WindowActivate", paramsArray);
@@ -304,10 +304,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
-		/// <param name="Wn">LateBindingApi.ExcelApi.Window Wn</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
+		/// <param name="Wn">NetOffice.ExcelApi.Window Wn</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 WindowDeactivate(LateBindingApi.ExcelApi.Workbook wb, LateBindingApi.ExcelApi.Window wn)
+		public Int32 WindowDeactivate(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, wn);
 			object returnItem = Invoker.MethodReturn(this, "WindowDeactivate", paramsArray);
@@ -318,9 +318,9 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		/// <param name="Target">LateBindingApi.ExcelApi.Hyperlink Target</param>
+		/// <param name="Target">NetOffice.ExcelApi.Hyperlink Target</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public Int32 SheetFollowHyperlink(object sh, LateBindingApi.ExcelApi.Hyperlink target)
+		public Int32 SheetFollowHyperlink(object sh, NetOffice.ExcelApi.Hyperlink target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
 			object returnItem = Invoker.MethodReturn(this, "SheetFollowHyperlink", paramsArray);
@@ -331,9 +331,9 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		/// <param name="Target">LateBindingApi.ExcelApi.PivotTable Target</param>
+		/// <param name="Target">NetOffice.ExcelApi.PivotTable Target</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public Int32 SheetPivotTableUpdate(object sh, LateBindingApi.ExcelApi.PivotTable target)
+		public Int32 SheetPivotTableUpdate(object sh, NetOffice.ExcelApi.PivotTable target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
 			object returnItem = Invoker.MethodReturn(this, "SheetPivotTableUpdate", paramsArray);
@@ -343,10 +343,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
-		/// <param name="Target">LateBindingApi.ExcelApi.PivotTable Target</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
+		/// <param name="Target">NetOffice.ExcelApi.PivotTable Target</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public Int32 WorkbookPivotTableCloseConnection(LateBindingApi.ExcelApi.Workbook wb, LateBindingApi.ExcelApi.PivotTable target)
+		public Int32 WorkbookPivotTableCloseConnection(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, target);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookPivotTableCloseConnection", paramsArray);
@@ -356,10 +356,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
-		/// <param name="Target">LateBindingApi.ExcelApi.PivotTable Target</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
+		/// <param name="Target">NetOffice.ExcelApi.PivotTable Target</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public Int32 WorkbookPivotTableOpenConnection(LateBindingApi.ExcelApi.Workbook wb, LateBindingApi.ExcelApi.PivotTable target)
+		public Int32 WorkbookPivotTableOpenConnection(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, target);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookPivotTableOpenConnection", paramsArray);
@@ -369,10 +369,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
-		/// <param name="SyncEventType">LateBindingApi.OfficeApi.Enums.MsoSyncEventType SyncEventType</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
+		/// <param name="SyncEventType">NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public Int32 WorkbookSync(LateBindingApi.ExcelApi.Workbook wb, LateBindingApi.OfficeApi.Enums.MsoSyncEventType syncEventType)
+		public Int32 WorkbookSync(NetOffice.ExcelApi.Workbook wb, NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, syncEventType);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookSync", paramsArray);
@@ -382,13 +382,13 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
-		/// <param name="Map">LateBindingApi.ExcelApi.XmlMap Map</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
+		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="Url">string Url</param>
 		/// <param name="IsRefresh">bool IsRefresh</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public Int32 WorkbookBeforeXmlImport(LateBindingApi.ExcelApi.Workbook wb, LateBindingApi.ExcelApi.XmlMap map, string url, bool isRefresh, ref bool cancel)
+		public Int32 WorkbookBeforeXmlImport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, bool isRefresh, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, url, isRefresh, cancel);
@@ -400,12 +400,12 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
-		/// <param name="Map">LateBindingApi.ExcelApi.XmlMap Map</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
+		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="IsRefresh">bool IsRefresh</param>
-		/// <param name="Result">LateBindingApi.ExcelApi.Enums.XlXmlImportResult Result</param>
+		/// <param name="Result">NetOffice.ExcelApi.Enums.XlXmlImportResult Result</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public Int32 WorkbookAfterXmlImport(LateBindingApi.ExcelApi.Workbook wb, LateBindingApi.ExcelApi.XmlMap map, bool isRefresh, LateBindingApi.ExcelApi.Enums.XlXmlImportResult result)
+		public Int32 WorkbookAfterXmlImport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, bool isRefresh, NetOffice.ExcelApi.Enums.XlXmlImportResult result)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, isRefresh, result);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookAfterXmlImport", paramsArray);
@@ -415,12 +415,12 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
-		/// <param name="Map">LateBindingApi.ExcelApi.XmlMap Map</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
+		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="Url">string Url</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public Int32 WorkbookBeforeXmlExport(LateBindingApi.ExcelApi.Workbook wb, LateBindingApi.ExcelApi.XmlMap map, string url, ref bool cancel)
+		public Int32 WorkbookBeforeXmlExport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, url, cancel);
@@ -432,12 +432,12 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
-		/// <param name="Map">LateBindingApi.ExcelApi.XmlMap Map</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
+		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="Url">string Url</param>
-		/// <param name="Result">LateBindingApi.ExcelApi.Enums.XlXmlExportResult Result</param>
+		/// <param name="Result">NetOffice.ExcelApi.Enums.XlXmlExportResult Result</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public Int32 WorkbookAfterXmlExport(LateBindingApi.ExcelApi.Workbook wb, LateBindingApi.ExcelApi.XmlMap map, string url, LateBindingApi.ExcelApi.Enums.XlXmlExportResult result)
+		public Int32 WorkbookAfterXmlExport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, NetOffice.ExcelApi.Enums.XlXmlExportResult result)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, url, result);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookAfterXmlExport", paramsArray);
@@ -447,12 +447,12 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Description">string Description</param>
 		/// <param name="Sheet">string Sheet</param>
 		/// <param name="Success">bool Success</param>
 		[SupportByLibrary("XL12","XL14")]
-		public Int32 WorkbookRowsetComplete(LateBindingApi.ExcelApi.Workbook wb, string description, string sheet, bool success)
+		public Int32 WorkbookRowsetComplete(NetOffice.ExcelApi.Workbook wb, string description, string sheet, bool success)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, description, sheet, success);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookRowsetComplete", paramsArray);
@@ -474,10 +474,10 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		/// <param name="TargetPivotTable">LateBindingApi.ExcelApi.PivotTable TargetPivotTable</param>
-		/// <param name="TargetRange">LateBindingApi.ExcelApi.Range TargetRange</param>
+		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
+		/// <param name="TargetRange">NetOffice.ExcelApi.Range TargetRange</param>
 		[SupportByLibrary("XL14")]
-		public Int32 SheetPivotTableAfterValueChange(object sh, LateBindingApi.ExcelApi.PivotTable targetPivotTable, LateBindingApi.ExcelApi.Range targetRange)
+		public Int32 SheetPivotTableAfterValueChange(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, targetRange);
 			object returnItem = Invoker.MethodReturn(this, "SheetPivotTableAfterValueChange", paramsArray);
@@ -488,12 +488,12 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		/// <param name="TargetPivotTable">LateBindingApi.ExcelApi.PivotTable TargetPivotTable</param>
+		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="ValueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="ValueChangeEnd">Int32 ValueChangeEnd</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("XL14")]
-		public Int32 SheetPivotTableBeforeAllocateChanges(object sh, LateBindingApi.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel)
+		public Int32 SheetPivotTableBeforeAllocateChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
@@ -506,12 +506,12 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		/// <param name="TargetPivotTable">LateBindingApi.ExcelApi.PivotTable TargetPivotTable</param>
+		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="ValueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="ValueChangeEnd">Int32 ValueChangeEnd</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("XL14")]
-		public Int32 SheetPivotTableBeforeCommitChanges(object sh, LateBindingApi.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel)
+		public Int32 SheetPivotTableBeforeCommitChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
@@ -524,11 +524,11 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		/// <param name="TargetPivotTable">LateBindingApi.ExcelApi.PivotTable TargetPivotTable</param>
+		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="ValueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="ValueChangeEnd">Int32 ValueChangeEnd</param>
 		[SupportByLibrary("XL14")]
-		public Int32 SheetPivotTableBeforeDiscardChanges(object sh, LateBindingApi.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd)
+		public Int32 SheetPivotTableBeforeDiscardChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd);
 			object returnItem = Invoker.MethodReturn(this, "SheetPivotTableBeforeDiscardChanges", paramsArray);
@@ -538,9 +538,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL14 
 		/// </summary>
-		/// <param name="Pvw">LateBindingApi.ExcelApi.ProtectedViewWindow Pvw</param>
+		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByLibrary("XL14")]
-		public Int32 ProtectedViewWindowOpen(LateBindingApi.ExcelApi.ProtectedViewWindow pvw)
+		public Int32 ProtectedViewWindowOpen(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
 			object returnItem = Invoker.MethodReturn(this, "ProtectedViewWindowOpen", paramsArray);
@@ -550,10 +550,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL14 
 		/// </summary>
-		/// <param name="Pvw">LateBindingApi.ExcelApi.ProtectedViewWindow Pvw</param>
+		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("XL14")]
-		public Int32 ProtectedViewWindowBeforeEdit(LateBindingApi.ExcelApi.ProtectedViewWindow pvw, ref bool cancel)
+		public Int32 ProtectedViewWindowBeforeEdit(NetOffice.ExcelApi.ProtectedViewWindow pvw, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw, cancel);
@@ -565,11 +565,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL14 
 		/// </summary>
-		/// <param name="Pvw">LateBindingApi.ExcelApi.ProtectedViewWindow Pvw</param>
-		/// <param name="Reason">LateBindingApi.ExcelApi.Enums.XlProtectedViewCloseReason Reason</param>
+		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
+		/// <param name="Reason">NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason Reason</param>
 		/// <param name="Cancel">ref bool Cancel</param>
 		[SupportByLibrary("XL14")]
-		public Int32 ProtectedViewWindowBeforeClose(LateBindingApi.ExcelApi.ProtectedViewWindow pvw, LateBindingApi.ExcelApi.Enums.XlProtectedViewCloseReason reason, ref bool cancel)
+		public Int32 ProtectedViewWindowBeforeClose(NetOffice.ExcelApi.ProtectedViewWindow pvw, NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason reason, ref bool cancel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw, reason, cancel);
@@ -581,9 +581,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL14 
 		/// </summary>
-		/// <param name="Pvw">LateBindingApi.ExcelApi.ProtectedViewWindow Pvw</param>
+		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByLibrary("XL14")]
-		public Int32 ProtectedViewWindowResize(LateBindingApi.ExcelApi.ProtectedViewWindow pvw)
+		public Int32 ProtectedViewWindowResize(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
 			object returnItem = Invoker.MethodReturn(this, "ProtectedViewWindowResize", paramsArray);
@@ -593,9 +593,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL14 
 		/// </summary>
-		/// <param name="Pvw">LateBindingApi.ExcelApi.ProtectedViewWindow Pvw</param>
+		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByLibrary("XL14")]
-		public Int32 ProtectedViewWindowActivate(LateBindingApi.ExcelApi.ProtectedViewWindow pvw)
+		public Int32 ProtectedViewWindowActivate(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
 			object returnItem = Invoker.MethodReturn(this, "ProtectedViewWindowActivate", paramsArray);
@@ -605,9 +605,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL14 
 		/// </summary>
-		/// <param name="Pvw">LateBindingApi.ExcelApi.ProtectedViewWindow Pvw</param>
+		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByLibrary("XL14")]
-		public Int32 ProtectedViewWindowDeactivate(LateBindingApi.ExcelApi.ProtectedViewWindow pvw)
+		public Int32 ProtectedViewWindowDeactivate(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
 			object returnItem = Invoker.MethodReturn(this, "ProtectedViewWindowDeactivate", paramsArray);
@@ -617,10 +617,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Success">bool Success</param>
 		[SupportByLibrary("XL14")]
-		public Int32 WorkbookAfterSave(LateBindingApi.ExcelApi.Workbook wb, bool success)
+		public Int32 WorkbookAfterSave(NetOffice.ExcelApi.Workbook wb, bool success)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, success);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookAfterSave", paramsArray);
@@ -630,10 +630,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL14 
 		/// </summary>
-		/// <param name="Wb">LateBindingApi.ExcelApi.Workbook Wb</param>
-		/// <param name="Ch">LateBindingApi.ExcelApi.Chart Ch</param>
+		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
+		/// <param name="Ch">NetOffice.ExcelApi.Chart Ch</param>
 		[SupportByLibrary("XL14")]
-		public Int32 WorkbookNewChart(LateBindingApi.ExcelApi.Workbook wb, LateBindingApi.ExcelApi.Chart ch)
+		public Int32 WorkbookNewChart(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Chart ch)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, ch);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookNewChart", paramsArray);

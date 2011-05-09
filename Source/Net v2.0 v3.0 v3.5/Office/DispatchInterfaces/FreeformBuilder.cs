@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface FreeformBuilder SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -69,8 +69,8 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="SegmentType">LateBindingApi.OfficeApi.Enums.MsoSegmentType SegmentType</param>
-		/// <param name="EditingType">LateBindingApi.OfficeApi.Enums.MsoEditingType EditingType</param>
+		/// <param name="SegmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
+		/// <param name="EditingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
 		/// <param name="X1">Single X1</param>
 		/// <param name="Y1">Single Y1</param>
 		/// <param name="X2">Single X2</param>
@@ -78,7 +78,7 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="X3">Single X3</param>
 		/// <param name="Y3">Single Y3</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void AddNodes(LateBindingApi.OfficeApi.Enums.MsoSegmentType segmentType, LateBindingApi.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, Single x2, Single y2, Single x3, Single y3)
+		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, Single x2, Single y2, Single x3, Single y3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(segmentType, editingType, x1, y1, x2, y2, x3, y3);
 			Invoker.Method(this, "AddNodes", paramsArray);
@@ -88,11 +88,11 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Shape ConvertToShape()
+		public NetOffice.OfficeApi.Shape ConvertToShape()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ConvertToShape", paramsArray);
-			LateBindingApi.OfficeApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.Shape;
+			NetOffice.OfficeApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Shape;
 			return newObject;
 		}
 

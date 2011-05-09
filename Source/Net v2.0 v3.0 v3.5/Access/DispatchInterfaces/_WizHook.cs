@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _WizHook SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -70,13 +70,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.VBIDEApi._VBProject DbcVbProject
+		public NetOffice.VBIDEApi._VBProject DbcVbProject
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DbcVbProject", paramsArray);
-				LateBindingApi.VBIDEApi._VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi._VBProject;
+				NetOffice.VBIDEApi._VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi._VBProject;
 				return newObject;
 			}
 		}
@@ -383,13 +383,13 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="Workspace">LateBindingApi.DAOApi.Workspace Workspace</param>
-		/// <param name="Database">LateBindingApi.DAOApi.Database Database</param>
+		/// <param name="Workspace">NetOffice.DAOApi.Workspace Workspace</param>
+		/// <param name="Database">NetOffice.DAOApi.Database Database</param>
 		/// <param name="Table">string Table</param>
 		/// <param name="ReturnDebugInfo">bool ReturnDebugInfo</param>
 		/// <param name="Results">ref string Results</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public Int32 AnalyzeTable(LateBindingApi.DAOApi.Workspace workspace, LateBindingApi.DAOApi.Database database, string table, bool returnDebugInfo, ref string results)
+		public Int32 AnalyzeTable(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string table, bool returnDebugInfo, ref string results)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(workspace, database, table, returnDebugInfo, results);
@@ -401,12 +401,12 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="Workspace">LateBindingApi.DAOApi.Workspace Workspace</param>
-		/// <param name="Database">LateBindingApi.DAOApi.Database Database</param>
+		/// <param name="Workspace">NetOffice.DAOApi.Workspace Workspace</param>
+		/// <param name="Database">NetOffice.DAOApi.Database Database</param>
 		/// <param name="Query">string Query</param>
 		/// <param name="Results">ref string Results</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public Int32 AnalyzeQuery(LateBindingApi.DAOApi.Workspace workspace, LateBindingApi.DAOApi.Database database, string query, ref string results)
+		public Int32 AnalyzeQuery(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string query, ref string results)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(workspace, database, query, results);
@@ -602,10 +602,10 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="Name">ref string Name</param>
-		/// <param name="ObjType">LateBindingApi.AccessApi.Enums.AcObjectType ObjType</param>
+		/// <param name="ObjType">NetOffice.AccessApi.Enums.AcObjectType ObjType</param>
 		/// <param name="Attribs">ref Int32 Attribs</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public bool FirstDbcDataObject(ref string name, LateBindingApi.AccessApi.Enums.AcObjectType objType, ref Int32 attribs)
+		public bool FirstDbcDataObject(ref string name, NetOffice.AccessApi.Enums.AcObjectType objType, ref Int32 attribs)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, objType, attribs);
@@ -944,12 +944,12 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
-		/// <param name="pProperty">LateBindingApi.AccessApi._AccessProperty pProperty</param>
+		/// <param name="pProperty">NetOffice.AccessApi._AccessProperty pProperty</param>
 		/// <param name="OpenMode">Int32 OpenMode</param>
 		/// <param name="Extra">ref Int32 Extra</param>
 		/// <param name="Version">ref Int32 Version</param>
 		[SupportByLibrary("AC12","AC14")]
-		public Int32 OpenEmScript(LateBindingApi.AccessApi._AccessProperty pProperty, Int32 openMode, ref Int32 extra, ref Int32 version)
+		public Int32 OpenEmScript(NetOffice.AccessApi._AccessProperty pProperty, Int32 openMode, ref Int32 extra, ref Int32 version)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pProperty, openMode, extra, version);
@@ -974,10 +974,10 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC14 
 		/// </summary>
 		/// <param name="bstrObjectName">string bstrObjectName</param>
-		/// <param name="iobjtyp">LateBindingApi.AccessApi.Enums.AcObjectType iobjtyp</param>
+		/// <param name="iobjtyp">NetOffice.AccessApi.Enums.AcObjectType iobjtyp</param>
 		/// <param name="fTablesAsClient">bool fTablesAsClient</param>
 		[SupportByLibrary("AC14")]
-		public Int32 GetObjPubOption(string bstrObjectName, LateBindingApi.AccessApi.Enums.AcObjectType iobjtyp, bool fTablesAsClient)
+		public Int32 GetObjPubOption(string bstrObjectName, NetOffice.AccessApi.Enums.AcObjectType iobjtyp, bool fTablesAsClient)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrObjectName, iobjtyp, fTablesAsClient);
 			object returnItem = Invoker.MethodReturn(this, "GetObjPubOption", paramsArray);
@@ -1011,9 +1011,9 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC14 
 		/// </summary>
 		/// <param name="bstrObjectName">string bstrObjectName</param>
-		/// <param name="iobjtyp">LateBindingApi.AccessApi.Enums.AcObjectType iobjtyp</param>
+		/// <param name="iobjtyp">NetOffice.AccessApi.Enums.AcObjectType iobjtyp</param>
 		[SupportByLibrary("AC14")]
-		public bool FIsValidXasObjectName(string bstrObjectName, LateBindingApi.AccessApi.Enums.AcObjectType iobjtyp)
+		public bool FIsValidXasObjectName(string bstrObjectName, NetOffice.AccessApi.Enums.AcObjectType iobjtyp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrObjectName, iobjtyp);
 			object returnItem = Invoker.MethodReturn(this, "FIsValidXasObjectName", paramsArray);

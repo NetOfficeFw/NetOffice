@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface Fields20 SupportByLibrary ADO2.5 
@@ -80,11 +80,11 @@ namespace LateBindingApi.ADODBApi
 		/// SupportByLibrary ADO2.5 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="Type">LateBindingApi.ADODBApi.Enums.DataTypeEnum Type</param>
+		/// <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
 		/// <param name="DefinedSize">Int32 DefinedSize</param>
-		/// <param name="Attrib">LateBindingApi.ADODBApi.Enums.FieldAttributeEnum Attrib</param>
+		/// <param name="Attrib">NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib</param>
 		[SupportByLibrary("ADO2.5")]
-		public void _Append(string name, LateBindingApi.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, LateBindingApi.ADODBApi.Enums.FieldAttributeEnum attrib)
+		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib);
 			Invoker.Method(this, "_Append", paramsArray);

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface MailingLabel SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -114,13 +114,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdPaperTray DefaultLaserTray
+		public NetOffice.WordApi.Enums.WdPaperTray DefaultLaserTray
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultLaserTray", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdPaperTray)returnItem;
+				return (NetOffice.WordApi.Enums.WdPaperTray)returnItem;
 			}
 			set
 			{
@@ -133,13 +133,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.CustomLabels CustomLabels
+		public NetOffice.WordApi.CustomLabels CustomLabels
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CustomLabels", paramsArray);
-				LateBindingApi.WordApi.CustomLabels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.CustomLabels;
+				NetOffice.WordApi.CustomLabels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.CustomLabels;
 				return newObject;
 			}
 		}
@@ -195,12 +195,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
 		/// <param name="LaserTray">ref optional object LaserTray</param>
 		[SupportByLibrary("WD09")]
-		public LateBindingApi.WordApi.Document CreateNewDocument(ref object name, ref object address, ref object autoText, ref object extractAddress, ref object laserTray)
+		public NetOffice.WordApi.Document CreateNewDocument(ref object name, ref object address, ref object autoText, ref object extractAddress, ref object laserTray)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray);
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray, modifiers);
-			LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
 			name = (object)paramsArray[0];
 			address = (object)paramsArray[1];
 			autoText = (object)paramsArray[2];
@@ -220,12 +220,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="PrintEPostageLabel">ref optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">ref optional object Vertical</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Document CreateNewDocument(ref object name, ref object address, ref object autoText, ref object extractAddress, ref object laserTray, ref object printEPostageLabel, ref object vertical)
+		public NetOffice.WordApi.Document CreateNewDocument(ref object name, ref object address, ref object autoText, ref object extractAddress, ref object laserTray, ref object printEPostageLabel, ref object vertical)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical);
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray, modifiers);
-			LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
 			name = (object)paramsArray[0];
 			address = (object)paramsArray[1];
 			autoText = (object)paramsArray[2];
@@ -240,11 +240,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Document CreateNewDocument()
+		public NetOffice.WordApi.Document CreateNewDocument()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
-			LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
 			return newObject;
 		}
 
@@ -321,12 +321,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
 		/// <param name="LaserTray">ref optional object LaserTray</param>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Document CreateNewDocument2000(ref object name, ref object address, ref object autoText, ref object extractAddress, ref object laserTray)
+		public NetOffice.WordApi.Document CreateNewDocument2000(ref object name, ref object address, ref object autoText, ref object extractAddress, ref object laserTray)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray);
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray, modifiers);
-			LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
 			name = (object)paramsArray[0];
 			address = (object)paramsArray[1];
 			autoText = (object)paramsArray[2];
@@ -339,11 +339,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Document CreateNewDocument2000()
+		public NetOffice.WordApi.Document CreateNewDocument2000()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
-			LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
 			return newObject;
 		}
 
@@ -403,12 +403,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="PrintEPostageLabel">ref optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">ref optional object Vertical</param>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Document CreateNewDocumentByID(ref object labelID, ref object address, ref object autoText, ref object extractAddress, ref object laserTray, ref object printEPostageLabel, ref object vertical)
+		public NetOffice.WordApi.Document CreateNewDocumentByID(ref object labelID, ref object address, ref object autoText, ref object extractAddress, ref object laserTray, ref object printEPostageLabel, ref object vertical)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical);
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray, modifiers);
-			LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
 			labelID = (object)paramsArray[0];
 			address = (object)paramsArray[1];
 			autoText = (object)paramsArray[2];
@@ -423,11 +423,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Document CreateNewDocumentByID()
+		public NetOffice.WordApi.Document CreateNewDocumentByID()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
-			LateBindingApi.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
 			return newObject;
 		}
 

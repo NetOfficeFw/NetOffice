@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Research SupportByLibrary WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -119,11 +119,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="ServiceID">string ServiceID</param>
 		/// <param name="QueryString">string QueryString</param>
-		/// <param name="QueryLanguage">LateBindingApi.WordApi.Enums.WdLanguageID QueryLanguage</param>
+		/// <param name="QueryLanguage">NetOffice.WordApi.Enums.WdLanguageID QueryLanguage</param>
 		/// <param name="UseSelection">bool UseSelection</param>
 		/// <param name="LaunchQuery">bool LaunchQuery</param>
 		[SupportByLibrary("WD12","WD14")]
-		public object Query(string serviceID, string queryString, LateBindingApi.WordApi.Enums.WdLanguageID queryLanguage, bool useSelection, bool launchQuery)
+		public object Query(string serviceID, string queryString, NetOffice.WordApi.Enums.WdLanguageID queryLanguage, bool useSelection, bool launchQuery)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection, launchQuery);
 			object returnItem = Invoker.MethodReturn(this, "Query", paramsArray);
@@ -142,10 +142,10 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
-		/// <param name="LanguageFrom">LateBindingApi.WordApi.Enums.WdLanguageID LanguageFrom</param>
-		/// <param name="LanguageTo">LateBindingApi.WordApi.Enums.WdLanguageID LanguageTo</param>
+		/// <param name="LanguageFrom">NetOffice.WordApi.Enums.WdLanguageID LanguageFrom</param>
+		/// <param name="LanguageTo">NetOffice.WordApi.Enums.WdLanguageID LanguageTo</param>
 		[SupportByLibrary("WD12","WD14")]
-		public object SetLanguagePair(LateBindingApi.WordApi.Enums.WdLanguageID languageFrom, LateBindingApi.WordApi.Enums.WdLanguageID languageTo)
+		public object SetLanguagePair(NetOffice.WordApi.Enums.WdLanguageID languageFrom, NetOffice.WordApi.Enums.WdLanguageID languageTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(languageFrom, languageTo);
 			object returnItem = Invoker.MethodReturn(this, "SetLanguagePair", paramsArray);

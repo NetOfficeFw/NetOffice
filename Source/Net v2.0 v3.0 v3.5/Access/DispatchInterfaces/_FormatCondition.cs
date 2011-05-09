@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _FormatCondition SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -165,13 +165,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcFormatConditionType Type
+		public NetOffice.AccessApi.Enums.AcFormatConditionType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcFormatConditionType)returnItem;
+				return (NetOffice.AccessApi.Enums.AcFormatConditionType)returnItem;
 			}
 		}
 
@@ -179,13 +179,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcFormatConditionOperator Operator
+		public NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Operator", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcFormatConditionOperator)returnItem;
+				return (NetOffice.AccessApi.Enums.AcFormatConditionOperator)returnItem;
 			}
 		}
 
@@ -221,13 +221,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC14 
 		/// </summary>
 		[SupportByLibrary("AC14")]
-		public LateBindingApi.AccessApi.Enums.AcFormatBarLimits ShortestBarLimit
+		public NetOffice.AccessApi.Enums.AcFormatBarLimits ShortestBarLimit
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ShortestBarLimit", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcFormatBarLimits)returnItem;
+				return (NetOffice.AccessApi.Enums.AcFormatBarLimits)returnItem;
 			}
 			set
 			{
@@ -259,13 +259,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC14 
 		/// </summary>
 		[SupportByLibrary("AC14")]
-		public LateBindingApi.AccessApi.Enums.AcFormatBarLimits LongestBarLimit
+		public NetOffice.AccessApi.Enums.AcFormatBarLimits LongestBarLimit
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LongestBarLimit", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcFormatBarLimits)returnItem;
+				return (NetOffice.AccessApi.Enums.AcFormatBarLimits)returnItem;
 			}
 			set
 			{
@@ -319,12 +319,12 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.AccessApi.Enums.AcFormatConditionType Type</param>
-		/// <param name="Operator">LateBindingApi.AccessApi.Enums.AcFormatConditionOperator Operator</param>
+		/// <param name="Type">NetOffice.AccessApi.Enums.AcFormatConditionType Type</param>
+		/// <param name="Operator">NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator</param>
 		/// <param name="Expression1">optional object Expression1</param>
 		/// <param name="Expression2">optional object Expression2</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void Modify(LateBindingApi.AccessApi.Enums.AcFormatConditionType type, LateBindingApi.AccessApi.Enums.AcFormatConditionOperator _operator, object expression1, object expression2)
+		public void Modify(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator, object expression1, object expression2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, expression1, expression2);
 			Invoker.Method(this, "Modify", paramsArray);
@@ -333,10 +333,10 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.AccessApi.Enums.AcFormatConditionType Type</param>
-		/// <param name="Operator">LateBindingApi.AccessApi.Enums.AcFormatConditionOperator Operator</param>
+		/// <param name="Type">NetOffice.AccessApi.Enums.AcFormatConditionType Type</param>
+		/// <param name="Operator">NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void Modify(LateBindingApi.AccessApi.Enums.AcFormatConditionType type, LateBindingApi.AccessApi.Enums.AcFormatConditionOperator _operator)
+		public void Modify(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator);
 			Invoker.Method(this, "Modify", paramsArray);

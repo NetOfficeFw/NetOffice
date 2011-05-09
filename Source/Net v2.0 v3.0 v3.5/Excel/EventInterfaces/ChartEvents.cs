@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {	
 	#pragma warning disable
 	

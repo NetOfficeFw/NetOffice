@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IDummy SupportByLibrary XL09 XL10 XL11 XL12 XL14 
@@ -140,11 +140,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="SigProv">object SigProv</param>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.OfficeApi.Signature AddSignatureLine(object sigProv)
+		public NetOffice.OfficeApi.Signature AddSignatureLine(object sigProv)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sigProv);
 			object returnItem = Invoker.MethodReturn(this, "AddSignatureLine", paramsArray);
-			LateBindingApi.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.Signature;
+			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Signature;
 			return newObject;
 		}
 
@@ -153,11 +153,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="SigProv">object SigProv</param>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.OfficeApi.Signature AddNonVisibleSignature(object sigProv)
+		public NetOffice.OfficeApi.Signature AddNonVisibleSignature(object sigProv)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sigProv);
 			object returnItem = Invoker.MethodReturn(this, "AddNonVisibleSignature", paramsArray);
-			LateBindingApi.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.Signature;
+			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Signature;
 			return newObject;
 		}
 

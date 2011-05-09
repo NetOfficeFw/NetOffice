@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface FileSearch SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -127,13 +127,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFileType FileType
+		public NetOffice.OfficeApi.Enums.MsoFileType FileType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FileType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoFileType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoFileType)returnItem;
 			}
 			set
 			{
@@ -146,13 +146,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoLastModified LastModified
+		public NetOffice.OfficeApi.Enums.MsoLastModified LastModified
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LastModified", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoLastModified)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoLastModified)returnItem;
 			}
 			set
 			{
@@ -203,13 +203,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.FoundFiles FoundFiles
+		public NetOffice.OfficeApi.FoundFiles FoundFiles
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FoundFiles", paramsArray);
-				LateBindingApi.OfficeApi.FoundFiles newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.FoundFiles;
+				NetOffice.OfficeApi.FoundFiles newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.FoundFiles;
 				return newObject;
 			}
 		}
@@ -218,13 +218,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.PropertyTests PropertyTests
+		public NetOffice.OfficeApi.PropertyTests PropertyTests
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PropertyTests", paramsArray);
-				LateBindingApi.OfficeApi.PropertyTests newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.PropertyTests;
+				NetOffice.OfficeApi.PropertyTests newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PropertyTests;
 				return newObject;
 			}
 		}
@@ -233,13 +233,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SearchScopes SearchScopes
+		public NetOffice.OfficeApi.SearchScopes SearchScopes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SearchScopes", paramsArray);
-				LateBindingApi.OfficeApi.SearchScopes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SearchScopes;
+				NetOffice.OfficeApi.SearchScopes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SearchScopes;
 				return newObject;
 			}
 		}
@@ -248,13 +248,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.SearchFolders SearchFolders
+		public NetOffice.OfficeApi.SearchFolders SearchFolders
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SearchFolders", paramsArray);
-				LateBindingApi.OfficeApi.SearchFolders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.SearchFolders;
+				NetOffice.OfficeApi.SearchFolders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SearchFolders;
 				return newObject;
 			}
 		}
@@ -263,13 +263,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.FileTypes FileTypes
+		public NetOffice.OfficeApi.FileTypes FileTypes
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FileTypes", paramsArray);
-				LateBindingApi.OfficeApi.FileTypes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.FileTypes;
+				NetOffice.OfficeApi.FileTypes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.FileTypes;
 				return newObject;
 			}
 		}
@@ -281,11 +281,11 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="SortBy">LateBindingApi.OfficeApi.Enums.MsoSortBy SortBy</param>
-		/// <param name="SortOrder">LateBindingApi.OfficeApi.Enums.MsoSortOrder SortOrder</param>
+		/// <param name="SortBy">NetOffice.OfficeApi.Enums.MsoSortBy SortBy</param>
+		/// <param name="SortOrder">NetOffice.OfficeApi.Enums.MsoSortOrder SortOrder</param>
 		/// <param name="AlwaysAccurate">bool AlwaysAccurate</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public Int32 Execute(LateBindingApi.OfficeApi.Enums.MsoSortBy sortBy, LateBindingApi.OfficeApi.Enums.MsoSortOrder sortOrder, bool alwaysAccurate)
+		public Int32 Execute(NetOffice.OfficeApi.Enums.MsoSortBy sortBy, NetOffice.OfficeApi.Enums.MsoSortOrder sortOrder, bool alwaysAccurate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortBy, sortOrder, alwaysAccurate);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);

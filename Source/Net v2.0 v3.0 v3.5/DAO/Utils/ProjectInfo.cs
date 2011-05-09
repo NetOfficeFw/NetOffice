@@ -15,7 +15,7 @@ namespace DAOApi.Utils
     {
         #region Field
 
-        private string   _namespace     = "LateBindingApi.DAOApi";
+        private string   _namespace     = "NetOffice.DAOApi";
         private Guid     _componentGuid = new Guid("00025E01-0000-0000-C000-000000000046");
         private Assembly _assembly;
 

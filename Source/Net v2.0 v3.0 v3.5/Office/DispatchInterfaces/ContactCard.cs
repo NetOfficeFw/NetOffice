@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ContactCard SupportByLibrary OF14 
@@ -64,7 +64,7 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF14 
 		/// </summary>
-		/// <param name="CardStyle">LateBindingApi.OfficeApi.Enums.MsoContactCardStyle CardStyle</param>
+		/// <param name="CardStyle">NetOffice.OfficeApi.Enums.MsoContactCardStyle CardStyle</param>
 		/// <param name="RectangleLeft">Int32 RectangleLeft</param>
 		/// <param name="RectangleRight">Int32 RectangleRight</param>
 		/// <param name="RectangleTop">Int32 RectangleTop</param>
@@ -72,7 +72,7 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="HorizontalPosition">Int32 HorizontalPosition</param>
 		/// <param name="ShowWithDelay">bool ShowWithDelay</param>
 		[SupportByLibrary("OF14")]
-		public void Show(LateBindingApi.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, bool showWithDelay)
+		public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, bool showWithDelay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition, showWithDelay);
 			Invoker.Method(this, "Show", paramsArray);

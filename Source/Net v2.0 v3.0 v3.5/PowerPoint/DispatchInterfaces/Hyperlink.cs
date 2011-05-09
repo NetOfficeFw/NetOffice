@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Hyperlink SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoHyperlinkType Type
+		public NetOffice.OfficeApi.Enums.MsoHyperlinkType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoHyperlinkType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoHyperlinkType)returnItem;
 			}
 		}
 
@@ -190,13 +190,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState ShowandReturn
+		public NetOffice.OfficeApi.Enums.MsoTriState ShowandReturn
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ShowandReturn", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -233,10 +233,10 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		/// <param name="EditNow">LateBindingApi.OfficeApi.Enums.MsoTriState EditNow</param>
-		/// <param name="Overwrite">LateBindingApi.OfficeApi.Enums.MsoTriState Overwrite</param>
+		/// <param name="EditNow">NetOffice.OfficeApi.Enums.MsoTriState EditNow</param>
+		/// <param name="Overwrite">NetOffice.OfficeApi.Enums.MsoTriState Overwrite</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public void CreateNewDocument(string fileName, LateBindingApi.OfficeApi.Enums.MsoTriState editNow, LateBindingApi.OfficeApi.Enums.MsoTriState overwrite)
+		public void CreateNewDocument(string fileName, NetOffice.OfficeApi.Enums.MsoTriState editNow, NetOffice.OfficeApi.Enums.MsoTriState overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, editNow, overwrite);
 			Invoker.Method(this, "CreateNewDocument", paramsArray);

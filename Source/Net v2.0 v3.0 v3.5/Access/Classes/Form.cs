@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 
 	#region Delegates
@@ -43,11 +43,11 @@ namespace LateBindingApi.AccessApi
 	public delegate void Form_RecordExitEventHandler(ref Int16 Cancel);
 	public delegate void Form_BeginBatchEditEventHandler(ref Int16 Cancel);
 	public delegate void Form_UndoBatchEditEventHandler(ref Int16 Cancel);
-	public delegate void Form_BeforeBeginTransactionEventHandler(ref Int16 Cancel, ref LateBindingApi.ADODBApi.Connection Connection);
-	public delegate void Form_AfterBeginTransactionEventHandler(ref LateBindingApi.ADODBApi.Connection Connection);
-	public delegate void Form_BeforeCommitTransactionEventHandler(ref Int16 Cancel, ref LateBindingApi.ADODBApi.Connection Connection);
-	public delegate void Form_AfterCommitTransactionEventHandler(ref LateBindingApi.ADODBApi.Connection Connection);
-	public delegate void Form_RollbackTransactionEventHandler(ref LateBindingApi.ADODBApi.Connection Connection);
+	public delegate void Form_BeforeBeginTransactionEventHandler(ref Int16 Cancel, ref NetOffice.ADODBApi.Connection Connection);
+	public delegate void Form_AfterBeginTransactionEventHandler(ref NetOffice.ADODBApi.Connection Connection);
+	public delegate void Form_BeforeCommitTransactionEventHandler(ref Int16 Cancel, ref NetOffice.ADODBApi.Connection Connection);
+	public delegate void Form_AfterCommitTransactionEventHandler(ref NetOffice.ADODBApi.Connection Connection);
+	public delegate void Form_RollbackTransactionEventHandler(ref NetOffice.ADODBApi.Connection Connection);
 	public delegate void Form_OnConnectEventHandler();
 	public delegate void Form_OnDisconnectEventHandler();
 	public delegate void Form_PivotTableChangeEventHandler(Int32 Reason);

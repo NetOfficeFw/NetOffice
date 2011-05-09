@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Border SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -114,13 +114,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColorIndex ColorIndex
+		public NetOffice.WordApi.Enums.WdColorIndex ColorIndex
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColorIndex", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColorIndex)returnItem;
+				return (NetOffice.WordApi.Enums.WdColorIndex)returnItem;
 			}
 			set
 			{
@@ -147,13 +147,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdLineStyle LineStyle
+		public NetOffice.WordApi.Enums.WdLineStyle LineStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LineStyle", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdLineStyle)returnItem;
+				return (NetOffice.WordApi.Enums.WdLineStyle)returnItem;
 			}
 			set
 			{
@@ -166,13 +166,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdLineWidth LineWidth
+		public NetOffice.WordApi.Enums.WdLineWidth LineWidth
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LineWidth", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdLineWidth)returnItem;
+				return (NetOffice.WordApi.Enums.WdLineWidth)returnItem;
 			}
 			set
 			{
@@ -185,13 +185,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdPageBorderArt ArtStyle
+		public NetOffice.WordApi.Enums.WdPageBorderArt ArtStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ArtStyle", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdPageBorderArt)returnItem;
+				return (NetOffice.WordApi.Enums.WdPageBorderArt)returnItem;
 			}
 			set
 			{
@@ -223,13 +223,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdColor Color
+		public NetOffice.WordApi.Enums.WdColor Color
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Color", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdColor)returnItem;
+				return (NetOffice.WordApi.Enums.WdColor)returnItem;
 			}
 			set
 			{

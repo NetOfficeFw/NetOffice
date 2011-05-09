@@ -7,9 +7,9 @@ using System.Text;
 namespace LateBindingApi.Core
 {
     /// <summary>
-    /// Represents a managed COMProxy 
+    /// represents a managed COM proxy 
     /// </summary>
-    public class COMObject
+    public class COMObject : IDisposable 
     {
         #region Fields
 
@@ -89,8 +89,11 @@ namespace LateBindingApi.Core
 
         #endregion
 
-        #region IObject Properties
+        #region COMObject Properties
 
+        /// <summary>
+        /// returns the native wrapped proxy
+        /// </summary>
         public object UnderlyingObject
         {
             get
@@ -99,6 +102,9 @@ namespace LateBindingApi.Core
             }
         }
 
+        /// <summary>
+        /// returns class name of native wrapped proxy
+        /// </summary>
         public string UnderlyingTypeName
         {
             get
@@ -107,6 +113,20 @@ namespace LateBindingApi.Core
             }
         }
 
+        /// <summary>
+        /// returns instance is diposed means unusable
+        /// </summary>
+        public bool IsDisposed
+        {
+            get 
+            {
+                return _isDisposed;
+            }
+        }
+
+        /// <summary>
+        /// returns Type of native proxy
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Type InstanceType
         {
@@ -116,6 +136,9 @@ namespace LateBindingApi.Core
             }
         }
 
+        /// <summary>
+        /// returns parent proxy object
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject ParentObject
         {
@@ -126,21 +149,6 @@ namespace LateBindingApi.Core
             set
             {
                 _parentObject = value;
-            }
-        }
-
-        #endregion
-
-        #region COMObject Properties
-
-        /// <summary>
-        /// returns instance is diposed means unusable
-        /// </summary>
-        public bool IsDisposed
-        {
-            get 
-            {
-                return _isDisposed;
             }
         }
 
@@ -199,7 +207,9 @@ namespace LateBindingApi.Core
                     return false;
             }
         }
-       
+        /// <summary>
+        ///  child instance List
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         internal List<COMObject> ListChildObjects
         {
@@ -208,6 +218,7 @@ namespace LateBindingApi.Core
                 return _listChildObjects;
             }
         }
+
         #endregion
 
         #region COMObject Methods
@@ -264,28 +275,7 @@ namespace LateBindingApi.Core
             }
         }
 
-        public void DisposeChildInstances(bool disposeEventBinding)
-        {
-            // release all childs and clear list
-            foreach (COMObject itemObject in _listChildObjects)
-            {
-                itemObject.ParentObject = null;
-                itemObject.Dispose(disposeEventBinding);
-            }
-            _listChildObjects.Clear();
-        }
-
-        public void DisposeChildInstances()
-        {
-            // release all childs and clear list
-            foreach (COMObject itemObject in _listChildObjects)
-            {
-                itemObject.ParentObject = null;
-                itemObject.Dispose();
-            }
-            _listChildObjects.Clear();
-        }
-
+     
         #endregion
 
         #region IDisposable Members
@@ -335,6 +325,35 @@ namespace LateBindingApi.Core
         public void Dispose()
         {
             Dispose(true);
+        }
+
+        /// <summary>
+        /// dispose all child instances
+        /// </summary>
+        /// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
+        public void DisposeChildInstances(bool disposeEventBinding)
+        {
+            // release all childs and clear list
+            foreach (COMObject itemObject in _listChildObjects)
+            {
+                itemObject.ParentObject = null;
+                itemObject.Dispose(disposeEventBinding);
+            }
+            _listChildObjects.Clear();
+        }
+
+        /// <summary>
+        /// dispose all child instances
+        /// </summary>
+        public void DisposeChildInstances()
+        {
+            // release all childs and clear list
+            foreach (COMObject itemObject in _listChildObjects)
+            {
+                itemObject.ParentObject = null;
+                itemObject.Dispose();
+            }
+            _listChildObjects.Clear();
         }
 
         #endregion

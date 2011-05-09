@@ -3,15 +3,15 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void CustomXMLParts_PartAfterAddEventHandler(LateBindingApi.OfficeApi.CustomXMLPart NewPart);
-	public delegate void CustomXMLParts_PartBeforeDeleteEventHandler(LateBindingApi.OfficeApi.CustomXMLPart OldPart);
-	public delegate void CustomXMLParts_PartAfterLoadEventHandler(LateBindingApi.OfficeApi.CustomXMLPart Part);
+	public delegate void CustomXMLParts_PartAfterAddEventHandler(NetOffice.OfficeApi.CustomXMLPart NewPart);
+	public delegate void CustomXMLParts_PartBeforeDeleteEventHandler(NetOffice.OfficeApi.CustomXMLPart OldPart);
+	public delegate void CustomXMLParts_PartAfterLoadEventHandler(NetOffice.OfficeApi.CustomXMLPart Part);
 	#pragma warning restore
 
 	#endregion

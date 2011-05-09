@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IIconCriterion SupportByLibrary XL12 XL14 
@@ -64,13 +64,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlConditionValueTypes Type
+		public NetOffice.ExcelApi.Enums.XlConditionValueTypes Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlConditionValueTypes)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlConditionValueTypes)returnItem;
 			}
 			set
 			{
@@ -130,13 +130,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlIcon Icon
+		public NetOffice.ExcelApi.Enums.XlIcon Icon
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Icon", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlIcon)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlIcon)returnItem;
 			}
 			set
 			{

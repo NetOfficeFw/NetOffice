@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface OlkControl SupportByLibrary OL12 OL14 
@@ -184,13 +184,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlHorizontalLayout HorizontalLayout
+		public NetOffice.OutlookApi.Enums.OlHorizontalLayout HorizontalLayout
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HorizontalLayout", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlHorizontalLayout)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlHorizontalLayout)returnItem;
 			}
 			set
 			{
@@ -203,13 +203,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlVerticalLayout VerticalLayout
+		public NetOffice.OutlookApi.Enums.OlVerticalLayout VerticalLayout
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VerticalLayout", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlVerticalLayout)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlVerticalLayout)returnItem;
 			}
 			set
 			{

@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Stores_BeforeStoreRemoveEventHandler(LateBindingApi.OutlookApi._Store Store, ref bool Cancel);
-	public delegate void Stores_StoreAddEventHandler(LateBindingApi.OutlookApi._Store Store);
+	public delegate void Stores_BeforeStoreRemoveEventHandler(NetOffice.OutlookApi._Store Store, ref bool Cancel);
+	public delegate void Stores_StoreAddEventHandler(NetOffice.OutlookApi._Store Store);
 	#pragma warning restore
 
 	#endregion

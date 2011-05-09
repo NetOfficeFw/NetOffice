@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {	
 	#pragma warning disable
 	
@@ -61,7 +61,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi._Explorer newExplorer = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, explorer) as LateBindingApi.OutlookApi._Explorer;
+			NetOffice.OutlookApi._Explorer newExplorer = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, explorer) as NetOffice.OutlookApi._Explorer;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newExplorer;
 			foreach(Delegate delItem in recipients)

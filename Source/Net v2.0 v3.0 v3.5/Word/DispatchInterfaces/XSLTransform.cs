@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface XSLTransform SupportByLibrary WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -103,6 +103,11 @@ namespace LateBindingApi.WordApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary WD11 WD12 WD14 
+		/// </summary>
+		/// <param name="AllUsers">bool AllUsers</param>
+		[SupportByLibrary("WD11","WD12","WD14")]
 		public void set_Alias(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -121,6 +126,11 @@ namespace LateBindingApi.WordApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary WD11 WD12 WD14 
+		/// </summary>
+		/// <param name="AllUsers">bool AllUsers</param>
+		[SupportByLibrary("WD11","WD12","WD14")]
 		public void set_Location(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);

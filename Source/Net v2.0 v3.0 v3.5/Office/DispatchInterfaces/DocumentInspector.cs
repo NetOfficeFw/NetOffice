@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface DocumentInspector SupportByLibrary OF12 OF14 
@@ -97,10 +97,10 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Status">LateBindingApi.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
+		/// <param name="Status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
 		/// <param name="Results">ref string Results</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void Inspect(LateBindingApi.OfficeApi.Enums.MsoDocInspectorStatus status, ref string results)
+		public void Inspect(NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, ref string results)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(status, results);
@@ -111,10 +111,10 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Status">LateBindingApi.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
+		/// <param name="Status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
 		/// <param name="Results">ref string Results</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void Fix(LateBindingApi.OfficeApi.Enums.MsoDocInspectorStatus status, ref string results)
+		public void Fix(NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, ref string results)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(status, results);

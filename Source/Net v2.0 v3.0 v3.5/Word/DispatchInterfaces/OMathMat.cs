@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface OMathMat SupportByLibrary WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathMatRows Rows
+		public NetOffice.WordApi.OMathMatRows Rows
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Rows", paramsArray);
-				LateBindingApi.WordApi.OMathMatRows newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathMatRows;
+				NetOffice.WordApi.OMathMatRows newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathMatRows;
 				return newObject;
 			}
 		}
@@ -110,13 +110,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMathMatCols Cols
+		public NetOffice.WordApi.OMathMatCols Cols
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Cols", paramsArray);
-				LateBindingApi.WordApi.OMathMatCols newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMathMatCols;
+				NetOffice.WordApi.OMathMatCols newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMathMatCols;
 				return newObject;
 			}
 		}
@@ -127,11 +127,11 @@ namespace LateBindingApi.WordApi
 		/// <param name="Row">Int32 Row</param>
 		/// <param name="Col">Int32 Col</param>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.OMath get_Cell(Int32 row, Int32 col)
+		public NetOffice.WordApi.OMath get_Cell(Int32 row, Int32 col)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(row, col);
 			object returnItem = Invoker.PropertyGet(this, "Cell", paramsArray);
-			LateBindingApi.WordApi.OMath newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.OMath;
+			NetOffice.WordApi.OMath newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.OMath;
 			return newObject;
 		}
 
@@ -139,13 +139,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdOMathVertAlignType Align
+		public NetOffice.WordApi.Enums.WdOMathVertAlignType Align
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Align", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdOMathVertAlignType)returnItem;
+				return (NetOffice.WordApi.Enums.WdOMathVertAlignType)returnItem;
 			}
 			set
 			{
@@ -177,13 +177,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdOMathSpacingRule RowSpacingRule
+		public NetOffice.WordApi.Enums.WdOMathSpacingRule RowSpacingRule
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RowSpacingRule", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdOMathSpacingRule)returnItem;
+				return (NetOffice.WordApi.Enums.WdOMathSpacingRule)returnItem;
 			}
 			set
 			{
@@ -234,13 +234,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdOMathSpacingRule ColGapRule
+		public NetOffice.WordApi.Enums.WdOMathSpacingRule ColGapRule
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColGapRule", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdOMathSpacingRule)returnItem;
+				return (NetOffice.WordApi.Enums.WdOMathSpacingRule)returnItem;
 			}
 			set
 			{

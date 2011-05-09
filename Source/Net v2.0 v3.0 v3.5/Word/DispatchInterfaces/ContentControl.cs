@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface ContentControl SupportByLibrary WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -95,13 +95,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Range Range
+		public NetOffice.WordApi.Range Range
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-				LateBindingApi.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Range;
+				NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 				return newObject;
 			}
 		}
@@ -148,13 +148,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.XMLMapping XMLMapping
+		public NetOffice.WordApi.XMLMapping XMLMapping
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "XMLMapping", paramsArray);
-				LateBindingApi.WordApi.XMLMapping newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.XMLMapping;
+				NetOffice.WordApi.XMLMapping newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.XMLMapping;
 				return newObject;
 			}
 		}
@@ -163,13 +163,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdContentControlType Type
+		public NetOffice.WordApi.Enums.WdContentControlType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdContentControlType)returnItem;
+				return (NetOffice.WordApi.Enums.WdContentControlType)returnItem;
 			}
 			set
 			{
@@ -182,13 +182,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.ContentControlListEntries DropdownListEntries
+		public NetOffice.WordApi.ContentControlListEntries DropdownListEntries
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DropdownListEntries", paramsArray);
-				LateBindingApi.WordApi.ContentControlListEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ContentControlListEntries;
+				NetOffice.WordApi.ContentControlListEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ContentControlListEntries;
 				return newObject;
 			}
 		}
@@ -197,13 +197,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.BuildingBlock PlaceholderText
+		public NetOffice.WordApi.BuildingBlock PlaceholderText
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PlaceholderText", paramsArray);
-				LateBindingApi.WordApi.BuildingBlock newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.BuildingBlock;
+				NetOffice.WordApi.BuildingBlock newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.BuildingBlock;
 				return newObject;
 			}
 		}
@@ -269,13 +269,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.ContentControl ParentContentControl
+		public NetOffice.WordApi.ContentControl ParentContentControl
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ParentContentControl", paramsArray);
-				LateBindingApi.WordApi.ContentControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ContentControl;
+				NetOffice.WordApi.ContentControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ContentControl;
 				return newObject;
 			}
 		}
@@ -331,13 +331,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdContentControlDateStorageFormat DateStorageFormat
+		public NetOffice.WordApi.Enums.WdContentControlDateStorageFormat DateStorageFormat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DateStorageFormat", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdContentControlDateStorageFormat)returnItem;
+				return (NetOffice.WordApi.Enums.WdContentControlDateStorageFormat)returnItem;
 			}
 			set
 			{
@@ -350,13 +350,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdBuildingBlockTypes BuildingBlockType
+		public NetOffice.WordApi.Enums.WdBuildingBlockTypes BuildingBlockType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BuildingBlockType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdBuildingBlockTypes)returnItem;
+				return (NetOffice.WordApi.Enums.WdBuildingBlockTypes)returnItem;
 			}
 			set
 			{
@@ -388,13 +388,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdLanguageID DateDisplayLocale
+		public NetOffice.WordApi.Enums.WdLanguageID DateDisplayLocale
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DateDisplayLocale", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdLanguageID)returnItem;
+				return (NetOffice.WordApi.Enums.WdLanguageID)returnItem;
 			}
 			set
 			{
@@ -435,13 +435,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdCalendarType DateCalendarType
+		public NetOffice.WordApi.Enums.WdCalendarType DateCalendarType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DateCalendarType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdCalendarType)returnItem;
+				return (NetOffice.WordApi.Enums.WdCalendarType)returnItem;
 			}
 			set
 			{
@@ -526,11 +526,11 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD12 WD14 
 		/// </summary>
-		/// <param name="BuildingBlock">LateBindingApi.WordApi.BuildingBlock BuildingBlock</param>
-		/// <param name="Range">LateBindingApi.WordApi.Range Range</param>
+		/// <param name="BuildingBlock">NetOffice.WordApi.BuildingBlock BuildingBlock</param>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Text">string Text</param>
 		[SupportByLibrary("WD12","WD14")]
-		public void SetPlaceholderText(LateBindingApi.WordApi.BuildingBlock buildingBlock, LateBindingApi.WordApi.Range range, string text)
+		public void SetPlaceholderText(NetOffice.WordApi.BuildingBlock buildingBlock, NetOffice.WordApi.Range range, string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(buildingBlock, range, text);
 			Invoker.Method(this, "SetPlaceholderText", paramsArray);

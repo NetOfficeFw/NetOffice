@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface SeriesCollection SupportByLibrary WD14 
@@ -114,16 +114,16 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		/// <param name="Source">object Source</param>
-		/// <param name="Rowcol">LateBindingApi.WordApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="Rowcol">NetOffice.WordApi.Enums.XlRowCol Rowcol</param>
 		/// <param name="SeriesLabels">optional object SeriesLabels</param>
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Series Add(object source, LateBindingApi.WordApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
+		public NetOffice.WordApi.Series Add(object source, NetOffice.WordApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Series;
+			NetOffice.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Series;
 			return newObject;
 		}
 
@@ -131,13 +131,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		/// <param name="Source">object Source</param>
-		/// <param name="Rowcol">LateBindingApi.WordApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="Rowcol">NetOffice.WordApi.Enums.XlRowCol Rowcol</param>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Series Add(object source, LateBindingApi.WordApi.Enums.XlRowCol rowcol)
+		public NetOffice.WordApi.Series Add(object source, NetOffice.WordApi.Enums.XlRowCol rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Series;
+			NetOffice.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Series;
 			return newObject;
 		}
 
@@ -190,11 +190,11 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Series Item(object index)
+		public NetOffice.WordApi.Series Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Series;
+			NetOffice.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Series;
 			return newObject;
 		}
 
@@ -202,11 +202,11 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Series NewSeries()
+		public NetOffice.WordApi.Series NewSeries()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NewSeries", paramsArray);
-			LateBindingApi.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Series;
+			NetOffice.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Series;
 			return newObject;
 		}
 
@@ -216,13 +216,13 @@ namespace LateBindingApi.WordApi
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("WD14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.WordApi.Series this[object index]
+		public NetOffice.WordApi.Series this[object index]
 		{
 			get
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				LateBindingApi.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.Series;
+				NetOffice.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Series;
 				return newObject;
 			}
 		}

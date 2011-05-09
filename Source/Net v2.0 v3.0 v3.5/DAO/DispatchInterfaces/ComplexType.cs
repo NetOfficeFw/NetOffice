@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.DAOApi
+namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface ComplexType SupportByLibrary DAO12 
@@ -51,13 +51,13 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO12")]
-		public LateBindingApi.DAOApi.Fields Fields
+		public NetOffice.DAOApi.Fields Fields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				LateBindingApi.DAOApi.Fields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.Fields;
+				NetOffice.DAOApi.Fields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Fields;
 				return newObject;
 			}
 		}

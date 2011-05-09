@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface SchemaRelatedFields SupportByLibrary XWC1.0 
@@ -67,11 +67,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRelatedField get_Item(object index)
+		public NetOffice.OWC10Api.SchemaRelatedField get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.SchemaRelatedField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaRelatedField;
+			NetOffice.OWC10Api.SchemaRelatedField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaRelatedField;
 			return newObject;
 		}
 
@@ -85,11 +85,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="ManySchemaField">string ManySchemaField</param>
 		/// <param name="OneSchemaField">string OneSchemaField</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRelatedField Add(string manySchemaField, string oneSchemaField)
+		public NetOffice.OWC10Api.SchemaRelatedField Add(string manySchemaField, string oneSchemaField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(manySchemaField, oneSchemaField);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.SchemaRelatedField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.SchemaRelatedField;
+			NetOffice.OWC10Api.SchemaRelatedField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaRelatedField;
 			return newObject;
 		}
 

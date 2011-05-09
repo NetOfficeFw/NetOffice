@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IStatusBar SupportByLibrary WCC6.0 
@@ -70,13 +70,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.SbarStyleConstants Style
+		public NetOffice.MSComctlLibApi.Enums.SbarStyleConstants Style
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.SbarStyleConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.SbarStyleConstants)returnItem;
 			}
 			set
 			{
@@ -89,13 +89,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.IPanels Panels
+		public NetOffice.MSComctlLibApi.IPanels Panels
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Panels", paramsArray);
-				LateBindingApi.MSComctlLibApi.IPanels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.IPanels;
+				NetOffice.MSComctlLibApi.IPanels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IPanels;
 				return newObject;
 			}
 			set
@@ -109,13 +109,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.MousePointerConstants MousePointer
+		public NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MousePointer", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.MousePointerConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.MousePointerConstants)returnItem;
 			}
 			set
 			{
@@ -186,13 +186,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
+		public NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OLEDropMode", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.OLEDropConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.OLEDropConstants)returnItem;
 			}
 			set
 			{

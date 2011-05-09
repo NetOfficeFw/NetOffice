@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _References SupportByLibrary VBE5.3 VBE12 
@@ -52,13 +52,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBProject Parent
+		public NetOffice.VBIDEApi.VBProject Parent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				LateBindingApi.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.VBProject;
+				NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBProject;
 				return newObject;
 			}
 		}
@@ -67,13 +67,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBE VBE
+		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				LateBindingApi.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -101,11 +101,11 @@ namespace LateBindingApi.VBIDEApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.Reference Item(object index)
+		public NetOffice.VBIDEApi.Reference Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.VBIDEApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.VBIDEApi.Reference;
+			NetOffice.VBIDEApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.Reference;
 			return newObject;
 		}
 
@@ -116,11 +116,11 @@ namespace LateBindingApi.VBIDEApi
 		/// <param name="Major">Int32 Major</param>
 		/// <param name="Minor">Int32 Minor</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.Reference AddFromGuid(string guid, Int32 major, Int32 minor)
+		public NetOffice.VBIDEApi.Reference AddFromGuid(string guid, Int32 major, Int32 minor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(guid, major, minor);
 			object returnItem = Invoker.MethodReturn(this, "AddFromGuid", paramsArray);
-			LateBindingApi.VBIDEApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.VBIDEApi.Reference;
+			NetOffice.VBIDEApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.Reference;
 			return newObject;
 		}
 
@@ -129,20 +129,20 @@ namespace LateBindingApi.VBIDEApi
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.Reference AddFromFile(string fileName)
+		public NetOffice.VBIDEApi.Reference AddFromFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "AddFromFile", paramsArray);
-			LateBindingApi.VBIDEApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.VBIDEApi.Reference;
+			NetOffice.VBIDEApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.Reference;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="Reference">LateBindingApi.VBIDEApi.Reference Reference</param>
+		/// <param name="Reference">NetOffice.VBIDEApi.Reference Reference</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void Remove(LateBindingApi.VBIDEApi.Reference reference)
+		public void Remove(NetOffice.VBIDEApi.Reference reference)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reference);
 			Invoker.Method(this, "Remove", paramsArray);

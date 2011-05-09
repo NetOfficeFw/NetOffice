@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void NavigationGroups_SelectedChangeEventHandler(LateBindingApi.OutlookApi.NavigationFolder NavigationFolder);
-	public delegate void NavigationGroups_NavigationFolderAddEventHandler(LateBindingApi.OutlookApi.NavigationFolder NavigationFolder);
+	public delegate void NavigationGroups_SelectedChangeEventHandler(NetOffice.OutlookApi.NavigationFolder NavigationFolder);
+	public delegate void NavigationGroups_NavigationFolderAddEventHandler(NetOffice.OutlookApi.NavigationFolder NavigationFolder);
 	public delegate void NavigationGroups_NavigationFolderRemoveEventHandler();
 	#pragma warning restore
 

@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
@@ -12,22 +12,22 @@ namespace LateBindingApi.OutlookApi
 	public delegate void Application_ItemSendEventHandler(COMObject Item, ref bool Cancel);
 	public delegate void Application_NewMailEventHandler();
 	public delegate void Application_ReminderEventHandler(COMObject Item);
-	public delegate void Application_OptionsPagesAddEventHandler(LateBindingApi.OutlookApi.PropertyPages Pages);
+	public delegate void Application_OptionsPagesAddEventHandler(NetOffice.OutlookApi.PropertyPages Pages);
 	public delegate void Application_StartupEventHandler();
 	public delegate void Application_QuitEventHandler();
-	public delegate void Application_AdvancedSearchCompleteEventHandler(LateBindingApi.OutlookApi.Search SearchObject);
-	public delegate void Application_AdvancedSearchStoppedEventHandler(LateBindingApi.OutlookApi.Search SearchObject);
+	public delegate void Application_AdvancedSearchCompleteEventHandler(NetOffice.OutlookApi.Search SearchObject);
+	public delegate void Application_AdvancedSearchStoppedEventHandler(NetOffice.OutlookApi.Search SearchObject);
 	public delegate void Application_MAPILogonCompleteEventHandler();
 	public delegate void Application_NewMailExEventHandler(string EntryIDCollection);
-	public delegate void Application_AttachmentContextMenuDisplayEventHandler(LateBindingApi.OfficeApi.CommandBar CommandBar, LateBindingApi.OutlookApi.AttachmentSelection Attachments);
-	public delegate void Application_FolderContextMenuDisplayEventHandler(LateBindingApi.OfficeApi.CommandBar CommandBar, LateBindingApi.OutlookApi.Folder Folder);
-	public delegate void Application_StoreContextMenuDisplayEventHandler(LateBindingApi.OfficeApi.CommandBar CommandBar, LateBindingApi.OutlookApi.Store Store);
-	public delegate void Application_ShortcutContextMenuDisplayEventHandler(LateBindingApi.OfficeApi.CommandBar CommandBar, LateBindingApi.OutlookApi.OutlookBarShortcut Shortcut);
-	public delegate void Application_ViewContextMenuDisplayEventHandler(LateBindingApi.OfficeApi.CommandBar CommandBar, LateBindingApi.OutlookApi.View View);
-	public delegate void Application_ItemContextMenuDisplayEventHandler(LateBindingApi.OfficeApi.CommandBar CommandBar, LateBindingApi.OutlookApi.Selection Selection);
-	public delegate void Application_ContextMenuCloseEventHandler(LateBindingApi.OutlookApi.Enums.OlContextMenu ContextMenu);
+	public delegate void Application_AttachmentContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.AttachmentSelection Attachments);
+	public delegate void Application_FolderContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.Folder Folder);
+	public delegate void Application_StoreContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.Store Store);
+	public delegate void Application_ShortcutContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.OutlookBarShortcut Shortcut);
+	public delegate void Application_ViewContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.View View);
+	public delegate void Application_ItemContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.Selection Selection);
+	public delegate void Application_ContextMenuCloseEventHandler(NetOffice.OutlookApi.Enums.OlContextMenu ContextMenu);
 	public delegate void Application_ItemLoadEventHandler(COMObject Item);
-	public delegate void Application_BeforeFolderSharingDialogEventHandler(LateBindingApi.OutlookApi.MAPIFolder FolderToShare, ref bool Cancel);
+	public delegate void Application_BeforeFolderSharingDialogEventHandler(NetOffice.OutlookApi.MAPIFolder FolderToShare, ref bool Cancel);
 	#pragma warning restore
 
 	#endregion

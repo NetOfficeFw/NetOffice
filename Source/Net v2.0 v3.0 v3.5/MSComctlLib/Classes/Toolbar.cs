@@ -3,27 +3,27 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Toolbar_ButtonClickEventHandler(LateBindingApi.MSComctlLibApi.Button Button);
+	public delegate void Toolbar_ButtonClickEventHandler(NetOffice.MSComctlLibApi.Button Button);
 	public delegate void Toolbar_ChangeEventHandler();
 	public delegate void Toolbar_ClickEventHandler();
 	public delegate void Toolbar_MouseDownEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
 	public delegate void Toolbar_MouseMoveEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
 	public delegate void Toolbar_MouseUpEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
 	public delegate void Toolbar_DblClickEventHandler();
-	public delegate void Toolbar_OLEStartDragEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
+	public delegate void Toolbar_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
 	public delegate void Toolbar_OLEGiveFeedbackEventHandler(ref Int32 Effect, ref bool DefaultCursors);
-	public delegate void Toolbar_OLESetDataEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
+	public delegate void Toolbar_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
 	public delegate void Toolbar_OLECompleteDragEventHandler(ref Int32 Effect);
-	public delegate void Toolbar_OLEDragOverEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
-	public delegate void Toolbar_OLEDragDropEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
-	public delegate void Toolbar_ButtonMenuClickEventHandler(LateBindingApi.MSComctlLibApi.ButtonMenu ButtonMenu);
-	public delegate void Toolbar_ButtonDropDownEventHandler(LateBindingApi.MSComctlLibApi.Button Button);
+	public delegate void Toolbar_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
+	public delegate void Toolbar_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
+	public delegate void Toolbar_ButtonMenuClickEventHandler(NetOffice.MSComctlLibApi.ButtonMenu ButtonMenu);
+	public delegate void Toolbar_ButtonDropDownEventHandler(NetOffice.MSComctlLibApi.Button Button);
 	#pragma warning restore
 
 	#endregion

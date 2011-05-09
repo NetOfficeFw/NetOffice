@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface ImportExportSpecifications SupportByLibrary AC12 AC14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.Application Application
+		public NetOffice.AccessApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}
@@ -97,11 +97,11 @@ namespace LateBindingApi.AccessApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.ImportExportSpecification get_Item(object index)
+		public NetOffice.AccessApi.ImportExportSpecification get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.AccessApi.ImportExportSpecification newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.ImportExportSpecification;
+			NetOffice.AccessApi.ImportExportSpecification newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.ImportExportSpecification;
 			return newObject;
 		}
 
@@ -115,11 +115,11 @@ namespace LateBindingApi.AccessApi
 		/// <param name="Name">string Name</param>
 		/// <param name="SpecificationDefinition">string SpecificationDefinition</param>
 		[SupportByLibrary("AC12","AC14")]
-		public LateBindingApi.AccessApi.ImportExportSpecification Add(string name, string specificationDefinition)
+		public NetOffice.AccessApi.ImportExportSpecification Add(string name, string specificationDefinition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, specificationDefinition);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.AccessApi.ImportExportSpecification newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.AccessApi.ImportExportSpecification;
+			NetOffice.AccessApi.ImportExportSpecification newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi.ImportExportSpecification;
 			return newObject;
 		}
 

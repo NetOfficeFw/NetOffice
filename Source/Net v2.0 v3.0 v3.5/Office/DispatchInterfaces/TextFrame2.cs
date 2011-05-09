@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface TextFrame2 SupportByLibrary OF12 OF14 
@@ -142,13 +142,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTextOrientation Orientation
+		public NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTextOrientation)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTextOrientation)returnItem;
 			}
 			set
 			{
@@ -161,13 +161,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoHorizontalAnchor HorizontalAnchor
+		public NetOffice.OfficeApi.Enums.MsoHorizontalAnchor HorizontalAnchor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HorizontalAnchor", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoHorizontalAnchor)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoHorizontalAnchor)returnItem;
 			}
 			set
 			{
@@ -180,13 +180,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoVerticalAnchor VerticalAnchor
+		public NetOffice.OfficeApi.Enums.MsoVerticalAnchor VerticalAnchor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VerticalAnchor", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoVerticalAnchor)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoVerticalAnchor)returnItem;
 			}
 			set
 			{
@@ -199,13 +199,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPathFormat PathFormat
+		public NetOffice.OfficeApi.Enums.MsoPathFormat PathFormat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PathFormat", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPathFormat)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPathFormat)returnItem;
 			}
 			set
 			{
@@ -218,13 +218,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoWarpFormat WarpFormat
+		public NetOffice.OfficeApi.Enums.MsoWarpFormat WarpFormat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WarpFormat", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoWarpFormat)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoWarpFormat)returnItem;
 			}
 			set
 			{
@@ -237,13 +237,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetTextEffect WordArtformat
+		public NetOffice.OfficeApi.Enums.MsoPresetTextEffect WordArtformat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WordArtformat", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetTextEffect)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetTextEffect)returnItem;
 			}
 			set
 			{
@@ -256,13 +256,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState WordWrap
+		public NetOffice.OfficeApi.Enums.MsoTriState WordWrap
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WordWrap", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -275,13 +275,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoAutoSize AutoSize
+		public NetOffice.OfficeApi.Enums.MsoAutoSize AutoSize
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AutoSize", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoAutoSize)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoAutoSize)returnItem;
 			}
 			set
 			{
@@ -294,13 +294,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.ThreeDFormat ThreeD
+		public NetOffice.OfficeApi.ThreeDFormat ThreeD
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ThreeD", paramsArray);
-				LateBindingApi.OfficeApi.ThreeDFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.ThreeDFormat;
+				NetOffice.OfficeApi.ThreeDFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ThreeDFormat;
 				return newObject;
 			}
 		}
@@ -309,13 +309,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState HasText
+		public NetOffice.OfficeApi.Enums.MsoTriState HasText
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HasText", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 		}
 
@@ -323,13 +323,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextRange2 TextRange
+		public NetOffice.OfficeApi.TextRange2 TextRange
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextRange", paramsArray);
-				LateBindingApi.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.TextRange2;
+				NetOffice.OfficeApi.TextRange2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextRange2;
 				return newObject;
 			}
 		}
@@ -338,13 +338,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TextColumn2 Column
+		public NetOffice.OfficeApi.TextColumn2 Column
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Column", paramsArray);
-				LateBindingApi.OfficeApi.TextColumn2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.TextColumn2;
+				NetOffice.OfficeApi.TextColumn2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextColumn2;
 				return newObject;
 			}
 		}
@@ -353,13 +353,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Ruler2 Ruler
+		public NetOffice.OfficeApi.Ruler2 Ruler
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Ruler", paramsArray);
-				LateBindingApi.OfficeApi.Ruler2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.Ruler2;
+				NetOffice.OfficeApi.Ruler2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.Ruler2;
 				return newObject;
 			}
 		}
@@ -368,13 +368,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState NoTextRotation
+		public NetOffice.OfficeApi.Enums.MsoTriState NoTextRotation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NoTextRotation", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{

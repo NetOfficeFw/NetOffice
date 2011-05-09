@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface UserAccessList SupportByLibrary XL10 XL11 XL12 XL14 
@@ -67,11 +67,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.UserAccess get_Item(object index)
+		public NetOffice.ExcelApi.UserAccess get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.ExcelApi.UserAccess newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.UserAccess;
+			NetOffice.ExcelApi.UserAccess newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.UserAccess;
 			return newObject;
 		}
 
@@ -81,13 +81,13 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.ExcelApi.UserAccess this[object index]
+		public NetOffice.ExcelApi.UserAccess this[object index]
 		{
 			get
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			LateBindingApi.ExcelApi.UserAccess newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.UserAccess;
+			NetOffice.ExcelApi.UserAccess newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.UserAccess;
 			return newObject;
 			}
 		}
@@ -102,11 +102,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Name">string Name</param>
 		/// <param name="AllowEdit">bool AllowEdit</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.UserAccess Add(string name, bool allowEdit)
+		public NetOffice.ExcelApi.UserAccess Add(string name, bool allowEdit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, allowEdit);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.UserAccess newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.UserAccess;
+			NetOffice.ExcelApi.UserAccess newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.UserAccess;
 			return newObject;
 		}
 

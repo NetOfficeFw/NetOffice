@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ChInterior SupportByLibrary XWC1.0 
@@ -130,13 +130,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartPatternTypeEnum Pattern
+		public NetOffice.OWC10Api.Enums.ChartPatternTypeEnum Pattern
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Pattern", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartPatternTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartPatternTypeEnum)returnItem;
 			}
 		}
 
@@ -144,13 +144,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartFillTypeEnum FillType
+		public NetOffice.OWC10Api.Enums.ChartFillTypeEnum FillType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FillType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartFillTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartFillTypeEnum)returnItem;
 			}
 		}
 
@@ -158,13 +158,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartPresetGradientTypeEnum PresetGradientType
+		public NetOffice.OWC10Api.Enums.ChartPresetGradientTypeEnum PresetGradientType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetGradientType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartPresetGradientTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartPresetGradientTypeEnum)returnItem;
 			}
 		}
 
@@ -172,13 +172,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle
+		public NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GradientStyle", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartGradientStyleEnum)returnItem;
 			}
 		}
 
@@ -186,13 +186,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant
+		public NetOffice.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GradientVariant", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartGradientVariantEnum)returnItem;
 			}
 		}
 
@@ -214,13 +214,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartPresetTextureEnum PresetTexture
+		public NetOffice.OWC10Api.Enums.ChartPresetTextureEnum PresetTexture
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetTexture", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartPresetTextureEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartPresetTextureEnum)returnItem;
 			}
 		}
 
@@ -242,13 +242,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartTextureFormatEnum TextureFormat
+		public NetOffice.OWC10Api.Enums.ChartTextureFormatEnum TextureFormat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextureFormat", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartTextureFormatEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartTextureFormatEnum)returnItem;
 			}
 		}
 
@@ -270,13 +270,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ChartTexturePlacementEnum TexturePlacement
+		public NetOffice.OWC10Api.Enums.ChartTexturePlacementEnum TexturePlacement
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TexturePlacement", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ChartTexturePlacementEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.ChartTexturePlacementEnum)returnItem;
 			}
 		}
 
@@ -287,11 +287,11 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="patternType">LateBindingApi.OWC10Api.Enums.ChartPatternTypeEnum patternType</param>
+		/// <param name="patternType">NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType</param>
 		/// <param name="Color">optional object Color</param>
 		/// <param name="BackColor">optional object BackColor</param>
 		[SupportByLibrary("XWC1.0")]
-		public void SetPatterned(LateBindingApi.OWC10Api.Enums.ChartPatternTypeEnum patternType, object color, object backColor)
+		public void SetPatterned(NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType, object color, object backColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(patternType, color, backColor);
 			Invoker.Method(this, "SetPatterned", paramsArray);
@@ -300,9 +300,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="patternType">LateBindingApi.OWC10Api.Enums.ChartPatternTypeEnum patternType</param>
+		/// <param name="patternType">NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType</param>
 		[SupportByLibrary("XWC1.0")]
-		public void SetPatterned(LateBindingApi.OWC10Api.Enums.ChartPatternTypeEnum patternType)
+		public void SetPatterned(NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(patternType);
 			Invoker.Method(this, "SetPatterned", paramsArray);
@@ -311,11 +311,11 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="GradientStyle">LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
-		/// <param name="gradientVarient">LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum gradientVarient</param>
-		/// <param name="gradientPreset">LateBindingApi.OWC10Api.Enums.ChartPresetGradientTypeEnum gradientPreset</param>
+		/// <param name="GradientStyle">NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
+		/// <param name="gradientVarient">NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVarient</param>
+		/// <param name="gradientPreset">NetOffice.OWC10Api.Enums.ChartPresetGradientTypeEnum gradientPreset</param>
 		[SupportByLibrary("XWC1.0")]
-		public void SetPresetGradient(LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum gradientVarient, LateBindingApi.OWC10Api.Enums.ChartPresetGradientTypeEnum gradientPreset)
+		public void SetPresetGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVarient, NetOffice.OWC10Api.Enums.ChartPresetGradientTypeEnum gradientPreset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(gradientStyle, gradientVarient, gradientPreset);
 			Invoker.Method(this, "SetPresetGradient", paramsArray);
@@ -325,11 +325,11 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="textureFile">object textureFile</param>
-		/// <param name="TextureFormat">LateBindingApi.OWC10Api.Enums.ChartTextureFormatEnum TextureFormat</param>
+		/// <param name="TextureFormat">NetOffice.OWC10Api.Enums.ChartTextureFormatEnum TextureFormat</param>
 		/// <param name="stackUnit">Double stackUnit</param>
-		/// <param name="TexturePlacement">LateBindingApi.OWC10Api.Enums.ChartTexturePlacementEnum TexturePlacement</param>
+		/// <param name="TexturePlacement">NetOffice.OWC10Api.Enums.ChartTexturePlacementEnum TexturePlacement</param>
 		[SupportByLibrary("XWC1.0")]
-		public void SetTextured(object textureFile, LateBindingApi.OWC10Api.Enums.ChartTextureFormatEnum textureFormat, Double stackUnit, LateBindingApi.OWC10Api.Enums.ChartTexturePlacementEnum texturePlacement)
+		public void SetTextured(object textureFile, NetOffice.OWC10Api.Enums.ChartTextureFormatEnum textureFormat, Double stackUnit, NetOffice.OWC10Api.Enums.ChartTexturePlacementEnum texturePlacement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(textureFile, textureFormat, stackUnit, texturePlacement);
 			Invoker.Method(this, "SetTextured", paramsArray);
@@ -338,12 +338,12 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="GradientStyle">LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
-		/// <param name="GradientVariant">LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
+		/// <param name="GradientStyle">NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
+		/// <param name="GradientVariant">NetOffice.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
 		/// <param name="GradientDegree">Double GradientDegree</param>
 		/// <param name="Color">optional object Color</param>
 		[SupportByLibrary("XWC1.0")]
-		public void SetOneColorGradient(LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, Double gradientDegree, object color)
+		public void SetOneColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, Double gradientDegree, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(gradientStyle, gradientVariant, gradientDegree, color);
 			Invoker.Method(this, "SetOneColorGradient", paramsArray);
@@ -352,11 +352,11 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="GradientStyle">LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
-		/// <param name="GradientVariant">LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
+		/// <param name="GradientStyle">NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
+		/// <param name="GradientVariant">NetOffice.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
 		/// <param name="GradientDegree">Double GradientDegree</param>
 		[SupportByLibrary("XWC1.0")]
-		public void SetOneColorGradient(LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, Double gradientDegree)
+		public void SetOneColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, Double gradientDegree)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(gradientStyle, gradientVariant, gradientDegree);
 			Invoker.Method(this, "SetOneColorGradient", paramsArray);
@@ -386,12 +386,12 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="GradientStyle">LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
-		/// <param name="GradientVariant">LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
+		/// <param name="GradientStyle">NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
+		/// <param name="GradientVariant">NetOffice.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
 		/// <param name="Color">optional object Color</param>
 		/// <param name="BackColor">optional object BackColor</param>
 		[SupportByLibrary("XWC1.0")]
-		public void SetTwoColorGradient(LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, object color, object backColor)
+		public void SetTwoColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, object color, object backColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(gradientStyle, gradientVariant, color, backColor);
 			Invoker.Method(this, "SetTwoColorGradient", paramsArray);
@@ -400,10 +400,10 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="GradientStyle">LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
-		/// <param name="GradientVariant">LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
+		/// <param name="GradientStyle">NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
+		/// <param name="GradientVariant">NetOffice.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
 		[SupportByLibrary("XWC1.0")]
-		public void SetTwoColorGradient(LateBindingApi.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, LateBindingApi.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant)
+		public void SetTwoColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(gradientStyle, gradientVariant);
 			Invoker.Method(this, "SetTwoColorGradient", paramsArray);

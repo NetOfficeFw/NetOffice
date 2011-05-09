@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PickerDialog SupportByLibrary OF14 
@@ -89,13 +89,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PickerProperties Properties
+		public NetOffice.OfficeApi.PickerProperties Properties
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				LateBindingApi.OfficeApi.PickerProperties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.PickerProperties;
+				NetOffice.OfficeApi.PickerProperties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PickerProperties;
 				return newObject;
 			}
 		}
@@ -108,11 +108,11 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PickerResults CreatePickerResults()
+		public NetOffice.OfficeApi.PickerResults CreatePickerResults()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreatePickerResults", paramsArray);
-			LateBindingApi.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.PickerResults;
+			NetOffice.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.PickerResults;
 			return newObject;
 		}
 
@@ -120,13 +120,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF14 
 		/// </summary>
 		/// <param name="IsMultiSelect">bool IsMultiSelect</param>
-		/// <param name="ExistingResults">LateBindingApi.OfficeApi.PickerResults ExistingResults</param>
+		/// <param name="ExistingResults">NetOffice.OfficeApi.PickerResults ExistingResults</param>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PickerResults Show(bool isMultiSelect, LateBindingApi.OfficeApi.PickerResults existingResults)
+		public NetOffice.OfficeApi.PickerResults Show(bool isMultiSelect, NetOffice.OfficeApi.PickerResults existingResults)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(isMultiSelect, existingResults);
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			LateBindingApi.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.PickerResults;
+			NetOffice.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.PickerResults;
 			return newObject;
 		}
 
@@ -136,11 +136,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="TokenText">string TokenText</param>
 		/// <param name="duplicateDlgMode">Int32 duplicateDlgMode</param>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PickerResults Resolve(string tokenText, Int32 duplicateDlgMode)
+		public NetOffice.OfficeApi.PickerResults Resolve(string tokenText, Int32 duplicateDlgMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tokenText, duplicateDlgMode);
 			object returnItem = Invoker.MethodReturn(this, "Resolve", paramsArray);
-			LateBindingApi.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.PickerResults;
+			NetOffice.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.PickerResults;
 			return newObject;
 		}
 

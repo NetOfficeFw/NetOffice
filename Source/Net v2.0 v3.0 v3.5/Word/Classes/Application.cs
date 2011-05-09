@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 
 	#region Delegates
@@ -12,38 +12,38 @@ namespace LateBindingApi.WordApi
 	public delegate void Application_StartupEventHandler();
 	public delegate void Application_QuitEventHandler();
 	public delegate void Application_DocumentChangeEventHandler();
-	public delegate void Application_DocumentOpenEventHandler(LateBindingApi.WordApi.Document Doc);
-	public delegate void Application_DocumentBeforeCloseEventHandler(LateBindingApi.WordApi.Document Doc, ref bool Cancel);
-	public delegate void Application_DocumentBeforePrintEventHandler(LateBindingApi.WordApi.Document Doc, ref bool Cancel);
-	public delegate void Application_DocumentBeforeSaveEventHandler(LateBindingApi.WordApi.Document Doc, ref bool SaveAsUI, ref bool Cancel);
-	public delegate void Application_NewDocumentEventHandler(LateBindingApi.WordApi.Document Doc);
-	public delegate void Application_WindowActivateEventHandler(LateBindingApi.WordApi.Document Doc, LateBindingApi.WordApi.Window Wn);
-	public delegate void Application_WindowDeactivateEventHandler(LateBindingApi.WordApi.Document Doc, LateBindingApi.WordApi.Window Wn);
-	public delegate void Application_WindowSelectionChangeEventHandler(LateBindingApi.WordApi.Selection Sel);
-	public delegate void Application_WindowBeforeRightClickEventHandler(LateBindingApi.WordApi.Selection Sel, ref bool Cancel);
-	public delegate void Application_WindowBeforeDoubleClickEventHandler(LateBindingApi.WordApi.Selection Sel, ref bool Cancel);
-	public delegate void Application_EPostagePropertyDialogEventHandler(LateBindingApi.WordApi.Document Doc);
-	public delegate void Application_EPostageInsertEventHandler(LateBindingApi.WordApi.Document Doc);
-	public delegate void Application_MailMergeAfterMergeEventHandler(LateBindingApi.WordApi.Document Doc, LateBindingApi.WordApi.Document DocResult);
-	public delegate void Application_MailMergeAfterRecordMergeEventHandler(LateBindingApi.WordApi.Document Doc);
-	public delegate void Application_MailMergeBeforeMergeEventHandler(LateBindingApi.WordApi.Document Doc, Int32 StartRecord, Int32 EndRecord, ref bool Cancel);
-	public delegate void Application_MailMergeBeforeRecordMergeEventHandler(LateBindingApi.WordApi.Document Doc, ref bool Cancel);
-	public delegate void Application_MailMergeDataSourceLoadEventHandler(LateBindingApi.WordApi.Document Doc);
-	public delegate void Application_MailMergeDataSourceValidateEventHandler(LateBindingApi.WordApi.Document Doc, ref bool Handled);
-	public delegate void Application_MailMergeWizardSendToCustomEventHandler(LateBindingApi.WordApi.Document Doc);
-	public delegate void Application_MailMergeWizardStateChangeEventHandler(LateBindingApi.WordApi.Document Doc, ref Int32 FromState, ref Int32 ToState, ref bool Handled);
-	public delegate void Application_WindowSizeEventHandler(LateBindingApi.WordApi.Document Doc, LateBindingApi.WordApi.Window Wn);
-	public delegate void Application_XMLSelectionChangeEventHandler(LateBindingApi.WordApi.Selection Sel, LateBindingApi.WordApi.XMLNode OldXMLNode, LateBindingApi.WordApi.XMLNode NewXMLNode, ref Int32 Reason);
-	public delegate void Application_XMLValidationErrorEventHandler(LateBindingApi.WordApi.XMLNode XMLNode);
-	public delegate void Application_DocumentSyncEventHandler(LateBindingApi.WordApi.Document Doc, LateBindingApi.OfficeApi.Enums.MsoSyncEventType SyncEventType);
-	public delegate void Application_EPostageInsertExEventHandler(LateBindingApi.WordApi.Document Doc, Int32 cpDeliveryAddrStart, Int32 cpDeliveryAddrEnd, Int32 cpReturnAddrStart, Int32 cpReturnAddrEnd, Int32 xaWidth, Int32 yaHeight, string bstrPrinterName, string bstrPaperFeed, bool fPrint, ref bool fCancel);
-	public delegate void Application_MailMergeDataSourceValidate2EventHandler(LateBindingApi.WordApi.Document Doc, ref bool Handled);
-	public delegate void Application_ProtectedViewWindowOpenEventHandler(LateBindingApi.WordApi.ProtectedViewWindow PvWindow);
-	public delegate void Application_ProtectedViewWindowBeforeEditEventHandler(LateBindingApi.WordApi.ProtectedViewWindow PvWindow, ref bool Cancel);
-	public delegate void Application_ProtectedViewWindowBeforeCloseEventHandler(LateBindingApi.WordApi.ProtectedViewWindow PvWindow, Int32 CloseReason, ref bool Cancel);
-	public delegate void Application_ProtectedViewWindowSizeEventHandler(LateBindingApi.WordApi.ProtectedViewWindow PvWindow);
-	public delegate void Application_ProtectedViewWindowActivateEventHandler(LateBindingApi.WordApi.ProtectedViewWindow PvWindow);
-	public delegate void Application_ProtectedViewWindowDeactivateEventHandler(LateBindingApi.WordApi.ProtectedViewWindow PvWindow);
+	public delegate void Application_DocumentOpenEventHandler(NetOffice.WordApi.Document Doc);
+	public delegate void Application_DocumentBeforeCloseEventHandler(NetOffice.WordApi.Document Doc, ref bool Cancel);
+	public delegate void Application_DocumentBeforePrintEventHandler(NetOffice.WordApi.Document Doc, ref bool Cancel);
+	public delegate void Application_DocumentBeforeSaveEventHandler(NetOffice.WordApi.Document Doc, ref bool SaveAsUI, ref bool Cancel);
+	public delegate void Application_NewDocumentEventHandler(NetOffice.WordApi.Document Doc);
+	public delegate void Application_WindowActivateEventHandler(NetOffice.WordApi.Document Doc, NetOffice.WordApi.Window Wn);
+	public delegate void Application_WindowDeactivateEventHandler(NetOffice.WordApi.Document Doc, NetOffice.WordApi.Window Wn);
+	public delegate void Application_WindowSelectionChangeEventHandler(NetOffice.WordApi.Selection Sel);
+	public delegate void Application_WindowBeforeRightClickEventHandler(NetOffice.WordApi.Selection Sel, ref bool Cancel);
+	public delegate void Application_WindowBeforeDoubleClickEventHandler(NetOffice.WordApi.Selection Sel, ref bool Cancel);
+	public delegate void Application_EPostagePropertyDialogEventHandler(NetOffice.WordApi.Document Doc);
+	public delegate void Application_EPostageInsertEventHandler(NetOffice.WordApi.Document Doc);
+	public delegate void Application_MailMergeAfterMergeEventHandler(NetOffice.WordApi.Document Doc, NetOffice.WordApi.Document DocResult);
+	public delegate void Application_MailMergeAfterRecordMergeEventHandler(NetOffice.WordApi.Document Doc);
+	public delegate void Application_MailMergeBeforeMergeEventHandler(NetOffice.WordApi.Document Doc, Int32 StartRecord, Int32 EndRecord, ref bool Cancel);
+	public delegate void Application_MailMergeBeforeRecordMergeEventHandler(NetOffice.WordApi.Document Doc, ref bool Cancel);
+	public delegate void Application_MailMergeDataSourceLoadEventHandler(NetOffice.WordApi.Document Doc);
+	public delegate void Application_MailMergeDataSourceValidateEventHandler(NetOffice.WordApi.Document Doc, ref bool Handled);
+	public delegate void Application_MailMergeWizardSendToCustomEventHandler(NetOffice.WordApi.Document Doc);
+	public delegate void Application_MailMergeWizardStateChangeEventHandler(NetOffice.WordApi.Document Doc, ref Int32 FromState, ref Int32 ToState, ref bool Handled);
+	public delegate void Application_WindowSizeEventHandler(NetOffice.WordApi.Document Doc, NetOffice.WordApi.Window Wn);
+	public delegate void Application_XMLSelectionChangeEventHandler(NetOffice.WordApi.Selection Sel, NetOffice.WordApi.XMLNode OldXMLNode, NetOffice.WordApi.XMLNode NewXMLNode, ref Int32 Reason);
+	public delegate void Application_XMLValidationErrorEventHandler(NetOffice.WordApi.XMLNode XMLNode);
+	public delegate void Application_DocumentSyncEventHandler(NetOffice.WordApi.Document Doc, NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType);
+	public delegate void Application_EPostageInsertExEventHandler(NetOffice.WordApi.Document Doc, Int32 cpDeliveryAddrStart, Int32 cpDeliveryAddrEnd, Int32 cpReturnAddrStart, Int32 cpReturnAddrEnd, Int32 xaWidth, Int32 yaHeight, string bstrPrinterName, string bstrPaperFeed, bool fPrint, ref bool fCancel);
+	public delegate void Application_MailMergeDataSourceValidate2EventHandler(NetOffice.WordApi.Document Doc, ref bool Handled);
+	public delegate void Application_ProtectedViewWindowOpenEventHandler(NetOffice.WordApi.ProtectedViewWindow PvWindow);
+	public delegate void Application_ProtectedViewWindowBeforeEditEventHandler(NetOffice.WordApi.ProtectedViewWindow PvWindow, ref bool Cancel);
+	public delegate void Application_ProtectedViewWindowBeforeCloseEventHandler(NetOffice.WordApi.ProtectedViewWindow PvWindow, Int32 CloseReason, ref bool Cancel);
+	public delegate void Application_ProtectedViewWindowSizeEventHandler(NetOffice.WordApi.ProtectedViewWindow PvWindow);
+	public delegate void Application_ProtectedViewWindowActivateEventHandler(NetOffice.WordApi.ProtectedViewWindow PvWindow);
+	public delegate void Application_ProtectedViewWindowDeactivateEventHandler(NetOffice.WordApi.ProtectedViewWindow PvWindow);
 	#pragma warning restore
 
 	#endregion

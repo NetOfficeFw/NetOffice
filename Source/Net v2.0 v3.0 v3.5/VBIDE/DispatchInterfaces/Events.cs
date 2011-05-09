@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface Events SupportByLibrary VBE5.3 VBE12 
@@ -50,13 +50,13 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="VBProject">LateBindingApi.VBIDEApi.VBProject VBProject</param>
+		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.ReferencesEvents get_ReferencesEvents(LateBindingApi.VBIDEApi.VBProject vBProject)
+		public NetOffice.VBIDEApi.ReferencesEvents get_ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
 			object returnItem = Invoker.PropertyGet(this, "ReferencesEvents", paramsArray);
-			LateBindingApi.VBIDEApi.ReferencesEvents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.ReferencesEvents;
+			NetOffice.VBIDEApi.ReferencesEvents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.ReferencesEvents;
 			return newObject;
 		}
 
@@ -65,11 +65,11 @@ namespace LateBindingApi.VBIDEApi
 		/// </summary>
 		/// <param name="CommandBarControl">object CommandBarControl</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.CommandBarEvents get_CommandBarEvents(object commandBarControl)
+		public NetOffice.VBIDEApi.CommandBarEvents get_CommandBarEvents(object commandBarControl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commandBarControl);
 			object returnItem = Invoker.PropertyGet(this, "CommandBarEvents", paramsArray);
-			LateBindingApi.VBIDEApi.CommandBarEvents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.CommandBarEvents;
+			NetOffice.VBIDEApi.CommandBarEvents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.CommandBarEvents;
 			return newObject;
 		}
 

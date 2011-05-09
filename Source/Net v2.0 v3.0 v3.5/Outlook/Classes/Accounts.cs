@@ -3,13 +3,13 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Accounts_AutoDiscoverCompleteEventHandler(LateBindingApi.OutlookApi.Account Account);
+	public delegate void Accounts_AutoDiscoverCompleteEventHandler(NetOffice.OutlookApi.Account Account);
 	#pragma warning restore
 
 	#endregion

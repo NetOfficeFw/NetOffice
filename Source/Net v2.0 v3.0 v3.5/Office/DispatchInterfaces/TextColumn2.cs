@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface TextColumn2 SupportByLibrary OF12 OF14 
@@ -89,13 +89,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTextDirection TextDirection
+		public NetOffice.OfficeApi.Enums.MsoTextDirection TextDirection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextDirection", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTextDirection)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTextDirection)returnItem;
 			}
 			set
 			{

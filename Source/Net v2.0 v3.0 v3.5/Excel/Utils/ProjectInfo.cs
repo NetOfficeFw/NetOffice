@@ -15,7 +15,7 @@ namespace ExcelApi.Utils
     {
         #region Field
 
-        private string   _namespace     = "LateBindingApi.ExcelApi";
+        private string   _namespace     = "NetOffice.ExcelApi";
         private Guid     _componentGuid = new Guid("00020813-0000-0000-C000-000000000046");
         private Assembly _assembly;
 

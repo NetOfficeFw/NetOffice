@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface XMLSchemaReferences SupportByLibrary WD11 WD12 WD14 
@@ -66,13 +66,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -210,12 +210,12 @@ namespace LateBindingApi.WordApi
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.XMLSchemaReference Item(ref object index)
+		public NetOffice.WordApi.XMLSchemaReference Item(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray, modifiers);
-			LateBindingApi.WordApi.XMLSchemaReference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.XMLSchemaReference;
+			NetOffice.WordApi.XMLSchemaReference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLSchemaReference;
 			index = (object)paramsArray[0];
 			return newObject;
 		}
@@ -238,12 +238,12 @@ namespace LateBindingApi.WordApi
 		/// <param name="FileName">ref object FileName</param>
 		/// <param name="InstallForAllUsers">bool InstallForAllUsers</param>
 		[SupportByLibrary("WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.XMLSchemaReference Add(ref object namespaceURI, ref object alias, ref object fileName, bool installForAllUsers)
+		public NetOffice.WordApi.XMLSchemaReference Add(ref object namespaceURI, ref object alias, ref object fileName, bool installForAllUsers)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName, installForAllUsers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
-			LateBindingApi.WordApi.XMLSchemaReference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.WordApi.XMLSchemaReference;
+			NetOffice.WordApi.XMLSchemaReference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLSchemaReference;
 			namespaceURI = (object)paramsArray[0];
 			alias = (object)paramsArray[1];
 			fileName = (object)paramsArray[2];

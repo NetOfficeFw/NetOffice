@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SoftEdgeFormat SupportByLibrary OF12 OF14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoSoftEdgeType Type
+		public NetOffice.OfficeApi.Enums.MsoSoftEdgeType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoSoftEdgeType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoSoftEdgeType)returnItem;
 			}
 			set
 			{

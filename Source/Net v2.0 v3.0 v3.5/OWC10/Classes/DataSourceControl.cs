@@ -3,34 +3,34 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void DataSourceControl_CurrentEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_BeforeExpandEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_BeforeCollapseEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_BeforeFirstPageEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_BeforePreviousPageEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_BeforeNextPageEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_BeforeLastPageEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_DataErrorEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_DataPageCompleteEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_BeforeInitialBindEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_RecordsetSaveProgressEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_AfterDeleteEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_AfterInsertEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_AfterUpdateEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_BeforeDeleteEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_BeforeInsertEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_BeforeOverwriteEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_BeforeUpdateEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_DirtyEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_RecordExitEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_UndoEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
-	public delegate void DataSourceControl_FocusEventHandler(LateBindingApi.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_CurrentEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_BeforeExpandEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_BeforeCollapseEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_BeforeFirstPageEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_BeforePreviousPageEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_BeforeNextPageEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_BeforeLastPageEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_DataErrorEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_DataPageCompleteEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_BeforeInitialBindEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_RecordsetSaveProgressEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_AfterDeleteEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_AfterInsertEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_AfterUpdateEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_BeforeDeleteEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_BeforeInsertEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_BeforeOverwriteEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_BeforeUpdateEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_DirtyEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_RecordExitEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_UndoEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
+	public delegate void DataSourceControl_FocusEventHandler(NetOffice.OWC10Api.DSCEventInfo DSCEventInfo);
 	#pragma warning restore
 
 	#endregion

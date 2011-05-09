@@ -15,7 +15,7 @@ namespace VBIDEApi.Utils
     {
         #region Field
 
-        private string   _namespace     = "LateBindingApi.VBIDEApi";
+        private string   _namespace     = "NetOffice.VBIDEApi";
         private Guid     _componentGuid = new Guid("0002E157-0000-0000-C000-000000000046");
         private Assembly _assembly;
 

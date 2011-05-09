@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _NavigationGroups SupportByLibrary OL12 OL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi._Application Application
+		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._Application;
+				NetOffice.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlObjectClass Class
+		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Class", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlObjectClass)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlObjectClass)returnItem;
 			}
 		}
 
@@ -80,13 +80,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi._NameSpace Session
+		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				LateBindingApi.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._NameSpace;
+				NetOffice.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
 				return newObject;
 			}
 		}
@@ -129,11 +129,11 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi._NavigationGroup Item(object index)
+		public NetOffice.OutlookApi._NavigationGroup Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.OutlookApi._NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi._NavigationGroup;
+			NetOffice.OutlookApi._NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._NavigationGroup;
 			return newObject;
 		}
 
@@ -142,20 +142,20 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="GroupDisplayName">string GroupDisplayName</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.NavigationGroup Create(string groupDisplayName)
+		public NetOffice.OutlookApi.NavigationGroup Create(string groupDisplayName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupDisplayName);
 			object returnItem = Invoker.MethodReturn(this, "Create", paramsArray);
-			LateBindingApi.OutlookApi.NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.NavigationGroup;
+			NetOffice.OutlookApi.NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.NavigationGroup;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
-		/// <param name="Group">LateBindingApi.OutlookApi.NavigationGroup Group</param>
+		/// <param name="Group">NetOffice.OutlookApi.NavigationGroup Group</param>
 		[SupportByLibrary("OL12","OL14")]
-		public void Delete(LateBindingApi.OutlookApi.NavigationGroup group)
+		public void Delete(NetOffice.OutlookApi.NavigationGroup group)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(group);
 			Invoker.Method(this, "Delete", paramsArray);
@@ -164,13 +164,13 @@ namespace LateBindingApi.OutlookApi
 		/// <summary>
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
-		/// <param name="DefaultFolderGroup">LateBindingApi.OutlookApi.Enums.OlGroupType DefaultFolderGroup</param>
+		/// <param name="DefaultFolderGroup">NetOffice.OutlookApi.Enums.OlGroupType DefaultFolderGroup</param>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.NavigationGroup GetDefaultNavigationGroup(LateBindingApi.OutlookApi.Enums.OlGroupType defaultFolderGroup)
+		public NetOffice.OutlookApi.NavigationGroup GetDefaultNavigationGroup(NetOffice.OutlookApi.Enums.OlGroupType defaultFolderGroup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultFolderGroup);
 			object returnItem = Invoker.MethodReturn(this, "GetDefaultNavigationGroup", paramsArray);
-			LateBindingApi.OutlookApi.NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.NavigationGroup;
+			NetOffice.OutlookApi.NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.NavigationGroup;
 			return newObject;
 		}
 

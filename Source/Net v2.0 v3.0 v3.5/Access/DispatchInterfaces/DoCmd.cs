@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface DoCmd SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -122,11 +122,11 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
-		/// <param name="Save">LateBindingApi.AccessApi.Enums.AcCloseSave Save</param>
+		/// <param name="Save">NetOffice.AccessApi.Enums.AcCloseSave Save</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void Close(LateBindingApi.AccessApi.Enums.AcObjectType objectType, object objectName, LateBindingApi.AccessApi.Enums.AcCloseSave save)
+		public void Close(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName, NetOffice.AccessApi.Enums.AcCloseSave save)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, save);
 			Invoker.Method(this, "Close", paramsArray);
@@ -137,10 +137,10 @@ namespace LateBindingApi.AccessApi
 		/// </summary>
 		/// <param name="DestinationDatabase">object DestinationDatabase</param>
 		/// <param name="NewName">object NewName</param>
-		/// <param name="SourceObjectType">LateBindingApi.AccessApi.Enums.AcObjectType SourceObjectType</param>
+		/// <param name="SourceObjectType">NetOffice.AccessApi.Enums.AcObjectType SourceObjectType</param>
 		/// <param name="SourceObjectName">optional object SourceObjectName</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void CopyObject(object destinationDatabase, object newName, LateBindingApi.AccessApi.Enums.AcObjectType sourceObjectType, object sourceObjectName)
+		public void CopyObject(object destinationDatabase, object newName, NetOffice.AccessApi.Enums.AcObjectType sourceObjectType, object sourceObjectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destinationDatabase, newName, sourceObjectType, sourceObjectName);
 			Invoker.Method(this, "CopyObject", paramsArray);
@@ -151,9 +151,9 @@ namespace LateBindingApi.AccessApi
 		/// </summary>
 		/// <param name="DestinationDatabase">object DestinationDatabase</param>
 		/// <param name="NewName">object NewName</param>
-		/// <param name="SourceObjectType">LateBindingApi.AccessApi.Enums.AcObjectType SourceObjectType</param>
+		/// <param name="SourceObjectType">NetOffice.AccessApi.Enums.AcObjectType SourceObjectType</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void CopyObject(object destinationDatabase, object newName, LateBindingApi.AccessApi.Enums.AcObjectType sourceObjectType)
+		public void CopyObject(object destinationDatabase, object newName, NetOffice.AccessApi.Enums.AcObjectType sourceObjectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destinationDatabase, newName, sourceObjectType);
 			Invoker.Method(this, "CopyObject", paramsArray);
@@ -224,14 +224,14 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="FindWhat">object FindWhat</param>
-		/// <param name="Match">LateBindingApi.AccessApi.Enums.AcFindMatch Match</param>
+		/// <param name="Match">NetOffice.AccessApi.Enums.AcFindMatch Match</param>
 		/// <param name="MatchCase">object MatchCase</param>
-		/// <param name="Search">LateBindingApi.AccessApi.Enums.AcSearchDirection Search</param>
+		/// <param name="Search">NetOffice.AccessApi.Enums.AcSearchDirection Search</param>
 		/// <param name="SearchAsFormatted">object SearchAsFormatted</param>
-		/// <param name="OnlyCurrentField">LateBindingApi.AccessApi.Enums.AcFindField OnlyCurrentField</param>
+		/// <param name="OnlyCurrentField">NetOffice.AccessApi.Enums.AcFindField OnlyCurrentField</param>
 		/// <param name="FindFirst">optional object FindFirst</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void FindRecord(object findWhat, LateBindingApi.AccessApi.Enums.AcFindMatch match, object matchCase, LateBindingApi.AccessApi.Enums.AcSearchDirection search, object searchAsFormatted, LateBindingApi.AccessApi.Enums.AcFindField onlyCurrentField, object findFirst)
+		public void FindRecord(object findWhat, NetOffice.AccessApi.Enums.AcFindMatch match, object matchCase, NetOffice.AccessApi.Enums.AcSearchDirection search, object searchAsFormatted, NetOffice.AccessApi.Enums.AcFindField onlyCurrentField, object findFirst)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, match, matchCase, search, searchAsFormatted, onlyCurrentField, findFirst);
 			Invoker.Method(this, "FindRecord", paramsArray);
@@ -241,13 +241,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="FindWhat">object FindWhat</param>
-		/// <param name="Match">LateBindingApi.AccessApi.Enums.AcFindMatch Match</param>
+		/// <param name="Match">NetOffice.AccessApi.Enums.AcFindMatch Match</param>
 		/// <param name="MatchCase">object MatchCase</param>
-		/// <param name="Search">LateBindingApi.AccessApi.Enums.AcSearchDirection Search</param>
+		/// <param name="Search">NetOffice.AccessApi.Enums.AcSearchDirection Search</param>
 		/// <param name="SearchAsFormatted">object SearchAsFormatted</param>
-		/// <param name="OnlyCurrentField">LateBindingApi.AccessApi.Enums.AcFindField OnlyCurrentField</param>
+		/// <param name="OnlyCurrentField">NetOffice.AccessApi.Enums.AcFindField OnlyCurrentField</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void FindRecord(object findWhat, LateBindingApi.AccessApi.Enums.AcFindMatch match, object matchCase, LateBindingApi.AccessApi.Enums.AcSearchDirection search, object searchAsFormatted, LateBindingApi.AccessApi.Enums.AcFindField onlyCurrentField)
+		public void FindRecord(object findWhat, NetOffice.AccessApi.Enums.AcFindMatch match, object matchCase, NetOffice.AccessApi.Enums.AcSearchDirection search, object searchAsFormatted, NetOffice.AccessApi.Enums.AcFindField onlyCurrentField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, match, matchCase, search, searchAsFormatted, onlyCurrentField);
 			Invoker.Method(this, "FindRecord", paramsArray);
@@ -291,12 +291,12 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcDataObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcDataObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
-		/// <param name="Record">LateBindingApi.AccessApi.Enums.AcRecord Record</param>
+		/// <param name="Record">NetOffice.AccessApi.Enums.AcRecord Record</param>
 		/// <param name="Offset">optional object Offset</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void GoToRecord(LateBindingApi.AccessApi.Enums.AcDataObjectType objectType, object objectName, LateBindingApi.AccessApi.Enums.AcRecord record, object offset)
+		public void GoToRecord(NetOffice.AccessApi.Enums.AcDataObjectType objectType, object objectName, NetOffice.AccessApi.Enums.AcRecord record, object offset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, record, offset);
 			Invoker.Method(this, "GoToRecord", paramsArray);
@@ -305,11 +305,11 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcDataObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcDataObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
-		/// <param name="Record">LateBindingApi.AccessApi.Enums.AcRecord Record</param>
+		/// <param name="Record">NetOffice.AccessApi.Enums.AcRecord Record</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void GoToRecord(LateBindingApi.AccessApi.Enums.AcDataObjectType objectType, object objectName, LateBindingApi.AccessApi.Enums.AcRecord record)
+		public void GoToRecord(NetOffice.AccessApi.Enums.AcDataObjectType objectType, object objectName, NetOffice.AccessApi.Enums.AcRecord record)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, record);
 			Invoker.Method(this, "GoToRecord", paramsArray);
@@ -374,14 +374,14 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="FormName">object FormName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcFormView View</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcFormView View</param>
 		/// <param name="FilterName">object FilterName</param>
 		/// <param name="WhereCondition">object WhereCondition</param>
-		/// <param name="DataMode">LateBindingApi.AccessApi.Enums.AcFormOpenDataMode DataMode</param>
-		/// <param name="WindowMode">LateBindingApi.AccessApi.Enums.AcWindowMode WindowMode</param>
+		/// <param name="DataMode">NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode</param>
+		/// <param name="WindowMode">NetOffice.AccessApi.Enums.AcWindowMode WindowMode</param>
 		/// <param name="OpenArgs">optional object OpenArgs</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void OpenForm(object formName, LateBindingApi.AccessApi.Enums.AcFormView view, object filterName, object whereCondition, LateBindingApi.AccessApi.Enums.AcFormOpenDataMode dataMode, LateBindingApi.AccessApi.Enums.AcWindowMode windowMode, object openArgs)
+		public void OpenForm(object formName, NetOffice.AccessApi.Enums.AcFormView view, object filterName, object whereCondition, NetOffice.AccessApi.Enums.AcFormOpenDataMode dataMode, NetOffice.AccessApi.Enums.AcWindowMode windowMode, object openArgs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, view, filterName, whereCondition, dataMode, windowMode, openArgs);
 			Invoker.Method(this, "OpenForm", paramsArray);
@@ -391,13 +391,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="FormName">object FormName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcFormView View</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcFormView View</param>
 		/// <param name="FilterName">object FilterName</param>
 		/// <param name="WhereCondition">object WhereCondition</param>
-		/// <param name="DataMode">LateBindingApi.AccessApi.Enums.AcFormOpenDataMode DataMode</param>
-		/// <param name="WindowMode">LateBindingApi.AccessApi.Enums.AcWindowMode WindowMode</param>
+		/// <param name="DataMode">NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode</param>
+		/// <param name="WindowMode">NetOffice.AccessApi.Enums.AcWindowMode WindowMode</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void OpenForm(object formName, LateBindingApi.AccessApi.Enums.AcFormView view, object filterName, object whereCondition, LateBindingApi.AccessApi.Enums.AcFormOpenDataMode dataMode, LateBindingApi.AccessApi.Enums.AcWindowMode windowMode)
+		public void OpenForm(object formName, NetOffice.AccessApi.Enums.AcFormView view, object filterName, object whereCondition, NetOffice.AccessApi.Enums.AcFormOpenDataMode dataMode, NetOffice.AccessApi.Enums.AcWindowMode windowMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, view, filterName, whereCondition, dataMode, windowMode);
 			Invoker.Method(this, "OpenForm", paramsArray);
@@ -407,10 +407,10 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="QueryName">object QueryName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcView View</param>
-		/// <param name="DataMode">LateBindingApi.AccessApi.Enums.AcOpenDataMode DataMode</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
+		/// <param name="DataMode">NetOffice.AccessApi.Enums.AcOpenDataMode DataMode</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void OpenQuery(object queryName, LateBindingApi.AccessApi.Enums.AcView view, LateBindingApi.AccessApi.Enums.AcOpenDataMode dataMode)
+		public void OpenQuery(object queryName, NetOffice.AccessApi.Enums.AcView view, NetOffice.AccessApi.Enums.AcOpenDataMode dataMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(queryName, view, dataMode);
 			Invoker.Method(this, "OpenQuery", paramsArray);
@@ -420,10 +420,10 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="TableName">object TableName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcView View</param>
-		/// <param name="DataMode">LateBindingApi.AccessApi.Enums.AcOpenDataMode DataMode</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
+		/// <param name="DataMode">NetOffice.AccessApi.Enums.AcOpenDataMode DataMode</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void OpenTable(object tableName, LateBindingApi.AccessApi.Enums.AcView view, LateBindingApi.AccessApi.Enums.AcOpenDataMode dataMode)
+		public void OpenTable(object tableName, NetOffice.AccessApi.Enums.AcView view, NetOffice.AccessApi.Enums.AcOpenDataMode dataMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tableName, view, dataMode);
 			Invoker.Method(this, "OpenTable", paramsArray);
@@ -432,14 +432,14 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="PrintRange">LateBindingApi.AccessApi.Enums.AcPrintRange PrintRange</param>
+		/// <param name="PrintRange">NetOffice.AccessApi.Enums.AcPrintRange PrintRange</param>
 		/// <param name="PageFrom">object PageFrom</param>
 		/// <param name="PageTo">object PageTo</param>
-		/// <param name="PrintQuality">LateBindingApi.AccessApi.Enums.AcPrintQuality PrintQuality</param>
+		/// <param name="PrintQuality">NetOffice.AccessApi.Enums.AcPrintQuality PrintQuality</param>
 		/// <param name="Copies">optional object Copies</param>
 		/// <param name="CollateCopies">optional object CollateCopies</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void PrintOut(LateBindingApi.AccessApi.Enums.AcPrintRange printRange, object pageFrom, object pageTo, LateBindingApi.AccessApi.Enums.AcPrintQuality printQuality, object copies, object collateCopies)
+		public void PrintOut(NetOffice.AccessApi.Enums.AcPrintRange printRange, object pageFrom, object pageTo, NetOffice.AccessApi.Enums.AcPrintQuality printQuality, object copies, object collateCopies)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(printRange, pageFrom, pageTo, printQuality, copies, collateCopies);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -448,12 +448,12 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="PrintRange">LateBindingApi.AccessApi.Enums.AcPrintRange PrintRange</param>
+		/// <param name="PrintRange">NetOffice.AccessApi.Enums.AcPrintRange PrintRange</param>
 		/// <param name="PageFrom">object PageFrom</param>
 		/// <param name="PageTo">object PageTo</param>
-		/// <param name="PrintQuality">LateBindingApi.AccessApi.Enums.AcPrintQuality PrintQuality</param>
+		/// <param name="PrintQuality">NetOffice.AccessApi.Enums.AcPrintQuality PrintQuality</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void PrintOut(LateBindingApi.AccessApi.Enums.AcPrintRange printRange, object pageFrom, object pageTo, LateBindingApi.AccessApi.Enums.AcPrintQuality printQuality)
+		public void PrintOut(NetOffice.AccessApi.Enums.AcPrintRange printRange, object pageFrom, object pageTo, NetOffice.AccessApi.Enums.AcPrintQuality printQuality)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(printRange, pageFrom, pageTo, printQuality);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -462,9 +462,9 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="Options">LateBindingApi.AccessApi.Enums.AcQuitOption Options</param>
+		/// <param name="Options">NetOffice.AccessApi.Enums.AcQuitOption Options</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void Quit(LateBindingApi.AccessApi.Enums.AcQuitOption options)
+		public void Quit(NetOffice.AccessApi.Enums.AcQuitOption options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);
 			Invoker.Method(this, "Quit", paramsArray);
@@ -494,10 +494,10 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void RepaintObject(LateBindingApi.AccessApi.Enums.AcObjectType objectType, object objectName)
+		public void RepaintObject(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
 			Invoker.Method(this, "RepaintObject", paramsArray);
@@ -506,9 +506,9 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void RepaintObject(LateBindingApi.AccessApi.Enums.AcObjectType objectType)
+		public void RepaintObject(NetOffice.AccessApi.Enums.AcObjectType objectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
 			Invoker.Method(this, "RepaintObject", paramsArray);
@@ -518,10 +518,10 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="NewName">object NewName</param>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="OldName">optional object OldName</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void Rename(object newName, LateBindingApi.AccessApi.Enums.AcObjectType objectType, object oldName)
+		public void Rename(object newName, NetOffice.AccessApi.Enums.AcObjectType objectType, object oldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newName, objectType, oldName);
 			Invoker.Method(this, "Rename", paramsArray);
@@ -531,9 +531,9 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="NewName">object NewName</param>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void Rename(object newName, LateBindingApi.AccessApi.Enums.AcObjectType objectType)
+		public void Rename(object newName, NetOffice.AccessApi.Enums.AcObjectType objectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newName, objectType);
 			Invoker.Method(this, "Rename", paramsArray);
@@ -599,11 +599,11 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
 		/// <param name="InDatabaseWindow">optional object InDatabaseWindow</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void SelectObject(LateBindingApi.AccessApi.Enums.AcObjectType objectType, object objectName, object inDatabaseWindow)
+		public void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName, object inDatabaseWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, inDatabaseWindow);
 			Invoker.Method(this, "SelectObject", paramsArray);
@@ -612,9 +612,9 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void SelectObject(LateBindingApi.AccessApi.Enums.AcObjectType objectType)
+		public void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
 			Invoker.Method(this, "SelectObject", paramsArray);
@@ -645,11 +645,11 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcView View</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
 		/// <param name="FilterName">optional object FilterName</param>
 		/// <param name="WhereCondition">optional object WhereCondition</param>
 		[SupportByLibrary("AC09")]
-		public void OpenReport(object reportName, LateBindingApi.AccessApi.Enums.AcView view, object filterName, object whereCondition)
+		public void OpenReport(object reportName, NetOffice.AccessApi.Enums.AcView view, object filterName, object whereCondition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view, filterName, whereCondition);
 			Invoker.Method(this, "OpenReport", paramsArray);
@@ -659,13 +659,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcView View</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
 		/// <param name="FilterName">object FilterName</param>
 		/// <param name="WhereCondition">object WhereCondition</param>
-		/// <param name="WindowMode">LateBindingApi.AccessApi.Enums.AcWindowMode WindowMode</param>
+		/// <param name="WindowMode">NetOffice.AccessApi.Enums.AcWindowMode WindowMode</param>
 		/// <param name="OpenArgs">optional object OpenArgs</param>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public void OpenReport(object reportName, LateBindingApi.AccessApi.Enums.AcView view, object filterName, object whereCondition, LateBindingApi.AccessApi.Enums.AcWindowMode windowMode, object openArgs)
+		public void OpenReport(object reportName, NetOffice.AccessApi.Enums.AcView view, object filterName, object whereCondition, NetOffice.AccessApi.Enums.AcWindowMode windowMode, object openArgs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view, filterName, whereCondition, windowMode, openArgs);
 			Invoker.Method(this, "OpenReport", paramsArray);
@@ -675,9 +675,9 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcView View</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
 		[SupportByLibrary("AC09")]
-		public void OpenReport(object reportName, LateBindingApi.AccessApi.Enums.AcView view)
+		public void OpenReport(object reportName, NetOffice.AccessApi.Enums.AcView view)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view);
 			Invoker.Method(this, "OpenReport", paramsArray);
@@ -687,12 +687,12 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcView View</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
 		/// <param name="FilterName">object FilterName</param>
 		/// <param name="WhereCondition">object WhereCondition</param>
-		/// <param name="WindowMode">LateBindingApi.AccessApi.Enums.AcWindowMode WindowMode</param>
+		/// <param name="WindowMode">NetOffice.AccessApi.Enums.AcWindowMode WindowMode</param>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public void OpenReport(object reportName, LateBindingApi.AccessApi.Enums.AcView view, object filterName, object whereCondition, LateBindingApi.AccessApi.Enums.AcWindowMode windowMode)
+		public void OpenReport(object reportName, NetOffice.AccessApi.Enums.AcView view, object filterName, object whereCondition, NetOffice.AccessApi.Enums.AcWindowMode windowMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view, filterName, whereCondition, windowMode);
 			Invoker.Method(this, "OpenReport", paramsArray);
@@ -701,16 +701,16 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="TransferType">LateBindingApi.AccessApi.Enums.AcDataTransferType TransferType</param>
+		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcDataTransferType TransferType</param>
 		/// <param name="DatabaseType">object DatabaseType</param>
 		/// <param name="DatabaseName">object DatabaseName</param>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="Source">optional object Source</param>
 		/// <param name="Destination">optional object Destination</param>
 		/// <param name="StructureOnly">optional object StructureOnly</param>
 		/// <param name="StoreLogin">optional object StoreLogin</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void TransferDatabase(LateBindingApi.AccessApi.Enums.AcDataTransferType transferType, object databaseType, object databaseName, LateBindingApi.AccessApi.Enums.AcObjectType objectType, object source, object destination, object structureOnly, object storeLogin)
+		public void TransferDatabase(NetOffice.AccessApi.Enums.AcDataTransferType transferType, object databaseType, object databaseName, NetOffice.AccessApi.Enums.AcObjectType objectType, object source, object destination, object structureOnly, object storeLogin)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(transferType, databaseType, databaseName, objectType, source, destination, structureOnly, storeLogin);
 			Invoker.Method(this, "TransferDatabase", paramsArray);
@@ -719,12 +719,12 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="TransferType">LateBindingApi.AccessApi.Enums.AcDataTransferType TransferType</param>
+		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcDataTransferType TransferType</param>
 		/// <param name="DatabaseType">object DatabaseType</param>
 		/// <param name="DatabaseName">object DatabaseName</param>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void TransferDatabase(LateBindingApi.AccessApi.Enums.AcDataTransferType transferType, object databaseType, object databaseName, LateBindingApi.AccessApi.Enums.AcObjectType objectType)
+		public void TransferDatabase(NetOffice.AccessApi.Enums.AcDataTransferType transferType, object databaseType, object databaseName, NetOffice.AccessApi.Enums.AcObjectType objectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(transferType, databaseType, databaseName, objectType);
 			Invoker.Method(this, "TransferDatabase", paramsArray);
@@ -733,15 +733,15 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="TransferType">LateBindingApi.AccessApi.Enums.AcDataTransferType TransferType</param>
-		/// <param name="SpreadsheetType">LateBindingApi.AccessApi.Enums.AcSpreadSheetType SpreadsheetType</param>
+		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcDataTransferType TransferType</param>
+		/// <param name="SpreadsheetType">NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType</param>
 		/// <param name="TableName">optional object TableName</param>
 		/// <param name="FileName">optional object FileName</param>
 		/// <param name="HasFieldNames">optional object HasFieldNames</param>
 		/// <param name="Range">optional object Range</param>
 		/// <param name="UseOA">optional object UseOA</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void TransferSpreadsheet(LateBindingApi.AccessApi.Enums.AcDataTransferType transferType, LateBindingApi.AccessApi.Enums.AcSpreadSheetType spreadsheetType, object tableName, object fileName, object hasFieldNames, object range, object useOA)
+		public void TransferSpreadsheet(NetOffice.AccessApi.Enums.AcDataTransferType transferType, NetOffice.AccessApi.Enums.AcSpreadSheetType spreadsheetType, object tableName, object fileName, object hasFieldNames, object range, object useOA)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(transferType, spreadsheetType, tableName, fileName, hasFieldNames, range, useOA);
 			Invoker.Method(this, "TransferSpreadsheet", paramsArray);
@@ -750,10 +750,10 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="TransferType">LateBindingApi.AccessApi.Enums.AcDataTransferType TransferType</param>
-		/// <param name="SpreadsheetType">LateBindingApi.AccessApi.Enums.AcSpreadSheetType SpreadsheetType</param>
+		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcDataTransferType TransferType</param>
+		/// <param name="SpreadsheetType">NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void TransferSpreadsheet(LateBindingApi.AccessApi.Enums.AcDataTransferType transferType, LateBindingApi.AccessApi.Enums.AcSpreadSheetType spreadsheetType)
+		public void TransferSpreadsheet(NetOffice.AccessApi.Enums.AcDataTransferType transferType, NetOffice.AccessApi.Enums.AcSpreadSheetType spreadsheetType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(transferType, spreadsheetType);
 			Invoker.Method(this, "TransferSpreadsheet", paramsArray);
@@ -762,7 +762,7 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="TransferType">LateBindingApi.AccessApi.Enums.AcTextTransferType TransferType</param>
+		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcTextTransferType TransferType</param>
 		/// <param name="SpecificationName">optional object SpecificationName</param>
 		/// <param name="TableName">optional object TableName</param>
 		/// <param name="FileName">optional object FileName</param>
@@ -770,7 +770,7 @@ namespace LateBindingApi.AccessApi
 		/// <param name="HTMLTableName">optional object HTMLTableName</param>
 		/// <param name="CodePage">optional object CodePage</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void TransferText(LateBindingApi.AccessApi.Enums.AcTextTransferType transferType, object specificationName, object tableName, object fileName, object hasFieldNames, object hTMLTableName, object codePage)
+		public void TransferText(NetOffice.AccessApi.Enums.AcTextTransferType transferType, object specificationName, object tableName, object fileName, object hasFieldNames, object hTMLTableName, object codePage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(transferType, specificationName, tableName, fileName, hasFieldNames, hTMLTableName, codePage);
 			Invoker.Method(this, "TransferText", paramsArray);
@@ -779,9 +779,9 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="TransferType">LateBindingApi.AccessApi.Enums.AcTextTransferType TransferType</param>
+		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcTextTransferType TransferType</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void TransferText(LateBindingApi.AccessApi.Enums.AcTextTransferType transferType)
+		public void TransferText(NetOffice.AccessApi.Enums.AcTextTransferType transferType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(transferType);
 			Invoker.Method(this, "TransferText", paramsArray);
@@ -790,14 +790,14 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcOutputObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
 		/// <param name="OutputFormat">optional object OutputFormat</param>
 		/// <param name="OutputFile">optional object OutputFile</param>
 		/// <param name="AutoStart">optional object AutoStart</param>
 		/// <param name="TemplateFile">optional object TemplateFile</param>
 		[SupportByLibrary("AC09")]
-		public void OutputTo(LateBindingApi.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile)
+		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart, templateFile);
 			Invoker.Method(this, "OutputTo", paramsArray);
@@ -806,7 +806,7 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC10 AC11 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcOutputObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
 		/// <param name="OutputFormat">optional object OutputFormat</param>
 		/// <param name="OutputFile">optional object OutputFile</param>
@@ -814,7 +814,7 @@ namespace LateBindingApi.AccessApi
 		/// <param name="TemplateFile">optional object TemplateFile</param>
 		/// <param name="Encoding">optional object Encoding</param>
 		[SupportByLibrary("AC10","AC11")]
-		public void OutputTo(LateBindingApi.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding)
+		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding);
 			Invoker.Method(this, "OutputTo", paramsArray);
@@ -823,16 +823,16 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcOutputObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
 		/// <param name="OutputFormat">object OutputFormat</param>
 		/// <param name="OutputFile">object OutputFile</param>
 		/// <param name="AutoStart">object AutoStart</param>
 		/// <param name="TemplateFile">object TemplateFile</param>
 		/// <param name="Encoding">object Encoding</param>
-		/// <param name="OutputQuality">LateBindingApi.AccessApi.Enums.AcExportQuality OutputQuality</param>
+		/// <param name="OutputQuality">NetOffice.AccessApi.Enums.AcExportQuality OutputQuality</param>
 		[SupportByLibrary("AC12","AC14")]
-		public void OutputTo(LateBindingApi.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding, LateBindingApi.AccessApi.Enums.AcExportQuality outputQuality)
+		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding, NetOffice.AccessApi.Enums.AcExportQuality outputQuality)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding, outputQuality);
 			Invoker.Method(this, "OutputTo", paramsArray);
@@ -841,9 +841,9 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcOutputObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		[SupportByLibrary("AC09","AC10","AC11")]
-		public void OutputTo(LateBindingApi.AccessApi.Enums.AcOutputObjectType objectType)
+		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
 			Invoker.Method(this, "OutputTo", paramsArray);
@@ -852,10 +852,10 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void DeleteObject(LateBindingApi.AccessApi.Enums.AcObjectType objectType, object objectName)
+		public void DeleteObject(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
 			Invoker.Method(this, "DeleteObject", paramsArray);
@@ -864,9 +864,9 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void DeleteObject(LateBindingApi.AccessApi.Enums.AcObjectType objectType)
+		public void DeleteObject(NetOffice.AccessApi.Enums.AcObjectType objectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
 			Invoker.Method(this, "DeleteObject", paramsArray);
@@ -897,7 +897,7 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcSendObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcSendObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
 		/// <param name="OutputFormat">optional object OutputFormat</param>
 		/// <param name="To">optional object To</param>
@@ -908,7 +908,7 @@ namespace LateBindingApi.AccessApi
 		/// <param name="EditMessage">optional object EditMessage</param>
 		/// <param name="TemplateFile">optional object TemplateFile</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void SendObject(LateBindingApi.AccessApi.Enums.AcSendObjectType objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText, object editMessage, object templateFile)
+		public void SendObject(NetOffice.AccessApi.Enums.AcSendObjectType objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText, object editMessage, object templateFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, to, cc, bcc, subject, messageText, editMessage, templateFile);
 			Invoker.Method(this, "SendObject", paramsArray);
@@ -917,9 +917,9 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcSendObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcSendObjectType ObjectType</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void SendObject(LateBindingApi.AccessApi.Enums.AcSendObjectType objectType)
+		public void SendObject(NetOffice.AccessApi.Enums.AcSendObjectType objectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
 			Invoker.Method(this, "SendObject", paramsArray);
@@ -929,9 +929,9 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="ToolbarName">object ToolbarName</param>
-		/// <param name="Show">LateBindingApi.AccessApi.Enums.AcShowToolbar Show</param>
+		/// <param name="Show">NetOffice.AccessApi.Enums.AcShowToolbar Show</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void ShowToolbar(object toolbarName, LateBindingApi.AccessApi.Enums.AcShowToolbar show)
+		public void ShowToolbar(object toolbarName, NetOffice.AccessApi.Enums.AcShowToolbar show)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(toolbarName, show);
 			Invoker.Method(this, "ShowToolbar", paramsArray);
@@ -940,10 +940,10 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void Save(LateBindingApi.AccessApi.Enums.AcObjectType objectType, object objectName)
+		public void Save(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
 			Invoker.Method(this, "Save", paramsArray);
@@ -952,9 +952,9 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void Save(LateBindingApi.AccessApi.Enums.AcObjectType objectType)
+		public void Save(NetOffice.AccessApi.Enums.AcObjectType objectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
 			Invoker.Method(this, "Save", paramsArray);
@@ -988,9 +988,9 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="Command">LateBindingApi.AccessApi.Enums.AcCommand Command</param>
+		/// <param name="Command">NetOffice.AccessApi.Enums.AcCommand Command</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void RunCommand(LateBindingApi.AccessApi.Enums.AcCommand command)
+		public void RunCommand(NetOffice.AccessApi.Enums.AcCommand command)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(command);
 			Invoker.Method(this, "RunCommand", paramsArray);
@@ -1000,9 +1000,9 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="DataAccessPageName">object DataAccessPageName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcDataAccessPageView View</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcDataAccessPageView View</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void OpenDataAccessPage(object dataAccessPageName, LateBindingApi.AccessApi.Enums.AcDataAccessPageView view)
+		public void OpenDataAccessPage(object dataAccessPageName, NetOffice.AccessApi.Enums.AcDataAccessPageView view)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataAccessPageName, view);
 			Invoker.Method(this, "OpenDataAccessPage", paramsArray);
@@ -1012,10 +1012,10 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="ViewName">object ViewName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcView View</param>
-		/// <param name="DataMode">LateBindingApi.AccessApi.Enums.AcOpenDataMode DataMode</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
+		/// <param name="DataMode">NetOffice.AccessApi.Enums.AcOpenDataMode DataMode</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void OpenView(object viewName, LateBindingApi.AccessApi.Enums.AcView view, LateBindingApi.AccessApi.Enums.AcOpenDataMode dataMode)
+		public void OpenView(object viewName, NetOffice.AccessApi.Enums.AcView view, NetOffice.AccessApi.Enums.AcOpenDataMode dataMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(viewName, view, dataMode);
 			Invoker.Method(this, "OpenView", paramsArray);
@@ -1036,10 +1036,10 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="ProcedureName">object ProcedureName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcView View</param>
-		/// <param name="DataMode">LateBindingApi.AccessApi.Enums.AcOpenDataMode DataMode</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
+		/// <param name="DataMode">NetOffice.AccessApi.Enums.AcOpenDataMode DataMode</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public void OpenStoredProcedure(object procedureName, LateBindingApi.AccessApi.Enums.AcView view, LateBindingApi.AccessApi.Enums.AcOpenDataMode dataMode)
+		public void OpenStoredProcedure(object procedureName, NetOffice.AccessApi.Enums.AcView view, NetOffice.AccessApi.Enums.AcOpenDataMode dataMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedureName, view, dataMode);
 			Invoker.Method(this, "OpenStoredProcedure", paramsArray);
@@ -1049,11 +1049,11 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcView View</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
 		/// <param name="FilterName">optional object FilterName</param>
 		/// <param name="WhereCondition">optional object WhereCondition</param>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public void OpenReportOld0(object reportName, LateBindingApi.AccessApi.Enums.AcView view, object filterName, object whereCondition)
+		public void OpenReportOld0(object reportName, NetOffice.AccessApi.Enums.AcView view, object filterName, object whereCondition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view, filterName, whereCondition);
 			Invoker.Method(this, "OpenReportOld0", paramsArray);
@@ -1063,9 +1063,9 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcView View</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public void OpenReportOld0(object reportName, LateBindingApi.AccessApi.Enums.AcView view)
+		public void OpenReportOld0(object reportName, NetOffice.AccessApi.Enums.AcView view)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view);
 			Invoker.Method(this, "OpenReportOld0", paramsArray);
@@ -1074,14 +1074,14 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcOutputObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
 		/// <param name="OutputFormat">optional object OutputFormat</param>
 		/// <param name="OutputFile">optional object OutputFile</param>
 		/// <param name="AutoStart">optional object AutoStart</param>
 		/// <param name="TemplateFile">optional object TemplateFile</param>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public void OutputToOld0(LateBindingApi.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile)
+		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart, templateFile);
 			Invoker.Method(this, "OutputToOld0", paramsArray);
@@ -1090,9 +1090,9 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcOutputObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public void OutputToOld0(LateBindingApi.AccessApi.Enums.AcOutputObjectType objectType)
+		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
 			Invoker.Method(this, "OutputToOld0", paramsArray);
@@ -1154,10 +1154,10 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		/// <param name="FunctionName">object FunctionName</param>
-		/// <param name="View">LateBindingApi.AccessApi.Enums.AcView View</param>
-		/// <param name="DataMode">LateBindingApi.AccessApi.Enums.AcOpenDataMode DataMode</param>
+		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
+		/// <param name="DataMode">NetOffice.AccessApi.Enums.AcOpenDataMode DataMode</param>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public void OpenFunction(object functionName, LateBindingApi.AccessApi.Enums.AcView view, LateBindingApi.AccessApi.Enums.AcOpenDataMode dataMode)
+		public void OpenFunction(object functionName, NetOffice.AccessApi.Enums.AcView view, NetOffice.AccessApi.Enums.AcOpenDataMode dataMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(functionName, view, dataMode);
 			Invoker.Method(this, "OpenFunction", paramsArray);
@@ -1188,7 +1188,7 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcOutputObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
 		/// <param name="OutputFormat">optional object OutputFormat</param>
 		/// <param name="OutputFile">optional object OutputFile</param>
@@ -1196,7 +1196,7 @@ namespace LateBindingApi.AccessApi
 		/// <param name="TemplateFile">optional object TemplateFile</param>
 		/// <param name="Encoding">optional object Encoding</param>
 		[SupportByLibrary("AC12","AC14")]
-		public void OutputToOld1(LateBindingApi.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding)
+		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding);
 			Invoker.Method(this, "OutputToOld1", paramsArray);
@@ -1205,9 +1205,9 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcOutputObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		[SupportByLibrary("AC12","AC14")]
-		public void OutputToOld1(LateBindingApi.AccessApi.Enums.AcOutputObjectType objectType)
+		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
 			Invoker.Method(this, "OutputToOld1", paramsArray);
@@ -1216,14 +1216,14 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
-		/// <param name="TransferType">LateBindingApi.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
+		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
 		/// <param name="SiteAddress">object SiteAddress</param>
 		/// <param name="ListID">object ListID</param>
 		/// <param name="ViewID">optional object ViewID</param>
 		/// <param name="TableName">optional object TableName</param>
 		/// <param name="GetLookupDisplayValues">optional object GetLookupDisplayValues</param>
 		[SupportByLibrary("AC12","AC14")]
-		public void TransferSharePointList(LateBindingApi.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID, object tableName, object getLookupDisplayValues)
+		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID, object tableName, object getLookupDisplayValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(transferType, siteAddress, listID, viewID, tableName, getLookupDisplayValues);
 			Invoker.Method(this, "TransferSharePointList", paramsArray);
@@ -1232,11 +1232,11 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
-		/// <param name="TransferType">LateBindingApi.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
+		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
 		/// <param name="SiteAddress">object SiteAddress</param>
 		/// <param name="ListID">object ListID</param>
 		[SupportByLibrary("AC12","AC14")]
-		public void TransferSharePointList(LateBindingApi.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID)
+		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(transferType, siteAddress, listID);
 			Invoker.Method(this, "TransferSharePointList", paramsArray);
@@ -1277,12 +1277,12 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcDataObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcDataObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
-		/// <param name="Record">LateBindingApi.AccessApi.Enums.AcRecord Record</param>
+		/// <param name="Record">NetOffice.AccessApi.Enums.AcRecord Record</param>
 		/// <param name="WhereCondition">optional object WhereCondition</param>
 		[SupportByLibrary("AC12","AC14")]
-		public void SearchForRecord(LateBindingApi.AccessApi.Enums.AcDataObjectType objectType, object objectName, LateBindingApi.AccessApi.Enums.AcRecord record, object whereCondition)
+		public void SearchForRecord(NetOffice.AccessApi.Enums.AcDataObjectType objectType, object objectName, NetOffice.AccessApi.Enums.AcRecord record, object whereCondition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, record, whereCondition);
 			Invoker.Method(this, "SearchForRecord", paramsArray);
@@ -1291,11 +1291,11 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcDataObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcDataObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
-		/// <param name="Record">LateBindingApi.AccessApi.Enums.AcRecord Record</param>
+		/// <param name="Record">NetOffice.AccessApi.Enums.AcRecord Record</param>
 		[SupportByLibrary("AC12","AC14")]
-		public void SearchForRecord(LateBindingApi.AccessApi.Enums.AcDataObjectType objectType, object objectName, LateBindingApi.AccessApi.Enums.AcRecord record)
+		public void SearchForRecord(NetOffice.AccessApi.Enums.AcDataObjectType objectType, object objectName, NetOffice.AccessApi.Enums.AcRecord record)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, record);
 			Invoker.Method(this, "SearchForRecord", paramsArray);
@@ -1305,10 +1305,10 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		/// <param name="ControlName">object ControlName</param>
-		/// <param name="Property">LateBindingApi.AccessApi.Enums.AcProperty Property</param>
+		/// <param name="Property">NetOffice.AccessApi.Enums.AcProperty Property</param>
 		/// <param name="Value">optional object Value</param>
 		[SupportByLibrary("AC12","AC14")]
-		public void SetProperty(object controlName, LateBindingApi.AccessApi.Enums.AcProperty property, object value)
+		public void SetProperty(object controlName, NetOffice.AccessApi.Enums.AcProperty property, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(controlName, property, value);
 			Invoker.Method(this, "SetProperty", paramsArray);
@@ -1318,9 +1318,9 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC12 AC14 
 		/// </summary>
 		/// <param name="ControlName">object ControlName</param>
-		/// <param name="Property">LateBindingApi.AccessApi.Enums.AcProperty Property</param>
+		/// <param name="Property">NetOffice.AccessApi.Enums.AcProperty Property</param>
 		[SupportByLibrary("AC12","AC14")]
-		public void SetProperty(object controlName, LateBindingApi.AccessApi.Enums.AcProperty property)
+		public void SetProperty(object controlName, NetOffice.AccessApi.Enums.AcProperty property)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(controlName, property);
 			Invoker.Method(this, "SetProperty", paramsArray);
@@ -1394,14 +1394,14 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
 		/// <param name="PathtoSubformControl">object PathtoSubformControl</param>
 		/// <param name="WhereCondition">object WhereCondition</param>
 		/// <param name="Page">object Page</param>
-		/// <param name="DataMode">LateBindingApi.AccessApi.Enums.AcFormOpenDataMode DataMode</param>
+		/// <param name="DataMode">NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode</param>
 		[SupportByLibrary("AC14")]
-		public void BrowseTo(LateBindingApi.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition, object page, LateBindingApi.AccessApi.Enums.AcFormOpenDataMode dataMode)
+		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition, object page, NetOffice.AccessApi.Enums.AcFormOpenDataMode dataMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, pathtoSubformControl, whereCondition, page, dataMode);
 			Invoker.Method(this, "BrowseTo", paramsArray);

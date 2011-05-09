@@ -31,46 +31,84 @@ namespace LateBindingApi.Core
 
     public static class Factory
     {
+        #region Fields
+        
         private static List<COMObject> _globalObjectList = new List<COMObject>();
+        private static List<IFactoryInfo> _factoryList = new List<IFactoryInfo>();
+        private static Dictionary<string, Type> _typeCache = new Dictionary<string, Type>();
 
-        public delegate void ProxyCountChangedHandler(int proxyCount);
-        public static event ProxyCountChangedHandler ProxyCountChanged; 
+        #endregion
 
-        internal static void AddObjectToList(COMObject proxy)
-        {
-            _globalObjectList.Add(proxy);
-
-            if (null!=ProxyCountChanged)
-                ProxyCountChanged(_globalObjectList.Count);
-        }
-
-        internal static void RemoveObjectFromList(COMObject proxy)
-        {
-            _globalObjectList.Remove(proxy);
-
-            if (null != ProxyCountChanged)
-                ProxyCountChanged(_globalObjectList.Count);
-        }
+        #region Properties
 
         /// <summary>
         /// Returns count count of open proxies
         /// </summary>
         public static int ProxyCount
         {
-            get             
+            get
             {
                 return _globalObjectList.Count;
-            }            
+            }
         }
 
-        #region Fields
+        #endregion
 
-        private static List<IFactoryInfo>       _factoryList = new List<IFactoryInfo>();
-        private static Dictionary<string, Type> _typeCache = new Dictionary<string, Type>();
+        #region Events
+
+        public delegate void ProxyCountChangedHandler(int proxyCount);
+        public static event ProxyCountChangedHandler ProxyCountChanged;
 
         #endregion
-        
-        #region COMObject
+
+        #region Factory Methods
+
+        /// <summary>
+        /// Must be called from client assembly for COMObject Support
+        /// Recieve FactoryInfos from all loaded LateBindingApi based Assemblies
+        /// </summary>
+        public static void Initialize()
+        {
+            Assembly callingAssembly = System.Reflection.Assembly.GetCallingAssembly();
+            foreach (AssemblyName item in callingAssembly.GetReferencedAssemblies())
+            {
+                Assembly itemAssembly = Assembly.Load(item);
+                object[] attributes = itemAssembly.GetCustomAttributes(true);
+                foreach (object itemAttribute in attributes)
+                {
+                    string fullnameAttribute = itemAttribute.GetType().FullName;
+                    if (fullnameAttribute == "LateBindingApi.Core.LateBindingAttribute")
+                    {
+                        Type factoryInfoType = itemAssembly.GetType(item.Name + ".Utils.ProjectInfo");
+                        IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
+
+                        bool exists = false;
+                        foreach (IFactoryInfo itemFactory in _factoryList)
+                        {
+                            if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
+                            {
+                                exists = true;
+                                break;
+                            }
+                        }
+                        if (!exists)
+                            _factoryList.Add(factoryInfo);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// clears factory informations List
+        /// </summary>
+        public static void Clear()
+        {
+            _factoryList.Clear();
+        }
+
+        #endregion
+
+        #region Create COMObject Methods
   
         /// <summary>
         /// creates a new COMObject based on classType of comProxy 
@@ -127,7 +165,7 @@ namespace LateBindingApi.Core
         /// <param name="className"></param>
         /// <param name="fullClassName"></param>
         /// <returns></returns>
-        private static COMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, COMObject caller, object comProxy, Type comProxyType, string className, string fullClassName)
+        public static COMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, COMObject caller, object comProxy, Type comProxyType, string className, string fullClassName)
         {
             Type classType = null;
             if (true == _typeCache.TryGetValue(fullClassName, out classType))
@@ -174,47 +212,48 @@ namespace LateBindingApi.Core
         }
  
         #endregion
+        
+        #region Object List Methods
 
         /// <summary>
-        /// Must be called from client assembly for COMObject Support
-        /// Recieve FactoryInfos from all loaded LateBindingApi based Assemblies
+        /// dispose all open objects
         /// </summary>
-        public static void Initialize()
-        {          
-            Assembly callingAssembly = System.Reflection.Assembly.GetCallingAssembly();
-            foreach (AssemblyName item in callingAssembly.GetReferencedAssemblies())
+        public static void DisposeAllCOMProxies()
+        {
+            while (_globalObjectList.Count > 0)
             {
-                Assembly itemAssembly = Assembly.Load(item);                 
-                object[] attributes = itemAssembly.GetCustomAttributes(true);
-                foreach (object itemAttribute in attributes)
-                {
-                    string fullnameAttribute = itemAttribute.GetType().FullName;
-                    if (fullnameAttribute == "LateBindingApi.Core.LateBindingAttribute")
-                    {
-                        Type factoryInfoType = itemAssembly.GetType(item.Name + ".Utils.ProjectInfo");
-                        IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
-
-                        bool exists = false;
-                        foreach (IFactoryInfo itemFactory in _factoryList)
-                        {
-                            if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
-                            {
-                                exists = true;
-                                break;
-                            } 
-                        }
-                        if(!exists)
-                            _factoryList.Add(factoryInfo);
-                    }
-                }
+                _globalObjectList[0].Dispose();
             }
         }
-        
-        public static void Clear()
+
+        /// <summary>
+        /// add object to global list
+        /// </summary>
+        /// <param name="proxy"></param>
+        internal static void AddObjectToList(COMObject proxy)
         {
-            _factoryList.Clear();
+            _globalObjectList.Add(proxy);
+
+            if (null != ProxyCountChanged)
+                ProxyCountChanged(_globalObjectList.Count);
         }
-        
+
+        /// <summary>
+        /// remove object from global list
+        /// </summary>
+        /// <param name="proxy"></param>
+        internal static void RemoveObjectFromList(COMObject proxy)
+        {
+            _globalObjectList.Remove(proxy);
+
+            if (null != ProxyCountChanged)
+                ProxyCountChanged(_globalObjectList.Count);
+        }
+
+        #endregion
+
+        #region Private Methods
+
         /// <summary>
         /// get the guid from type lib there is the type defined
         /// </summary>
@@ -265,5 +304,7 @@ namespace LateBindingApi.Core
 
             throw new LateBindingApiException(TypeDescriptor.GetClassName(comProxy) + " class not found in LateBindingApi.");
         }
+
+        #endregion
     }
 }

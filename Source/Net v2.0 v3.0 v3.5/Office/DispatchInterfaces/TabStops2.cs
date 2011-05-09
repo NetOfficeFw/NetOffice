@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface TabStops2 SupportByLibrary OF12 OF14 
@@ -105,25 +105,25 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TabStop2 Item(object index)
+		public NetOffice.OfficeApi.TabStop2 Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.TabStop2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.TabStop2;
+			NetOffice.OfficeApi.TabStop2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TabStop2;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.OfficeApi.Enums.MsoTabStopType Type</param>
+		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoTabStopType Type</param>
 		/// <param name="Position">Single Position</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.TabStop2 Add(LateBindingApi.OfficeApi.Enums.MsoTabStopType type, Single position)
+		public NetOffice.OfficeApi.TabStop2 Add(NetOffice.OfficeApi.Enums.MsoTabStopType type, Single position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.TabStop2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.TabStop2;
+			NetOffice.OfficeApi.TabStop2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TabStop2;
 			return newObject;
 		}
 

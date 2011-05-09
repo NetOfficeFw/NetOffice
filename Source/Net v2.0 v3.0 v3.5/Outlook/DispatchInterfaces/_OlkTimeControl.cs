@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _OlkTimeControl SupportByLibrary OL12 OL14 
@@ -108,13 +108,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlBackStyle BackStyle
+		public NetOffice.OutlookApi.Enums.OlBackStyle BackStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BackStyle", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlBackStyle)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlBackStyle)returnItem;
 			}
 			set
 			{
@@ -146,13 +146,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlEnterFieldBehavior EnterFieldBehavior
+		public NetOffice.OutlookApi.Enums.OlEnterFieldBehavior EnterFieldBehavior
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EnterFieldBehavior", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlEnterFieldBehavior)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlEnterFieldBehavior)returnItem;
 			}
 			set
 			{
@@ -257,13 +257,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlMousePointer MousePointer
+		public NetOffice.OutlookApi.Enums.OlMousePointer MousePointer
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MousePointer", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlMousePointer)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlMousePointer)returnItem;
 			}
 			set
 			{
@@ -295,13 +295,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlTimeStyle Style
+		public NetOffice.OutlookApi.Enums.OlTimeStyle Style
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlTimeStyle)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlTimeStyle)returnItem;
 			}
 			set
 			{
@@ -352,13 +352,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlTextAlign TextAlign
+		public NetOffice.OutlookApi.Enums.OlTextAlign TextAlign
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextAlign", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlTextAlign)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlTextAlign)returnItem;
 			}
 			set
 			{

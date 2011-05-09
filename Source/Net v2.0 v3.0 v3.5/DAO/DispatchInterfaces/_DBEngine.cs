@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.DAOApi
+namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface _DBEngine SupportByLibrary DAO3.6 DAO12 
@@ -141,13 +141,13 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Workspaces Workspaces
+		public NetOffice.DAOApi.Workspaces Workspaces
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Workspaces", paramsArray);
-				LateBindingApi.DAOApi.Workspaces newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.Workspaces;
+				NetOffice.DAOApi.Workspaces newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Workspaces;
 				return newObject;
 			}
 		}
@@ -156,13 +156,13 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO3.6 DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Errors Errors
+		public NetOffice.DAOApi.Errors Errors
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Errors", paramsArray);
-				LateBindingApi.DAOApi.Errors newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.Errors;
+				NetOffice.DAOApi.Errors newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Errors;
 				return newObject;
 			}
 		}
@@ -289,11 +289,11 @@ namespace LateBindingApi.DAOApi
 		/// <param name="UserName">string UserName</param>
 		/// <param name="Password">string Password</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Workspace _30_CreateWorkspace(string name, string userName, string password)
+		public NetOffice.DAOApi.Workspace _30_CreateWorkspace(string name, string userName, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password);
 			object returnItem = Invoker.MethodReturn(this, "_30_CreateWorkspace", paramsArray);
-			LateBindingApi.DAOApi.Workspace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Workspace;
+			NetOffice.DAOApi.Workspace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Workspace;
 			return newObject;
 		}
 
@@ -305,11 +305,11 @@ namespace LateBindingApi.DAOApi
 		/// <param name="ReadOnly">optional object ReadOnly</param>
 		/// <param name="Connect">optional object Connect</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Database OpenDatabase(string name, object options, object readOnly, object connect)
+		public NetOffice.DAOApi.Database OpenDatabase(string name, object options, object readOnly, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
 			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
-			LateBindingApi.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Database;
+			NetOffice.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Database;
 			return newObject;
 		}
 
@@ -318,11 +318,11 @@ namespace LateBindingApi.DAOApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Database OpenDatabase(string name)
+		public NetOffice.DAOApi.Database OpenDatabase(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
-			LateBindingApi.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Database;
+			NetOffice.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Database;
 			return newObject;
 		}
 
@@ -333,11 +333,11 @@ namespace LateBindingApi.DAOApi
 		/// <param name="Locale">string Locale</param>
 		/// <param name="Option">optional object Option</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Database CreateDatabase(string name, string locale, object option)
+		public NetOffice.DAOApi.Database CreateDatabase(string name, string locale, object option)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, locale, option);
 			object returnItem = Invoker.MethodReturn(this, "CreateDatabase", paramsArray);
-			LateBindingApi.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Database;
+			NetOffice.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Database;
 			return newObject;
 		}
 
@@ -347,11 +347,11 @@ namespace LateBindingApi.DAOApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Locale">string Locale</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Database CreateDatabase(string name, string locale)
+		public NetOffice.DAOApi.Database CreateDatabase(string name, string locale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, locale);
 			object returnItem = Invoker.MethodReturn(this, "CreateDatabase", paramsArray);
-			LateBindingApi.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Database;
+			NetOffice.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Database;
 			return newObject;
 		}
 
@@ -453,11 +453,11 @@ namespace LateBindingApi.DAOApi
 		/// <param name="Password">string Password</param>
 		/// <param name="UseType">optional object UseType</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Workspace CreateWorkspace(string name, string userName, string password, object useType)
+		public NetOffice.DAOApi.Workspace CreateWorkspace(string name, string userName, string password, object useType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password, useType);
 			object returnItem = Invoker.MethodReturn(this, "CreateWorkspace", paramsArray);
-			LateBindingApi.DAOApi.Workspace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Workspace;
+			NetOffice.DAOApi.Workspace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Workspace;
 			return newObject;
 		}
 
@@ -468,11 +468,11 @@ namespace LateBindingApi.DAOApi
 		/// <param name="UserName">string UserName</param>
 		/// <param name="Password">string Password</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Workspace CreateWorkspace(string name, string userName, string password)
+		public NetOffice.DAOApi.Workspace CreateWorkspace(string name, string userName, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password);
 			object returnItem = Invoker.MethodReturn(this, "CreateWorkspace", paramsArray);
-			LateBindingApi.DAOApi.Workspace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Workspace;
+			NetOffice.DAOApi.Workspace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Workspace;
 			return newObject;
 		}
 
@@ -484,11 +484,11 @@ namespace LateBindingApi.DAOApi
 		/// <param name="ReadOnly">optional object ReadOnly</param>
 		/// <param name="Connect">optional object Connect</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Connection OpenConnection(string name, object options, object readOnly, object connect)
+		public NetOffice.DAOApi.Connection OpenConnection(string name, object options, object readOnly, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
 			object returnItem = Invoker.MethodReturn(this, "OpenConnection", paramsArray);
-			LateBindingApi.DAOApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Connection;
+			NetOffice.DAOApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Connection;
 			return newObject;
 		}
 
@@ -497,11 +497,11 @@ namespace LateBindingApi.DAOApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public LateBindingApi.DAOApi.Connection OpenConnection(string name)
+		public NetOffice.DAOApi.Connection OpenConnection(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "OpenConnection", paramsArray);
-			LateBindingApi.DAOApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.DAOApi.Connection;
+			NetOffice.DAOApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Connection;
 			return newObject;
 		}
 

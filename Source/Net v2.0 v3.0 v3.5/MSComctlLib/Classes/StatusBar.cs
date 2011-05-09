@@ -3,25 +3,25 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void StatusBar_PanelClickEventHandler(LateBindingApi.MSComctlLibApi.Panel Panel);
-	public delegate void StatusBar_PanelDblClickEventHandler(LateBindingApi.MSComctlLibApi.Panel Panel);
+	public delegate void StatusBar_PanelClickEventHandler(NetOffice.MSComctlLibApi.Panel Panel);
+	public delegate void StatusBar_PanelDblClickEventHandler(NetOffice.MSComctlLibApi.Panel Panel);
 	public delegate void StatusBar_MouseDownEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
 	public delegate void StatusBar_MouseMoveEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
 	public delegate void StatusBar_MouseUpEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
 	public delegate void StatusBar_ClickEventHandler();
 	public delegate void StatusBar_DblClickEventHandler();
-	public delegate void StatusBar_OLEStartDragEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
+	public delegate void StatusBar_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
 	public delegate void StatusBar_OLEGiveFeedbackEventHandler(ref Int32 Effect, ref bool DefaultCursors);
-	public delegate void StatusBar_OLESetDataEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
+	public delegate void StatusBar_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
 	public delegate void StatusBar_OLECompleteDragEventHandler(ref Int32 Effect);
-	public delegate void StatusBar_OLEDragOverEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
-	public delegate void StatusBar_OLEDragDropEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
+	public delegate void StatusBar_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
+	public delegate void StatusBar_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion

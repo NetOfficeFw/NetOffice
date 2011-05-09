@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface TextRange SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Application Application
+		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -81,13 +81,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.ActionSettings ActionSettings
+		public NetOffice.PowerPointApi.ActionSettings ActionSettings
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActionSettings", paramsArray);
-				LateBindingApi.PowerPointApi.ActionSettings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.ActionSettings;
+				NetOffice.PowerPointApi.ActionSettings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ActionSettings;
 				return newObject;
 			}
 		}
@@ -199,13 +199,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.Font Font
+		public NetOffice.PowerPointApi.Font Font
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				LateBindingApi.PowerPointApi.Font newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.Font;
+				NetOffice.PowerPointApi.Font newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Font;
 				return newObject;
 			}
 		}
@@ -214,13 +214,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.ParagraphFormat ParagraphFormat
+		public NetOffice.PowerPointApi.ParagraphFormat ParagraphFormat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ParagraphFormat", paramsArray);
-				LateBindingApi.PowerPointApi.ParagraphFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.ParagraphFormat;
+				NetOffice.PowerPointApi.ParagraphFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ParagraphFormat;
 				return newObject;
 			}
 		}
@@ -248,13 +248,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoLanguageID LanguageID
+		public NetOffice.OfficeApi.Enums.MsoLanguageID LanguageID
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LanguageID", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoLanguageID)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoLanguageID)returnItem;
 			}
 			set
 			{
@@ -273,11 +273,11 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange Paragraphs(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Paragraphs(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Paragraphs", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -287,11 +287,11 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange Sentences(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Sentences(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Sentences", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -301,11 +301,11 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange Words(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Words(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Words", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -315,11 +315,11 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange Characters(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Characters(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Characters", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -329,11 +329,11 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange Lines(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Lines(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Lines", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -343,11 +343,11 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange Runs(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Runs(Int32 start, Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Runs", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -355,11 +355,11 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange TrimText()
+		public NetOffice.PowerPointApi.TextRange TrimText()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "TrimText", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -368,11 +368,11 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="NewText">string NewText</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange InsertAfter(string newText)
+		public NetOffice.PowerPointApi.TextRange InsertAfter(string newText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newText);
 			object returnItem = Invoker.MethodReturn(this, "InsertAfter", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -381,25 +381,25 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="NewText">string NewText</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange InsertBefore(string newText)
+		public NetOffice.PowerPointApi.TextRange InsertBefore(string newText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newText);
 			object returnItem = Invoker.MethodReturn(this, "InsertBefore", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="DateTimeFormat">LateBindingApi.PowerPointApi.Enums.PpDateTimeFormat DateTimeFormat</param>
-		/// <param name="InsertAsField">LateBindingApi.OfficeApi.Enums.MsoTriState InsertAsField</param>
+		/// <param name="DateTimeFormat">NetOffice.PowerPointApi.Enums.PpDateTimeFormat DateTimeFormat</param>
+		/// <param name="InsertAsField">NetOffice.OfficeApi.Enums.MsoTriState InsertAsField</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange InsertDateTime(LateBindingApi.PowerPointApi.Enums.PpDateTimeFormat dateTimeFormat, LateBindingApi.OfficeApi.Enums.MsoTriState insertAsField)
+		public NetOffice.PowerPointApi.TextRange InsertDateTime(NetOffice.PowerPointApi.Enums.PpDateTimeFormat dateTimeFormat, NetOffice.OfficeApi.Enums.MsoTriState insertAsField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField);
 			object returnItem = Invoker.MethodReturn(this, "InsertDateTime", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -407,11 +407,11 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange InsertSlideNumber()
+		public NetOffice.PowerPointApi.TextRange InsertSlideNumber()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "InsertSlideNumber", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -420,13 +420,13 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="FontName">string FontName</param>
 		/// <param name="CharNumber">Int32 CharNumber</param>
-		/// <param name="Unicode">LateBindingApi.OfficeApi.Enums.MsoTriState Unicode</param>
+		/// <param name="Unicode">NetOffice.OfficeApi.Enums.MsoTriState Unicode</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange InsertSymbol(string fontName, Int32 charNumber, LateBindingApi.OfficeApi.Enums.MsoTriState unicode)
+		public NetOffice.PowerPointApi.TextRange InsertSymbol(string fontName, Int32 charNumber, NetOffice.OfficeApi.Enums.MsoTriState unicode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName, charNumber, unicode);
 			object returnItem = Invoker.MethodReturn(this, "InsertSymbol", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -474,20 +474,20 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange Paste()
+		public NetOffice.PowerPointApi.TextRange Paste()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.PowerPointApi.Enums.PpChangeCase Type</param>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.PpChangeCase Type</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public void ChangeCase(LateBindingApi.PowerPointApi.Enums.PpChangeCase type)
+		public void ChangeCase(NetOffice.PowerPointApi.Enums.PpChangeCase type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "ChangeCase", paramsArray);
@@ -518,14 +518,14 @@ namespace LateBindingApi.PowerPointApi
 		/// </summary>
 		/// <param name="FindWhat">string FindWhat</param>
 		/// <param name="After">Int32 After</param>
-		/// <param name="MatchCase">LateBindingApi.OfficeApi.Enums.MsoTriState MatchCase</param>
-		/// <param name="WholeWords">LateBindingApi.OfficeApi.Enums.MsoTriState WholeWords</param>
+		/// <param name="MatchCase">NetOffice.OfficeApi.Enums.MsoTriState MatchCase</param>
+		/// <param name="WholeWords">NetOffice.OfficeApi.Enums.MsoTriState WholeWords</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange Find(string findWhat, Int32 after, LateBindingApi.OfficeApi.Enums.MsoTriState matchCase, LateBindingApi.OfficeApi.Enums.MsoTriState wholeWords)
+		public NetOffice.PowerPointApi.TextRange Find(string findWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase, NetOffice.OfficeApi.Enums.MsoTriState wholeWords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after, matchCase, wholeWords);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -535,14 +535,14 @@ namespace LateBindingApi.PowerPointApi
 		/// <param name="FindWhat">string FindWhat</param>
 		/// <param name="ReplaceWhat">string ReplaceWhat</param>
 		/// <param name="After">Int32 After</param>
-		/// <param name="MatchCase">LateBindingApi.OfficeApi.Enums.MsoTriState MatchCase</param>
-		/// <param name="WholeWords">LateBindingApi.OfficeApi.Enums.MsoTriState WholeWords</param>
+		/// <param name="MatchCase">NetOffice.OfficeApi.Enums.MsoTriState MatchCase</param>
+		/// <param name="WholeWords">NetOffice.OfficeApi.Enums.MsoTriState WholeWords</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat, Int32 after, LateBindingApi.OfficeApi.Enums.MsoTriState matchCase, LateBindingApi.OfficeApi.Enums.MsoTriState wholeWords)
+		public NetOffice.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase, NetOffice.OfficeApi.Enums.MsoTriState wholeWords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after, matchCase, wholeWords);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 
@@ -596,18 +596,18 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="DataType">LateBindingApi.PowerPointApi.Enums.PpPasteDataType DataType</param>
-		/// <param name="DisplayAsIcon">LateBindingApi.OfficeApi.Enums.MsoTriState DisplayAsIcon</param>
+		/// <param name="DataType">NetOffice.PowerPointApi.Enums.PpPasteDataType DataType</param>
+		/// <param name="DisplayAsIcon">NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon</param>
 		/// <param name="IconFileName">string IconFileName</param>
 		/// <param name="IconIndex">Int32 IconIndex</param>
 		/// <param name="IconLabel">string IconLabel</param>
-		/// <param name="Link">LateBindingApi.OfficeApi.Enums.MsoTriState Link</param>
+		/// <param name="Link">NetOffice.OfficeApi.Enums.MsoTriState Link</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.TextRange PasteSpecial(LateBindingApi.PowerPointApi.Enums.PpPasteDataType dataType, LateBindingApi.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel, LateBindingApi.OfficeApi.Enums.MsoTriState link)
+		public NetOffice.PowerPointApi.TextRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel, NetOffice.OfficeApi.Enums.MsoTriState link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex, iconLabel, link);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
-			LateBindingApi.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.PowerPointApi.TextRange;
+			NetOffice.PowerPointApi.TextRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextRange;
 			return newObject;
 		}
 

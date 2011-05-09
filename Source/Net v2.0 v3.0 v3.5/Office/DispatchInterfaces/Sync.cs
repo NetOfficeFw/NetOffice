@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Sync SupportByLibrary OF11 OF12 OF14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoSyncStatusType Status
+		public NetOffice.OfficeApi.Enums.MsoSyncStatusType Status
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Status", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoSyncStatusType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoSyncStatusType)returnItem;
 			}
 		}
 
@@ -102,13 +102,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoSyncErrorType ErrorType
+		public NetOffice.OfficeApi.Enums.MsoSyncErrorType ErrorType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ErrorType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoSyncErrorType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoSyncErrorType)returnItem;
 			}
 		}
 
@@ -154,9 +154,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="SyncVersionType">LateBindingApi.OfficeApi.Enums.MsoSyncVersionType SyncVersionType</param>
+		/// <param name="SyncVersionType">NetOffice.OfficeApi.Enums.MsoSyncVersionType SyncVersionType</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public void OpenVersion(LateBindingApi.OfficeApi.Enums.MsoSyncVersionType syncVersionType)
+		public void OpenVersion(NetOffice.OfficeApi.Enums.MsoSyncVersionType syncVersionType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(syncVersionType);
 			Invoker.Method(this, "OpenVersion", paramsArray);
@@ -165,9 +165,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="SyncConflictResolution">LateBindingApi.OfficeApi.Enums.MsoSyncConflictResolutionType SyncConflictResolution</param>
+		/// <param name="SyncConflictResolution">NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType SyncConflictResolution</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public void ResolveConflict(LateBindingApi.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution)
+		public void ResolveConflict(NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(syncConflictResolution);
 			Invoker.Method(this, "ResolveConflict", paramsArray);

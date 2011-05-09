@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.DAOApi
+namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Field2 SupportByLibrary DAO12 
@@ -51,13 +51,13 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO12")]
-		public LateBindingApi.DAOApi.Properties Properties
+		public NetOffice.DAOApi.Properties Properties
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				LateBindingApi.DAOApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.Properties;
+				NetOffice.DAOApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Properties;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.DAOApi
 		/// SupportByLibrary DAO12 
 		/// </summary>
 		[SupportByLibrary("DAO12")]
-		public LateBindingApi.DAOApi.ComplexType ComplexType
+		public NetOffice.DAOApi.ComplexType ComplexType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ComplexType", paramsArray);
-				LateBindingApi.DAOApi.ComplexType newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.DAOApi.ComplexType;
+				NetOffice.DAOApi.ComplexType newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.ComplexType;
 				return newObject;
 			}
 		}

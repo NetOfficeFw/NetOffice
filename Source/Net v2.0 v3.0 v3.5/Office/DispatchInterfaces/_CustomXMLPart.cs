@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface _CustomXMLPart SupportByLibrary OF12 OF14 
@@ -66,13 +66,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNode DocumentElement
+		public NetOffice.OfficeApi.CustomXMLNode DocumentElement
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DocumentElement", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLNode;
+				NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLNode;
 				return newObject;
 			}
 		}
@@ -109,13 +109,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLSchemaCollection SchemaCollection
+		public NetOffice.OfficeApi.CustomXMLSchemaCollection SchemaCollection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaCollection", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLSchemaCollection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLSchemaCollection;
+				NetOffice.OfficeApi.CustomXMLSchemaCollection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLSchemaCollection;
 				return newObject;
 			}
 			set
@@ -129,13 +129,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLPrefixMappings NamespaceManager
+		public NetOffice.OfficeApi.CustomXMLPrefixMappings NamespaceManager
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NamespaceManager", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLPrefixMappings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLPrefixMappings;
+				NetOffice.OfficeApi.CustomXMLPrefixMappings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLPrefixMappings;
 				return newObject;
 			}
 		}
@@ -158,13 +158,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLValidationErrors Errors
+		public NetOffice.OfficeApi.CustomXMLValidationErrors Errors
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Errors", paramsArray);
-				LateBindingApi.OfficeApi.CustomXMLValidationErrors newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLValidationErrors;
+				NetOffice.OfficeApi.CustomXMLValidationErrors newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLValidationErrors;
 				return newObject;
 			}
 		}
@@ -190,14 +190,14 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Parent">LateBindingApi.OfficeApi.CustomXMLNode Parent</param>
+		/// <param name="Parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		/// <param name="Name">string Name</param>
 		/// <param name="NamespaceURI">string NamespaceURI</param>
-		/// <param name="NextSibling">LateBindingApi.OfficeApi.CustomXMLNode NextSibling</param>
-		/// <param name="NodeType">LateBindingApi.OfficeApi.Enums.MsoCustomXMLNodeType NodeType</param>
+		/// <param name="NextSibling">NetOffice.OfficeApi.CustomXMLNode NextSibling</param>
+		/// <param name="NodeType">NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType</param>
 		/// <param name="NodeValue">string NodeValue</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void AddNode(LateBindingApi.OfficeApi.CustomXMLNode parent, string name, string namespaceURI, LateBindingApi.OfficeApi.CustomXMLNode nextSibling, LateBindingApi.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue)
+		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, string name, string namespaceURI, NetOffice.OfficeApi.CustomXMLNode nextSibling, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parent, name, namespaceURI, nextSibling, nodeType, nodeValue);
 			Invoker.Method(this, "AddNode", paramsArray);
@@ -242,11 +242,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="XPath">string XPath</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNodes SelectNodes(string xPath)
+		public NetOffice.OfficeApi.CustomXMLNodes SelectNodes(string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
 			object returnItem = Invoker.MethodReturn(this, "SelectNodes", paramsArray);
-			LateBindingApi.OfficeApi.CustomXMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.CustomXMLNodes;
+			NetOffice.OfficeApi.CustomXMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLNodes;
 			return newObject;
 		}
 
@@ -255,11 +255,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="XPath">string XPath</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLNode SelectSingleNode(string xPath)
+		public NetOffice.OfficeApi.CustomXMLNode SelectSingleNode(string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
 			object returnItem = Invoker.MethodReturn(this, "SelectSingleNode", paramsArray);
-			LateBindingApi.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.CustomXMLNode;
+			NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLNode;
 			return newObject;
 		}
 

@@ -3,23 +3,23 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.ADODBApi
+namespace NetOffice.ADODBApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Recordset_WillChangeFieldEventHandler(Int32 cFields, COMObject Fields, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Recordset pRecordset);
-	public delegate void Recordset_FieldChangeCompleteEventHandler(Int32 cFields, COMObject Fields, LateBindingApi.ADODBApi.Error pError, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Recordset pRecordset);
-	public delegate void Recordset_WillChangeRecordEventHandler(LateBindingApi.ADODBApi.Enums.EventReasonEnum adReason, Int32 cRecords, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Recordset pRecordset);
-	public delegate void Recordset_RecordChangeCompleteEventHandler(LateBindingApi.ADODBApi.Enums.EventReasonEnum adReason, Int32 cRecords, LateBindingApi.ADODBApi.Error pError, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Recordset pRecordset);
-	public delegate void Recordset_WillChangeRecordsetEventHandler(LateBindingApi.ADODBApi.Enums.EventReasonEnum adReason, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Recordset pRecordset);
-	public delegate void Recordset_RecordsetChangeCompleteEventHandler(LateBindingApi.ADODBApi.Enums.EventReasonEnum adReason, LateBindingApi.ADODBApi.Error pError, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Recordset pRecordset);
-	public delegate void Recordset_WillMoveEventHandler(LateBindingApi.ADODBApi.Enums.EventReasonEnum adReason, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Recordset pRecordset);
-	public delegate void Recordset_MoveCompleteEventHandler(LateBindingApi.ADODBApi.Enums.EventReasonEnum adReason, LateBindingApi.ADODBApi.Error pError, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Recordset pRecordset);
-	public delegate void Recordset_EndOfRecordsetEventHandler(ref bool fMoreData, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Recordset pRecordset);
-	public delegate void Recordset_FetchProgressEventHandler(Int32 Progress, Int32 MaxProgress, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Recordset pRecordset);
-	public delegate void Recordset_FetchCompleteEventHandler(LateBindingApi.ADODBApi.Error pError, LateBindingApi.ADODBApi.Enums.EventStatusEnum adStatus, LateBindingApi.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_WillChangeFieldEventHandler(Int32 cFields, COMObject Fields, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_FieldChangeCompleteEventHandler(Int32 cFields, COMObject Fields, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_WillChangeRecordEventHandler(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, Int32 cRecords, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_RecordChangeCompleteEventHandler(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, Int32 cRecords, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_WillChangeRecordsetEventHandler(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_RecordsetChangeCompleteEventHandler(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_WillMoveEventHandler(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_MoveCompleteEventHandler(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_EndOfRecordsetEventHandler(ref bool fMoreData, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_FetchProgressEventHandler(Int32 Progress, Int32 MaxProgress, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_FetchCompleteEventHandler(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
 	#pragma warning restore
 
 	#endregion

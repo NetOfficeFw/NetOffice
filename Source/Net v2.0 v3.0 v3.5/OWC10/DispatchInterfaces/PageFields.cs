@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PageFields SupportByLibrary XWC1.0 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageField get_Item(object index)
+		public NetOffice.OWC10Api.PageField get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PageField;
+			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageField;
 			return newObject;
 		}
 
@@ -96,14 +96,14 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="Source">object Source</param>
 		/// <param name="FieldType">object FieldType</param>
 		/// <param name="Name">object Name</param>
-		/// <param name="TotalType">LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
+		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageField Add(object source, object fieldType, object name, LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
+		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.PageField;
+			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PageField;
 			return newObject;
 		}
 
@@ -113,13 +113,13 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="Source">object Source</param>
 		/// <param name="FieldType">object FieldType</param>
 		/// <param name="Name">object Name</param>
-		/// <param name="TotalType">LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
+		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageField Add(object source, object fieldType, object name, LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum totalType)
+		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.PageField;
+			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PageField;
 			return newObject;
 		}
 
@@ -129,14 +129,14 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="Source">object Source</param>
 		/// <param name="FieldType">object FieldType</param>
 		/// <param name="Name">object Name</param>
-		/// <param name="TotalType">LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
+		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageField AddBroken(object source, object fieldType, object name, LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
+		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
 			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
-			LateBindingApi.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.PageField;
+			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PageField;
 			return newObject;
 		}
 
@@ -146,13 +146,13 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="Source">object Source</param>
 		/// <param name="FieldType">object FieldType</param>
 		/// <param name="Name">object Name</param>
-		/// <param name="TotalType">LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
+		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageField AddBroken(object source, object fieldType, object name, LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum totalType)
+		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType);
 			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
-			LateBindingApi.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.PageField;
+			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PageField;
 			return newObject;
 		}
 

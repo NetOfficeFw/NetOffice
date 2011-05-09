@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface ProtectedViewWindow SupportByLibrary XL14 
@@ -226,13 +226,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlProtectedViewWindowState WindowState
+		public NetOffice.ExcelApi.Enums.XlProtectedViewWindowState WindowState
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WindowState", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlProtectedViewWindowState)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlProtectedViewWindowState)returnItem;
 			}
 			set
 			{
@@ -245,13 +245,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Workbook Workbook
+		public NetOffice.ExcelApi.Workbook Workbook
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Workbook", paramsArray);
-				LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Workbook;
+				NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 				return newObject;
 			}
 		}
@@ -287,11 +287,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="WriteResPassword">optional object WriteResPassword</param>
 		/// <param name="UpdateLinks">optional object UpdateLinks</param>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Workbook Edit(object writeResPassword, object updateLinks)
+		public NetOffice.ExcelApi.Workbook Edit(object writeResPassword, object updateLinks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(writeResPassword, updateLinks);
 			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -299,11 +299,11 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.Workbook Edit()
+		public NetOffice.ExcelApi.Workbook Edit()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray);
-			LateBindingApi.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 

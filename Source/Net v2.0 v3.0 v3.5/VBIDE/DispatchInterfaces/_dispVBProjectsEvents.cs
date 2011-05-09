@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _dispVBProjectsEvents SupportByLibrary VBE5.3 VBE12 
@@ -54,9 +54,9 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="VBProject">LateBindingApi.VBIDEApi.VBProject VBProject</param>
+		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void ItemAdded(LateBindingApi.VBIDEApi.VBProject vBProject)
+		public void ItemAdded(NetOffice.VBIDEApi.VBProject vBProject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
 			Invoker.Method(this, "ItemAdded", paramsArray);
@@ -65,9 +65,9 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="VBProject">LateBindingApi.VBIDEApi.VBProject VBProject</param>
+		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void ItemRemoved(LateBindingApi.VBIDEApi.VBProject vBProject)
+		public void ItemRemoved(NetOffice.VBIDEApi.VBProject vBProject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
 			Invoker.Method(this, "ItemRemoved", paramsArray);
@@ -76,10 +76,10 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="VBProject">LateBindingApi.VBIDEApi.VBProject VBProject</param>
+		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		/// <param name="OldName">string OldName</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void ItemRenamed(LateBindingApi.VBIDEApi.VBProject vBProject, string oldName)
+		public void ItemRenamed(NetOffice.VBIDEApi.VBProject vBProject, string oldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject, oldName);
 			Invoker.Method(this, "ItemRenamed", paramsArray);
@@ -88,9 +88,9 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="VBProject">LateBindingApi.VBIDEApi.VBProject VBProject</param>
+		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void ItemActivated(LateBindingApi.VBIDEApi.VBProject vBProject)
+		public void ItemActivated(NetOffice.VBIDEApi.VBProject vBProject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
 			Invoker.Method(this, "ItemActivated", paramsArray);

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface IBlogExtensibility SupportByLibrary OF12 OF14 
@@ -56,10 +56,10 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="BlogProvider">ref string BlogProvider</param>
 		/// <param name="FriendlyName">ref string FriendlyName</param>
-		/// <param name="CategorySupport">LateBindingApi.OfficeApi.Enums.MsoBlogCategorySupport CategorySupport</param>
+		/// <param name="CategorySupport">NetOffice.OfficeApi.Enums.MsoBlogCategorySupport CategorySupport</param>
 		/// <param name="Padding">ref bool Padding</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void BlogProviderProperties(ref string blogProvider, ref string friendlyName, LateBindingApi.OfficeApi.Enums.MsoBlogCategorySupport categorySupport, ref bool padding)
+		public void BlogProviderProperties(ref string blogProvider, ref string friendlyName, NetOffice.OfficeApi.Enums.MsoBlogCategorySupport categorySupport, ref bool padding)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(blogProvider, friendlyName, categorySupport, padding);

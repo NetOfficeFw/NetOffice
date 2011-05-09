@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ViewSurface SupportByLibrary XWC1.0 
@@ -90,10 +90,10 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="TextFormat">LateBindingApi.OWC10Api.TextFormat TextFormat</param>
+		/// <param name="TextFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
 		/// <param name="Text">object Text</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 get_TextHeight(LateBindingApi.OWC10Api.TextFormat textFormat, object text)
+		public Int32 get_TextHeight(NetOffice.OWC10Api.TextFormat textFormat, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(textFormat, text);
 			object returnItem = Invoker.PropertyGet(this, "TextHeight", paramsArray);
@@ -103,10 +103,10 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="TextFormat">LateBindingApi.OWC10Api.TextFormat TextFormat</param>
+		/// <param name="TextFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
 		/// <param name="Text">object Text</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 get_TextWidth(LateBindingApi.OWC10Api.TextFormat textFormat, object text)
+		public Int32 get_TextWidth(NetOffice.OWC10Api.TextFormat textFormat, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(textFormat, text);
 			object returnItem = Invoker.PropertyGet(this, "TextWidth", paramsArray);
@@ -204,10 +204,10 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
-		/// <param name="TextFormat">LateBindingApi.OWC10Api.TextFormat TextFormat</param>
+		/// <param name="TextFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
 		/// <param name="Text">object Text</param>
 		[SupportByLibrary("XWC1.0")]
-		public void Text(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, LateBindingApi.OWC10Api.TextFormat textFormat, object text)
+		public void Text(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, NetOffice.OWC10Api.TextFormat textFormat, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cx1, cy1, cx2, cy2, left, top, width, height, textFormat, text);
 			Invoker.Method(this, "Text", paramsArray);

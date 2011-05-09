@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {	
 	#pragma warning disable
 	
@@ -366,7 +366,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as LateBindingApi.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAttachment;
 			foreach(Delegate delItem in recipients)
@@ -382,7 +382,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as LateBindingApi.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAttachment;
 			foreach(Delegate delItem in recipients)
@@ -398,7 +398,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as LateBindingApi.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
@@ -436,7 +436,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as LateBindingApi.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAttachment;
 			foreach(Delegate delItem in recipients)
@@ -452,7 +452,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as LateBindingApi.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
@@ -471,7 +471,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as LateBindingApi.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
@@ -490,7 +490,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as LateBindingApi.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
@@ -509,7 +509,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as LateBindingApi.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);

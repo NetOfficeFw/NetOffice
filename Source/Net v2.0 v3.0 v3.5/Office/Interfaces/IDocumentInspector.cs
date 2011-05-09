@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface IDocumentInspector SupportByLibrary OF12 OF14 
@@ -70,11 +70,11 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		/// <param name="Doc">object Doc</param>
-		/// <param name="Status">LateBindingApi.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
+		/// <param name="Status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
 		/// <param name="Result">ref string Result</param>
 		/// <param name="Action">ref string Action</param>
 		[SupportByLibrary("OF12","OF14")]
-		public Int32 Inspect(object doc, LateBindingApi.OfficeApi.Enums.MsoDocInspectorStatus status, ref string result, ref string action)
+		public Int32 Inspect(object doc, NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, ref string result, ref string action)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, status, result, action);
@@ -89,10 +89,10 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Doc">object Doc</param>
 		/// <param name="Hwnd">Int32 Hwnd</param>
-		/// <param name="Status">LateBindingApi.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
+		/// <param name="Status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
 		/// <param name="Result">ref string Result</param>
 		[SupportByLibrary("OF12","OF14")]
-		public Int32 Fix(object doc, Int32 hwnd, LateBindingApi.OfficeApi.Enums.MsoDocInspectorStatus status, ref string result)
+		public Int32 Fix(object doc, Int32 hwnd, NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, ref string result)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, hwnd, status, result);

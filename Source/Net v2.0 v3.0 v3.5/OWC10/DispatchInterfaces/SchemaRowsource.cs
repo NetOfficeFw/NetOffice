@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface SchemaRowsource SupportByLibrary XWC1.0 
@@ -70,13 +70,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscRowsourceTypeEnum Type
+		public NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscRowsourceTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum)returnItem;
 			}
 			set
 			{
@@ -103,13 +103,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaFields SchemaFields
+		public NetOffice.OWC10Api.SchemaFields SchemaFields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaFields", paramsArray);
-				LateBindingApi.OWC10Api.SchemaFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaFields;
+				NetOffice.OWC10Api.SchemaFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaFields;
 				return newObject;
 			}
 		}
@@ -118,13 +118,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.LookupSchemaRelationships LookupSchemaRelationships
+		public NetOffice.OWC10Api.LookupSchemaRelationships LookupSchemaRelationships
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LookupSchemaRelationships", paramsArray);
-				LateBindingApi.OWC10Api.LookupSchemaRelationships newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.LookupSchemaRelationships;
+				NetOffice.OWC10Api.LookupSchemaRelationships newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.LookupSchemaRelationships;
 				return newObject;
 			}
 		}
@@ -133,13 +133,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SublistSchemaRelationships SublistSchemaRelationships
+		public NetOffice.OWC10Api.SublistSchemaRelationships SublistSchemaRelationships
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SublistSchemaRelationships", paramsArray);
-				LateBindingApi.OWC10Api.SublistSchemaRelationships newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SublistSchemaRelationships;
+				NetOffice.OWC10Api.SublistSchemaRelationships newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SublistSchemaRelationships;
 				return newObject;
 			}
 		}
@@ -148,13 +148,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaParameters SchemaParameters
+		public NetOffice.OWC10Api.SchemaParameters SchemaParameters
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaParameters", paramsArray);
-				LateBindingApi.OWC10Api.SchemaParameters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaParameters;
+				NetOffice.OWC10Api.SchemaParameters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaParameters;
 				return newObject;
 			}
 		}
@@ -163,13 +163,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaProperties Properties
+		public NetOffice.OWC10Api.SchemaProperties Properties
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				LateBindingApi.OWC10Api.SchemaProperties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaProperties;
+				NetOffice.OWC10Api.SchemaProperties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaProperties;
 				return newObject;
 			}
 		}

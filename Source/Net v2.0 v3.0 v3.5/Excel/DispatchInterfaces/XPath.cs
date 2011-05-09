@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface XPath SupportByLibrary XL11 XL12 XL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -123,13 +123,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.XmlMap Map
+		public NetOffice.ExcelApi.XmlMap Map
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Map", paramsArray);
-				LateBindingApi.ExcelApi.XmlMap newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.XmlMap;
+				NetOffice.ExcelApi.XmlMap newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.XmlMap;
 				return newObject;
 			}
 		}
@@ -155,12 +155,12 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Map">LateBindingApi.ExcelApi.XmlMap Map</param>
+		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="XPath">string XPath</param>
 		/// <param name="SelectionNamespace">optional object SelectionNamespace</param>
 		/// <param name="Repeating">optional object Repeating</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public void SetValue(LateBindingApi.ExcelApi.XmlMap map, string xPath, object selectionNamespace, object repeating)
+		public void SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace, object repeating)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath, selectionNamespace, repeating);
 			Invoker.Method(this, "SetValue", paramsArray);
@@ -169,10 +169,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Map">LateBindingApi.ExcelApi.XmlMap Map</param>
+		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="XPath">string XPath</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public void SetValue(LateBindingApi.ExcelApi.XmlMap map, string xPath)
+		public void SetValue(NetOffice.ExcelApi.XmlMap map, string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath);
 			Invoker.Method(this, "SetValue", paramsArray);

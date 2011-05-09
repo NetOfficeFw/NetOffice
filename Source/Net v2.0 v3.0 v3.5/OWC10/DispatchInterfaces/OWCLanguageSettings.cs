@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface OWCLanguageSettings SupportByLibrary XWC1.0 
@@ -65,9 +65,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="id">LateBindingApi.OWC10Api.Enums.MsoAppLanguageID id</param>
+		/// <param name="id">NetOffice.OWC10Api.Enums.MsoAppLanguageID id</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 get_LanguageID(LateBindingApi.OWC10Api.Enums.MsoAppLanguageID id)
+		public Int32 get_LanguageID(NetOffice.OWC10Api.Enums.MsoAppLanguageID id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id);
 			object returnItem = Invoker.PropertyGet(this, "LanguageID", paramsArray);
@@ -77,9 +77,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="lid">LateBindingApi.OWC10Api.Enums.MsoLanguageID lid</param>
+		/// <param name="lid">NetOffice.OWC10Api.Enums.MsoLanguageID lid</param>
 		[SupportByLibrary("XWC1.0")]
-		public bool get_LanguagePreferredForEditing(LateBindingApi.OWC10Api.Enums.MsoLanguageID lid)
+		public bool get_LanguagePreferredForEditing(NetOffice.OWC10Api.Enums.MsoLanguageID lid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lid);
 			object returnItem = Invoker.PropertyGet(this, "LanguagePreferredForEditing", paramsArray);

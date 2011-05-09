@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface _CustomXMLSchemaCollection SupportByLibrary OF12 OF14 
@@ -82,11 +82,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLSchema get_Item(object index)
+		public NetOffice.OfficeApi.CustomXMLSchema get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.CustomXMLSchema newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CustomXMLSchema;
+			NetOffice.OfficeApi.CustomXMLSchema newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLSchema;
 			return newObject;
 		}
 
@@ -114,20 +114,20 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="FileName">string FileName</param>
 		/// <param name="InstallForAllUsers">bool InstallForAllUsers</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.CustomXMLSchema Add(string namespaceURI, string alias, string fileName, bool installForAllUsers)
+		public NetOffice.OfficeApi.CustomXMLSchema Add(string namespaceURI, string alias, string fileName, bool installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName, installForAllUsers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.CustomXMLSchema newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.CustomXMLSchema;
+			NetOffice.OfficeApi.CustomXMLSchema newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLSchema;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="SchemaCollection">LateBindingApi.OfficeApi.CustomXMLSchemaCollection SchemaCollection</param>
+		/// <param name="SchemaCollection">NetOffice.OfficeApi.CustomXMLSchemaCollection SchemaCollection</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void AddCollection(LateBindingApi.OfficeApi.CustomXMLSchemaCollection schemaCollection)
+		public void AddCollection(NetOffice.OfficeApi.CustomXMLSchemaCollection schemaCollection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaCollection);
 			Invoker.Method(this, "AddCollection", paramsArray);

@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {	
 	#pragma warning disable
 	
@@ -69,7 +69,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.NavigationFolder newNavigationFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as LateBindingApi.OutlookApi.NavigationFolder;
+			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNavigationFolder;
 			foreach(Delegate delItem in recipients)
@@ -85,7 +85,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.NavigationFolder newNavigationFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as LateBindingApi.OutlookApi.NavigationFolder;
+			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNavigationFolder;
 			foreach(Delegate delItem in recipients)

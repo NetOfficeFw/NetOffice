@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface ListObjects SupportByLibrary XL11 XL12 XL14 
@@ -52,13 +52,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -67,13 +67,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -98,13 +98,13 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.ExcelApi.ListObject this[object index]
+		public NetOffice.ExcelApi.ListObject this[object index]
 		{
 			get
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			LateBindingApi.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.ListObject;
+			NetOffice.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ListObject;
 			return newObject;
 			}
 		}
@@ -114,11 +114,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.ListObject get_Item(object index)
+		public NetOffice.ExcelApi.ListObject get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.ListObject;
+			NetOffice.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ListObject;
 			return newObject;
 		}
 
@@ -143,84 +143,84 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL11 
 		/// </summary>
-		/// <param name="SourceType">LateBindingApi.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
+		/// <param name="SourceType">NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
 		/// <param name="Source">object Source</param>
 		/// <param name="LinkSource">object LinkSource</param>
-		/// <param name="XlListObjectHasHeaders">LateBindingApi.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
+		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
 		/// <param name="Destination">optional object Destination</param>
 		[SupportByLibrary("XL11")]
-		public LateBindingApi.ExcelApi.ListObject Add(LateBindingApi.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, LateBindingApi.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination)
+		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.ListObject;
+			NetOffice.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListObject;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="SourceType">LateBindingApi.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
+		/// <param name="SourceType">NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
 		/// <param name="Source">object Source</param>
 		/// <param name="LinkSource">object LinkSource</param>
-		/// <param name="XlListObjectHasHeaders">LateBindingApi.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
+		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
 		/// <param name="Destination">optional object Destination</param>
 		/// <param name="TableStyleName">optional object TableStyleName</param>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.ListObject Add(LateBindingApi.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, LateBindingApi.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination, object tableStyleName)
+		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination, object tableStyleName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination, tableStyleName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.ListObject;
+			NetOffice.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListObject;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="SourceType">LateBindingApi.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
+		/// <param name="SourceType">NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
 		/// <param name="Source">object Source</param>
 		/// <param name="LinkSource">object LinkSource</param>
-		/// <param name="XlListObjectHasHeaders">LateBindingApi.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
+		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
 		[SupportByLibrary("XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.ListObject Add(LateBindingApi.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, LateBindingApi.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders)
+		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.ListObject;
+			NetOffice.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListObject;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="SourceType">LateBindingApi.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
+		/// <param name="SourceType">NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
 		/// <param name="Source">object Source</param>
 		/// <param name="LinkSource">object LinkSource</param>
-		/// <param name="XlListObjectHasHeaders">LateBindingApi.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
+		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
 		/// <param name="Destination">optional object Destination</param>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.ListObject _Add(LateBindingApi.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, LateBindingApi.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination)
+		public NetOffice.ExcelApi.ListObject _Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			LateBindingApi.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.ListObject;
+			NetOffice.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListObject;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
-		/// <param name="SourceType">LateBindingApi.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
+		/// <param name="SourceType">NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
 		/// <param name="Source">object Source</param>
 		/// <param name="LinkSource">object LinkSource</param>
-		/// <param name="XlListObjectHasHeaders">LateBindingApi.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
+		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.ExcelApi.ListObject _Add(LateBindingApi.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, LateBindingApi.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders)
+		public NetOffice.ExcelApi.ListObject _Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			LateBindingApi.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.ListObject;
+			NetOffice.ExcelApi.ListObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListObject;
 			return newObject;
 		}
 

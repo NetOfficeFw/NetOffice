@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 
 	#region Delegates
@@ -15,12 +15,12 @@ namespace LateBindingApi.MSComctlLibApi
 	public delegate void ImageCombo_KeyDownEventHandler(Int16 KeyCode, Int16 Shift);
 	public delegate void ImageCombo_KeyUpEventHandler(Int16 KeyCode, Int16 Shift);
 	public delegate void ImageCombo_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void ImageCombo_OLEStartDragEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
+	public delegate void ImageCombo_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
 	public delegate void ImageCombo_OLEGiveFeedbackEventHandler(ref Int32 Effect, ref bool DefaultCursors);
-	public delegate void ImageCombo_OLESetDataEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
+	public delegate void ImageCombo_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
 	public delegate void ImageCombo_OLECompleteDragEventHandler(ref Int32 Effect);
-	public delegate void ImageCombo_OLEDragOverEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
-	public delegate void ImageCombo_OLEDragDropEventHandler(ref LateBindingApi.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
+	public delegate void ImageCombo_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
+	public delegate void ImageCombo_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion

@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 
 	#region Delegates
@@ -18,33 +18,33 @@ namespace LateBindingApi.ExcelApi
 	public delegate void Workbook_NewSheetEventHandler(COMObject Sh);
 	public delegate void Workbook_AddinInstallEventHandler();
 	public delegate void Workbook_AddinUninstallEventHandler();
-	public delegate void Workbook_WindowResizeEventHandler(LateBindingApi.ExcelApi.Window Wn);
-	public delegate void Workbook_WindowActivateEventHandler(LateBindingApi.ExcelApi.Window Wn);
-	public delegate void Workbook_WindowDeactivateEventHandler(LateBindingApi.ExcelApi.Window Wn);
-	public delegate void Workbook_SheetSelectionChangeEventHandler(COMObject Sh, LateBindingApi.ExcelApi.Range Target);
-	public delegate void Workbook_SheetBeforeDoubleClickEventHandler(COMObject Sh, LateBindingApi.ExcelApi.Range Target, ref bool Cancel);
-	public delegate void Workbook_SheetBeforeRightClickEventHandler(COMObject Sh, LateBindingApi.ExcelApi.Range Target, ref bool Cancel);
+	public delegate void Workbook_WindowResizeEventHandler(NetOffice.ExcelApi.Window Wn);
+	public delegate void Workbook_WindowActivateEventHandler(NetOffice.ExcelApi.Window Wn);
+	public delegate void Workbook_WindowDeactivateEventHandler(NetOffice.ExcelApi.Window Wn);
+	public delegate void Workbook_SheetSelectionChangeEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target);
+	public delegate void Workbook_SheetBeforeDoubleClickEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target, ref bool Cancel);
+	public delegate void Workbook_SheetBeforeRightClickEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target, ref bool Cancel);
 	public delegate void Workbook_SheetActivateEventHandler(COMObject Sh);
 	public delegate void Workbook_SheetDeactivateEventHandler(COMObject Sh);
 	public delegate void Workbook_SheetCalculateEventHandler(COMObject Sh);
-	public delegate void Workbook_SheetChangeEventHandler(COMObject Sh, LateBindingApi.ExcelApi.Range Target);
-	public delegate void Workbook_SheetFollowHyperlinkEventHandler(COMObject Sh, LateBindingApi.ExcelApi.Hyperlink Target);
-	public delegate void Workbook_SheetPivotTableUpdateEventHandler(COMObject Sh, LateBindingApi.ExcelApi.PivotTable Target);
-	public delegate void Workbook_PivotTableCloseConnectionEventHandler(LateBindingApi.ExcelApi.PivotTable Target);
-	public delegate void Workbook_PivotTableOpenConnectionEventHandler(LateBindingApi.ExcelApi.PivotTable Target);
-	public delegate void Workbook_SyncEventHandler(LateBindingApi.OfficeApi.Enums.MsoSyncEventType SyncEventType);
-	public delegate void Workbook_BeforeXmlImportEventHandler(LateBindingApi.ExcelApi.XmlMap Map, string Url, bool IsRefresh, ref bool Cancel);
-	public delegate void Workbook_AfterXmlImportEventHandler(LateBindingApi.ExcelApi.XmlMap Map, bool IsRefresh, LateBindingApi.ExcelApi.Enums.XlXmlImportResult Result);
-	public delegate void Workbook_BeforeXmlExportEventHandler(LateBindingApi.ExcelApi.XmlMap Map, string Url, ref bool Cancel);
-	public delegate void Workbook_AfterXmlExportEventHandler(LateBindingApi.ExcelApi.XmlMap Map, string Url, LateBindingApi.ExcelApi.Enums.XlXmlExportResult Result);
+	public delegate void Workbook_SheetChangeEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target);
+	public delegate void Workbook_SheetFollowHyperlinkEventHandler(COMObject Sh, NetOffice.ExcelApi.Hyperlink Target);
+	public delegate void Workbook_SheetPivotTableUpdateEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable Target);
+	public delegate void Workbook_PivotTableCloseConnectionEventHandler(NetOffice.ExcelApi.PivotTable Target);
+	public delegate void Workbook_PivotTableOpenConnectionEventHandler(NetOffice.ExcelApi.PivotTable Target);
+	public delegate void Workbook_SyncEventHandler(NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType);
+	public delegate void Workbook_BeforeXmlImportEventHandler(NetOffice.ExcelApi.XmlMap Map, string Url, bool IsRefresh, ref bool Cancel);
+	public delegate void Workbook_AfterXmlImportEventHandler(NetOffice.ExcelApi.XmlMap Map, bool IsRefresh, NetOffice.ExcelApi.Enums.XlXmlImportResult Result);
+	public delegate void Workbook_BeforeXmlExportEventHandler(NetOffice.ExcelApi.XmlMap Map, string Url, ref bool Cancel);
+	public delegate void Workbook_AfterXmlExportEventHandler(NetOffice.ExcelApi.XmlMap Map, string Url, NetOffice.ExcelApi.Enums.XlXmlExportResult Result);
 	public delegate void Workbook_RowsetCompleteEventHandler(string Description, string Sheet, bool Success);
-	public delegate void Workbook_SheetPivotTableAfterValueChangeEventHandler(COMObject Sh, LateBindingApi.ExcelApi.PivotTable TargetPivotTable, LateBindingApi.ExcelApi.Range TargetRange);
-	public delegate void Workbook_SheetPivotTableBeforeAllocateChangesEventHandler(COMObject Sh, LateBindingApi.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
-	public delegate void Workbook_SheetPivotTableBeforeCommitChangesEventHandler(COMObject Sh, LateBindingApi.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
-	public delegate void Workbook_SheetPivotTableBeforeDiscardChangesEventHandler(COMObject Sh, LateBindingApi.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd);
-	public delegate void Workbook_SheetPivotTableChangeSyncEventHandler(COMObject Sh, LateBindingApi.ExcelApi.PivotTable Target);
+	public delegate void Workbook_SheetPivotTableAfterValueChangeEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, NetOffice.ExcelApi.Range TargetRange);
+	public delegate void Workbook_SheetPivotTableBeforeAllocateChangesEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
+	public delegate void Workbook_SheetPivotTableBeforeCommitChangesEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
+	public delegate void Workbook_SheetPivotTableBeforeDiscardChangesEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd);
+	public delegate void Workbook_SheetPivotTableChangeSyncEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable Target);
 	public delegate void Workbook_AfterSaveEventHandler(bool Success);
-	public delegate void Workbook_NewChartEventHandler(LateBindingApi.ExcelApi.Chart Ch);
+	public delegate void Workbook_NewChartEventHandler(NetOffice.ExcelApi.Chart Ch);
 	#pragma warning restore
 
 	#endregion

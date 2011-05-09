@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 
 	#region Delegates
@@ -12,16 +12,16 @@ namespace LateBindingApi.WordApi
 	public delegate void Document_NewEventHandler();
 	public delegate void Document_OpenEventHandler();
 	public delegate void Document_CloseEventHandler();
-	public delegate void Document_SyncEventHandler(LateBindingApi.OfficeApi.Enums.MsoSyncEventType SyncEventType);
-	public delegate void Document_XMLAfterInsertEventHandler(LateBindingApi.WordApi.XMLNode NewXMLNode, bool InUndoRedo);
-	public delegate void Document_XMLBeforeDeleteEventHandler(LateBindingApi.WordApi.Range DeletedRange, LateBindingApi.WordApi.XMLNode OldXMLNode, bool InUndoRedo);
-	public delegate void Document_ContentControlAfterAddEventHandler(LateBindingApi.WordApi.ContentControl NewContentControl, bool InUndoRedo);
-	public delegate void Document_ContentControlBeforeDeleteEventHandler(LateBindingApi.WordApi.ContentControl OldContentControl, bool InUndoRedo);
-	public delegate void Document_ContentControlOnExitEventHandler(LateBindingApi.WordApi.ContentControl ContentControl, ref bool Cancel);
-	public delegate void Document_ContentControlOnEnterEventHandler(LateBindingApi.WordApi.ContentControl ContentControl);
-	public delegate void Document_ContentControlBeforeStoreUpdateEventHandler(LateBindingApi.WordApi.ContentControl ContentControl, ref string Content);
-	public delegate void Document_ContentControlBeforeContentUpdateEventHandler(LateBindingApi.WordApi.ContentControl ContentControl, ref string Content);
-	public delegate void Document_BuildingBlockInsertEventHandler(LateBindingApi.WordApi.Range Range, string Name, string Category, string BlockType, string Template);
+	public delegate void Document_SyncEventHandler(NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType);
+	public delegate void Document_XMLAfterInsertEventHandler(NetOffice.WordApi.XMLNode NewXMLNode, bool InUndoRedo);
+	public delegate void Document_XMLBeforeDeleteEventHandler(NetOffice.WordApi.Range DeletedRange, NetOffice.WordApi.XMLNode OldXMLNode, bool InUndoRedo);
+	public delegate void Document_ContentControlAfterAddEventHandler(NetOffice.WordApi.ContentControl NewContentControl, bool InUndoRedo);
+	public delegate void Document_ContentControlBeforeDeleteEventHandler(NetOffice.WordApi.ContentControl OldContentControl, bool InUndoRedo);
+	public delegate void Document_ContentControlOnExitEventHandler(NetOffice.WordApi.ContentControl ContentControl, ref bool Cancel);
+	public delegate void Document_ContentControlOnEnterEventHandler(NetOffice.WordApi.ContentControl ContentControl);
+	public delegate void Document_ContentControlBeforeStoreUpdateEventHandler(NetOffice.WordApi.ContentControl ContentControl, ref string Content);
+	public delegate void Document_ContentControlBeforeContentUpdateEventHandler(NetOffice.WordApi.ContentControl ContentControl, ref string Content);
+	public delegate void Document_BuildingBlockInsertEventHandler(NetOffice.WordApi.Range Range, string Name, string Category, string BlockType, string Template);
 	#pragma warning restore
 
 	#endregion

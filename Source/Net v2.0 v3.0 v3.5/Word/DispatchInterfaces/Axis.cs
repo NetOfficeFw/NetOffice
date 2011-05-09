@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Axis SupportByLibrary WD14 
@@ -70,13 +70,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlAxisGroup AxisGroup
+		public NetOffice.WordApi.Enums.XlAxisGroup AxisGroup
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AxisGroup", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlAxisGroup)returnItem;
+				return (NetOffice.WordApi.Enums.XlAxisGroup)returnItem;
 			}
 		}
 
@@ -84,13 +84,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.AxisTitle AxisTitle
+		public NetOffice.WordApi.AxisTitle AxisTitle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AxisTitle", paramsArray);
-				LateBindingApi.WordApi.AxisTitle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.AxisTitle;
+				NetOffice.WordApi.AxisTitle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.AxisTitle;
 				return newObject;
 			}
 		}
@@ -127,13 +127,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlAxisCrosses Crosses
+		public NetOffice.WordApi.Enums.XlAxisCrosses Crosses
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Crosses", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlAxisCrosses)returnItem;
+				return (NetOffice.WordApi.Enums.XlAxisCrosses)returnItem;
 			}
 			set
 			{
@@ -222,13 +222,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Gridlines MajorGridlines
+		public NetOffice.WordApi.Gridlines MajorGridlines
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MajorGridlines", paramsArray);
-				LateBindingApi.WordApi.Gridlines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Gridlines;
+				NetOffice.WordApi.Gridlines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Gridlines;
 				return newObject;
 			}
 		}
@@ -237,13 +237,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlTickMark MajorTickMark
+		public NetOffice.WordApi.Enums.XlTickMark MajorTickMark
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MajorTickMark", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlTickMark)returnItem;
+				return (NetOffice.WordApi.Enums.XlTickMark)returnItem;
 			}
 			set
 			{
@@ -408,13 +408,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Gridlines MinorGridlines
+		public NetOffice.WordApi.Gridlines MinorGridlines
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MinorGridlines", paramsArray);
-				LateBindingApi.WordApi.Gridlines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Gridlines;
+				NetOffice.WordApi.Gridlines newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Gridlines;
 				return newObject;
 			}
 		}
@@ -423,13 +423,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlTickMark MinorTickMark
+		public NetOffice.WordApi.Enums.XlTickMark MinorTickMark
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MinorTickMark", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlTickMark)returnItem;
+				return (NetOffice.WordApi.Enums.XlTickMark)returnItem;
 			}
 			set
 			{
@@ -499,13 +499,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlScaleType ScaleType
+		public NetOffice.WordApi.Enums.XlScaleType ScaleType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScaleType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlScaleType)returnItem;
+				return (NetOffice.WordApi.Enums.XlScaleType)returnItem;
 			}
 			set
 			{
@@ -518,13 +518,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlTickLabelPosition TickLabelPosition
+		public NetOffice.WordApi.Enums.XlTickLabelPosition TickLabelPosition
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TickLabelPosition", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlTickLabelPosition)returnItem;
+				return (NetOffice.WordApi.Enums.XlTickLabelPosition)returnItem;
 			}
 			set
 			{
@@ -537,13 +537,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.TickLabels TickLabels
+		public NetOffice.WordApi.TickLabels TickLabels
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TickLabels", paramsArray);
-				LateBindingApi.WordApi.TickLabels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.TickLabels;
+				NetOffice.WordApi.TickLabels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.TickLabels;
 				return newObject;
 			}
 		}
@@ -590,13 +590,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlAxisType Type
+		public NetOffice.WordApi.Enums.XlAxisType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlAxisType)returnItem;
+				return (NetOffice.WordApi.Enums.XlAxisType)returnItem;
 			}
 			set
 			{
@@ -609,13 +609,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlTimeUnit BaseUnit
+		public NetOffice.WordApi.Enums.XlTimeUnit BaseUnit
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BaseUnit", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlTimeUnit)returnItem;
+				return (NetOffice.WordApi.Enums.XlTimeUnit)returnItem;
 			}
 			set
 			{
@@ -647,13 +647,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlTimeUnit MajorUnitScale
+		public NetOffice.WordApi.Enums.XlTimeUnit MajorUnitScale
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MajorUnitScale", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlTimeUnit)returnItem;
+				return (NetOffice.WordApi.Enums.XlTimeUnit)returnItem;
 			}
 			set
 			{
@@ -666,13 +666,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlTimeUnit MinorUnitScale
+		public NetOffice.WordApi.Enums.XlTimeUnit MinorUnitScale
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MinorUnitScale", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlTimeUnit)returnItem;
+				return (NetOffice.WordApi.Enums.XlTimeUnit)returnItem;
 			}
 			set
 			{
@@ -685,13 +685,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlCategoryType CategoryType
+		public NetOffice.WordApi.Enums.XlCategoryType CategoryType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CategoryType", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlCategoryType)returnItem;
+				return (NetOffice.WordApi.Enums.XlCategoryType)returnItem;
 			}
 			set
 			{
@@ -760,13 +760,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.Enums.XlDisplayUnit DisplayUnit
+		public NetOffice.WordApi.Enums.XlDisplayUnit DisplayUnit
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DisplayUnit", paramsArray);
-				return (LateBindingApi.WordApi.Enums.XlDisplayUnit)returnItem;
+				return (NetOffice.WordApi.Enums.XlDisplayUnit)returnItem;
 			}
 			set
 			{
@@ -817,13 +817,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.DisplayUnitLabel DisplayUnitLabel
+		public NetOffice.WordApi.DisplayUnitLabel DisplayUnitLabel
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DisplayUnitLabel", paramsArray);
-				LateBindingApi.WordApi.DisplayUnitLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.DisplayUnitLabel;
+				NetOffice.WordApi.DisplayUnitLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.DisplayUnitLabel;
 				return newObject;
 			}
 		}
@@ -832,13 +832,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.ChartBorder Border
+		public NetOffice.WordApi.ChartBorder Border
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Border", paramsArray);
-				LateBindingApi.WordApi.ChartBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ChartBorder;
+				NetOffice.WordApi.ChartBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartBorder;
 				return newObject;
 			}
 		}
@@ -847,13 +847,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD14 
 		/// </summary>
 		[SupportByLibrary("WD14")]
-		public LateBindingApi.WordApi.ChartFormat Format
+		public NetOffice.WordApi.ChartFormat Format
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				LateBindingApi.WordApi.ChartFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.ChartFormat;
+				NetOffice.WordApi.ChartFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartFormat;
 				return newObject;
 			}
 		}

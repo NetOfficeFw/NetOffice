@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface Protection SupportByLibrary XL10 XL11 XL12 XL14 
@@ -205,13 +205,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.AllowEditRanges AllowEditRanges
+		public NetOffice.ExcelApi.AllowEditRanges AllowEditRanges
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowEditRanges", paramsArray);
-				LateBindingApi.ExcelApi.AllowEditRanges newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.AllowEditRanges;
+				NetOffice.ExcelApi.AllowEditRanges newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.AllowEditRanges;
 				return newObject;
 			}
 		}

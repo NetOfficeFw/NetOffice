@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PickerResults SupportByLibrary OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PickerResult get_Item(Int32 index)
+		public NetOffice.OfficeApi.PickerResult get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.PickerResult newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.PickerResult;
+			NetOffice.OfficeApi.PickerResult newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PickerResult;
 			return newObject;
 		}
 
@@ -89,11 +89,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="ItemData">optional object ItemData</param>
 		/// <param name="SubItems">optional object SubItems</param>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId, object itemData, object subItems)
+		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId, object itemData, object subItems)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId, itemData, subItems);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.PickerResult newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.PickerResult;
+			NetOffice.OfficeApi.PickerResult newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.PickerResult;
 			return newObject;
 		}
 
@@ -105,11 +105,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Type">string Type</param>
 		/// <param name="SIPId">string SIPId</param>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId)
+		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OfficeApi.PickerResult newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.PickerResult;
+			NetOffice.OfficeApi.PickerResult newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.PickerResult;
 			return newObject;
 		}
 

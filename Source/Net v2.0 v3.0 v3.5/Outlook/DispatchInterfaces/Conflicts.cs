@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface Conflicts SupportByLibrary OL11 OL12 OL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi._Application Application
+		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._Application;
+				NetOffice.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlObjectClass Class
+		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Class", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlObjectClass)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlObjectClass)returnItem;
 			}
 		}
 
@@ -80,13 +80,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi._NameSpace Session
+		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				LateBindingApi.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OutlookApi._NameSpace;
+				NetOffice.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
 				return newObject;
 			}
 		}
@@ -129,11 +129,11 @@ namespace LateBindingApi.OutlookApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Conflict Item(object index)
+		public NetOffice.OutlookApi.Conflict Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.Conflict;
+			NetOffice.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Conflict;
 			return newObject;
 		}
 
@@ -141,11 +141,11 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Conflict GetFirst()
+		public NetOffice.OutlookApi.Conflict GetFirst()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetFirst", paramsArray);
-			LateBindingApi.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.Conflict;
+			NetOffice.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Conflict;
 			return newObject;
 		}
 
@@ -153,11 +153,11 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Conflict GetLast()
+		public NetOffice.OutlookApi.Conflict GetLast()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetLast", paramsArray);
-			LateBindingApi.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.Conflict;
+			NetOffice.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Conflict;
 			return newObject;
 		}
 
@@ -165,11 +165,11 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Conflict GetNext()
+		public NetOffice.OutlookApi.Conflict GetNext()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetNext", paramsArray);
-			LateBindingApi.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.Conflict;
+			NetOffice.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Conflict;
 			return newObject;
 		}
 
@@ -177,11 +177,11 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL11 OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL11","OL12","OL14")]
-		public LateBindingApi.OutlookApi.Conflict GetPrevious()
+		public NetOffice.OutlookApi.Conflict GetPrevious()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetPrevious", paramsArray);
-			LateBindingApi.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OutlookApi.Conflict;
+			NetOffice.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Conflict;
 			return newObject;
 		}
 

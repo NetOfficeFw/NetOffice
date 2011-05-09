@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface ICalculatedMembers SupportByLibrary XL10 XL11 XL12 XL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Application Application
+		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlCreator Creator
+		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlCreator)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
 			}
 		}
 
@@ -110,11 +110,11 @@ namespace LateBindingApi.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.CalculatedMember get_Item(object index)
+		public NetOffice.ExcelApi.CalculatedMember get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -124,13 +124,13 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.ExcelApi.CalculatedMember this[object index]
+		public NetOffice.ExcelApi.CalculatedMember this[object index]
 		{
 			get
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			LateBindingApi.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 			}
 		}
@@ -147,11 +147,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="SolveOrder">optional object SolveOrder</param>
 		/// <param name="Type">optional object Type</param>
 		[SupportByLibrary("XL10","XL11","XL12")]
-		public LateBindingApi.ExcelApi.CalculatedMember Add(string name, string formula, object solveOrder, object type)
+		public NetOffice.ExcelApi.CalculatedMember Add(string name, string formula, object solveOrder, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -166,11 +166,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="DisplayFolder">optional object DisplayFolder</param>
 		/// <param name="HierarchizeDistinct">optional object HierarchizeDistinct</param>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic, object displayFolder, object hierarchizeDistinct)
+		public NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic, object displayFolder, object hierarchizeDistinct)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, dynamic, displayFolder, hierarchizeDistinct);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -180,11 +180,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Formula">string Formula</param>
 		[SupportByLibrary("XL10","XL11","XL12")]
-		public LateBindingApi.ExcelApi.CalculatedMember Add(string name, string formula)
+		public NetOffice.ExcelApi.CalculatedMember Add(string name, string formula)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -194,11 +194,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Formula">object Formula</param>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.CalculatedMember Add(string name, object formula)
+		public NetOffice.ExcelApi.CalculatedMember Add(string name, object formula)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -210,11 +210,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="SolveOrder">optional object SolveOrder</param>
 		/// <param name="Type">optional object Type</param>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.CalculatedMember _Add(string name, string formula, object solveOrder, object type)
+		public NetOffice.ExcelApi.CalculatedMember _Add(string name, string formula, object solveOrder, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			LateBindingApi.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -224,11 +224,11 @@ namespace LateBindingApi.ExcelApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Formula">string Formula</param>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.ExcelApi.CalculatedMember _Add(string name, string formula)
+		public NetOffice.ExcelApi.CalculatedMember _Add(string name, string formula)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			LateBindingApi.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 

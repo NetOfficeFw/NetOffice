@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface HTMLProjectItems SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -86,12 +86,12 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.HTMLProjectItem Item(ref object index)
+		public NetOffice.OfficeApi.HTMLProjectItem Item(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray, modifiers);
-			LateBindingApi.OfficeApi.HTMLProjectItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.HTMLProjectItem;
+			NetOffice.OfficeApi.HTMLProjectItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.HTMLProjectItem;
 			index = (object)paramsArray[0];
 			return newObject;
 		}

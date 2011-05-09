@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ICustomXMLPartsEvents SupportByLibrary OF12 OF14 
@@ -54,9 +54,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="NewPart">LateBindingApi.OfficeApi.CustomXMLPart NewPart</param>
+		/// <param name="NewPart">NetOffice.OfficeApi.CustomXMLPart NewPart</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void PartAfterAdd(LateBindingApi.OfficeApi.CustomXMLPart newPart)
+		public void PartAfterAdd(NetOffice.OfficeApi.CustomXMLPart newPart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newPart);
 			Invoker.Method(this, "PartAfterAdd", paramsArray);
@@ -65,9 +65,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="OldPart">LateBindingApi.OfficeApi.CustomXMLPart OldPart</param>
+		/// <param name="OldPart">NetOffice.OfficeApi.CustomXMLPart OldPart</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void PartBeforeDelete(LateBindingApi.OfficeApi.CustomXMLPart oldPart)
+		public void PartBeforeDelete(NetOffice.OfficeApi.CustomXMLPart oldPart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldPart);
 			Invoker.Method(this, "PartBeforeDelete", paramsArray);
@@ -76,9 +76,9 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Part">LateBindingApi.OfficeApi.CustomXMLPart Part</param>
+		/// <param name="Part">NetOffice.OfficeApi.CustomXMLPart Part</param>
 		[SupportByLibrary("OF12","OF14")]
-		public void PartAfterLoad(LateBindingApi.OfficeApi.CustomXMLPart part)
+		public void PartAfterLoad(NetOffice.OfficeApi.CustomXMLPart part)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(part);
 			Invoker.Method(this, "PartAfterLoad", paramsArray);

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _OlkSenderPhoto SupportByLibrary OL12 OL14 
@@ -90,13 +90,13 @@ namespace LateBindingApi.OutlookApi
 		/// SupportByLibrary OL12 OL14 
 		/// </summary>
 		[SupportByLibrary("OL12","OL14")]
-		public LateBindingApi.OutlookApi.Enums.OlMousePointer MousePointer
+		public NetOffice.OutlookApi.Enums.OlMousePointer MousePointer
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MousePointer", paramsArray);
-				return (LateBindingApi.OutlookApi.Enums.OlMousePointer)returnItem;
+				return (NetOffice.OutlookApi.Enums.OlMousePointer)returnItem;
 			}
 			set
 			{

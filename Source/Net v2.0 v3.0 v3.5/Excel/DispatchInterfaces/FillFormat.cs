@@ -6,13 +6,13 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface FillFormat SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-	public class FillFormat : LateBindingApi.OfficeApi._IMsoDispObj
+	public class FillFormat : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#pragma warning disable
 		#region Construction
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.ColorFormat BackColor
+		public NetOffice.ExcelApi.ColorFormat BackColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BackColor", paramsArray);
-				LateBindingApi.ExcelApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.ColorFormat;
+				NetOffice.ExcelApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ColorFormat;
 				return newObject;
 			}
 			set
@@ -86,13 +86,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.ColorFormat ForeColor
+		public NetOffice.ExcelApi.ColorFormat ForeColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ForeColor", paramsArray);
-				LateBindingApi.ExcelApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ExcelApi.ColorFormat;
+				NetOffice.ExcelApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ColorFormat;
 				return newObject;
 			}
 			set
@@ -106,13 +106,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoGradientColorType GradientColorType
+		public NetOffice.OfficeApi.Enums.MsoGradientColorType GradientColorType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GradientColorType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoGradientColorType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoGradientColorType)returnItem;
 			}
 		}
 
@@ -134,13 +134,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoGradientStyle GradientStyle
+		public NetOffice.OfficeApi.Enums.MsoGradientStyle GradientStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GradientStyle", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoGradientStyle)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoGradientStyle)returnItem;
 			}
 		}
 
@@ -162,13 +162,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPatternType Pattern
+		public NetOffice.OfficeApi.Enums.MsoPatternType Pattern
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Pattern", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPatternType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPatternType)returnItem;
 			}
 		}
 
@@ -176,13 +176,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetGradientType PresetGradientType
+		public NetOffice.OfficeApi.Enums.MsoPresetGradientType PresetGradientType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetGradientType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetGradientType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetGradientType)returnItem;
 			}
 		}
 
@@ -190,13 +190,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetTexture PresetTexture
+		public NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetTexture", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetTexture)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetTexture)returnItem;
 			}
 		}
 
@@ -218,13 +218,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTextureType TextureType
+		public NetOffice.OfficeApi.Enums.MsoTextureType TextureType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextureType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTextureType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTextureType)returnItem;
 			}
 		}
 
@@ -251,13 +251,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFillType Type
+		public NetOffice.OfficeApi.Enums.MsoFillType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoFillType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoFillType)returnItem;
 			}
 		}
 
@@ -265,13 +265,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState Visible
+		public NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Visible", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -284,13 +284,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.OfficeApi.GradientStops GradientStops
+		public NetOffice.OfficeApi.GradientStops GradientStops
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GradientStops", paramsArray);
-				LateBindingApi.OfficeApi.GradientStops newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.GradientStops;
+				NetOffice.OfficeApi.GradientStops newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.GradientStops;
 				return newObject;
 			}
 		}
@@ -337,13 +337,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTextureAlignment TextureAlignment
+		public NetOffice.OfficeApi.Enums.MsoTextureAlignment TextureAlignment
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextureAlignment", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTextureAlignment)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTextureAlignment)returnItem;
 			}
 			set
 			{
@@ -394,13 +394,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState TextureTile
+		public NetOffice.OfficeApi.Enums.MsoTriState TextureTile
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextureTile", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -413,13 +413,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState RotateWithObject
+		public NetOffice.OfficeApi.Enums.MsoTriState RotateWithObject
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RotateWithObject", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -432,13 +432,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL14 
 		/// </summary>
 		[SupportByLibrary("XL14")]
-		public LateBindingApi.OfficeApi.PictureEffects PictureEffects
+		public NetOffice.OfficeApi.PictureEffects PictureEffects
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PictureEffects", paramsArray);
-				LateBindingApi.OfficeApi.PictureEffects newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.PictureEffects;
+				NetOffice.OfficeApi.PictureEffects newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PictureEffects;
 				return newObject;
 			}
 		}
@@ -479,11 +479,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Style">LateBindingApi.OfficeApi.Enums.MsoGradientStyle Style</param>
+		/// <param name="Style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="Variant">Int32 Variant</param>
 		/// <param name="Degree">Single Degree</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public void OneColorGradient(LateBindingApi.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, Single degree)
+		public void OneColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, Single degree)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, variant, degree);
 			Invoker.Method(this, "OneColorGradient", paramsArray);
@@ -492,9 +492,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Pattern">LateBindingApi.OfficeApi.Enums.MsoPatternType Pattern</param>
+		/// <param name="Pattern">NetOffice.OfficeApi.Enums.MsoPatternType Pattern</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public void Patterned(LateBindingApi.OfficeApi.Enums.MsoPatternType pattern)
+		public void Patterned(NetOffice.OfficeApi.Enums.MsoPatternType pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pattern);
 			Invoker.Method(this, "Patterned", paramsArray);
@@ -503,11 +503,11 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Style">LateBindingApi.OfficeApi.Enums.MsoGradientStyle Style</param>
+		/// <param name="Style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="Variant">Int32 Variant</param>
-		/// <param name="PresetGradientType">LateBindingApi.OfficeApi.Enums.MsoPresetGradientType PresetGradientType</param>
+		/// <param name="PresetGradientType">NetOffice.OfficeApi.Enums.MsoPresetGradientType PresetGradientType</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public void PresetGradient(LateBindingApi.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, LateBindingApi.OfficeApi.Enums.MsoPresetGradientType presetGradientType)
+		public void PresetGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, NetOffice.OfficeApi.Enums.MsoPresetGradientType presetGradientType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, variant, presetGradientType);
 			Invoker.Method(this, "PresetGradient", paramsArray);
@@ -516,9 +516,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="PresetTexture">LateBindingApi.OfficeApi.Enums.MsoPresetTexture PresetTexture</param>
+		/// <param name="PresetTexture">NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public void PresetTextured(LateBindingApi.OfficeApi.Enums.MsoPresetTexture presetTexture)
+		public void PresetTextured(NetOffice.OfficeApi.Enums.MsoPresetTexture presetTexture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(presetTexture);
 			Invoker.Method(this, "PresetTextured", paramsArray);
@@ -537,10 +537,10 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="Style">LateBindingApi.OfficeApi.Enums.MsoGradientStyle Style</param>
+		/// <param name="Style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="Variant">Int32 Variant</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public void TwoColorGradient(LateBindingApi.OfficeApi.Enums.MsoGradientStyle style, Int32 variant)
+		public void TwoColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, variant);
 			Invoker.Method(this, "TwoColorGradient", paramsArray);

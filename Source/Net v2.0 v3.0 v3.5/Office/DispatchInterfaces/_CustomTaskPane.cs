@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface _CustomTaskPane SupportByLibrary OF12 OF14 
@@ -167,13 +167,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoCTPDockPosition DockPosition
+		public NetOffice.OfficeApi.Enums.MsoCTPDockPosition DockPosition
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DockPosition", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoCTPDockPosition)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoCTPDockPosition)returnItem;
 			}
 			set
 			{
@@ -186,13 +186,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoCTPDockPositionRestrict DockPositionRestrict
+		public NetOffice.OfficeApi.Enums.MsoCTPDockPositionRestrict DockPositionRestrict
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DockPositionRestrict", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoCTPDockPositionRestrict)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoCTPDockPositionRestrict)returnItem;
 			}
 			set
 			{

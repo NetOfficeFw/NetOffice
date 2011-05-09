@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface INavigationControl SupportByLibrary XWC1.0 
@@ -51,13 +51,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.MSDATASRCApi.DataSource DataSource
+		public NetOffice.MSDATASRCApi.DataSource DataSource
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataSource", paramsArray);
-				LateBindingApi.MSDATASRCApi.DataSource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSDATASRCApi.DataSource;
+				NetOffice.MSDATASRCApi.DataSource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSDATASRCApi.DataSource;
 				return newObject;
 			}
 			set
@@ -416,9 +416,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="navbtn">LateBindingApi.OWC10Api.Enums.NavButtonEnum navbtn</param>
+		/// <param name="navbtn">NetOffice.OWC10Api.Enums.NavButtonEnum navbtn</param>
 		[SupportByLibrary("XWC1.0")]
-		public bool IsButtonEnabled(LateBindingApi.OWC10Api.Enums.NavButtonEnum navbtn)
+		public bool IsButtonEnabled(NetOffice.OWC10Api.Enums.NavButtonEnum navbtn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(navbtn);
 			object returnItem = Invoker.MethodReturn(this, "IsButtonEnabled", paramsArray);

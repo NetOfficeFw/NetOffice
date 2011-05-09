@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface Window SupportByLibrary VBE5.3 VBE12 
@@ -51,13 +51,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBE VBE
+		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				LateBindingApi.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -66,13 +66,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.Windows Collection
+		public NetOffice.VBIDEApi.Windows Collection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Collection", paramsArray);
-				LateBindingApi.VBIDEApi.Windows newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.Windows;
+				NetOffice.VBIDEApi.Windows newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Windows;
 				return newObject;
 			}
 		}
@@ -190,13 +190,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.Enums.vbext_WindowState WindowState
+		public NetOffice.VBIDEApi.Enums.vbext_WindowState WindowState
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WindowState", paramsArray);
-				return (LateBindingApi.VBIDEApi.Enums.vbext_WindowState)returnItem;
+				return (NetOffice.VBIDEApi.Enums.vbext_WindowState)returnItem;
 			}
 			set
 			{
@@ -209,13 +209,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.Enums.vbext_WindowType Type
+		public NetOffice.VBIDEApi.Enums.vbext_WindowType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.VBIDEApi.Enums.vbext_WindowType)returnItem;
+				return (NetOffice.VBIDEApi.Enums.vbext_WindowType)returnItem;
 			}
 		}
 
@@ -223,13 +223,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.LinkedWindows LinkedWindows
+		public NetOffice.VBIDEApi.LinkedWindows LinkedWindows
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LinkedWindows", paramsArray);
-				LateBindingApi.VBIDEApi.LinkedWindows newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.LinkedWindows;
+				NetOffice.VBIDEApi.LinkedWindows newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.LinkedWindows;
 				return newObject;
 			}
 		}
@@ -238,13 +238,13 @@ namespace LateBindingApi.VBIDEApi
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.Window LinkedWindowFrame
+		public NetOffice.VBIDEApi.Window LinkedWindowFrame
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LinkedWindowFrame", paramsArray);
-				LateBindingApi.VBIDEApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.VBIDEApi.Window;
+				NetOffice.VBIDEApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Window;
 				return newObject;
 			}
 		}
@@ -290,9 +290,9 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="eKind">LateBindingApi.VBIDEApi.Enums.vbext_WindowType eKind</param>
+		/// <param name="eKind">NetOffice.VBIDEApi.Enums.vbext_WindowType eKind</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void SetKind(LateBindingApi.VBIDEApi.Enums.vbext_WindowType eKind)
+		public void SetKind(NetOffice.VBIDEApi.Enums.vbext_WindowType eKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eKind);
 			Invoker.Method(this, "SetKind", paramsArray);

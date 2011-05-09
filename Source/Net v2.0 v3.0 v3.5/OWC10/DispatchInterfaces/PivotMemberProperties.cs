@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PivotMemberProperties SupportByLibrary XWC1.0 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="varIndex">object varIndex</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PivotMemberProperty get_Item(object varIndex)
+		public NetOffice.OWC10Api.PivotMemberProperty get_Item(object varIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.PivotMemberProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PivotMemberProperty;
+			NetOffice.OWC10Api.PivotMemberProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotMemberProperty;
 			return newObject;
 		}
 

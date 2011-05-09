@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Adjustments SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -88,6 +88,11 @@ namespace LateBindingApi.OfficeApi
 			return (Single)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// </summary>
+		/// <param name="Index">Int32 Index</param>
+		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
 		public void set_Item(Int32 index, Single value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

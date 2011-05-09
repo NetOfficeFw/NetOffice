@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface ThreeDFormat SupportByLibrary PP09 PP10 PP11 PP12 PP14 
@@ -114,13 +114,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.PowerPointApi.ColorFormat ExtrusionColor
+		public NetOffice.PowerPointApi.ColorFormat ExtrusionColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ExtrusionColor", paramsArray);
-				LateBindingApi.PowerPointApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.ColorFormat;
+				NetOffice.PowerPointApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ColorFormat;
 				return newObject;
 			}
 		}
@@ -129,13 +129,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoExtrusionColorType ExtrusionColorType
+		public NetOffice.OfficeApi.Enums.MsoExtrusionColorType ExtrusionColorType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ExtrusionColorType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoExtrusionColorType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoExtrusionColorType)returnItem;
 			}
 			set
 			{
@@ -148,13 +148,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState Perspective
+		public NetOffice.OfficeApi.Enums.MsoTriState Perspective
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Perspective", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -167,13 +167,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection
+		public NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetExtrusionDirection", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetExtrusionDirection)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection)returnItem;
 			}
 		}
 
@@ -181,13 +181,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetLightingDirection PresetLightingDirection
+		public NetOffice.OfficeApi.Enums.MsoPresetLightingDirection PresetLightingDirection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetLightingDirection", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetLightingDirection)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetLightingDirection)returnItem;
 			}
 			set
 			{
@@ -200,13 +200,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetLightingSoftness PresetLightingSoftness
+		public NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness PresetLightingSoftness
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetLightingSoftness", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetLightingSoftness)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness)returnItem;
 			}
 			set
 			{
@@ -219,13 +219,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetMaterial PresetMaterial
+		public NetOffice.OfficeApi.Enums.MsoPresetMaterial PresetMaterial
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetMaterial", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetMaterial)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetMaterial)returnItem;
 			}
 			set
 			{
@@ -238,13 +238,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat
+		public NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetThreeDFormat", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetThreeDFormat)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat)returnItem;
 			}
 		}
 
@@ -290,13 +290,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState Visible
+		public NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Visible", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -309,13 +309,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoLightRigType PresetLighting
+		public NetOffice.OfficeApi.Enums.MsoLightRigType PresetLighting
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetLighting", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoLightRigType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoLightRigType)returnItem;
 			}
 			set
 			{
@@ -347,13 +347,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoBevelType BevelTopType
+		public NetOffice.OfficeApi.Enums.MsoBevelType BevelTopType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BevelTopType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoBevelType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoBevelType)returnItem;
 			}
 			set
 			{
@@ -404,13 +404,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoBevelType BevelBottomType
+		public NetOffice.OfficeApi.Enums.MsoBevelType BevelBottomType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BevelBottomType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoBevelType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoBevelType)returnItem;
 			}
 			set
 			{
@@ -461,13 +461,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoPresetCamera PresetCamera
+		public NetOffice.OfficeApi.Enums.MsoPresetCamera PresetCamera
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PresetCamera", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoPresetCamera)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoPresetCamera)returnItem;
 			}
 		}
 
@@ -513,13 +513,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP12","PP14")]
-		public LateBindingApi.PowerPointApi.ColorFormat ContourColor
+		public NetOffice.PowerPointApi.ColorFormat ContourColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ContourColor", paramsArray);
-				LateBindingApi.PowerPointApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.PowerPointApi.ColorFormat;
+				NetOffice.PowerPointApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ColorFormat;
 				return newObject;
 			}
 		}
@@ -547,13 +547,13 @@ namespace LateBindingApi.PowerPointApi
 		/// SupportByLibrary PP12 PP14 
 		/// </summary>
 		[SupportByLibrary("PP12","PP14")]
-		public LateBindingApi.OfficeApi.Enums.MsoTriState ProjectText
+		public NetOffice.OfficeApi.Enums.MsoTriState ProjectText
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ProjectText", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoTriState)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoTriState)returnItem;
 			}
 			set
 			{
@@ -620,9 +620,9 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="PresetThreeDFormat">LateBindingApi.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat</param>
+		/// <param name="PresetThreeDFormat">NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public void SetThreeDFormat(LateBindingApi.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat)
+		public void SetThreeDFormat(NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(presetThreeDFormat);
 			Invoker.Method(this, "SetThreeDFormat", paramsArray);
@@ -631,9 +631,9 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="PresetExtrusionDirection">LateBindingApi.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection</param>
+		/// <param name="PresetExtrusionDirection">NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public void SetExtrusionDirection(LateBindingApi.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection)
+		public void SetExtrusionDirection(NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(presetExtrusionDirection);
 			Invoker.Method(this, "SetExtrusionDirection", paramsArray);
@@ -642,9 +642,9 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP12 PP14 
 		/// </summary>
-		/// <param name="PresetCamera">LateBindingApi.OfficeApi.Enums.MsoPresetCamera PresetCamera</param>
+		/// <param name="PresetCamera">NetOffice.OfficeApi.Enums.MsoPresetCamera PresetCamera</param>
 		[SupportByLibrary("PP12","PP14")]
-		public void SetPresetCamera(LateBindingApi.OfficeApi.Enums.MsoPresetCamera presetCamera)
+		public void SetPresetCamera(NetOffice.OfficeApi.Enums.MsoPresetCamera presetCamera)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(presetCamera);
 			Invoker.Method(this, "SetPresetCamera", paramsArray);

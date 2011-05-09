@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface Points SupportByLibrary OF12 OF14 
@@ -111,13 +111,13 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF14")]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public LateBindingApi.OfficeApi.ChartPoint this[Int32 index]
+		public NetOffice.OfficeApi.ChartPoint this[Int32 index]
 		{
 			get
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			LateBindingApi.OfficeApi.ChartPoint newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.ChartPoint;
+			NetOffice.OfficeApi.ChartPoint newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ChartPoint;
 			return newObject;
 			}
 		}
@@ -131,11 +131,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.ChartPoint Item(Int32 index)
+		public NetOffice.OfficeApi.ChartPoint Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.ChartPoint newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.ChartPoint;
+			NetOffice.OfficeApi.ChartPoint newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.ChartPoint;
 			return newObject;
 		}
 

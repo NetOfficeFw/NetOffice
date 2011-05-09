@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SharedWorkspaceTask SupportByLibrary OF11 OF12 OF14 
@@ -89,13 +89,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoSharedWorkspaceTaskStatus Status
+		public NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskStatus Status
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Status", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoSharedWorkspaceTaskStatus)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskStatus)returnItem;
 			}
 			set
 			{
@@ -108,13 +108,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoSharedWorkspaceTaskPriority Priority
+		public NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskPriority Priority
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Priority", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoSharedWorkspaceTaskPriority)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskPriority)returnItem;
 			}
 			set
 			{

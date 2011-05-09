@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface CommandBarControl SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -101,6 +101,11 @@ namespace LateBindingApi.OfficeApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// </summary>
+		/// <param name="varChild">optional object varChild</param>
+		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
 		public void set_accName(object varChild, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -138,6 +143,11 @@ namespace LateBindingApi.OfficeApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// </summary>
+		/// <param name="varChild">optional object varChild</param>
+		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
 		public void set_accValue(object varChild, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -652,13 +662,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoControlOLEUsage OLEUsage
+		public NetOffice.OfficeApi.Enums.MsoControlOLEUsage OLEUsage
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OLEUsage", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoControlOLEUsage)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoControlOLEUsage)returnItem;
 			}
 			set
 			{
@@ -690,13 +700,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.CommandBar Parent
+		public NetOffice.OfficeApi.CommandBar Parent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				LateBindingApi.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.CommandBar;
+				NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBar;
 				return newObject;
 			}
 		}
@@ -795,13 +805,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoControlType Type
+		public NetOffice.OfficeApi.Enums.MsoControlType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoControlType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoControlType)returnItem;
 			}
 		}
 
@@ -1015,11 +1025,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Bar">optional object Bar</param>
 		/// <param name="Before">optional object Before</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.CommandBarControl Copy(object bar, object before)
+		public NetOffice.OfficeApi.CommandBarControl Copy(object bar, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bar, before);
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			LateBindingApi.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.CommandBarControl;
+			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CommandBarControl;
 			return newObject;
 		}
 
@@ -1027,11 +1037,11 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.CommandBarControl Copy()
+		public NetOffice.OfficeApi.CommandBarControl Copy()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			LateBindingApi.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.CommandBarControl;
+			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CommandBarControl;
 			return newObject;
 		}
 
@@ -1072,11 +1082,11 @@ namespace LateBindingApi.OfficeApi
 		/// <param name="Bar">optional object Bar</param>
 		/// <param name="Before">optional object Before</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.CommandBarControl Move(object bar, object before)
+		public NetOffice.OfficeApi.CommandBarControl Move(object bar, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bar, before);
 			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
-			LateBindingApi.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.CommandBarControl;
+			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CommandBarControl;
 			return newObject;
 		}
 
@@ -1084,11 +1094,11 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.CommandBarControl Move()
+		public NetOffice.OfficeApi.CommandBarControl Move()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
-			LateBindingApi.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.CommandBarControl;
+			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CommandBarControl;
 			return newObject;
 		}
 

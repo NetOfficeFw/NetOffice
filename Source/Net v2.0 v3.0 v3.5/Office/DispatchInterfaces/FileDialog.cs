@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface FileDialog SupportByLibrary OF10 OF11 OF12 OF14 
@@ -66,13 +66,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.FileDialogFilters Filters
+		public NetOffice.OfficeApi.FileDialogFilters Filters
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Filters", paramsArray);
-				LateBindingApi.OfficeApi.FileDialogFilters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.FileDialogFilters;
+				NetOffice.OfficeApi.FileDialogFilters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.FileDialogFilters;
 				return newObject;
 			}
 		}
@@ -157,13 +157,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFileDialogView InitialView
+		public NetOffice.OfficeApi.Enums.MsoFileDialogView InitialView
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "InitialView", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoFileDialogView)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoFileDialogView)returnItem;
 			}
 			set
 			{
@@ -195,13 +195,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.FileDialogSelectedItems SelectedItems
+		public NetOffice.OfficeApi.FileDialogSelectedItems SelectedItems
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SelectedItems", paramsArray);
-				LateBindingApi.OfficeApi.FileDialogSelectedItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.FileDialogSelectedItems;
+				NetOffice.OfficeApi.FileDialogSelectedItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.FileDialogSelectedItems;
 				return newObject;
 			}
 		}
@@ -210,13 +210,13 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF10 OF11 OF12 OF14 
 		/// </summary>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.Enums.MsoFileDialogType DialogType
+		public NetOffice.OfficeApi.Enums.MsoFileDialogType DialogType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DialogType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoFileDialogType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoFileDialogType)returnItem;
 			}
 		}
 

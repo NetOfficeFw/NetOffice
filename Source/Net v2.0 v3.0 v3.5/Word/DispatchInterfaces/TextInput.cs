@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.WordApi
+namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface TextInput SupportByLibrary WD09 WD10 WD11 WD12 WD14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Application Application
+		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				LateBindingApi.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.WordApi.Application;
+				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -128,13 +128,13 @@ namespace LateBindingApi.WordApi
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public LateBindingApi.WordApi.Enums.WdTextFormFieldType Type
+		public NetOffice.WordApi.Enums.WdTextFormFieldType Type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return (LateBindingApi.WordApi.Enums.WdTextFormFieldType)returnItem;
+				return (NetOffice.WordApi.Enums.WdTextFormFieldType)returnItem;
 			}
 		}
 
@@ -188,12 +188,12 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.WordApi.Enums.WdTextFormFieldType Type</param>
+		/// <param name="Type">NetOffice.WordApi.Enums.WdTextFormFieldType Type</param>
 		/// <param name="Default">ref optional object Default</param>
 		/// <param name="Format">ref optional object Format</param>
 		/// <param name="Enabled">ref optional object Enabled</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void EditType(LateBindingApi.WordApi.Enums.WdTextFormFieldType type, ref object _default, ref object format, ref object enabled)
+		public void EditType(NetOffice.WordApi.Enums.WdTextFormFieldType type, ref object _default, ref object format, ref object enabled)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _default, format, enabled);
@@ -206,9 +206,9 @@ namespace LateBindingApi.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.WordApi.Enums.WdTextFormFieldType Type</param>
+		/// <param name="Type">NetOffice.WordApi.Enums.WdTextFormFieldType Type</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void EditType(LateBindingApi.WordApi.Enums.WdTextFormFieldType type)
+		public void EditType(NetOffice.WordApi.Enums.WdTextFormFieldType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "EditType", paramsArray);

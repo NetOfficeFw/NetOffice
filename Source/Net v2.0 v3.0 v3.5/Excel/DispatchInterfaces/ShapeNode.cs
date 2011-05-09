@@ -6,13 +6,13 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface ShapeNode SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-	public class ShapeNode : LateBindingApi.OfficeApi._IMsoDispObj
+	public class ShapeNode : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#pragma warning disable
 		#region Construction
@@ -66,13 +66,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoEditingType EditingType
+		public NetOffice.OfficeApi.Enums.MsoEditingType EditingType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EditingType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoEditingType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoEditingType)returnItem;
 			}
 		}
 
@@ -103,13 +103,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public LateBindingApi.OfficeApi.Enums.MsoSegmentType SegmentType
+		public NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SegmentType", paramsArray);
-				return (LateBindingApi.OfficeApi.Enums.MsoSegmentType)returnItem;
+				return (NetOffice.OfficeApi.Enums.MsoSegmentType)returnItem;
 			}
 		}
 

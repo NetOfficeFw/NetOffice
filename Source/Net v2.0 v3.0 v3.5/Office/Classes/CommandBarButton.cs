@@ -3,13 +3,13 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void CommandBarButton_ClickEventHandler(LateBindingApi.OfficeApi.CommandBarButton Ctrl, ref bool CancelDefault);
+	public delegate void CommandBarButton_ClickEventHandler(NetOffice.OfficeApi.CommandBarButton Ctrl, ref bool CancelDefault);
 	#pragma warning restore
 
 	#endregion

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface IRtdServer SupportByLibrary XL10 XL11 XL12 XL14 
@@ -54,9 +54,9 @@ namespace LateBindingApi.ExcelApi
 		/// <summary>
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
-		/// <param name="CallbackObject">LateBindingApi.ExcelApi.IRTDUpdateEvent CallbackObject</param>
+		/// <param name="CallbackObject">NetOffice.ExcelApi.IRTDUpdateEvent CallbackObject</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public Int32 ServerStart(LateBindingApi.ExcelApi.IRTDUpdateEvent callbackObject)
+		public Int32 ServerStart(NetOffice.ExcelApi.IRTDUpdateEvent callbackObject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(callbackObject);
 			object returnItem = Invoker.MethodReturn(this, "ServerStart", paramsArray);

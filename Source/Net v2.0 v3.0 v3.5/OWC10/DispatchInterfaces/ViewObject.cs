@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ViewObject SupportByLibrary XWC1.0 
@@ -68,7 +68,7 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Surface">LateBindingApi.OWC10Api.ViewSurface Surface</param>
+		/// <param name="Surface">NetOffice.OWC10Api.ViewSurface Surface</param>
 		/// <param name="cx1">Int32 cx1</param>
 		/// <param name="cy1">Int32 cy1</param>
 		/// <param name="cx2">Int32 cx2</param>
@@ -78,7 +78,7 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
 		[SupportByLibrary("XWC1.0")]
-		public void Draw(LateBindingApi.OWC10Api.ViewSurface surface, Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height)
+		public void Draw(NetOffice.OWC10Api.ViewSurface surface, Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(surface, cx1, cy1, cx2, cy2, left, top, width, height);
 			Invoker.Method(this, "Draw", paramsArray);

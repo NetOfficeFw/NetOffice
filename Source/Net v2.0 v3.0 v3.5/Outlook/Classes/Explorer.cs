@@ -3,7 +3,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
@@ -23,7 +23,7 @@ namespace LateBindingApi.OutlookApi
 	public delegate void Explorer_BeforeSizeEventHandler(ref bool Cancel);
 	public delegate void Explorer_BeforeItemCopyEventHandler(ref bool Cancel);
 	public delegate void Explorer_BeforeItemCutEventHandler(ref bool Cancel);
-	public delegate void Explorer_BeforeItemPasteEventHandler(ref COMObject ClipboardContent, LateBindingApi.OutlookApi.MAPIFolder Target, ref bool Cancel);
+	public delegate void Explorer_BeforeItemPasteEventHandler(ref COMObject ClipboardContent, NetOffice.OutlookApi.MAPIFolder Target, ref bool Cancel);
 	public delegate void Explorer_AttachmentSelectionChangeEventHandler();
 	#pragma warning restore
 

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface GroupingDefs SupportByLibrary XWC1.0 
@@ -67,11 +67,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.GroupingDef get_Item(object index)
+		public NetOffice.OWC10Api.GroupingDef get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 
@@ -87,11 +87,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="PageFieldName">string PageFieldName</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.GroupingDef Add(string groupingDefName, string groupingFieldName, string pageFieldName, object index)
+		public NetOffice.OWC10Api.GroupingDef Add(string groupingDefName, string groupingFieldName, string pageFieldName, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 
@@ -102,11 +102,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="GroupingFieldName">string GroupingFieldName</param>
 		/// <param name="PageFieldName">string PageFieldName</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.GroupingDef Add(string groupingDefName, string groupingFieldName, string pageFieldName)
+		public NetOffice.OWC10Api.GroupingDef Add(string groupingDefName, string groupingFieldName, string pageFieldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 
@@ -116,14 +116,14 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="GroupingDefName">string GroupingDefName</param>
 		/// <param name="GroupingFieldName">string GroupingFieldName</param>
 		/// <param name="PageFieldName">string PageFieldName</param>
-		/// <param name="TotalType">LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
+		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.GroupingDef AddTotal(string groupingDefName, string groupingFieldName, string pageFieldName, LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
+		public NetOffice.OWC10Api.GroupingDef AddTotal(string groupingDefName, string groupingFieldName, string pageFieldName, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName, totalType, index);
 			object returnItem = Invoker.MethodReturn(this, "AddTotal", paramsArray);
-			LateBindingApi.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 
@@ -133,13 +133,13 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="GroupingDefName">string GroupingDefName</param>
 		/// <param name="GroupingFieldName">string GroupingFieldName</param>
 		/// <param name="PageFieldName">string PageFieldName</param>
-		/// <param name="TotalType">LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
+		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.GroupingDef AddTotal(string groupingDefName, string groupingFieldName, string pageFieldName, LateBindingApi.OWC10Api.Enums.DscTotalTypeEnum totalType)
+		public NetOffice.OWC10Api.GroupingDef AddTotal(string groupingDefName, string groupingFieldName, string pageFieldName, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName, totalType);
 			object returnItem = Invoker.MethodReturn(this, "AddTotal", paramsArray);
-			LateBindingApi.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 

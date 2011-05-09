@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// Interface IEnumOleUndoUnits SupportByLibrary XWC1.0 
@@ -54,15 +54,15 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
-		/// <param name="rgElt">ref LateBindingApi.OWC10Api.IOleUndoUnit rgElt</param>
+		/// <param name="rgElt">ref NetOffice.OWC10Api.IOleUndoUnit rgElt</param>
 		/// <param name="pcEltFetched">ref Int32 pcEltFetched</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 RemoteNext(Int32 cElt, ref LateBindingApi.OWC10Api.IOleUndoUnit rgElt, ref Int32 pcEltFetched)
+		public Int32 RemoteNext(Int32 cElt, ref NetOffice.OWC10Api.IOleUndoUnit rgElt, ref Int32 pcEltFetched)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt, rgElt, pcEltFetched);
 			object returnItem = Invoker.MethodReturn(this, "RemoteNext", paramsArray);
-			rgElt = (LateBindingApi.OWC10Api.IOleUndoUnit)paramsArray[1];
+			rgElt = (NetOffice.OWC10Api.IOleUndoUnit)paramsArray[1];
 			pcEltFetched = (Int32)paramsArray[2];
 			return (Int32)returnItem;
 		}
@@ -93,14 +93,14 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="ppEnum">ref LateBindingApi.OWC10Api.IEnumOleUndoUnits ppEnum</param>
+		/// <param name="ppEnum">ref NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 Clone(ref LateBindingApi.OWC10Api.IEnumOleUndoUnits ppEnum)
+		public Int32 Clone(ref NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
-			ppEnum = (LateBindingApi.OWC10Api.IEnumOleUndoUnits)paramsArray[0];
+			ppEnum = (NetOffice.OWC10Api.IEnumOleUndoUnits)paramsArray[0];
 			return (Int32)returnItem;
 		}
 

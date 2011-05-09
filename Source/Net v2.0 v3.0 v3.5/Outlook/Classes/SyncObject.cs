@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void SyncObject_SyncStartEventHandler();
-	public delegate void SyncObject_ProgressEventHandler(LateBindingApi.OutlookApi.Enums.OlSyncState State, string Description, Int32 Value, Int32 Max);
+	public delegate void SyncObject_ProgressEventHandler(NetOffice.OutlookApi.Enums.OlSyncState State, string Description, Int32 Value, Int32 Max);
 	public delegate void SyncObject_OnErrorEventHandler(Int32 Code, string Description);
 	public delegate void SyncObject_SyncEndEventHandler();
 	#pragma warning restore

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface IAddinHost SupportByLibrary XWC1.0 
@@ -55,9 +55,9 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="varoper">ref object varoper</param>
-		/// <param name="grbit">LateBindingApi.OWC10Api.Enums.AddinClientTypeEnum grbit</param>
+		/// <param name="grbit">NetOffice.OWC10Api.Enums.AddinClientTypeEnum grbit</param>
 		[SupportByLibrary("XWC1.0")]
-		public object CoerceOper(ref object varoper, LateBindingApi.OWC10Api.Enums.AddinClientTypeEnum grbit)
+		public object CoerceOper(ref object varoper, NetOffice.OWC10Api.Enums.AddinClientTypeEnum grbit)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(varoper, grbit);

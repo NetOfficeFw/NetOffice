@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.AccessApi
+namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface AccessObject SupportByLibrary AC09 AC10 AC11 AC12 AC14 
@@ -122,13 +122,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.AccessObjectProperties Properties
+		public NetOffice.AccessApi.AccessObjectProperties Properties
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				LateBindingApi.AccessApi.AccessObjectProperties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.AccessApi.AccessObjectProperties;
+				NetOffice.AccessApi.AccessObjectProperties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.AccessObjectProperties;
 				return newObject;
 			}
 		}
@@ -198,13 +198,13 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC10 AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC10","AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi.Enums.AcCurrentView CurrentView
+		public NetOffice.AccessApi.Enums.AcCurrentView CurrentView
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CurrentView", paramsArray);
-				return (LateBindingApi.AccessApi.Enums.AcCurrentView)returnItem;
+				return (NetOffice.AccessApi.Enums.AcCurrentView)returnItem;
 			}
 		}
 
@@ -229,10 +229,10 @@ namespace LateBindingApi.AccessApi
 		/// <summary>
 		/// SupportByLibrary AC11 AC12 AC14 
 		/// </summary>
-		/// <param name="ObjectType">LateBindingApi.AccessApi.Enums.AcObjectType ObjectType</param>
+		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">string ObjectName</param>
 		[SupportByLibrary("AC11","AC12","AC14")]
-		public bool IsDependentUpon(LateBindingApi.AccessApi.Enums.AcObjectType objectType, string objectName)
+		public bool IsDependentUpon(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
 			object returnItem = Invoker.MethodReturn(this, "IsDependentUpon", paramsArray);
@@ -243,11 +243,11 @@ namespace LateBindingApi.AccessApi
 		/// SupportByLibrary AC11 AC12 AC14 
 		/// </summary>
 		[SupportByLibrary("AC11","AC12","AC14")]
-		public LateBindingApi.AccessApi._DependencyInfo GetDependencyInfo()
+		public NetOffice.AccessApi._DependencyInfo GetDependencyInfo()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetDependencyInfo", paramsArray);
-			LateBindingApi.AccessApi._DependencyInfo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.AccessApi._DependencyInfo;
+			NetOffice.AccessApi._DependencyInfo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi._DependencyInfo;
 			return newObject;
 		}
 

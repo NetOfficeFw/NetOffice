@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {	
 	#pragma warning disable
 	

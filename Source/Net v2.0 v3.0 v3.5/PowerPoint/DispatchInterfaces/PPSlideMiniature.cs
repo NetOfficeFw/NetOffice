@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.PowerPointApi
+namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PPSlideMiniature SupportByLibrary PP09 
@@ -111,9 +111,9 @@ namespace LateBindingApi.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP09 
 		/// </summary>
-		/// <param name="Slide">LateBindingApi.PowerPointApi.Slide Slide</param>
+		/// <param name="Slide">NetOffice.PowerPointApi.Slide Slide</param>
 		[SupportByLibrary("PP09")]
-		public void SetImage(LateBindingApi.PowerPointApi.Slide slide)
+		public void SetImage(NetOffice.PowerPointApi.Slide slide)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slide);
 			Invoker.Method(this, "SetImage", paramsArray);

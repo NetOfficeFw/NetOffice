@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.MSComctlLibApi
+namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface ITabStrip SupportByLibrary WCC6.0 
@@ -51,13 +51,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.ITabs Tabs
+		public NetOffice.MSComctlLibApi.ITabs Tabs
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Tabs", paramsArray);
-				LateBindingApi.MSComctlLibApi.ITabs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.ITabs;
+				NetOffice.MSComctlLibApi.ITabs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITabs;
 				return newObject;
 			}
 			set
@@ -168,13 +168,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.TabStyleConstants Style
+		public NetOffice.MSComctlLibApi.Enums.TabStyleConstants Style
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.TabStyleConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.TabStyleConstants)returnItem;
 			}
 			set
 			{
@@ -206,13 +206,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.TabWidthStyleConstants TabWidthStyle
+		public NetOffice.MSComctlLibApi.Enums.TabWidthStyleConstants TabWidthStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TabWidthStyle", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.TabWidthStyleConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.TabWidthStyleConstants)returnItem;
 			}
 			set
 			{
@@ -301,13 +301,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.MousePointerConstants MousePointer
+		public NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MousePointer", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.MousePointerConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.MousePointerConstants)returnItem;
 			}
 			set
 			{
@@ -378,13 +378,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.ITab SelectedItem
+		public NetOffice.MSComctlLibApi.ITab SelectedItem
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SelectedItem", paramsArray);
-				LateBindingApi.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSComctlLibApi.ITab;
+				NetOffice.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
 				return newObject;
 			}
 			set
@@ -398,13 +398,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
+		public NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OLEDropMode", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.OLEDropConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.OLEDropConstants)returnItem;
 			}
 			set
 			{
@@ -455,13 +455,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.PlacementConstants Placement
+		public NetOffice.MSComctlLibApi.Enums.PlacementConstants Placement
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Placement", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.PlacementConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.PlacementConstants)returnItem;
 			}
 			set
 			{
@@ -512,13 +512,13 @@ namespace LateBindingApi.MSComctlLibApi
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
 		[SupportByLibrary("WCC6.0")]
-		public LateBindingApi.MSComctlLibApi.Enums.TabSelStyleConstants TabStyle
+		public NetOffice.MSComctlLibApi.Enums.TabSelStyleConstants TabStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TabStyle", paramsArray);
-				return (LateBindingApi.MSComctlLibApi.Enums.TabSelStyleConstants)returnItem;
+				return (NetOffice.MSComctlLibApi.Enums.TabSelStyleConstants)returnItem;
 			}
 			set
 			{

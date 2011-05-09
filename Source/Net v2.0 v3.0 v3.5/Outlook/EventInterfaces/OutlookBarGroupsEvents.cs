@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using LateBindingApi.Core;
 
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {	
 	#pragma warning disable
 	
@@ -69,7 +69,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.OutlookBarGroup newNewGroup = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, newGroup) as LateBindingApi.OutlookApi.OutlookBarGroup;
+			NetOffice.OutlookApi.OutlookBarGroup newNewGroup = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, newGroup) as NetOffice.OutlookApi.OutlookBarGroup;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewGroup;
 			foreach(Delegate delItem in recipients)
@@ -102,7 +102,7 @@ namespace LateBindingApi.OutlookApi
 				return;
 			}
 
-			LateBindingApi.OutlookApi.OutlookBarGroup newGroup = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, group) as LateBindingApi.OutlookApi.OutlookBarGroup;
+			NetOffice.OutlookApi.OutlookBarGroup newGroup = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, group) as NetOffice.OutlookApi.OutlookBarGroup;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newGroup;
 			paramsArray.SetValue(cancel, 1);

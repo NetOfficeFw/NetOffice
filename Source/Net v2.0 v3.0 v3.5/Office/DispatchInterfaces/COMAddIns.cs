@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface COMAddIns SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -86,12 +86,12 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.COMAddIn Item(ref object index)
+		public NetOffice.OfficeApi.COMAddIn Item(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray, modifiers);
-			LateBindingApi.OfficeApi.COMAddIn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.COMAddIn;
+			NetOffice.OfficeApi.COMAddIn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.COMAddIn;
 			index = (object)paramsArray[0];
 			return newObject;
 		}

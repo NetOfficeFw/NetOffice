@@ -3,43 +3,43 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Spreadsheet_BeforeContextMenuEventHandler(Int32 x, Int32 y, LateBindingApi.OWC10Api.ByRef Menu, LateBindingApi.OWC10Api.ByRef Cancel);
-	public delegate void Spreadsheet_BeforeKeyDownEventHandler(Int32 KeyCode, Int32 Shift, LateBindingApi.OWC10Api.ByRef Cancel);
-	public delegate void Spreadsheet_BeforeKeyPressEventHandler(Int32 KeyAscii, LateBindingApi.OWC10Api.ByRef Cancel);
-	public delegate void Spreadsheet_BeforeKeyUpEventHandler(Int32 KeyCode, Int32 Shift, LateBindingApi.OWC10Api.ByRef Cancel);
+	public delegate void Spreadsheet_BeforeContextMenuEventHandler(Int32 x, Int32 y, NetOffice.OWC10Api.ByRef Menu, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void Spreadsheet_BeforeKeyDownEventHandler(Int32 KeyCode, Int32 Shift, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void Spreadsheet_BeforeKeyPressEventHandler(Int32 KeyAscii, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void Spreadsheet_BeforeKeyUpEventHandler(Int32 KeyCode, Int32 Shift, NetOffice.OWC10Api.ByRef Cancel);
 	public delegate void Spreadsheet_ClickEventHandler();
-	public delegate void Spreadsheet_CommandEnabledEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Enabled);
-	public delegate void Spreadsheet_CommandCheckedEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Checked);
-	public delegate void Spreadsheet_CommandTipTextEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Caption);
-	public delegate void Spreadsheet_CommandBeforeExecuteEventHandler(COMObject Command, LateBindingApi.OWC10Api.ByRef Cancel);
+	public delegate void Spreadsheet_CommandEnabledEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Enabled);
+	public delegate void Spreadsheet_CommandCheckedEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Checked);
+	public delegate void Spreadsheet_CommandTipTextEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Caption);
+	public delegate void Spreadsheet_CommandBeforeExecuteEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Cancel);
 	public delegate void Spreadsheet_CommandExecuteEventHandler(COMObject Command, bool Succeeded);
 	public delegate void Spreadsheet_DblClickEventHandler();
-	public delegate void Spreadsheet_EndEditEventHandler(bool Accept, LateBindingApi.OWC10Api.ByRef FinalValue, LateBindingApi.OWC10Api.ByRef Cancel, LateBindingApi.OWC10Api.ByRef ErrorDescription);
+	public delegate void Spreadsheet_EndEditEventHandler(bool Accept, NetOffice.OWC10Api.ByRef FinalValue, NetOffice.OWC10Api.ByRef Cancel, NetOffice.OWC10Api.ByRef ErrorDescription);
 	public delegate void Spreadsheet_InitializeEventHandler();
 	public delegate void Spreadsheet_KeyDownEventHandler(Int32 KeyCode, Int32 Shift);
 	public delegate void Spreadsheet_KeyPressEventHandler(Int32 KeyAscii);
 	public delegate void Spreadsheet_KeyUpEventHandler(Int32 KeyCode, Int32 Shift);
 	public delegate void Spreadsheet_LoadCompletedEventHandler();
 	public delegate void Spreadsheet_MouseDownEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
-	public delegate void Spreadsheet_MouseOutEventHandler(Int32 Button, Int32 Shift, LateBindingApi.OWC10Api._Range Target);
-	public delegate void Spreadsheet_MouseOverEventHandler(Int32 Button, Int32 Shift, LateBindingApi.OWC10Api._Range Target);
+	public delegate void Spreadsheet_MouseOutEventHandler(Int32 Button, Int32 Shift, NetOffice.OWC10Api._Range Target);
+	public delegate void Spreadsheet_MouseOverEventHandler(Int32 Button, Int32 Shift, NetOffice.OWC10Api._Range Target);
 	public delegate void Spreadsheet_MouseUpEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
 	public delegate void Spreadsheet_MouseWheelEventHandler(bool Page, Int32 Count);
 	public delegate void Spreadsheet_SelectionChangeEventHandler();
-	public delegate void Spreadsheet_SelectionChangingEventHandler(LateBindingApi.OWC10Api._Range Range);
-	public delegate void Spreadsheet_SheetActivateEventHandler(LateBindingApi.OWC10Api.Worksheet Sh);
-	public delegate void Spreadsheet_SheetCalculateEventHandler(LateBindingApi.OWC10Api.Worksheet Sh);
-	public delegate void Spreadsheet_SheetChangeEventHandler(LateBindingApi.OWC10Api.Worksheet Sh, LateBindingApi.OWC10Api._Range Target);
-	public delegate void Spreadsheet_SheetDeactivateEventHandler(LateBindingApi.OWC10Api.Worksheet Sh);
-	public delegate void Spreadsheet_SheetFollowHyperlinkEventHandler(LateBindingApi.OWC10Api.Worksheet Sh, LateBindingApi.OWC10Api.Hyperlink Target);
-	public delegate void Spreadsheet_StartEditEventHandler(COMObject Selection, LateBindingApi.OWC10Api.ByRef InitialValue, LateBindingApi.OWC10Api.ByRef Cancel, LateBindingApi.OWC10Api.ByRef ErrorDescription);
-	public delegate void Spreadsheet_ViewChangeEventHandler(LateBindingApi.OWC10Api._Range Target);
+	public delegate void Spreadsheet_SelectionChangingEventHandler(NetOffice.OWC10Api._Range Range);
+	public delegate void Spreadsheet_SheetActivateEventHandler(NetOffice.OWC10Api.Worksheet Sh);
+	public delegate void Spreadsheet_SheetCalculateEventHandler(NetOffice.OWC10Api.Worksheet Sh);
+	public delegate void Spreadsheet_SheetChangeEventHandler(NetOffice.OWC10Api.Worksheet Sh, NetOffice.OWC10Api._Range Target);
+	public delegate void Spreadsheet_SheetDeactivateEventHandler(NetOffice.OWC10Api.Worksheet Sh);
+	public delegate void Spreadsheet_SheetFollowHyperlinkEventHandler(NetOffice.OWC10Api.Worksheet Sh, NetOffice.OWC10Api.Hyperlink Target);
+	public delegate void Spreadsheet_StartEditEventHandler(COMObject Selection, NetOffice.OWC10Api.ByRef InitialValue, NetOffice.OWC10Api.ByRef Cancel, NetOffice.OWC10Api.ByRef ErrorDescription);
+	public delegate void Spreadsheet_ViewChangeEventHandler(NetOffice.OWC10Api._Range Target);
 	#pragma warning restore
 
 	#endregion

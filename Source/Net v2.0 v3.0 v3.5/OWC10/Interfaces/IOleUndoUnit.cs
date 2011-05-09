@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// Interface IOleUndoUnit SupportByLibrary XWC1.0 
@@ -53,9 +53,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pUndoManager">LateBindingApi.OWC10Api.IOleUndoManager pUndoManager</param>
+		/// <param name="pUndoManager">NetOffice.OWC10Api.IOleUndoManager pUndoManager</param>
 		[SupportByLibrary("XWC1.0")]
-		public Int32 Do(LateBindingApi.OWC10Api.IOleUndoManager pUndoManager)
+		public Int32 Do(NetOffice.OWC10Api.IOleUndoManager pUndoManager)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUndoManager);
 			object returnItem = Invoker.MethodReturn(this, "Do", paramsArray);

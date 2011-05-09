@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.ExcelApi
+namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface Speech SupportByLibrary XL10 XL11 XL12 XL14 
@@ -51,13 +51,13 @@ namespace LateBindingApi.ExcelApi
 		/// SupportByLibrary XL10 XL11 XL12 XL14 
 		/// </summary>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		public LateBindingApi.ExcelApi.Enums.XlSpeakDirection Direction
+		public NetOffice.ExcelApi.Enums.XlSpeakDirection Direction
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Direction", paramsArray);
-				return (LateBindingApi.ExcelApi.Enums.XlSpeakDirection)returnItem;
+				return (NetOffice.ExcelApi.Enums.XlSpeakDirection)returnItem;
 			}
 			set
 			{

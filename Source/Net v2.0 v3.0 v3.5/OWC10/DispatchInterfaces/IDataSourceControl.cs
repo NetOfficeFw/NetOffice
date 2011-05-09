@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface IDataSourceControl SupportByLibrary XWC1.0 
@@ -103,13 +103,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.ADODBApi.Connection Connection
+		public NetOffice.ADODBApi.Connection Connection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Connection", paramsArray);
-				LateBindingApi.ADODBApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Connection;
+				NetOffice.ADODBApi.Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Connection;
 				return newObject;
 			}
 		}
@@ -156,13 +156,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.ADODBApi.Recordset DefaultRecordset
+		public NetOffice.ADODBApi.Recordset DefaultRecordset
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultRecordset", paramsArray);
-				LateBindingApi.ADODBApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.ADODBApi.Recordset;
+				NetOffice.ADODBApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Recordset;
 				return newObject;
 			}
 		}
@@ -171,13 +171,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRowsources SchemaRowsources
+		public NetOffice.OWC10Api.SchemaRowsources SchemaRowsources
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaRowsources", paramsArray);
-				LateBindingApi.OWC10Api.SchemaRowsources newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaRowsources;
+				NetOffice.OWC10Api.SchemaRowsources newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaRowsources;
 				return newObject;
 			}
 		}
@@ -186,13 +186,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaRelationships SchemaRelationships
+		public NetOffice.OWC10Api.SchemaRelationships SchemaRelationships
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaRelationships", paramsArray);
-				LateBindingApi.OWC10Api.SchemaRelationships newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaRelationships;
+				NetOffice.OWC10Api.SchemaRelationships newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaRelationships;
 				return newObject;
 			}
 		}
@@ -201,13 +201,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.PageRowsources PageRowsources
+		public NetOffice.OWC10Api.PageRowsources PageRowsources
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PageRowsources", paramsArray);
-				LateBindingApi.OWC10Api.PageRowsources newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.PageRowsources;
+				NetOffice.OWC10Api.PageRowsources newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageRowsources;
 				return newObject;
 			}
 		}
@@ -216,13 +216,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.RecordsetDefs RecordsetDefs
+		public NetOffice.OWC10Api.RecordsetDefs RecordsetDefs
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecordsetDefs", paramsArray);
-				LateBindingApi.OWC10Api.RecordsetDefs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.RecordsetDefs;
+				NetOffice.OWC10Api.RecordsetDefs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.RecordsetDefs;
 				return newObject;
 			}
 		}
@@ -231,13 +231,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.RecordsetDefs RootRecordsetDefs
+		public NetOffice.OWC10Api.RecordsetDefs RootRecordsetDefs
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RootRecordsetDefs", paramsArray);
-				LateBindingApi.OWC10Api.RecordsetDefs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.RecordsetDefs;
+				NetOffice.OWC10Api.RecordsetDefs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.RecordsetDefs;
 				return newObject;
 			}
 		}
@@ -299,13 +299,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.GroupLevels GroupLevels
+		public NetOffice.OWC10Api.GroupLevels GroupLevels
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupLevels", paramsArray);
-				LateBindingApi.OWC10Api.GroupLevels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.GroupLevels;
+				NetOffice.OWC10Api.GroupLevels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.GroupLevels;
 				return newObject;
 			}
 		}
@@ -329,13 +329,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.ElementExtensions ElementExtensions
+		public NetOffice.OWC10Api.ElementExtensions ElementExtensions
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ElementExtensions", paramsArray);
-				LateBindingApi.OWC10Api.ElementExtensions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.ElementExtensions;
+				NetOffice.OWC10Api.ElementExtensions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ElementExtensions;
 				return newObject;
 			}
 		}
@@ -363,13 +363,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscRecordsetTypeEnum RecordsetType
+		public NetOffice.OWC10Api.Enums.DscRecordsetTypeEnum RecordsetType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecordsetType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscRecordsetTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscRecordsetTypeEnum)returnItem;
 			}
 			set
 			{
@@ -382,13 +382,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.AllPageFields AllPageFields
+		public NetOffice.OWC10Api.AllPageFields AllPageFields
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllPageFields", paramsArray);
-				LateBindingApi.OWC10Api.AllPageFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.AllPageFields;
+				NetOffice.OWC10Api.AllPageFields newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.AllPageFields;
 				return newObject;
 			}
 		}
@@ -397,13 +397,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Section CurrentSection
+		public NetOffice.OWC10Api.Section CurrentSection
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CurrentSection", paramsArray);
-				LateBindingApi.OWC10Api.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.Section;
+				NetOffice.OWC10Api.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Section;
 				return newObject;
 			}
 		}
@@ -413,24 +413,24 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="DataMember">optional object DataMember</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ProviderType get_ProviderType(object dataMember)
+		public NetOffice.OWC10Api.Enums.ProviderType get_ProviderType(object dataMember)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataMember);
 			object returnItem = Invoker.PropertyGet(this, "ProviderType", paramsArray);
-			return (LateBindingApi.OWC10Api.Enums.ProviderType)returnItem;
+			return (NetOffice.OWC10Api.Enums.ProviderType)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.ProviderType ProviderType
+		public NetOffice.OWC10Api.Enums.ProviderType ProviderType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ProviderType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.ProviderType)returnItem;
+				return (NetOffice.OWC10Api.Enums.ProviderType)returnItem;
 			}
 		}
 
@@ -438,13 +438,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.AllGroupingDefs AllGroupingDefs
+		public NetOffice.OWC10Api.AllGroupingDefs AllGroupingDefs
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllGroupingDefs", paramsArray);
-				LateBindingApi.OWC10Api.AllGroupingDefs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.AllGroupingDefs;
+				NetOffice.OWC10Api.AllGroupingDefs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.AllGroupingDefs;
 				return newObject;
 			}
 		}
@@ -472,13 +472,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.DataPages DataPages
+		public NetOffice.OWC10Api.DataPages DataPages
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataPages", paramsArray);
-				LateBindingApi.OWC10Api.DataPages newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.DataPages;
+				NetOffice.OWC10Api.DataPages newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.DataPages;
 				return newObject;
 			}
 		}
@@ -539,13 +539,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DefaultControlTypeEnum DefaultControlType
+		public NetOffice.OWC10Api.Enums.DefaultControlTypeEnum DefaultControlType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultControlType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DefaultControlTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DefaultControlTypeEnum)returnItem;
 			}
 			set
 			{
@@ -680,13 +680,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscOfflineTypeEnum OfflineType
+		public NetOffice.OWC10Api.Enums.DscOfflineTypeEnum OfflineType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OfflineType", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscOfflineTypeEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscOfflineTypeEnum)returnItem;
 			}
 			set
 			{
@@ -751,13 +751,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Enums.DscXMLLocationEnum XMLLocation
+		public NetOffice.OWC10Api.Enums.DscXMLLocationEnum XMLLocation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "XMLLocation", paramsArray);
-				return (LateBindingApi.OWC10Api.Enums.DscXMLLocationEnum)returnItem;
+				return (NetOffice.OWC10Api.Enums.DscXMLLocationEnum)returnItem;
 			}
 			set
 			{
@@ -855,13 +855,13 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.SchemaDiagrams SchemaDiagrams
+		public NetOffice.OWC10Api.SchemaDiagrams SchemaDiagrams
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaDiagrams", paramsArray);
-				LateBindingApi.OWC10Api.SchemaDiagrams newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.SchemaDiagrams;
+				NetOffice.OWC10Api.SchemaDiagrams newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaDiagrams;
 				return newObject;
 			}
 		}
@@ -888,14 +888,14 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="RecordsetName">string RecordsetName</param>
-		/// <param name="ExecuteOption">LateBindingApi.ADODBApi.Enums.ExecuteOptionEnum ExecuteOption</param>
-		/// <param name="FetchType">LateBindingApi.OWC10Api.Enums.DscFetchTypeEnum FetchType</param>
+		/// <param name="ExecuteOption">NetOffice.ADODBApi.Enums.ExecuteOptionEnum ExecuteOption</param>
+		/// <param name="FetchType">NetOffice.OWC10Api.Enums.DscFetchTypeEnum FetchType</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.ADODBApi.Recordset Execute(string recordsetName, LateBindingApi.ADODBApi.Enums.ExecuteOptionEnum executeOption, LateBindingApi.OWC10Api.Enums.DscFetchTypeEnum fetchType)
+		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, NetOffice.ADODBApi.Enums.ExecuteOptionEnum executeOption, NetOffice.OWC10Api.Enums.DscFetchTypeEnum fetchType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, executeOption, fetchType);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			LateBindingApi.ADODBApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.ADODBApi.Recordset;
+			NetOffice.ADODBApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi.Recordset;
 			return newObject;
 		}
 
@@ -938,12 +938,12 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="pUnknownDropGoo">object pUnknownDropGoo</param>
 		/// <param name="bstrRecordSetDefName">string bstrRecordSetDefName</param>
-		/// <param name="dl">LateBindingApi.OWC10Api.Enums.DscDropLocationEnum dl</param>
-		/// <param name="dt">LateBindingApi.OWC10Api.Enums.DscDropTypeEnum dt</param>
+		/// <param name="dl">NetOffice.OWC10Api.Enums.DscDropLocationEnum dl</param>
+		/// <param name="dt">NetOffice.OWC10Api.Enums.DscDropTypeEnum dt</param>
 		/// <param name="PageRowsource">string PageRowsource</param>
 		/// <param name="SchemaRelationship">string SchemaRelationship</param>
 		[SupportByLibrary("XWC1.0")]
-		public void ProcessDrop(object pUnknownDropGoo, string bstrRecordSetDefName, LateBindingApi.OWC10Api.Enums.DscDropLocationEnum dl, LateBindingApi.OWC10Api.Enums.DscDropTypeEnum dt, string pageRowsource, string schemaRelationship)
+		public void ProcessDrop(object pUnknownDropGoo, string bstrRecordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, string pageRowsource, string schemaRelationship)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUnknownDropGoo, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship);
 			Invoker.Method(this, "ProcessDrop", paramsArray);
@@ -956,12 +956,12 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="Relationships">object Relationships</param>
 		/// <param name="Fields">object Fields</param>
 		/// <param name="bstrRecordSetDefName">string bstrRecordSetDefName</param>
-		/// <param name="dl">LateBindingApi.OWC10Api.Enums.DscDropLocationEnum dl</param>
-		/// <param name="dt">LateBindingApi.OWC10Api.Enums.DscDropTypeEnum dt</param>
+		/// <param name="dl">NetOffice.OWC10Api.Enums.DscDropLocationEnum dl</param>
+		/// <param name="dt">NetOffice.OWC10Api.Enums.DscDropTypeEnum dt</param>
 		/// <param name="PageRowsource">string PageRowsource</param>
 		/// <param name="SchemaRelationship">string SchemaRelationship</param>
 		[SupportByLibrary("XWC1.0")]
-		public void ScriptDrop(object rowsources, object relationships, object fields, string bstrRecordSetDefName, LateBindingApi.OWC10Api.Enums.DscDropLocationEnum dl, LateBindingApi.OWC10Api.Enums.DscDropTypeEnum dt, string pageRowsource, string schemaRelationship)
+		public void ScriptDrop(object rowsources, object relationships, object fields, string bstrRecordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, string pageRowsource, string schemaRelationship)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowsources, relationships, fields, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship);
 			Invoker.Method(this, "ScriptDrop", paramsArray);
@@ -972,11 +972,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Element">object Element</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.Section GetContainingSection(object element)
+		public NetOffice.OWC10Api.Section GetContainingSection(object element)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(element);
 			object returnItem = Invoker.MethodReturn(this, "GetContainingSection", paramsArray);
-			LateBindingApi.OWC10Api.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.Section;
+			NetOffice.OWC10Api.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.Section;
 			return newObject;
 		}
 
@@ -987,13 +987,13 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="Relationships">object Relationships</param>
 		/// <param name="Fields">object Fields</param>
 		/// <param name="RecordsetDef">string RecordsetDef</param>
-		/// <param name="dl">LateBindingApi.OWC10Api.Enums.DscDropLocationEnum dl</param>
-		/// <param name="dt">LateBindingApi.OWC10Api.Enums.DscDropTypeEnum dt</param>
+		/// <param name="dl">NetOffice.OWC10Api.Enums.DscDropLocationEnum dl</param>
+		/// <param name="dt">NetOffice.OWC10Api.Enums.DscDropTypeEnum dt</param>
 		/// <param name="DropRowsource">ref string DropRowsource</param>
 		/// <param name="RowsourcesOut">ref object RowsourcesOut</param>
 		/// <param name="RelationshipsOut">ref object RelationshipsOut</param>
 		[SupportByLibrary("XWC1.0")]
-		public void ScriptValidate(object rowsources, object relationships, object fields, string recordsetDef, LateBindingApi.OWC10Api.Enums.DscDropLocationEnum dl, LateBindingApi.OWC10Api.Enums.DscDropTypeEnum dt, ref string dropRowsource, ref object rowsourcesOut, ref object relationshipsOut)
+		public void ScriptValidate(object rowsources, object relationships, object fields, string recordsetDef, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, ref string dropRowsource, ref object rowsourcesOut, ref object relationshipsOut)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(rowsources, relationships, fields, recordsetDef, dl, dt, dropRowsource, rowsourcesOut, relationshipsOut);
@@ -1008,14 +1008,14 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="UnknownDropGoo">object UnknownDropGoo</param>
 		/// <param name="RecordSetDefName">string RecordSetDefName</param>
-		/// <param name="Location">LateBindingApi.OWC10Api.Enums.DscDropLocationEnum Location</param>
-		/// <param name="Type">LateBindingApi.OWC10Api.Enums.DscDropTypeEnum Type</param>
+		/// <param name="Location">NetOffice.OWC10Api.Enums.DscDropLocationEnum Location</param>
+		/// <param name="Type">NetOffice.OWC10Api.Enums.DscDropTypeEnum Type</param>
 		/// <param name="DropRowsource">ref string DropRowsource</param>
 		/// <param name="RowsourcesOut">ref object RowsourcesOut</param>
 		/// <param name="RelationshipsOut">ref object RelationshipsOut</param>
 		/// <param name="NumberOfDrops">ref Int32 NumberOfDrops</param>
 		[SupportByLibrary("XWC1.0")]
-		public void ValidateDrop(object unknownDropGoo, string recordSetDefName, LateBindingApi.OWC10Api.Enums.DscDropLocationEnum location, LateBindingApi.OWC10Api.Enums.DscDropTypeEnum type, ref string dropRowsource, ref object rowsourcesOut, ref object relationshipsOut, ref Int32 numberOfDrops)
+		public void ValidateDrop(object unknownDropGoo, string recordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum location, NetOffice.OWC10Api.Enums.DscDropTypeEnum type, ref string dropRowsource, ref object rowsourcesOut, ref object relationshipsOut, ref Int32 numberOfDrops)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(unknownDropGoo, recordSetDefName, location, type, dropRowsource, rowsourcesOut, relationshipsOut, numberOfDrops);
@@ -1030,9 +1030,9 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="Hyperlink">object Hyperlink</param>
-		/// <param name="Part">LateBindingApi.OWC10Api.Enums.DscHyperlinkPartEnum Part</param>
+		/// <param name="Part">NetOffice.OWC10Api.Enums.DscHyperlinkPartEnum Part</param>
 		[SupportByLibrary("XWC1.0")]
-		public string HyperlinkPart(object hyperlink, LateBindingApi.OWC10Api.Enums.DscHyperlinkPartEnum part)
+		public string HyperlinkPart(object hyperlink, NetOffice.OWC10Api.Enums.DscHyperlinkPartEnum part)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hyperlink, part);
 			object returnItem = Invoker.MethodReturn(this, "HyperlinkPart", paramsArray);
@@ -1099,16 +1099,16 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="SectionElement">object SectionElement</param>
 		/// <param name="RecordSource">ref string RecordSource</param>
-		/// <param name="SectionType">LateBindingApi.OWC10Api.Enums.SectTypeEnum SectionType</param>
-		/// <param name="GroupLevel">ref LateBindingApi.OWC10Api.GroupLevel GroupLevel</param>
+		/// <param name="SectionType">NetOffice.OWC10Api.Enums.SectTypeEnum SectionType</param>
+		/// <param name="GroupLevel">ref NetOffice.OWC10Api.GroupLevel GroupLevel</param>
 		[SupportByLibrary("XWC1.0")]
-		public void GetSectionInfo(object sectionElement, ref string recordSource, LateBindingApi.OWC10Api.Enums.SectTypeEnum sectionType, ref LateBindingApi.OWC10Api.GroupLevel groupLevel)
+		public void GetSectionInfo(object sectionElement, ref string recordSource, NetOffice.OWC10Api.Enums.SectTypeEnum sectionType, ref NetOffice.OWC10Api.GroupLevel groupLevel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionElement, recordSource, sectionType, groupLevel);
 			Invoker.Method(this, "GetSectionInfo", paramsArray, modifiers);
 			recordSource = (string)paramsArray[1];
-			groupLevel = (LateBindingApi.OWC10Api.GroupLevel)paramsArray[3];
+			groupLevel = (NetOffice.OWC10Api.GroupLevel)paramsArray[3];
 		}
 
 		/// <summary>
@@ -1148,10 +1148,10 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="ExportType">LateBindingApi.OWC10Api.Enums.ExportableConnectStringEnum ExportType</param>
+		/// <param name="ExportType">NetOffice.OWC10Api.Enums.ExportableConnectStringEnum ExportType</param>
 		/// <param name="ConnectString">ref string ConnectString</param>
 		[SupportByLibrary("XWC1.0")]
-		public void GetExportableConnectString(LateBindingApi.OWC10Api.Enums.ExportableConnectStringEnum exportType, ref string connectString)
+		public void GetExportableConnectString(NetOffice.OWC10Api.Enums.ExportableConnectStringEnum exportType, ref string connectString)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(exportType, connectString);
@@ -1162,9 +1162,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="eEncoding">LateBindingApi.OWC10Api.Enums.DscEncodingEnum eEncoding</param>
+		/// <param name="eEncoding">NetOffice.OWC10Api.Enums.DscEncodingEnum eEncoding</param>
 		[SupportByLibrary("XWC1.0")]
-		public void ExportXML(LateBindingApi.OWC10Api.Enums.DscEncodingEnum eEncoding)
+		public void ExportXML(NetOffice.OWC10Api.Enums.DscEncodingEnum eEncoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eEncoding);
 			Invoker.Method(this, "ExportXML", paramsArray);
@@ -1174,9 +1174,9 @@ namespace LateBindingApi.OWC10Api
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
 		/// <param name="RecordsetName">string RecordsetName</param>
-		/// <param name="Recordset">LateBindingApi.ADODBApi.Recordset Recordset</param>
+		/// <param name="Recordset">NetOffice.ADODBApi.Recordset Recordset</param>
 		[SupportByLibrary("XWC1.0")]
-		public void SetRootRecordset(string recordsetName, LateBindingApi.ADODBApi.Recordset recordset)
+		public void SetRootRecordset(string recordsetName, NetOffice.ADODBApi.Recordset recordset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, recordset);
 			Invoker.Method(this, "SetRootRecordset", paramsArray);
@@ -1204,9 +1204,9 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="RefreshType">LateBindingApi.OWC10Api.Enums.RefreshType RefreshType</param>
+		/// <param name="RefreshType">NetOffice.OWC10Api.Enums.RefreshType RefreshType</param>
 		[SupportByLibrary("XWC1.0")]
-		public void Refresh(LateBindingApi.OWC10Api.Enums.RefreshType refreshType)
+		public void Refresh(NetOffice.OWC10Api.Enums.RefreshType refreshType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(refreshType);
 			Invoker.Method(this, "Refresh", paramsArray);
@@ -1215,24 +1215,24 @@ namespace LateBindingApi.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="pGroupLevel">LateBindingApi.OWC10Api.GroupLevel pGroupLevel</param>
+		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		/// <param name="fChild">Int32 fChild</param>
-		/// <param name="ppGrouplevel">ref LateBindingApi.OWC10Api.GroupLevel ppGrouplevel</param>
+		/// <param name="ppGrouplevel">ref NetOffice.OWC10Api.GroupLevel ppGrouplevel</param>
 		[SupportByLibrary("XWC1.0")]
-		public void FindRelatedGroupLevel(LateBindingApi.OWC10Api.GroupLevel pGroupLevel, Int32 fChild, ref LateBindingApi.OWC10Api.GroupLevel ppGrouplevel)
+		public void FindRelatedGroupLevel(NetOffice.OWC10Api.GroupLevel pGroupLevel, Int32 fChild, ref NetOffice.OWC10Api.GroupLevel ppGrouplevel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pGroupLevel, fChild, ppGrouplevel);
 			Invoker.Method(this, "FindRelatedGroupLevel", paramsArray, modifiers);
-			ppGrouplevel = (LateBindingApi.OWC10Api.GroupLevel)paramsArray[2];
+			ppGrouplevel = (NetOffice.OWC10Api.GroupLevel)paramsArray[2];
 		}
 
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Notification">LateBindingApi.OWC10Api.Enums.NotificationType Notification</param>
+		/// <param name="Notification">NetOffice.OWC10Api.Enums.NotificationType Notification</param>
 		[SupportByLibrary("XWC1.0")]
-		public void DllNotification(LateBindingApi.OWC10Api.Enums.NotificationType notification)
+		public void DllNotification(NetOffice.OWC10Api.Enums.NotificationType notification)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(notification);
 			Invoker.Method(this, "DllNotification", paramsArray);

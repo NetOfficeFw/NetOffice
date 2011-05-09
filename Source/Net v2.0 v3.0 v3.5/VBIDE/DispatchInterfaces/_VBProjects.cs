@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.VBIDEApi
+namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _VBProjects SupportByLibrary VBE5.3 VBE12 
@@ -54,22 +54,22 @@ namespace LateBindingApi.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="Type">LateBindingApi.VBIDEApi.Enums.vbext_ProjectType Type</param>
+		/// <param name="Type">NetOffice.VBIDEApi.Enums.vbext_ProjectType Type</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBProject Add(LateBindingApi.VBIDEApi.Enums.vbext_ProjectType type)
+		public NetOffice.VBIDEApi.VBProject Add(NetOffice.VBIDEApi.Enums.vbext_ProjectType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.VBIDEApi.VBProject;
+			NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBProject;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary VBE5.3 VBE12 
 		/// </summary>
-		/// <param name="lpc">LateBindingApi.VBIDEApi.VBProject lpc</param>
+		/// <param name="lpc">NetOffice.VBIDEApi.VBProject lpc</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public void Remove(LateBindingApi.VBIDEApi.VBProject lpc)
+		public void Remove(NetOffice.VBIDEApi.VBProject lpc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lpc);
 			Invoker.Method(this, "Remove", paramsArray);
@@ -80,11 +80,11 @@ namespace LateBindingApi.VBIDEApi
 		/// </summary>
 		/// <param name="bstrPath">string bstrPath</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public LateBindingApi.VBIDEApi.VBProject Open(string bstrPath)
+		public NetOffice.VBIDEApi.VBProject Open(string bstrPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrPath);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			LateBindingApi.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.VBIDEApi.VBProject;
+			NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBProject;
 			return newObject;
 		}
 

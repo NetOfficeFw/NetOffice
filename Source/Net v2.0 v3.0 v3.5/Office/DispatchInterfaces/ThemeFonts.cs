@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ThemeFonts SupportByLibrary OF12 OF14 
@@ -84,13 +84,13 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF12 OF14 
 		/// </summary>
-		/// <param name="Index">LateBindingApi.OfficeApi.Enums.MsoFontLanguageIndex Index</param>
+		/// <param name="Index">NetOffice.OfficeApi.Enums.MsoFontLanguageIndex Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public LateBindingApi.OfficeApi.ThemeFont Item(LateBindingApi.OfficeApi.Enums.MsoFontLanguageIndex index)
+		public NetOffice.OfficeApi.ThemeFont Item(NetOffice.OfficeApi.Enums.MsoFontLanguageIndex index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.ThemeFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.ThemeFont;
+			NetOffice.OfficeApi.ThemeFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.ThemeFont;
 			return newObject;
 		}
 

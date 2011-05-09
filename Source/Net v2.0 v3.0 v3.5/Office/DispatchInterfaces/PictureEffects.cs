@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PictureEffects SupportByLibrary OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PictureEffect get_Item(Int32 index)
+		public NetOffice.OfficeApi.PictureEffect get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.PictureEffect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.PictureEffect;
+			NetOffice.OfficeApi.PictureEffect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PictureEffect;
 			return newObject;
 		}
 
@@ -82,14 +82,14 @@ namespace LateBindingApi.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF14 
 		/// </summary>
-		/// <param name="EffectType">LateBindingApi.OfficeApi.Enums.MsoPictureEffectType EffectType</param>
+		/// <param name="EffectType">NetOffice.OfficeApi.Enums.MsoPictureEffectType EffectType</param>
 		/// <param name="Position">Int32 Position</param>
 		[SupportByLibrary("OF14")]
-		public LateBindingApi.OfficeApi.PictureEffect Insert(LateBindingApi.OfficeApi.Enums.MsoPictureEffectType effectType, Int32 position)
+		public NetOffice.OfficeApi.PictureEffect Insert(NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType, Int32 position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effectType, position);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			LateBindingApi.OfficeApi.PictureEffect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OfficeApi.PictureEffect;
+			NetOffice.OfficeApi.PictureEffect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.PictureEffect;
 			return newObject;
 		}
 

@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PropertyTests SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -53,11 +53,11 @@ namespace LateBindingApi.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public LateBindingApi.OfficeApi.PropertyTest get_Item(Int32 index)
+		public NetOffice.OfficeApi.PropertyTest get_Item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OfficeApi.PropertyTest newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OfficeApi.PropertyTest;
+			NetOffice.OfficeApi.PropertyTest newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PropertyTest;
 			return newObject;
 		}
 
@@ -83,12 +83,12 @@ namespace LateBindingApi.OfficeApi
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="Condition">LateBindingApi.OfficeApi.Enums.MsoCondition Condition</param>
+		/// <param name="Condition">NetOffice.OfficeApi.Enums.MsoCondition Condition</param>
 		/// <param name="Value">object Value</param>
 		/// <param name="SecondValue">object SecondValue</param>
-		/// <param name="Connector">LateBindingApi.OfficeApi.Enums.MsoConnector Connector</param>
+		/// <param name="Connector">NetOffice.OfficeApi.Enums.MsoConnector Connector</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void Add(string name, LateBindingApi.OfficeApi.Enums.MsoCondition condition, object value, object secondValue, LateBindingApi.OfficeApi.Enums.MsoConnector connector)
+		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue, NetOffice.OfficeApi.Enums.MsoConnector connector)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, condition, value, secondValue, connector);
 			Invoker.Method(this, "Add", paramsArray);

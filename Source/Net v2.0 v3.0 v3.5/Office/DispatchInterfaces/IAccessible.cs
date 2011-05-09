@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using LateBindingApi.Core;
-namespace LateBindingApi.OfficeApi
+namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface IAccessible SupportByLibrary OF09 OF10 OF11 OF12 OF14 
@@ -101,6 +101,11 @@ namespace LateBindingApi.OfficeApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// </summary>
+		/// <param name="varChild">optional object varChild</param>
+		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
 		public void set_accName(object varChild, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -138,6 +143,11 @@ namespace LateBindingApi.OfficeApi
 			return (string)returnItem;
 		}
 
+		/// <summary>
+		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// </summary>
+		/// <param name="varChild">optional object varChild</param>
+		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
 		public void set_accValue(object varChild, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);

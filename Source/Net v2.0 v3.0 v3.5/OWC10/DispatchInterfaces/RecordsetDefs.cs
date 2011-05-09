@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections;
 using LateBindingApi.Core;
-namespace LateBindingApi.OWC10Api
+namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface RecordsetDefs SupportByLibrary XWC1.0 
@@ -67,11 +67,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.RecordsetDef get_Item(object index)
+		public NetOffice.OWC10Api.RecordsetDef get_Item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			LateBindingApi.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.OWC10Api.RecordsetDef;
+			NetOffice.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.RecordsetDef;
 			return newObject;
 		}
 
@@ -85,11 +85,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="SchemaRowsource">object SchemaRowsource</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.RecordsetDef Add(object schemaRowsource, object name)
+		public NetOffice.OWC10Api.RecordsetDef Add(object schemaRowsource, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaRowsource, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.RecordsetDef;
+			NetOffice.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.RecordsetDef;
 			return newObject;
 		}
 
@@ -98,11 +98,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="SchemaRowsource">object SchemaRowsource</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.RecordsetDef Add(object schemaRowsource)
+		public NetOffice.OWC10Api.RecordsetDef Add(object schemaRowsource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaRowsource);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			LateBindingApi.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.RecordsetDef;
+			NetOffice.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.RecordsetDef;
 			return newObject;
 		}
 
@@ -113,11 +113,11 @@ namespace LateBindingApi.OWC10Api
 		/// <param name="RowsourceType">optional object RowsourceType</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.RecordsetDef AddNew(string source, object rowsourceType, object name)
+		public NetOffice.OWC10Api.RecordsetDef AddNew(string source, object rowsourceType, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowsourceType, name);
 			object returnItem = Invoker.MethodReturn(this, "AddNew", paramsArray);
-			LateBindingApi.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.RecordsetDef;
+			NetOffice.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.RecordsetDef;
 			return newObject;
 		}
 
@@ -126,11 +126,11 @@ namespace LateBindingApi.OWC10Api
 		/// </summary>
 		/// <param name="Source">string Source</param>
 		[SupportByLibrary("XWC1.0")]
-		public LateBindingApi.OWC10Api.RecordsetDef AddNew(string source)
+		public NetOffice.OWC10Api.RecordsetDef AddNew(string source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
 			object returnItem = Invoker.MethodReturn(this, "AddNew", paramsArray);
-			LateBindingApi.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as LateBindingApi.OWC10Api.RecordsetDef;
+			NetOffice.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.RecordsetDef;
 			return newObject;
 		}
 

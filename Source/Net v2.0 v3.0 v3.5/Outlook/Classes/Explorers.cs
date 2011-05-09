@@ -3,13 +3,13 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using LateBindingApi.Core;
-namespace LateBindingApi.OutlookApi
+namespace NetOffice.OutlookApi
 {
 
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Explorers_NewExplorerEventHandler(LateBindingApi.OutlookApi._Explorer Explorer);
+	public delegate void Explorers_NewExplorerEventHandler(NetOffice.OutlookApi._Explorer Explorer);
 	#pragma warning restore
 
 	#endregion
