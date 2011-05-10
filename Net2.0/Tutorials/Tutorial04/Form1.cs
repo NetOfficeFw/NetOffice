@@ -24,9 +24,17 @@ namespace Tutorial04
             LateBindingApi.Core.Factory.ProxyCountChanged += new Factory.ProxyCountChangedHandler(Factory_ProxyCountChanged);
         }
 
+        private void UpdateLabel()
+        {
+            labelProxyCount.Text = labelProxyCount.Tag as string; 
+        }
+
         void Factory_ProxyCountChanged(int proxyCount)
         {
-            labelProxyCount.Text = proxyCount.ToString();
+            if (labelProxyCount.InvokeRequired)
+                labelProxyCount.Tag = proxyCount.ToString();
+            else
+                labelProxyCount.Text = proxyCount.ToString();
         }
 
         private void buttonExcel_Click(object sender, EventArgs e)
@@ -51,7 +59,6 @@ namespace Tutorial04
                 buttonAddins.Enabled = false;
                 buttonAddRemoveWorkbook.Enabled = false;
             }
-
         }
 
         private void buttonWorkbook_Click(object sender, EventArgs e)

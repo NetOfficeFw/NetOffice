@@ -14,10 +14,9 @@ namespace LateBindingApi.Core
     /// </summary>
     public abstract class SinkHelper : IDisposable
     {
-        private static List<SinkHelper> _pointList = new List<SinkHelper>();
-
         #region Fields
 
+        private static List<SinkHelper> _pointList = new List<SinkHelper>();
         private COMObject _eventClass;
         private IConnectionPoint _connectionPoint;
         private int _connectionCookie;
@@ -27,6 +26,10 @@ namespace LateBindingApi.Core
 
         #region Construction
 
+        /// <summary>
+        /// creates instance
+        /// </summary>
+        /// <param name="eventClass"></param>
         public SinkHelper(COMObject eventClass)
         {
             _eventClass = eventClass;
@@ -36,6 +39,13 @@ namespace LateBindingApi.Core
 
         #region Static Methods
 
+        /// <summary>
+        /// get supported connection point from comProxy
+        /// </summary>
+        /// <param name="comProxy"></param>
+        /// <param name="point"></param>
+        /// <param name="sinkIds"></param>
+        /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static string GetConnectionPoint(COMObject comProxy, ref IConnectionPoint point, params string[] sinkIds)
         {
@@ -100,6 +110,10 @@ namespace LateBindingApi.Core
 
         #region Public Methods
 
+        /// <summary>
+        /// create event binding
+        /// </summary>
+        /// <param name="connectPoint"></param>
         public void SetupEventBinding(IConnectionPoint connectPoint)
         {
             if (true == Settings.EnableEvents)
@@ -111,11 +125,17 @@ namespace LateBindingApi.Core
             }
         }
 
+        /// <summary>
+        /// release event binding
+        /// </summary>
         public void RemoveEventBinding()
         {
             RemoveEventBinding(true);
         }
 
+        /// <summary>
+        /// release event binding
+        /// </summary>
         private void RemoveEventBinding(bool removeFromList)
         {
             if (_connectionCookie != 0)
@@ -127,7 +147,7 @@ namespace LateBindingApi.Core
                 }
                 catch (System.Runtime.InteropServices.COMException loE)
                 {
-                    // 0x800706BA = RPC server is unavailable means dead
+                    // 0x800706BA = RPC server is unavailable means already dead
                     if ((uint)loE.ErrorCode != 0x800706BA)
                         throw (loE);
                 }
@@ -144,6 +164,9 @@ namespace LateBindingApi.Core
 
         #region IDisposable Members
 
+        /// <summary>
+        /// remove eventbinding
+        /// </summary>
         public void Dispose()
         {
             RemoveEventBinding();

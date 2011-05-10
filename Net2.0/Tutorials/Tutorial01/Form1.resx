@@ -118,16 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBoxInfo.Text" xml:space="preserve">
-    <value>All objects in LateBindingApi.Office there based on CoClasses or Interfaces are wrapping COM Proxies.
+    <value>All objects in NetOffice there based on CoClasses or Interfaces are wrapping COM Proxies.
 It's necessary to release a created COM Proxy by client caller.
-this tolds the info to the COM Server (means your office application) you need the instance not longer.  
-In the MS Interop Assemblies you do that with Marshal.ReleaseComObject(object proxy);
-In LateBindingApi.Office any object has the Method Dispose() to do that.
-An implemented collection feature makes possible you dont must call Dispose() for any (implicitly) created object.
+This tolds the info to the COM Server (means your office application) you dont need the instance.  
 
+In the MS Interop Assemblies you do that with Marshal.ReleaseComObject(object proxy);
+In NetOffice any object has the Method Dispose() to do that.
+An implemented Proxy Table in NetOffice makes possible you dont must call Dispose() for any (implicitly) created object.
 This examples shows you using the Dispose() method to release an object and there created child objects.
 
-See source code for further info.
+See source code and technical documentationfor further info.
+
 </value>
   </data>
 </root>

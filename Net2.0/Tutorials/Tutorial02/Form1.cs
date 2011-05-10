@@ -31,7 +31,7 @@ namespace Tutorial02
             Excel.Worksheet sheet = (Excel.Worksheet)book.Worksheets.Add();
 
             /*
-             * we have 5 created proxies now in a list as follows
+             * we have 5 created proxies now in proxy table as follows
              * 
              * Application
              *   + Workbooks
@@ -50,7 +50,6 @@ namespace Tutorial02
             * Application
             *   + Workbooks
             *     + Workbook  
-            *
             */
 
             application.Quit();

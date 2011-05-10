@@ -67,7 +67,7 @@ namespace LateBindingApi.Core
                 _cultureInfo = value;
             }
         }
-
+        
         /// <summary>
         /// Get or set the Event support, default is false 
         /// </summary>

@@ -21,7 +21,7 @@ namespace Tutorial01
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
             /*
-            *  LateBindingApi manages COM Proxies for you to avoid any kind of memory leaks
+            *  NetOffice manages COM Proxies for you to avoid any kind of memory leaks
             *  and make sure your application instance removes from process list if you want.
             */
 
@@ -46,11 +46,11 @@ namespace Tutorial01
             *   + Workbooks
             *     + Workbook  
             * 
-            * any object in LateBindingApi implements the IDisposible Interface.
+            * any object in NetOffice implements the IDisposible Interface.
             * use the Dispose() Method to release an object. the method release all created child proxies too.
             */
 
-            
+
             application.Quit();
             application.Dispose();
             /*

@@ -2,12 +2,15 @@ using System;
 using System.ComponentModel;
 namespace LateBindingApi.Core
 {
+    /// <summary>
+    /// EventBinding Interface
+    /// </summary>
     public interface IEventBinding
     {
         /// <summary>
         /// returns array of all event listeners
         /// </summary>
-        /// <param name="name">name of event</param>
+        /// <param name="eventName">name of event</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         Delegate[] GetEventRecipients(string eventName);
 

@@ -10,12 +10,12 @@ namespace LateBindingApi.Core
     public interface IObject : IDisposable
     {      
         /// <summary>
-        /// The mapped object
+        /// mapped com proxy
         /// </summary>
         object UnderlyingObject { get; }
 
         /// <summary>
-        /// Name of UnderlyingObject type
+        /// name of com proxy class
         /// </summary>
         string UnderlyingTypeName { get; }
 
@@ -25,7 +25,7 @@ namespace LateBindingApi.Core
         Type InstanceType { get; }
 
         /// <summary>
-        /// The Instance they has been created this instance
+        /// the Instance they has been created this instance
         /// </summary>
         COMObject ParentObject { get; set; }
     }

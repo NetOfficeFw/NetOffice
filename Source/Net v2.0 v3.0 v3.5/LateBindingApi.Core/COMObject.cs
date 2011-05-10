@@ -13,18 +13,44 @@ namespace LateBindingApi.Core
     {
         #region Fields
 
+        /// <summary>
+        ///  returns parent proxy object
+        /// </summary>
         protected internal COMObject            _parentObject;
-        protected internal Type                 _instanceType;
-        protected internal object               _underlyingObject;
 
+        /// <summary>
+        /// returns Type of native proxy
+        /// </summary>
+        protected internal Type                 _instanceType;
+
+        /// <summary>
+        /// returns the native wrapped proxy
+        /// </summary>
+        protected internal object               _underlyingObject;
+        
+        /// <summary>
+        /// returns instance is currently in diposing progress
+        /// </summary>
         protected internal volatile bool        _isCurrentlyDisposing;
+       
+        /// <summary>
+        /// returns instance is diposed means unusable
+        /// </summary>
         protected internal volatile bool        _isDisposed;
+        
+        /// <summary>
+        ///  child instance List
+        /// </summary>
         protected internal List<COMObject>      _listChildObjects    = new List<COMObject>();
        
         #endregion
 
         #region Construction
 
+        /// <summary>
+        /// creates instance
+        /// </summary>
+        /// <param name="replacedObject"></param>
         public COMObject(COMObject replacedObject)
         {
             // copy proxy
@@ -50,6 +76,10 @@ namespace LateBindingApi.Core
             Factory.AddObjectToList(this);
         }
         
+        /// <summary>
+        /// creates instance
+        /// </summary>
+        /// <param name="comProxy"></param>
         public COMObject(object comProxy)
         {
             _underlyingObject = comProxy;
@@ -58,6 +88,11 @@ namespace LateBindingApi.Core
             Factory.AddObjectToList(this);
         }
 
+        /// <summary>
+        /// creates instance
+        /// </summary>
+        /// <param name="parentObject"></param>
+        /// <param name="comProxy"></param>
         public COMObject(COMObject parentObject, object comProxy)
         {
             _parentObject = parentObject;
@@ -70,6 +105,12 @@ namespace LateBindingApi.Core
             Factory.AddObjectToList(this);
         }
 
+        /// <summary>
+        /// creates instance
+        /// </summary>
+        /// <param name="parentObject"></param>
+        /// <param name="comProxy"></param>
+        /// <param name="comProxyType"></param>
         public COMObject(COMObject parentObject, object comProxy, Type comProxyType)
         {
             _parentObject = parentObject;
@@ -82,6 +123,9 @@ namespace LateBindingApi.Core
             Factory.AddObjectToList(this);
         }
 
+        /// <summary>
+        /// creates instance
+        /// </summary>
         public COMObject()
         {
             Factory.AddObjectToList(this);
@@ -207,6 +251,7 @@ namespace LateBindingApi.Core
                     return false;
             }
         }
+
         /// <summary>
         ///  child instance List
         /// </summary>
@@ -223,6 +268,10 @@ namespace LateBindingApi.Core
 
         #region COMObject Methods
 
+        /// <summary>
+        /// create object from progid
+        /// </summary>
+        /// <param name="progId"></param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateFromProgId(string progId)
         {
@@ -233,6 +282,10 @@ namespace LateBindingApi.Core
             _underlyingObject = Activator.CreateInstance(_instanceType);
         }
 
+        /// <summary>
+        /// add object to child list
+        /// </summary>
+        /// <param name="childObject"></param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void AddChildObject(IObject childObject)
         {
@@ -242,18 +295,29 @@ namespace LateBindingApi.Core
             throw new ArgumentException("childObject is an unkown type.");
         }
 
+        /// <summary>
+        /// add object to child list
+        /// </summary>
+        /// <param name="childObject"></param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void AddChildObject(COMObject childObject)
         {
             _listChildObjects.Add(childObject);
         }
 
+        /// <summary>
+        /// remove object to child list
+        /// </summary>
+        /// <param name="childObject"></param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void RemoveChildObject(COMObject childObject)
         {
             _listChildObjects.Remove(childObject);
         }
 
+        /// <summary>
+        /// release com proxy
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void ReleaseCOMProxy()
         {
@@ -274,7 +338,6 @@ namespace LateBindingApi.Core
                 _underlyingObject = null;
             }
         }
-
      
         #endregion
 
@@ -283,9 +346,13 @@ namespace LateBindingApi.Core
         /// <summary>
         /// dispose instance and all child instances
         /// </summary>
-        /// <param name="disposeEventProxies">dispose event exported proxies with one or more event recipients</param>
+        /// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
         public void Dispose(bool disposeEventBinding)
         {
+            // in case object export events and 
+            // disposeEventBinding == true we dont remove the object from parents child list
+            bool removeFromParent = true;
+
             // set disposed flag
             _isCurrentlyDisposing = true;
 
@@ -298,15 +365,15 @@ namespace LateBindingApi.Core
             }
             else
             {
-                if( (null != eventBind) && (!eventBind.EventBridgeInitialized) )
-                    eventBind.DisposeSinkHelper();
+                if ((null != eventBind) && (eventBind.EventBridgeInitialized))
+                    removeFromParent = false;
             }
- 
+
             // child proxy dispose
             DisposeChildInstances(disposeEventBinding);
-            
+
             // remove himself from parent childlist
-            if (null != _parentObject)
+            if ((null != _parentObject) && (true == removeFromParent))
             {
                 _parentObject.RemoveChildObject(this);
                 _parentObject = null;

@@ -29,6 +29,9 @@ namespace LateBindingApi.Core
     
     #endregion
 
+    /// <summary>
+    /// creation factory for COMObject and derived types
+    /// </summary>
     public static class Factory
     {
         #region Fields
@@ -56,7 +59,16 @@ namespace LateBindingApi.Core
 
         #region Events
 
+        /// <summary>
+        /// ProxyCountChanged delegate
+        /// </summary>
+        /// <param name="proxyCount"></param>
         public delegate void ProxyCountChangedHandler(int proxyCount);
+        
+        /// <summary>
+        /// notify info the count of proxies there open are changed
+        /// in case of notify comes from event trigger created proxy the call comes from other thread
+        /// </summary>
         public static event ProxyCountChangedHandler ProxyCountChanged;
 
         #endregion
@@ -138,6 +150,7 @@ namespace LateBindingApi.Core
         /// </summary>
         /// <param name="caller"></param>
         /// <param name="comProxy"></param>
+        /// <param name="comProxyType"></param>
         /// <returns></returns>
         public static COMObject CreateObjectFromComProxy(COMObject caller, object comProxy, Type comProxyType)
         {
@@ -191,7 +204,7 @@ namespace LateBindingApi.Core
         ///  creates a new COMObject array
         /// </summary>
         /// <param name="caller"></param>
-        /// <param name="comVariant"></param>
+        /// <param name="comProxyArray"></param>
         /// <returns></returns>
         public static COMObject[] CreateObjectArrayFromComProxy(COMObject caller, object[] comProxyArray)
         {

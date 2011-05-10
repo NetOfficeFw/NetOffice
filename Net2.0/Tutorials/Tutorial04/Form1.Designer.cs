@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.buttonAddRemoveWorkbook = new System.Windows.Forms.Button();
             this.buttonAddins = new System.Windows.Forms.Button();
             this.buttonWorkbook = new System.Windows.Forms.Button();
@@ -103,11 +104,14 @@
             // 
             // richTextBoxInfo
             // 
+            this.richTextBoxInfo.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.richTextBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxInfo.Location = new System.Drawing.Point(153, 31);
             this.richTextBoxInfo.Name = "richTextBoxInfo";
             this.richTextBoxInfo.Size = new System.Drawing.Size(672, 312);
             this.richTextBoxInfo.TabIndex = 14;
-            this.richTextBoxInfo.Text = "";
+            this.richTextBoxInfo.Text = resources.GetString("richTextBoxInfo.Text");
             // 
             // Form1
             // 

@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBoxInfo.Text" xml:space="preserve">
+    <value>COMObject is the common base type for all objects in NetOffice there based on CoClasses or Interfaces
+and also the type for anonym COM Proxies at design time. This example shows you how to use.
+
+
+See source code and technical documentation for further info.
+</value>
+  </data>
 </root>

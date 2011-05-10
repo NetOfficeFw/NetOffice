@@ -46,6 +46,9 @@
             // 
             // richTextBoxInfo
             // 
+            this.richTextBoxInfo.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.richTextBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxInfo.Location = new System.Drawing.Point(25, 80);
             this.richTextBoxInfo.Name = "richTextBoxInfo";
             this.richTextBoxInfo.Size = new System.Drawing.Size(801, 237);

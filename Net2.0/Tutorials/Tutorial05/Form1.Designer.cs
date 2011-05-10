@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.buttonStartExample = new System.Windows.Forms.Button();
             this.richTextBoxInfo = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
@@ -45,11 +46,14 @@
             // 
             // richTextBoxInfo
             // 
+            this.richTextBoxInfo.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.richTextBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxInfo.Location = new System.Drawing.Point(22, 80);
             this.richTextBoxInfo.Name = "richTextBoxInfo";
             this.richTextBoxInfo.Size = new System.Drawing.Size(801, 237);
             this.richTextBoxInfo.TabIndex = 9;
-            this.richTextBoxInfo.Text = "";
+            this.richTextBoxInfo.Text = resources.GetString("richTextBoxInfo.Text");
             // 
             // Form1
             // 

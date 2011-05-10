@@ -32,8 +32,18 @@ namespace Tutorial06
             Excel.Worksheet sheet = (Excel.Worksheet)book.Worksheets[1];
             Excel.Range range = sheet.Cells[1,1];
 
-            // Style is defined as Variant in Excel Type Library and represents as object in LateBindingApi
+            // Style is defined as Variant in Excel Type Library and represents as object in NetOffice
             Excel.Style style = (Excel.Style)range.Style;
+
+            // variant types can be a scalar type, another way to us is 
+            if (range.Style is string)
+            {
+                string myStyle = range.Style as string; 
+            }
+            else if (range.Style is Excel.Style)
+            {
+                Excel.Style myStyle = (Excel.Style)range.Style;
+            }
 
             // Name, Bold, Size are bool but defined as Variant and also converted to object
             style.Font.Name = "Arial";

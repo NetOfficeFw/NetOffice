@@ -31,8 +31,9 @@ namespace Tutorial05
             Excel.Workbook book = application.Workbooks.Add();
 
             // ActiveSheet is defined as unkown Proxy in Excel Type Library, it can have multiple times at runtime
-            // In VBA oder PIA its converted to object, in LateBindingApi its represents as COMObject
-            // All LateBindingApi Classes inherited COMObject
+            // but its always a COM Proxy, never a scalar type like bool or int. 
+            // In VBA oder PIA its converted to object, in NetOffice its represents as COMObject
+            // All NetOffice classes inherited COMObject
             COMObject sheet = application.ActiveSheet;
             if (sheet is Excel.Worksheet)
             {
