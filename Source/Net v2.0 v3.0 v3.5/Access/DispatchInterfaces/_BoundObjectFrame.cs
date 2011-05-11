@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface _BoundObjectFrame SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _BoundObjectFrame : NetOffice.OfficeApi.IAccessible
 	{
 		#pragma warning disable

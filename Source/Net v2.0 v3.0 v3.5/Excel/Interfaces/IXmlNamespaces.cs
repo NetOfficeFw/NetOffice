@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IXmlNamespaces SupportByLibrary XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IXmlNamespaces : COMObject ,IEnumerable
 	{
 		#pragma warning disable

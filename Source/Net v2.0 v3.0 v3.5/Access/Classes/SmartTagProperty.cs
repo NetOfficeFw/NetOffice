@@ -17,6 +17,7 @@ namespace NetOffice.AccessApi
 	/// CoClass SmartTagProperty SupportByLibrary AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SmartTagProperty : _SmartTagProperty, IEventBinding 
 	{
 		#pragma warning disable

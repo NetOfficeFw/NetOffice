@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass AutoFormatRule SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AutoFormatRule : _AutoFormatRule, IEventBinding 
 	{
 		#pragma warning disable

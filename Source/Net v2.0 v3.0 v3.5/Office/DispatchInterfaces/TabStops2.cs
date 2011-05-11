@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface TabStops2 SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TabStops2 : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

@@ -7,6 +7,7 @@ namespace NetOffice.DAOApi.Constants
 	 /// SupportByLibrary DAO3.6 DAO12 
 	 /// </summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsConstants)]
 	public static class LanguageConstants
 	{
 		 /// <summary>

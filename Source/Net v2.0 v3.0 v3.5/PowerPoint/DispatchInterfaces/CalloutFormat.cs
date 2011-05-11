@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface CalloutFormat SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CalloutFormat : COMObject
 	{
 		#pragma warning disable

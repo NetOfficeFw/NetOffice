@@ -36,6 +36,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass ListView SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ListView : IListView, IEventBinding 
 	{
 		#pragma warning disable

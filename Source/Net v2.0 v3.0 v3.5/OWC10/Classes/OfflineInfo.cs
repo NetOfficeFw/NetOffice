@@ -17,6 +17,7 @@ namespace NetOffice.OWC10Api
 	/// CoClass OfflineInfo SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OfflineInfo : IOfflineInfo, IEventBinding 
 	{
 		#pragma warning disable

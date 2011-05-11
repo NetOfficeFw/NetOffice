@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface IMsoCharacters SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IMsoCharacters : COMObject
 	{
 		#pragma warning disable

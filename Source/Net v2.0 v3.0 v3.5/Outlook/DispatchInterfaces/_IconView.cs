@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface _IconView SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _IconView : COMObject
 	{
 		#pragma warning disable

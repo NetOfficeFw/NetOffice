@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface Databar SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Databar : COMObject
 	{
 		#pragma warning disable

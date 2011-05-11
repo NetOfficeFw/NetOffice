@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Point SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Point : COMObject
 	{
 		#pragma warning disable

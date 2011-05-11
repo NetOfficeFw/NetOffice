@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
 	/// Interface IDocumentInspector SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IDocumentInspector : COMObject
 	{
 		#pragma warning disable

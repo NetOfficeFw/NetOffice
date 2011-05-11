@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass MoveOrCopyRuleAction SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MoveOrCopyRuleAction : _MoveOrCopyRuleAction, IEventBinding 
 	{
 		#pragma warning disable

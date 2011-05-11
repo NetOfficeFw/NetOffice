@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OlkFrameHeader SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkFrameHeader : _OlkFrameHeader, IEventBinding 
 	{
 		#pragma warning disable

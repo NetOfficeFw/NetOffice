@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface Gridlines SupportByLibrary PP14 
 	///</summary>
 	[SupportByLibrary("PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Gridlines : COMObject
 	{
 		#pragma warning disable

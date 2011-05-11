@@ -11,6 +11,7 @@ namespace NetOffice.OutlookApi
 	/// Interface _IPageWrapCtrl SupportByLibrary OL10 
 	///</summary>
 	[SupportByLibrary("OL10")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class _IPageWrapCtrl : COMObject
 	{
 		#pragma warning disable

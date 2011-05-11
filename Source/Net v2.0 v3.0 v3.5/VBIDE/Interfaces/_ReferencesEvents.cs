@@ -11,6 +11,7 @@ namespace NetOffice.VBIDEApi
 	/// Interface _ReferencesEvents SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class _ReferencesEvents : COMObject
 	{
 		#pragma warning disable

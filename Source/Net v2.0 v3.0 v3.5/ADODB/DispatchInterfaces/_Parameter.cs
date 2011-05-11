@@ -12,6 +12,7 @@ namespace NetOffice.ADODBApi
 	/// DispatchInterface _Parameter SupportByLibrary ADO2.1 ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Parameter : _ADO
 	{
 		#pragma warning disable

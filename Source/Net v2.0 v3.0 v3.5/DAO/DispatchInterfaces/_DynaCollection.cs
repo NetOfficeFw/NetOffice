@@ -12,6 +12,7 @@ namespace NetOffice.DAOApi
 	/// DispatchInterface _DynaCollection SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _DynaCollection : _Collection
 	{
 		#pragma warning disable

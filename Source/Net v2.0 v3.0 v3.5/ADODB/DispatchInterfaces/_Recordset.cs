@@ -12,6 +12,7 @@ namespace NetOffice.ADODBApi
 	/// DispatchInterface _Recordset SupportByLibrary ADO2.1 ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Recordset : Recordset21
 	{
 		#pragma warning disable

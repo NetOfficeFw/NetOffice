@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass AddressRuleCondition SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AddressRuleCondition : _AddressRuleCondition, IEventBinding 
 	{
 		#pragma warning disable

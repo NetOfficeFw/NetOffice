@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass SenderInAddressListRuleCondition SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SenderInAddressListRuleCondition : _SenderInAddressListRuleCondition, IEventBinding 
 	{
 		#pragma warning disable

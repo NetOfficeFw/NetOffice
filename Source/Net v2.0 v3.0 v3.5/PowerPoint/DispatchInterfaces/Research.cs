@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface Research SupportByLibrary PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Research : COMObject
 	{
 		#pragma warning disable

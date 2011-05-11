@@ -19,6 +19,7 @@ namespace NetOffice.WordApi
 	/// CoClass OLEControl SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OLEControl : _OLEControl, IEventBinding 
 	{
 		#pragma warning disable

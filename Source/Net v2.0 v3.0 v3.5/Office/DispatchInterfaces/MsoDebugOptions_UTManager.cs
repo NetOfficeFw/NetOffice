@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface MsoDebugOptions_UTManager SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MsoDebugOptions_UTManager : _IMsoDispObj
 	{
 		#pragma warning disable

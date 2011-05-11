@@ -13,6 +13,7 @@ namespace NetOffice.ADODBApi
 	/// DispatchInterface _Collection SupportByLibrary ADO2.1 ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Collection : COMObject ,IEnumerable
 	{
 		#pragma warning disable

@@ -19,6 +19,7 @@ namespace NetOffice.AccessApi
 	/// CoClass References SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class References : _References, IEventBinding 
 	{
 		#pragma warning disable

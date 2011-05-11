@@ -13,6 +13,7 @@ namespace NetOffice.MSComctlLibApi
 	/// DispatchInterface IColumnHeaders SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IColumnHeaders : COMObject ,IEnumerable
 	{
 		#pragma warning disable

@@ -30,6 +30,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OlkTextBox SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkTextBox : _OlkTextBox, IEventBinding 
 	{
 		#pragma warning disable

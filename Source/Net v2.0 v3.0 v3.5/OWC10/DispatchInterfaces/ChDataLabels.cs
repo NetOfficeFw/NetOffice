@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface ChDataLabels SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChDataLabels : COMObject
 	{
 		#pragma warning disable

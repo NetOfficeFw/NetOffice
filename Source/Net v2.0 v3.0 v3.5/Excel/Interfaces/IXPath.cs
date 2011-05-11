@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IXPath SupportByLibrary XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IXPath : COMObject
 	{
 		#pragma warning disable

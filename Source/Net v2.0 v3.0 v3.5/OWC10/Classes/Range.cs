@@ -18,6 +18,7 @@ namespace NetOffice.OWC10Api
 	/// CoClass Range SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Range : _Range, IEventBinding 
 	{
 		#pragma warning disable

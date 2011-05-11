@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ISparkColor SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISparkColor : COMObject
 	{
 		#pragma warning disable

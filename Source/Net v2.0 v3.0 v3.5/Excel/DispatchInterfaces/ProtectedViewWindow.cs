@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface ProtectedViewWindow SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ProtectedViewWindow : COMObject
 	{
 		#pragma warning disable

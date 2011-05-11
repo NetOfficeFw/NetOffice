@@ -17,6 +17,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass Panels SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Panels : IPanels, IEventBinding 
 	{
 		#pragma warning disable

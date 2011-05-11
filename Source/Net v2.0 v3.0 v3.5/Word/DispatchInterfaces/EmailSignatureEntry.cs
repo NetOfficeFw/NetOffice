@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface EmailSignatureEntry SupportByLibrary WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EmailSignatureEntry : COMObject
 	{
 		#pragma warning disable

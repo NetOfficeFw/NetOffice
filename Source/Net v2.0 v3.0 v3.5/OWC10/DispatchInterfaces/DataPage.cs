@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface DataPage SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DataPage : COMObject
 	{
 		#pragma warning disable

@@ -7,6 +7,7 @@ namespace NetOffice.OWC10Api.Enums
 	 /// SupportByLibrary XWC1.0 
 	 /// </summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PivotExportActionEnum
 	{
 		 /// <summary>

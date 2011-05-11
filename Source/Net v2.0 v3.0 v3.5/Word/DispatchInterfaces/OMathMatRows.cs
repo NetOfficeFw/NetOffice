@@ -13,6 +13,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface OMathMatRows SupportByLibrary WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathMatRows : COMObject ,IEnumerable
 	{
 		#pragma warning disable

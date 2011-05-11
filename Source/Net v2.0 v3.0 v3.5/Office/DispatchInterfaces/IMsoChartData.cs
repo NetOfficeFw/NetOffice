@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface IMsoChartData SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IMsoChartData : COMObject
 	{
 		#pragma warning disable

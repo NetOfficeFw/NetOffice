@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface SmartArtLayout SupportByLibrary OF14 
 	///</summary>
 	[SupportByLibrary("OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartArtLayout : _IMsoDispObj
 	{
 		#pragma warning disable

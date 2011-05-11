@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass ViewFont SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ViewFont : _ViewFont, IEventBinding 
 	{
 		#pragma warning disable

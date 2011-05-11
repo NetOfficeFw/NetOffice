@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface GridLines SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GridLines : COMObject
 	{
 		#pragma warning disable

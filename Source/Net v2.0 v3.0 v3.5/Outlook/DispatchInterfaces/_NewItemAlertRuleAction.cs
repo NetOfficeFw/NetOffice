@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface _NewItemAlertRuleAction SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _NewItemAlertRuleAction : COMObject
 	{
 		#pragma warning disable

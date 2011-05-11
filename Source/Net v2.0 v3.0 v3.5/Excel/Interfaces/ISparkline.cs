@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ISparkline SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISparkline : COMObject
 	{
 		#pragma warning disable

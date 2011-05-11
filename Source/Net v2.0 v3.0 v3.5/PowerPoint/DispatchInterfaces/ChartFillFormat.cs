@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface ChartFillFormat SupportByLibrary PP14 
 	///</summary>
 	[SupportByLibrary("PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartFillFormat : COMObject
 	{
 		#pragma warning disable

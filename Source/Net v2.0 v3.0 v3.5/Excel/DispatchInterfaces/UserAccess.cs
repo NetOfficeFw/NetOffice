@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface UserAccess SupportByLibrary XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class UserAccess : COMObject
 	{
 		#pragma warning disable

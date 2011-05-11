@@ -42,6 +42,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass MobileItem SupportByLibrary OL14 
 	///</summary>
 	[SupportByLibrary("OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MobileItem : _MobileItem, IEventBinding 
 	{
 		#pragma warning disable

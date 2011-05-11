@@ -13,6 +13,7 @@ namespace NetOffice.MSComctlLibApi
 	/// DispatchInterface IButtonMenus SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IButtonMenus : COMObject ,IEnumerable
 	{
 		#pragma warning disable

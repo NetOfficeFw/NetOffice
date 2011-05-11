@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface PictureEffects SupportByLibrary OF14 
 	///</summary>
 	[SupportByLibrary("OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PictureEffects : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

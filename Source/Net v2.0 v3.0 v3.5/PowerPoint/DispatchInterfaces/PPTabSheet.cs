@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface PPTabSheet SupportByLibrary PP09 
 	///</summary>
 	[SupportByLibrary("PP09")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPTabSheet : COMObject
 	{
 		#pragma warning disable

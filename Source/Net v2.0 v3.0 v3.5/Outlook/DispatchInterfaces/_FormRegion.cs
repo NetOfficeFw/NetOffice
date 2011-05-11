@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface _FormRegion SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _FormRegion : COMObject
 	{
 		#pragma warning disable

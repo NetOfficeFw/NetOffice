@@ -13,6 +13,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface LegendEntries SupportByLibrary PP14 
 	///</summary>
 	[SupportByLibrary("PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LegendEntries : COMObject ,IEnumerable
 	{
 		#pragma warning disable

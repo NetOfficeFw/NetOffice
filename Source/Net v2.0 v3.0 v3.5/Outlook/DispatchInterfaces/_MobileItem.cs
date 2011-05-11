@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface _MobileItem SupportByLibrary OL14 
 	///</summary>
 	[SupportByLibrary("OL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _MobileItem : COMObject
 	{
 		#pragma warning disable

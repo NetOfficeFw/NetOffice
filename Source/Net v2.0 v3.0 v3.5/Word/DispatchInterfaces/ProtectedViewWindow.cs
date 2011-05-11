@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface ProtectedViewWindow SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ProtectedViewWindow : COMObject
 	{
 		#pragma warning disable

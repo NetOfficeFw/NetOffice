@@ -12,6 +12,7 @@ namespace NetOffice.MSComctlLibApi
 	/// DispatchInterface IVBDataObject SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVBDataObject : COMObject
 	{
 		#pragma warning disable

@@ -13,6 +13,7 @@ namespace NetOffice.VBIDEApi
 	/// DispatchInterface _Windows_old SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Windows_old : COMObject ,IEnumerable
 	{
 		#pragma warning disable

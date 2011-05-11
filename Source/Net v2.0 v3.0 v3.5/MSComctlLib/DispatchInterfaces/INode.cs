@@ -12,6 +12,7 @@ namespace NetOffice.MSComctlLibApi
 	/// DispatchInterface INode SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class INode : COMObject
 	{
 		#pragma warning disable

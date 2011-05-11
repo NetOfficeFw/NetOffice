@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass ToOrFromRuleCondition SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ToOrFromRuleCondition : _ToOrFromRuleCondition, IEventBinding 
 	{
 		#pragma warning disable

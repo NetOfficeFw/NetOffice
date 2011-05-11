@@ -23,6 +23,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass Reminders SupportByLibrary OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Reminders : _Reminders, IEventBinding 
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Walls SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Walls : COMObject
 	{
 		#pragma warning disable

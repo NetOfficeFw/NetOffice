@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface PolicyItem SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PolicyItem : _IMsoDispObj
 	{
 		#pragma warning disable

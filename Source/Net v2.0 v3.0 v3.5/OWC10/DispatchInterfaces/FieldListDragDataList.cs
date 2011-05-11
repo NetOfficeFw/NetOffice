@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface FieldListDragDataList SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FieldListDragDataList : COMObject
 	{
 		#pragma warning disable

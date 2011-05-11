@@ -17,6 +17,7 @@ namespace NetOffice.ExcelApi
 	/// CoClass Global SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Global : _Global, IEventBinding 
 	{
 		#pragma warning disable

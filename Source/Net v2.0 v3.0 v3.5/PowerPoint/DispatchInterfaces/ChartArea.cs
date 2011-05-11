@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface ChartArea SupportByLibrary PP14 
 	///</summary>
 	[SupportByLibrary("PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartArea : COMObject
 	{
 		#pragma warning disable

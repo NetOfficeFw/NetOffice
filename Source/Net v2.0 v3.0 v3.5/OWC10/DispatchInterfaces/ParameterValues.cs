@@ -13,6 +13,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface ParameterValues SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ParameterValues : COMObject ,IEnumerable
 	{
 		#pragma warning disable

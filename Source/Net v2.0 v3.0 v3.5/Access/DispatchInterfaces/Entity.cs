@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface Entity SupportByLibrary AC14 
 	///</summary>
 	[SupportByLibrary("AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Entity : COMObject
 	{
 		#pragma warning disable

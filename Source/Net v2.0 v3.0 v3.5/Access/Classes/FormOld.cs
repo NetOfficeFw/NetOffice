@@ -75,6 +75,7 @@ namespace NetOffice.AccessApi
 	/// CoClass FormOld SupportByLibrary AC10 AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC10","AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class FormOld : _Form, IEventBinding 
 	{
 		#pragma warning disable

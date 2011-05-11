@@ -13,6 +13,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface LegendEntries SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LegendEntries : COMObject ,IEnumerable
 	{
 		#pragma warning disable

@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface ListObjects SupportByLibrary XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ListObjects : COMObject ,IEnumerable
 	{
 		#pragma warning disable

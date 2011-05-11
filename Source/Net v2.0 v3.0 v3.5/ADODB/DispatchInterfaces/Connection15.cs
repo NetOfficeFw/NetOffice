@@ -12,6 +12,7 @@ namespace NetOffice.ADODBApi
 	/// DispatchInterface Connection15 SupportByLibrary ADO2.1 ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Connection15 : _ADO
 	{
 		#pragma warning disable

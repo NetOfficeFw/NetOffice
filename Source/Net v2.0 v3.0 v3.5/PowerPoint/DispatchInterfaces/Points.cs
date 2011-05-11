@@ -13,6 +13,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface Points SupportByLibrary PP14 
 	///</summary>
 	[SupportByLibrary("PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Points : COMObject ,IEnumerable
 	{
 		#pragma warning disable

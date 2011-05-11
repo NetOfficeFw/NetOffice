@@ -12,6 +12,7 @@ namespace NetOffice.VBIDEApi
 	/// DispatchInterface _Component SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Component : COMObject
 	{
 		#pragma warning disable

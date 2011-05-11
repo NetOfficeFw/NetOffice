@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface TextFrame2 SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TextFrame2 : _IMsoDispObj
 	{
 		#pragma warning disable

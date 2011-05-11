@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IListBoxes SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IListBoxes : COMObject ,IEnumerable
 	{
 		#pragma warning disable

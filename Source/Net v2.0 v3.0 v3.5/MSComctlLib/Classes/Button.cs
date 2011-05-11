@@ -17,6 +17,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass Button SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Button : IButton, IEventBinding 
 	{
 		#pragma warning disable

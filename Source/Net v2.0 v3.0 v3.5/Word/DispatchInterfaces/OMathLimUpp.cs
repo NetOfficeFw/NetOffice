@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface OMathLimUpp SupportByLibrary WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathLimUpp : COMObject
 	{
 		#pragma warning disable

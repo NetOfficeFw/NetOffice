@@ -13,6 +13,7 @@ namespace NetOffice.VBIDEApi
 	/// DispatchInterface _LinkedWindows SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _LinkedWindows : COMObject ,IEnumerable
 	{
 		#pragma warning disable

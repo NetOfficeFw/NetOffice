@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface DocumentLibraryVersions SupportByLibrary OF11 OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF11","OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DocumentLibraryVersions : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

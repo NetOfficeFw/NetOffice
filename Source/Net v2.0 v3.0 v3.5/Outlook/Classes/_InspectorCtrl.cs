@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass _InspectorCtrl SupportByLibrary OL10 
 	///</summary>
 	[SupportByLibrary("OL10")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _InspectorCtrl : _DInspectorCtrl, IEventBinding 
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface CommandEffect SupportByLibrary PP10 PP11 PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP10","PP11","PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CommandEffect : COMObject
 	{
 		#pragma warning disable

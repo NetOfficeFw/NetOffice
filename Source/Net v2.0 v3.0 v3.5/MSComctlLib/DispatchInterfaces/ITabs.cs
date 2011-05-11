@@ -13,6 +13,7 @@ namespace NetOffice.MSComctlLibApi
 	/// DispatchInterface ITabs SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ITabs : COMObject ,IEnumerable
 	{
 		#pragma warning disable

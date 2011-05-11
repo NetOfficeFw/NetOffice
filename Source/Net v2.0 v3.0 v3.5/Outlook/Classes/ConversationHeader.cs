@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass ConversationHeader SupportByLibrary OL14 
 	///</summary>
 	[SupportByLibrary("OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ConversationHeader : _ConversationHeader, IEventBinding 
 	{
 		#pragma warning disable

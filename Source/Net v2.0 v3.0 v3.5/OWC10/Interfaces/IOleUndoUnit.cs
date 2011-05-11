@@ -11,6 +11,7 @@ namespace NetOffice.OWC10Api
 	/// Interface IOleUndoUnit SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IOleUndoUnit : COMObject
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface AddressList SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AddressList : COMObject
 	{
 		#pragma warning disable

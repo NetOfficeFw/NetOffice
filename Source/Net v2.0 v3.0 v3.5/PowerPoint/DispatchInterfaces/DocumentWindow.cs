@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface DocumentWindow SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DocumentWindow : COMObject
 	{
 		#pragma warning disable

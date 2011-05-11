@@ -17,6 +17,7 @@ namespace NetOffice.PowerPointApi
 	/// CoClass PowerRex SupportByLibrary PP10 PP11 PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP10","PP11","PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PowerRex : _PowerRex, IEventBinding 
 	{
 		#pragma warning disable

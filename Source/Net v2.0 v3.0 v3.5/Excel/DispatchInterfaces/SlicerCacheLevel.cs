@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface SlicerCacheLevel SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SlicerCacheLevel : COMObject
 	{
 		#pragma warning disable

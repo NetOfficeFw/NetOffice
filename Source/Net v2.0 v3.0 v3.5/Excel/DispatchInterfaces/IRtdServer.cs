@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface IRtdServer SupportByLibrary XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IRtdServer : COMObject
 	{
 		#pragma warning disable

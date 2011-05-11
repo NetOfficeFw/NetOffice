@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass AssignToCategoryRuleAction SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AssignToCategoryRuleAction : _AssignToCategoryRuleAction, IEventBinding 
 	{
 		#pragma warning disable

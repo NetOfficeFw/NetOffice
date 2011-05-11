@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
 	/// Interface LegendEntry SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class LegendEntry : COMObject
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface InplaceObject SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class InplaceObject : COMObject
 	{
 		#pragma warning disable

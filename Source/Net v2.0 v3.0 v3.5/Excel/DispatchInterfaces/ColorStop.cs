@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface ColorStop SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ColorStop : COMObject
 	{
 		#pragma warning disable

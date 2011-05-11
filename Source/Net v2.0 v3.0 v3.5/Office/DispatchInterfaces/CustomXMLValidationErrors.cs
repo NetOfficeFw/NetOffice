@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface CustomXMLValidationErrors SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomXMLValidationErrors : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

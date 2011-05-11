@@ -13,6 +13,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface AccessObjectProperties SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AccessObjectProperties : COMObject ,IEnumerable
 	{
 		#pragma warning disable

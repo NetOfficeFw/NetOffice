@@ -17,6 +17,7 @@ namespace NetOffice.WordApi
 	/// CoClass Font SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Font : _Font, IEventBinding 
 	{
 		#pragma warning disable

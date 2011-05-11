@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface Research SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Research : COMObject
 	{
 		#pragma warning disable

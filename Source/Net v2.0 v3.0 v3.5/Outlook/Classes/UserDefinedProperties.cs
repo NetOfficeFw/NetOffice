@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass UserDefinedProperties SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class UserDefinedProperties : _UserDefinedProperties, IEventBinding 
 	{
 		#pragma warning disable

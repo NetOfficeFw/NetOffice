@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface _CommandBars SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CommandBars : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

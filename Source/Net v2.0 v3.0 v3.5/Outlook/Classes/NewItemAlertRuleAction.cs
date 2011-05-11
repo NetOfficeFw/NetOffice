@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass NewItemAlertRuleAction SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NewItemAlertRuleAction : _NewItemAlertRuleAction, IEventBinding 
 	{
 		#pragma warning disable

@@ -27,6 +27,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass ProgressBar SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ProgressBar : IProgressBar, IEventBinding 
 	{
 		#pragma warning disable

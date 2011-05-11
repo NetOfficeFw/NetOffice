@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface IconCriteria SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IconCriteria : COMObject ,IEnumerable
 	{
 		#pragma warning disable

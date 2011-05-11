@@ -19,6 +19,7 @@ namespace NetOffice.VBIDEApi
 	/// CoClass ReferencesEvents SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ReferencesEvents : _ReferencesEvents, IEventBinding 
 	{
 		#pragma warning disable

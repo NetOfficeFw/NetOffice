@@ -13,6 +13,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Reviewers SupportByLibrary WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Reviewers : COMObject ,IEnumerable
 	{
 		#pragma warning disable

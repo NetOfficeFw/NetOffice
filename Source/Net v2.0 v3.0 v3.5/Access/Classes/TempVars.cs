@@ -17,6 +17,7 @@ namespace NetOffice.AccessApi
 	/// CoClass TempVars SupportByLibrary AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TempVars : _TempVars, IEventBinding 
 	{
 		#pragma warning disable

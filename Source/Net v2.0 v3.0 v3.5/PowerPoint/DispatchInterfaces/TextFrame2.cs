@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface TextFrame2 SupportByLibrary PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TextFrame2 : COMObject
 	{
 		#pragma warning disable

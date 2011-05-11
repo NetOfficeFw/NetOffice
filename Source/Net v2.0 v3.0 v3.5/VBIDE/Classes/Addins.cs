@@ -17,6 +17,7 @@ namespace NetOffice.VBIDEApi
 	/// CoClass Addins SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Addins : _AddIns, IEventBinding 
 	{
 		#pragma warning disable

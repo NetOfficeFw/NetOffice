@@ -12,6 +12,7 @@ namespace NetOffice.VBIDEApi
 	/// DispatchInterface VBE SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class VBE : Application
 	{
 		#pragma warning disable

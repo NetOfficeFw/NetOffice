@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface FileDialogExtensionList SupportByLibrary PP09 
 	///</summary>
 	[SupportByLibrary("PP09")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FileDialogExtensionList : Collection
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface ChSegment SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChSegment : COMObject
 	{
 		#pragma warning disable

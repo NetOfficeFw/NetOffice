@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface SmartTagType SupportByLibrary WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartTagType : COMObject
 	{
 		#pragma warning disable

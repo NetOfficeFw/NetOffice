@@ -19,6 +19,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass FormRegion SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class FormRegion : _FormRegion, IEventBinding 
 	{
 		#pragma warning disable

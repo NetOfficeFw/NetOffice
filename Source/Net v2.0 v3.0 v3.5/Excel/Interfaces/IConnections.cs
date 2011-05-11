@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IConnections SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConnections : COMObject ,IEnumerable
 	{
 		#pragma warning disable

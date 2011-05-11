@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface PPAlert SupportByLibrary PP09 
 	///</summary>
 	[SupportByLibrary("PP09")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPAlert : COMObject
 	{
 		#pragma warning disable

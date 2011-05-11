@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass ColumnFormat SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ColumnFormat : _ColumnFormat, IEventBinding 
 	{
 		#pragma warning disable

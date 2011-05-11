@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface ScopeFolders SupportByLibrary OF10 OF11 OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF10","OF11","OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ScopeFolders : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

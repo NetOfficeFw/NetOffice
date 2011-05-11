@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface PickerField SupportByLibrary OF14 
 	///</summary>
 	[SupportByLibrary("OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PickerField : _IMsoDispObj
 	{
 		#pragma warning disable

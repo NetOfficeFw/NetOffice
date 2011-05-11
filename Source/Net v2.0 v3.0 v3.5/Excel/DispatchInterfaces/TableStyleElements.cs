@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface TableStyleElements SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TableStyleElements : COMObject ,IEnumerable
 	{
 		#pragma warning disable

@@ -13,6 +13,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface SharedResources SupportByLibrary AC14 
 	///</summary>
 	[SupportByLibrary("AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedResources : COMObject ,IEnumerable
 	{
 		#pragma warning disable

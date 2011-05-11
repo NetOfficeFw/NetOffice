@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface PivotCaches SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotCaches : COMObject ,IEnumerable
 	{
 		#pragma warning disable

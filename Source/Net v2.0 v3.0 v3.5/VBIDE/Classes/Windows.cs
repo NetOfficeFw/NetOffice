@@ -17,6 +17,7 @@ namespace NetOffice.VBIDEApi
 	/// CoClass Windows SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Windows : _Windows, IEventBinding 
 	{
 		#pragma warning disable

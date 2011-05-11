@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface PlotArea SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PlotArea : COMObject
 	{
 		#pragma warning disable

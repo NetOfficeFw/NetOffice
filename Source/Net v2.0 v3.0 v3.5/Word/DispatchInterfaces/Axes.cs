@@ -13,6 +13,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Axes SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Axes : COMObject ,IEnumerable
 	{
 		#pragma warning disable

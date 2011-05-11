@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface _TempVar SupportByLibrary AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _TempVar : COMObject
 	{
 		#pragma warning disable

@@ -19,6 +19,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass NameSpace SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NameSpace : _NameSpace, IEventBinding 
 	{
 		#pragma warning disable

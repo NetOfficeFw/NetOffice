@@ -17,6 +17,7 @@ namespace NetOffice.DAOApi
 	/// CoClass Group SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Group : _Group, IEventBinding 
 	{
 		#pragma warning disable

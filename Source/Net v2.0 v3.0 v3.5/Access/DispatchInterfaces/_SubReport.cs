@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface _SubReport SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _SubReport : COMObject
 	{
 		#pragma warning disable

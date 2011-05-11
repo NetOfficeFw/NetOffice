@@ -7,6 +7,7 @@ namespace NetOffice.MSComctlLibApi.Enums
 	 /// SupportByLibrary WCC6.0 
 	 /// </summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PanelAlignmentConstants
 	{
 		 /// <summary>

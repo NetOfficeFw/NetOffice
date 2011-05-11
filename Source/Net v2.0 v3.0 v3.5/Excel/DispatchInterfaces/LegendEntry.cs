@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface LegendEntry SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LegendEntry : COMObject
 	{
 		#pragma warning disable

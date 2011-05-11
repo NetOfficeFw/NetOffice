@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass Store SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Store : _Store, IEventBinding 
 	{
 		#pragma warning disable

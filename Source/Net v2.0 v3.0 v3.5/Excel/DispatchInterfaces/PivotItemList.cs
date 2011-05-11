@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface PivotItemList SupportByLibrary XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotItemList : COMObject ,IEnumerable
 	{
 		#pragma warning disable

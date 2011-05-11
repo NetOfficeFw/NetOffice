@@ -12,6 +12,7 @@ namespace NetOffice.MSComctlLibApi
 	/// DispatchInterface IImageCombo SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IImageCombo : COMObject
 	{
 		#pragma warning disable

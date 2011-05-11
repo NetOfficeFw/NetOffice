@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IValueChange SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IValueChange : COMObject
 	{
 		#pragma warning disable

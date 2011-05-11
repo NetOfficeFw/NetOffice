@@ -17,6 +17,7 @@ namespace NetOffice.DAOApi
 	/// CoClass PrivDBEngine SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PrivDBEngine : _DBEngine, IEventBinding 
 	{
 		#pragma warning disable

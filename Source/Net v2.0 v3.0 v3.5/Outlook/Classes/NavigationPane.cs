@@ -18,6 +18,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass NavigationPane SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationPane : _NavigationPane, IEventBinding 
 	{
 		#pragma warning disable

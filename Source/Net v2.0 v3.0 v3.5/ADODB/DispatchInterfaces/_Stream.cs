@@ -12,6 +12,7 @@ namespace NetOffice.ADODBApi
 	/// DispatchInterface _Stream SupportByLibrary ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Stream : COMObject
 	{
 		#pragma warning disable

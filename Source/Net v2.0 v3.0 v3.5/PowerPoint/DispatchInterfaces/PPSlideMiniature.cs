@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface PPSlideMiniature SupportByLibrary PP09 
 	///</summary>
 	[SupportByLibrary("PP09")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPSlideMiniature : PPControl
 	{
 		#pragma warning disable

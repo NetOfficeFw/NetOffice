@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface PPFrame SupportByLibrary PP09 
 	///</summary>
 	[SupportByLibrary("PP09")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPFrame : PPControl
 	{
 		#pragma warning disable

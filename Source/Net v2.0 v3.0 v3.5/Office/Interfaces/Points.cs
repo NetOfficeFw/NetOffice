@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// Interface Points SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class Points : COMObject ,IEnumerable
 	{
 		#pragma warning disable

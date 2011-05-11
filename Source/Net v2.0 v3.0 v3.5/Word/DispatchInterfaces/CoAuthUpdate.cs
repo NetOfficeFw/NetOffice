@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface CoAuthUpdate SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CoAuthUpdate : COMObject
 	{
 		#pragma warning disable

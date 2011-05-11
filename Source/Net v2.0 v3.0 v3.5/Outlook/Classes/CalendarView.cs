@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass CalendarView SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CalendarView : _CalendarView, IEventBinding 
 	{
 		#pragma warning disable

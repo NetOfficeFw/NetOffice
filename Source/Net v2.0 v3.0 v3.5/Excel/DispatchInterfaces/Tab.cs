@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface Tab SupportByLibrary XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Tab : COMObject
 	{
 		#pragma warning disable

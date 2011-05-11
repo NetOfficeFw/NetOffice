@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Editors SupportByLibrary WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Editors : COMObject
 	{
 		#pragma warning disable

@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface SmartArtNodes SupportByLibrary OF14 
 	///</summary>
 	[SupportByLibrary("OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartArtNodes : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

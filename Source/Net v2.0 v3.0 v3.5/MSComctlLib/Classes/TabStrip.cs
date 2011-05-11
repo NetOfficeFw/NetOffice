@@ -31,6 +31,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass TabStrip SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TabStrip : ITabStrip, IEventBinding 
 	{
 		#pragma warning disable

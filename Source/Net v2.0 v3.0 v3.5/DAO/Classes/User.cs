@@ -17,6 +17,7 @@ namespace NetOffice.DAOApi
 	/// CoClass User SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class User : _User, IEventBinding 
 	{
 		#pragma warning disable

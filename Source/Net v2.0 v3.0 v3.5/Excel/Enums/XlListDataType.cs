@@ -7,6 +7,7 @@ namespace NetOffice.ExcelApi.Enums
 	 /// SupportByLibrary XL11 XL12 XL14 
 	 /// </summary>
 	[SupportByLibrary("XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlListDataType
 	{
 		 /// <summary>

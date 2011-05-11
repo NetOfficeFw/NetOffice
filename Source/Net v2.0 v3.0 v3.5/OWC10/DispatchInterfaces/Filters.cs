@@ -13,6 +13,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface Filters SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Filters : COMObject ,IEnumerable
 	{
 		#pragma warning disable

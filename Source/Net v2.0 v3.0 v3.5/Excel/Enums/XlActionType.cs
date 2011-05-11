@@ -7,6 +7,7 @@ namespace NetOffice.ExcelApi.Enums
 	 /// SupportByLibrary XL12 XL14 
 	 /// </summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlActionType
 	{
 		 /// <summary>

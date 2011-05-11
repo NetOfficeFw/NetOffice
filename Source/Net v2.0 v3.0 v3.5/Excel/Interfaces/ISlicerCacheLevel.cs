@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ISlicerCacheLevel SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISlicerCacheLevel : COMObject
 	{
 		#pragma warning disable

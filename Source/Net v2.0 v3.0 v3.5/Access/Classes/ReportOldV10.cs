@@ -24,6 +24,7 @@ namespace NetOffice.AccessApi
 	/// CoClass ReportOldV10 SupportByLibrary AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ReportOldV10 : _Report2, IEventBinding 
 	{
 		#pragma warning disable

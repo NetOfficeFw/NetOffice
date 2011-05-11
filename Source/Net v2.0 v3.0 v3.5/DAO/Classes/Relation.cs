@@ -17,6 +17,7 @@ namespace NetOffice.DAOApi
 	/// CoClass Relation SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Relation : _Relation, IEventBinding 
 	{
 		#pragma warning disable

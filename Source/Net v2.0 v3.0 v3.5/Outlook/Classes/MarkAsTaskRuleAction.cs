@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass MarkAsTaskRuleAction SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MarkAsTaskRuleAction : _MarkAsTaskRuleAction, IEventBinding 
 	{
 		#pragma warning disable

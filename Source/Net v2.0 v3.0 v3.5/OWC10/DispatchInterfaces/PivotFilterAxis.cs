@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface PivotFilterAxis SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotFilterAxis : PivotAxis
 	{
 		#pragma warning disable

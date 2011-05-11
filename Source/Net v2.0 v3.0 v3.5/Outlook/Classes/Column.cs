@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass Column SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Column : _Column, IEventBinding 
 	{
 		#pragma warning disable

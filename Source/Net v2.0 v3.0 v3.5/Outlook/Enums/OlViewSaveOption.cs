@@ -7,6 +7,7 @@ namespace NetOffice.OutlookApi.Enums
 	 /// SupportByLibrary OL10 OL11 OL12 OL14 
 	 /// </summary>
 	[SupportByLibrary("OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlViewSaveOption
 	{
 		 /// <summary>

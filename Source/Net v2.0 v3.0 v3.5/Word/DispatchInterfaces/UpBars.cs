@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface UpBars SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class UpBars : COMObject
 	{
 		#pragma warning disable

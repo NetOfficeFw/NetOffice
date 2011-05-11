@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface GlowFormat SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GlowFormat : _IMsoDispObj
 	{
 		#pragma warning disable

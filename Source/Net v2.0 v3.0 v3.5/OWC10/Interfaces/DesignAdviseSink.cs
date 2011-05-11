@@ -11,6 +11,7 @@ namespace NetOffice.OWC10Api
 	/// Interface DesignAdviseSink SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DesignAdviseSink : COMObject
 	{
 		#pragma warning disable

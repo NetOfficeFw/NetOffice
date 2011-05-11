@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface ChFormatMap SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChFormatMap : COMObject
 	{
 		#pragma warning disable

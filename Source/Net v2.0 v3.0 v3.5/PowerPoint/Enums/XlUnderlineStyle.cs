@@ -7,6 +7,7 @@ namespace NetOffice.PowerPointApi.Enums
 	 /// SupportByLibrary PP14 
 	 /// </summary>
 	[SupportByLibrary("PP14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlUnderlineStyle
 	{
 		 /// <summary>

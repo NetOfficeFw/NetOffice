@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface XmlDataBinding SupportByLibrary XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XmlDataBinding : COMObject
 	{
 		#pragma warning disable

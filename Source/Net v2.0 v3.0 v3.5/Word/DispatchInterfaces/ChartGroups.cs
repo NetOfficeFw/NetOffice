@@ -13,6 +13,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface ChartGroups SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartGroups : COMObject ,IEnumerable
 	{
 		#pragma warning disable

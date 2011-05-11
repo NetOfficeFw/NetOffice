@@ -17,6 +17,7 @@ namespace NetOffice.VBIDEApi
 	/// CoClass CodeModule SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CodeModule : _CodeModule, IEventBinding 
 	{
 		#pragma warning disable

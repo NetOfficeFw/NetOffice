@@ -12,6 +12,7 @@ namespace NetOffice.DAOApi
 	/// DispatchInterface ComplexType SupportByLibrary DAO12 
 	///</summary>
 	[SupportByLibrary("DAO12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ComplexType : COMObject
 	{
 		#pragma warning disable

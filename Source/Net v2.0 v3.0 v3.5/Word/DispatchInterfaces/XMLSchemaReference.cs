@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface XMLSchemaReference SupportByLibrary WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XMLSchemaReference : COMObject
 	{
 		#pragma warning disable

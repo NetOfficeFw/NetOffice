@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
 	/// Interface IConverterPreferences SupportByLibrary OF14 
 	///</summary>
 	[SupportByLibrary("OF14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterPreferences : COMObject
 	{
 		#pragma warning disable

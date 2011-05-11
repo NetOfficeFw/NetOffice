@@ -11,6 +11,7 @@ namespace NetOffice.ADODBApi
 	/// Interface ADOStreamConstruction SupportByLibrary ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ADOStreamConstruction : COMObject
 	{
 		#pragma warning disable

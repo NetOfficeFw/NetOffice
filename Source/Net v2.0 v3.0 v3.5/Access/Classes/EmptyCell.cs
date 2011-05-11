@@ -17,6 +17,7 @@ namespace NetOffice.AccessApi
 	/// CoClass EmptyCell SupportByLibrary AC14 
 	///</summary>
 	[SupportByLibrary("AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class EmptyCell : _EmptyCell, IEventBinding 
 	{
 		#pragma warning disable

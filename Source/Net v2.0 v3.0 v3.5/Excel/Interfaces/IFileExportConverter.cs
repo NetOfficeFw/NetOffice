@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IFileExportConverter SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IFileExportConverter : COMObject
 	{
 		#pragma warning disable

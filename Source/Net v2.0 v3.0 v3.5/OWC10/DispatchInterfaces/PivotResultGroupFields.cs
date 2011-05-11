@@ -13,6 +13,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface PivotResultGroupFields SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotResultGroupFields : COMObject ,IEnumerable
 	{
 		#pragma warning disable

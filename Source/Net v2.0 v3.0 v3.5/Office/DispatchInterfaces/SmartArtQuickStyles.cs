@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface SmartArtQuickStyles SupportByLibrary OF14 
 	///</summary>
 	[SupportByLibrary("OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartArtQuickStyles : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

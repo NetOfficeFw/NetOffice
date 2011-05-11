@@ -13,6 +13,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface CanvasShapes SupportByLibrary PP10 PP11 PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP10","PP11","PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CanvasShapes : COMObject ,IEnumerable
 	{
 		#pragma warning disable

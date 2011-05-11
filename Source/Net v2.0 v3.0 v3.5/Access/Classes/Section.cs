@@ -23,6 +23,7 @@ namespace NetOffice.AccessApi
 	/// CoClass Section SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Section : _Section, IEventBinding 
 	{
 		#pragma warning disable

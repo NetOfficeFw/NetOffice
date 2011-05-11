@@ -32,6 +32,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass Toolbar SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Toolbar : IToolbar, IEventBinding 
 	{
 		#pragma warning disable

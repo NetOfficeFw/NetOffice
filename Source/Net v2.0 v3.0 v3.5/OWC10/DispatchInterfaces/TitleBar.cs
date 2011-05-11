@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface TitleBar SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TitleBar : COMObject
 	{
 		#pragma warning disable

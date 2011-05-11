@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface _AutoCorrect SupportByLibrary AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _AutoCorrect : COMObject
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface PivotResultAxis SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotResultAxis : COMObject
 	{
 		#pragma warning disable

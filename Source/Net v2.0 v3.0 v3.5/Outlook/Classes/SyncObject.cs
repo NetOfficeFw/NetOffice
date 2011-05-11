@@ -21,6 +21,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass SyncObject SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SyncObject : _SyncObject, IEventBinding 
 	{
 		#pragma warning disable

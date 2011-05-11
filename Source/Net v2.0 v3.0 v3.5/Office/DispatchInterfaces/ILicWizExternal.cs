@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface ILicWizExternal SupportByLibrary OF10 OF11 OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF10","OF11","OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ILicWizExternal : COMObject
 	{
 		#pragma warning disable

@@ -17,6 +17,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass ButtonMenu SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ButtonMenu : IButtonMenu, IEventBinding 
 	{
 		#pragma warning disable

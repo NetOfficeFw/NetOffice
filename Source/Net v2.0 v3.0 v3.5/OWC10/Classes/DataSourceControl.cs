@@ -39,6 +39,7 @@ namespace NetOffice.OWC10Api
 	/// CoClass DataSourceControl SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataSourceControl : IDataSourceControl, IEventBinding 
 	{
 		#pragma warning disable

@@ -43,6 +43,7 @@ namespace NetOffice.OWC10Api
 	/// CoClass ChartSpace SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ChartSpace : ChChartSpace, IEventBinding 
 	{
 		#pragma warning disable

@@ -17,6 +17,7 @@ namespace NetOffice.VBIDEApi
 	/// CoClass CodePanes SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CodePanes : _CodePanes, IEventBinding 
 	{
 		#pragma warning disable

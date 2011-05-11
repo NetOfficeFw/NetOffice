@@ -18,6 +18,7 @@ namespace NetOffice.OWC10Api
 	/// CoClass RecordNavigationControl SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class RecordNavigationControl : INavigationControl, IEventBinding 
 	{
 		#pragma warning disable

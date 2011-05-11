@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ISlicerCaches SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISlicerCaches : COMObject ,IEnumerable
 	{
 		#pragma warning disable

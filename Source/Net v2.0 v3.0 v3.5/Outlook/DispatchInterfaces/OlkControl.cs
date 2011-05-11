@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface OlkControl SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OlkControl : COMObject
 	{
 		#pragma warning disable

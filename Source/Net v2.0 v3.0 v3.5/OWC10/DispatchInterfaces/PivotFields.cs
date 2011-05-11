@@ -13,6 +13,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface PivotFields SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotFields : COMObject ,IEnumerable
 	{
 		#pragma warning disable

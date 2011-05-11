@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass PropertyAccessor SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PropertyAccessor : _PropertyAccessor, IEventBinding 
 	{
 		#pragma warning disable

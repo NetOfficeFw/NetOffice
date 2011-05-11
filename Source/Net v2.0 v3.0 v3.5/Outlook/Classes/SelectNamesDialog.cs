@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass SelectNamesDialog SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SelectNamesDialog : _SelectNamesDialog, IEventBinding 
 	{
 		#pragma warning disable

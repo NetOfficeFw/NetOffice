@@ -38,6 +38,7 @@ namespace NetOffice.AccessApi
 	/// CoClass WebBrowserControl SupportByLibrary AC14 
 	///</summary>
 	[SupportByLibrary("AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class WebBrowserControl : _WebBrowserControl, IEventBinding 
 	{
 		#pragma warning disable

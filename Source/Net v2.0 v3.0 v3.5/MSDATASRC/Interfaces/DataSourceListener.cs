@@ -11,6 +11,7 @@ namespace NetOffice.MSDATASRCApi
 	/// Interface DataSourceListener SupportByLibrary DSI1.0 
 	///</summary>
 	[SupportByLibrary("DSI1.0")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DataSourceListener : COMObject
 	{
 		#pragma warning disable

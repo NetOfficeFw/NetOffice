@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IPivotFilters SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IPivotFilters : COMObject ,IEnumerable
 	{
 		#pragma warning disable

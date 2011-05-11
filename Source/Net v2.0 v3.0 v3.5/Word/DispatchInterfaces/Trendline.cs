@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Trendline SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Trendline : COMObject
 	{
 		#pragma warning disable

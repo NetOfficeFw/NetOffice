@@ -42,6 +42,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass SharingItem SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SharingItem : _SharingItem, IEventBinding 
 	{
 		#pragma warning disable

@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface SparklineGroup SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SparklineGroup : COMObject ,IEnumerable
 	{
 		#pragma warning disable

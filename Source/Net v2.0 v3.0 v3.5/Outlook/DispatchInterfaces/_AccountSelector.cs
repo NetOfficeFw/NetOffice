@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface _AccountSelector SupportByLibrary OL14 
 	///</summary>
 	[SupportByLibrary("OL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _AccountSelector : COMObject
 	{
 		#pragma warning disable

@@ -13,6 +13,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface GroupLevels SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GroupLevels : COMObject ,IEnumerable
 	{
 		#pragma warning disable

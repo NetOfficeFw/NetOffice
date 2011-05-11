@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IIconSetCondition SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IIconSetCondition : COMObject
 	{
 		#pragma warning disable

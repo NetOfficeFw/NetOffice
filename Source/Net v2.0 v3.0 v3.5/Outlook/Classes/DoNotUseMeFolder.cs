@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass DoNotUseMeFolder SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DoNotUseMeFolder : MAPIFolder, IEventBinding 
 	{
 		#pragma warning disable

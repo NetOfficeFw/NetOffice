@@ -7,6 +7,7 @@ namespace NetOffice.WordApi.Enums
 	 /// SupportByLibrary WD12 WD14 
 	 /// </summary>
 	[SupportByLibrary("WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdThemeColorIndex
 	{
 		 /// <summary>

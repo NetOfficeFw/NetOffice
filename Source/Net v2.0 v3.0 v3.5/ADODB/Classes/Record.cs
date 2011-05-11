@@ -17,6 +17,7 @@ namespace NetOffice.ADODBApi
 	/// CoClass Record SupportByLibrary ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Record : _Record, IEventBinding 
 	{
 		#pragma warning disable

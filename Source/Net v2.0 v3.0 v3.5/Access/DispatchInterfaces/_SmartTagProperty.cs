@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface _SmartTagProperty SupportByLibrary AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _SmartTagProperty : COMObject
 	{
 		#pragma warning disable

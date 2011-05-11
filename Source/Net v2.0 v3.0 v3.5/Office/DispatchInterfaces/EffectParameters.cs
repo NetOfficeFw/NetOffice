@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface EffectParameters SupportByLibrary OF14 
 	///</summary>
 	[SupportByLibrary("OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EffectParameters : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

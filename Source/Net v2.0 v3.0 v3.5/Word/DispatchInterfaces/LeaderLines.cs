@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface LeaderLines SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LeaderLines : COMObject
 	{
 		#pragma warning disable

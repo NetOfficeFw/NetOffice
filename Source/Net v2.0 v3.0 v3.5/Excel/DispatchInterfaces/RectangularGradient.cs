@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface RectangularGradient SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class RectangularGradient : COMObject
 	{
 		#pragma warning disable

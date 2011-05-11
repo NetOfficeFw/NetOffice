@@ -13,6 +13,7 @@ namespace NetOffice.DAOApi
 	/// DispatchInterface Groups SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Groups : _DynaCollection ,IEnumerable
 	{
 		#pragma warning disable

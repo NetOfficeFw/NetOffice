@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IAddIns2 SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IAddIns2 : COMObject ,IEnumerable
 	{
 		#pragma warning disable

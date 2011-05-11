@@ -17,6 +17,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass ListImages SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ListImages : IImages, IEventBinding 
 	{
 		#pragma warning disable

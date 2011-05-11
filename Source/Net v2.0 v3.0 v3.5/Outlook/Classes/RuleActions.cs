@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass RuleActions SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class RuleActions : _RuleActions, IEventBinding 
 	{
 		#pragma warning disable

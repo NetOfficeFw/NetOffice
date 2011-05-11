@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass NavigationGroup SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationGroup : _NavigationGroup, IEventBinding 
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface Moniker SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Moniker : COMObject
 	{
 		#pragma warning disable

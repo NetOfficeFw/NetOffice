@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IFormatCondition SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IFormatCondition : COMObject
 	{
 		#pragma warning disable

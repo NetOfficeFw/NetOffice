@@ -48,6 +48,7 @@ namespace NetOffice.OWC10Api
 	/// CoClass Spreadsheet SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Spreadsheet : ISpreadsheet, IEventBinding 
 	{
 		#pragma warning disable

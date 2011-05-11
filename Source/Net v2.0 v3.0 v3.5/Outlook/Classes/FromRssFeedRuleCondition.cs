@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass FromRssFeedRuleCondition SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class FromRssFeedRuleCondition : _FromRssFeedRuleCondition, IEventBinding 
 	{
 		#pragma warning disable

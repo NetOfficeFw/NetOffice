@@ -31,6 +31,7 @@ namespace NetOffice.AccessApi
 	/// CoClass _OptionButtonInOption SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _OptionButtonInOption : _OptionButton, IEventBinding 
 	{
 		#pragma warning disable

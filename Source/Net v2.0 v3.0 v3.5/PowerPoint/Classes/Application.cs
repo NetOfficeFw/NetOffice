@@ -48,6 +48,7 @@ namespace NetOffice.PowerPointApi
 	/// CoClass Application SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Application : _Application, IEventBinding 
 	{
 		#pragma warning disable

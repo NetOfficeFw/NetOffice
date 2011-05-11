@@ -12,6 +12,7 @@ namespace NetOffice.DAOApi
 	/// DispatchInterface Recordset2 SupportByLibrary DAO12 
 	///</summary>
 	[SupportByLibrary("DAO12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Recordset2 : Recordset
 	{
 		#pragma warning disable

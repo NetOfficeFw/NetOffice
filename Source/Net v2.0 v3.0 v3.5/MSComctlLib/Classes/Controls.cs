@@ -17,6 +17,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass Controls SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Controls : IControls, IEventBinding 
 	{
 		#pragma warning disable

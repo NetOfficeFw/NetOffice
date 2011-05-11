@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Adjustments SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Adjustments : COMObject
 	{
 		#pragma warning disable

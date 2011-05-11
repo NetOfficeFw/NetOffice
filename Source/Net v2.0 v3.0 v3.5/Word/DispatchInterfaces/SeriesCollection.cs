@@ -13,6 +13,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface SeriesCollection SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SeriesCollection : COMObject ,IEnumerable
 	{
 		#pragma warning disable

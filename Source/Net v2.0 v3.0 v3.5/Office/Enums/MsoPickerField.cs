@@ -7,6 +7,7 @@ namespace NetOffice.OfficeApi.Enums
 	 /// SupportByLibrary OF14 
 	 /// </summary>
 	[SupportByLibrary("OF14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoPickerField
 	{
 		 /// <summary>

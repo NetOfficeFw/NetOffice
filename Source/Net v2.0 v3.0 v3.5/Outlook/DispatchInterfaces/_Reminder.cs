@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface _Reminder SupportByLibrary OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Reminder : COMObject
 	{
 		#pragma warning disable

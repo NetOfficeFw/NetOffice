@@ -12,6 +12,7 @@ namespace NetOffice.MSComctlLibApi
 	/// DispatchInterface ITabStrip SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ITabStrip : COMObject
 	{
 		#pragma warning disable

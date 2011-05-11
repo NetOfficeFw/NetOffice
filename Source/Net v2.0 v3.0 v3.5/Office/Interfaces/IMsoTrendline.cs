@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
 	/// Interface IMsoTrendline SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IMsoTrendline : COMObject
 	{
 		#pragma warning disable

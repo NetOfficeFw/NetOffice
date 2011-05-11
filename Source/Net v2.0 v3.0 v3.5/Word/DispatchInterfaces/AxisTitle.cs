@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface AxisTitle SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AxisTitle : COMObject
 	{
 		#pragma warning disable

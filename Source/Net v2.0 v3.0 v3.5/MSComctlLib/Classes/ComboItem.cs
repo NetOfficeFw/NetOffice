@@ -17,6 +17,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass ComboItem SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ComboItem : IComboItem, IEventBinding 
 	{
 		#pragma warning disable

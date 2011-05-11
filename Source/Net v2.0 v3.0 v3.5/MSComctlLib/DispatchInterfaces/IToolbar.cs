@@ -12,6 +12,7 @@ namespace NetOffice.MSComctlLibApi
 	/// DispatchInterface IToolbar SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IToolbar : COMObject
 	{
 		#pragma warning disable

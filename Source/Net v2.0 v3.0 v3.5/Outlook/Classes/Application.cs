@@ -36,6 +36,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass Application SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Application : _Application, IEventBinding 
 	{
 		#pragma warning disable

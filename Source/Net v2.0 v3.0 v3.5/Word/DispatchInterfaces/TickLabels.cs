@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface TickLabels SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TickLabels : COMObject
 	{
 		#pragma warning disable

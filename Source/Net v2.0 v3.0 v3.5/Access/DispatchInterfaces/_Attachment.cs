@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface _Attachment SupportByLibrary AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Attachment : NetOffice.OfficeApi.IAccessible
 	{
 		#pragma warning disable

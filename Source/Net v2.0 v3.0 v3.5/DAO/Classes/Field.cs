@@ -17,6 +17,7 @@ namespace NetOffice.DAOApi
 	/// CoClass Field SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Field : _Field, IEventBinding 
 	{
 		#pragma warning disable

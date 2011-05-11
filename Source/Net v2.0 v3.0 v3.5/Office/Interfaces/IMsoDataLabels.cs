@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// Interface IMsoDataLabels SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IMsoDataLabels : COMObject ,IEnumerable
 	{
 		#pragma warning disable

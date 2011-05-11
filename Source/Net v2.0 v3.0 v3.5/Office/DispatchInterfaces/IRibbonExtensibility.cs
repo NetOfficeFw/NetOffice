@@ -14,6 +14,7 @@ namespace NetOffice.OfficeApi
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
 	[ComImport, Guid("000C0396-0000-0000-C000-000000000046"), TypeLibType((short) 4160)]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public interface IRibbonExtensibility
 	{
 		#region Methods

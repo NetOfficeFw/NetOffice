@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface SeriesLines SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SeriesLines : COMObject
 	{
 		#pragma warning disable

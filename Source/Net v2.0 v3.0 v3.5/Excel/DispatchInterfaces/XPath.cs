@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface XPath SupportByLibrary XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XPath : COMObject
 	{
 		#pragma warning disable

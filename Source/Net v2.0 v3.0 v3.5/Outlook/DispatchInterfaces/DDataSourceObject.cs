@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface DDataSourceObject SupportByLibrary OL10 
 	///</summary>
 	[SupportByLibrary("OL10")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DDataSourceObject : COMObject
 	{
 		#pragma warning disable

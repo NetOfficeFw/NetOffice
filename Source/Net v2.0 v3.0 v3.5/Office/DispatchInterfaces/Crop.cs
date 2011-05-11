@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface Crop SupportByLibrary OF14 
 	///</summary>
 	[SupportByLibrary("OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Crop : _IMsoDispObj
 	{
 		#pragma warning disable

@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ISlicerItem SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISlicerItem : COMObject
 	{
 		#pragma warning disable

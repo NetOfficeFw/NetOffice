@@ -7,6 +7,7 @@ namespace NetOffice.ADODBApi.Enums
 	 /// SupportByLibrary ADO2.1 
 	 /// </summary>
 	[SupportByLibrary("ADO2.1")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum CEResyncEnum
 	{
 		 /// <summary>

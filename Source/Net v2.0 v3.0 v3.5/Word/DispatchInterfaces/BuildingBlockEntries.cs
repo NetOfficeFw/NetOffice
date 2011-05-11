@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface BuildingBlockEntries SupportByLibrary WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class BuildingBlockEntries : COMObject
 	{
 		#pragma warning disable

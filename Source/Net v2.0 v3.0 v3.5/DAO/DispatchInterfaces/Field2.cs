@@ -12,6 +12,7 @@ namespace NetOffice.DAOApi
 	/// DispatchInterface Field2 SupportByLibrary DAO12 
 	///</summary>
 	[SupportByLibrary("DAO12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Field2 : _Field
 	{
 		#pragma warning disable

@@ -11,6 +11,7 @@ namespace NetOffice.ADODBApi
 	/// Interface ADORecordsetConstruction SupportByLibrary ADO2.1 ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ADORecordsetConstruction : COMObject
 	{
 		#pragma warning disable

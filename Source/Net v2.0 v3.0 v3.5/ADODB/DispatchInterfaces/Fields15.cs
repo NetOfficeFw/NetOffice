@@ -12,6 +12,7 @@ namespace NetOffice.ADODBApi
 	/// DispatchInterface Fields15 SupportByLibrary ADO2.1 ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Fields15 : _Collection
 	{
 		#pragma warning disable

@@ -7,6 +7,7 @@ namespace NetOffice.DAOApi.Enums
 	 /// SupportByLibrary DAO3.6 DAO12 
 	 /// </summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum DataTypeEnum
 	{
 		 /// <summary>

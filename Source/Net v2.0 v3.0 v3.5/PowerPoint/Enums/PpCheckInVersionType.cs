@@ -7,6 +7,7 @@ namespace NetOffice.PowerPointApi.Enums
 	 /// SupportByLibrary PP12 PP14 
 	 /// </summary>
 	[SupportByLibrary("PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpCheckInVersionType
 	{
 		 /// <summary>

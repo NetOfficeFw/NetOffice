@@ -12,6 +12,7 @@ namespace NetOffice.DAOApi
 	/// DispatchInterface Error SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Error : COMObject
 	{
 		#pragma warning disable

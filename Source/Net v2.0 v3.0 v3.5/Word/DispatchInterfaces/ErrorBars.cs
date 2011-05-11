@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface ErrorBars SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ErrorBars : COMObject
 	{
 		#pragma warning disable

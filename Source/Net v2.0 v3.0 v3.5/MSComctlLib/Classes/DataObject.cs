@@ -17,6 +17,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass DataObject SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataObject : IVBDataObject, IEventBinding 
 	{
 		#pragma warning disable

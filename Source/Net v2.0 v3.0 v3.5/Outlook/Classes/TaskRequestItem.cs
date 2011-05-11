@@ -42,6 +42,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass TaskRequestItem SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TaskRequestItem : _TaskRequestItem, IEventBinding 
 	{
 		#pragma warning disable

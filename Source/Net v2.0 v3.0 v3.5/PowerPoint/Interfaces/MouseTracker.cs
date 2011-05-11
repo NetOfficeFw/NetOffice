@@ -11,6 +11,7 @@ namespace NetOffice.PowerPointApi
 	/// Interface MouseTracker SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class MouseTracker : COMObject
 	{
 		#pragma warning disable

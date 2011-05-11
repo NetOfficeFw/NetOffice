@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass DataSourceObject SupportByLibrary OL10 
 	///</summary>
 	[SupportByLibrary("OL10")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataSourceObject : DDataSourceObject, IEventBinding 
 	{
 		#pragma warning disable

@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface RulerLevels2 SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class RulerLevels2 : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

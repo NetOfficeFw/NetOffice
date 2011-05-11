@@ -46,6 +46,7 @@ namespace NetOffice.OWC10Api
 	/// CoClass PivotTable SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PivotTable : IPivotControl, IEventBinding 
 	{
 		#pragma warning disable

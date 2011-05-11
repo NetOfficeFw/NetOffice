@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass _DocSiteControl SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _DocSiteControl : _DDocSiteControl, IEventBinding 
 	{
 		#pragma warning disable

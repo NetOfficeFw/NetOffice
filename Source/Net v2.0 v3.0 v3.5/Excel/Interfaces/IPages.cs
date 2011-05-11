@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IPages SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IPages : COMObject ,IEnumerable
 	{
 		#pragma warning disable

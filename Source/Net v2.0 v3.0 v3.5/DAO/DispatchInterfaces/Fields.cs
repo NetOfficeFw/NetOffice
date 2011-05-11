@@ -13,6 +13,7 @@ namespace NetOffice.DAOApi
 	/// DispatchInterface Fields SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Fields : _DynaCollection ,IEnumerable
 	{
 		#pragma warning disable

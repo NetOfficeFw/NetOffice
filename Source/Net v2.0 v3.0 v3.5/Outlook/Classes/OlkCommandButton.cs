@@ -29,6 +29,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OlkCommandButton SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkCommandButton : _OlkCommandButton, IEventBinding 
 	{
 		#pragma warning disable

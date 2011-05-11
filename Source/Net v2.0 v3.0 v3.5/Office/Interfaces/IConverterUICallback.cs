@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
 	/// Interface IConverterUICallback SupportByLibrary OF14 
 	///</summary>
 	[SupportByLibrary("OF14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterUICallback : COMObject
 	{
 		#pragma warning disable

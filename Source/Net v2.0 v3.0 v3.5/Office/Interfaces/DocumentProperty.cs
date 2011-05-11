@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
 	/// Interface DocumentProperty SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DocumentProperty : COMObject
 	{
 		#pragma warning disable

@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass ViewFields SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ViewFields : _ViewFields, IEventBinding 
 	{
 		#pragma warning disable

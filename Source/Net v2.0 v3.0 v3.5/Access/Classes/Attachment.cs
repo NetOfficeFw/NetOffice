@@ -34,6 +34,7 @@ namespace NetOffice.AccessApi
 	/// CoClass Attachment SupportByLibrary AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Attachment : _Attachment, IEventBinding 
 	{
 		#pragma warning disable

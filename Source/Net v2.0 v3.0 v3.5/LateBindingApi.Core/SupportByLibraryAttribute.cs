@@ -5,7 +5,7 @@ namespace LateBindingApi.Core
     /// Indicates whitch COM Type Library Version supports the entity
     /// </summary>
     [AttributeUsage(AttributeTargets.All)]
-    public sealed class SupportByLibrary: System.Attribute
+    public sealed class SupportByLibrary : System.Attribute
     {
         /// <summary>
         /// returns all supported library versions of entity

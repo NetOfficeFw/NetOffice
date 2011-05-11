@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface Axes SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Axes : COMObject ,IEnumerable
 	{
 		#pragma warning disable

@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass TimelineView SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TimelineView : _TimelineView, IEventBinding 
 	{
 		#pragma warning disable

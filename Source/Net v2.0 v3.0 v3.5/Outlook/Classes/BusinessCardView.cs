@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass BusinessCardView SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class BusinessCardView : _BusinessCardView, IEventBinding 
 	{
 		#pragma warning disable

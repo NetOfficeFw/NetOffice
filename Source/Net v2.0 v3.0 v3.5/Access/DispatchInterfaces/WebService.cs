@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface WebService SupportByLibrary AC14 
 	///</summary>
 	[SupportByLibrary("AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WebService : COMObject
 	{
 		#pragma warning disable

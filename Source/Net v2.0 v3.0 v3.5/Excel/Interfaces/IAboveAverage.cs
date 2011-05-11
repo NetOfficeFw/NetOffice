@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IAboveAverage SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IAboveAverage : COMObject
 	{
 		#pragma warning disable

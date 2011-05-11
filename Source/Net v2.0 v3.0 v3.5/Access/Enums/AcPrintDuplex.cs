@@ -7,6 +7,7 @@ namespace NetOffice.AccessApi.Enums
 	 /// SupportByLibrary AC10 AC11 AC12 AC14 
 	 /// </summary>
 	[SupportByLibrary("AC10","AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcPrintDuplex
 	{
 		 /// <summary>

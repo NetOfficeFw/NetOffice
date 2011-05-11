@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IXmlDataBinding SupportByLibrary XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IXmlDataBinding : COMObject
 	{
 		#pragma warning disable

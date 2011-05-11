@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
 	/// Interface IMsoSeries SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IMsoSeries : COMObject
 	{
 		#pragma warning disable

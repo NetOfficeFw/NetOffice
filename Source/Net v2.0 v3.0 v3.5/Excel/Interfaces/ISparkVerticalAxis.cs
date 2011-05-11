@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ISparkVerticalAxis SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISparkVerticalAxis : COMObject
 	{
 		#pragma warning disable

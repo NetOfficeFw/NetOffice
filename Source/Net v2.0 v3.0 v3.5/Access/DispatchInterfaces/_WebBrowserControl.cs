@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface _WebBrowserControl SupportByLibrary AC14 
 	///</summary>
 	[SupportByLibrary("AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _WebBrowserControl : NetOffice.OfficeApi.IAccessible
 	{
 		#pragma warning disable

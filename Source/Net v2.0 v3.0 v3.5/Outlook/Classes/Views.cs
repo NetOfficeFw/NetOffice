@@ -19,6 +19,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass Views SupportByLibrary OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Views : _Views, IEventBinding 
 	{
 		#pragma warning disable

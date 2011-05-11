@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface FileExportConverter SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FileExportConverter : COMObject
 	{
 		#pragma warning disable

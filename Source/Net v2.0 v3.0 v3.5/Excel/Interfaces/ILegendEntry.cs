@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ILegendEntry SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ILegendEntry : COMObject
 	{
 		#pragma warning disable

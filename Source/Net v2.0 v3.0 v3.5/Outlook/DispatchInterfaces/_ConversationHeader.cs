@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface _ConversationHeader SupportByLibrary OL14 
 	///</summary>
 	[SupportByLibrary("OL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _ConversationHeader : COMObject
 	{
 		#pragma warning disable

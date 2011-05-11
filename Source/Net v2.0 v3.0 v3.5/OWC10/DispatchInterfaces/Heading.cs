@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface Heading SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Heading : COMObject
 	{
 		#pragma warning disable

@@ -17,6 +17,7 @@ namespace NetOffice.AccessApi
 	/// CoClass AutoCorrect SupportByLibrary AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AutoCorrect : _AutoCorrect, IEventBinding 
 	{
 		#pragma warning disable

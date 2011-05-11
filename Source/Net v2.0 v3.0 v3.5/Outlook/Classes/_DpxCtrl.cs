@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass _DpxCtrl SupportByLibrary OL10 
 	///</summary>
 	[SupportByLibrary("OL10")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _DpxCtrl : _IDpxCtrl, IEventBinding 
 	{
 		#pragma warning disable

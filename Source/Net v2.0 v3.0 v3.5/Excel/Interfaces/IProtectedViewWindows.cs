@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IProtectedViewWindows SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IProtectedViewWindows : COMObject ,IEnumerable
 	{
 		#pragma warning disable

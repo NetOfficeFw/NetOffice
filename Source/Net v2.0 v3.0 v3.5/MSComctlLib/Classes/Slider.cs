@@ -32,6 +32,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass Slider SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Slider : ISlider, IEventBinding 
 	{
 		#pragma warning disable

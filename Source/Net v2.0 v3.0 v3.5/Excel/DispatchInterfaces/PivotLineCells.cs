@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface PivotLineCells SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotLineCells : COMObject ,IEnumerable
 	{
 		#pragma warning disable

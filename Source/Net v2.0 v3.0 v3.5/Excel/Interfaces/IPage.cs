@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IPage SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IPage : COMObject
 	{
 		#pragma warning disable

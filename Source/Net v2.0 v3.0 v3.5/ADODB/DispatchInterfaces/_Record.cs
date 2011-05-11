@@ -12,6 +12,7 @@ namespace NetOffice.ADODBApi
 	/// DispatchInterface _Record SupportByLibrary ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Record : _ADO
 	{
 		#pragma warning disable

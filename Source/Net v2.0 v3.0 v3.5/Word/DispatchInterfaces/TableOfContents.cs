@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface TableOfContents SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TableOfContents : COMObject
 	{
 		#pragma warning disable

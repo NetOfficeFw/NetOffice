@@ -17,6 +17,7 @@ namespace NetOffice.DAOApi
 	/// CoClass QueryDef SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class QueryDef : _QueryDef, IEventBinding 
 	{
 		#pragma warning disable

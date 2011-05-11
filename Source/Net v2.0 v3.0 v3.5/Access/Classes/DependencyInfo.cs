@@ -17,6 +17,7 @@ namespace NetOffice.AccessApi
 	/// CoClass DependencyInfo SupportByLibrary AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DependencyInfo : _DependencyInfo, IEventBinding 
 	{
 		#pragma warning disable

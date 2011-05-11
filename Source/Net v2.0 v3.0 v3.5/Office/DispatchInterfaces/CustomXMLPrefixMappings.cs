@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface CustomXMLPrefixMappings SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomXMLPrefixMappings : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

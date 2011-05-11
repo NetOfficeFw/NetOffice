@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass ImportanceRuleCondition SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ImportanceRuleCondition : _ImportanceRuleCondition, IEventBinding 
 	{
 		#pragma warning disable

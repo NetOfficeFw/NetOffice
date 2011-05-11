@@ -17,6 +17,7 @@ namespace NetOffice.OWC10Api
 	/// CoClass NumberFormat SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NumberFormat : _NumberFormat, IEventBinding 
 	{
 		#pragma warning disable

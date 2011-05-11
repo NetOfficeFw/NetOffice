@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface DisplayFormat SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DisplayFormat : COMObject
 	{
 		#pragma warning disable

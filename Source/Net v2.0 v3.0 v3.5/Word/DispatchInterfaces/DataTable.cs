@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface DataTable SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DataTable : COMObject
 	{
 		#pragma warning disable

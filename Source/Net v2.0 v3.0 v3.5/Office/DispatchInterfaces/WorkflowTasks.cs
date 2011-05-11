@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface WorkflowTasks SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WorkflowTasks : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

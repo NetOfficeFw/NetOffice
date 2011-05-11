@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IColorScaleCriteria SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IColorScaleCriteria : COMObject ,IEnumerable
 	{
 		#pragma warning disable

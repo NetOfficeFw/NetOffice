@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface SoftEdgeFormat SupportByLibrary WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SoftEdgeFormat : COMObject
 	{
 		#pragma warning disable

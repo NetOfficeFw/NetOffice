@@ -13,6 +13,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface _Form2 SupportByLibrary AC10 AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC10","AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Form2 : NetOffice.OfficeApi.IAccessible ,IEnumerable
 	{
 		#pragma warning disable

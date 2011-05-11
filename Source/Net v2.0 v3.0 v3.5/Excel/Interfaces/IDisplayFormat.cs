@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IDisplayFormat SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IDisplayFormat : COMObject
 	{
 		#pragma warning disable

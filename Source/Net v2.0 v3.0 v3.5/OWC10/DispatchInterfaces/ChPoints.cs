@@ -13,6 +13,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface ChPoints SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChPoints : COMObject ,IEnumerable
 	{
 		#pragma warning disable

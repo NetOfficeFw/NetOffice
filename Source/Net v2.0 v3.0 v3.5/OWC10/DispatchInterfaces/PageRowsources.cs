@@ -13,6 +13,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface PageRowsources SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PageRowsources : COMObject ,IEnumerable
 	{
 		#pragma warning disable

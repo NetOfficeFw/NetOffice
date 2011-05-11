@@ -7,6 +7,7 @@ namespace NetOffice.AccessApi.Enums
 	 /// SupportByLibrary AC14 
 	 /// </summary>
 	[SupportByLibrary("AC14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcWebBrowserScrollBars
 	{
 		 /// <summary>

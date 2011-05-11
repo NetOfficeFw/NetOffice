@@ -13,6 +13,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface ContentControlListEntries SupportByLibrary WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ContentControlListEntries : COMObject ,IEnumerable
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface Conflict SupportByLibrary OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Conflict : COMObject
 	{
 		#pragma warning disable

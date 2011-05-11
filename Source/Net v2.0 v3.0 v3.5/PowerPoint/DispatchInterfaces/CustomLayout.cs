@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface CustomLayout SupportByLibrary PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomLayout : COMObject
 	{
 		#pragma warning disable

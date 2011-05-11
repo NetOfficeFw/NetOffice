@@ -11,6 +11,7 @@ namespace NetOffice.OWC10Api
 	/// Interface OCDirty SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class OCDirty : COMObject
 	{
 		#pragma warning disable

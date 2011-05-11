@@ -7,6 +7,7 @@ namespace NetOffice.AccessApi.Enums
 	 /// SupportByLibrary AC12 AC14 
 	 /// </summary>
 	[SupportByLibrary("AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcDisplayAsHyperlink
 	{
 		 /// <summary>

@@ -7,6 +7,7 @@ namespace NetOffice.ADODBApi.Enums
 	 /// SupportByLibrary ADO2.1 ADO2.5 
 	 /// </summary>
 	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ConnectPromptEnum
 	{
 		 /// <summary>

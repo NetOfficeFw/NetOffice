@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Corners SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Corners : COMObject
 	{
 		#pragma warning disable

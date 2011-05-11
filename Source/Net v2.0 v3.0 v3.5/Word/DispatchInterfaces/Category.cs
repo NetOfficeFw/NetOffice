@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Category SupportByLibrary WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Category : COMObject
 	{
 		#pragma warning disable

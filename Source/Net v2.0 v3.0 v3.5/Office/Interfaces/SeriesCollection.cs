@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// Interface SeriesCollection SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class SeriesCollection : COMObject ,IEnumerable
 	{
 		#pragma warning disable

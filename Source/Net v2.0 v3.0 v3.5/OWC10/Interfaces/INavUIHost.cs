@@ -11,6 +11,7 @@ namespace NetOffice.OWC10Api
 	/// Interface INavUIHost SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class INavUIHost : COMObject
 	{
 		#pragma warning disable

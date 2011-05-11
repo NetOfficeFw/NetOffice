@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface HiLoLines SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class HiLoLines : COMObject
 	{
 		#pragma warning disable

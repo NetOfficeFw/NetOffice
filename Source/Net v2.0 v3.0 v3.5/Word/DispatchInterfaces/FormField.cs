@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface FormField SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FormField : COMObject
 	{
 		#pragma warning disable

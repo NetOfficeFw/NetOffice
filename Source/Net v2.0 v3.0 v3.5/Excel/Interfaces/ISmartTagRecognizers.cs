@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ISmartTagRecognizers SupportByLibrary XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISmartTagRecognizers : COMObject ,IEnumerable
 	{
 		#pragma warning disable

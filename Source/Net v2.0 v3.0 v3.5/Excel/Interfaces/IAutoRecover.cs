@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IAutoRecover SupportByLibrary XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IAutoRecover : COMObject
 	{
 		#pragma warning disable

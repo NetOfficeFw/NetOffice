@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ISparklineGroups SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISparklineGroups : COMObject ,IEnumerable
 	{
 		#pragma warning disable

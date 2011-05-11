@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface NegativeBarFormat SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class NegativeBarFormat : COMObject
 	{
 		#pragma warning disable

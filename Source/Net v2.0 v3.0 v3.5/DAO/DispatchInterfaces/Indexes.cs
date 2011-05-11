@@ -13,6 +13,7 @@ namespace NetOffice.DAOApi
 	/// DispatchInterface Indexes SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Indexes : _DynaCollection ,IEnumerable
 	{
 		#pragma warning disable

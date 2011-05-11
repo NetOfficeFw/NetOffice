@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface BulletFormat2 SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class BulletFormat2 : _IMsoDispObj
 	{
 		#pragma warning disable

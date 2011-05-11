@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass StorageItem SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class StorageItem : _StorageItem, IEventBinding 
 	{
 		#pragma warning disable

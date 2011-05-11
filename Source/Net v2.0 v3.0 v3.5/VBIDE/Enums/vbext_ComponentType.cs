@@ -7,6 +7,7 @@ namespace NetOffice.VBIDEApi.Enums
 	 /// SupportByLibrary VBE5.3 VBE12 
 	 /// </summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum vbext_ComponentType
 	{
 		 /// <summary>

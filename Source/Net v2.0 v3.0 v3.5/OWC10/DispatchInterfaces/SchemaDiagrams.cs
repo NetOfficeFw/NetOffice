@@ -13,6 +13,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface SchemaDiagrams SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SchemaDiagrams : COMObject ,IEnumerable
 	{
 		#pragma warning disable

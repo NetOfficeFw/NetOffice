@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass _PageWrapCtrl SupportByLibrary OL10 
 	///</summary>
 	[SupportByLibrary("OL10")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _PageWrapCtrl : _DPageWrapCtrl, IEventBinding 
 	{
 		#pragma warning disable

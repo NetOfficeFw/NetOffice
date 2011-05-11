@@ -13,6 +13,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface LookupRelationships SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LookupRelationships : COMObject ,IEnumerable
 	{
 		#pragma warning disable

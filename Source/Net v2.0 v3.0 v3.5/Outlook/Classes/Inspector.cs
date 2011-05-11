@@ -26,6 +26,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass Inspector SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Inspector : _Inspector, IEventBinding 
 	{
 		#pragma warning disable

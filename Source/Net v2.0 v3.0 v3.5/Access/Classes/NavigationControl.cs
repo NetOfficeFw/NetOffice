@@ -34,6 +34,7 @@ namespace NetOffice.AccessApi
 	/// CoClass NavigationControl SupportByLibrary AC14 
 	///</summary>
 	[SupportByLibrary("AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationControl : _NavigationControl, IEventBinding 
 	{
 		#pragma warning disable

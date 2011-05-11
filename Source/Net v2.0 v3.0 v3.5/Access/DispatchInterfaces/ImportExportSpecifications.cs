@@ -13,6 +13,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface ImportExportSpecifications SupportByLibrary AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ImportExportSpecifications : COMObject ,IEnumerable
 	{
 		#pragma warning disable

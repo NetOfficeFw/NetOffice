@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface _EmptyCell SupportByLibrary AC14 
 	///</summary>
 	[SupportByLibrary("AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _EmptyCell : NetOffice.OfficeApi.IAccessible
 	{
 		#pragma warning disable

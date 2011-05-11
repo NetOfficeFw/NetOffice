@@ -37,6 +37,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass TreeView SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TreeView : ITreeView, IEventBinding 
 	{
 		#pragma warning disable

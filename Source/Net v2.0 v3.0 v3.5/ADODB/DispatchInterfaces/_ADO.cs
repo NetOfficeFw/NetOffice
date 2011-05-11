@@ -12,6 +12,7 @@ namespace NetOffice.ADODBApi
 	/// DispatchInterface _ADO SupportByLibrary ADO2.1 ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _ADO : COMObject
 	{
 		#pragma warning disable

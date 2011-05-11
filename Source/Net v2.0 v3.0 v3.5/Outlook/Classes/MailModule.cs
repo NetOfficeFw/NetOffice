@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass MailModule SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MailModule : _MailModule, IEventBinding 
 	{
 		#pragma warning disable

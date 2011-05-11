@@ -7,6 +7,7 @@ namespace NetOffice.PowerPointApi.Enums
 	 /// SupportByLibrary PP10 PP11 PP12 PP14 
 	 /// </summary>
 	[SupportByLibrary("PP10","PP11","PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoAnimEffect
 	{
 		 /// <summary>

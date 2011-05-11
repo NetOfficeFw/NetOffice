@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface _CustomXMLPart SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CustomXMLPart : _IMsoDispObj
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface _Printer SupportByLibrary AC10 AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC10","AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Printer : COMObject
 	{
 		#pragma warning disable

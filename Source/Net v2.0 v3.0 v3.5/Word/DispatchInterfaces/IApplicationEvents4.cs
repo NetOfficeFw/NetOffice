@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface IApplicationEvents4 SupportByLibrary WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IApplicationEvents4 : COMObject
 	{
 		#pragma warning disable

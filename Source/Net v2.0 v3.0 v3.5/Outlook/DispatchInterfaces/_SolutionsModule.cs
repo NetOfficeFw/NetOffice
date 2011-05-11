@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface _SolutionsModule SupportByLibrary OL14 
 	///</summary>
 	[SupportByLibrary("OL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _SolutionsModule : COMObject
 	{
 		#pragma warning disable

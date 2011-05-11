@@ -13,6 +13,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface _ReturnVars SupportByLibrary AC14 
 	///</summary>
 	[SupportByLibrary("AC14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _ReturnVars : COMObject ,IEnumerable
 	{
 		#pragma warning disable

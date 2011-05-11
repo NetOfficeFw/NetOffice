@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass CalendarSharing SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CalendarSharing : _CalendarSharing, IEventBinding 
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Rectangle SupportByLibrary WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Rectangle : COMObject
 	{
 		#pragma warning disable

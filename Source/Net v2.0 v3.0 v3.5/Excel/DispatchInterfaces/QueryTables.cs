@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface QueryTables SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class QueryTables : COMObject ,IEnumerable
 	{
 		#pragma warning disable

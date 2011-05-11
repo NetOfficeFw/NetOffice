@@ -18,6 +18,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass Accounts SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Accounts : _Accounts, IEventBinding 
 	{
 		#pragma warning disable

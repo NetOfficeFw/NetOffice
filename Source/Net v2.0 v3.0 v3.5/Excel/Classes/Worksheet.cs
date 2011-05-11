@@ -31,6 +31,7 @@ namespace NetOffice.ExcelApi
 	/// CoClass Worksheet SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Worksheet : _Worksheet, IEventBinding 
 	{
 		#pragma warning disable

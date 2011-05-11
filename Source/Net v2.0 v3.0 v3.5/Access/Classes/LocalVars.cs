@@ -17,6 +17,7 @@ namespace NetOffice.AccessApi
 	/// CoClass LocalVars SupportByLibrary AC14 
 	///</summary>
 	[SupportByLibrary("AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class LocalVars : _LocalVars, IEventBinding 
 	{
 		#pragma warning disable

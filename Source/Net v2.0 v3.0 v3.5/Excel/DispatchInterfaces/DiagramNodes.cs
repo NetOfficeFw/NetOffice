@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface DiagramNodes SupportByLibrary XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DiagramNodes : NetOffice.OfficeApi._IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

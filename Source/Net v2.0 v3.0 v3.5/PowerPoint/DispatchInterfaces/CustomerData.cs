@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface CustomerData SupportByLibrary PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomerData : Collection
 	{
 		#pragma warning disable

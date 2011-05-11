@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass CalendarModule SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CalendarModule : _CalendarModule, IEventBinding 
 	{
 		#pragma warning disable

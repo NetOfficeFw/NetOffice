@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface HeaderFooter SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class HeaderFooter : COMObject
 	{
 		#pragma warning disable

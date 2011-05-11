@@ -17,6 +17,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass Tabs SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Tabs : ITabs, IEventBinding 
 	{
 		#pragma warning disable

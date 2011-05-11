@@ -7,6 +7,7 @@ namespace NetOffice.ExcelApi.Enums
 	 /// SupportByLibrary XL14 
 	 /// </summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlPieSliceLocation
 	{
 		 /// <summary>

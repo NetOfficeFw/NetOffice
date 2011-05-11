@@ -53,6 +53,7 @@ namespace NetOffice.ExcelApi
 	/// CoClass Workbook SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Workbook : _Workbook, IEventBinding 
 	{
 		#pragma warning disable

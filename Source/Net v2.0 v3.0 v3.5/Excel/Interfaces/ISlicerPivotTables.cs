@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ISlicerPivotTables SupportByLibrary XL14 
 	///</summary>
 	[SupportByLibrary("XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISlicerPivotTables : COMObject ,IEnumerable
 	{
 		#pragma warning disable

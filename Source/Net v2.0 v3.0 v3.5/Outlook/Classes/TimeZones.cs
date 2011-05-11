@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass TimeZones SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TimeZones : _TimeZones, IEventBinding 
 	{
 		#pragma warning disable

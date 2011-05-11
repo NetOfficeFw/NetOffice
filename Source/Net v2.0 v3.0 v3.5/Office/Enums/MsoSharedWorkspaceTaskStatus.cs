@@ -7,6 +7,7 @@ namespace NetOffice.OfficeApi.Enums
 	 /// SupportByLibrary OF11 OF12 OF14 
 	 /// </summary>
 	[SupportByLibrary("OF11","OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoSharedWorkspaceTaskStatus
 	{
 		 /// <summary>

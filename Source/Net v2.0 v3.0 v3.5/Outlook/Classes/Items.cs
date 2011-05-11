@@ -20,6 +20,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass Items SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Items : _Items, IEventBinding 
 	{
 		#pragma warning disable

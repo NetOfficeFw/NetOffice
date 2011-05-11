@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IRecentFile SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IRecentFile : COMObject
 	{
 		#pragma warning disable

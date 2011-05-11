@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass AttachmentSelection SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AttachmentSelection : _AttachmentSelection, IEventBinding 
 	{
 		#pragma warning disable

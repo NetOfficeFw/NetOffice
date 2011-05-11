@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface HangulAndAlphabetException SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class HangulAndAlphabetException : COMObject
 	{
 		#pragma warning disable

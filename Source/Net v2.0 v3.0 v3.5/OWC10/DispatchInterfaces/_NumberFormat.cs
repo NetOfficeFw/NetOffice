@@ -12,6 +12,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface _NumberFormat SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _NumberFormat : COMObject
 	{
 		#pragma warning disable

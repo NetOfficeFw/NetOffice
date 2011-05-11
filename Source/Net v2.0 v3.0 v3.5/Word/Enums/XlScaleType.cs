@@ -7,6 +7,7 @@ namespace NetOffice.WordApi.Enums
 	 /// SupportByLibrary WD14 
 	 /// </summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlScaleType
 	{
 		 /// <summary>

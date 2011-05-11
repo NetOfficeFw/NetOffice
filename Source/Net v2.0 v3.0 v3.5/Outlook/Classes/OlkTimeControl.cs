@@ -31,6 +31,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OlkTimeControl SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkTimeControl : _OlkTimeControl, IEventBinding 
 	{
 		#pragma warning disable

@@ -29,6 +29,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass ImageCombo SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ImageCombo : IImageCombo, IEventBinding 
 	{
 		#pragma warning disable

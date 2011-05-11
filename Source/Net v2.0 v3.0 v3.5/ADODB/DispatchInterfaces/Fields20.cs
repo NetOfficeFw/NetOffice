@@ -13,6 +13,7 @@ namespace NetOffice.ADODBApi
 	/// DispatchInterface Fields20 SupportByLibrary ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Fields20 : Fields15 ,IEnumerable
 	{
 		#pragma warning disable

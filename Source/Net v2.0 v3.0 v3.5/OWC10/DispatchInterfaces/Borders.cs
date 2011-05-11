@@ -13,6 +13,7 @@ namespace NetOffice.OWC10Api
 	/// DispatchInterface Borders SupportByLibrary XWC1.0 
 	///</summary>
 	[SupportByLibrary("XWC1.0")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Borders : COMObject ,IEnumerable
 	{
 		#pragma warning disable

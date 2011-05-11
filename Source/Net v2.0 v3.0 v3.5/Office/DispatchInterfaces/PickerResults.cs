@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface PickerResults SupportByLibrary OF14 
 	///</summary>
 	[SupportByLibrary("OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PickerResults : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable

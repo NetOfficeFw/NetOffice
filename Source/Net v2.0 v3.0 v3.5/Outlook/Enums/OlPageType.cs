@@ -7,6 +7,7 @@ namespace NetOffice.OutlookApi.Enums
 	 /// SupportByLibrary OL12 OL14 
 	 /// </summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlPageType
 	{
 		 /// <summary>

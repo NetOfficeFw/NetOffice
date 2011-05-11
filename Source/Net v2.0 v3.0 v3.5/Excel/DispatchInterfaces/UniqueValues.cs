@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface UniqueValues SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class UniqueValues : COMObject
 	{
 		#pragma warning disable

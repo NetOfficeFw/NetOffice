@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface FormatConditions SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FormatConditions : COMObject ,IEnumerable
 	{
 		#pragma warning disable

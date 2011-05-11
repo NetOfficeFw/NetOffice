@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface PageNumber SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PageNumber : COMObject
 	{
 		#pragma warning disable

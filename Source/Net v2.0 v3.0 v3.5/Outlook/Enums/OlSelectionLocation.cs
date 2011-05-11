@@ -7,6 +7,7 @@ namespace NetOffice.OutlookApi.Enums
 	 /// SupportByLibrary OL14 
 	 /// </summary>
 	[SupportByLibrary("OL14")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlSelectionLocation
 	{
 		 /// <summary>

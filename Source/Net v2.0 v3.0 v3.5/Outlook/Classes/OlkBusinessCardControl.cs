@@ -22,6 +22,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OlkBusinessCardControl SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkBusinessCardControl : _OlkBusinessCardControl, IEventBinding 
 	{
 		#pragma warning disable

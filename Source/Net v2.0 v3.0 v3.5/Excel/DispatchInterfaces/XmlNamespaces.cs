@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface XmlNamespaces SupportByLibrary XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XmlNamespaces : COMObject ,IEnumerable
 	{
 		#pragma warning disable

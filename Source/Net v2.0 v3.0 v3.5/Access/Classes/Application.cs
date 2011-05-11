@@ -17,6 +17,7 @@ namespace NetOffice.AccessApi
 	/// CoClass Application SupportByLibrary AC09 AC10 AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Application : _Application, IEventBinding 
 	{
 		#pragma warning disable

@@ -13,6 +13,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Conflicts SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Conflicts : COMObject ,IEnumerable
 	{
 		#pragma warning disable

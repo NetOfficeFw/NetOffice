@@ -30,6 +30,7 @@ namespace NetOffice.MSComctlLibApi
 	/// CoClass StatusBar SupportByLibrary WCC6.0 
 	///</summary>
 	[SupportByLibrary("WCC6.0")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class StatusBar : IStatusBar, IEventBinding 
 	{
 		#pragma warning disable

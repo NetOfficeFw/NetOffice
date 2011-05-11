@@ -28,6 +28,7 @@ namespace NetOffice.ADODBApi
 	/// CoClass Recordset SupportByLibrary ADO2.1 ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Recordset : _Recordset, IEventBinding 
 	{
 		#pragma warning disable

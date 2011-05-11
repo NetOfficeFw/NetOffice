@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IXmlMap SupportByLibrary XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IXmlMap : COMObject
 	{
 		#pragma warning disable

@@ -19,6 +19,7 @@ namespace NetOffice.OfficeApi
 	/// CoClass CustomTaskPane SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CustomTaskPane : _CustomTaskPane, IEventBinding 
 	{
 		#pragma warning disable

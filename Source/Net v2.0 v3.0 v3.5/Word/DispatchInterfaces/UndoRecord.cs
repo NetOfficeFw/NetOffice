@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface UndoRecord SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class UndoRecord : COMObject
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.DAOApi
 	/// DispatchInterface Container SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Container : _DAO
 	{
 		#pragma warning disable

@@ -7,6 +7,7 @@ namespace NetOffice.PowerPointApi.Enums
 	 /// SupportByLibrary PP09 
 	 /// </summary>
 	[SupportByLibrary("PP09")]
+	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpDialogMode
 	{
 		 /// <summary>

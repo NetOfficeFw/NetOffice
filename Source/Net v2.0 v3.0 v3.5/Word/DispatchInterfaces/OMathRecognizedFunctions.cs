@@ -13,6 +13,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface OMathRecognizedFunctions SupportByLibrary WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathRecognizedFunctions : COMObject ,IEnumerable
 	{
 		#pragma warning disable

@@ -12,6 +12,7 @@ namespace NetOffice.ADODBApi
 	/// DispatchInterface IRecFields SupportByLibrary ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IRecFields : COMObject
 	{
 		#pragma warning disable

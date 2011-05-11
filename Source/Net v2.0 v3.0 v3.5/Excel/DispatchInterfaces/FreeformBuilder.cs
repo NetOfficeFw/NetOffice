@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface FreeformBuilder SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FreeformBuilder : COMObject
 	{
 		#pragma warning disable

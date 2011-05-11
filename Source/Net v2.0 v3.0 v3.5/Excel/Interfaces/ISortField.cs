@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ISortField SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISortField : COMObject
 	{
 		#pragma warning disable

@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass SimpleItems SupportByLibrary OL14 
 	///</summary>
 	[SupportByLibrary("OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SimpleItems : _SimpleItems, IEventBinding 
 	{
 		#pragma warning disable

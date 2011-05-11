@@ -20,6 +20,7 @@ namespace NetOffice.OfficeApi
 	/// CoClass CustomXMLPart SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CustomXMLPart : _CustomXMLPart, IEventBinding 
 	{
 		#pragma warning disable

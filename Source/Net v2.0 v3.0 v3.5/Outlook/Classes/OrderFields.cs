@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OrderFields SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OrderFields : _OrderFields, IEventBinding 
 	{
 		#pragma warning disable

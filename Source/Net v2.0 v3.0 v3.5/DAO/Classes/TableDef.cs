@@ -17,6 +17,7 @@ namespace NetOffice.DAOApi
 	/// CoClass TableDef SupportByLibrary DAO3.6 DAO12 
 	///</summary>
 	[SupportByLibrary("DAO3.6","DAO12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TableDef : _TableDef, IEventBinding 
 	{
 		#pragma warning disable

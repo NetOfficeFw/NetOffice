@@ -17,6 +17,7 @@ namespace NetOffice.VBIDEApi
 	/// CoClass VBProject SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class VBProject : _VBProject, IEventBinding 
 	{
 		#pragma warning disable

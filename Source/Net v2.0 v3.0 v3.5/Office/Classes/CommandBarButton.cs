@@ -18,6 +18,7 @@ namespace NetOffice.OfficeApi
 	/// CoClass CommandBarButton SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CommandBarButton : _CommandBarButton, IEventBinding 
 	{
 		#pragma warning disable

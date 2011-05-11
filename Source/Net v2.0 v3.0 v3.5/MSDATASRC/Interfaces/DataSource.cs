@@ -11,6 +11,7 @@ namespace NetOffice.MSDATASRCApi
 	/// Interface DataSource SupportByLibrary DSI1.0 
 	///</summary>
 	[SupportByLibrary("DSI1.0")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DataSource : COMObject
 	{
 		#pragma warning disable

@@ -19,6 +19,7 @@ namespace NetOffice.PowerPointApi
 	/// CoClass OLEControl SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OLEControl : OCXExtender, IEventBinding 
 	{
 		#pragma warning disable

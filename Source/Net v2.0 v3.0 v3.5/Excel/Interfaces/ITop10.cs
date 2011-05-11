@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface ITop10 SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ITop10 : COMObject
 	{
 		#pragma warning disable

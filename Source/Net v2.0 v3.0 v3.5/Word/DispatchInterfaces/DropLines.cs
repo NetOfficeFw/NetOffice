@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface DropLines SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DropLines : COMObject
 	{
 		#pragma warning disable

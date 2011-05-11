@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface _DPageWrapCtrl SupportByLibrary OL10 
 	///</summary>
 	[SupportByLibrary("OL10")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _DPageWrapCtrl : COMObject
 	{
 		#pragma warning disable

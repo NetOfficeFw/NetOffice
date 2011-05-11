@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface HTMLDivision SupportByLibrary WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class HTMLDivision : COMObject
 	{
 		#pragma warning disable

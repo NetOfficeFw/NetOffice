@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface CheckBoxes SupportByLibrary XL09 XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CheckBoxes : COMObject ,IEnumerable
 	{
 		#pragma warning disable

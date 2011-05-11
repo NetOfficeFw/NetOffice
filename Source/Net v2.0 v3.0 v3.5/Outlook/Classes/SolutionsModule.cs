@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass SolutionsModule SupportByLibrary OL14 
 	///</summary>
 	[SupportByLibrary("OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SolutionsModule : _SolutionsModule, IEventBinding 
 	{
 		#pragma warning disable

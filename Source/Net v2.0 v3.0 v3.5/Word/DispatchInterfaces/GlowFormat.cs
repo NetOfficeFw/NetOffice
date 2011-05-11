@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface GlowFormat SupportByLibrary WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GlowFormat : COMObject
 	{
 		#pragma warning disable

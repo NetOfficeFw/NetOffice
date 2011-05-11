@@ -42,6 +42,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass PostItem SupportByLibrary OL09 OL10 OL11 OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PostItem : _PostItem, IEventBinding 
 	{
 		#pragma warning disable

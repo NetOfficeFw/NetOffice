@@ -13,6 +13,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Sections SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Sections : COMObject ,IEnumerable
 	{
 		#pragma warning disable

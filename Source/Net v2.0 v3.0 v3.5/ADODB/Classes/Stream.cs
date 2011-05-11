@@ -17,6 +17,7 @@ namespace NetOffice.ADODBApi
 	/// CoClass Stream SupportByLibrary ADO2.5 
 	///</summary>
 	[SupportByLibrary("ADO2.5")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Stream : _Stream, IEventBinding 
 	{
 		#pragma warning disable

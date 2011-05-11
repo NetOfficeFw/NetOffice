@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface WebComponent SupportByLibrary OF10 OF11 OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF10","OF11","OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WebComponent : COMObject
 	{
 		#pragma warning disable

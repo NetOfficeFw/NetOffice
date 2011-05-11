@@ -13,6 +13,7 @@ namespace NetOffice.VBIDEApi
 	/// DispatchInterface _CodePanes SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CodePanes : COMObject ,IEnumerable
 	{
 		#pragma warning disable

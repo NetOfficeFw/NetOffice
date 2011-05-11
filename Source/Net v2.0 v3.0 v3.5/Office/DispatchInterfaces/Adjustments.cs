@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface Adjustments SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Adjustments : _IMsoDispObj
 	{
 		#pragma warning disable

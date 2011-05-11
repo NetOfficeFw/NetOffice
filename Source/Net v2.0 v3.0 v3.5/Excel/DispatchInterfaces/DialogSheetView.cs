@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface DialogSheetView SupportByLibrary XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DialogSheetView : COMObject
 	{
 		#pragma warning disable

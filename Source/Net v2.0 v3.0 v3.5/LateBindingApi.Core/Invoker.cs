@@ -15,7 +15,7 @@ namespace LateBindingApi.Core
         #region Method
 
         /// <summary>
-        /// perform as latebind call 
+        /// perform method as latebind call 
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -25,7 +25,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call
+        /// perform method as latebind call
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -35,7 +35,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call 
+        /// perform method as latebind call 
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -46,7 +46,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call 
+        /// perform method as latebind call 
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -57,7 +57,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call 
+        /// perform method as latebind call 
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -69,7 +69,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call with return value
+        /// perform method as latebind call with return value
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -81,7 +81,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call with return value
+        /// perform method as latebind call with return value
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -94,7 +94,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call with return value
+        /// perform method as latebind call with return value
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -112,7 +112,7 @@ namespace LateBindingApi.Core
         #region Property
 
         /// <summary>
-        /// perform as latebind call with return value
+        /// perform property get as latebind call with return value
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -124,7 +124,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call with return value
+        /// perform property get as latebind call with return value
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -136,7 +136,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call with return value
+        /// perform property get as latebind call with return value
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -149,7 +149,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call with return value
+        /// perform property get as latebind call with return value
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -162,7 +162,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call with return value
+        /// perform property get as latebind call with return value
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -176,7 +176,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call
+        /// perform property set as latebind call
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -193,7 +193,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call
+        /// perform property set as latebind call
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -211,7 +211,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call
+        /// perform property set as latebind call
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -222,7 +222,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call
+        /// perform property set as latebind call
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -234,7 +234,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call
+        /// perform property set as latebind call
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>
@@ -246,7 +246,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// perform as latebind call
+        /// perform property set as latebind call
         /// </summary>
         /// <param name="comObject"></param>
         /// <param name="name"></param>

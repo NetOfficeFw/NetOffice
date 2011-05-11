@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Floor SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Floor : COMObject
 	{
 		#pragma warning disable

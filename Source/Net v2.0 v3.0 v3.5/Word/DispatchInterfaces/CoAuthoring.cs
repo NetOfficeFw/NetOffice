@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface CoAuthoring SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CoAuthoring : COMObject
 	{
 		#pragma warning disable

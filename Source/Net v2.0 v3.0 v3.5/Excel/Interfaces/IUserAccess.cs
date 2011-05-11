@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// Interface IUserAccess SupportByLibrary XL10 XL11 XL12 XL14 
 	///</summary>
 	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IUserAccess : COMObject
 	{
 		#pragma warning disable

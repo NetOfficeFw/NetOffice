@@ -18,6 +18,7 @@ namespace NetOffice.VBIDEApi
 	/// CoClass CommandBarEvents SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CommandBarEvents : _CommandBarControlEvents, IEventBinding 
 	{
 		#pragma warning disable

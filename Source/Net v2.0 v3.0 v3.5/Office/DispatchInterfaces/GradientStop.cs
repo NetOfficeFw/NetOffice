@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface GradientStop SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GradientStop : _IMsoDispObj
 	{
 		#pragma warning disable

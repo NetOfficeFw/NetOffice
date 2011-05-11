@@ -11,6 +11,7 @@ namespace NetOffice.PowerPointApi
 	/// Interface MouseDownHandler SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 	///</summary>
 	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class MouseDownHandler : COMObject
 	{
 		#pragma warning disable

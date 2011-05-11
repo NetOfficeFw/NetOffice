@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Diagram SupportByLibrary WD10 WD11 WD12 WD14 
 	///</summary>
 	[SupportByLibrary("WD10","WD11","WD12","WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Diagram : COMObject
 	{
 		#pragma warning disable

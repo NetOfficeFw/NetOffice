@@ -17,6 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass TasksModule SupportByLibrary OL12 OL14 
 	///</summary>
 	[SupportByLibrary("OL12","OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TasksModule : _TasksModule, IEventBinding 
 	{
 		#pragma warning disable

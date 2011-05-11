@@ -17,6 +17,7 @@ namespace NetOffice.OfficeApi
 	/// CoClass CustomXMLSchemaCollection SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CustomXMLSchemaCollection : _CustomXMLSchemaCollection, IEventBinding 
 	{
 		#pragma warning disable

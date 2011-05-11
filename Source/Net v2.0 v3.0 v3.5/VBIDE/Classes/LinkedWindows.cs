@@ -17,6 +17,7 @@ namespace NetOffice.VBIDEApi
 	/// CoClass LinkedWindows SupportByLibrary VBE5.3 VBE12 
 	///</summary>
 	[SupportByLibrary("VBE5.3","VBE12")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class LinkedWindows : _LinkedWindows, IEventBinding 
 	{
 		#pragma warning disable

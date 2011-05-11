@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// Interface Trendlines SupportByLibrary OF12 OF14 
 	///</summary>
 	[SupportByLibrary("OF12","OF14")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class Trendlines : COMObject ,IEnumerable
 	{
 		#pragma warning disable

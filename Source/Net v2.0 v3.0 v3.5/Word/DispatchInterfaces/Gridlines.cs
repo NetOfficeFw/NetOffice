@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Gridlines SupportByLibrary WD14 
 	///</summary>
 	[SupportByLibrary("WD14")]
+	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Gridlines : COMObject
 	{
 		#pragma warning disable

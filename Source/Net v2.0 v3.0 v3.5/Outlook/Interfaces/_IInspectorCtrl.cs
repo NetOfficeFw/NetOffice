@@ -11,6 +11,7 @@ namespace NetOffice.OutlookApi
 	/// Interface _IInspectorCtrl SupportByLibrary OL10 
 	///</summary>
 	[SupportByLibrary("OL10")]
+	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class _IInspectorCtrl : COMObject
 	{
 		#pragma warning disable

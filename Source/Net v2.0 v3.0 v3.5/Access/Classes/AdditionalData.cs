@@ -17,6 +17,7 @@ namespace NetOffice.AccessApi
 	/// CoClass AdditionalData SupportByLibrary AC11 AC12 AC14 
 	///</summary>
 	[SupportByLibrary("AC11","AC12","AC14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AdditionalData : _AdditionalData, IEventBinding 
 	{
 		#pragma warning disable

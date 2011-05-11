@@ -18,6 +18,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass AccountSelector SupportByLibrary OL14 
 	///</summary>
 	[SupportByLibrary("OL14")]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AccountSelector : _AccountSelector, IEventBinding 
 	{
 		#pragma warning disable
