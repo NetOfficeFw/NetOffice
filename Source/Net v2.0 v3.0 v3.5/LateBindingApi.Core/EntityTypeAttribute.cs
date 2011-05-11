@@ -39,7 +39,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// entity is const module
         /// </summary>
-        IsConstants         = 5
+        IsConstants         = 6
     }
 
     /// <summary>
