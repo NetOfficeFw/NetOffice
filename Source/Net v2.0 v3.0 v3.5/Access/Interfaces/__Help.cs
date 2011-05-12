@@ -57,8 +57,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FieldName", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -85,8 +85,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataType", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -113,8 +113,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Description", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -141,8 +141,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FieldSize", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -169,8 +169,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NewValues", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -197,8 +197,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Required", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -225,8 +225,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowZeroLength", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -253,8 +253,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Indexed", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -281,8 +281,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DisplayControl", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -309,8 +309,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ReplicationConflictFunction", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -337,8 +337,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ProjectName", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -365,8 +365,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MDE", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -393,8 +393,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowBreakIntoCode", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -421,8 +421,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowBuiltInToolbars", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -449,8 +449,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowBypassKey", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -477,8 +477,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowFullMenus", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -505,8 +505,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowSpecialKeys", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -533,8 +533,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowToolbarChanges", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -561,8 +561,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "StartUpForm", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -589,8 +589,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "StartUpMenuBar", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -617,8 +617,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "StartUpShortcutMenuBar", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -645,8 +645,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "StartUpShowDBWindow", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -673,8 +673,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "StartUpShowStatusBar", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -701,8 +701,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AppIcon", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -729,8 +729,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AppTitle", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -757,8 +757,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ODBCConnectStr", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -785,8 +785,8 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LogMessages", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;

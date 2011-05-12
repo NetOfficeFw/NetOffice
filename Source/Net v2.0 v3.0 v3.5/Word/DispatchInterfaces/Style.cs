@@ -121,8 +121,8 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BaseStyle", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -191,8 +191,8 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NextParagraphStyle", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -447,8 +447,8 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LinkStyle", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;

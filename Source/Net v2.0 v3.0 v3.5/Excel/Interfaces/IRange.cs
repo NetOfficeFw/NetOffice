@@ -102,8 +102,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AddIndent", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -293,8 +293,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColumnWidth", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -368,8 +368,8 @@ namespace NetOffice.ExcelApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex, columnIndex);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -494,8 +494,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Formula", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -522,8 +522,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FormulaArray", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -569,8 +569,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FormulaHidden", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -597,8 +597,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FormulaLocal", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -625,8 +625,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FormulaR1C1", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -653,8 +653,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FormulaR1C1Local", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -681,8 +681,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HasArray", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -704,8 +704,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HasFormula", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -727,8 +727,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Height", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -750,8 +750,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Hidden", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -778,8 +778,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HorizontalAlignment", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -806,8 +806,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "IndentLevel", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -849,8 +849,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex, columnIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -882,8 +882,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -915,8 +915,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Left", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -966,8 +966,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Locked", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1009,8 +1009,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MergeCells", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1037,8 +1037,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1080,8 +1080,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NumberFormat", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1108,8 +1108,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NumberFormatLocal", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1165,8 +1165,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1193,8 +1193,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OutlineLevel", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1300,8 +1300,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PrefixCharacter", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1423,8 +1423,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RowHeight", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1466,8 +1466,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ShowDetail", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1494,8 +1494,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ShrinkToFit", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1537,8 +1537,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1565,8 +1565,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Summary", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1588,8 +1588,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Text", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1611,8 +1611,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Top", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1634,8 +1634,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UseStandardHeight", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1662,8 +1662,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UseStandardWidth", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1705,8 +1705,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1732,8 +1732,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rangeValueDataType);
 			object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -1765,8 +1765,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Value2", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1793,8 +1793,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VerticalAlignment", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1821,8 +1821,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Width", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -1859,8 +1859,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WrapText", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -2118,8 +2118,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CountLarge", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -2173,8 +2173,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Activate", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2197,8 +2197,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action, criteriaRange, copyToRange, unique);
 			object returnItem = Invoker.MethodReturn(this, "AdvancedFilter", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2218,8 +2218,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action);
 			object returnItem = Invoker.MethodReturn(this, "AdvancedFilter", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2245,8 +2245,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(names, ignoreRelativeAbsolute, useRowColumnNames, omitColumn, omitRow, order, appendLast);
 			object returnItem = Invoker.MethodReturn(this, "ApplyNames", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2271,8 +2271,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(names, ignoreRelativeAbsolute, useRowColumnNames, omitColumn, omitRow, order);
 			object returnItem = Invoker.MethodReturn(this, "ApplyNames", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2291,8 +2291,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ApplyOutlineStyles", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2325,8 +2325,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, type);
 			object returnItem = Invoker.MethodReturn(this, "AutoFill", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2350,8 +2350,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, criteria1, _operator, criteria2, visibleDropDown);
 			object returnItem = Invoker.MethodReturn(this, "AutoFilter", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2373,8 +2373,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, criteria1, _operator);
 			object returnItem = Invoker.MethodReturn(this, "AutoFilter", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2393,8 +2393,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AutoFit", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2420,8 +2420,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font, alignment, border, pattern, width);
 			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2441,8 +2441,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format);
 			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2461,8 +2461,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AutoOutline", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2485,8 +2485,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color);
 			object returnItem = Invoker.MethodReturn(this, "BorderAround", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2510,8 +2510,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color, themeColor);
 			object returnItem = Invoker.MethodReturn(this, "BorderAround", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2533,8 +2533,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex);
 			object returnItem = Invoker.MethodReturn(this, "BorderAround", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2553,8 +2553,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Calculate", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2577,8 +2577,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, spellLang);
 			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2597,8 +2597,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2617,8 +2617,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Clear", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2637,8 +2637,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ClearContents", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2657,8 +2657,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ClearFormats", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2677,8 +2677,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ClearNotes", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2697,8 +2697,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ClearOutline", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2735,8 +2735,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sources, function, topRow, leftColumn, createLinks);
 			object returnItem = Invoker.MethodReturn(this, "Consolidate", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2755,8 +2755,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Consolidate", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2776,8 +2776,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination);
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2796,8 +2796,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2844,8 +2844,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format);
 			object returnItem = Invoker.MethodReturn(this, "CopyPicture", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2868,8 +2868,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(top, left, bottom, right);
 			object returnItem = Invoker.MethodReturn(this, "CreateNames", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2888,8 +2888,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateNames", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2914,8 +2914,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, containsPICT, containsBIFF, containsRTF, containsVALU);
 			object returnItem = Invoker.MethodReturn(this, "CreatePublisher", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2936,8 +2936,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance);
 			object returnItem = Invoker.MethodReturn(this, "CreatePublisher", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2957,8 +2957,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination);
 			object returnItem = Invoker.MethodReturn(this, "Cut", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -2977,8 +2977,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Cut", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3003,8 +3003,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type, date, step, stop, trend);
 			object returnItem = Invoker.MethodReturn(this, "DataSeries", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3026,8 +3026,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type, date);
 			object returnItem = Invoker.MethodReturn(this, "DataSeries", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3047,8 +3047,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shift);
 			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3067,8 +3067,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3087,8 +3087,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "DialogBox", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3114,8 +3114,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, option, name, reference, appearance, chartSize, format);
 			object returnItem = Invoker.MethodReturn(this, "EditionOptions", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3140,8 +3140,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, option, name, reference, appearance, chartSize);
 			object returnItem = Invoker.MethodReturn(this, "EditionOptions", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3160,8 +3160,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "FillDown", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3180,8 +3180,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "FillLeft", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3200,8 +3200,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "FillRight", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3220,8 +3220,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "FillUp", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3349,8 +3349,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "FunctionWizard", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3386,8 +3386,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, end, by, periods);
 			object returnItem = Invoker.MethodReturn(this, "Group", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3406,8 +3406,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Group", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3439,8 +3439,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shift);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3461,8 +3461,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shift, copyOrigin);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3481,8 +3481,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3501,8 +3501,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Justify", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3521,8 +3521,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ListNames", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3578,8 +3578,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(towardPrecedent, arrowNumber, linkNumber);
 			object returnItem = Invoker.MethodReturn(this, "NavigateArrow", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3598,8 +3598,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NavigateArrow", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3645,8 +3645,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parseLine, destination);
 			object returnItem = Invoker.MethodReturn(this, "Parse", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3665,8 +3665,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Parse", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3689,8 +3689,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks, transpose);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3711,8 +3711,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3738,8 +3738,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
 			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3766,8 +3766,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
 			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3786,8 +3786,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3807,8 +3807,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(enableChanges);
 			object returnItem = Invoker.MethodReturn(this, "PrintPreview", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3827,8 +3827,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "PrintPreview", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3847,8 +3847,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "RemoveSubtotal", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3959,8 +3959,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3979,8 +3979,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -3999,8 +3999,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4019,8 +4019,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4040,8 +4040,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(remove);
 			object returnItem = Invoker.MethodReturn(this, "ShowDependents", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4060,8 +4060,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ShowDependents", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4080,8 +4080,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ShowErrors", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4101,8 +4101,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(remove);
 			object returnItem = Invoker.MethodReturn(this, "ShowPrecedents", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4121,8 +4121,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ShowPrecedents", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4153,8 +4153,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4188,8 +4188,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod, dataOption1, dataOption2, dataOption3);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4220,8 +4220,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4255,8 +4255,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation, dataOption1, dataOption2, dataOption3);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4304,8 +4304,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, format);
 			object returnItem = Invoker.MethodReturn(this, "SubscribeTo", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4330,8 +4330,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupBy, function, totalList, replace, pageBreaks, summaryBelowData);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4352,8 +4352,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowInput, columnInput);
 			object returnItem = Invoker.MethodReturn(this, "Table", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4372,8 +4372,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Table", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4405,8 +4405,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator, thousandsSeparator);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4439,8 +4439,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator, thousandsSeparator, trailingMinusNumbers);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4462,8 +4462,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4482,8 +4482,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Ungroup", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4557,8 +4557,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
 			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4577,8 +4577,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4601,8 +4601,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks, transpose);
 			object returnItem = Invoker.MethodReturn(this, "_PasteSpecial", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4623,8 +4623,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation);
 			object returnItem = Invoker.MethodReturn(this, "_PasteSpecial", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4685,8 +4685,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
 			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4705,8 +4705,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4770,8 +4770,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CalculateRowMajorOrder", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4794,8 +4794,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color);
 			object returnItem = Invoker.MethodReturn(this, "_BorderAround", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -4817,8 +4817,8 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex);
 			object returnItem = Invoker.MethodReturn(this, "_BorderAround", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;

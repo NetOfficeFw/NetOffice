@@ -74,8 +74,8 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Color", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -102,8 +102,8 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColorIndex", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -157,8 +157,8 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LineStyle", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -200,8 +200,8 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;
@@ -228,8 +228,8 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Weight", paramsArray);
-				Type returnItemType = returnItem.GetType();
-				if(true == returnItemType.IsCOMObject)
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 				{
 					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 					return newObject;

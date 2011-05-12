@@ -128,8 +128,8 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection, launchQuery);
 			object returnItem = Invoker.MethodReturn(this, "Query", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;
@@ -150,8 +150,8 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(languageFrom, languageTo);
 			object returnItem = Invoker.MethodReturn(this, "SetLanguagePair", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;

@@ -986,8 +986,8 @@ namespace NetOffice.PowerPointApi
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(macroName, (object)safeArrayOfParams);
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray, modifiers);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				safeArrayOfParams = (object[])paramsArray[1];
@@ -1009,8 +1009,8 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macroName);
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;

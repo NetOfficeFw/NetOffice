@@ -63,8 +63,8 @@ namespace NetOffice.OWC10Api
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(varoper, grbit);
 			object returnItem = Invoker.MethodReturn(this, "CoerceOper", paramsArray, modifiers);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				varoper = (object)paramsArray[0];
@@ -85,8 +85,8 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "RandOper", paramsArray);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				return newObject;

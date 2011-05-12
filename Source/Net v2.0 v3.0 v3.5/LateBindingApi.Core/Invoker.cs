@@ -404,5 +404,13 @@ namespace LateBindingApi.Core
         }
 
         #endregion
+
+        public static Type GetObjectType(object expression)
+        {
+            if (null == expression)
+                return null;
+            else
+                return expression.GetType();
+        }
     }
 }

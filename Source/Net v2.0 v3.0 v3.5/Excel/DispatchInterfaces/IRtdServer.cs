@@ -76,8 +76,8 @@ namespace NetOffice.ExcelApi
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(topicID, (object)strings, getNewValues);
 			object returnItem = Invoker.MethodReturn(this, "ConnectData", paramsArray, modifiers);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
 				strings = (object[])paramsArray[1];
@@ -102,8 +102,8 @@ namespace NetOffice.ExcelApi
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(topicCount);
 			object returnItem = Invoker.MethodReturn(this, "RefreshData", paramsArray, modifiers);
-			Type returnItemType = returnItem.GetType();
-			if(true == returnItemType.IsCOMObject)
+			Type returnItemType = Invoker.GetObjectType(returnItem);
+			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject[] newObject = LateBindingApi.Core.Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem);
 				topicCount = (Int32)paramsArray[0];
