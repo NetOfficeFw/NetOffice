@@ -63,7 +63,7 @@
             this.Controls.Add(this.richTextBoxInfo);
             this.Controls.Add(this.buttonStartExample);
             this.Name = "Form1";
-            this.Text = "Tutorial02 - Efficent using Dispose & DisposeChildInstances";
+            this.Text = "Tutorial02 - Efficient using Dispose & DisposeChildInstances";
             this.ResumeLayout(false);
 
         }
