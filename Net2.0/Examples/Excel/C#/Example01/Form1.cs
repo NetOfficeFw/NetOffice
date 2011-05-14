@@ -55,10 +55,12 @@ namespace Example01
             workSheet.get_Range(rangeAdressMouth).Borders[XlBordersIndex.xlEdgeBottom].LineStyle = XlLineStyle.xlDouble;
             workSheet.get_Range(rangeAdressMouth).Borders[XlBordersIndex.xlEdgeBottom].Weight = 4;
             workSheet.get_Range(rangeAdressMouth).Borders[XlBordersIndex.xlEdgeBottom].Color = ToDouble(Color.Black);
-            
+            // Application.StartupPath
+            // Application.StartupPath 
+
             // save the book 
             string fileExtension = GetDefaultExtension(excelApplication);
-            string workbookFile = string.Format("{0}\\Example01{1}",  Environment.CurrentDirectory,fileExtension);
+            string workbookFile = string.Format("{0}\\Example01{1}",  Application.StartupPath,fileExtension);
             workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, XlSaveAsAccessMode.xlExclusive);
               
             // close excel and dispose reference

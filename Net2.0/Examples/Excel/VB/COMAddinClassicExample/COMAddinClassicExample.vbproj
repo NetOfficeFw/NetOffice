@@ -8,7 +8,7 @@
     <ProjectGuid>{00DA9107-98EC-49F5-8D76-9C5F04809ABE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>COMAddinClassicExample</RootNamespace>
-    <AssemblyName>COMAddinClassicExample</AssemblyName>
+    <AssemblyName>ExcelClassicAddinVB</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
@@ -23,7 +23,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>COMAddinClassicExample.xml</DocumentationFile>
+    <DocumentationFile>ExcelClassicAddinVB.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <RegisterForComInterop>true</RegisterForComInterop>
   </PropertyGroup>
@@ -33,7 +33,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>COMAddinClassicExample.xml</DocumentationFile>
+    <DocumentationFile>ExcelClassicAddinVB.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <RegisterForComInterop>true</RegisterForComInterop>
   </PropertyGroup>

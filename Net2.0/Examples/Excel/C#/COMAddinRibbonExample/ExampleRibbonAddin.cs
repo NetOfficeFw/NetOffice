@@ -13,12 +13,12 @@ using NetOffice.OfficeApi.Enums;
 namespace COMAddinRibbonExample
 {
     [ComVisible(true)]
-    [GuidAttribute("05B31000-90EF-4a62-A67C-77C2526D7364"), ProgId("COMAddinRibbonExampleExcel.ExampleRibbonAddinCSharp")]
+    [GuidAttribute("05B31000-90EF-4a62-A67C-77C2526D7364"), ProgId("ExampleRibbonAddinCSharp.Addin")]
     public class ExampleRibbonAddin : IDTExtensibility2, IRibbonExtensibility
     {
         private static readonly string _addinRegistryKey = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId           = "COMAddinRibbonExampleExcel.ExampleRibbonAddinCSharp";
-        private static readonly string _addinName        = "COMAddinRibbonExampleExcel";
+        private static readonly string _prodId           = "ExampleRibbonAddinCSharp.Addin";
+        private static readonly string _addinName        = "C# ExampleRibbonAddinCSharp";
 
         Excel.Application _excelApplication;
 
@@ -100,7 +100,7 @@ namespace COMAddinRibbonExample
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured in OnConnection." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -114,7 +114,7 @@ namespace COMAddinRibbonExample
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured in OnDisconnection." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -129,7 +129,16 @@ namespace COMAddinRibbonExample
 
         public string GetCustomUI(string RibbonID)
         {
-            return ReadString("RibbonUI.xml");
+            try
+            {
+                return ReadString("RibbonUI.xml");
+            }
+            catch (Exception throwedException)
+            {
+                string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
+                MessageBox.Show("An error occured in GetCustomUI." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "";
+            }
         }
   
         #endregion
@@ -156,7 +165,7 @@ namespace COMAddinRibbonExample
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured in OnAction." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

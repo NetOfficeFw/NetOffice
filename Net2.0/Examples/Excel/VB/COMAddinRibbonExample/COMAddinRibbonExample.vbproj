@@ -8,7 +8,7 @@
     <ProjectGuid>{5C713DD1-D595-43DD-B543-6850802E9108}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>COMAddinRibbonExample</RootNamespace>
-    <AssemblyName>COMAddinRibbonExample</AssemblyName>
+    <AssemblyName>ExcelRibbonAddinVB</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
@@ -23,7 +23,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>COMAddinRibbonExample.xml</DocumentationFile>
+    <DocumentationFile>ExcelRibbonAddinVB.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <RegisterForComInterop>true</RegisterForComInterop>
   </PropertyGroup>
@@ -33,7 +33,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>COMAddinRibbonExample.xml</DocumentationFile>
+    <DocumentationFile>ExcelRibbonAddinVB.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <RegisterForComInterop>true</RegisterForComInterop>
   </PropertyGroup>

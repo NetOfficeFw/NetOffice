@@ -10,13 +10,13 @@ Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("1D8EC143-E930-4fb1-BD5A-A0F744D5E91F"), ProgIdAttribute("COMAddinRibbonExampleExcel.ExampleRibbonAddinVB")> _
+<GuidAttribute("1D8EC143-E930-4fb1-BD5A-A0F744D5E91F"), ProgIdAttribute("ExampleRibbonAddinVB.Addin")> _
 Public Class ExampleRibbonAddin
     Implements IDTExtensibility2, IRibbonExtensibility
 
     Private Shared ReadOnly _addinRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "COMAddinRibbonExampleExcel.ExampleRibbonAddinVB"
-    Private Shared ReadOnly _addinName As String = "COMAddinRibbonExampleExcel"
+    Private Shared ReadOnly _prodId As String = "ExampleRibbonAddinVB.Addin"
+    Private Shared ReadOnly _addinName As String = "VB ExampleRibbonAddin"
 
     Dim _excelApplication As Excel.Application = Nothing
 
@@ -42,7 +42,7 @@ Public Class ExampleRibbonAddin
         Catch ex As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured in OnConnection." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -57,7 +57,7 @@ Public Class ExampleRibbonAddin
         Catch ex As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured in OnDisconnection." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -93,7 +93,7 @@ Public Class ExampleRibbonAddin
             key.Close()
 
             ' add excel addin key
-            Registry.ClassesRoot.CreateSubKey("CLSID\{" + type.GUID.ToString().ToUpper() + "}\Programmable")
+            Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable")
             Registry.CurrentUser.CreateSubKey(_addinRegistryKey + _prodId)
             Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, True)
             rk.SetValue("LoadBehavior", CInt(3))
@@ -113,7 +113,7 @@ Public Class ExampleRibbonAddin
     Public Shared Sub UnregisterFunction(ByVal type As Type)
         Try
 
-            Registry.ClassesRoot.DeleteSubKey("CLSID\{" + type.GUID.ToString().ToUpper() + "}\Programmable", False)
+            Registry.ClassesRoot.DeleteSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable", False)
             Registry.CurrentUser.DeleteSubKey(_addinRegistryKey + _prodId)
 
         Catch ex As ArgumentException
@@ -132,7 +132,17 @@ Public Class ExampleRibbonAddin
 
     Public Function GetCustomUI(ByVal RibbonID As String) As String Implements IRibbonExtensibility.GetCustomUI
 
-        Return ReadString("RibbonUI.xml")
+        Try
+
+            Return ReadString("RibbonUI.xml")
+
+        Catch ex As Exception
+
+            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
+            MessageBox.Show("An error occured in GetCustomUI." + details, "GetCustomUI " + _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return ""
+
+        End Try
 
     End Function
 
@@ -156,7 +166,7 @@ Public Class ExampleRibbonAddin
         Catch throwedException As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, "Unregister " + _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured in OnAction." + details, "Unregister " + _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub

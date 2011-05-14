@@ -10,16 +10,22 @@ Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("E4D04E40-5759-4cec-9868-FE475C051DC8"), ProgIdAttribute("COMAddinClassicExampleExcel.ExampleClassicAddinVB")> _
+<GuidAttribute("E4D04E40-5759-4cec-9868-FE475C051DC8"), ProgIdAttribute("ExampleClassicAddinVB.Addin")> _
 Public Class ExampleClassicAddin
     Implements IDTExtensibility2
 
     Private Shared ReadOnly _addinRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "COMAddinClassicExampleExcel.ExampleClassicAddinVB"
-    Private Shared ReadOnly _addinName As String = "COMAddinClassicExampleExcel"
-    Private Shared ReadOnly _toolbarName As String = "COMAddinClassicToolbar"
-    Private Shared ReadOnly _menuName As String = "COMAddinClassicMenu"
-    Private Shared ReadOnly _contextName As String = "COMAddinClassicContext"
+    Private Shared ReadOnly _prodId As String = "ExampleClassicAddinVB.Addin"
+    Private Shared ReadOnly _addinName As String = "VB ExampleClassicAddin"
+
+    ' gui elements
+    Private Shared ReadOnly _toolbarName = "VB_COMAddinClassicToolbar"
+    Private Shared ReadOnly _toolbarButtonName As String = "VB_ToolbarButton"
+    Private Shared ReadOnly _toolbarPopupName As String = "VB_COMAddinClassicPopup"
+    Private Shared ReadOnly _menuName As String = "VB_COMAddinClassicMenu"
+    Private Shared ReadOnly _menuButtonName As String = "VB_MenuButton"
+    Private Shared ReadOnly _contextName As String = "VB_COMAddinClassicContext"
+    Private Shared ReadOnly _contextMenuButtonName As String = "VB_ContextButton"
 
     Dim _excelApplication As Excel.Application = Nothing
 
@@ -45,7 +51,7 @@ Public Class ExampleClassicAddin
         Catch ex As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured in OnConnection." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -60,7 +66,7 @@ Public Class ExampleClassicAddin
         Catch ex As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured in OnDisconnection." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -73,7 +79,7 @@ Public Class ExampleClassicAddin
         Catch ex As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured in OnStartupComplete." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -85,9 +91,10 @@ Public Class ExampleClassicAddin
     <ComRegisterFunctionAttribute()> _
     Public Shared Sub RegisterFunction(ByVal type As Type)
         Try
+
             ' add codebase value
             Dim thisAssembly As Assembly = Assembly.GetAssembly(GetType(ExampleClassicAddin))
-            Dim key As RegistryKey = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\1.0.0.0")
+            Dim key As RegistryKey = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\1.0.0.0")
             key.SetValue("CodeBase", thisAssembly.CodeBase)
             key.Close()
 
@@ -105,7 +112,7 @@ Public Class ExampleClassicAddin
             key.Close()
 
             ' add excel addin key
-            Registry.ClassesRoot.CreateSubKey("CLSID\{" + type.GUID.ToString().ToUpper() + "}\Programmable")
+            Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable")
             Registry.CurrentUser.CreateSubKey(_addinRegistryKey + _prodId)
             Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, True)
             rk.SetValue("LoadBehavior", CInt(3))
@@ -125,7 +132,7 @@ Public Class ExampleClassicAddin
     Public Shared Sub UnregisterFunction(ByVal type As Type)
         Try
 
-            Registry.ClassesRoot.DeleteSubKey("CLSID\{" + type.GUID.ToString().ToUpper() + "}\Programmable", False)
+            Registry.ClassesRoot.DeleteSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable", False)
             Registry.CurrentUser.DeleteSubKey(_addinRegistryKey + _prodId)
 
         Catch ex As ArgumentException
@@ -155,14 +162,15 @@ Public Class ExampleClassicAddin
 
         ' add popup to commandbar
         Dim commandBarPop As Office.CommandBarPopup = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarPop.Caption = "COMAddinClassicPopup"
-        commandBarPop.Tag = "COMAddinClassicPopup"
+        commandBarPop.Caption = _toolbarPopupName
+        commandBarPop.Tag = _toolbarPopupName
 
         'add a button to the popup
         Dim commandBarBtn As Office.CommandBarButton = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
         commandBarBtn.FaceId = 9
-        commandBarBtn.Caption = "ToolbarButton"
+        commandBarBtn.Caption = _toolbarButtonName
+        commandBarBtn.Tag = _toolbarButtonName
         Dim clickHandler As NetOffice.OfficeApi.CommandBarButton_ClickEventHandler = AddressOf Me.commandBarBtn_ClickEvent
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
@@ -178,7 +186,8 @@ Public Class ExampleClassicAddin
         commandBarBtn = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
         commandBarBtn.FaceId = 9
-        commandBarBtn.Caption = "MenuButton"
+        commandBarBtn.Caption = _menuButtonName
+        commandBarBtn.Tag = _menuButtonName
         clickHandler = AddressOf Me.commandBarBtn_ClickEvent
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
@@ -190,7 +199,8 @@ Public Class ExampleClassicAddin
         ' add a button to the popup
         commandBarBtn = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
-        commandBarBtn.Caption = "ContextButton"
+        commandBarBtn.Caption = _contextMenuButtonName
+        commandBarBtn.Tag = _contextMenuButtonName
         commandBarBtn.FaceId = 9
         clickHandler = AddressOf Me.commandBarBtn_ClickEvent
         AddHandler commandBarBtn.ClickEvent, clickHandler

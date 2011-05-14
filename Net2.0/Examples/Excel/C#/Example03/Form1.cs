@@ -117,7 +117,7 @@ namespace Example03
        
             // save the book 
             string fileExtension = GetDefaultExtension(excelApplication);
-            string workbookFile = string.Format("{0}\\Example03{1}", Environment.CurrentDirectory, fileExtension);
+            string workbookFile = string.Format("{0}\\Example03{1}", Application.StartupPath, fileExtension);
             workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, XlSaveAsAccessMode.xlExclusive);
 
             // close excel and dispose reference
@@ -137,8 +137,8 @@ namespace Example03
         /// <returns>the extension</returns>
         private static string GetDefaultExtension(Excel.Application application)
         {
-            double Version = Convert.ToDouble(application.Version);
-            if (Version >= 120.00)
+            double version = Convert.ToDouble(application.Version);
+            if (version >= 120.00)
                 return ".xlsx";
             else
                 return ".xls";
