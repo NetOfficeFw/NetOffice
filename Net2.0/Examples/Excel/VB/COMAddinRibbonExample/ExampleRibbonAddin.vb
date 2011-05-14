@@ -10,16 +10,13 @@ Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("E4D04E40-5759-4cec-9868-FE475C051DC8"), ProgIdAttribute("COMAddinClassicExampleExcel.ExampleClassicAddinVB")> _
-Public Class ExampleClassicAddin
-    Implements IDTExtensibility2
+<GuidAttribute("1D8EC143-E930-4fb1-BD5A-A0F744D5E91F"), ProgIdAttribute("COMAddinRibbonExampleExcel.ExampleRibbonAddinVB")> _
+Public Class ExampleRibbonAddin
+    Implements IDTExtensibility2, IRibbonExtensibility
 
     Private Shared ReadOnly _addinRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "COMAddinClassicExampleExcel.ExampleClassicAddinVB"
-    Private Shared ReadOnly _addinName As String = "COMAddinClassicExampleExcel"
-    Private Shared ReadOnly _toolbarName As String = "COMAddinClassicToolbar"
-    Private Shared ReadOnly _menuName As String = "COMAddinClassicMenu"
-    Private Shared ReadOnly _contextName As String = "COMAddinClassicContext"
+    Private Shared ReadOnly _prodId As String = "COMAddinRibbonExampleExcel.ExampleRibbonAddinVB"
+    Private Shared ReadOnly _addinName As String = "COMAddinRibbonExampleExcel"
 
     Dim _excelApplication As Excel.Application = Nothing
 
@@ -66,16 +63,7 @@ Public Class ExampleClassicAddin
     End Sub
 
     Public Sub OnStartupComplete(ByRef custom As System.Array) Implements IDTExtensibility2.OnStartupComplete
-        Try
 
-            SetupGui()
-
-        Catch ex As Exception
-
-            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-        End Try
     End Sub
 
 #End Region
@@ -86,7 +74,7 @@ Public Class ExampleClassicAddin
     Public Shared Sub RegisterFunction(ByVal type As Type)
         Try
             ' add codebase value
-            Dim thisAssembly As Assembly = Assembly.GetAssembly(GetType(ExampleClassicAddin))
+            Dim thisAssembly As Assembly = Assembly.GetAssembly(GetType(ExampleRibbonAddin))
             Dim key As RegistryKey = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\1.0.0.0")
             key.SetValue("CodeBase", thisAssembly.CodeBase)
             key.Close()
@@ -110,7 +98,7 @@ Public Class ExampleClassicAddin
             Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, True)
             rk.SetValue("LoadBehavior", CInt(3))
             rk.SetValue("FriendlyName", _addinName)
-            rk.SetValue("Description", "NetOffice COMAddinExample with classic UI")
+            rk.SetValue("Description", "NetOffice COMAddinExample with ribbon UI")
             rk.Close()
 
         Catch ex As Exception
@@ -140,75 +128,70 @@ Public Class ExampleClassicAddin
 
 #End Region
 
-    ''' <summary>
-    ''' creates gui elements
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub SetupGui()
+#Region "IRibbonExtensibility Members"
 
-        ' How to: Add Commands to Shortcut Menus in Excel
-        ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx   
+    Public Function GetCustomUI(ByVal RibbonID As String) As String Implements IRibbonExtensibility.GetCustomUI
 
-        'create commandbar 
-        Dim commandBar As Office.CommandBar = _excelApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, True)
-        commandBar.Visible = True
+        Return ReadString("RibbonUI.xml")
 
-        ' add popup to commandbar
-        Dim commandBarPop As Office.CommandBarPopup = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarPop.Caption = "COMAddinClassicPopup"
-        commandBarPop.Tag = "COMAddinClassicPopup"
+    End Function
 
-        'add a button to the popup
-        Dim commandBarBtn As Office.CommandBarButton = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
-        commandBarBtn.FaceId = 9
-        commandBarBtn.Caption = "ToolbarButton"
-        Dim clickHandler As NetOffice.OfficeApi.CommandBarButton_ClickEventHandler = AddressOf Me.commandBarBtn_ClickEvent
-        AddHandler commandBarBtn.ClickEvent, clickHandler
+#End Region
 
-        ' create menu 
-        commandBar = _excelApplication.CommandBars.get_Item("Worksheet Menu Bar")
+#Region "Ribbon Gui Trigger"
 
-        ' add popup to menu bar
-        commandBarPop = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarPop.Caption = _menuName
-        commandBarPop.Tag = _menuName
+    Public Sub OnAction(ByVal control As IRibbonControl)
+        Try
 
-        ' add a button to the popup
-        commandBarBtn = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
-        commandBarBtn.FaceId = 9
-        commandBarBtn.Caption = "MenuButton"
-        clickHandler = AddressOf Me.commandBarBtn_ClickEvent
-        AddHandler commandBarBtn.ClickEvent, clickHandler
+            Select Case control.Id
+                Case "customButton1"
+                    MessageBox.Show("This is the first sample button.")
+                Case "customButton2"
+                    MessageBox.Show("This is the second sample button.")
+                Case Else
+                    MessageBox.Show("Unkown Control Id: " + control.Id)
 
-        ' create context menu 
-        commandBarPop = _excelApplication.CommandBars.get_Item("Cell").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarPop.Caption = _contextName
-        commandBarPop.Tag = _contextName
+            End Select
 
-        ' add a button to the popup
-        commandBarBtn = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
-        commandBarBtn.Caption = "ContextButton"
-        commandBarBtn.FaceId = 9
-        clickHandler = AddressOf Me.commandBarBtn_ClickEvent
-        AddHandler commandBarBtn.ClickEvent, clickHandler
+        Catch throwedException As Exception
 
+            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
+            MessageBox.Show("An error occured." + details, "Unregister " + _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
     End Sub
 
+#End Region
+
+#Region "Private Helper"
+
     ''' <summary>
-    ''' Click event trigger from created buttons. incoming call comes from word application thread.
+    ''' reads text from ressource
     ''' </summary>
-    ''' <param name="Ctrl"></param>
-    ''' <param name="CancelDefault"></param>
+    ''' <param name="fileName"></param>
+    ''' <returns></returns>
     ''' <remarks></remarks>
-    Private Sub commandBarBtn_ClickEvent(ByVal Ctrl As NetOffice.OfficeApi.CommandBarButton, ByRef CancelDefault As Boolean)
+    Private Shared Function ReadString(ByVal fileName As String) As String
 
-        Dim message As String = String.Format("Click from Button {0}.", Ctrl.Caption)
-        MessageBox.Show(message, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Ctrl.Dispose()
+        fileName = "COMAddinRibbonExample." + fileName
 
-    End Sub
+        Dim ressourceStream As System.IO.Stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName)
+        If (IsNothing(ressourceStream)) Then
+            Throw (New System.IO.IOException("Error accessing resource Stream."))
+        End If
+
+        Dim textStreamReader As System.IO.StreamReader = New System.IO.StreamReader(ressourceStream)
+        If (IsNothing(textStreamReader)) Then
+            Throw (New System.IO.IOException("Error accessing resource File."))
+        End If
+
+        Dim text As String = textStreamReader.ReadToEnd()
+        ressourceStream.Close()
+        textStreamReader.Close()
+        Return text
+
+    End Function
+
+#End Region
 
 End Class
