@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>COMAddinClassicExample</RootNamespace>
-    <AssemblyName>COMAddinClassicExample</AssemblyName>
+    <AssemblyName>WordClassicAddinCSharp</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>COMAddinRibbonExample</RootNamespace>
-    <AssemblyName>COMAddinRibbonExample</AssemblyName>
+    <AssemblyName>WordRibbonAddinCSharp</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
