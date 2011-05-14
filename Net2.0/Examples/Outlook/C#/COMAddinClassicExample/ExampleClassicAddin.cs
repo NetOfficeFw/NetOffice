@@ -112,8 +112,6 @@ namespace COMAddinClassicExample
                 LateBindingApi.Core.Settings.EnableEvents = true;
 
                 _outlookApplication = new Outlook.Application(null, Application);
-
-                SetupGui();
             }
             catch (Exception throwedException)
             {

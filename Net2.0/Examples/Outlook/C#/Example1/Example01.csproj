@@ -33,25 +33,21 @@
   <ItemGroup>
     <Reference Include="LateBindingApi.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\LateBindingApi.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\LateBindingApi.Core.dll</HintPath>
     </Reference>
     <Reference Include="OfficeApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\OfficeApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\OfficeApi.dll</HintPath>
     </Reference>
     <Reference Include="OutlookApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\OutlookApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\OutlookApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VBIDEApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\VBIDEApi.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FinishDialog.cs">
