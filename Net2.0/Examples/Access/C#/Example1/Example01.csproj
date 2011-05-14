@@ -33,35 +33,35 @@
   <ItemGroup>
     <Reference Include="AccessApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\AccessApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\AccessApi.dll</HintPath>
     </Reference>
     <Reference Include="ADODBApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\ADODBApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\ADODBApi.dll</HintPath>
     </Reference>
     <Reference Include="DAOApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\DAOApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\DAOApi.dll</HintPath>
     </Reference>
     <Reference Include="LateBindingApi.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\LateBindingApi.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\LateBindingApi.Core.dll</HintPath>
     </Reference>
     <Reference Include="MSComctlLibApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\MSComctlLibApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\MSComctlLibApi.dll</HintPath>
     </Reference>
     <Reference Include="MSDATASRCApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\MSDATASRCApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\MSDATASRCApi.dll</HintPath>
     </Reference>
     <Reference Include="OfficeApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\OfficeApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\OfficeApi.dll</HintPath>
     </Reference>
     <Reference Include="OWC10Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\OWC10Api.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\OWC10Api.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -70,7 +70,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="VBIDEApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\VBIDEApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\VBIDEApi.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
