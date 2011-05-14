@@ -76,6 +76,7 @@ Public Class Form1
         returnValue += color.G
         returnValue = returnValue << 8
         returnValue += color.R
+        Return returnValue
 
     End Function
 

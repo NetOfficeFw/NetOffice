@@ -51,7 +51,6 @@ Public Class Form1
         Dim fDialog As New FinishDialog("Workbook saved.", workbookFile)
         fDialog.ShowDialog(Me)
 
-
     End Sub
 
 #Region "Helper"
