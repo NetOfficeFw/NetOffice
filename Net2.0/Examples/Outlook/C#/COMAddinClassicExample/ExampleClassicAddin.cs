@@ -14,15 +14,19 @@ using NetOffice.OfficeApi.Enums;
 namespace COMAddinClassicExample
 {
     [ComVisible(true)]
-    [GuidAttribute("29CD8085-51EE-438a-8898-C77396711681"), ProgId("COMAddinClassicExampleOutlook.ExampleClassicAddin")]
+    [GuidAttribute("29CD8085-51EE-438a-8898-C77396711681"), ProgId("OutlookClassicAddinCSharp.Addin")]
     public class ExampleClassicAddin : IDTExtensibility2
     {
         private static readonly string _addinRegistryKey = "Software\\Microsoft\\Office\\Outlook\\AddIns\\";
-        private static readonly string _prodId           = "COMAddinClassicExampleOutlook.ExampleClassicAddin";
-        private static readonly string _interfaceId      = "29CD8085-51EE-438a-8898-C77396711681";
-        private static readonly string _addinName        = "COMAddinClassicExampleOutlook";
-        private static readonly string _toolbarName      = "COMAddinClassicToolbar";
-        private static readonly string _menuName         = "COMAddinClassicMenu";
+        private static readonly string _prodId           = "OutlookClassicAddinCSharp.Addin";
+        private static readonly string _addinName        = "C# OutlookClassicAddin";
+
+        // gui elements
+        private static readonly string _toolbarName           = "C#_COMAddinClassicToolbar";
+        private static readonly string _toolbarButtonName     = "C#_ToolbarButton";
+        private static readonly string _toolbarPopupName      = "C#_COMAddinClassicPopup";
+        private static readonly string _menuName              = "C#_COMAddinClassicMenu";
+        private static readonly string _menuButtonName        = "C#_MenuButton";
 
         Outlook.Application _outlookApplication;
 
@@ -35,11 +39,11 @@ namespace COMAddinClassicExample
             {
                 // add codebase value
                 Assembly thisAssembly = Assembly.GetAssembly(typeof(ExampleClassicAddin));
-                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + _interfaceId + "}\\InprocServer32\\1.0.0.0");
+                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\1.0.0.0");
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
 
-                key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + _interfaceId + "}\\InprocServer32");
+                key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32");
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
 
@@ -114,7 +118,7 @@ namespace COMAddinClassicExample
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured OnConnection." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -128,12 +132,21 @@ namespace COMAddinClassicExample
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured OnDisconnection." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         void IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
+            try
+            {
+                SetupGui();
+            }
+            catch (Exception throwedException)
+            {
+                string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
+                MessageBox.Show("An error occured OnStartupComplete." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion
@@ -154,14 +167,15 @@ namespace COMAddinClassicExample
 
             // add popup to commandbar
             Office.CommandBarPopup commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
-            commandBarPop.Caption = "COMAddinClassicPopup";
-            commandBarPop.Tag = "COMAddinClassicPopup";
+            commandBarPop.Caption = _toolbarPopupName;
+            commandBarPop.Tag = _toolbarPopupName;
 
             // add a button to the popup
             Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.FaceId = 9;
-            commandBarBtn.Caption = "ToolbarButton";
+            commandBarBtn.Caption = _toolbarButtonName;
+            commandBarBtn.Tag = _toolbarButtonName;
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
             /* create menu */
@@ -176,7 +190,8 @@ namespace COMAddinClassicExample
             commandBarBtn = (Office.CommandBarButton)commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.FaceId = 9;
-            commandBarBtn.Caption = "MenuButton";
+            commandBarBtn.Caption = _menuButtonName;
+            commandBarBtn.Tag = _menuButtonName;
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
         }
 

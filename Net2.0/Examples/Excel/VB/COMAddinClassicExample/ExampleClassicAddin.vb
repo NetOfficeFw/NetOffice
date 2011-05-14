@@ -10,12 +10,12 @@ Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("E4D04E40-5759-4cec-9868-FE475C051DC8"), ProgIdAttribute("ExampleClassicAddinVB.Addin")> _
+<GuidAttribute("E4D04E40-5759-4cec-9868-FE475C051DC8"), ProgIdAttribute("ExcelClassicAddinVB.Addin")> _
 Public Class ExampleClassicAddin
     Implements IDTExtensibility2
 
     Private Shared ReadOnly _addinRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "ExampleClassicAddinVB.Addin"
+    Private Shared ReadOnly _prodId As String = "ExcelClassicAddinVB.Addin"
     Private Shared ReadOnly _addinName As String = "VB ExampleClassicAddin"
 
     ' gui elements

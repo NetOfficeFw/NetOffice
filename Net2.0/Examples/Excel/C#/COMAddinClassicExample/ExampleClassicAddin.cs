@@ -14,12 +14,12 @@ using NetOffice.OfficeApi.Enums;
 namespace COMAddinClassicExample
 {
     [ComVisible(true)]
-    [GuidAttribute("99D1670D-3C58-44a7-875F-9486A02C44B9"), ProgId("ExampleClassicAddinCSharp.Addin")]
+    [GuidAttribute("99D1670D-3C58-44a7-875F-9486A02C44B9"), ProgId("ExcelClassicAddinCSharp.Addin")]
     public class ExampleClassicAddin : IDTExtensibility2
     {
         private static readonly string _addinRegistryKey = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId           = "ExampleClassicAddinCSharp.Addin";
-        private static readonly string _addinName        = "C# ExampleClassicAddin";
+        private static readonly string _prodId           = "ExcelClassicAddinCSharp.Addin";
+        private static readonly string _addinName        = "C# ExcelClassicAddin";
         
         // gui elements
         private static readonly string _toolbarName           = "C#_COMAddinClassicToolbar";

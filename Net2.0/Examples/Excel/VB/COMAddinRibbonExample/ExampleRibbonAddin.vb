@@ -10,12 +10,12 @@ Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("1D8EC143-E930-4fb1-BD5A-A0F744D5E91F"), ProgIdAttribute("ExampleRibbonAddinVB.Addin")> _
+<GuidAttribute("1D8EC143-E930-4fb1-BD5A-A0F744D5E91F"), ProgIdAttribute("ExcelRibbonAddinVB.Addin")> _
 Public Class ExampleRibbonAddin
     Implements IDTExtensibility2, IRibbonExtensibility
 
     Private Shared ReadOnly _addinRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "ExampleRibbonAddinVB.Addin"
+    Private Shared ReadOnly _prodId As String = "ExcelRibbonAddinVB.Addin"
     Private Shared ReadOnly _addinName As String = "VB ExampleRibbonAddin"
 
     Dim _excelApplication As Excel.Application = Nothing

@@ -13,12 +13,12 @@ using NetOffice.OfficeApi.Enums;
 namespace COMAddinRibbonExample
 {
     [ComVisible(true)]
-    [GuidAttribute("05B31000-90EF-4a62-A67C-77C2526D7364"), ProgId("ExampleRibbonAddinCSharp.Addin")]
+    [GuidAttribute("05B31000-90EF-4a62-A67C-77C2526D7364"), ProgId("ExcelRibbonAddinCSharp.Addin")]
     public class ExampleRibbonAddin : IDTExtensibility2, IRibbonExtensibility
     {
         private static readonly string _addinRegistryKey = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId           = "ExampleRibbonAddinCSharp.Addin";
-        private static readonly string _addinName        = "C# ExampleRibbonAddinCSharp";
+        private static readonly string _prodId           = "ExcelRibbonAddinCSharp.Addin";
+        private static readonly string _addinName        = "C# ExcelRibbonAddin";
 
         Excel.Application _excelApplication;
 
