@@ -5,9 +5,8 @@ Public Class Form1
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
-        'Initialize Api COMObject Support & enable event support
+        'Initialize Api COMObject Support
         LateBindingApi.Core.Factory.Initialize()
-        LateBindingApi.Core.Settings.EnableEvents = True
 
         ' start application
         Dim application As New Excel.Application()

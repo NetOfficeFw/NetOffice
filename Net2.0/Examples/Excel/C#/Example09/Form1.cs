@@ -29,9 +29,6 @@ namespace Example09
 
             Office.CommandBar commandBar;
             Office.CommandBarButton commandBarBtn;
-
-            // first we enable the event support
-            LateBindingApi.Core.Settings.EnableEvents = true;
  
             // start excel and turn off msg boxes
             _excelApplication = new Excel.Application();

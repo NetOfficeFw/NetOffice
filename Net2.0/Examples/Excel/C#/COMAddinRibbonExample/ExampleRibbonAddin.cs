@@ -91,9 +91,8 @@ namespace COMAddinRibbonExample
         {
             try
             { 
-                // initialize api & enable events
+                // initialize api
                 LateBindingApi.Core.Factory.Initialize();
-                LateBindingApi.Core.Settings.EnableEvents = true;
 
                 _excelApplication = new Excel.Application(null, Application);
             }

@@ -26,9 +26,6 @@ Public Class Form1
         ' Initialize Api COMObject Support
         LateBindingApi.Core.Factory.Initialize()
 
-        ' first we enable the event support
-        LateBindingApi.Core.Settings.EnableEvents = True
-
         Dim commandBar As Office.CommandBar = Nothing
         Dim commandBarBtn As Office.CommandBarButton = Nothing
 

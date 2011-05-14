@@ -42,7 +42,6 @@ Public Class ExampleClassicAddin
 
             ' initialize api & enable events
             LateBindingApi.Core.Factory.Initialize()
-            LateBindingApi.Core.Settings.EnableEvents = True
 
             _outlookApplication = New Outlook.Application(Nothing, Application)
 

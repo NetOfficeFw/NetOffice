@@ -20,9 +20,8 @@ namespace Tutorial03
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support & enable event support
+            // Initialize Api COMObject Support
             LateBindingApi.Core.Factory.Initialize();
-            LateBindingApi.Core.Settings.EnableEvents = true;
 
             // start application
             Excel.Application application = new Excel.Application();

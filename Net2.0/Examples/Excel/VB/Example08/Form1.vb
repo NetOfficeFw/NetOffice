@@ -24,9 +24,6 @@ Public Class Form1
         ' Initialize Api COMObject Support
         LateBindingApi.Core.Factory.Initialize()
 
-        'we enable the event support
-        LateBindingApi.Core.Settings.EnableEvents = True
-
         ' start excel and turn off msg boxes
         Dim excelApplication As New Excel.Application()
         excelApplication.DisplayAlerts = False

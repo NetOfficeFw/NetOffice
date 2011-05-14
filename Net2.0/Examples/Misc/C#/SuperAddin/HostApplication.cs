@@ -89,7 +89,6 @@ namespace SuperAddin
         public HostApplication(object comProxy, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             LateBindingApi.Core.Factory.Initialize();
-            LateBindingApi.Core.Settings.EnableEvents = true;
 
             string typeComponent = System.ComponentModel.TypeDescriptor.GetComponentName(comProxy);
             switch (typeComponent)

@@ -30,9 +30,6 @@ namespace Example08
             // Initialize Api COMObject Support
             LateBindingApi.Core.Factory.Initialize();
 
-            // we enable the event support
-            LateBindingApi.Core.Settings.EnableEvents = true;
- 
             // start excel and turn off msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;

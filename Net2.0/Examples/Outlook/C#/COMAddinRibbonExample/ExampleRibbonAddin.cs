@@ -89,9 +89,8 @@ namespace COMAddinRibbonExample
         {
             try
             {
-                // initialize api & enable events
+                // initialize api
                 LateBindingApi.Core.Factory.Initialize();
-                LateBindingApi.Core.Settings.EnableEvents = true;
 
                 _outlookApplication = new Outlook.Application(null, Application);
             }

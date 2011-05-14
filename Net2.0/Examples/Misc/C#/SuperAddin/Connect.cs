@@ -159,16 +159,6 @@ namespace SuperAddin
             {
                 _application = new HostApplication(Application, ConnectMode, AddInInst, ref custom);
                 
-                // addin UI
-                _userInterface = new AddinUI(_application);
-                _userInterface.ButtonClick += new ButtonClickEventHandler(_userInterface_ButtonClick);
-
-                //excel and word document events
-                _application.BeforeOpen += new OpenHandler(_application_BeforeOpen);
-                _application.BeforeClose += new BeforeCloseHandler(_application_BeforeClose);
-                _application.BeforeSave += new BeforeSaveHandler(_application_BeforeSave);
-                _application.BeforePrint += new BeforePrintHandler(_application_BeforePrint); 
-
                 _trayIcon = new TrayIcon(true);
             }
             catch (Exception throwedException)
@@ -208,6 +198,16 @@ namespace SuperAddin
         {
             try
             {
+                // addin UI
+                _userInterface = new AddinUI(_application);
+                _userInterface.ButtonClick += new ButtonClickEventHandler(_userInterface_ButtonClick);
+
+                //excel and word document events
+                _application.BeforeOpen += new OpenHandler(_application_BeforeOpen);
+                _application.BeforeClose += new BeforeCloseHandler(_application_BeforeClose);
+                _application.BeforeSave += new BeforeSaveHandler(_application_BeforeSave);
+                _application.BeforePrint += new BeforePrintHandler(_application_BeforePrint); 
+
                 if((null != _userInterface) && (false == _userInterface.RibbonIsActive))
                     _userInterface.ClassicUI.CreateUI(); 
             }
