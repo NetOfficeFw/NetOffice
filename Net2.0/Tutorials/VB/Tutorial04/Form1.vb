@@ -6,6 +6,32 @@ Public Class Form1
 
     Dim _application As Excel.Application
 
+    Public Sub New()
+
+        ' This call is required by the Windows Form Designer.
+        InitializeComponent()
+
+        ' Initialize Api COMObject Support 
+        LateBindingApi.Core.Factory.Initialize()
+
+        Dim changeHandler As Factory.ProxyCountChangedHandler = AddressOf Me.Factory_ProxyCountChanged
+        AddHandler Factory.ProxyCountChanged, changeHandler
+
+    End Sub
+
+
+    Private Sub Factory_ProxyCountChanged(ByVal proxyCount As Integer)
+
+        If (labelProxyCount.InvokeRequired) Then
+            labelProxyCount.Tag = proxyCount.ToString()
+            Dim updateHandler As MethodInvoker = AddressOf Me.UpdateLabel
+            labelProxyCount.Invoke(updateHandler)
+        Else
+            labelProxyCount.Text = proxyCount.ToString()
+        End If
+
+    End Sub
+
     Private Sub buttonExcel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonExcel.Click
 
         If (IsNothing(_application)) Then
@@ -78,41 +104,9 @@ Public Class Form1
 
     End Sub
 
-    Private Sub linkLabel_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles linkDocEnglish.LinkClicked, linkFaqEnglish.LinkClicked, linkTeqFaqGerman.LinkClicked, linkTeqFaqEnglish.LinkClicked, linkTecDocGerman.LinkClicked, linkTecDocEnglish.LinkClicked, linkFaqGerman.LinkClicked, linkDocGerman.LinkClicked
-
-        Dim ctrl As System.Windows.Forms.Control
-        ctrl = sender
-        System.Diagnostics.Process.Start(ctrl.Tag)
-
-    End Sub
-
-    Public Sub New()
-
-        ' This call is required by the Windows Form Designer.
-        InitializeComponent()
-
-        ' Initialize Api COMObject Support 
-        LateBindingApi.Core.Factory.Initialize()
-
-        Dim changeHandler As Factory.ProxyCountChangedHandler = AddressOf Me.Factory_ProxyCountChanged
-        AddHandler Factory.ProxyCountChanged, changeHandler
-
-    End Sub
-
-
     Private Sub UpdateLabel()
 
         labelProxyCount.Text = labelProxyCount.Tag
-
-    End Sub
-
-    Private Sub Factory_ProxyCountChanged(ByVal proxyCount As Integer)
-
-        If (labelProxyCount.InvokeRequired) Then
-            labelProxyCount.Tag = proxyCount.ToString()
-        Else
-            labelProxyCount.Text = proxyCount.ToString()
-        End If
 
     End Sub
 
@@ -126,4 +120,11 @@ Public Class Form1
 
     End Sub
 
+    Private Sub linkLabel_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles linkDocEnglish.LinkClicked, linkFaqEnglish.LinkClicked, linkTeqFaqGerman.LinkClicked, linkTeqFaqEnglish.LinkClicked, linkTecDocGerman.LinkClicked, linkTecDocEnglish.LinkClicked, linkFaqGerman.LinkClicked, linkDocGerman.LinkClicked
+
+        Dim ctrl As System.Windows.Forms.Control
+        ctrl = sender
+        System.Diagnostics.Process.Start(ctrl.Tag)
+
+    End Sub
 End Class

@@ -135,7 +135,7 @@
             this.linkFaqEnglish.Size = new System.Drawing.Size(28, 13);
             this.linkFaqEnglish.TabIndex = 16;
             this.linkFaqEnglish.TabStop = true;
-            this.linkFaqEnglish.Tag = "http://netoffice.codeplex.com/wikipage?title=FAQ%20English";
+            this.linkFaqEnglish.Tag = "http://netoffice.codeplex.com/wikipage?title=FAQ";
             this.linkFaqEnglish.Text = "FAQ";
             this.linkFaqEnglish.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
             // 
@@ -193,7 +193,7 @@
             this.linkDocGerman.Size = new System.Drawing.Size(79, 13);
             this.linkDocGerman.TabIndex = 15;
             this.linkDocGerman.TabStop = true;
-            this.linkDocGerman.Tag = "http://netoffice.codeplex.com/wikipage?title=Documentation%20-%20German";
+            this.linkDocGerman.Tag = "http://netoffice.codeplex.com/wikipage?title=Documentation_German";
             this.linkDocGerman.Text = "Documentation";
             this.linkDocGerman.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
             // 
@@ -205,7 +205,7 @@
             this.linkFaqGerman.Size = new System.Drawing.Size(28, 13);
             this.linkFaqGerman.TabIndex = 16;
             this.linkFaqGerman.TabStop = true;
-            this.linkFaqGerman.Tag = "http://netoffice.codeplex.com/wikipage?title=FAQ%20German";
+            this.linkFaqGerman.Tag = "http://netoffice.codeplex.com/wikipage?title=FAQ_German";
             this.linkFaqGerman.Text = "FAQ";
             this.linkFaqGerman.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
             // 

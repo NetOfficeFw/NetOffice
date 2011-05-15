@@ -1,7 +1,7 @@
 [DEFAULT]
 BASEURL=http://excel.codeplex.com/
 [InternetShortcut]
-URL=http://netoffice.codeplex.com/wikipage?title=FAQ%20English
+URL=http://netoffice.codeplex.com/wikipage?title=FAQ
 IDList=
 IconFile=http://excel.codeplex.com/favicon.ico
 IconIndex=1

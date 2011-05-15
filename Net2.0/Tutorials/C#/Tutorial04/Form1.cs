@@ -32,7 +32,10 @@ namespace Tutorial04
         void Factory_ProxyCountChanged(int proxyCount)
         {
             if (labelProxyCount.InvokeRequired)
+            {
                 labelProxyCount.Tag = proxyCount.ToString();
+                labelProxyCount.Invoke(new MethodInvoker(UpdateLabel));
+            }
             else
                 labelProxyCount.Text = proxyCount.ToString();
         }

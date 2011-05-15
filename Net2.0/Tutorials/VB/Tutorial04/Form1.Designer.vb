@@ -110,7 +110,7 @@ Partial Class Form1
         Me.linkFaqEnglish.Size = New System.Drawing.Size(28, 13)
         Me.linkFaqEnglish.TabIndex = 16
         Me.linkFaqEnglish.TabStop = True
-        Me.linkFaqEnglish.Tag = "http://netoffice.codeplex.com/wikipage?title=FAQ%20English"
+        Me.linkFaqEnglish.Tag = "http://netoffice.codeplex.com/wikipage?title=FAQ"
         Me.linkFaqEnglish.Text = "FAQ"
         '
         'panel1
@@ -165,7 +165,7 @@ Partial Class Form1
         Me.linkDocGerman.Size = New System.Drawing.Size(79, 13)
         Me.linkDocGerman.TabIndex = 15
         Me.linkDocGerman.TabStop = True
-        Me.linkDocGerman.Tag = "http://netoffice.codeplex.com/wikipage?title=Documentation%20-%20German"
+        Me.linkDocGerman.Tag = "http://netoffice.codeplex.com/wikipage?title=Documentation_German"
         Me.linkDocGerman.Text = "Documentation"
         '
         'linkFaqGerman
@@ -176,7 +176,7 @@ Partial Class Form1
         Me.linkFaqGerman.Size = New System.Drawing.Size(28, 13)
         Me.linkFaqGerman.TabIndex = 16
         Me.linkFaqGerman.TabStop = True
-        Me.linkFaqGerman.Tag = "http://netoffice.codeplex.com/wikipage?title=FAQ%20German"
+        Me.linkFaqGerman.Tag = "http://netoffice.codeplex.com/wikipage?title=FAQ_German"
         Me.linkFaqGerman.Text = "FAQ"
         '
         'richTextBoxInfo

@@ -35,7 +35,7 @@ namespace Tutorial03
             // set parameter to true and the event listener will stopped and you dont get events for the instance
             // the DisposeChildInstances() method has the same method overload
              book.Close();
-	book.Dispose(false);
+	        book.Dispose(false);
 
             application.Quit();
             application.Dispose();

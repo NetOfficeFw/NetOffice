@@ -121,6 +121,6 @@
     <value>The datatype Variant is not plain supported by .NET CLR but common in an unmanaged COM Environment.
 NetOffice mapped the type to object but you never have to fear you lost the COM Proxy management from NetOffice.
 
-See chapter3  in technical documentation for further info.</value>
+See chapter6  in technical documentation for further info.</value>
   </data>
 </root>
