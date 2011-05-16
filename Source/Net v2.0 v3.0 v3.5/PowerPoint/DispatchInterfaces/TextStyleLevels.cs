@@ -87,12 +87,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Level">Int32 Level</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public NetOffice.PowerPointApi.TextStyleLevel Item(Int32 level)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.TextStyleLevel this[Int32 level]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(level);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.TextStyleLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextStyleLevel;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(level);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.TextStyleLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextStyleLevel;
+				return newObject;
+			}
 		}
 
 		#endregion

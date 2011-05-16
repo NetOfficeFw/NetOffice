@@ -99,29 +99,18 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("WCC6.0")]
-		public NetOffice.MSComctlLibApi.IButtonMenu get_Item(ref object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.MSComctlLibApi.IButtonMenu this[object index]
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.MSComctlLibApi.IButtonMenu newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButtonMenu;
-			index = (object)paramsArray[0];
 			return newObject;
-		}
-
-		/// <summary>
-		/// SupportByLibrary WCC6.0 
-		/// </summary>
-		/// <param name="Index">ref object Index</param>
-		[SupportByLibrary("WCC6.0")]
-		public void set_Item(ref object index, NetOffice.MSComctlLibApi.IButtonMenu value)
-		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "Item", paramsArray, value, modifiers);
-			index = (object)paramsArray[0];
+			}
 		}
 
 		#endregion

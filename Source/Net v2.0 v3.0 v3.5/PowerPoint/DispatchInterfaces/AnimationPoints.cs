@@ -106,12 +106,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("PP10","PP11","PP12","PP14")]
-		public NetOffice.PowerPointApi.AnimationPoint Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.AnimationPoint this[Int32 index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.AnimationPoint newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.AnimationPoint;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.AnimationPoint newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.AnimationPoint;
+				return newObject;
+			}
 		}
 
 		/// <summary>

@@ -105,12 +105,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("PP09")]
-		public NetOffice.PowerPointApi.PPRadioButton Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.PPRadioButton this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.PPRadioButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPRadioButton;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.PPRadioButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPRadioButton;
+				return newObject;
+			}
 		}
 
 		/// <summary>

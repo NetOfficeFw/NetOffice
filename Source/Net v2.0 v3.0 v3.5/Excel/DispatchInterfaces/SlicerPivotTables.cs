@@ -112,12 +112,16 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL14")]
-		public NetOffice.ExcelApi.PivotTable get_Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.PivotTable this[object index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotTable;
 			return newObject;
+			}
 		}
 
 		/// <summary>
@@ -125,16 +129,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.PivotTable this[object index]
+		public NetOffice.ExcelApi.PivotTable get__Default(object index)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotTable;
 			return newObject;
-			}
 		}
 
 		#endregion

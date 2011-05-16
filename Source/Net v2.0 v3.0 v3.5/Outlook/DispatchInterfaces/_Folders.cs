@@ -145,12 +145,16 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
-		public NetOffice.OutlookApi.MAPIFolder Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OutlookApi.MAPIFolder this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MAPIFolder;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MAPIFolder;
+				return newObject;
+			}
 		}
 
 		/// <summary>

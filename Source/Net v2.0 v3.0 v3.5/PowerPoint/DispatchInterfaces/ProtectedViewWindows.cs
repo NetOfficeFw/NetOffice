@@ -87,12 +87,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("PP14")]
-		public NetOffice.PowerPointApi.ProtectedViewWindow Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.ProtectedViewWindow this[Int32 index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.ProtectedViewWindow;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.ProtectedViewWindow;
+				return newObject;
+			}
 		}
 
 		/// <summary>

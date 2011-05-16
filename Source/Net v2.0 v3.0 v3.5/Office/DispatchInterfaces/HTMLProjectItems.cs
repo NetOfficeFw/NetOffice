@@ -85,16 +85,18 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public NetOffice.OfficeApi.HTMLProjectItem Item(ref object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.HTMLProjectItem this[object index]
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray, modifiers);
-			NetOffice.OfficeApi.HTMLProjectItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.HTMLProjectItem;
-			index = (object)paramsArray[0];
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OfficeApi.HTMLProjectItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.HTMLProjectItem;
+				return newObject;
+			}
 		}
 
 		#endregion

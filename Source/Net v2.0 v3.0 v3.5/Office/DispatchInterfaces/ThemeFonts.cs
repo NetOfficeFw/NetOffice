@@ -87,12 +87,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">NetOffice.OfficeApi.Enums.MsoFontLanguageIndex Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public NetOffice.OfficeApi.ThemeFont Item(NetOffice.OfficeApi.Enums.MsoFontLanguageIndex index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.ThemeFont this[NetOffice.OfficeApi.Enums.MsoFontLanguageIndex index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OfficeApi.ThemeFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.ThemeFont;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OfficeApi.ThemeFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.ThemeFont;
+				return newObject;
+			}
 		}
 
 		#endregion

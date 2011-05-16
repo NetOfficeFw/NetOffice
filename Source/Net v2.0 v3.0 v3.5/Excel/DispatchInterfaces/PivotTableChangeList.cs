@@ -98,16 +98,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.ValueChange this[object index]
+		public NetOffice.ExcelApi.ValueChange get__Default(object index)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.ValueChange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ValueChange;
 			return newObject;
-			}
 		}
 
 		/// <summary>
@@ -115,12 +111,16 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL14")]
-		public NetOffice.ExcelApi.ValueChange get_Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.ValueChange this[object index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.ExcelApi.ValueChange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ValueChange;
 			return newObject;
+			}
 		}
 
 		/// <summary>

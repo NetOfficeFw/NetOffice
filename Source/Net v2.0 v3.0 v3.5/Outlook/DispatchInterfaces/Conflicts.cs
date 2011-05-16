@@ -130,12 +130,16 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OL11","OL12","OL14")]
-		public NetOffice.OutlookApi.Conflict Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OutlookApi.Conflict this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Conflict;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OutlookApi.Conflict newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Conflict;
+				return newObject;
+			}
 		}
 
 		/// <summary>

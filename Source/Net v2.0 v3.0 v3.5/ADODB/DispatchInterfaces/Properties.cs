@@ -53,12 +53,16 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("ADO2.1","ADO2.5")]
-		public NetOffice.ADODBApi.Property get_Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ADODBApi.Property this[object index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.ADODBApi.Property newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Property;
 			return newObject;
+			}
 		}
 
 		#endregion

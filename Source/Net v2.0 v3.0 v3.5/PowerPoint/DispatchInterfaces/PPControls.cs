@@ -91,12 +91,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("PP09")]
-		public NetOffice.PowerPointApi.PPControl Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.PPControl this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.PPControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPControl;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.PPControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.PPControl;
+				return newObject;
+			}
 		}
 
 		/// <summary>

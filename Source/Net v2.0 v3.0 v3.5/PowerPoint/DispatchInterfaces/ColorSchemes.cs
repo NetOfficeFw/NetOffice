@@ -87,12 +87,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public NetOffice.PowerPointApi.ColorScheme Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.ColorScheme this[Int32 index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.ColorScheme newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.ColorScheme;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.ColorScheme newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.ColorScheme;
+				return newObject;
+			}
 		}
 
 		/// <summary>

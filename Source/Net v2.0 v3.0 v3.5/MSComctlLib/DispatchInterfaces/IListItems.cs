@@ -86,16 +86,18 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("WCC6.0")]
-		public NetOffice.MSComctlLibApi.IListItem get_Item(ref object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.MSComctlLibApi.IListItem this[object index]
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.MSComctlLibApi.IListItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
-			index = (object)paramsArray[0];
 			return newObject;
+			}
 		}
 
 		#endregion

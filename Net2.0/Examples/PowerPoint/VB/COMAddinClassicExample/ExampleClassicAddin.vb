@@ -174,7 +174,7 @@ Public Class ExampleClassicAddin
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' create menu 
-        commandBar = _powerApplication.CommandBars.get_Item("Menu Bar")
+        commandBar = _powerApplication.CommandBars("Menu Bar")
 
         ' add popup to menu bar
         commandBarPop = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
@@ -191,7 +191,7 @@ Public Class ExampleClassicAddin
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' create context menu 
-        commandBarPop = _powerApplication.CommandBars.get_Item("Frames").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
+        commandBarPop = _powerApplication.CommandBars("Frames").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarPop.Caption = _contextName
         commandBarPop.Tag = _contextName
 

@@ -111,16 +111,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">NetOffice.ExcelApi.Enums.XlTableStyleElementType Index</param>
 		[SupportByLibrary("XL12","XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.TableStyleElement this[NetOffice.ExcelApi.Enums.XlTableStyleElementType index]
+		public NetOffice.ExcelApi.TableStyleElement get__Default(NetOffice.ExcelApi.Enums.XlTableStyleElementType index)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.TableStyleElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.TableStyleElement;
 			return newObject;
-			}
 		}
 
 		#endregion
@@ -132,12 +128,16 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">NetOffice.ExcelApi.Enums.XlTableStyleElementType Index</param>
 		[SupportByLibrary("XL12","XL14")]
-		public NetOffice.ExcelApi.TableStyleElement Item(NetOffice.ExcelApi.Enums.XlTableStyleElementType index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.TableStyleElement this[NetOffice.ExcelApi.Enums.XlTableStyleElementType index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.ExcelApi.TableStyleElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.TableStyleElement;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.ExcelApi.TableStyleElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.TableStyleElement;
+				return newObject;
+			}
 		}
 
 		#endregion

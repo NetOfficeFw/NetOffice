@@ -87,12 +87,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public NetOffice.OfficeApi.FileDialogFilter Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.FileDialogFilter this[Int32 index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OfficeApi.FileDialogFilter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.FileDialogFilter;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OfficeApi.FileDialogFilter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.FileDialogFilter;
+				return newObject;
+			}
 		}
 
 		/// <summary>

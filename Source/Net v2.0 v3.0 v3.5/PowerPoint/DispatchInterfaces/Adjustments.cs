@@ -111,22 +111,15 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public Single get_Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public Single this[Int32 index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			return (Single)returnItem;
-		}
-
-		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public void set_Item(Int32 index, Single value)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "Item", paramsArray, value);
+			}
 		}
 
 		#endregion

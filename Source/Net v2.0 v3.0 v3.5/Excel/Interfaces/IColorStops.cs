@@ -111,16 +111,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL12","XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.ColorStop this[object index]
+		public NetOffice.ExcelApi.ColorStop get__Default(object index)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.ColorStop newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ColorStop;
 			return newObject;
-			}
 		}
 
 		#endregion
@@ -145,12 +141,16 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL12","XL14")]
-		public NetOffice.ExcelApi.ColorStop Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.ColorStop this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.ExcelApi.ColorStop newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ColorStop;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.ExcelApi.ColorStop newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ColorStop;
+				return newObject;
+			}
 		}
 
 		/// <summary>

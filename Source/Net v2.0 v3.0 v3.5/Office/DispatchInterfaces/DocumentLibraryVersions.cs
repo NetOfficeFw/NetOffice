@@ -54,12 +54,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public NetOffice.OfficeApi.DocumentLibraryVersion get_Item(Int32 lIndex)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.DocumentLibraryVersion this[Int32 lIndex]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OfficeApi.DocumentLibraryVersion newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.DocumentLibraryVersion;
 			return newObject;
+			}
 		}
 
 		/// <summary>

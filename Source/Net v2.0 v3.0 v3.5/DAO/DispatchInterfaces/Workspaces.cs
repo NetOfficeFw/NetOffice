@@ -68,12 +68,16 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Item">object Item</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public NetOffice.DAOApi.Workspace get_Item(object item)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.DAOApi.Workspace this[object item]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.DAOApi.Workspace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Workspace;
 			return newObject;
+			}
 		}
 
 		#endregion

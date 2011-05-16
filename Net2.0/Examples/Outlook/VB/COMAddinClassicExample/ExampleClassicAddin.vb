@@ -172,7 +172,7 @@ Public Class ExampleClassicAddin
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' create menu 
-        commandBar = _outlookApplication.ActiveExplorer().CommandBars.get_Item("Menu Bar")
+        commandBar = _outlookApplication.ActiveExplorer().CommandBars("Menu Bar")
 
         ' add popup to menu bar
         commandBarPop = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)

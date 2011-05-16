@@ -69,12 +69,16 @@ namespace NetOffice.OfficeApi
 		/// <param name="Type">NetOffice.OfficeApi.Enums.XlAxisType Type</param>
 		/// <param name="AxisGroup">NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup</param>
 		[SupportByLibrary("OF12","OF14")]
-		public NetOffice.OfficeApi.IMsoAxis get_Item(NetOffice.OfficeApi.Enums.XlAxisType type, NetOffice.OfficeApi.Enums.XlAxisGroup axisGroup)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.IMsoAxis this[NetOffice.OfficeApi.Enums.XlAxisType type, NetOffice.OfficeApi.Enums.XlAxisGroup axisGroup]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OfficeApi.IMsoAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoAxis;
 			return newObject;
+			}
 		}
 
 		/// <summary>
@@ -112,16 +116,12 @@ namespace NetOffice.OfficeApi
 		/// <param name="Type">NetOffice.OfficeApi.Enums.XlAxisType Type</param>
 		/// <param name="AxisGroup">NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup</param>
 		[SupportByLibrary("OF14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.OfficeApi.IMsoAxis this[NetOffice.OfficeApi.Enums.XlAxisType type, NetOffice.OfficeApi.Enums.XlAxisGroup axisGroup]
+		public NetOffice.OfficeApi.IMsoAxis get__Default(NetOffice.OfficeApi.Enums.XlAxisType type, NetOffice.OfficeApi.Enums.XlAxisGroup axisGroup)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.OfficeApi.IMsoAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoAxis;
 			return newObject;
-			}
 		}
 
 		/// <summary>

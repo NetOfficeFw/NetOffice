@@ -117,12 +117,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public NetOffice.OfficeApi.DiagramNode Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.DiagramNode this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.DiagramNode;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.DiagramNode;
+				return newObject;
+			}
 		}
 
 		/// <summary>

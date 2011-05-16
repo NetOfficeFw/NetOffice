@@ -139,12 +139,16 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Index">NetOffice.OWC10Api.Enums.XlBordersIndex Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public NetOffice.OWC10Api.Border get_Item(NetOffice.OWC10Api.Enums.XlBordersIndex index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OWC10Api.Border this[NetOffice.OWC10Api.Enums.XlBordersIndex index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OWC10Api.Border newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Border;
 			return newObject;
+			}
 		}
 
 		/// <summary>

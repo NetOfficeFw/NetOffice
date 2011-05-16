@@ -135,12 +135,16 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public NetOffice.WordApi.Index Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.WordApi.Index this[Int32 index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Index;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Index;
+				return newObject;
+			}
 		}
 
 		/// <summary>

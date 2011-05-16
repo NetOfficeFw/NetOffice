@@ -405,6 +405,14 @@ namespace LateBindingApi.Core
 
         #endregion
 
+        #region Type
+
+        /// <summary>
+        /// returns the Type for expression or null if param not set
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <returns></returns>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type GetObjectType(object expression)
         {
             if (null == expression)
@@ -412,5 +420,7 @@ namespace LateBindingApi.Core
             else
                 return expression.GetType();
         }
+
+        #endregion
     }
 }

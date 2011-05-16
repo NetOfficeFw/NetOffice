@@ -115,12 +115,16 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">NetOffice.WordApi.Enums.WdBuildingBlockTypes Index</param>
 		[SupportByLibrary("WD12","WD14")]
-		public NetOffice.WordApi.BuildingBlockType Item(NetOffice.WordApi.Enums.WdBuildingBlockTypes index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.WordApi.BuildingBlockType this[NetOffice.WordApi.Enums.WdBuildingBlockTypes index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.WordApi.BuildingBlockType newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.BuildingBlockType;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.WordApi.BuildingBlockType newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.BuildingBlockType;
+				return newObject;
+			}
 		}
 
 		#endregion

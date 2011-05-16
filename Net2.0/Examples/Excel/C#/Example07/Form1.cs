@@ -42,8 +42,8 @@ namespace Example07
                 globalModule.CodeModule.InsertLines(1, "Public Sub HelloWorld(Param as string)\r\n MsgBox \"Hello World!\" & vbnewline & Param\r\nEnd Sub");
                  
                 // create a click event trigger for the first worksheet
-                int linePosition = workBook.VBProject.VBComponents.Item(2).CodeModule.CreateEventProc("BeforeDoubleClick", "Worksheet");
-                workBook.VBProject.VBComponents.Item(2).CodeModule.InsertLines(linePosition + 1, "HelloWorld \"BeforeDoubleClick\"");
+                int linePosition = workBook.VBProject.VBComponents[2].CodeModule.CreateEventProc("BeforeDoubleClick", "Worksheet");
+                workBook.VBProject.VBComponents[2].CodeModule.InsertLines(linePosition + 1, "HelloWorld \"BeforeDoubleClick\"");
 
                 // display info in the worksheet
                 Excel.Worksheet sheet = (Excel.Worksheet)workBook.Worksheets[1];

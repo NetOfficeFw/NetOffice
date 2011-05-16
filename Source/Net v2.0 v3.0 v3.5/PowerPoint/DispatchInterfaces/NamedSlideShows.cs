@@ -87,12 +87,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public NetOffice.PowerPointApi.NamedSlideShow Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.NamedSlideShow this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.NamedSlideShow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.NamedSlideShow;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.NamedSlideShow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.NamedSlideShow;
+				return newObject;
+			}
 		}
 
 		/// <summary>

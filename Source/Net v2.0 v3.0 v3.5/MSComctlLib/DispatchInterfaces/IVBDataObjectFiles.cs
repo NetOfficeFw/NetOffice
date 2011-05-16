@@ -54,11 +54,15 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[SupportByLibrary("WCC6.0")]
-		public string get_Item(Int32 lIndex)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public string this[Int32 lIndex]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			return (string)returnItem;
+			}
 		}
 
 		/// <summary>

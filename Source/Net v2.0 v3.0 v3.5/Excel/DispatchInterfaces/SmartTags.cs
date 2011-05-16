@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL10","XL11","XL12","XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.SmartTag this[object index]
 		{
 			get

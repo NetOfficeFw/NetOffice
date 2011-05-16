@@ -87,12 +87,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="BorderType">NetOffice.PowerPointApi.Enums.PpBorderType BorderType</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public NetOffice.PowerPointApi.LineFormat Item(NetOffice.PowerPointApi.Enums.PpBorderType borderType)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.LineFormat this[NetOffice.PowerPointApi.Enums.PpBorderType borderType]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(borderType);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.LineFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.LineFormat;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(borderType);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.LineFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.LineFormat;
+				return newObject;
+			}
 		}
 
 		#endregion

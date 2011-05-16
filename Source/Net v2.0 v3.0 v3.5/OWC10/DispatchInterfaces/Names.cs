@@ -104,24 +104,16 @@ namespace NetOffice.OWC10Api
 		/// <param name="IndexLocal">optional object IndexLocal</param>
 		/// <param name="RefersTo">optional object RefersTo</param>
 		[SupportByLibrary("XWC1.0")]
-		public NetOffice.OWC10Api.Name Item(object index, object indexLocal, object refersTo)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OWC10Api.Name this[object index, object indexLocal, object refersTo]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, indexLocal, refersTo);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OWC10Api.Name newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.Name;
-			return newObject;
-		}
-
-		/// <summary>
-		/// SupportByLibrary XWC1.0 
-		/// </summary>
-		[SupportByLibrary("XWC1.0")]
-		public NetOffice.OWC10Api.Name Item()
-		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OWC10Api.Name newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.Name;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index, indexLocal, refersTo);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OWC10Api.Name newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.Name;
+				return newObject;
+			}
 		}
 
 		/// <summary>

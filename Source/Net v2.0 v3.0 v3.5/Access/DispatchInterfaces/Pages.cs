@@ -54,12 +54,16 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public NetOffice.AccessApi.Page get_Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.AccessApi.Page this[object index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.AccessApi.Page newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Page;
 			return newObject;
+			}
 		}
 
 		/// <summary>

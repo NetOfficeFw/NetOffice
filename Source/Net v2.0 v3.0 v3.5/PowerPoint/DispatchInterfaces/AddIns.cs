@@ -85,16 +85,18 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
 		/// </summary>
-		/// <param name="index">ref object index</param>
+		/// <param name="index">object index</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public NetOffice.PowerPointApi.AddIn Item(ref object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.AddIn this[object index]
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray, modifiers);
-			NetOffice.PowerPointApi.AddIn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.AddIn;
-			index = (object)paramsArray[0];
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.AddIn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.AddIn;
+				return newObject;
+			}
 		}
 
 		/// <summary>

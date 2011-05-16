@@ -99,29 +99,18 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary WCC6.0 
 		/// </summary>
-		/// <param name="pvIndex">ref object pvIndex</param>
+		/// <param name="pvIndex">object pvIndex</param>
 		[SupportByLibrary("WCC6.0")]
-		public NetOffice.MSComctlLibApi.ITab get_Item(ref object pvIndex)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.MSComctlLibApi.ITab this[object pvIndex]
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
-			pvIndex = (object)paramsArray[0];
 			return newObject;
-		}
-
-		/// <summary>
-		/// SupportByLibrary WCC6.0 
-		/// </summary>
-		/// <param name="pvIndex">ref object pvIndex</param>
-		[SupportByLibrary("WCC6.0")]
-		public void set_Item(ref object pvIndex, NetOffice.MSComctlLibApi.ITab value)
-		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
-			Invoker.PropertySet(this, "Item", paramsArray, value, modifiers);
-			pvIndex = (object)paramsArray[0];
+			}
 		}
 
 		#endregion

@@ -54,12 +54,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public NetOffice.OfficeApi.UserPermission get_Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.UserPermission this[object index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OfficeApi.UserPermission newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.UserPermission;
 			return newObject;
+			}
 		}
 
 		/// <summary>

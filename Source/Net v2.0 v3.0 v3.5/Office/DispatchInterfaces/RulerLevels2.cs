@@ -87,12 +87,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public NetOffice.OfficeApi.RulerLevel2 Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.RulerLevel2 this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OfficeApi.RulerLevel2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.RulerLevel2;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OfficeApi.RulerLevel2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.RulerLevel2;
+				return newObject;
+			}
 		}
 
 		#endregion

@@ -112,26 +112,15 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Level">optional object Level</param>
 		[SupportByLibrary("XL14")]
-		public NetOffice.ExcelApi.SlicerCacheLevel get_Item(object level)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.SlicerCacheLevel this[object level]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(level);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.ExcelApi.SlicerCacheLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerCacheLevel;
 			return newObject;
-		}
-
-		/// <summary>
-		/// SupportByLibrary XL14 
-		/// </summary>
-		[SupportByLibrary("XL14")]
-		public NetOffice.ExcelApi.SlicerCacheLevel Item
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-				NetOffice.ExcelApi.SlicerCacheLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerCacheLevel;
-				return newObject;
 			}
 		}
 
@@ -140,15 +129,26 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Level">optional object Level</param>
 		[SupportByLibrary("XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.SlicerCacheLevel this[object level]
+		public NetOffice.ExcelApi.SlicerCacheLevel get__Default(object level)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(level);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.SlicerCacheLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerCacheLevel;
 			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary XL14 
+		/// </summary>
+		[SupportByLibrary("XL14")]
+		public NetOffice.ExcelApi.SlicerCacheLevel _Default
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
+				NetOffice.ExcelApi.SlicerCacheLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerCacheLevel;
+				return newObject;
 			}
 		}
 

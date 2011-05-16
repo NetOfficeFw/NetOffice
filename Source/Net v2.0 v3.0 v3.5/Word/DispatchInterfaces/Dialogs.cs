@@ -116,12 +116,16 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">NetOffice.WordApi.Enums.WdWordDialog Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public NetOffice.WordApi.Dialog Item(NetOffice.WordApi.Enums.WdWordDialog index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.WordApi.Dialog this[NetOffice.WordApi.Enums.WdWordDialog index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.WordApi.Dialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Dialog;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.WordApi.Dialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Dialog;
+				return newObject;
+			}
 		}
 
 		#endregion

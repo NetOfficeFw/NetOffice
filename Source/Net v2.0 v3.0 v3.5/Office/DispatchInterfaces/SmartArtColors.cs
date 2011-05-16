@@ -87,12 +87,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OF14")]
-		public NetOffice.OfficeApi.SmartArtColor Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.SmartArtColor this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OfficeApi.SmartArtColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.SmartArtColor;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OfficeApi.SmartArtColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.SmartArtColor;
+				return newObject;
+			}
 		}
 
 		#endregion

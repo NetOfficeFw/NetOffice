@@ -37,7 +37,7 @@ Public Class Form1
         Dim workBook As Excel.Workbook = _excelApplication.Workbooks.Add()
 
         ' add a commandbar popup
-        Dim commandBarPopup As Office.CommandBarPopup = _excelApplication.CommandBars.get_Item("Worksheet Menu Bar").Controls.Add( _
+        Dim commandBarPopup As Office.CommandBarPopup = _excelApplication.CommandBars("Worksheet Menu Bar").Controls.Add( _
                                                                                 MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, True)
         commandBarPopup.Caption = "commandBarPopup"
 
@@ -82,7 +82,7 @@ Public Class Form1
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' create context menu
-        commandBarPopup = _excelApplication.CommandBars.get_Item("Cell").Controls.Add(MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, True)
+        commandBarPopup = _excelApplication.CommandBars("Cell").Controls.Add(MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, True)
         commandBarPopup.Caption = "commandBarPopup"
 
         ' add a button to the popup

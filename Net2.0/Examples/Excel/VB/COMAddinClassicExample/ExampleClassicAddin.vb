@@ -174,7 +174,7 @@ Public Class ExampleClassicAddin
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' create menu 
-        commandBar = _excelApplication.CommandBars.get_Item("Worksheet Menu Bar")
+        commandBar = _excelApplication.CommandBars("Worksheet Menu Bar")
 
         ' add popup to menu bar
         commandBarPop = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
@@ -191,7 +191,7 @@ Public Class ExampleClassicAddin
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' create context menu 
-        commandBarPop = _excelApplication.CommandBars.get_Item("Cell").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
+        commandBarPop = _excelApplication.CommandBars("Cell").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarPop.Caption = _contextName
         commandBarPop.Tag = _contextName
 

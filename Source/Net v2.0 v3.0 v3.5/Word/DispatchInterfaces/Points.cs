@@ -116,12 +116,16 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD14")]
-		public NetOffice.WordApi.Point Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.WordApi.Point this[Int32 index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.WordApi.Point newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Point;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.WordApi.Point newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Point;
+				return newObject;
+			}
 		}
 
 		/// <summary>
@@ -129,16 +133,12 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.WordApi.Point this[Int32 index]
+		public NetOffice.WordApi.Point _Default(Int32 index)
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.WordApi.Point newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Point;
-				return newObject;
-			}
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.WordApi.Point newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Point;
+			return newObject;
 		}
 
 		#endregion

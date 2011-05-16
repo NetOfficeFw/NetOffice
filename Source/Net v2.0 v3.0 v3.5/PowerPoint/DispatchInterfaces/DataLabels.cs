@@ -669,12 +669,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("PP14")]
-		public NetOffice.PowerPointApi.DataLabel Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.DataLabel this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.DataLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.DataLabel;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.DataLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.DataLabel;
+				return newObject;
+			}
 		}
 
 		/// <summary>
@@ -682,16 +686,12 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("PP14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.PowerPointApi.DataLabel this[object index]
+		public NetOffice.PowerPointApi.DataLabel _Default(object index)
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.PowerPointApi.DataLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.DataLabel;
-				return newObject;
-			}
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.PowerPointApi.DataLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.DataLabel;
+			return newObject;
 		}
 
 		#endregion

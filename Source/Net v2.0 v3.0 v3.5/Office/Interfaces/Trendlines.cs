@@ -111,15 +111,26 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("OF14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.OfficeApi.IMsoTrendline this[object index]
+		public NetOffice.OfficeApi.IMsoTrendline get__Default(object index)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary OF14 
+		/// </summary>
+		[SupportByLibrary("OF14")]
+		public NetOffice.OfficeApi.IMsoTrendline _Default
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
+				NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoTrendline;
+				return newObject;
 			}
 		}
 
@@ -166,24 +177,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public NetOffice.OfficeApi.IMsoTrendline Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.IMsoTrendline this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
-		}
-
-		/// <summary>
-		/// SupportByLibrary OF12 OF14 
-		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
-		public NetOffice.OfficeApi.IMsoTrendline Item()
-		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.IMsoTrendline;
+				return newObject;
+			}
 		}
 
 		#endregion

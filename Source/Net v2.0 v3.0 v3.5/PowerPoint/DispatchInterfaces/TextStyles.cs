@@ -87,12 +87,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.PpTextStyleType Type</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public NetOffice.PowerPointApi.TextStyle Item(NetOffice.PowerPointApi.Enums.PpTextStyleType type)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.TextStyle this[NetOffice.PowerPointApi.Enums.PpTextStyleType type]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.TextStyle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextStyle;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(type);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.TextStyle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.TextStyle;
+				return newObject;
+			}
 		}
 
 		#endregion

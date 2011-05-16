@@ -69,12 +69,16 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public NetOffice.OWC10Api.ChDataLabels get_Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OWC10Api.ChDataLabels this[Int32 index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OWC10Api.ChDataLabels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChDataLabels;
 			return newObject;
+			}
 		}
 
 		/// <summary>

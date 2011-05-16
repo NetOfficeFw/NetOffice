@@ -101,12 +101,16 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">NetOffice.WordApi.Enums.WdViewType Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public NetOffice.WordApi.Zoom Item(NetOffice.WordApi.Enums.WdViewType index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.WordApi.Zoom this[NetOffice.WordApi.Enums.WdViewType index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.WordApi.Zoom newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Zoom;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.WordApi.Zoom newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Zoom;
+				return newObject;
+			}
 		}
 
 		#endregion

@@ -190,12 +190,16 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public NetOffice.ExcelApi.Series Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.Series this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.ExcelApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Series;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.ExcelApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Series;
+				return newObject;
+			}
 		}
 
 		/// <summary>
@@ -261,16 +265,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL12","XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.Series this[object index]
+		public NetOffice.ExcelApi.Series _Default(object index)
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.ExcelApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Series;
-				return newObject;
-			}
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.ExcelApi.Series newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Series;
+			return newObject;
 		}
 
 		#endregion

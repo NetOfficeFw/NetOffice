@@ -164,8 +164,8 @@ namespace COMAddinClassicExample
         /// </summary>
         private void RemoveGui()
         {
-            Office.CommandBar menuBar = _wordApplication.CommandBars.get_Item("Menu Bar");
-            Office.CommandBar contextBar = _wordApplication.CommandBars.get_Item("Text");
+            Office.CommandBar menuBar = _wordApplication.CommandBars["Menu Bar"];
+            Office.CommandBar contextBar = _wordApplication.CommandBars["Text"];
 
             Office.CommandBarControl control = menuBar.FindControl(System.Type.Missing, System.Type.Missing, _menuName, System.Type.Missing, false);
             if (null != control)
@@ -213,7 +213,7 @@ namespace COMAddinClassicExample
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
             /* create menu */
-            commandBar = _wordApplication.CommandBars.get_Item("Menu Bar");
+            commandBar = _wordApplication.CommandBars["Menu Bar"];
             
             // add popup to menu bar
             commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
@@ -229,7 +229,7 @@ namespace COMAddinClassicExample
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
             /* create context menu */ 
-            commandBarPop = (Office.CommandBarPopup)_wordApplication.CommandBars.get_Item("Text").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            commandBarPop = (Office.CommandBarPopup)_wordApplication.CommandBars["Text"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarPop.Caption = _contextName;
             commandBarPop.Tag     = _contextName;
 

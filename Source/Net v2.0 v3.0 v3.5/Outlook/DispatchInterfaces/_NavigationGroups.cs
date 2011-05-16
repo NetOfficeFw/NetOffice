@@ -130,12 +130,16 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OL12","OL14")]
-		public NetOffice.OutlookApi._NavigationGroup Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OutlookApi._NavigationGroup this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OutlookApi._NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._NavigationGroup;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OutlookApi._NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._NavigationGroup;
+				return newObject;
+			}
 		}
 
 		/// <summary>

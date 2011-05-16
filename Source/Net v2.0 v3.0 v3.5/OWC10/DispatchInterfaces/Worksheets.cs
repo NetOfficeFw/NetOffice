@@ -83,12 +83,16 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public COMObject get_Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public COMObject this[object index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
+			}
 		}
 
 		/// <summary>

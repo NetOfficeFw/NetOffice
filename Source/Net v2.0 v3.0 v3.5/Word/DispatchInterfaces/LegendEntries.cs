@@ -116,12 +116,16 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("WD14")]
-		public NetOffice.WordApi.LegendEntry Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.WordApi.LegendEntry this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.WordApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.LegendEntry;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.WordApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.LegendEntry;
+				return newObject;
+			}
 		}
 
 		/// <summary>
@@ -129,16 +133,12 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("WD14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.WordApi.LegendEntry this[object index]
+		public NetOffice.WordApi.LegendEntry _Default(object index)
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.WordApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.LegendEntry;
-				return newObject;
-			}
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.WordApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.LegendEntry;
+			return newObject;
 		}
 
 		#endregion

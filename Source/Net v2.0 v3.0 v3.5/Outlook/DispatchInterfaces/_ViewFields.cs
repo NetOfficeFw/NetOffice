@@ -130,12 +130,16 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OL12","OL14")]
-		public NetOffice.OutlookApi._ViewField Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OutlookApi._ViewField this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OutlookApi._ViewField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._ViewField;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OutlookApi._ViewField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._ViewField;
+				return newObject;
+			}
 		}
 
 		/// <summary>

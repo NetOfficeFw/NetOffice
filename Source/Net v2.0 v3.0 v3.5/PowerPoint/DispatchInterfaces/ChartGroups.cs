@@ -116,12 +116,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("PP14")]
-		public NetOffice.PowerPointApi.ChartGroup Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.ChartGroup this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.ChartGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.ChartGroup;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.ChartGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.ChartGroup;
+				return newObject;
+			}
 		}
 
 		#endregion

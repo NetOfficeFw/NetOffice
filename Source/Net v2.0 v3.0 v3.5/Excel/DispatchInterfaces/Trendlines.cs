@@ -150,24 +150,16 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public NetOffice.ExcelApi.Trendline Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.Trendline this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Trendline;
-			return newObject;
-		}
-
-		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
-		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public NetOffice.ExcelApi.Trendline Item()
-		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Trendline;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.ExcelApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Trendline;
+				return newObject;
+			}
 		}
 
 		/// <summary>
@@ -175,16 +167,24 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("XL12","XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.Trendline this[object index]
+		public NetOffice.ExcelApi.Trendline _Default(object index)
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.ExcelApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Trendline;
-				return newObject;
-			}
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.ExcelApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Trendline;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary XL12 XL14 
+		/// </summary>
+		[SupportByLibrary("XL12","XL14")]
+		public NetOffice.ExcelApi.Trendline _Default()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.ExcelApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Trendline;
+			return newObject;
 		}
 
 		#endregion

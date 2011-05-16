@@ -54,12 +54,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF11","OF12","OF14")]
-		public NetOffice.OfficeApi.SharedWorkspaceMember get_Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.SharedWorkspaceMember this[Int32 index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OfficeApi.SharedWorkspaceMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SharedWorkspaceMember;
 			return newObject;
+			}
 		}
 
 		/// <summary>

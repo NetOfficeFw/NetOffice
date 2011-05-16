@@ -54,12 +54,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF12","OF14")]
-		public NetOffice.OfficeApi.WorkflowTemplate get_Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.WorkflowTemplate this[Int32 index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OfficeApi.WorkflowTemplate newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.WorkflowTemplate;
 			return newObject;
+			}
 		}
 
 		/// <summary>

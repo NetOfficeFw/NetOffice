@@ -54,12 +54,16 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="varIndex">object varIndex</param>
 		[SupportByLibrary("XWC1.0")]
-		public NetOffice.OWC10Api.PivotMemberProperty get_Item(object varIndex)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OWC10Api.PivotMemberProperty this[object varIndex]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(varIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OWC10Api.PivotMemberProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotMemberProperty;
 			return newObject;
+			}
 		}
 
 		/// <summary>

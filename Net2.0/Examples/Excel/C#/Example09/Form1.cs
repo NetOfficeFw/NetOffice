@@ -39,7 +39,7 @@ namespace Example09
              
            
             // add a commandbar popup
-            Office.CommandBarPopup  commandBarPopup = (Office.CommandBarPopup)_excelApplication.CommandBars.get_Item("Worksheet Menu Bar").Controls.Add(
+            Office.CommandBarPopup  commandBarPopup = (Office.CommandBarPopup)_excelApplication.CommandBars["Worksheet Menu Bar"].Controls.Add(
                                                                                 MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, true);
             commandBarPopup.Caption = "commandBarPopup";
              
@@ -97,7 +97,7 @@ namespace Example09
             #region Create a new ContextMenu
 
             // add a commandbar popup
-            commandBarPopup = (Office.CommandBarPopup)_excelApplication.CommandBars.get_Item("Cell").Controls.Add(
+            commandBarPopup = (Office.CommandBarPopup)_excelApplication.CommandBars["Cell"].Controls.Add(
                                                             MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, true);
             commandBarPopup.Caption = "commandBarPopup";
 

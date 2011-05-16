@@ -57,12 +57,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("PP14")]
-		public NetOffice.PowerPointApi.FileConverter Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.FileConverter this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.FileConverter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.FileConverter;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.FileConverter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.FileConverter;
+				return newObject;
+			}
 		}
 
 		#endregion

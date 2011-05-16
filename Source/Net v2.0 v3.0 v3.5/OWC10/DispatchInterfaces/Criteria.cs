@@ -102,8 +102,11 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public object get_Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public object this[Int32 index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
@@ -115,6 +118,7 @@ namespace NetOffice.OWC10Api
 			else
 			{
 				return  returnItem;
+			}
 			}
 		}
 

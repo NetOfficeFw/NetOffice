@@ -68,12 +68,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="iSig">Int32 iSig</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public NetOffice.OfficeApi.Signature get_Item(Int32 iSig)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.Signature this[Int32 iSig]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(iSig);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.Signature;
 			return newObject;
+			}
 		}
 
 		/// <summary>

@@ -116,12 +116,16 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">NetOffice.WordApi.Enums.WdListGalleryType Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public NetOffice.WordApi.ListGallery Item(NetOffice.WordApi.Enums.WdListGalleryType index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.WordApi.ListGallery this[NetOffice.WordApi.Enums.WdListGalleryType index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.WordApi.ListGallery newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ListGallery;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.WordApi.ListGallery newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ListGallery;
+				return newObject;
+			}
 		}
 
 		#endregion

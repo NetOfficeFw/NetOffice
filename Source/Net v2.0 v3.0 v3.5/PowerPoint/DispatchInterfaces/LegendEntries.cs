@@ -116,12 +116,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("PP14")]
-		public NetOffice.PowerPointApi.LegendEntry Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.LegendEntry this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.LegendEntry;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.LegendEntry;
+				return newObject;
+			}
 		}
 
 		/// <summary>
@@ -129,16 +133,12 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("PP14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.PowerPointApi.LegendEntry this[object index]
+		public NetOffice.PowerPointApi.LegendEntry _Default(object index)
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.PowerPointApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.LegendEntry;
-				return newObject;
-			}
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.PowerPointApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.LegendEntry;
+			return newObject;
 		}
 
 		#endregion

@@ -87,11 +87,15 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
-		public string Item(string name)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public string this[string name]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			return (string)returnItem;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(name);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				return (string)returnItem;
+			}
 		}
 
 		/// <summary>

@@ -802,19 +802,23 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public object Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public object this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			Type returnItemType = Invoker.GetObjectType(returnItem);
-			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
+			get
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItem) && (true == returnItemType.IsCOMObject))
+				{
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
 			}
 		}
 

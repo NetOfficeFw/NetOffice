@@ -54,11 +54,15 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public NetOffice.OfficeApi.Enums.MsoFileType get_Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.Enums.MsoFileType this[Int32 index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			return (NetOffice.OfficeApi.Enums.MsoFileType)returnItem;
+			}
 		}
 
 		/// <summary>

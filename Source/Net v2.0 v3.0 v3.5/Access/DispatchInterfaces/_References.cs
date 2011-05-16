@@ -87,12 +87,16 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="var">object var</param>
 		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
-		public NetOffice.AccessApi.Reference Item(object var)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.AccessApi.Reference this[object var]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(var);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi.Reference;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(var);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi.Reference;
+				return newObject;
+			}
 		}
 
 		/// <summary>

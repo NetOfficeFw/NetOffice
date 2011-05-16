@@ -150,24 +150,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PP14")]
-		public NetOffice.PowerPointApi.Trendline Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.Trendline this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Trendline;
-			return newObject;
-		}
-
-		/// <summary>
-		/// SupportByLibrary PP14 
-		/// </summary>
-		[SupportByLibrary("PP14")]
-		public NetOffice.PowerPointApi.Trendline Item()
-		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Trendline;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Trendline;
+				return newObject;
+			}
 		}
 
 		/// <summary>
@@ -175,16 +167,24 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PP14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.PowerPointApi.Trendline this[object index]
+		public NetOffice.PowerPointApi.Trendline _Default(object index)
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Trendline;
-				return newObject;
-			}
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Trendline;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary PP14 
+		/// </summary>
+		[SupportByLibrary("PP14")]
+		public NetOffice.PowerPointApi.Trendline _Default()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Trendline;
+			return newObject;
 		}
 
 		#endregion

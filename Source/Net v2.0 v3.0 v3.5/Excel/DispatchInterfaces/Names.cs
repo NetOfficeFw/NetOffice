@@ -153,24 +153,16 @@ namespace NetOffice.ExcelApi
 		/// <param name="IndexLocal">optional object IndexLocal</param>
 		/// <param name="RefersTo">optional object RefersTo</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public NetOffice.ExcelApi.Name Item(object index, object indexLocal, object refersTo)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.Name this[object index, object indexLocal, object refersTo]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, indexLocal, refersTo);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Name;
-			return newObject;
-		}
-
-		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
-		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public NetOffice.ExcelApi.Name Item()
-		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Name;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index, indexLocal, refersTo);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Name;
+				return newObject;
+			}
 		}
 
 		/// <summary>
@@ -180,16 +172,24 @@ namespace NetOffice.ExcelApi
 		/// <param name="IndexLocal">optional object IndexLocal</param>
 		/// <param name="RefersTo">optional object RefersTo</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.Name this[object index, object indexLocal, object refersTo]
+		public NetOffice.ExcelApi.Name _Default(object index, object indexLocal, object refersTo)
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index, indexLocal, refersTo);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Name;
-				return newObject;
-			}
+			object[] paramsArray = Invoker.ValidateParamsArray(index, indexLocal, refersTo);
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// </summary>
+		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		public NetOffice.ExcelApi.Name _Default()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Name;
+			return newObject;
 		}
 
 		#endregion

@@ -156,8 +156,8 @@ Public Class ExampleClassicAddin
     ''' <remarks></remarks>
     Private Sub RemoveGui()
 
-        Dim menuBar As Office.CommandBar = _wordApplication.CommandBars.get_Item("Menu Bar")
-        Dim contextBar As Office.CommandBar = _wordApplication.CommandBars.get_Item("Text")
+        Dim menuBar As Office.CommandBar = _wordApplication.CommandBars("Menu Bar")
+        Dim contextBar As Office.CommandBar = _wordApplication.CommandBars("Text")
 
         Dim control As Office.CommandBarControl = menuBar.FindControl(System.Type.Missing, System.Type.Missing, _menuName, System.Type.Missing, False)
         If (Not IsNothing(control)) Then
@@ -206,7 +206,7 @@ Public Class ExampleClassicAddin
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' create menu 
-        commandBar = _wordApplication.CommandBars.get_Item("Menu Bar")
+        commandBar = _wordApplication.CommandBars("Menu Bar")
 
         ' add popup to menu bar
         commandBarPop = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
@@ -223,7 +223,7 @@ Public Class ExampleClassicAddin
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' create context menu 
-        commandBarPop = _wordApplication.CommandBars.get_Item("Text").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
+        commandBarPop = _wordApplication.CommandBars("Text").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarPop.Caption = _contextName
         commandBarPop.Tag = _contextName
 

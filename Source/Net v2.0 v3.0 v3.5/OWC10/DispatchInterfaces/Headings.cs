@@ -95,16 +95,18 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary XWC1.0 
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public NetOffice.OWC10Api.Heading get_Item(ref object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OWC10Api.Heading this[object index]
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OWC10Api.Heading newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Heading;
-			index = (object)paramsArray[0];
 			return newObject;
+			}
 		}
 
 		#endregion

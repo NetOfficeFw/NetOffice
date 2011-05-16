@@ -111,16 +111,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Field">object Field</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.PivotField this[object field]
+		public NetOffice.ExcelApi.PivotField get__Default(object field)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(field);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.PivotField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotField;
 			return newObject;
-			}
 		}
 
 		#endregion
@@ -161,12 +157,16 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public NetOffice.ExcelApi.PivotField Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.PivotField this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.ExcelApi.PivotField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.PivotField;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.ExcelApi.PivotField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.PivotField;
+				return newObject;
+			}
 		}
 
 		/// <summary>

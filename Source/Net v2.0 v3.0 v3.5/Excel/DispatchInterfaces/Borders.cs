@@ -168,12 +168,16 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">NetOffice.ExcelApi.Enums.XlBordersIndex Index</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public NetOffice.ExcelApi.Border get_Item(NetOffice.ExcelApi.Enums.XlBordersIndex index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.Border this[NetOffice.ExcelApi.Enums.XlBordersIndex index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.ExcelApi.Border newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Border;
 			return newObject;
+			}
 		}
 
 		/// <summary>
@@ -265,16 +269,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">NetOffice.ExcelApi.Enums.XlBordersIndex Index</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.Border this[NetOffice.ExcelApi.Enums.XlBordersIndex index]
+		public NetOffice.ExcelApi.Border get__Default(NetOffice.ExcelApi.Enums.XlBordersIndex index)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.Border newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Border;
 			return newObject;
-			}
 		}
 
 		/// <summary>

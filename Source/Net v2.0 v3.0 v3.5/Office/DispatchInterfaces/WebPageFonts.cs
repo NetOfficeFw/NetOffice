@@ -68,12 +68,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">NetOffice.OfficeApi.Enums.MsoCharacterSet Index</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public NetOffice.OfficeApi.WebPageFont get_Item(NetOffice.OfficeApi.Enums.MsoCharacterSet index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.WebPageFont this[NetOffice.OfficeApi.Enums.MsoCharacterSet index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OfficeApi.WebPageFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.WebPageFont;
 			return newObject;
+			}
 		}
 
 		#endregion

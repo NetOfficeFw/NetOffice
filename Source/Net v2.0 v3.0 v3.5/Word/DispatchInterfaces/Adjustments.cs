@@ -111,22 +111,15 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public Single get_Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public Single this[Int32 index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			return (Single)returnItem;
-		}
-
-		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
-		/// </summary>
-		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public void set_Item(Int32 index, Single value)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "Item", paramsArray, value);
+			}
 		}
 
 		#endregion

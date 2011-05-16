@@ -82,22 +82,15 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public Single get_Item(Int32 index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public Single this[Int32 index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			return (Single)returnItem;
-		}
-
-		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
-		/// </summary>
-		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
-		public void set_Item(Int32 index, Single value)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "Item", paramsArray, value);
+			}
 		}
 
 		#endregion

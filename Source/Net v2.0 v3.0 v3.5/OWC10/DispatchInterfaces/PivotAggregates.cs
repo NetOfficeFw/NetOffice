@@ -54,12 +54,16 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public NetOffice.OWC10Api.PivotAggregate get_Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OWC10Api.PivotAggregate this[object index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OWC10Api.PivotAggregate newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotAggregate;
 			return newObject;
+			}
 		}
 
 		/// <summary>

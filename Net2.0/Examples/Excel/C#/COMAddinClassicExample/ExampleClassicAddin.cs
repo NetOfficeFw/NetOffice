@@ -178,7 +178,7 @@ namespace COMAddinClassicExample
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
             /* create menu */
-            commandBar = _excelApplication.CommandBars.get_Item("Worksheet Menu Bar");
+            commandBar = _excelApplication.CommandBars["Worksheet Menu Bar"];
 
             // add popup to menu bar
             commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
@@ -194,7 +194,7 @@ namespace COMAddinClassicExample
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
             /* create context menu */
-            commandBarPop = (Office.CommandBarPopup)_excelApplication.CommandBars.get_Item("Cell").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            commandBarPop = (Office.CommandBarPopup)_excelApplication.CommandBars["Cell"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarPop.Caption = _contextName;
             commandBarPop.Tag = _contextName;
 

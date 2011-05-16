@@ -114,16 +114,18 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
-		public NetOffice.WordApi.TwoInitialCapsException Item(ref object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.WordApi.TwoInitialCapsException this[object index]
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray, modifiers);
-			NetOffice.WordApi.TwoInitialCapsException newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TwoInitialCapsException;
-			index = (object)paramsArray[0];
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.WordApi.TwoInitialCapsException newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TwoInitialCapsException;
+				return newObject;
+			}
 		}
 
 		/// <summary>

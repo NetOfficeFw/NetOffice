@@ -96,12 +96,16 @@ namespace NetOffice.OWC10Api
 		/// <param name="Index">object Index</param>
 		/// <param name="Level">Int32 Level</param>
 		[SupportByLibrary("XWC1.0")]
-		public NetOffice.OWC10Api.ChCategoryLabel get_Item(object index, Int32 level)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OWC10Api.ChCategoryLabel this[object index, Int32 level]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index, level);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OWC10Api.ChCategoryLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChCategoryLabel;
 			return newObject;
+			}
 		}
 
 		/// <summary>

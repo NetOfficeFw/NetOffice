@@ -362,15 +362,43 @@ namespace NetOffice.ExcelApi
 		/// <param name="RowIndex">optional object RowIndex</param>
 		/// <param name="ColumnIndex">optional object ColumnIndex</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.Range this[object rowIndex, object columnIndex]
+		public NetOffice.ExcelApi.Range get__Default(object rowIndex, object columnIndex)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex, columnIndex);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
 			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// </summary>
+		/// <param name="RowIndex">optional object RowIndex</param>
+		/// <param name="ColumnIndex">optional object ColumnIndex</param>
+		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		public void set__Default(object rowIndex, object columnIndex, NetOffice.ExcelApi.Range value)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex, columnIndex);
+			Invoker.PropertySet(this, "_Default", paramsArray, value);
+		}
+
+		/// <summary>
+		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// </summary>
+		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		public NetOffice.ExcelApi.Range _Default
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
+				NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
+				return newObject;
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "_Default", paramsArray);
 			}
 		}
 
@@ -838,64 +866,16 @@ namespace NetOffice.ExcelApi
 		/// <param name="RowIndex">object RowIndex</param>
 		/// <param name="ColumnIndex">optional object ColumnIndex</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public object get_Item(object rowIndex, object columnIndex)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.Range this[object rowIndex, object columnIndex]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex, columnIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			Type returnItemType = Invoker.GetObjectType(returnItem);
-			if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
-			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				return newObject;
+			NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
+			return newObject;
 			}
-			else
-			{
-				return  returnItem;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
-		/// </summary>
-		/// <param name="RowIndex">object RowIndex</param>
-		/// <param name="ColumnIndex">optional object ColumnIndex</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public void set_Item(object rowIndex, object columnIndex, object value)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex, columnIndex);
-			Invoker.PropertySet(this, "Item", paramsArray, value);
-		}
-
-		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
-		/// </summary>
-		/// <param name="RowIndex">object RowIndex</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public object get_Item(object rowIndex)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			Type returnItemType = Invoker.GetObjectType(returnItem);
-			if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
-			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
-		/// </summary>
-		/// <param name="RowIndex">object RowIndex</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public void set_Item(object rowIndex, object value)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex);
-			Invoker.PropertySet(this, "Item", paramsArray, value);
 		}
 
 		/// <summary>

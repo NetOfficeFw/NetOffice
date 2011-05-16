@@ -86,12 +86,16 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="varIndex">object varIndex</param>
 		[SupportByLibrary("OF10","OF11","OF12","OF14")]
-		public COMObject Item(object varIndex)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public COMObject this[object varIndex]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varIndex);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(varIndex);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
+			}
 		}
 
 		#endregion

@@ -117,12 +117,16 @@ namespace NetOffice.PowerPointApi
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlAxisType Type</param>
 		/// <param name="AxisGroup">NetOffice.PowerPointApi.Enums.XlAxisGroup AxisGroup</param>
 		[SupportByLibrary("PP14")]
-		public NetOffice.PowerPointApi.Axis Item(NetOffice.PowerPointApi.Enums.XlAxisType type, NetOffice.PowerPointApi.Enums.XlAxisGroup axisGroup)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.PowerPointApi.Axis this[NetOffice.PowerPointApi.Enums.XlAxisType type, NetOffice.PowerPointApi.Enums.XlAxisGroup axisGroup]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.PowerPointApi.Axis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Axis;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.PowerPointApi.Axis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Axis;
+				return newObject;
+			}
 		}
 
 		/// <summary>
@@ -131,16 +135,12 @@ namespace NetOffice.PowerPointApi
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlAxisType Type</param>
 		/// <param name="AxisGroup">NetOffice.PowerPointApi.Enums.XlAxisGroup AxisGroup</param>
 		[SupportByLibrary("PP14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.PowerPointApi.Axis this[NetOffice.PowerPointApi.Enums.XlAxisType type, NetOffice.PowerPointApi.Enums.XlAxisGroup axisGroup]
+		public NetOffice.PowerPointApi.Axis _Default(NetOffice.PowerPointApi.Enums.XlAxisType type, NetOffice.PowerPointApi.Enums.XlAxisGroup axisGroup)
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.PowerPointApi.Axis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Axis;
-				return newObject;
-			}
+			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.PowerPointApi.Axis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Axis;
+			return newObject;
 		}
 
 		#endregion

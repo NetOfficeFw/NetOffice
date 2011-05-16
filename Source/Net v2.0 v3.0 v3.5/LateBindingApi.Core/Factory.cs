@@ -108,6 +108,9 @@ namespace LateBindingApi.Core
                     }
                 }
             }
+
+            if (!Settings.EnableMessageFilter)
+                Settings.EnableMessageFilter = true;
         }
 
         /// <summary>

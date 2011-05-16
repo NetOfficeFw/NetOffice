@@ -68,8 +68,11 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Item">optional object Item</param>
 		[SupportByLibrary("DAO3.6","DAO12")]
-		public object get_Item(object item)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public object this[object item]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
@@ -82,28 +85,6 @@ namespace NetOffice.DAOApi
 			{
 				return  returnItem;
 			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
-		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
-		public object Item
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
-				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
 			}
 		}
 

@@ -87,12 +87,16 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Id">string Id</param>
 		[SupportByLibrary("PP12","PP14")]
-		public NetOffice.OfficeApi.CustomXMLPart Item(string id)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.CustomXMLPart this[string id]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(id);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLPart;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(id);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLPart;
+				return newObject;
+			}
 		}
 
 		/// <summary>

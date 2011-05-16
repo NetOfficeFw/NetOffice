@@ -102,12 +102,16 @@ namespace NetOffice.VBIDEApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("VBE5.3","VBE12")]
-		public NetOffice.VBIDEApi.Window Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.VBIDEApi.Window this[object index]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.VBIDEApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.Window;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(index);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.VBIDEApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.Window;
+				return newObject;
+			}
 		}
 
 		/// <summary>

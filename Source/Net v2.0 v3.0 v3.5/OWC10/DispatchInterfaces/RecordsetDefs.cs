@@ -68,12 +68,16 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("XWC1.0")]
-		public NetOffice.OWC10Api.RecordsetDef get_Item(object index)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OWC10Api.RecordsetDef this[object index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.RecordsetDef;
 			return newObject;
+			}
 		}
 
 		#endregion

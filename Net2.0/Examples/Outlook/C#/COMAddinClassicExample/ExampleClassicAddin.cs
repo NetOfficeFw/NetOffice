@@ -176,7 +176,7 @@ namespace COMAddinClassicExample
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
             /* create menu */
-            commandBar = _outlookApplication.ActiveExplorer().CommandBars.get_Item("Menu Bar");
+            commandBar = _outlookApplication.ActiveExplorer().CommandBars["Menu Bar"];
 
             // add popup to menu bar
             commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);

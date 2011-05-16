@@ -112,16 +112,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="ViewName">object ViewName</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public NetOffice.ExcelApi.CustomView this[object viewName]
+		public NetOffice.ExcelApi.CustomView get__Default(object viewName)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(viewName);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.CustomView newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.CustomView;
 			return newObject;
-			}
 		}
 
 		#endregion
@@ -133,12 +129,16 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="ViewName">object ViewName</param>
 		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
-		public NetOffice.ExcelApi.CustomView Item(object viewName)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.CustomView this[object viewName]
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(viewName);
-			object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-			NetOffice.ExcelApi.CustomView newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CustomView;
-			return newObject;
+			get
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(viewName);
+				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
+				NetOffice.ExcelApi.CustomView newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CustomView;
+				return newObject;
+			}
 		}
 
 		/// <summary>

@@ -30,7 +30,7 @@ namespace LateBindingApi.Core
         #region Fields
 
         private static CultureInfo _cultureInfo;
-        private static bool        _eventsEnabled;
+        private static bool        _eventsEnabled = true;
         private static bool        _messageFilterEnabled;
         private static IntPtr      _messageFilter;
 
@@ -69,7 +69,7 @@ namespace LateBindingApi.Core
         }
         
         /// <summary>
-        /// Get or set the Event support, default is false 
+        /// Get or set the Event support, default is true 
         /// </summary>
         public static bool EnableEvents
         {

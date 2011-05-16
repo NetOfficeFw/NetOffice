@@ -55,11 +55,8 @@ namespace NetOffice.OWC10Api
 		/// <param name="Row">optional object Row</param>
 		/// <param name="Column">optional object Column</param>
 		[SupportByLibrary("XWC1.0")]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("IndexerItem")]
-		public object this[object row, object column]
+		public object get__Default(object row, object column)
 		{
-			get
-{			
 			object[] paramsArray = Invoker.ValidateParamsArray(row, column);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
@@ -72,6 +69,45 @@ namespace NetOffice.OWC10Api
 			{
 				return  returnItem;
 			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary XWC1.0 
+		/// </summary>
+		/// <param name="Row">optional object Row</param>
+		/// <param name="Column">optional object Column</param>
+		[SupportByLibrary("XWC1.0")]
+		public void set__Default(object row, object column, object value)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(row, column);
+			Invoker.PropertySet(this, "_Default", paramsArray, value);
+		}
+
+		/// <summary>
+		/// SupportByLibrary XWC1.0 
+		/// </summary>
+		[SupportByLibrary("XWC1.0")]
+		public object _Default
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
+				Type returnItemType = Invoker.GetObjectType(returnItem);
+				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				{
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "_Default", paramsArray);
 			}
 		}
 
@@ -567,25 +603,16 @@ namespace NetOffice.OWC10Api
 		/// <param name="RowIndex">object RowIndex</param>
 		/// <param name="ColumnIndex">optional object ColumnIndex</param>
 		[SupportByLibrary("XWC1.0")]
-		public NetOffice.OWC10Api._Range get_Item(object rowIndex, object columnIndex)
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OWC10Api._Range this[object rowIndex, object columnIndex]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex, columnIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 			return newObject;
-		}
-
-		/// <summary>
-		/// SupportByLibrary XWC1.0 
-		/// </summary>
-		/// <param name="RowIndex">object RowIndex</param>
-		[SupportByLibrary("XWC1.0")]
-		public NetOffice.OWC10Api._Range get_Item(object rowIndex)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
-			return newObject;
+			}
 		}
 
 		/// <summary>
