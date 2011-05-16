@@ -1,4 +1,4 @@
-﻿namespace Example1
+﻿namespace Example01
 {
     partial class Form1
     {
@@ -53,6 +53,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(304, 118);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "this example shows you to create a new database.";
             // 
             // Form1
             // 
@@ -62,7 +63,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Example1 -";
+            this.Text = "Example01 - Create new Database";
             this.ResumeLayout(false);
             this.PerformLayout();
 

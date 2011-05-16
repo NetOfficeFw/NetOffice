@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("COMAddinRibbonExample")> 
+<Assembly: AssemblyTitle("Example01")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("NetOffice")> 
 <Assembly: AssemblyCopyright("Copyright © 2011")> 
 <Assembly: AssemblyTrademark("")> 
 
-<Assembly: ComVisible(True)> 
+<Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("a53fd2ef-a016-4f25-bc8f-2ccc7d1aa9f3")> 
+<Assembly: Guid("4baa28c5-d0d3-4944-871b-9ad3e35b751d")> 
 
 ' Version information for an assembly consists of the following four values:
 '

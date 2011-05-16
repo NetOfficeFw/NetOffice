@@ -7,7 +7,7 @@ using System.Text;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace Example1
+namespace Example01
 {
     public partial class FinishDialog : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace Example1
+﻿namespace Example01
 {
     partial class FinishDialog
     {
@@ -50,7 +50,7 @@
             this.buttonOpenWorkbook.Name = "buttonOpenWorkbook";
             this.buttonOpenWorkbook.Size = new System.Drawing.Size(102, 22);
             this.buttonOpenWorkbook.TabIndex = 3;
-            this.buttonOpenWorkbook.Text = "Open Workbook";
+            this.buttonOpenWorkbook.Text = "Open Database";
             this.buttonOpenWorkbook.UseVisualStyleBackColor = true;
             this.buttonOpenWorkbook.Click += new System.EventHandler(this.buttonOpenWorkbook_Click);
             // 
