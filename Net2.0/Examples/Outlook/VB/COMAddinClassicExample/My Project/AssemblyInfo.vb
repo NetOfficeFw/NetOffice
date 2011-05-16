@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("COMAddinClassicExample")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Ministerium für Staatssicherheit")> 
-<Assembly: AssemblyProduct("COMAddinClassicExample")> 
-<Assembly: AssemblyCopyright("Copyright © Ministerium für Staatssicherheit 2011")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("NetOffice")> 
+<Assembly: AssemblyCopyright("Copyright © 2011")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(True)> 

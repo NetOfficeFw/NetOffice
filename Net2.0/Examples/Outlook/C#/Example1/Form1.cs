@@ -27,8 +27,7 @@ namespace Example1
         {
 
             // start outlook and turn off msg boxes
-            _outlookApplication = new Outlook.Application();           
- 
+            _outlookApplication = new Outlook.Application();
         }
         
     }
