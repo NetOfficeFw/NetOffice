@@ -49,8 +49,14 @@ Public Class ExampleClassicAddin
 
         Catch ex As Exception
 
-            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured in OnConnection." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' dont show Dialogs or MessageBoxes in IDTExtensibility2 Functions
+            ' we save the error info in addin registry key
+
+            Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, True)
+
+            rk.SetValue("LastError", "An error occured in OnConnection.")
+            rk.SetValue("LastException", ex.Message)
+            rk.Close()
 
         End Try
     End Sub
@@ -64,8 +70,14 @@ Public Class ExampleClassicAddin
 
         Catch ex As Exception
 
-            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured in OnDisconnection." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' dont show Dialogs or MessageBoxes in IDTExtensibility2 Functions
+            ' we save the error info in addin registry key
+
+            Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, True)
+
+            rk.SetValue("LastError", "An error occured in OnDisconnection.")
+            rk.SetValue("LastException", ex.Message)
+            rk.Close()
 
         End Try
     End Sub
@@ -77,8 +89,14 @@ Public Class ExampleClassicAddin
 
         Catch ex As Exception
 
-            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured in OnStartupComplete." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' dont show Dialogs or MessageBoxes in IDTExtensibility2 Functions
+            ' we save the error info in addin registry key
+
+            Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, True)
+
+            rk.SetValue("LastError", "An error occured in OnStartupComplete.")
+            rk.SetValue("LastException", ex.Message)
+            rk.Close()
 
         End Try
     End Sub
