@@ -96,7 +96,7 @@ Public Class Form1
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' make visible & set buttons
-        powerApplication.Visible = MsoTriState.msoFalse
+        powerApplication.Visible = MsoTriState.msoTrue
         button1.Enabled = False
         button2.Enabled = True
 

@@ -1,4 +1,7 @@
-﻿Imports LateBindingApi.Core
+﻿Imports System.IO
+Imports System.Data.OleDb
+
+Imports LateBindingApi.Core
 
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
@@ -20,7 +23,7 @@ Public Class Form1
 
         'create database name 
         Dim fileExtension As String = GetDefaultExtension(accessApplication)
-        Dim documentFile As String = String.Format("{0}\\Example01{1}", Environment.CurrentDirectory, fileExtension)
+        Dim documentFile As String = String.Format("{0}\\Example03{1}", Environment.CurrentDirectory, fileExtension)
 
         'delete old database if exists
         If (System.IO.File.Exists(documentFile)) Then
@@ -29,6 +32,35 @@ Public Class Form1
 
         ' create database 
         Dim newDatabase As DAO.Database = accessApplication.DBEngine.Workspaces(0).CreateDatabase(documentFile, LanguageConstants.dbLangGeneral)
+        accessApplication.DBEngine.Workspaces(0).Close()
+
+        ' setup database connection
+        Dim oleConnection As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + documentFile)
+        oleConnection.Open()
+
+        ' create table
+        Dim oleCreateCommand As New OleDbCommand("CREATE TABLE NetOfficeTable(Column1 Text, Column2 Text)", oleConnection)
+        oleCreateCommand.ExecuteReader().Close()
+
+        ' write some data with plain sql & close
+        For i As Integer = 0 To 2000
+
+            Dim insertCommand As String = String.Format("INSERT INTO NetOfficeTable(Column1, Column2) VALUES(""{0}"", ""{1}"")", i, DateTime.Now.ToShortTimeString())
+            Dim oleInsertCommand As New OleDbCommand(insertCommand, oleConnection)
+            oleInsertCommand.ExecuteReader().Close()
+
+
+        Next
+        oleConnection.Close()
+
+        ' now we do CompactDatabase            
+
+        Dim newDocumentFile As String = String.Format("{0}\\CompactDatabase{1}", Environment.CurrentDirectory, fileExtension)
+        If (File.Exists(newDocumentFile)) Then
+            File.Delete(newDocumentFile)
+        End If
+
+        accessApplication.DBEngine.CompactDatabase(documentFile, newDocumentFile)
 
         'close access and dispose reference
         accessApplication.Quit(AcQuitOption.acQuitSaveAll)
@@ -57,5 +89,3 @@ Public Class Form1
     End Function
 
 End Class
-
-

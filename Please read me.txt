@@ -1,0 +1,2 @@
+assemblies and examples and tutorials only in net2.0 folder currently.
+when its done then i do a copy to other net versions. 
