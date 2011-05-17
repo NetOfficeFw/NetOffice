@@ -25,7 +25,7 @@ namespace Example04
             // Initialize Api COMObject Support
             LateBindingApi.Core.Factory.Initialize();
 
-            // start word and turn off msg boxes
+            // start powerpoint and turn off msg boxes
             PowerPoint.Application powerApplication = new PowerPoint.Application();
             powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone;
 
@@ -54,7 +54,7 @@ namespace Example04
             powerApplication.Quit();
             powerApplication.Dispose();
 
-            FinishDialog fDialog = new FinishDialog("Presentation saved.", (string)documentFile);
+            FinishDialog fDialog = new FinishDialog("Presentation saved.", documentFile);
             fDialog.ShowDialog(this);
         }
 

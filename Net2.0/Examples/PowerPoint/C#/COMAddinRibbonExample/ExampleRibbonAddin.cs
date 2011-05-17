@@ -98,8 +98,15 @@ namespace COMAddinRibbonExample
             }
             catch (Exception throwedException)
             {
+                // dont show Dialogs or MessageBoxes in IDTExtensibility2 Functions
+                // we save the error info in addin registry key
+
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured in OnConnection." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, true);
+                rk.SetValue("LastError", "An error occured in OnConnection.");
+                rk.SetValue("LastException", throwedException.Message);
+                rk.Close();
             }
         }
 
@@ -112,8 +119,15 @@ namespace COMAddinRibbonExample
             }
             catch (Exception throwedException)
             {
+                // dont show Dialogs or MessageBoxes in IDTExtensibility2 Functions
+                // we save the error info in addin registry key
+
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured in OnDisconnection." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, true);
+                rk.SetValue("LastError", "An error occured in OnDisconnection.");
+                rk.SetValue("LastException", throwedException.Message);
+                rk.Close();
             }
         }
 

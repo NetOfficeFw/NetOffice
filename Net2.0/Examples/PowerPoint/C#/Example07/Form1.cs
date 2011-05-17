@@ -30,14 +30,13 @@ namespace Example07
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             // Initialize Api COMObject Support
             LateBindingApi.Core.Factory.Initialize();
 
             Office.CommandBar commandBar;
             Office.CommandBarButton commandBarBtn;
 
-            // start PowerPoint and turn off msg boxes
+            // start powerpoint and turn off msg boxes
             _powerApplication = new PowerPoint.Application();
             _powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone;
             

@@ -29,7 +29,7 @@ Public Class Form1
         Dim commandBar As Office.CommandBar = Nothing
         Dim commandBarBtn As Office.CommandBarButton = Nothing
 
-        ' start word and turn off msg boxes
+        ' start powerpoint and turn off msg boxes
         Dim powerApplication As New PowerPoint.Application()
         powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone
 

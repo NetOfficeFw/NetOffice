@@ -28,6 +28,7 @@ Public Class ExampleClassicAddin
     Private Shared ReadOnly _contextMenuButtonName As String = "VB_ContextButton"
 
     Dim _wordApplication As Word.Application = Nothing
+    Dim _normalDotTemplate As Word.Template = Nothing
 
 #Region "IDTExtensibility2 Members"
 
@@ -64,7 +65,11 @@ Public Class ExampleClassicAddin
     Public Sub OnDisconnection(ByVal RemoveMode As ext_DisconnectMode, ByRef custom As System.Array) Implements IDTExtensibility2.OnDisconnection
         Try
 
+
             If (Not IsNothing(_wordApplication)) Then
+                ' word ignores the temporary parameter in created menus(not toolbars) and save menu settings to dot file
+                ' remove menu in IDTExtensibility2.OnDisconnection 
+                RemoveGui()
                 _wordApplication.Dispose()
             End If
 
@@ -85,9 +90,7 @@ Public Class ExampleClassicAddin
     Public Sub OnStartupComplete(ByRef custom As System.Array) Implements IDTExtensibility2.OnStartupComplete
         Try
 
-            ' word ignores the temporary parameter in created menus(not toolbars) and save menu settings to normal.dot 
-            ' remove menu in IDTExtensibility2.OnDisconnection are not helpful, normal.dot was already saved at this time
-            ' thats the reason for we remove an old menu in IDTExtensibility2.OnConnection if exists
+            GetNormalDotTemplate()
             RemoveGui()
             SetupGui()
 
@@ -169,25 +172,42 @@ Public Class ExampleClassicAddin
 #End Region
 
     ''' <summary>
+    ''' returns normal.dot template
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub GetNormalDotTemplate()
+
+        For Each installedTemplate As Word.Template In _wordApplication.Templates
+            If (installedTemplate.Name.Equals("normal.dot", StringComparison.InvariantCultureIgnoreCase) Or _
+                (installedTemplate.Name.Equals("normal.dotx", StringComparison.InvariantCultureIgnoreCase))) Then
+
+                _normalDotTemplate = installedTemplate
+                Return
+
+            End If
+        Next
+
+    End Sub
+
+    ''' <summary>
     ''' removes gui elements if exists
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub RemoveGui()
+
+        _wordApplication.CustomizationContext = _normalDotTemplate
 
         Dim menuBar As Office.CommandBar = _wordApplication.CommandBars("Menu Bar")
         Dim contextBar As Office.CommandBar = _wordApplication.CommandBars("Text")
 
         Dim control As Office.CommandBarControl = menuBar.FindControl(System.Type.Missing, System.Type.Missing, _menuName, System.Type.Missing, False)
         If (Not IsNothing(control)) Then
-
             control.Delete()
-            menuBar.Reset()
         End If
 
         control = contextBar.FindControl(System.Type.Missing, System.Type.Missing, _contextName, System.Type.Missing, False)
         If (Not IsNothing(control)) Then
             control.Delete()
-            contextBar.Reset()
         End If
 
         menuBar.Dispose()
@@ -204,6 +224,8 @@ Public Class ExampleClassicAddin
 
         ' How to: Add Commands to Shortcut Menus in Excel
         ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx   
+
+        _wordApplication.CustomizationContext = _normalDotTemplate
 
         'create commandbar 
         Dim commandBar As Office.CommandBar = _wordApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, True)
@@ -253,6 +275,8 @@ Public Class ExampleClassicAddin
         commandBarBtn.FaceId = 9
         clickHandler = AddressOf Me.commandBarBtn_ClickEvent
         AddHandler commandBarBtn.ClickEvent, clickHandler
+
+        _normalDotTemplate.Saved = True
 
     End Sub
 

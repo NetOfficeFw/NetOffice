@@ -22,7 +22,7 @@ Public Class Form1
         ' Initialize Api COMObject Support
         LateBindingApi.Core.Factory.Initialize()
 
-        ' start word and turn off msg boxes
+        ' start powerpoint and turn off msg boxes
         Dim powerApplication As New PowerPoint.Application()
         powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone
 

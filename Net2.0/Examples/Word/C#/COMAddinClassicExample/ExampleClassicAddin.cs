@@ -31,6 +31,7 @@ namespace COMAddinClassicExample
         private static readonly string _contextMenuButtonName = "C#_ContextButton";
 
         Word.Application _wordApplication;
+        Word.Template    _normalDotTemplate; 
 
         #region COM Register Functions
 
@@ -132,11 +133,13 @@ namespace COMAddinClassicExample
         {
             try
             {
-                // remove gui, read comment in IDTExtensibility2.OnConnection
-                RemoveGui();
-
                 if (null != _wordApplication)
+                {
+                    // word ignores the temporary parameter in created menus(not toolbars) and save menu settings to normal.dot 
+                    // remove menu in IDTExtensibility2.OnDisconnection 
+                    RemoveGui();
                     _wordApplication.Dispose();
+                }
             }
             catch (Exception throwedException)
             {
@@ -156,11 +159,7 @@ namespace COMAddinClassicExample
         {
             try
             { 
-                /* 
-                 * word ignores the temporary parameter in created menus(not toolbars) and save menu settings to normal.dot 
-                 * remove menu in IDTExtensibility2.OnDisconnection are not helpful, normal.dot was already saved at this time
-                 * thats the reason for we remove an old menu in IDTExtensibility2.OnConnection if exists
-                */
+                GetNormalDotTemplate();
                 RemoveGui();
                 SetupGui();
             }
@@ -179,12 +178,31 @@ namespace COMAddinClassicExample
         }
 
         #endregion
-        
+
+        /// <summary>
+        /// returns normal.dot template
+        /// </summary>
+        private void GetNormalDotTemplate()
+        {
+            foreach (Word.Template installedTemplate in _wordApplication.Templates)
+            {
+                if( (installedTemplate.Name.Equals("normal.dot",StringComparison.InvariantCultureIgnoreCase)) || 
+                    (installedTemplate.Name.Equals("normal.dotx",StringComparison.InvariantCultureIgnoreCase)) )
+                {
+                    _normalDotTemplate = installedTemplate;
+                    return;
+                }
+                installedTemplate.Dispose();
+            }
+        }
+
         /// <summary>
         /// removes gui elements if exists
         /// </summary>
         private void RemoveGui()
         {
+            _wordApplication.CustomizationContext = _normalDotTemplate;
+
             Office.CommandBar menuBar = _wordApplication.CommandBars["Menu Bar"];
             Office.CommandBar contextBar = _wordApplication.CommandBars["Text"];
 
@@ -192,14 +210,12 @@ namespace COMAddinClassicExample
             if (null != control)
             { 
                 control.Delete();
-                menuBar.Reset();
             }
 
             control = contextBar.FindControl(System.Type.Missing, System.Type.Missing, _contextName, System.Type.Missing, false);
             if (null != control)
             {
                 control.Delete();
-                contextBar.Reset();
             }
 
             menuBar.Dispose();
@@ -215,6 +231,8 @@ namespace COMAddinClassicExample
             // How to: Add Commands to Shortcut Menus in Word
             // http://msdn.microsoft.com/de-de/library/dd554969.aspx             
             */
+
+            _wordApplication.CustomizationContext = _normalDotTemplate;
 
             /* create commandbar */
             Office.CommandBar commandBar = _wordApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, true);            
@@ -261,6 +279,8 @@ namespace COMAddinClassicExample
             commandBarBtn.Tag = _contextMenuButtonName;
             commandBarBtn.FaceId = 9;
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+
+            _normalDotTemplate.Saved = true;
         }
 
         /// <summary>

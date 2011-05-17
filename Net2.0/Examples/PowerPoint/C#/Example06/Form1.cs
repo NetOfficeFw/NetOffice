@@ -29,7 +29,7 @@ namespace Example06
             // Initialize Api COMObject Support
             LateBindingApi.Core.Factory.Initialize();
 
-            // start word and turn off msg boxes
+            // start powerpoint and turn off msg boxes
             PowerPoint.Application powerApplication = new PowerPoint.Application();
             powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone;
 
@@ -44,7 +44,7 @@ namespace Example06
             // add a new presentation with one new slide
             PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
             PowerPoint.Slide slide = presentation.Slides.Add(1, PpSlideLayout.ppLayoutBlank);
-                     
+
             // close the document
             presentation.Close();
 

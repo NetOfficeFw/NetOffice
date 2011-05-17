@@ -30,7 +30,7 @@ namespace Example03
                 // Initialize Api COMObject Support
                 LateBindingApi.Core.Factory.Initialize();
 
-                // start word and turn off msg boxes
+                // start powerpoint and turn off msg boxes
                 powerApplication = new PowerPoint.Application();
                 powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone;
 
@@ -56,7 +56,7 @@ namespace Example03
                 presentation.SaveAs(documentFile, PpSaveAsFileType.ppSaveAsDefault, MsoTriState.msoTrue);
 
                  
-                FinishDialog fDialog = new FinishDialog("Presentation saved.", (string)documentFile);
+                FinishDialog fDialog = new FinishDialog("Presentation saved.", documentFile);
                 fDialog.ShowDialog(this);
             }
             catch (Exception throwedException)
@@ -83,7 +83,6 @@ namespace Example03
                     powerApplication = null;
                 }
             }
-
         }
 
         #region Helper
