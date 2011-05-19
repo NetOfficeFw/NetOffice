@@ -4,154 +4,154 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XWC1.0 
+	 /// SupportByLibrary 1,
 	 /// </summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ChartPresetGradientTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientEarlySunset = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientLateSunset = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientNightfall = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientDaybreak = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientHorizon = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientDesert = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientOcean = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientCalmWater = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientFire = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientFog = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientMoss = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientPeacock = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientWheat = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientParchment = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientMahogany = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientRainbow = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientRainbowII = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientGold = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientGoldII = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientBrass = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientChrome = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientChromeII = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientSilver = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chGradientSapphire = 24
 	}
 }

@@ -4,70 +4,70 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XWC1.0 
+	 /// SupportByLibrary 1,
 	 /// </summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ChartMarkerStyleEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chMarkerStyleNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chMarkerStyleSquare = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chMarkerStyleDiamond = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chMarkerStyleTriangle = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chMarkerStyleX = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chMarkerStyleStar = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chMarkerStyleDot = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chMarkerStyleDash = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chMarkerStyleCircle = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chMarkerStylePlus = 9
 	}
 }

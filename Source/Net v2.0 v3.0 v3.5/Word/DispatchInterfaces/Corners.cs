@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Corners SupportByLibrary WD14 
+	/// DispatchInterface Corners SupportByLibrary "Word", 14
 	///</summary>
-	[SupportByLibrary("WD14")]
+	[SupportByLibrary("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Corners : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public COMObject Parent
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public string Name
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public COMObject Application
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -111,9 +111,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public object Select()
 		{
 			object[] paramsArray = null;

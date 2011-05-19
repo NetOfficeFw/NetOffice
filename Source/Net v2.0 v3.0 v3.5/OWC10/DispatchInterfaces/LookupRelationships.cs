@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface LookupRelationships SupportByLibrary XWC1.0 
+	/// DispatchInterface LookupRelationships SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LookupRelationships : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -64,10 +64,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OWC10Api.PageRelationship this[object index]
 		{
@@ -85,11 +85,11 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="PageRowsource">NetOffice.OWC10Api.PageRowsource PageRowsource</param>
 		/// <param name="SchemaRelationship">NetOffice.OWC10Api.SchemaRelationship SchemaRelationship</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PageRelationship Add(NetOffice.OWC10Api.PageRowsource pageRowsource, NetOffice.OWC10Api.SchemaRelationship schemaRelationship)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pageRowsource, schemaRelationship);
@@ -99,10 +99,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -113,7 +113,7 @@ namespace NetOffice.OWC10Api
    
         #region IEnumerable Members
         
-        [SupportByLibrary("XWC1.0")]
+        [SupportByLibrary("OWC10", 1)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

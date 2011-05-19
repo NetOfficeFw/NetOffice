@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XWC1.0 
+	 /// SupportByLibrary 1,
 	 /// </summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ChartEndStyleEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chEndStyleNone = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		chEndStyleCap = 2
 	}
 }

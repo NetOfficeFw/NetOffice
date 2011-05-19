@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface DataLabels SupportByLibrary WD14 
+	/// DispatchInterface DataLabels SupportByLibrary "Word", 14
 	///</summary>
-	[SupportByLibrary("WD14")]
+	[SupportByLibrary("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DataLabels : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public COMObject Parent
 		{
 			get
@@ -65,9 +65,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public string Name
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartBorder Border
 		{
 			get
@@ -94,9 +94,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Interior Interior
 		{
 			get
@@ -109,9 +109,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartFillFormat Fill
 		{
 			get
@@ -124,9 +124,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartFont Font
 		{
 			get
@@ -139,9 +139,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public object HorizontalAlignment
 		{
 			get
@@ -167,9 +167,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public object Orientation
 		{
 			get
@@ -195,9 +195,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public bool Shadow
 		{
 			get
@@ -214,9 +214,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public object VerticalAlignment
 		{
 			get
@@ -242,9 +242,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public Int32 ReadingOrder
 		{
 			get
@@ -261,9 +261,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public object AutoScaleFont
 		{
 			get
@@ -289,9 +289,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public bool AutoText
 		{
 			get
@@ -308,9 +308,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public string NumberFormat
 		{
 			get
@@ -327,9 +327,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public bool NumberFormatLinked
 		{
 			get
@@ -346,9 +346,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public object NumberFormatLocal
 		{
 			get
@@ -374,9 +374,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public bool ShowLegendKey
 		{
 			get
@@ -393,9 +393,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public object Type
 		{
 			get
@@ -421,9 +421,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Enums.XlDataLabelPosition Position
 		{
 			get
@@ -440,9 +440,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public bool ShowSeriesName
 		{
 			get
@@ -459,9 +459,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public bool ShowCategoryName
 		{
 			get
@@ -478,9 +478,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public bool ShowValue
 		{
 			get
@@ -497,9 +497,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public bool ShowPercentage
 		{
 			get
@@ -516,9 +516,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public bool ShowBubbleSize
 		{
 			get
@@ -535,9 +535,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public object Separator
 		{
 			get
@@ -563,9 +563,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public Int32 Count
 		{
 			get
@@ -577,9 +577,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartFormat Format
 		{
 			get
@@ -592,9 +592,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public COMObject Application
 		{
 			get
@@ -607,9 +607,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -625,9 +625,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public object Select()
 		{
 			object[] paramsArray = null;
@@ -645,9 +645,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public object Delete()
 		{
 			object[] paramsArray = null;
@@ -665,10 +665,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.DataLabel this[object index]
 		{
@@ -682,10 +682,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.DataLabel _Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -698,7 +698,7 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("WD14")]
+        [SupportByLibrary("Word", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

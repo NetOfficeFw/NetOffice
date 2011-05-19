@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface ChGridlines SupportByLibrary XWC1.0 
+	/// DispatchInterface ChGridlines SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChGridlines : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChLine Line
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChAxis Parent
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartSelectionsEnum ObjectType
 		{
 			get
@@ -97,9 +97,9 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void Select()
 		{
 			object[] paramsArray = null;

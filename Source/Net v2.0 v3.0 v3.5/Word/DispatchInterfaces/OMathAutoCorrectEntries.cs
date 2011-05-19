@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface OMathAutoCorrectEntries SupportByLibrary WD12 WD14 
+	/// DispatchInterface OMathAutoCorrectEntries SupportByLibrary "Word", 12,14
 	///</summary>
-	[SupportByLibrary("WD12","WD14")]
+	[SupportByLibrary("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathAutoCorrectEntries : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -65,9 +65,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public Int32 Creator
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -94,9 +94,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -112,10 +112,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.OMathAutoCorrectEntry this[object index]
 		{
@@ -129,11 +129,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Value">string Value</param>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.OMathAutoCorrectEntry Add(string name, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
@@ -146,7 +146,7 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("WD12","WD14")]
+        [SupportByLibrary("Word", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

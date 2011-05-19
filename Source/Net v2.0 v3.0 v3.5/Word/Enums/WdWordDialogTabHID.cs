@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdWordDialogTabHID
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("WD09")]
+		[SupportByLibrary("Word", 9)]
 		emptyenum = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdDialogFilePageSetupTabPaperSize = 150001,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdDialogFilePageSetupTabPaperSource = 150002
 	}
 }

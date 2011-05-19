@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface ColorFormat SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+	/// DispatchInterface ColorFormat SupportByLibrary "PowerPoint", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ColorFormat : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public COMObject Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public Int32 RGB
 		{
 			get
@@ -112,9 +112,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoColorType Type
 		{
 			get
@@ -126,9 +126,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Enums.PpColorSchemeIndex SchemeColor
 		{
 			get
@@ -145,9 +145,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public Single TintAndShade
 		{
 			get
@@ -164,9 +164,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoThemeColorIndex ObjectThemeColor
 		{
 			get
@@ -183,9 +183,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public Single Brightness
 		{
 			get

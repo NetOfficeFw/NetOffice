@@ -4,76 +4,76 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP12 PP14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpRemoveDocInfoType
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIComments = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIRemovePersonalInformation = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIDocumentProperties = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIDocumentWorkspace = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIInkAnnotations = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIPublishPath = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIDocumentServerProperties = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIDocumentManagementPolicy = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIContentType = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDISlideUpdateInformation = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIAll = 99
 	}
 }

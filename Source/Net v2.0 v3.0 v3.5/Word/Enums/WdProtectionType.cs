@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdProtectionType
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdNoProtection = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdAllowOnlyRevisions = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdAllowOnlyComments = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdAllowOnlyFormFields = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary WD11 WD12 WD14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		wdAllowOnlyReading = 3
 	}
 }

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PPBitmap SupportByLibrary PP09 
+	/// DispatchInterface PPBitmap SupportByLibrary "PowerPoint", 9
 	///</summary>
-	[SupportByLibrary("PP09")]
+	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPBitmap : PPControl
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 ResourceID
 		{
 			get
@@ -68,9 +68,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public string OnClick
 		{
 			get

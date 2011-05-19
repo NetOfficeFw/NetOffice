@@ -4,184 +4,184 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdPageNumberStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleArabic = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleUppercaseRoman = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleLowercaseRoman = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleUppercaseLetter = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleLowercaseLetter = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleArabicFullWidth = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleKanji = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleKanjiDigit = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleKanjiTraditional = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleNumberInCircle = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleHanjaRead = 41,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleHanjaReadDigit = 42,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleTradChinNum1 = 33,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleTradChinNum2 = 34,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleSimpChinNum1 = 37,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleSimpChinNum2 = 38,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleHebrewLetter1 = 45,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleArabicLetter1 = 46,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleHebrewLetter2 = 47,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdPageNumberStyleArabicLetter2 = 48,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdPageNumberStyleHindiLetter1 = 49,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdPageNumberStyleHindiLetter2 = 50,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdPageNumberStyleHindiArabic = 51,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdPageNumberStyleHindiCardinalText = 52,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdPageNumberStyleThaiLetter = 53,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdPageNumberStyleThaiArabic = 54,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdPageNumberStyleThaiCardinalText = 55,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdPageNumberStyleVietCardinalText = 56,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdPageNumberStyleNumberInDash = 57
 	}
 }

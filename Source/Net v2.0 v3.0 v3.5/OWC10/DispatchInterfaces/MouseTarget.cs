@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface MouseTarget SupportByLibrary XWC1.0 
+	/// DispatchInterface MouseTarget SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MouseTarget : COMObject
 	{
@@ -53,12 +53,12 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="Cursor">ref Int32 Cursor</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void MouseEnter(Int32 x, Int32 y, ref Int32 cursor)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
@@ -68,12 +68,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="Cursor">ref Int32 Cursor</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void MouseOver(Int32 x, Int32 y, ref Int32 cursor)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
@@ -83,9 +83,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void MouseLeave()
 		{
 			object[] paramsArray = null;
@@ -93,12 +93,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="Button">Int32 Button</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void MouseDown(Int32 x, Int32 y, Int32 button)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, button);
@@ -106,12 +106,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="Button">Int32 Button</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void MouseUp(Int32 x, Int32 y, Int32 button)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, button);
@@ -119,12 +119,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="Button">Int32 Button</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void MouseClick(Int32 x, Int32 y, Int32 button)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, button);
@@ -132,12 +132,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="Button">Int32 Button</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void MouseDblClick(Int32 x, Int32 y, Int32 button)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, button);
@@ -145,11 +145,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Page">bool Page</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void MouseWheel(bool page, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(page, count);

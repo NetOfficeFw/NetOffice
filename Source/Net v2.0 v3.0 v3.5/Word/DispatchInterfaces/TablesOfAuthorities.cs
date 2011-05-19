@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface TablesOfAuthorities SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	/// DispatchInterface TablesOfAuthorities SupportByLibrary "Word", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TablesOfAuthorities : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -65,9 +65,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -94,9 +94,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -108,9 +108,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdToaFormat Format
 		{
 			get
@@ -131,10 +131,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.TableOfAuthorities this[Int32 index]
 		{
@@ -148,7 +148,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Category">ref optional object Category</param>
@@ -161,7 +161,7 @@ namespace NetOffice.WordApi
 		/// <param name="PageRangeSeparator">ref optional object PageRangeSeparator</param>
 		/// <param name="IncludeCategoryHeader">ref optional object IncludeCategoryHeader</param>
 		/// <param name="PageNumberSeparator">ref optional object PageNumberSeparator</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, ref object category, ref object bookmark, ref object passim, ref object keepEntryFormatting, ref object separator, ref object includeSequenceName, ref object entrySeparator, ref object pageRangeSeparator, ref object includeCategoryHeader, ref object pageNumberSeparator)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true);
@@ -182,10 +182,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -195,10 +195,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ShortCitation">string ShortCitation</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void NextCitation(string shortCitation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shortCitation);
@@ -206,14 +206,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="ShortCitation">string ShortCitation</param>
 		/// <param name="LongCitation">ref optional object LongCitation</param>
 		/// <param name="LongCitationAutoText">ref optional object LongCitationAutoText</param>
 		/// <param name="Category">ref optional object Category</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, ref object longCitation, ref object longCitationAutoText, ref object category)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,true);
@@ -227,11 +227,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="ShortCitation">string ShortCitation</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation);
@@ -241,13 +241,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ShortCitation">string ShortCitation</param>
 		/// <param name="LongCitation">ref optional object LongCitation</param>
 		/// <param name="LongCitationAutoText">ref optional object LongCitationAutoText</param>
 		/// <param name="Category">ref optional object Category</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void MarkAllCitations(string shortCitation, ref object longCitation, ref object longCitationAutoText, ref object category)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
@@ -259,10 +259,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ShortCitation">string ShortCitation</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void MarkAllCitations(string shortCitation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shortCitation);
@@ -273,7 +273,7 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+        [SupportByLibrary("Word", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

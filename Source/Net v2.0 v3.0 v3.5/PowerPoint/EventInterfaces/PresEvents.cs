@@ -10,7 +10,7 @@ namespace NetOffice.PowerPointApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[ComImport, Guid("91493463-5A91-11CF-8700-00AA0060263B"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface PresEvents
 	{

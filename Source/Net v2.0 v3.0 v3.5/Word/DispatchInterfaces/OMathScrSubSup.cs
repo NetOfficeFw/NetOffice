@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface OMathScrSubSup SupportByLibrary WD12 WD14 
+	/// DispatchInterface OMathScrSubSup SupportByLibrary "Word", 12,14
 	///</summary>
-	[SupportByLibrary("WD12","WD14")]
+	[SupportByLibrary("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathScrSubSup : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public Int32 Creator
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.OMath E
 		{
 			get
@@ -108,9 +108,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.OMath Sub
 		{
 			get
@@ -123,9 +123,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.OMath Sup
 		{
 			get
@@ -138,9 +138,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public bool AlignScripts
 		{
 			get
@@ -161,9 +161,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.OMathFunction RemoveSub()
 		{
 			object[] paramsArray = null;
@@ -173,9 +173,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.OMathFunction RemoveSup()
 		{
 			object[] paramsArray = null;
@@ -185,9 +185,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.OMathFunction ToScrPre()
 		{
 			object[] paramsArray = null;

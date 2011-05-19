@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Page SupportByLibrary WD11 WD12 WD14 
+	/// DispatchInterface Page SupportByLibrary "Word", 11,12,14
 	///</summary>
-	[SupportByLibrary("WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Page : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 Left
 		{
 			get
@@ -107,9 +107,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 Top
 		{
 			get
@@ -121,9 +121,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 Width
 		{
 			get
@@ -135,9 +135,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 Height
 		{
 			get
@@ -149,9 +149,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Rectangles Rectangles
 		{
 			get
@@ -164,9 +164,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Breaks Breaks
 		{
 			get
@@ -179,9 +179,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public object EnhMetaFileBits
 		{
 			get

@@ -45,9 +45,9 @@ namespace NetOffice.PowerPointApi
 	#endregion
 
 	///<summary>
-	/// CoClass Application SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+	/// CoClass Application SupportByLibrary "PowerPoint", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Application : _Application, IEventBinding 
 	{
@@ -126,14 +126,14 @@ namespace NetOffice.PowerPointApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_WindowSelectionChangeEventHandler _WindowSelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_WindowSelectionChangeEventHandler WindowSelectionChangeEvent
 		{
 			add
@@ -148,14 +148,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_WindowBeforeRightClickEventHandler _WindowBeforeRightClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_WindowBeforeRightClickEventHandler WindowBeforeRightClickEvent
 		{
 			add
@@ -170,14 +170,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_WindowBeforeDoubleClickEventHandler _WindowBeforeDoubleClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_WindowBeforeDoubleClickEventHandler WindowBeforeDoubleClickEvent
 		{
 			add
@@ -192,14 +192,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_PresentationCloseEventHandler _PresentationCloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_PresentationCloseEventHandler PresentationCloseEvent
 		{
 			add
@@ -214,14 +214,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_PresentationSaveEventHandler _PresentationSaveEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_PresentationSaveEventHandler PresentationSaveEvent
 		{
 			add
@@ -236,14 +236,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_PresentationOpenEventHandler _PresentationOpenEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_PresentationOpenEventHandler PresentationOpenEvent
 		{
 			add
@@ -258,14 +258,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_NewPresentationEventHandler _NewPresentationEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_NewPresentationEventHandler NewPresentationEvent
 		{
 			add
@@ -280,14 +280,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_PresentationNewSlideEventHandler _PresentationNewSlideEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_PresentationNewSlideEventHandler PresentationNewSlideEvent
 		{
 			add
@@ -302,14 +302,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_WindowActivateEventHandler _WindowActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_WindowActivateEventHandler WindowActivateEvent
 		{
 			add
@@ -324,14 +324,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_WindowDeactivateEventHandler _WindowDeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
 		{
 			add
@@ -346,14 +346,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_SlideShowBeginEventHandler _SlideShowBeginEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_SlideShowBeginEventHandler SlideShowBeginEvent
 		{
 			add
@@ -368,14 +368,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_SlideShowNextBuildEventHandler _SlideShowNextBuildEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_SlideShowNextBuildEventHandler SlideShowNextBuildEvent
 		{
 			add
@@ -390,14 +390,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_SlideShowNextSlideEventHandler _SlideShowNextSlideEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_SlideShowNextSlideEventHandler SlideShowNextSlideEvent
 		{
 			add
@@ -412,14 +412,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_SlideShowEndEventHandler _SlideShowEndEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_SlideShowEndEventHandler SlideShowEndEvent
 		{
 			add
@@ -434,14 +434,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event Application_PresentationPrintEventHandler _PresentationPrintEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event Application_PresentationPrintEventHandler PresentationPrintEvent
 		{
 			add
@@ -456,14 +456,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 10 11 12 14
 		/// </summary>
 		private event Application_SlideSelectionChangedEventHandler _SlideSelectionChangedEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public event Application_SlideSelectionChangedEventHandler SlideSelectionChangedEvent
 		{
 			add
@@ -478,14 +478,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 10 11 12 14
 		/// </summary>
 		private event Application_ColorSchemeChangedEventHandler _ColorSchemeChangedEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public event Application_ColorSchemeChangedEventHandler ColorSchemeChangedEvent
 		{
 			add
@@ -500,14 +500,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 10 11 12 14
 		/// </summary>
 		private event Application_PresentationBeforeSaveEventHandler _PresentationBeforeSaveEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public event Application_PresentationBeforeSaveEventHandler PresentationBeforeSaveEvent
 		{
 			add
@@ -522,14 +522,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 10 11 12 14
 		/// </summary>
 		private event Application_SlideShowNextClickEventHandler _SlideShowNextClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public event Application_SlideShowNextClickEventHandler SlideShowNextClickEvent
 		{
 			add
@@ -544,14 +544,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 11 12 14
 		/// </summary>
 		private event Application_AfterNewPresentationEventHandler _AfterNewPresentationEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 11,12,14)]
 		public event Application_AfterNewPresentationEventHandler AfterNewPresentationEvent
 		{
 			add
@@ -566,14 +566,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 11 12 14
 		/// </summary>
 		private event Application_AfterPresentationOpenEventHandler _AfterPresentationOpenEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 11,12,14)]
 		public event Application_AfterPresentationOpenEventHandler AfterPresentationOpenEvent
 		{
 			add
@@ -588,14 +588,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 11 12 14
 		/// </summary>
 		private event Application_PresentationSyncEventHandler _PresentationSyncEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 11,12,14)]
 		public event Application_PresentationSyncEventHandler PresentationSyncEvent
 		{
 			add
@@ -610,14 +610,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14
+		/// SupportByLibrary PowerPoint, 12 14
 		/// </summary>
 		private event Application_SlideShowOnNextEventHandler _SlideShowOnNextEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14
+		/// SupportByLibrary PowerPoint 12 14
 		/// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		public event Application_SlideShowOnNextEventHandler SlideShowOnNextEvent
 		{
 			add
@@ -632,14 +632,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14
+		/// SupportByLibrary PowerPoint, 12 14
 		/// </summary>
 		private event Application_SlideShowOnPreviousEventHandler _SlideShowOnPreviousEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14
+		/// SupportByLibrary PowerPoint 12 14
 		/// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		public event Application_SlideShowOnPreviousEventHandler SlideShowOnPreviousEvent
 		{
 			add
@@ -654,14 +654,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint, 14
 		/// </summary>
 		private event Application_PresentationBeforeCloseEventHandler _PresentationBeforeCloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public event Application_PresentationBeforeCloseEventHandler PresentationBeforeCloseEvent
 		{
 			add
@@ -676,14 +676,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint, 14
 		/// </summary>
 		private event Application_ProtectedViewWindowOpenEventHandler _ProtectedViewWindowOpenEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent
 		{
 			add
@@ -698,14 +698,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint, 14
 		/// </summary>
 		private event Application_ProtectedViewWindowBeforeEditEventHandler _ProtectedViewWindowBeforeEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent
 		{
 			add
@@ -720,14 +720,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint, 14
 		/// </summary>
 		private event Application_ProtectedViewWindowBeforeCloseEventHandler _ProtectedViewWindowBeforeCloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent
 		{
 			add
@@ -742,14 +742,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint, 14
 		/// </summary>
 		private event Application_ProtectedViewWindowActivateEventHandler _ProtectedViewWindowActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent
 		{
 			add
@@ -764,14 +764,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint, 14
 		/// </summary>
 		private event Application_ProtectedViewWindowDeactivateEventHandler _ProtectedViewWindowDeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent
 		{
 			add
@@ -786,14 +786,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint, 14
 		/// </summary>
 		private event Application_PresentationCloseFinalEventHandler _PresentationCloseFinalEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP14
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public event Application_PresentationCloseFinalEventHandler PresentationCloseFinalEvent
 		{
 			add

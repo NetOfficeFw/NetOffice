@@ -45,9 +45,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass Spreadsheet SupportByLibrary XWC1.0 
+	/// CoClass Spreadsheet SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Spreadsheet : ISpreadsheet, IEventBinding 
 	{
@@ -126,14 +126,14 @@ namespace NetOffice.OWC10Api
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_BeforeContextMenuEventHandler _BeforeContextMenuEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_BeforeContextMenuEventHandler BeforeContextMenuEvent
 		{
 			add
@@ -148,14 +148,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_BeforeKeyDownEventHandler _BeforeKeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_BeforeKeyDownEventHandler BeforeKeyDownEvent
 		{
 			add
@@ -170,14 +170,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_BeforeKeyPressEventHandler _BeforeKeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_BeforeKeyPressEventHandler BeforeKeyPressEvent
 		{
 			add
@@ -192,14 +192,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_BeforeKeyUpEventHandler _BeforeKeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_BeforeKeyUpEventHandler BeforeKeyUpEvent
 		{
 			add
@@ -214,14 +214,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_ClickEventHandler ClickEvent
 		{
 			add
@@ -236,14 +236,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_CommandEnabledEventHandler _CommandEnabledEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_CommandEnabledEventHandler CommandEnabledEvent
 		{
 			add
@@ -258,14 +258,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_CommandCheckedEventHandler _CommandCheckedEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_CommandCheckedEventHandler CommandCheckedEvent
 		{
 			add
@@ -280,14 +280,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_CommandTipTextEventHandler _CommandTipTextEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_CommandTipTextEventHandler CommandTipTextEvent
 		{
 			add
@@ -302,14 +302,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_CommandBeforeExecuteEventHandler _CommandBeforeExecuteEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_CommandBeforeExecuteEventHandler CommandBeforeExecuteEvent
 		{
 			add
@@ -324,14 +324,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_CommandExecuteEventHandler _CommandExecuteEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_CommandExecuteEventHandler CommandExecuteEvent
 		{
 			add
@@ -346,14 +346,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -368,14 +368,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_EndEditEventHandler _EndEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_EndEditEventHandler EndEditEvent
 		{
 			add
@@ -390,14 +390,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_InitializeEventHandler _InitializeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_InitializeEventHandler InitializeEvent
 		{
 			add
@@ -412,14 +412,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -434,14 +434,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -456,14 +456,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -478,14 +478,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_LoadCompletedEventHandler _LoadCompletedEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_LoadCompletedEventHandler LoadCompletedEvent
 		{
 			add
@@ -500,14 +500,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -522,14 +522,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_MouseOutEventHandler _MouseOutEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_MouseOutEventHandler MouseOutEvent
 		{
 			add
@@ -544,14 +544,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_MouseOverEventHandler _MouseOverEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_MouseOverEventHandler MouseOverEvent
 		{
 			add
@@ -566,14 +566,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -588,14 +588,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_MouseWheelEventHandler _MouseWheelEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_MouseWheelEventHandler MouseWheelEvent
 		{
 			add
@@ -610,14 +610,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_SelectionChangeEventHandler _SelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_SelectionChangeEventHandler SelectionChangeEvent
 		{
 			add
@@ -632,14 +632,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_SelectionChangingEventHandler _SelectionChangingEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_SelectionChangingEventHandler SelectionChangingEvent
 		{
 			add
@@ -654,14 +654,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_SheetActivateEventHandler _SheetActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_SheetActivateEventHandler SheetActivateEvent
 		{
 			add
@@ -676,14 +676,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_SheetCalculateEventHandler _SheetCalculateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_SheetCalculateEventHandler SheetCalculateEvent
 		{
 			add
@@ -698,14 +698,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_SheetChangeEventHandler _SheetChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_SheetChangeEventHandler SheetChangeEvent
 		{
 			add
@@ -720,14 +720,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_SheetDeactivateEventHandler _SheetDeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_SheetDeactivateEventHandler SheetDeactivateEvent
 		{
 			add
@@ -742,14 +742,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_SheetFollowHyperlinkEventHandler _SheetFollowHyperlinkEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_SheetFollowHyperlinkEventHandler SheetFollowHyperlinkEvent
 		{
 			add
@@ -764,14 +764,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_StartEditEventHandler _StartEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_StartEditEventHandler StartEditEvent
 		{
 			add
@@ -786,14 +786,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Spreadsheet_ViewChangeEventHandler _ViewChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Spreadsheet_ViewChangeEventHandler ViewChangeEvent
 		{
 			add

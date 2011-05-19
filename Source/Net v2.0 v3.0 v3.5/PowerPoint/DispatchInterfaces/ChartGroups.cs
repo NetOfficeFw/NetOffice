@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface ChartGroups SupportByLibrary PP14 
+	/// DispatchInterface ChartGroups SupportByLibrary "PowerPoint", 14
 	///</summary>
-	[SupportByLibrary("PP14")]
+	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartGroups : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject Parent
 		{
 			get
@@ -65,9 +65,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Count
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Creator
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -112,10 +112,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.ChartGroup this[object index]
 		{
@@ -132,7 +132,7 @@ namespace NetOffice.PowerPointApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("PP14")]
+        [SupportByLibrary("PowerPoint", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

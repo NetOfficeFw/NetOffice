@@ -10,59 +10,59 @@ namespace NetOffice.WordApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 11,12,14)]
 	[ComImport, Guid("00020A02-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface DocumentEvents2
 	{
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void New();
 
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(5)]
 		void Open();
 
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
 		void Close();
 
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
 		void Sync([In] object syncEventType);
 
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
 		void XMLAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newXMLNode, [In] object inUndoRedo);
 
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
 		void XMLBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object deletedRange, [In, MarshalAs(UnmanagedType.IDispatch)] object oldXMLNode, [In] object inUndoRedo);
 
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
 		void ContentControlAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newContentControl, [In] object inUndoRedo);
 
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
 		void ContentControlBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldContentControl, [In] object inUndoRedo);
 
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(14)]
 		void ContentControlOnExit([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object cancel);
 
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(15)]
 		void ContentControlOnEnter([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl);
 
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
 		void ContentControlBeforeStoreUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content);
 
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
 		void ContentControlBeforeContentUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content);
 
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
 		void BuildingBlockInsert([In, MarshalAs(UnmanagedType.IDispatch)] object range, [In] object name, [In] object category, [In] object blockType, [In] object template);
 	}

@@ -4,46 +4,46 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XWC1.0 
+	 /// SupportByLibrary 1,
 	 /// </summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PivotShowAsEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		plShowAsNormal = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		plShowAsPercentOfRowTotal = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		plShowAsPercentOfColumnTotal = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		plShowAsPercentOfRowParent = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		plShowAsPercentOfColumnParent = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		plShowAsPercentOfGrandTotal = 5
 	}
 }

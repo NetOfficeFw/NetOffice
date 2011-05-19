@@ -4,76 +4,76 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP09 
+	 /// SupportByLibrary 9,
 	 /// </summary>
-	[SupportByLibrary("PP09")]
+	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpMarkerType
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppBoot = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppFileNew = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppFileOpen = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppFileSave = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppPrintForeground = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppPrintBackground = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppOLEInsert = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppSlideShowStart = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppSlideShowDraw = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppSlideViewScroll = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppDialogStart = 10
 	}
 }

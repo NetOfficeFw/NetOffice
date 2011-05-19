@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface FieldListDragDataList SupportByLibrary XWC1.0 
+	/// DispatchInterface FieldListDragDataList SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FieldListDragDataList : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -63,10 +63,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OWC10Api.FieldListDragData this[Int32 index]
 		{

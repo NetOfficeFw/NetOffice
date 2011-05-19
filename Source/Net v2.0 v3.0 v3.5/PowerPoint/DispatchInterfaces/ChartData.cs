@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface ChartData SupportByLibrary PP14 
+	/// DispatchInterface ChartData SupportByLibrary "PowerPoint", 14
 	///</summary>
-	[SupportByLibrary("PP14")]
+	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartData : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject Workbook
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public bool IsLinked
 		{
 			get
@@ -82,9 +82,9 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -92,9 +92,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public void BreakLink()
 		{
 			object[] paramsArray = null;

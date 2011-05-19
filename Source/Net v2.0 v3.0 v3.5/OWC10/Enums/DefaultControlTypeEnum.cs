@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XWC1.0 
+	 /// SupportByLibrary 1,
 	 /// </summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum DefaultControlTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		ctlTypeTextBox = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		ctlTypeBoundSpan = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XWC1.0 
+		 /// SupportByLibrary 1,
 		 /// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		ctlTypeBoundHTML = 1
 	}
 }

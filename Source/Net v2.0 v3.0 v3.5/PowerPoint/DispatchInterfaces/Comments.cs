@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface Comments SupportByLibrary PP10 PP11 PP12 PP14 
+	/// DispatchInterface Comments SupportByLibrary "PowerPoint", 10,11,12,14
 	///</summary>
-	[SupportByLibrary("PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Comments : Collection
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -83,10 +83,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.Comment this[Int32 index]
 		{
@@ -100,14 +100,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Left">Single Left</param>
 		/// <param name="Top">Single Top</param>
 		/// <param name="Author">string Author</param>
 		/// <param name="AuthorInitials">string AuthorInitials</param>
 		/// <param name="Text">string Text</param>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Comment Add(Single left, Single top, string author, string authorInitials, string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, author, authorInitials, text);

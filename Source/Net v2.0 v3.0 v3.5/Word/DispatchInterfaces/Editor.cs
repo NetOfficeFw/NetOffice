@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Editor SupportByLibrary WD11 WD12 WD14 
+	/// DispatchInterface Editor SupportByLibrary "Word", 11,12,14
 	///</summary>
-	[SupportByLibrary("WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Editor : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public string ID
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public string Name
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Range Range
 		{
 			get
@@ -92,9 +92,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Range NextRange
 		{
 			get
@@ -107,9 +107,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -122,9 +122,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -136,9 +136,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -155,9 +155,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -165,9 +165,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public void DeleteAll()
 		{
 			object[] paramsArray = null;
@@ -175,9 +175,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public void SelectAll()
 		{
 			object[] paramsArray = null;

@@ -4,112 +4,112 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdGoToItem
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToBookmark = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToSection = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToPage = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToTable = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToLine = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToFootnote = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToEndnote = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToComment = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToField = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToGraphic = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToObject = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToEquation = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToHeading = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToPercent = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToSpellingError = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToGrammaticalError = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdGoToProofreadingError = 15
 	}
 }

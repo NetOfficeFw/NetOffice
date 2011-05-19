@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("WD14")]
+	[SupportByLibrary("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlChartPictureType
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		xlStackScale = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary WD14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		xlStack = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary WD14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		xlStretch = 1
 	}
 }

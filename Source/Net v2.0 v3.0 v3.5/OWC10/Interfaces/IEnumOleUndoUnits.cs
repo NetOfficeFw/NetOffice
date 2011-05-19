@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface IEnumOleUndoUnits SupportByLibrary XWC1.0 
+	/// Interface IEnumOleUndoUnits SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IEnumOleUndoUnits : COMObject
 	{
@@ -52,12 +52,12 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		/// <param name="rgElt">ref NetOffice.OWC10Api.IOleUndoUnit rgElt</param>
 		/// <param name="pcEltFetched">ref Int32 pcEltFetched</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 RemoteNext(Int32 cElt, ref NetOffice.OWC10Api.IOleUndoUnit rgElt, ref Int32 pcEltFetched)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
@@ -69,10 +69,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 Skip(Int32 cElt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt);
@@ -81,9 +81,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 Reset()
 		{
 			object[] paramsArray = null;
@@ -92,10 +92,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="ppEnum">ref NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 Clone(ref NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);

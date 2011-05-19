@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP10 PP11 PP12 PP14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoAnimEffectRestart
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimEffectRestartAlways = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimEffectRestartWhenOff = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimEffectRestartNever = 3
 	}
 }

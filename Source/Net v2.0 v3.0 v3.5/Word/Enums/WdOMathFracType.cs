@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD12 WD14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("WD12","WD14")]
+	[SupportByLibrary("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdOMathFracType
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdOMathFracBar = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdOMathFracNoBar = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdOMathFracSkw = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdOMathFracLin = 3
 	}
 }

@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdTablePosition
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdTableTop = -999999,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdTableLeft = -999998,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdTableBottom = -999997,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdTableRight = -999996,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdTableCenter = -999995,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdTableInside = -999994,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdTableOutside = -999993
 	}
 }

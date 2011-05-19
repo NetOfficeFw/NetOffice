@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface IOleUndoUnit SupportByLibrary XWC1.0 
+	/// Interface IOleUndoUnit SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IOleUndoUnit : COMObject
 	{
@@ -52,10 +52,10 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="pUndoManager">NetOffice.OWC10Api.IOleUndoManager pUndoManager</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 Do(NetOffice.OWC10Api.IOleUndoManager pUndoManager)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUndoManager);
@@ -64,10 +64,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="pbstr">ref string pbstr</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 GetDescription(ref string pbstr)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -78,11 +78,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="pClsid">Guid pClsid</param>
 		/// <param name="plID">ref Int32 plID</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 GetUnitType(Guid pClsid, ref Int32 plID)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -93,9 +93,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 OnNextAdd()
 		{
 			object[] paramsArray = null;

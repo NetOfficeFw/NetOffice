@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface ChartFormat SupportByLibrary PP14 
+	/// DispatchInterface ChartFormat SupportByLibrary "PowerPoint", 14
 	///</summary>
-	[SupportByLibrary("PP14")]
+	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartFormat : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.FillFormat Fill
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.OfficeApi.GlowFormat Glow
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.LineFormat Line
 		{
 			get
@@ -94,9 +94,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject Parent
 		{
 			get
@@ -109,9 +109,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.PictureFormat PictureFormat
 		{
 			get
@@ -124,9 +124,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ShadowFormat Shadow
 		{
 			get
@@ -139,9 +139,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.OfficeApi.SoftEdgeFormat SoftEdge
 		{
 			get
@@ -154,9 +154,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.TextFrame2 TextFrame2
 		{
 			get
@@ -169,9 +169,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ThreeDFormat ThreeD
 		{
 			get
@@ -184,9 +184,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Creator
 		{
 			get
@@ -198,9 +198,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get

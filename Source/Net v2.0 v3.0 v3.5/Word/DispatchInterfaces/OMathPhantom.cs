@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface OMathPhantom SupportByLibrary WD12 WD14 
+	/// DispatchInterface OMathPhantom SupportByLibrary "Word", 12,14
 	///</summary>
-	[SupportByLibrary("WD12","WD14")]
+	[SupportByLibrary("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathPhantom : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public Int32 Creator
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.OMath E
 		{
 			get
@@ -108,9 +108,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public bool Show
 		{
 			get
@@ -127,9 +127,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public bool ZeroWid
 		{
 			get
@@ -146,9 +146,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public bool ZeroAsc
 		{
 			get
@@ -165,9 +165,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public bool ZeroDesc
 		{
 			get
@@ -184,9 +184,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public bool Transp
 		{
 			get
@@ -203,9 +203,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public bool Smash
 		{
 			get

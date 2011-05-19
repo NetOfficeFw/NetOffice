@@ -16,9 +16,9 @@ namespace NetOffice.WordApi
 	#endregion
 
 	///<summary>
-	/// CoClass OLEControl SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	/// CoClass OLEControl SupportByLibrary "Word", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OLEControl : _OLEControl, IEventBinding 
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.WordApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event OLEControl_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event OLEControl_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event OLEControl_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event OLEControl_LostFocusEventHandler LostFocusEvent
 		{
 			add

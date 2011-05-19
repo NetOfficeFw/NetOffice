@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface EmailSignatureEntries SupportByLibrary WD10 WD11 WD12 WD14 
+	/// DispatchInterface EmailSignatureEntries SupportByLibrary "Word", 10,11,12,14
 	///</summary>
-	[SupportByLibrary("WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EmailSignatureEntries : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -65,9 +65,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -94,9 +94,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -112,10 +112,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.EmailSignatureEntry this[object index]
 		{
@@ -129,11 +129,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.EmailSignatureEntry Add(string name, NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, range);
@@ -146,7 +146,7 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("WD10","WD11","WD12","WD14")]
+        [SupportByLibrary("Word", 10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

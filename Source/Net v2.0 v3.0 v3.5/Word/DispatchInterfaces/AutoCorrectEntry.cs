@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface AutoCorrectEntry SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	/// DispatchInterface AutoCorrectEntry SupportByLibrary "Word", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AutoCorrectEntry : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Index
 		{
 			get
@@ -107,9 +107,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -126,9 +126,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string Value
 		{
 			get
@@ -145,9 +145,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool RichText
 		{
 			get
@@ -163,9 +163,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -173,10 +173,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Apply(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);

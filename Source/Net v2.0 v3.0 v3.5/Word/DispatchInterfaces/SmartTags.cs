@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface SmartTags SupportByLibrary WD10 WD11 WD12 WD14 
+	/// DispatchInterface SmartTags SupportByLibrary "Word", 10,11,12,14
 	///</summary>
-	[SupportByLibrary("WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartTags : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -112,10 +112,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.SmartTag this[object index]
 		{
@@ -129,12 +129,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Range">ref optional object Range</param>
 		/// <param name="Properties">ref optional object Properties</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.SmartTag Add(string name, ref object range, ref object properties)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
@@ -147,10 +147,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.SmartTag Add(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -160,10 +160,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.SmartTags SmartTagsByType(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -176,7 +176,7 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("WD10","WD11","WD12","WD14")]
+        [SupportByLibrary("Word", 10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

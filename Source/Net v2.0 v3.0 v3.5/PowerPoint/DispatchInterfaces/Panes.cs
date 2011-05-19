@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface Panes SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+	/// DispatchInterface Panes SupportByLibrary "PowerPoint", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Panes : Collection
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -83,10 +83,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.Pane this[Int32 index]
 		{

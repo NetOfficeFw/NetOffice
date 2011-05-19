@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface ScaleEffect SupportByLibrary PP10 PP11 PP12 PP14 
+	/// DispatchInterface ScaleEffect SupportByLibrary "PowerPoint", 10,11,12,14
 	///</summary>
-	[SupportByLibrary("PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ScaleEffect : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public Single ByX
 		{
 			get
@@ -98,9 +98,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public Single ByY
 		{
 			get
@@ -117,9 +117,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public Single FromX
 		{
 			get
@@ -136,9 +136,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public Single FromY
 		{
 			get
@@ -155,9 +155,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public Single ToX
 		{
 			get
@@ -174,9 +174,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public Single ToY
 		{
 			get

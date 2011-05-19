@@ -4,46 +4,46 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD12 WD14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("WD12","WD14")]
+	[SupportByLibrary("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdRelativeVerticalSize
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdRelativeVerticalSizeMargin = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdRelativeVerticalSizePage = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdRelativeVerticalSizeTopMarginArea = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdRelativeVerticalSizeBottomMarginArea = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdRelativeVerticalSizeInnerMarginArea = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdRelativeVerticalSizeOuterMarginArea = 5
 	}
 }

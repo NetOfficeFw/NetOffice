@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpSoundFormatType
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppSoundFormatMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppSoundFormatNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppSoundFormatWAV = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppSoundFormatMIDI = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppSoundFormatCDAudio = 3
 	}
 }

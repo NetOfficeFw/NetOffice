@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface SelectionHighlight SupportByLibrary XWC1.0 
+	/// DispatchInterface SelectionHighlight SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SelectionHighlight : COMObject
 	{
@@ -53,10 +53,10 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="ViewSurface">NetOffice.OWC10Api.ViewSurface ViewSurface</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void Highlight(NetOffice.OWC10Api.ViewSurface viewSurface)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(viewSurface);

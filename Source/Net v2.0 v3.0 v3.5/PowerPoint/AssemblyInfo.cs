@@ -10,11 +10,11 @@ using LateBindingApi.Core;
     
     Contains the following Type Libraries:
 	Name - Description - SupportByLibrary
-	PowerPoint - Microsoft PowerPoint 9.0 Object Library - PP09
-	PowerPoint - Microsoft PowerPoint 10.0 Object Library - PP10
-	PowerPoint - Microsoft.Office.Interop.PowerPoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c - PP11
-	PowerPoint - Microsoft.Office.Interop.PowerPoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - PP12
-	PowerPoint - <NoDescription> - PP14
+	PowerPoint - Microsoft PowerPoint 9.0 Object Library - 9
+	PowerPoint - Microsoft PowerPoint 10.0 Object Library - 10
+	PowerPoint - Microsoft.Office.Interop.PowerPoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c - 11
+	PowerPoint - Microsoft.Office.Interop.PowerPoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 12
+	PowerPoint - <NoDescription> - 14
 
 */
 

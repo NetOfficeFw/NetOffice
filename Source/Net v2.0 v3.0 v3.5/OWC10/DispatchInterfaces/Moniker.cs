@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface Moniker SupportByLibrary XWC1.0 
+	/// DispatchInterface Moniker SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Moniker : COMObject
 	{
@@ -49,10 +49,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="RelativeTo">object RelativeTo</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public string get_Moniker(object relativeTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(relativeTo);
@@ -61,10 +61,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Moniker">string Moniker</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public COMObject get_Parse(string moniker)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moniker);

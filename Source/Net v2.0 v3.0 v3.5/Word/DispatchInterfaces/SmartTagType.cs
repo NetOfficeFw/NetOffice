@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface SmartTagType SupportByLibrary WD11 WD12 WD14 
+	/// DispatchInterface SmartTagType SupportByLibrary "Word", 11,12,14
 	///</summary>
-	[SupportByLibrary("WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartTagType : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public string Name
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -92,9 +92,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -107,9 +107,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.SmartTagActions SmartTagActions
 		{
 			get
@@ -122,9 +122,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.SmartTagRecognizers SmartTagRecognizers
 		{
 			get
@@ -137,9 +137,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public string FriendlyName
 		{
 			get

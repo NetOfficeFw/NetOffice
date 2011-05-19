@@ -4,118 +4,118 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD10 WD11 WD12 WD14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdRecoveryType
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdPasteDefault = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdSingleCellText = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdSingleCellTable = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdListContinueNumbering = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdListRestartNumbering = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdTableInsertAsRows = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdTableAppendTable = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdTableOriginalFormatting = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdChartPicture = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdChart = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdChartLinked = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdFormatOriginalFormatting = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdFormatSurroundingFormattingWithEmphasis = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdFormatPlainText = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdTableOverwriteCells = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdListCombineWithExistingList = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdListDontMerge = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdUseDestinationStylesRecovery = 19
 	}
 }

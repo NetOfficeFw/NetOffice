@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Trendlines SupportByLibrary WD14 
+	/// DispatchInterface Trendlines SupportByLibrary "Word", 14
 	///</summary>
-	[SupportByLibrary("WD14")]
+	[SupportByLibrary("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Trendlines : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public COMObject Parent
 		{
 			get
@@ -65,9 +65,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public Int32 Count
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public COMObject Application
 		{
 			get
@@ -94,9 +94,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Type">NetOffice.WordApi.Enums.XlTrendlineType Type</param>
 		/// <param name="Order">optional object Order</param>
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// <param name="DisplayEquation">optional object DisplayEquation</param>
 		/// <param name="DisplayRSquared">optional object DisplayRSquared</param>
 		/// <param name="Name">optional object Name</param>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Trendline Add(NetOffice.WordApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
@@ -133,10 +133,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Type">NetOffice.WordApi.Enums.XlTrendlineType Type</param>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Trendline Add(NetOffice.WordApi.Enums.XlTrendlineType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -146,10 +146,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.Trendline this[object index]
 		{
@@ -163,10 +163,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Trendline _Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -176,9 +176,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Trendline _Default()
 		{
 			object[] paramsArray = null;
@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("WD14")]
+        [SupportByLibrary("Word", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

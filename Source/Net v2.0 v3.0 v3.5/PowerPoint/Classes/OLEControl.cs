@@ -16,9 +16,9 @@ namespace NetOffice.PowerPointApi
 	#endregion
 
 	///<summary>
-	/// CoClass OLEControl SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+	/// CoClass OLEControl SupportByLibrary "PowerPoint", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OLEControl : OCXExtender, IEventBinding 
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.PowerPointApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event OLEControl_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event OLEControl_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint, 9 10 11 12 14
 		/// </summary>
 		private event OLEControl_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14
+		/// SupportByLibrary PowerPoint 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public event OLEControl_LostFocusEventHandler LostFocusEvent
 		{
 			add

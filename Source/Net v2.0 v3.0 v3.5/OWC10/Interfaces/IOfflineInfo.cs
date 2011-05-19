@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface IOfflineInfo SupportByLibrary XWC1.0 
+	/// Interface IOfflineInfo SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IOfflineInfo : COMObject
 	{
@@ -52,11 +52,11 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pwzServerFilter">string pwzServerFilter</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 PutServerFilter(string pwzUrl, string pwzServerFilter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pwzServerFilter);
@@ -65,11 +65,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pwzServerFilter">ref string pwzServerFilter</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 GetServerFilter(string pwzUrl, ref string pwzServerFilter)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -80,11 +80,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pfSubscribed">ref Int32 pfSubscribed</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 GetIsPageSubscribed(string pwzUrl, ref Int32 pfSubscribed)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -95,10 +95,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="pbstrPath">ref string pbstrPath</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 GetOfflineXMLFileLocation(ref string pbstrPath)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);

@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD12 WD14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("WD12","WD14")]
+	[SupportByLibrary("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdContentControlDateStorageFormat
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdContentControlDateStorageText = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdContentControlDateStorageDate = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdContentControlDateStorageDateTime = 2
 	}
 }

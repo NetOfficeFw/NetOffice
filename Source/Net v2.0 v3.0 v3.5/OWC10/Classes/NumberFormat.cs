@@ -14,9 +14,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass NumberFormat SupportByLibrary XWC1.0 
+	/// CoClass NumberFormat SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NumberFormat : _NumberFormat, IEventBinding 
 	{

@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface PivotMemberProperties SupportByLibrary XWC1.0 
+	/// DispatchInterface PivotMemberProperties SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotMemberProperties : COMObject ,IEnumerable
 	{
@@ -50,10 +50,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="varIndex">object varIndex</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OWC10Api.PivotMemberProperty this[object varIndex]
 		{
@@ -67,9 +67,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -88,7 +88,7 @@ namespace NetOffice.OWC10Api
    
         #region IEnumerable Members
         
-        [SupportByLibrary("XWC1.0")]
+        [SupportByLibrary("OWC10", 1)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

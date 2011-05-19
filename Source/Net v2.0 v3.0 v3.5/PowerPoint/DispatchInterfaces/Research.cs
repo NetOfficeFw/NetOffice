@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface Research SupportByLibrary PP12 PP14 
+	/// DispatchInterface Research SupportByLibrary "PowerPoint", 12,14
 	///</summary>
-	[SupportByLibrary("PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Research : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -83,14 +83,14 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="ServiceID">string ServiceID</param>
 		/// <param name="QueryString">ref object QueryString</param>
 		/// <param name="QueryLanguage">ref object QueryLanguage</param>
 		/// <param name="UseSelection">bool UseSelection</param>
 		/// <param name="LaunchQuery">bool LaunchQuery</param>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		public void Query(string serviceID, ref object queryString, ref object queryLanguage, bool useSelection, bool launchQuery)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,false,false);
@@ -101,11 +101,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Language1">ref object Language1</param>
 		/// <param name="Language2">ref object Language2</param>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		public void SetLanguagePair(ref object language1, ref object language2)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
@@ -116,10 +116,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="ServiceID">string ServiceID</param>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		public bool IsResearchService(string serviceID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID);

@@ -4,82 +4,82 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP10 PP11 PP12 PP14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpPasteDataType
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPasteDefault = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPasteBitmap = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPasteEnhancedMetafile = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPasteMetafilePicture = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPasteGIF = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPasteJPG = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPastePNG = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPasteText = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPasteHTML = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPasteRTF = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPasteOLEObject = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppPasteShape = 11
 	}
 }

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PPRadioCluster SupportByLibrary PP09 
+	/// DispatchInterface PPRadioCluster SupportByLibrary "PowerPoint", 9
 	///</summary>
-	[SupportByLibrary("PP09")]
+	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPRadioCluster : PPControl
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 Count
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPRadioButton Selected
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public string OnClick
 		{
 			get
@@ -101,10 +101,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
 		/// <param name="index">object index</param>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.PPRadioButton this[object index]
 		{
@@ -118,13 +118,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
 		/// <param name="Left">Single Left</param>
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPRadioButton Add(Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);

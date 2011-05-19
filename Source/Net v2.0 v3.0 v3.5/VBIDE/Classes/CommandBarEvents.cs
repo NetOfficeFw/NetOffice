@@ -15,9 +15,9 @@ namespace NetOffice.VBIDEApi
 	#endregion
 
 	///<summary>
-	/// CoClass CommandBarEvents SupportByLibrary VBE5.3 VBE12 
+	/// CoClass CommandBarEvents SupportByLibrary "VBIDE", 5.3,12
 	///</summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CommandBarEvents : _CommandBarControlEvents, IEventBinding 
 	{
@@ -96,14 +96,14 @@ namespace NetOffice.VBIDEApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12
+		/// SupportByLibrary VBIDE, 5.3 12
 		/// </summary>
 		private event CommandBarEvents_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12
+		/// SupportByLibrary VBIDE 5.3 12
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public event CommandBarEvents_ClickEventHandler ClickEvent
 		{
 			add

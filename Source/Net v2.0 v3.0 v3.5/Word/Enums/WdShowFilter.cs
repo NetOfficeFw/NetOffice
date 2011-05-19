@@ -4,46 +4,46 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD10 WD11 WD12 WD14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdShowFilter
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdShowFilterStylesAvailable = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdShowFilterStylesInUse = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdShowFilterStylesAll = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdShowFilterFormattingInUse = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdShowFilterFormattingAvailable = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary WD12 WD14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		wdShowFilterFormattingRecommended = 5
 	}
 }

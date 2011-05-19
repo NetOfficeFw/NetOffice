@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface TableStyle SupportByLibrary PP12 PP14 
+	/// DispatchInterface TableStyle SupportByLibrary "PowerPoint", 12,14
 	///</summary>
-	[SupportByLibrary("PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TableStyle : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		public string Name
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP12 PP14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		public string Id
 		{
 			get

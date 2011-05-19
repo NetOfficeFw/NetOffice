@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary VBE5.3 VBE12 
+	 /// SupportByLibrary 5.3,12,
 	 /// </summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum vbext_ComponentType
 	{
 		 /// <summary>
-		 /// SupportByLibrary VBE5.3 VBE12 
+		 /// SupportByLibrary 5.3,12,
 		 /// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_ct_StdModule = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary VBE5.3 VBE12 
+		 /// SupportByLibrary 5.3,12,
 		 /// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_ct_ClassModule = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary VBE5.3 VBE12 
+		 /// SupportByLibrary 5.3,12,
 		 /// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_ct_MSForm = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary VBE5.3 VBE12 
+		 /// SupportByLibrary 5.3,12,
 		 /// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_ct_ActiveXDesigner = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary VBE5.3 VBE12 
+		 /// SupportByLibrary 5.3,12,
 		 /// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_ct_Document = 100
 	}
 }

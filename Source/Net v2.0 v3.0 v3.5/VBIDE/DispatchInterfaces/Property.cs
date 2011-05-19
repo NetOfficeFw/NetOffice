@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface Property SupportByLibrary VBE5.3 VBE12 
+	/// DispatchInterface Property SupportByLibrary "VBIDE", 5.3,12
 	///</summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Property : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public object Value
 		{
 			get
@@ -77,13 +77,13 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="Index1">object Index1</param>
 		/// <param name="Index2">optional object Index2</param>
 		/// <param name="Index3">optional object Index3</param>
 		/// <param name="Index4">optional object Index4</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public object get_IndexedValue(object index1, object index2, object index3, object index4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2, index3, index4);
@@ -101,13 +101,13 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="Index1">object Index1</param>
 		/// <param name="Index2">optional object Index2</param>
 		/// <param name="Index3">optional object Index3</param>
 		/// <param name="Index4">optional object Index4</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public void set_IndexedValue(object index1, object index2, object index3, object index4, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2, index3, index4);
@@ -115,10 +115,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="Index1">object Index1</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public object get_IndexedValue(object index1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1);
@@ -136,10 +136,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="Index1">object Index1</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public void set_IndexedValue(object index1, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1);
@@ -147,9 +147,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int16 NumIndices
 		{
 			get
@@ -161,9 +161,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Application Application
 		{
 			get
@@ -176,9 +176,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Properties Parent
 		{
 			get
@@ -191,9 +191,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string Name
 		{
 			get
@@ -205,9 +205,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -220,9 +220,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Properties Collection
 		{
 			get
@@ -235,9 +235,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public COMObject Object
 		{
 			get

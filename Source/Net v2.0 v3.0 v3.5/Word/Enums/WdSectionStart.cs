@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdSectionStart
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdSectionContinuous = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdSectionNewColumn = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdSectionNewPage = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdSectionEvenPage = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdSectionOddPage = 4
 	}
 }

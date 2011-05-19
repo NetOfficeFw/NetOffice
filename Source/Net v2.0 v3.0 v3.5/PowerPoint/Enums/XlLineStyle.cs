@@ -4,58 +4,58 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("PP14")]
+	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlLineStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlContinuous = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlDash = -4115,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlDashDot = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlDashDotDot = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlDot = -4118,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlDouble = -4119,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlSlantDashDot = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlLineStyleNone = -4142
 	}
 }

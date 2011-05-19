@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("PP14")]
+	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlChartSplitType
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlSplitByPosition = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlSplitByPercentValue = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlSplitByCustomSplit = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlSplitByValue = 2
 	}
 }

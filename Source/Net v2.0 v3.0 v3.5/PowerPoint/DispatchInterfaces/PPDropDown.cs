@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PPDropDown SupportByLibrary PP09 
+	/// DispatchInterface PPDropDown SupportByLibrary "PowerPoint", 9
 	///</summary>
-	[SupportByLibrary("PP09")]
+	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPDropDown : PPControl
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPStrings Strings
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 FocusItem
 		{
 			get
@@ -83,9 +83,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public string OnSelectionChange
 		{
 			get

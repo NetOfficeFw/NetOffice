@@ -40,9 +40,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass ChartSpace SupportByLibrary XWC1.0 
+	/// CoClass ChartSpace SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ChartSpace : ChChartSpace, IEventBinding 
 	{
@@ -121,14 +121,14 @@ namespace NetOffice.OWC10Api
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_DataSetChangeEventHandler _DataSetChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_DataSetChangeEventHandler DataSetChangeEvent
 		{
 			add
@@ -143,14 +143,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -165,14 +165,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_ClickEventHandler ClickEvent
 		{
 			add
@@ -187,14 +187,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -209,14 +209,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -231,14 +231,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -253,14 +253,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_BeforeKeyDownEventHandler _BeforeKeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_BeforeKeyDownEventHandler BeforeKeyDownEvent
 		{
 			add
@@ -275,14 +275,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_BeforeKeyUpEventHandler _BeforeKeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_BeforeKeyUpEventHandler BeforeKeyUpEvent
 		{
 			add
@@ -297,14 +297,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_BeforeKeyPressEventHandler _BeforeKeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_BeforeKeyPressEventHandler BeforeKeyPressEvent
 		{
 			add
@@ -319,14 +319,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -341,14 +341,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -363,14 +363,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -385,14 +385,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_MouseWheelEventHandler _MouseWheelEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_MouseWheelEventHandler MouseWheelEvent
 		{
 			add
@@ -407,14 +407,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_SelectionChangeEventHandler _SelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_SelectionChangeEventHandler SelectionChangeEvent
 		{
 			add
@@ -429,14 +429,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_BeforeScreenTipEventHandler _BeforeScreenTipEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_BeforeScreenTipEventHandler BeforeScreenTipEvent
 		{
 			add
@@ -451,14 +451,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_CommandEnabledEventHandler _CommandEnabledEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_CommandEnabledEventHandler CommandEnabledEvent
 		{
 			add
@@ -473,14 +473,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_CommandCheckedEventHandler _CommandCheckedEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_CommandCheckedEventHandler CommandCheckedEvent
 		{
 			add
@@ -495,14 +495,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_CommandTipTextEventHandler _CommandTipTextEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_CommandTipTextEventHandler CommandTipTextEvent
 		{
 			add
@@ -517,14 +517,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_CommandBeforeExecuteEventHandler _CommandBeforeExecuteEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_CommandBeforeExecuteEventHandler CommandBeforeExecuteEvent
 		{
 			add
@@ -539,14 +539,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_CommandExecuteEventHandler _CommandExecuteEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_CommandExecuteEventHandler CommandExecuteEvent
 		{
 			add
@@ -561,14 +561,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_BeforeContextMenuEventHandler _BeforeContextMenuEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_BeforeContextMenuEventHandler BeforeContextMenuEvent
 		{
 			add
@@ -583,14 +583,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_BeforeRenderEventHandler _BeforeRenderEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_BeforeRenderEventHandler BeforeRenderEvent
 		{
 			add
@@ -605,14 +605,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_AfterRenderEventHandler _AfterRenderEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_AfterRenderEventHandler AfterRenderEvent
 		{
 			add
@@ -627,14 +627,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_AfterFinalRenderEventHandler _AfterFinalRenderEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_AfterFinalRenderEventHandler AfterFinalRenderEvent
 		{
 			add
@@ -649,14 +649,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_AfterLayoutEventHandler _AfterLayoutEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_AfterLayoutEventHandler AfterLayoutEvent
 		{
 			add
@@ -671,14 +671,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event ChartSpace_ViewChangeEventHandler _ViewChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event ChartSpace_ViewChangeEventHandler ViewChangeEvent
 		{
 			add

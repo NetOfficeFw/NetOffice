@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface OWCLanguageSettings SupportByLibrary XWC1.0 
+	/// DispatchInterface OWCLanguageSettings SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OWCLanguageSettings : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public COMObject Application
 		{
 			get
@@ -64,10 +64,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="id">NetOffice.OWC10Api.Enums.MsoAppLanguageID id</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 get_LanguageID(NetOffice.OWC10Api.Enums.MsoAppLanguageID id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id);
@@ -76,10 +76,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="lid">NetOffice.OWC10Api.Enums.MsoLanguageID lid</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public bool get_LanguagePreferredForEditing(NetOffice.OWC10Api.Enums.MsoLanguageID lid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lid);

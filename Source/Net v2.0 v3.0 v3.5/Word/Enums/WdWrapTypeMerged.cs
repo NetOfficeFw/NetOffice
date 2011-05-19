@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD10 WD11 WD12 WD14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdWrapTypeMerged
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdWrapMergeInline = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdWrapMergeSquare = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdWrapMergeTight = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdWrapMergeBehind = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdWrapMergeFront = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdWrapMergeThrough = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary WD10 WD11 WD12 WD14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		wdWrapMergeTopBottom = 6
 	}
 }

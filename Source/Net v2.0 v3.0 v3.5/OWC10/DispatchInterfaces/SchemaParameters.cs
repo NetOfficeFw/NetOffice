@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface SchemaParameters SupportByLibrary XWC1.0 
+	/// DispatchInterface SchemaParameters SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SchemaParameters : COMObject ,IEnumerable
 	{
@@ -50,10 +50,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OWC10Api.SchemaParameter this[object index]
 		{
@@ -67,9 +67,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -85,7 +85,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="DataType">optional object DataType</param>
@@ -93,7 +93,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Scale">optional object Scale</param>
 		/// <param name="Precision">optional object Precision</param>
 		/// <param name="Direction">optional object Direction</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaParameter Add(string name, object dataType, object size, object scale, object precision, object direction)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType, size, scale, precision, direction);
@@ -103,10 +103,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaParameter Add(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -119,7 +119,7 @@ namespace NetOffice.OWC10Api
    
         #region IEnumerable Members
         
-        [SupportByLibrary("XWC1.0")]
+        [SupportByLibrary("OWC10", 1)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

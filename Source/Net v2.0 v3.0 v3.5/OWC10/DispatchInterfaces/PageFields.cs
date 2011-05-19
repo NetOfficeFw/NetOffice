@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface PageFields SupportByLibrary XWC1.0 
+	/// DispatchInterface PageFields SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PageFields : COMObject ,IEnumerable
 	{
@@ -50,10 +50,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OWC10Api.PageField this[object index]
 		{
@@ -67,9 +67,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -85,10 +85,10 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -96,14 +96,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Source">object Source</param>
 		/// <param name="FieldType">object FieldType</param>
 		/// <param name="Name">object Name</param>
 		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
@@ -113,13 +113,13 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Source">object Source</param>
 		/// <param name="FieldType">object FieldType</param>
 		/// <param name="Name">object Name</param>
 		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType);
@@ -129,14 +129,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Source">object Source</param>
 		/// <param name="FieldType">object FieldType</param>
 		/// <param name="Name">object Name</param>
 		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
@@ -146,13 +146,13 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Source">object Source</param>
 		/// <param name="FieldType">object FieldType</param>
 		/// <param name="Name">object Name</param>
 		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType);
@@ -165,7 +165,7 @@ namespace NetOffice.OWC10Api
    
         #region IEnumerable Members
         
-        [SupportByLibrary("XWC1.0")]
+        [SupportByLibrary("OWC10", 1)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

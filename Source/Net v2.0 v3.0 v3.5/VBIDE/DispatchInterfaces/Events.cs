@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface Events SupportByLibrary VBE5.3 VBE12 
+	/// DispatchInterface Events SupportByLibrary "VBIDE", 5.3,12
 	///</summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Events : COMObject
 	{
@@ -49,10 +49,10 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.ReferencesEvents get_ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
@@ -62,10 +62,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="CommandBarControl">object CommandBarControl</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.CommandBarEvents get_CommandBarEvents(object commandBarControl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commandBarControl);

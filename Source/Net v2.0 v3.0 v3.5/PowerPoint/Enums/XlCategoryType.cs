@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("PP14")]
+	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlCategoryType
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlCategoryScale = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlTimeScale = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		xlAutomaticScale = -4105
 	}
 }

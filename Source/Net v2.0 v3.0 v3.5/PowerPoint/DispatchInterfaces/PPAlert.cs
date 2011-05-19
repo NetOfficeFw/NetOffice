@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PPAlert SupportByLibrary PP09 
+	/// DispatchInterface PPAlert SupportByLibrary "PowerPoint", 9
 	///</summary>
-	[SupportByLibrary("PP09")]
+	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPAlert : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public COMObject Parent
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 PressedButton
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public string OnButton
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PP09 
+		/// SupportByLibrary 9 
 		/// </summary>
 		/// <param name="Title">string Title</param>
 		/// <param name="Type">Int32 Type</param>
@@ -124,7 +124,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="leftBtn">string leftBtn</param>
 		/// <param name="middleBtn">string middleBtn</param>
 		/// <param name="rightBtn">string rightBtn</param>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		public void Run(string title, Int32 type, string text, string leftBtn, string middleBtn, string rightBtn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, type, text, leftBtn, middleBtn, rightBtn);

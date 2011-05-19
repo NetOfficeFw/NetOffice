@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP09 
+	 /// SupportByLibrary 9,
 	 /// </summary>
-	[SupportByLibrary("PP09")]
+	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpAlertIcon
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppAlertIconQuestionMark = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppAlertIconNote = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppAlertIconCaution = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppAlertIconStop = 3
 	}
 }

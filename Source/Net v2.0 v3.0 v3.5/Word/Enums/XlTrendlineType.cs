@@ -4,46 +4,46 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("WD14")]
+	[SupportByLibrary("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlTrendlineType
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		xlExponential = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary WD14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		xlLinear = -4132,
 
 		 /// <summary>
-		 /// SupportByLibrary WD14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		xlLogarithmic = -4133,
 
 		 /// <summary>
-		 /// SupportByLibrary WD14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		xlMovingAvg = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary WD14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		xlPolynomial = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary WD14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		xlPower = 4
 	}
 }

@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("WD14")]
+	[SupportByLibrary("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlColorIndex
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		xlColorIndexAutomatic = -4105,
 
 		 /// <summary>
-		 /// SupportByLibrary WD14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		xlColorIndexNone = -4142
 	}
 }

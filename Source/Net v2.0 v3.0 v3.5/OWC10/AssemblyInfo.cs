@@ -10,7 +10,7 @@ using LateBindingApi.Core;
     
     Contains the following Type Libraries:
 	Name - Description - SupportByLibrary
-	OWC10 - Microsoft Office XP Web Components - XWC1.0
+	OWC10 - Microsoft Office XP Web Components - 1
 
 */
 

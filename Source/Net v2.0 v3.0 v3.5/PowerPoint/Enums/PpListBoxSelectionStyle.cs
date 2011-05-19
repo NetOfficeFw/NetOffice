@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP09 
+	 /// SupportByLibrary 9,
 	 /// </summary>
-	[SupportByLibrary("PP09")]
+	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpListBoxSelectionStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppListBoxSingle = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 
+		 /// SupportByLibrary 9,
 		 /// </summary>
-		[SupportByLibrary("PP09")]
+		[SupportByLibrary("PowerPoint", 9)]
 		ppListBoxMulti = 1
 	}
 }

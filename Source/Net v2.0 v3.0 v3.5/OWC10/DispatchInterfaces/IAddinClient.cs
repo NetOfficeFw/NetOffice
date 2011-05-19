@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface IAddinClient SupportByLibrary XWC1.0 
+	/// DispatchInterface IAddinClient SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IAddinClient : COMObject
 	{
@@ -53,10 +53,10 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="vardisp">ref object vardisp</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void GrantAddinHost(ref object vardisp)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -66,9 +66,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void RemoveAddinHost()
 		{
 			object[] paramsArray = null;
@@ -76,11 +76,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		/// <param name="SemiCalced">ref bool SemiCalced</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void IsSemiCalced(Int32 dispid, ref bool semiCalced)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);

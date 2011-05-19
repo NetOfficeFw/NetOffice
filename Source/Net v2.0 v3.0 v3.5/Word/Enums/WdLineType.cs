@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD11 WD12 WD14 
+	 /// SupportByLibrary 11,12,14,
 	 /// </summary>
-	[SupportByLibrary("WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdLineType
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD11 WD12 WD14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		wdTextLine = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD11 WD12 WD14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		wdTableRow = 1
 	}
 }

@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP12 PP14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoClickState
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		msoClickStateAfterAllAnimations = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary PP12 PP14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 12,14)]
 		msoClickStateBeforeAutomaticAnimations = -1
 	}
 }

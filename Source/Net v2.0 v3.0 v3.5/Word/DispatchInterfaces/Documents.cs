@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Documents SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	/// DispatchInterface Documents SupportByLibrary "Word", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Documents : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -112,10 +112,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.Document this[object index]
 		{
@@ -129,12 +129,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="SaveChanges">ref optional object SaveChanges</param>
 		/// <param name="OriginalFormat">ref optional object OriginalFormat</param>
 		/// <param name="RouteDocument">ref optional object RouteDocument</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Close(ref object saveChanges, ref object originalFormat, ref object routeDocument)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true);
@@ -146,9 +146,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -156,11 +156,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Template">ref optional object Template</param>
 		/// <param name="NewTemplate">ref optional object NewTemplate</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document AddOld(ref object template, ref object newTemplate)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
@@ -173,9 +173,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document AddOld()
 		{
 			object[] paramsArray = null;
@@ -185,7 +185,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
 		/// <param name="ConfirmConversions">ref optional object ConfirmConversions</param>
@@ -197,7 +197,7 @@ namespace NetOffice.WordApi
 		/// <param name="WritePasswordDocument">ref optional object WritePasswordDocument</param>
 		/// <param name="WritePasswordTemplate">ref optional object WritePasswordTemplate</param>
 		/// <param name="Format">ref optional object Format</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(ref object fileName, ref object confirmConversions, ref object readOnly, ref object addToRecentFiles, ref object passwordDocument, ref object passwordTemplate, ref object revert, ref object writePasswordDocument, ref object writePasswordTemplate, ref object format)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true);
@@ -218,10 +218,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(ref object fileName)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -233,11 +233,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="NoPrompt">ref optional object NoPrompt</param>
 		/// <param name="OriginalFormat">ref optional object OriginalFormat</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Save(ref object noPrompt, ref object originalFormat)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
@@ -248,9 +248,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Save()
 		{
 			object[] paramsArray = null;
@@ -258,13 +258,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Template">ref optional object Template</param>
 		/// <param name="NewTemplate">ref optional object NewTemplate</param>
 		/// <param name="DocumentType">ref optional object DocumentType</param>
 		/// <param name="Visible">ref optional object Visible</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Add(ref object template, ref object newTemplate, ref object documentType, ref object visible)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
@@ -279,9 +279,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Add()
 		{
 			object[] paramsArray = null;
@@ -291,7 +291,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 
+		/// SupportByLibrary 9 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
 		/// <param name="ConfirmConversions">ref optional object ConfirmConversions</param>
@@ -305,7 +305,7 @@ namespace NetOffice.WordApi
 		/// <param name="Format">ref optional object Format</param>
 		/// <param name="Encoding">ref optional object Encoding</param>
 		/// <param name="Visible">ref optional object Visible</param>
-		[SupportByLibrary("WD09")]
+		[SupportByLibrary("Word", 9)]
 		public NetOffice.WordApi.Document Open(ref object fileName, ref object confirmConversions, ref object readOnly, ref object addToRecentFiles, ref object passwordDocument, ref object passwordTemplate, ref object revert, ref object writePasswordDocument, ref object writePasswordTemplate, ref object format, ref object encoding, ref object visible)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true);
@@ -328,7 +328,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 
+		/// SupportByLibrary 10 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
 		/// <param name="ConfirmConversions">ref optional object ConfirmConversions</param>
@@ -345,7 +345,7 @@ namespace NetOffice.WordApi
 		/// <param name="OpenAndRepair">ref optional object OpenAndRepair</param>
 		/// <param name="DocumentDirection">ref optional object DocumentDirection</param>
 		/// <param name="NoEncodingDialog">ref optional object NoEncodingDialog</param>
-		[SupportByLibrary("WD10")]
+		[SupportByLibrary("Word", 10)]
 		public NetOffice.WordApi.Document Open(ref object fileName, ref object confirmConversions, ref object readOnly, ref object addToRecentFiles, ref object passwordDocument, ref object passwordTemplate, ref object revert, ref object writePasswordDocument, ref object writePasswordTemplate, ref object format, ref object encoding, ref object visible, ref object openAndRepair, ref object documentDirection, ref object noEncodingDialog)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
@@ -371,7 +371,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
 		/// <param name="ConfirmConversions">ref optional object ConfirmConversions</param>
@@ -389,7 +389,7 @@ namespace NetOffice.WordApi
 		/// <param name="DocumentDirection">ref optional object DocumentDirection</param>
 		/// <param name="NoEncodingDialog">ref optional object NoEncodingDialog</param>
 		/// <param name="XMLTransform">ref optional object XMLTransform</param>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open(ref object fileName, ref object confirmConversions, ref object readOnly, ref object addToRecentFiles, ref object passwordDocument, ref object passwordTemplate, ref object revert, ref object writePasswordDocument, ref object writePasswordTemplate, ref object format, ref object encoding, ref object visible, ref object openAndRepair, ref object documentDirection, ref object noEncodingDialog, ref object xMLTransform)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
@@ -416,10 +416,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(ref object fileName)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -431,7 +431,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
 		/// <param name="ConfirmConversions">ref optional object ConfirmConversions</param>
@@ -445,7 +445,7 @@ namespace NetOffice.WordApi
 		/// <param name="Format">ref optional object Format</param>
 		/// <param name="Encoding">ref optional object Encoding</param>
 		/// <param name="Visible">ref optional object Visible</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(ref object fileName, ref object confirmConversions, ref object readOnly, ref object addToRecentFiles, ref object passwordDocument, ref object passwordTemplate, ref object revert, ref object writePasswordDocument, ref object writePasswordTemplate, ref object format, ref object encoding, ref object visible)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true);
@@ -468,10 +468,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(ref object fileName)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -483,10 +483,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void CheckOut(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -494,10 +494,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public bool CanCheckOut(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -506,7 +506,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
 		/// <param name="ConfirmConversions">ref optional object ConfirmConversions</param>
@@ -523,7 +523,7 @@ namespace NetOffice.WordApi
 		/// <param name="OpenAndRepair">ref optional object OpenAndRepair</param>
 		/// <param name="DocumentDirection">ref optional object DocumentDirection</param>
 		/// <param name="NoEncodingDialog">ref optional object NoEncodingDialog</param>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(ref object fileName, ref object confirmConversions, ref object readOnly, ref object addToRecentFiles, ref object passwordDocument, ref object passwordTemplate, ref object revert, ref object writePasswordDocument, ref object writePasswordTemplate, ref object format, ref object encoding, ref object visible, ref object openAndRepair, ref object documentDirection, ref object noEncodingDialog)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
@@ -549,10 +549,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(ref object fileName)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -564,7 +564,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
 		/// <param name="ConfirmConversions">ref optional object ConfirmConversions</param>
@@ -582,7 +582,7 @@ namespace NetOffice.WordApi
 		/// <param name="DocumentDirection">ref optional object DocumentDirection</param>
 		/// <param name="NoEncodingDialog">ref optional object NoEncodingDialog</param>
 		/// <param name="XMLTransform">ref optional object XMLTransform</param>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(ref object fileName, ref object confirmConversions, ref object readOnly, ref object addToRecentFiles, ref object passwordDocument, ref object passwordTemplate, ref object revert, ref object writePasswordDocument, ref object writePasswordTemplate, ref object format, ref object encoding, ref object visible, ref object openAndRepair, ref object documentDirection, ref object noEncodingDialog, ref object xMLTransform)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
@@ -609,10 +609,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="FileName">ref object FileName</param>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(ref object fileName)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -624,13 +624,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="ProviderID">string ProviderID</param>
 		/// <param name="PostURL">string PostURL</param>
 		/// <param name="BlogName">string BlogName</param>
 		/// <param name="PostID">string PostID</param>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Document AddBlogDocument(string providerID, string postURL, string blogName, string postID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(providerID, postURL, blogName, postID);
@@ -643,7 +643,7 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+        [SupportByLibrary("Word", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

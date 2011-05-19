@@ -4,46 +4,46 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpPrintRangeType
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppPrintAll = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppPrintSelection = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppPrintCurrent = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppPrintSlideRange = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppPrintNamedSlideShow = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary PP14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("PP14")]
+		[SupportByLibrary("PowerPoint", 14)]
 		ppPrintSection = 6
 	}
 }

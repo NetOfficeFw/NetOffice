@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface PropertyNotify SupportByLibrary XWC1.0 
+	/// DispatchInterface PropertyNotify SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PropertyNotify : COMObject
 	{
@@ -53,11 +53,11 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Object">object Object</param>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void OnPropertyChange(object _object, Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_object, dispid);

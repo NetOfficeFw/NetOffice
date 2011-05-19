@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpChangeCase
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppCaseSentence = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppCaseLower = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppCaseUpper = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppCaseTitle = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppCaseToggle = 5
 	}
 }

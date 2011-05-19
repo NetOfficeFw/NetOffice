@@ -27,9 +27,9 @@ namespace NetOffice.WordApi
 	#endregion
 
 	///<summary>
-	/// CoClass Document SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	/// CoClass Document SupportByLibrary "Word", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Document : _Document, IEventBinding 
 	{
@@ -115,14 +115,14 @@ namespace NetOffice.WordApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Document_NewEventHandler _NewEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Document_NewEventHandler NewEvent
 		{
 			add
@@ -137,14 +137,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Document_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Document_OpenEventHandler OpenEvent
 		{
 			add
@@ -159,14 +159,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Document_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Document_CloseEventHandler CloseEvent
 		{
 			add
@@ -181,14 +181,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word, 11 12 14
 		/// </summary>
 		private event Document_SyncEventHandler _SyncEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public event Document_SyncEventHandler SyncEvent
 		{
 			add
@@ -203,14 +203,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word, 11 12 14
 		/// </summary>
 		private event Document_XMLAfterInsertEventHandler _XMLAfterInsertEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public event Document_XMLAfterInsertEventHandler XMLAfterInsertEvent
 		{
 			add
@@ -225,14 +225,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word, 11 12 14
 		/// </summary>
 		private event Document_XMLBeforeDeleteEventHandler _XMLBeforeDeleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public event Document_XMLBeforeDeleteEventHandler XMLBeforeDeleteEvent
 		{
 			add
@@ -247,14 +247,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word, 12 14
 		/// </summary>
 		private event Document_ContentControlAfterAddEventHandler _ContentControlAfterAddEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word 12 14
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public event Document_ContentControlAfterAddEventHandler ContentControlAfterAddEvent
 		{
 			add
@@ -269,14 +269,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word, 12 14
 		/// </summary>
 		private event Document_ContentControlBeforeDeleteEventHandler _ContentControlBeforeDeleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word 12 14
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public event Document_ContentControlBeforeDeleteEventHandler ContentControlBeforeDeleteEvent
 		{
 			add
@@ -291,14 +291,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word, 12 14
 		/// </summary>
 		private event Document_ContentControlOnExitEventHandler _ContentControlOnExitEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word 12 14
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public event Document_ContentControlOnExitEventHandler ContentControlOnExitEvent
 		{
 			add
@@ -313,14 +313,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word, 12 14
 		/// </summary>
 		private event Document_ContentControlOnEnterEventHandler _ContentControlOnEnterEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word 12 14
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public event Document_ContentControlOnEnterEventHandler ContentControlOnEnterEvent
 		{
 			add
@@ -335,14 +335,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word, 12 14
 		/// </summary>
 		private event Document_ContentControlBeforeStoreUpdateEventHandler _ContentControlBeforeStoreUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word 12 14
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public event Document_ContentControlBeforeStoreUpdateEventHandler ContentControlBeforeStoreUpdateEvent
 		{
 			add
@@ -357,14 +357,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word, 12 14
 		/// </summary>
 		private event Document_ContentControlBeforeContentUpdateEventHandler _ContentControlBeforeContentUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word 12 14
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public event Document_ContentControlBeforeContentUpdateEventHandler ContentControlBeforeContentUpdateEvent
 		{
 			add
@@ -379,14 +379,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word, 12 14
 		/// </summary>
 		private event Document_BuildingBlockInsertEventHandler _BuildingBlockInsertEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word 12 14
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public event Document_BuildingBlockInsertEventHandler BuildingBlockInsertEvent
 		{
 			add

@@ -14,9 +14,9 @@ namespace NetOffice.WordApi
 	#endregion
 
 	///<summary>
-	/// CoClass Font SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	/// CoClass Font SupportByLibrary "Word", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Font : _Font, IEventBinding 
 	{

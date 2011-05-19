@@ -49,9 +49,9 @@ namespace NetOffice.WordApi
 	#endregion
 
 	///<summary>
-	/// CoClass Application SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	/// CoClass Application SupportByLibrary "Word", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Application : _Application, IEventBinding 
 	{
@@ -144,14 +144,14 @@ namespace NetOffice.WordApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_StartupEventHandler _StartupEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_StartupEventHandler StartupEvent
 		{
 			add
@@ -166,14 +166,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_QuitEventHandler _QuitEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_QuitEventHandler QuitEvent
 		{
 			add
@@ -188,14 +188,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_DocumentChangeEventHandler _DocumentChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_DocumentChangeEventHandler DocumentChangeEvent
 		{
 			add
@@ -210,14 +210,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_DocumentOpenEventHandler _DocumentOpenEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_DocumentOpenEventHandler DocumentOpenEvent
 		{
 			add
@@ -232,14 +232,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_DocumentBeforeCloseEventHandler _DocumentBeforeCloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_DocumentBeforeCloseEventHandler DocumentBeforeCloseEvent
 		{
 			add
@@ -254,14 +254,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_DocumentBeforePrintEventHandler _DocumentBeforePrintEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_DocumentBeforePrintEventHandler DocumentBeforePrintEvent
 		{
 			add
@@ -276,14 +276,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_DocumentBeforeSaveEventHandler _DocumentBeforeSaveEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_DocumentBeforeSaveEventHandler DocumentBeforeSaveEvent
 		{
 			add
@@ -298,14 +298,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_NewDocumentEventHandler _NewDocumentEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_NewDocumentEventHandler NewDocumentEvent
 		{
 			add
@@ -320,14 +320,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_WindowActivateEventHandler _WindowActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_WindowActivateEventHandler WindowActivateEvent
 		{
 			add
@@ -342,14 +342,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_WindowDeactivateEventHandler _WindowDeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
 		{
 			add
@@ -364,14 +364,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_WindowSelectionChangeEventHandler _WindowSelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_WindowSelectionChangeEventHandler WindowSelectionChangeEvent
 		{
 			add
@@ -386,14 +386,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_WindowBeforeRightClickEventHandler _WindowBeforeRightClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_WindowBeforeRightClickEventHandler WindowBeforeRightClickEvent
 		{
 			add
@@ -408,14 +408,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 9 10 11 12 14
 		/// </summary>
 		private event Application_WindowBeforeDoubleClickEventHandler _WindowBeforeDoubleClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public event Application_WindowBeforeDoubleClickEventHandler WindowBeforeDoubleClickEvent
 		{
 			add
@@ -430,14 +430,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 10 11 12 14
 		/// </summary>
 		private event Application_EPostagePropertyDialogEventHandler _EPostagePropertyDialogEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public event Application_EPostagePropertyDialogEventHandler EPostagePropertyDialogEvent
 		{
 			add
@@ -452,14 +452,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 10 11 12 14
 		/// </summary>
 		private event Application_EPostageInsertEventHandler _EPostageInsertEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public event Application_EPostageInsertEventHandler EPostageInsertEvent
 		{
 			add
@@ -474,14 +474,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 10 11 12 14
 		/// </summary>
 		private event Application_MailMergeAfterMergeEventHandler _MailMergeAfterMergeEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public event Application_MailMergeAfterMergeEventHandler MailMergeAfterMergeEvent
 		{
 			add
@@ -496,14 +496,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 10 11 12 14
 		/// </summary>
 		private event Application_MailMergeAfterRecordMergeEventHandler _MailMergeAfterRecordMergeEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public event Application_MailMergeAfterRecordMergeEventHandler MailMergeAfterRecordMergeEvent
 		{
 			add
@@ -518,14 +518,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 10 11 12 14
 		/// </summary>
 		private event Application_MailMergeBeforeMergeEventHandler _MailMergeBeforeMergeEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public event Application_MailMergeBeforeMergeEventHandler MailMergeBeforeMergeEvent
 		{
 			add
@@ -540,14 +540,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 10 11 12 14
 		/// </summary>
 		private event Application_MailMergeBeforeRecordMergeEventHandler _MailMergeBeforeRecordMergeEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public event Application_MailMergeBeforeRecordMergeEventHandler MailMergeBeforeRecordMergeEvent
 		{
 			add
@@ -562,14 +562,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 10 11 12 14
 		/// </summary>
 		private event Application_MailMergeDataSourceLoadEventHandler _MailMergeDataSourceLoadEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public event Application_MailMergeDataSourceLoadEventHandler MailMergeDataSourceLoadEvent
 		{
 			add
@@ -584,14 +584,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 10 11 12 14
 		/// </summary>
 		private event Application_MailMergeDataSourceValidateEventHandler _MailMergeDataSourceValidateEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public event Application_MailMergeDataSourceValidateEventHandler MailMergeDataSourceValidateEvent
 		{
 			add
@@ -606,14 +606,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 10 11 12 14
 		/// </summary>
 		private event Application_MailMergeWizardSendToCustomEventHandler _MailMergeWizardSendToCustomEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public event Application_MailMergeWizardSendToCustomEventHandler MailMergeWizardSendToCustomEvent
 		{
 			add
@@ -628,14 +628,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 10 11 12 14
 		/// </summary>
 		private event Application_MailMergeWizardStateChangeEventHandler _MailMergeWizardStateChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public event Application_MailMergeWizardStateChangeEventHandler MailMergeWizardStateChangeEvent
 		{
 			add
@@ -650,14 +650,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word, 10 11 12 14
 		/// </summary>
 		private event Application_WindowSizeEventHandler _WindowSizeEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14
+		/// SupportByLibrary Word 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public event Application_WindowSizeEventHandler WindowSizeEvent
 		{
 			add
@@ -672,14 +672,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word, 11 12 14
 		/// </summary>
 		private event Application_XMLSelectionChangeEventHandler _XMLSelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public event Application_XMLSelectionChangeEventHandler XMLSelectionChangeEvent
 		{
 			add
@@ -694,14 +694,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word, 11 12 14
 		/// </summary>
 		private event Application_XMLValidationErrorEventHandler _XMLValidationErrorEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public event Application_XMLValidationErrorEventHandler XMLValidationErrorEvent
 		{
 			add
@@ -716,14 +716,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word, 11 12 14
 		/// </summary>
 		private event Application_DocumentSyncEventHandler _DocumentSyncEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public event Application_DocumentSyncEventHandler DocumentSyncEvent
 		{
 			add
@@ -738,14 +738,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word, 11 12 14
 		/// </summary>
 		private event Application_EPostageInsertExEventHandler _EPostageInsertExEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD11 WD12 WD14
+		/// SupportByLibrary Word 11 12 14
 		/// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		public event Application_EPostageInsertExEventHandler EPostageInsertExEvent
 		{
 			add
@@ -760,14 +760,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word, 12 14
 		/// </summary>
 		private event Application_MailMergeDataSourceValidate2EventHandler _MailMergeDataSourceValidate2Event;
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14
+		/// SupportByLibrary Word 12 14
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public event Application_MailMergeDataSourceValidate2EventHandler MailMergeDataSourceValidate2Event
 		{
 			add
@@ -782,14 +782,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word, 14
 		/// </summary>
 		private event Application_ProtectedViewWindowOpenEventHandler _ProtectedViewWindowOpenEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent
 		{
 			add
@@ -804,14 +804,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word, 14
 		/// </summary>
 		private event Application_ProtectedViewWindowBeforeEditEventHandler _ProtectedViewWindowBeforeEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent
 		{
 			add
@@ -826,14 +826,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word, 14
 		/// </summary>
 		private event Application_ProtectedViewWindowBeforeCloseEventHandler _ProtectedViewWindowBeforeCloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent
 		{
 			add
@@ -848,14 +848,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word, 14
 		/// </summary>
 		private event Application_ProtectedViewWindowSizeEventHandler _ProtectedViewWindowSizeEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public event Application_ProtectedViewWindowSizeEventHandler ProtectedViewWindowSizeEvent
 		{
 			add
@@ -870,14 +870,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word, 14
 		/// </summary>
 		private event Application_ProtectedViewWindowActivateEventHandler _ProtectedViewWindowActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent
 		{
 			add
@@ -892,14 +892,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word, 14
 		/// </summary>
 		private event Application_ProtectedViewWindowDeactivateEventHandler _ProtectedViewWindowDeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary WD14
+		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("WD14")]
+		[SupportByLibrary("Word", 14)]
 		public event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent
 		{
 			add

@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _LinkedWindows SupportByLibrary VBE5.3 VBE12 
+	/// DispatchInterface _LinkedWindows SupportByLibrary "VBIDE", 5.3,12
 	///</summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _LinkedWindows : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -65,9 +65,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Window Parent
 		{
 			get
@@ -80,9 +80,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 Count
 		{
 			get
@@ -98,10 +98,10 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="index">object index</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.VBIDEApi.Window this[object index]
 		{
@@ -115,10 +115,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="Window">NetOffice.VBIDEApi.Window Window</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public void Remove(NetOffice.VBIDEApi.Window window)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(window);
@@ -126,10 +126,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="Window">NetOffice.VBIDEApi.Window Window</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public void Add(NetOffice.VBIDEApi.Window window)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(window);
@@ -140,7 +140,7 @@ namespace NetOffice.VBIDEApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("VBE5.3","VBE12")]
+        [SupportByLibrary("VBIDE", 5.3,12)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

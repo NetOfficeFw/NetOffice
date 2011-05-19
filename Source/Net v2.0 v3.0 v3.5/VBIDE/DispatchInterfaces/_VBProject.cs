@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _VBProject SupportByLibrary VBE5.3 VBE12 
+	/// DispatchInterface _VBProject SupportByLibrary "VBIDE", 5.3,12
 	///</summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _VBProject : _VBProject_Old
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Application Parent
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Enums.vbext_ProjectType Type
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string FileName
 		{
 			get
@@ -107,9 +107,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string BuildFileName
 		{
 			get
@@ -130,10 +130,10 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public void SaveAs(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -141,9 +141,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public void MakeCompiledFile()
 		{
 			object[] paramsArray = null;

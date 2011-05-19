@@ -43,9 +43,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass PivotTable SupportByLibrary XWC1.0 
+	/// CoClass PivotTable SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PivotTable : IPivotControl, IEventBinding 
 	{
@@ -124,14 +124,14 @@ namespace NetOffice.OWC10Api
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_SelectionChangeEventHandler _SelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_SelectionChangeEventHandler SelectionChangeEvent
 		{
 			add
@@ -146,14 +146,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_ViewChangeEventHandler _ViewChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_ViewChangeEventHandler ViewChangeEvent
 		{
 			add
@@ -168,14 +168,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_DataChangeEventHandler _DataChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_DataChangeEventHandler DataChangeEvent
 		{
 			add
@@ -190,14 +190,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_PivotTableChangeEventHandler _PivotTableChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_PivotTableChangeEventHandler PivotTableChangeEvent
 		{
 			add
@@ -212,14 +212,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_BeforeQueryEventHandler _BeforeQueryEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_BeforeQueryEventHandler BeforeQueryEvent
 		{
 			add
@@ -234,14 +234,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_QueryEventHandler _QueryEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_QueryEventHandler QueryEvent
 		{
 			add
@@ -256,14 +256,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_OnConnectEventHandler _OnConnectEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_OnConnectEventHandler OnConnectEvent
 		{
 			add
@@ -278,14 +278,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_OnDisconnectEventHandler _OnDisconnectEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_OnDisconnectEventHandler OnDisconnectEvent
 		{
 			add
@@ -300,14 +300,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -322,14 +322,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -344,14 +344,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -366,14 +366,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_MouseWheelEventHandler _MouseWheelEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_MouseWheelEventHandler MouseWheelEvent
 		{
 			add
@@ -388,14 +388,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_ClickEventHandler ClickEvent
 		{
 			add
@@ -410,14 +410,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -432,14 +432,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_CommandEnabledEventHandler _CommandEnabledEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_CommandEnabledEventHandler CommandEnabledEvent
 		{
 			add
@@ -454,14 +454,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_CommandCheckedEventHandler _CommandCheckedEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_CommandCheckedEventHandler CommandCheckedEvent
 		{
 			add
@@ -476,14 +476,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_CommandTipTextEventHandler _CommandTipTextEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_CommandTipTextEventHandler CommandTipTextEvent
 		{
 			add
@@ -498,14 +498,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_CommandBeforeExecuteEventHandler _CommandBeforeExecuteEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_CommandBeforeExecuteEventHandler CommandBeforeExecuteEvent
 		{
 			add
@@ -520,14 +520,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_CommandExecuteEventHandler _CommandExecuteEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_CommandExecuteEventHandler CommandExecuteEvent
 		{
 			add
@@ -542,14 +542,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -564,14 +564,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -586,14 +586,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -608,14 +608,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_BeforeKeyDownEventHandler _BeforeKeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_BeforeKeyDownEventHandler BeforeKeyDownEvent
 		{
 			add
@@ -630,14 +630,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_BeforeKeyUpEventHandler _BeforeKeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_BeforeKeyUpEventHandler BeforeKeyUpEvent
 		{
 			add
@@ -652,14 +652,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_BeforeKeyPressEventHandler _BeforeKeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_BeforeKeyPressEventHandler BeforeKeyPressEvent
 		{
 			add
@@ -674,14 +674,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_BeforeContextMenuEventHandler _BeforeContextMenuEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_BeforeContextMenuEventHandler BeforeContextMenuEvent
 		{
 			add
@@ -696,14 +696,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_StartEditEventHandler _StartEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_StartEditEventHandler StartEditEvent
 		{
 			add
@@ -718,14 +718,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_EndEditEventHandler _EndEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_EndEditEventHandler EndEditEvent
 		{
 			add
@@ -740,14 +740,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event PivotTable_BeforeScreenTipEventHandler _BeforeScreenTipEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event PivotTable_BeforeScreenTipEventHandler BeforeScreenTipEvent
 		{
 			add

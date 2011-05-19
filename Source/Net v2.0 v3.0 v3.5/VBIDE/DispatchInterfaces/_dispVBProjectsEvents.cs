@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _dispVBProjectsEvents SupportByLibrary VBE5.3 VBE12 
+	/// DispatchInterface _dispVBProjectsEvents SupportByLibrary "VBIDE", 5.3,12
 	///</summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _dispVBProjectsEvents : COMObject
 	{
@@ -53,10 +53,10 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public void ItemAdded(NetOffice.VBIDEApi.VBProject vBProject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
@@ -64,10 +64,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public void ItemRemoved(NetOffice.VBIDEApi.VBProject vBProject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
@@ -75,11 +75,11 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		/// <param name="OldName">string OldName</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public void ItemRenamed(NetOffice.VBIDEApi.VBProject vBProject, string oldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject, oldName);
@@ -87,10 +87,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12 
+		/// SupportByLibrary 5.3 12 
 		/// </summary>
 		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public void ItemActivated(NetOffice.VBIDEApi.VBProject vBProject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);

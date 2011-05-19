@@ -15,9 +15,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass Range SupportByLibrary XWC1.0 
+	/// CoClass Range SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Range : _Range, IEventBinding 
 	{
@@ -96,14 +96,14 @@ namespace NetOffice.OWC10Api
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event Range_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event Range_ChangeEventHandler ChangeEvent
 		{
 			add

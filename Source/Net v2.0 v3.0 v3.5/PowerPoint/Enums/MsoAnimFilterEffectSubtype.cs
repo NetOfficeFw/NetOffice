@@ -4,172 +4,172 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PP10 PP11 PP12 PP14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoAnimFilterEffectSubtype
 	{
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeInVertical = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeOutVertical = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeInHorizontal = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeOutHorizontal = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeHorizontal = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeVertical = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeIn = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeOut = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeAcross = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeFromLeft = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeFromRight = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeFromTop = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeFromBottom = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeDownLeft = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeUpLeft = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeDownRight = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeUpRight = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeSpokes1 = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeSpokes2 = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeSpokes3 = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeSpokes4 = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeSpokes8 = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeLeft = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeRight = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeDown = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary PP10 PP11 PP12 PP14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimFilterEffectSubtypeUp = 26
 	}
 }

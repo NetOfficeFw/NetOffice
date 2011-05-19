@@ -36,9 +36,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass DataSourceControl SupportByLibrary XWC1.0 
+	/// CoClass DataSourceControl SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataSourceControl : IDataSourceControl, IEventBinding 
 	{
@@ -117,14 +117,14 @@ namespace NetOffice.OWC10Api
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_CurrentEventHandler _CurrentEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_CurrentEventHandler CurrentEvent
 		{
 			add
@@ -139,14 +139,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_BeforeExpandEventHandler _BeforeExpandEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_BeforeExpandEventHandler BeforeExpandEvent
 		{
 			add
@@ -161,14 +161,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_BeforeCollapseEventHandler _BeforeCollapseEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_BeforeCollapseEventHandler BeforeCollapseEvent
 		{
 			add
@@ -183,14 +183,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_BeforeFirstPageEventHandler _BeforeFirstPageEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_BeforeFirstPageEventHandler BeforeFirstPageEvent
 		{
 			add
@@ -205,14 +205,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_BeforePreviousPageEventHandler _BeforePreviousPageEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_BeforePreviousPageEventHandler BeforePreviousPageEvent
 		{
 			add
@@ -227,14 +227,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_BeforeNextPageEventHandler _BeforeNextPageEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_BeforeNextPageEventHandler BeforeNextPageEvent
 		{
 			add
@@ -249,14 +249,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_BeforeLastPageEventHandler _BeforeLastPageEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_BeforeLastPageEventHandler BeforeLastPageEvent
 		{
 			add
@@ -271,14 +271,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_DataErrorEventHandler _DataErrorEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_DataErrorEventHandler DataErrorEvent
 		{
 			add
@@ -293,14 +293,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_DataPageCompleteEventHandler _DataPageCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_DataPageCompleteEventHandler DataPageCompleteEvent
 		{
 			add
@@ -315,14 +315,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_BeforeInitialBindEventHandler _BeforeInitialBindEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_BeforeInitialBindEventHandler BeforeInitialBindEvent
 		{
 			add
@@ -337,14 +337,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_RecordsetSaveProgressEventHandler _RecordsetSaveProgressEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_RecordsetSaveProgressEventHandler RecordsetSaveProgressEvent
 		{
 			add
@@ -359,14 +359,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_AfterDeleteEventHandler _AfterDeleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_AfterDeleteEventHandler AfterDeleteEvent
 		{
 			add
@@ -381,14 +381,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_AfterInsertEventHandler _AfterInsertEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_AfterInsertEventHandler AfterInsertEvent
 		{
 			add
@@ -403,14 +403,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -425,14 +425,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_BeforeDeleteEventHandler _BeforeDeleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_BeforeDeleteEventHandler BeforeDeleteEvent
 		{
 			add
@@ -447,14 +447,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_BeforeInsertEventHandler _BeforeInsertEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_BeforeInsertEventHandler BeforeInsertEvent
 		{
 			add
@@ -469,14 +469,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_BeforeOverwriteEventHandler _BeforeOverwriteEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_BeforeOverwriteEventHandler BeforeOverwriteEvent
 		{
 			add
@@ -491,14 +491,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add
@@ -513,14 +513,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_DirtyEventHandler _DirtyEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_DirtyEventHandler DirtyEvent
 		{
 			add
@@ -535,14 +535,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_RecordExitEventHandler _RecordExitEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_RecordExitEventHandler RecordExitEvent
 		{
 			add
@@ -557,14 +557,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_UndoEventHandler _UndoEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_UndoEventHandler UndoEvent
 		{
 			add
@@ -579,14 +579,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event DataSourceControl_FocusEventHandler _FocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event DataSourceControl_FocusEventHandler FocusEvent
 		{
 			add

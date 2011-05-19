@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// Interface MouseTracker SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+	/// Interface MouseTracker SupportByLibrary "PowerPoint", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class MouseTracker : COMObject
 	{
@@ -52,11 +52,11 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="X">Single X</param>
 		/// <param name="Y">Single Y</param>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public Int32 OnTrack(Single x, Single y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -65,11 +65,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="X">Single X</param>
 		/// <param name="Y">Single Y</param>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public Int32 EndTrack(Single x, Single y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);

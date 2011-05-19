@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface PivotFilterUpdate SupportByLibrary XWC1.0 
+	/// DispatchInterface PivotFilterUpdate SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotFilterUpdate : COMObject
 	{
@@ -49,10 +49,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Member">NetOffice.OWC10Api.PivotMember Member</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum get_StateOf(NetOffice.OWC10Api.PivotMember member)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(member);
@@ -61,9 +61,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public bool IsDirty
 		{
 			get
@@ -79,10 +79,10 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Member">NetOffice.OWC10Api.PivotMember Member</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void Click(NetOffice.OWC10Api.PivotMember member)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(member);
@@ -90,12 +90,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Member">NetOffice.OWC10Api.PivotMember Member</param>
 		/// <param name="OldMemberState">NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum OldMemberState</param>
 		/// <param name="NewMemberState">NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum NewMemberState</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void ClickFromTo(NetOffice.OWC10Api.PivotMember member, NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum oldMemberState, NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum newMemberState)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(member, oldMemberState, newMemberState);
@@ -103,9 +103,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void Apply()
 		{
 			object[] paramsArray = null;

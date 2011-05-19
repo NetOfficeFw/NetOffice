@@ -16,9 +16,9 @@ namespace NetOffice.VBIDEApi
 	#endregion
 
 	///<summary>
-	/// CoClass ReferencesEvents SupportByLibrary VBE5.3 VBE12 
+	/// CoClass ReferencesEvents SupportByLibrary "VBIDE", 5.3,12
 	///</summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ReferencesEvents : _ReferencesEvents, IEventBinding 
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.VBIDEApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12
+		/// SupportByLibrary VBIDE, 5.3 12
 		/// </summary>
 		private event ReferencesEvents_ItemAddedEventHandler _ItemAddedEvent;
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12
+		/// SupportByLibrary VBIDE 5.3 12
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public event ReferencesEvents_ItemAddedEventHandler ItemAddedEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12
+		/// SupportByLibrary VBIDE, 5.3 12
 		/// </summary>
 		private event ReferencesEvents_ItemRemovedEventHandler _ItemRemovedEvent;
 
 		/// <summary>
-		/// SupportByLibrary VBE5.3 VBE12
+		/// SupportByLibrary VBIDE 5.3 12
 		/// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		public event ReferencesEvents_ItemRemovedEventHandler ItemRemovedEvent
 		{
 			add

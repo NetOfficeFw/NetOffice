@@ -10,11 +10,11 @@ namespace NetOffice.OWC10Api
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[ComImport, Guid("B8891063-2B00-48EC-957F-6DEBEADE9D8B"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface IRangeEvents
 	{
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1510)]
 		void Change();
 	}

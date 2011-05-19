@@ -15,9 +15,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass RecordNavigationControl SupportByLibrary XWC1.0 
+	/// CoClass RecordNavigationControl SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class RecordNavigationControl : INavigationControl, IEventBinding 
 	{
@@ -96,14 +96,14 @@ namespace NetOffice.OWC10Api
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10, 1
 		/// </summary>
 		private event RecordNavigationControl_ButtonClickEventHandler _ButtonClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0
+		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public event RecordNavigationControl_ButtonClickEventHandler ButtonClickEvent
 		{
 			add

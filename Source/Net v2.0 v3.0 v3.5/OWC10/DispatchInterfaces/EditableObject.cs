@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface EditableObject SupportByLibrary XWC1.0 
+	/// DispatchInterface EditableObject SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EditableObject : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public object Value
 		{
 			get
@@ -81,12 +81,12 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="InitialValue">object InitialValue</param>
 		/// <param name="ArrowMode">bool ArrowMode</param>
 		/// <param name="CaretPosition">Int32 CaretPosition</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void StartEdit(object initialValue, bool arrowMode, Int32 caretPosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(initialValue, arrowMode, caretPosition);
@@ -94,10 +94,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Accept">bool Accept</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void EndEdit(bool accept)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(accept);

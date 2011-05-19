@@ -14,9 +14,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass OfflineInfo SupportByLibrary XWC1.0 
+	/// CoClass OfflineInfo SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OfflineInfo : IOfflineInfo, IEventBinding 
 	{

@@ -14,9 +14,9 @@ namespace NetOffice.VBIDEApi
 	#endregion
 
 	///<summary>
-	/// CoClass LinkedWindows SupportByLibrary VBE5.3 VBE12 
+	/// CoClass LinkedWindows SupportByLibrary "VBIDE", 5.3,12
 	///</summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class LinkedWindows : _LinkedWindows, IEventBinding 
 	{

@@ -10,11 +10,11 @@ using LateBindingApi.Core;
     
     Contains the following Type Libraries:
 	Name - Description - SupportByLibrary
-	Word - Microsoft Word 9.0 Object Library - WD09
-	Word - Microsoft Word 10.0 Object Library - WD10
-	Word - Microsoft.Office.Interop.Word, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c - WD11
-	Word - Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - WD12
-	Word - Microsoft Word 14.0 Object Library - WD14
+	Word - Microsoft Word 9.0 Object Library - 9
+	Word - Microsoft Word 10.0 Object Library - 10
+	Word - Microsoft.Office.Interop.Word, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c - 11
+	Word - Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 12
+	Word - Microsoft Word 14.0 Object Library - 14
 
 */
 

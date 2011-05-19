@@ -14,9 +14,9 @@ namespace NetOffice.VBIDEApi
 	#endregion
 
 	///<summary>
-	/// CoClass VBProjects SupportByLibrary VBE5.3 VBE12 
+	/// CoClass VBProjects SupportByLibrary "VBIDE", 5.3,12
 	///</summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class VBProjects : _VBProjects, IEventBinding 
 	{

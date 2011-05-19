@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WD11 WD12 WD14 
+	 /// SupportByLibrary 11,12,14,
 	 /// </summary>
-	[SupportByLibrary("WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdXMLSelectionChangeReason
 	{
 		 /// <summary>
-		 /// SupportByLibrary WD11 WD12 WD14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		wdXMLSelectionChangeReasonMove = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WD11 WD12 WD14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		wdXMLSelectionChangeReasonInsert = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WD11 WD12 WD14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 11,12,14)]
 		wdXMLSelectionChangeReasonDelete = 2
 	}
 }

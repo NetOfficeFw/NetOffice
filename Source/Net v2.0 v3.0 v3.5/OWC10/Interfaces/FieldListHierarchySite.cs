@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface FieldListHierarchySite SupportByLibrary XWC1.0 
+	/// Interface FieldListHierarchySite SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class FieldListHierarchySite : COMObject
 	{
@@ -52,14 +52,14 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="nOldNodeId">Int32 nOldNodeId</param>
 		/// <param name="nOldTypeId">Int32 nOldTypeId</param>
 		/// <param name="pfPrevent">ref Int32 pfPrevent</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 PreSelect(Int32 nNodeId, Int32 nTypeId, Int32 nOldNodeId, Int32 nOldTypeId, ref Int32 pfPrevent)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
@@ -70,13 +70,13 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="nOldNodeId">Int32 nOldNodeId</param>
 		/// <param name="nOldTypeId">Int32 nOldTypeId</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 PostSelect(Int32 nNodeId, Int32 nTypeId, Int32 nOldNodeId, Int32 nOldTypeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, nOldNodeId, nOldTypeId);
@@ -85,13 +85,13 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="fExpand">Int32 fExpand</param>
 		/// <param name="pfPrevent">ref Int32 pfPrevent</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 PreExpand(Int32 nNodeId, Int32 nTypeId, Int32 fExpand, ref Int32 pfPrevent)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -102,12 +102,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="fExpand">Int32 fExpand</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 PostExpand(Int32 nNodeId, Int32 nTypeId, Int32 fExpand)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, fExpand);
@@ -116,14 +116,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="ppobject">ref object ppobject</param>
 		/// <param name="ppPivotView">ref object ppPivotView</param>
 		/// <param name="pfPrevent">ref Int32 pfPrevent</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 PreDrag(Int32 nNodeId, Int32 nTypeId, ref object ppobject, ref object ppPivotView, ref Int32 pfPrevent)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,true);
@@ -136,12 +136,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="hRes">Int32 hRes</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 PostDrag(Int32 nNodeId, Int32 nTypeId, Int32 hRes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, hRes);
@@ -150,11 +150,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 PopulateChildren(Int32 nNodeId, Int32 nTypeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId);
@@ -163,13 +163,13 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="hMenu">UIntPtr hMenu</param>
 		/// <param name="pfPrevent">ref Int32 pfPrevent</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 ContextMenu(Int32 nNodeId, Int32 nTypeId, UIntPtr hMenu, ref Int32 pfPrevent)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -180,12 +180,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="wid">UIntPtr wid</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 DoCommand(Int32 nNodeId, Int32 nTypeId, UIntPtr wid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, wid);
@@ -194,11 +194,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 DoubleClick(Int32 nNodeId, Int32 nTypeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId);
@@ -207,11 +207,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 PostDelete(Int32 nNodeId, Int32 nTypeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId);
@@ -220,10 +220,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nSelMask">Int32 nSelMask</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 PostMSelect(Int32 nSelMask)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nSelMask);
@@ -232,11 +232,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 Click(Int32 nNodeId, Int32 nTypeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId);
@@ -245,7 +245,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -253,7 +253,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="nwParam">Int32 nwParam</param>
 		/// <param name="nlParam">Int32 nlParam</param>
 		/// <param name="pfStopProcessing">ref Int32 pfStopProcessing</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 KeyEvent(Int32 nNodeId, Int32 nTypeId, Int32 nMsg, Int32 nwParam, Int32 nlParam, ref Int32 pfStopProcessing)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,true);

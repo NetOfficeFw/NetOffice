@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary VBE5.3 VBE12 
+	 /// SupportByLibrary 5.3,12,
 	 /// </summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum vbext_ProjectProtection
 	{
 		 /// <summary>
-		 /// SupportByLibrary VBE5.3 VBE12 
+		 /// SupportByLibrary 5.3,12,
 		 /// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_pp_none = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary VBE5.3 VBE12 
+		 /// SupportByLibrary 5.3,12,
 		 /// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_pp_locked = 1
 	}
 }

@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary VBE5.3 VBE12 
+	 /// SupportByLibrary 5.3,12,
 	 /// </summary>
-	[SupportByLibrary("VBE5.3","VBE12")]
+	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum vbext_WindowState
 	{
 		 /// <summary>
-		 /// SupportByLibrary VBE5.3 VBE12 
+		 /// SupportByLibrary 5.3,12,
 		 /// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_ws_Normal = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary VBE5.3 VBE12 
+		 /// SupportByLibrary 5.3,12,
 		 /// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_ws_Minimize = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary VBE5.3 VBE12 
+		 /// SupportByLibrary 5.3,12,
 		 /// </summary>
-		[SupportByLibrary("VBE5.3","VBE12")]
+		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_ws_Maximize = 2
 	}
 }

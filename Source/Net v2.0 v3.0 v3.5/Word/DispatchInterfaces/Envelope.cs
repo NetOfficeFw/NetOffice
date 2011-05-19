@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Envelope SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	/// DispatchInterface Envelope SupportByLibrary "Word", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Envelope : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range Address
 		{
 			get
@@ -108,9 +108,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range ReturnAddress
 		{
 			get
@@ -123,9 +123,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool DefaultPrintBarCode
 		{
 			get
@@ -142,9 +142,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool DefaultPrintFIMA
 		{
 			get
@@ -161,9 +161,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single DefaultHeight
 		{
 			get
@@ -180,9 +180,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single DefaultWidth
 		{
 			get
@@ -199,9 +199,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string DefaultSize
 		{
 			get
@@ -218,9 +218,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool DefaultOmitReturnAddress
 		{
 			get
@@ -237,9 +237,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdPaperTray FeedSource
 		{
 			get
@@ -256,9 +256,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single AddressFromLeft
 		{
 			get
@@ -275,9 +275,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single AddressFromTop
 		{
 			get
@@ -294,9 +294,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single ReturnAddressFromLeft
 		{
 			get
@@ -313,9 +313,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single ReturnAddressFromTop
 		{
 			get
@@ -332,9 +332,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Style AddressStyle
 		{
 			get
@@ -347,9 +347,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Style ReturnAddressStyle
 		{
 			get
@@ -362,9 +362,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdEnvelopeOrientation DefaultOrientation
 		{
 			get
@@ -381,9 +381,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool DefaultFaceUp
 		{
 			get
@@ -400,9 +400,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public bool Vertical
 		{
 			get
@@ -419,9 +419,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Single RecipientNamefromLeft
 		{
 			get
@@ -438,9 +438,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Single RecipientNamefromTop
 		{
 			get
@@ -457,9 +457,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Single RecipientPostalfromLeft
 		{
 			get
@@ -476,9 +476,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Single RecipientPostalfromTop
 		{
 			get
@@ -495,9 +495,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Single SenderNamefromLeft
 		{
 			get
@@ -514,9 +514,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Single SenderNamefromTop
 		{
 			get
@@ -533,9 +533,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Single SenderPostalfromLeft
 		{
 			get
@@ -552,9 +552,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public Single SenderPostalfromTop
 		{
 			get
@@ -575,7 +575,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD09 
+		/// SupportByLibrary 9 
 		/// </summary>
 		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -595,7 +595,7 @@ namespace NetOffice.WordApi
 		/// <param name="ReturnAddressFromTop">ref optional object ReturnAddressFromTop</param>
 		/// <param name="DefaultFaceUp">ref optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">ref optional object DefaultOrientation</param>
-		[SupportByLibrary("WD09")]
+		[SupportByLibrary("Word", 9)]
 		public void Insert(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
@@ -622,7 +622,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -652,7 +652,7 @@ namespace NetOffice.WordApi
 		/// <param name="SenderNamefromTop">ref optional object SenderNamefromTop</param>
 		/// <param name="SenderPostalfromLeft">ref optional object SenderPostalfromLeft</param>
 		/// <param name="SenderPostalfromTop">ref optional object SenderPostalfromTop</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void Insert(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation, ref object printEPostage, ref object vertical, ref object recipientNamefromLeft, ref object recipientNamefromTop, ref object recipientPostalfromLeft, ref object recipientPostalfromTop, ref object senderNamefromLeft, ref object senderNamefromTop, ref object senderPostalfromLeft, ref object senderPostalfromTop)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
@@ -689,9 +689,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Insert()
 		{
 			object[] paramsArray = null;
@@ -699,7 +699,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 
+		/// SupportByLibrary 9 
 		/// </summary>
 		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -719,7 +719,7 @@ namespace NetOffice.WordApi
 		/// <param name="ReturnAddressFromTop">ref optional object ReturnAddressFromTop</param>
 		/// <param name="DefaultFaceUp">ref optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">ref optional object DefaultOrientation</param>
-		[SupportByLibrary("WD09")]
+		[SupportByLibrary("Word", 9)]
 		public void PrintOut(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
@@ -746,7 +746,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -776,7 +776,7 @@ namespace NetOffice.WordApi
 		/// <param name="SenderNamefromTop">ref optional object SenderNamefromTop</param>
 		/// <param name="SenderPostalfromLeft">ref optional object SenderPostalfromLeft</param>
 		/// <param name="SenderPostalfromTop">ref optional object SenderPostalfromTop</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void PrintOut(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation, ref object printEPostage, ref object vertical, ref object recipientNamefromLeft, ref object recipientNamefromTop, ref object recipientPostalfromLeft, ref object recipientPostalfromTop, ref object senderNamefromLeft, ref object senderNamefromTop, ref object senderPostalfromLeft, ref object senderPostalfromTop)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
@@ -813,9 +813,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void PrintOut()
 		{
 			object[] paramsArray = null;
@@ -823,9 +823,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void UpdateDocument()
 		{
 			object[] paramsArray = null;
@@ -833,7 +833,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -853,7 +853,7 @@ namespace NetOffice.WordApi
 		/// <param name="ReturnAddressFromTop">ref optional object ReturnAddressFromTop</param>
 		/// <param name="DefaultFaceUp">ref optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">ref optional object DefaultOrientation</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void Insert2000(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
@@ -880,9 +880,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void Insert2000()
 		{
 			object[] paramsArray = null;
@@ -890,7 +890,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -910,7 +910,7 @@ namespace NetOffice.WordApi
 		/// <param name="ReturnAddressFromTop">ref optional object ReturnAddressFromTop</param>
 		/// <param name="DefaultFaceUp">ref optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">ref optional object DefaultOrientation</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void PrintOut2000(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
@@ -937,9 +937,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void PrintOut2000()
 		{
 			object[] paramsArray = null;
@@ -947,9 +947,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void Options()
 		{
 			object[] paramsArray = null;

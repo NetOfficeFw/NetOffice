@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface _NumberFormat SupportByLibrary XWC1.0 
+	/// DispatchInterface _NumberFormat SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _NumberFormat : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public string Name
 		{
 			get
@@ -68,9 +68,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public string Code
 		{
 			get
@@ -87,11 +87,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="Value">object Value</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public string get_Format(object value, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value, count);
@@ -100,11 +100,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 get_Width(Int32 hDC, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, value);
@@ -113,11 +113,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 get_Height(Int32 hDC, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, value);
@@ -130,7 +130,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="hDCInfo">Int32 hDCInfo</param>
@@ -145,7 +145,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="HorizontalAlignment">Int32 HorizontalAlignment</param>
 		/// <param name="VerticalAlignment">Int32 VerticalAlignment</param>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void Render(Int32 hDC, Int32 hDCInfo, Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, Int32 horizontalAlignment, Int32 verticalAlignment, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, hDCInfo, cx1, cy1, cx2, cy2, left, top, width, height, horizontalAlignment, verticalAlignment, value);

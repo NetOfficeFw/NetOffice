@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// Interface MouseDownHandler SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+	/// Interface MouseDownHandler SupportByLibrary "PowerPoint", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class MouseDownHandler : COMObject
 	{
@@ -52,10 +52,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PP09 PP10 PP11 PP12 PP14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="activeWin">object activeWin</param>
-		[SupportByLibrary("PP09","PP10","PP11","PP12","PP14")]
+		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public Int32 OnMouseDown(object activeWin)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(activeWin);

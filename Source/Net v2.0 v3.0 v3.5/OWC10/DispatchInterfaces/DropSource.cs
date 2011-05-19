@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface DropSource SupportByLibrary XWC1.0 
+	/// DispatchInterface DropSource SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DropSource : COMObject
 	{
@@ -53,10 +53,10 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="dwEffect">Int32 dwEffect</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void GiveFeedback(Int32 dwEffect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwEffect);
@@ -64,11 +64,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="EscapePressed">bool EscapePressed</param>
 		/// <param name="KeyState">Int32 KeyState</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public void QueryContinueDrag(bool escapePressed, Int32 keyState)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(escapePressed, keyState);

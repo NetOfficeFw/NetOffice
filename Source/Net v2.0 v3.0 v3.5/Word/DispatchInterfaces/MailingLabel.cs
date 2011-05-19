@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface MailingLabel SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+	/// DispatchInterface MailingLabel SupportByLibrary "Word", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MailingLabel : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool DefaultPrintBarCode
 		{
 			get
@@ -112,9 +112,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdPaperTray DefaultLaserTray
 		{
 			get
@@ -131,9 +131,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.CustomLabels CustomLabels
 		{
 			get
@@ -146,9 +146,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string DefaultLabelName
 		{
 			get
@@ -165,9 +165,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public bool Vertical
 		{
 			get
@@ -188,14 +188,14 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WD09 
+		/// SupportByLibrary 9 
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
 		/// <param name="AutoText">ref optional object AutoText</param>
 		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
 		/// <param name="LaserTray">ref optional object LaserTray</param>
-		[SupportByLibrary("WD09")]
+		[SupportByLibrary("Word", 9)]
 		public NetOffice.WordApi.Document CreateNewDocument(ref object name, ref object address, ref object autoText, ref object extractAddress, ref object laserTray)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
@@ -211,7 +211,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -220,7 +220,7 @@ namespace NetOffice.WordApi
 		/// <param name="LaserTray">ref optional object LaserTray</param>
 		/// <param name="PrintEPostageLabel">ref optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">ref optional object Vertical</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document CreateNewDocument(ref object name, ref object address, ref object autoText, ref object extractAddress, ref object laserTray, ref object printEPostageLabel, ref object vertical)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true);
@@ -238,9 +238,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document CreateNewDocument()
 		{
 			object[] paramsArray = null;
@@ -250,7 +250,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 
+		/// SupportByLibrary 9 
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -259,7 +259,7 @@ namespace NetOffice.WordApi
 		/// <param name="SingleLabel">ref optional object SingleLabel</param>
 		/// <param name="Row">ref optional object Row</param>
 		/// <param name="Column">ref optional object Column</param>
-		[SupportByLibrary("WD09")]
+		[SupportByLibrary("Word", 9)]
 		public void PrintOut(ref object name, ref object address, ref object extractAddress, ref object laserTray, ref object singleLabel, ref object row, ref object column)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true);
@@ -275,7 +275,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -286,7 +286,7 @@ namespace NetOffice.WordApi
 		/// <param name="Column">ref optional object Column</param>
 		/// <param name="PrintEPostageLabel">ref optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">ref optional object Vertical</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void PrintOut(ref object name, ref object address, ref object extractAddress, ref object laserTray, ref object singleLabel, ref object row, ref object column, ref object printEPostageLabel, ref object vertical)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true);
@@ -304,9 +304,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD09 WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD09","WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void PrintOut()
 		{
 			object[] paramsArray = null;
@@ -314,14 +314,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
 		/// <param name="AutoText">ref optional object AutoText</param>
 		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
 		/// <param name="LaserTray">ref optional object LaserTray</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(ref object name, ref object address, ref object autoText, ref object extractAddress, ref object laserTray)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
@@ -337,9 +337,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document CreateNewDocument2000()
 		{
 			object[] paramsArray = null;
@@ -349,7 +349,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -358,7 +358,7 @@ namespace NetOffice.WordApi
 		/// <param name="SingleLabel">ref optional object SingleLabel</param>
 		/// <param name="Row">ref optional object Row</param>
 		/// <param name="Column">ref optional object Column</param>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void PrintOut2000(ref object name, ref object address, ref object extractAddress, ref object laserTray, ref object singleLabel, ref object row, ref object column)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true);
@@ -374,9 +374,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void PrintOut2000()
 		{
 			object[] paramsArray = null;
@@ -384,9 +384,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD10 WD11 WD12 WD14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("WD10","WD11","WD12","WD14")]
+		[SupportByLibrary("Word", 10,11,12,14)]
 		public void LabelOptions()
 		{
 			object[] paramsArray = null;
@@ -394,7 +394,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="LabelID">ref optional object LabelID</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -403,7 +403,7 @@ namespace NetOffice.WordApi
 		/// <param name="LaserTray">ref optional object LaserTray</param>
 		/// <param name="PrintEPostageLabel">ref optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">ref optional object Vertical</param>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(ref object labelID, ref object address, ref object autoText, ref object extractAddress, ref object laserTray, ref object printEPostageLabel, ref object vertical)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true);
@@ -421,9 +421,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID()
 		{
 			object[] paramsArray = null;
@@ -433,7 +433,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="LabelID">ref optional object LabelID</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -444,7 +444,7 @@ namespace NetOffice.WordApi
 		/// <param name="Column">ref optional object Column</param>
 		/// <param name="PrintEPostageLabel">ref optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">ref optional object Vertical</param>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public void PrintOutByID(ref object labelID, ref object address, ref object extractAddress, ref object laserTray, ref object singleLabel, ref object row, ref object column, ref object printEPostageLabel, ref object vertical)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true);
@@ -462,9 +462,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WD12 WD14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("WD12","WD14")]
+		[SupportByLibrary("Word", 12,14)]
 		public void PrintOutByID()
 		{
 			object[] paramsArray = null;

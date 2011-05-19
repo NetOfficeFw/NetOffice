@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface ISimpleDataConverter SupportByLibrary XWC1.0 
+	/// Interface ISimpleDataConverter SupportByLibrary "OWC10", 1
 	///</summary>
-	[SupportByLibrary("XWC1.0")]
+	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISimpleDataConverter : COMObject
 	{
@@ -52,13 +52,13 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="varSrc">object varSrc</param>
 		/// <param name="vtDest">Int32 vtDest</param>
 		/// <param name="pUnknownElement">object pUnknownElement</param>
 		/// <param name="pvarDest">ref object pvarDest</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 ConvertData(object varSrc, Int32 vtDest, object pUnknownElement, ref object pvarDest)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -69,11 +69,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary XWC1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="vt1">Int32 vt1</param>
 		/// <param name="vt2">Int32 vt2</param>
-		[SupportByLibrary("XWC1.0")]
+		[SupportByLibrary("OWC10", 1)]
 		public Int32 CanConvertData(Int32 vt1, Int32 vt2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vt1, vt2);
