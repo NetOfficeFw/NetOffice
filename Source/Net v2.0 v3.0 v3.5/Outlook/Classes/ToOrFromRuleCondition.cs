@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass ToOrFromRuleCondition SupportByLibrary OL12 OL14 
+	/// CoClass ToOrFromRuleCondition SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ToOrFromRuleCondition : _ToOrFromRuleCondition, IEventBinding 
 	{

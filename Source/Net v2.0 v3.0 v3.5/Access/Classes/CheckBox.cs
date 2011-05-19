@@ -28,9 +28,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass CheckBox SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	/// CoClass CheckBox SupportByLibrary "Access", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CheckBox : _Checkbox, IEventBinding 
 	{
@@ -116,14 +116,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_ClickEventHandler ClickEvent
 		{
 			add
@@ -138,14 +138,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add
@@ -160,14 +160,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -182,14 +182,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_EnterEventHandler EnterEvent
 		{
 			add
@@ -204,14 +204,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_ExitEventHandler ExitEvent
 		{
 			add
@@ -226,14 +226,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -248,14 +248,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -270,14 +270,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -292,14 +292,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -314,14 +314,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -336,14 +336,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -358,14 +358,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -380,14 +380,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -402,14 +402,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event CheckBox_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event CheckBox_KeyUpEventHandler KeyUpEvent
 		{
 			add

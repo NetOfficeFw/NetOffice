@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _OlkCheckBox SupportByLibrary OL12 OL14 
+	/// DispatchInterface _OlkCheckBox SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _OlkCheckBox : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string Accelerator
 		{
 			get
@@ -68,9 +68,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlAlignment Alignment
 		{
 			get
@@ -87,9 +87,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public Int32 BackColor
 		{
 			get
@@ -106,9 +106,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlBackStyle BackStyle
 		{
 			get
@@ -125,9 +125,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string Caption
 		{
 			get
@@ -144,9 +144,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool Enabled
 		{
 			get
@@ -163,9 +163,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public stdole.Font Font
 		{
 			get
@@ -178,9 +178,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public Int32 ForeColor
 		{
 			get
@@ -197,9 +197,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public stdole.Picture MouseIcon
 		{
 			get
@@ -217,9 +217,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlMousePointer MousePointer
 		{
 			get
@@ -236,9 +236,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool TripleState
 		{
 			get
@@ -255,9 +255,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public object Value
 		{
 			get
@@ -283,9 +283,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool WordWrap
 		{
 			get

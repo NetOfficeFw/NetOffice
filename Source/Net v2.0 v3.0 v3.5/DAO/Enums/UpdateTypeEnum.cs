@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary DAO3.6 DAO12 
+	 /// SupportByLibrary 6,12,
 	 /// </summary>
-	[SupportByLibrary("DAO3.6","DAO12")]
+	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum UpdateTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbUpdateBatch = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbUpdateRegular = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbUpdateCurrentRecord = 2
 	}
 }

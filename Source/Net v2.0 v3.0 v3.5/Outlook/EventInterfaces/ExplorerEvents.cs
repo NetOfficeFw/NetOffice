@@ -10,39 +10,39 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[ComImport, Guid("0006304F-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface ExplorerEvents
 	{
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void Activate();
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void FolderSwitch();
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void BeforeFolderSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object newFolder, [In] [Out] ref object cancel);
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
 		void ViewSwitch();
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
 		void BeforeViewSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] [Out] ref object cancel);
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61446)]
 		void Deactivate();
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61447)]
 		void SelectionChange();
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61448)]
 		void Close();
 	}

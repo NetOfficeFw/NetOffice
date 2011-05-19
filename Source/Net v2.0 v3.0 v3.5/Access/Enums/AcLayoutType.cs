@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC12 AC14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("AC12","AC14")]
+	[SupportByLibrary("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcLayoutType
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acLayoutNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acLayoutTabular = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acLayoutStacked = 2
 	}
 }

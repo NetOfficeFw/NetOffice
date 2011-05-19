@@ -20,9 +20,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass Section SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	/// CoClass Section SupportByLibrary "Access", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Section : _Section, IEventBinding 
 	{
@@ -108,14 +108,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event Section_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event Section_ClickEventHandler ClickEvent
 		{
 			add
@@ -130,14 +130,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event Section_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event Section_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -152,14 +152,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event Section_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event Section_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -174,14 +174,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event Section_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event Section_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -196,14 +196,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event Section_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event Section_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -218,14 +218,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14
+		/// SupportByLibrary Access, 12 14
 		/// </summary>
 		private event Section_PaintEventHandler _PaintEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14
+		/// SupportByLibrary Access 12 14
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public event Section_PaintEventHandler PaintEvent
 		{
 			add

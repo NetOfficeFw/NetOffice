@@ -10,19 +10,19 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 10,11,12,14)]
 	[ComImport, Guid("0006300D-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface ResultsEvents
 	{
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void ItemAdd([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void ItemChange([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void ItemRemove();
 	}

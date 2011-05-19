@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC12 AC14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("AC12","AC14")]
+	[SupportByLibrary("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcNewDatabaseFormat
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acNewDatabaseFormatUserDefault = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acNewDatabaseFormatAccess2000 = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acNewDatabaseFormatAccess2002 = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acNewDatabaseFormatAccess2007 = 12
 	}
 }

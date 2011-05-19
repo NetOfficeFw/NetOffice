@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OL12 OL14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlMultiSelect
 	{
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olMultiSelectSingle = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olMultiSelectMulti = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olMultiSelectExtended = 2
 	}
 }

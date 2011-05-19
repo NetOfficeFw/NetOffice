@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface Pages SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	/// DispatchInterface Pages SupportByLibrary "Access", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Pages : COMObject ,IEnumerable
 	{
@@ -50,10 +50,10 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.AccessApi.Page this[object index]
 		{
@@ -67,9 +67,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -85,10 +85,10 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Before">optional object Before</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Page Add(object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before);
@@ -98,9 +98,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Page Add()
 		{
 			object[] paramsArray = null;
@@ -110,10 +110,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Item">optional object Item</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void Remove(object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -121,9 +121,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void Remove()
 		{
 			object[] paramsArray = null;
@@ -131,10 +131,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -146,7 +146,7 @@ namespace NetOffice.AccessApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+        [SupportByLibrary("Access", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

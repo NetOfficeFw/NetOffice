@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass ViewFields SupportByLibrary OL12 OL14 
+	/// CoClass ViewFields SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ViewFields : _ViewFields, IEventBinding 
 	{

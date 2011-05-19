@@ -21,9 +21,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass ReportOld SupportByLibrary AC10 AC11 AC12 AC14 
+	/// CoClass ReportOld SupportByLibrary "Access", 10,11,12,14
 	///</summary>
-	[SupportByLibrary("AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ReportOld : _Report, IEventBinding 
 	{
@@ -102,14 +102,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event ReportOld_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event ReportOld_OpenEventHandler OpenEvent
 		{
 			add
@@ -124,14 +124,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event ReportOld_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event ReportOld_CloseEventHandler CloseEvent
 		{
 			add
@@ -146,14 +146,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event ReportOld_ActivateEventHandler _ActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event ReportOld_ActivateEventHandler ActivateEvent
 		{
 			add
@@ -168,14 +168,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event ReportOld_DeactivateEventHandler _DeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event ReportOld_DeactivateEventHandler DeactivateEvent
 		{
 			add
@@ -190,14 +190,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event ReportOld_ErrorEventHandler _ErrorEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event ReportOld_ErrorEventHandler ErrorEvent
 		{
 			add
@@ -212,14 +212,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event ReportOld_NoDataEventHandler _NoDataEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event ReportOld_NoDataEventHandler NoDataEvent
 		{
 			add
@@ -234,14 +234,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event ReportOld_PageEventHandler _PageEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event ReportOld_PageEventHandler PageEvent
 		{
 			add

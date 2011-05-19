@@ -16,9 +16,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass Class SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	/// CoClass Class SupportByLibrary "Access", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Class : _Dummy, IEventBinding 
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event Class_InitializeEventHandler _InitializeEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event Class_InitializeEventHandler InitializeEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event Class_TerminateEventHandler _TerminateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event Class_TerminateEventHandler TerminateEvent
 		{
 			add

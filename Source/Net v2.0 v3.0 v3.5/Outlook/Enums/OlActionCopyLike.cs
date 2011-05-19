@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlActionCopyLike
 	{
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olReply = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olReplyAll = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olForward = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olReplyFolder = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olRespond = 4
 	}
 }

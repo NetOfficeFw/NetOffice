@@ -10,23 +10,23 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[ComImport, Guid("00063085-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface SyncObjectEvents
 	{
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void SyncStart();
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void Progress([In] object state, [In] object description, [In] object value, [In] object max);
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void OnError([In] object code, [In] object description);
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
 		void SyncEnd();
 	}

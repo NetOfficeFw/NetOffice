@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OL12 OL14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlCalendarViewMode
 	{
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olCalendarViewDay = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olCalendarViewWeek = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olCalendarViewMonth = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olCalendarViewMultiDay = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olCalendarView5DayWeek = 4
 	}
 }

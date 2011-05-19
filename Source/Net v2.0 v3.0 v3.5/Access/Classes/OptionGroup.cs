@@ -23,9 +23,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass OptionGroup SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	/// CoClass OptionGroup SupportByLibrary "Access", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OptionGroup : _OptionGroup, IEventBinding 
 	{
@@ -111,14 +111,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event OptionGroup_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event OptionGroup_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add
@@ -133,14 +133,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event OptionGroup_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event OptionGroup_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -155,14 +155,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event OptionGroup_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event OptionGroup_EnterEventHandler EnterEvent
 		{
 			add
@@ -177,14 +177,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event OptionGroup_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event OptionGroup_ExitEventHandler ExitEvent
 		{
 			add
@@ -199,14 +199,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event OptionGroup_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event OptionGroup_ClickEventHandler ClickEvent
 		{
 			add
@@ -221,14 +221,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event OptionGroup_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event OptionGroup_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -243,14 +243,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event OptionGroup_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event OptionGroup_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -265,14 +265,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event OptionGroup_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event OptionGroup_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -287,14 +287,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event OptionGroup_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event OptionGroup_MouseUpEventHandler MouseUpEvent
 		{
 			add

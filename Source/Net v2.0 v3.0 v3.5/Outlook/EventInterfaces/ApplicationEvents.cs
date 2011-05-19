@@ -10,31 +10,31 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[ComImport, Guid("0006304E-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface ApplicationEvents
 	{
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void ItemSend([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In] [Out] ref object cancel);
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void NewMail();
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
 		void Reminder([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
 		void OptionsPagesAdd([In, MarshalAs(UnmanagedType.IDispatch)] object pages);
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61446)]
 		void Startup();
 
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61447)]
 		void Quit();
 	}

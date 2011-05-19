@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OL12 OL14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlAutoDiscoverConnectionMode
 	{
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olAutoDiscoverConnectionUnknown = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olAutoDiscoverConnectionExternal = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olAutoDiscoverConnectionInternal = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OL12 OL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		olAutoDiscoverConnectionInternalDomain = 3
 	}
 }

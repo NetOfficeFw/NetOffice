@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass DependencyObjects SupportByLibrary AC11 AC12 AC14 
+	/// CoClass DependencyObjects SupportByLibrary "Access", 11,12,14
 	///</summary>
-	[SupportByLibrary("AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DependencyObjects : _DependencyObjects, IEventBinding 
 	{

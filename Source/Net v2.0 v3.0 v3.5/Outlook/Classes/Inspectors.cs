@@ -15,9 +15,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Inspectors SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+	/// CoClass Inspectors SupportByLibrary "Outlook", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Inspectors : _Inspectors, IEventBinding 
 	{
@@ -96,14 +96,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event Inspectors_NewInspectorEventHandler _NewInspectorEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event Inspectors_NewInspectorEventHandler NewInspectorEvent
 		{
 			add

@@ -17,9 +17,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Items SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+	/// CoClass Items SupportByLibrary "Outlook", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Items : _Items, IEventBinding 
 	{
@@ -98,14 +98,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event Items_ItemAddEventHandler _ItemAddEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event Items_ItemAddEventHandler ItemAddEvent
 		{
 			add
@@ -120,14 +120,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event Items_ItemChangeEventHandler _ItemChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event Items_ItemChangeEventHandler ItemChangeEvent
 		{
 			add
@@ -142,14 +142,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event Items_ItemRemoveEventHandler _ItemRemoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event Items_ItemRemoveEventHandler ItemRemoveEvent
 		{
 			add

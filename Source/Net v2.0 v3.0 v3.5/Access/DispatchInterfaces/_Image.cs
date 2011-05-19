@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _Image SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	/// DispatchInterface _Image SupportByLibrary "Access", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Image : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object OldValue
 		{
 			get
@@ -102,9 +102,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Properties Properties
 		{
 			get
@@ -117,9 +117,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Children Controls
 		{
 			get
@@ -132,9 +132,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi._Hyperlink Hyperlink
 		{
 			get
@@ -147,9 +147,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string EventProcPrefix
 		{
 			get
@@ -166,9 +166,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string _Name
 		{
 			get
@@ -185,9 +185,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte ControlType
 		{
 			get
@@ -204,9 +204,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string Picture
 		{
 			get
@@ -223,9 +223,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte PictureType
 		{
 			get
@@ -242,9 +242,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object PictureData
 		{
 			get
@@ -270,9 +270,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte SizeMode
 		{
 			get
@@ -289,9 +289,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte PictureAlignment
 		{
 			get
@@ -308,9 +308,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool PictureTiling
 		{
 			get
@@ -327,9 +327,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string HyperlinkAddress
 		{
 			get
@@ -346,9 +346,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string HyperlinkSubAddress
 		{
 			get
@@ -365,9 +365,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool Visible
 		{
 			get
@@ -384,9 +384,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte DisplayWhen
 		{
 			get
@@ -403,9 +403,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 Left
 		{
 			get
@@ -422,9 +422,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 Top
 		{
 			get
@@ -441,9 +441,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 Width
 		{
 			get
@@ -460,9 +460,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 Height
 		{
 			get
@@ -479,9 +479,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte BackStyle
 		{
 			get
@@ -498,9 +498,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 BackColor
 		{
 			get
@@ -517,9 +517,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte SpecialEffect
 		{
 			get
@@ -536,9 +536,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte BorderStyle
 		{
 			get
@@ -555,9 +555,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte OldBorderStyle
 		{
 			get
@@ -574,9 +574,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 BorderColor
 		{
 			get
@@ -593,9 +593,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte BorderWidth
 		{
 			get
@@ -612,9 +612,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte BorderLineStyle
 		{
 			get
@@ -631,9 +631,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string ControlTipText
 		{
 			get
@@ -650,9 +650,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 HelpContextId
 		{
 			get
@@ -669,9 +669,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 Section
 		{
 			get
@@ -688,9 +688,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string ControlName
 		{
 			get
@@ -707,9 +707,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object ObjectPalette
 		{
 			get
@@ -735,9 +735,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool IsVisible
 		{
 			get
@@ -754,9 +754,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string OnClick
 		{
 			get
@@ -773,9 +773,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string OnDblClick
 		{
 			get
@@ -792,9 +792,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string OnMouseDown
 		{
 			get
@@ -811,9 +811,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string OnMouseMove
 		{
 			get
@@ -830,9 +830,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string OnMouseUp
 		{
 			get
@@ -849,9 +849,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string ShortcutMenuBar
 		{
 			get
@@ -868,9 +868,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 ImageHeight
 		{
 			get
@@ -887,9 +887,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 ImageWidth
 		{
 			get
@@ -906,9 +906,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool InSelection
 		{
 			get
@@ -925,9 +925,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string Tag
 		{
 			get
@@ -944,9 +944,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -963,9 +963,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string OnClickMacro
 		{
 			get
@@ -982,9 +982,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string OnDblClickMacro
 		{
 			get
@@ -1001,9 +1001,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string OnMouseDownMacro
 		{
 			get
@@ -1020,9 +1020,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string OnMouseMoveMacro
 		{
 			get
@@ -1039,9 +1039,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string OnMouseUpMacro
 		{
 			get
@@ -1058,9 +1058,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcLayoutType Layout
 		{
 			get
@@ -1072,9 +1072,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public Int16 LeftPadding
 		{
 			get
@@ -1091,9 +1091,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public Int16 TopPadding
 		{
 			get
@@ -1110,9 +1110,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public Int16 RightPadding
 		{
 			get
@@ -1129,9 +1129,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public Int16 BottomPadding
 		{
 			get
@@ -1148,9 +1148,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineStyleLeft
 		{
 			get
@@ -1167,9 +1167,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineStyleTop
 		{
 			get
@@ -1186,9 +1186,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineStyleRight
 		{
 			get
@@ -1205,9 +1205,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineStyleBottom
 		{
 			get
@@ -1224,9 +1224,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineWidthLeft
 		{
 			get
@@ -1243,9 +1243,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineWidthTop
 		{
 			get
@@ -1262,9 +1262,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineWidthRight
 		{
 			get
@@ -1281,9 +1281,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineWidthBottom
 		{
 			get
@@ -1300,9 +1300,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public Int32 GridlineColor
 		{
 			get
@@ -1319,9 +1319,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
 		{
 			get
@@ -1338,9 +1338,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
 		{
 			get
@@ -1357,9 +1357,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public Int32 LayoutID
 		{
 			get
@@ -1371,9 +1371,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public string Target
 		{
 			get
@@ -1390,9 +1390,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public Int32 BackThemeColorIndex
 		{
 			get
@@ -1409,9 +1409,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public Single BackTint
 		{
 			get
@@ -1428,9 +1428,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public Single BackShade
 		{
 			get
@@ -1447,9 +1447,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public Int32 BorderThemeColorIndex
 		{
 			get
@@ -1466,9 +1466,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public Single BorderTint
 		{
 			get
@@ -1485,9 +1485,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public Single BorderShade
 		{
 			get
@@ -1504,9 +1504,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public Int32 GridlineThemeColorIndex
 		{
 			get
@@ -1523,9 +1523,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public Single GridlineTint
 		{
 			get
@@ -1542,9 +1542,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public Single GridlineShade
 		{
 			get
@@ -1565,9 +1565,9 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void SizeToFit()
 		{
 			object[] paramsArray = null;
@@ -1575,9 +1575,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void Requery()
 		{
 			object[] paramsArray = null;
@@ -1585,9 +1585,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void Goto()
 		{
 			object[] paramsArray = null;
@@ -1595,9 +1595,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void SetFocus()
 		{
 			object[] paramsArray = null;
@@ -1605,11 +1605,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
 		/// <param name="ppsa">ref optional object[] ppsa</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object _Evaluate(string bstrExpr, ref object[] ppsa)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -1630,10 +1630,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object _Evaluate(string bstrExpr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr);
@@ -1651,13 +1651,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Left">object Left</param>
 		/// <param name="Top">optional object Top</param>
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public void Move(object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
@@ -1665,10 +1665,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Left">object Left</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public void Move(object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left);
@@ -1676,10 +1676,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

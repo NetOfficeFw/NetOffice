@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface ComplexType SupportByLibrary DAO12 
+	/// DispatchInterface ComplexType SupportByLibrary "DAO", 12
 	///</summary>
-	[SupportByLibrary("DAO12")]
+	[SupportByLibrary("DAO", 12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ComplexType : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary DAO12 
+		/// SupportByLibrary 12 
 		/// </summary>
-		[SupportByLibrary("DAO12")]
+		[SupportByLibrary("DAO", 12)]
 		public NetOffice.DAOApi.Fields Fields
 		{
 			get

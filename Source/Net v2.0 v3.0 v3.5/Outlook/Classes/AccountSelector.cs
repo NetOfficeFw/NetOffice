@@ -15,9 +15,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass AccountSelector SupportByLibrary OL14 
+	/// CoClass AccountSelector SupportByLibrary "Outlook", 14
 	///</summary>
-	[SupportByLibrary("OL14")]
+	[SupportByLibrary("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AccountSelector : _AccountSelector, IEventBinding 
 	{
@@ -96,14 +96,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary OL14
+		/// SupportByLibrary Outlook, 14
 		/// </summary>
 		private event AccountSelector_SelectedAccountChangeEventHandler _SelectedAccountChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL14
+		/// SupportByLibrary Outlook 14
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public event AccountSelector_SelectedAccountChangeEventHandler SelectedAccountChangeEvent
 		{
 			add

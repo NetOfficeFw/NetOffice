@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OL14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("OL14")]
+	[SupportByLibrary("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlAppointmentCopyOptions
 	{
 		 /// <summary>
-		 /// SupportByLibrary OL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		olPromptUser = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		olCreateAppointment = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		olCopyAsAccept = 2
 	}
 }

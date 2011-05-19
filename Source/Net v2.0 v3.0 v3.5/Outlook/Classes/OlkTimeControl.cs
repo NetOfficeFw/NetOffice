@@ -28,9 +28,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass OlkTimeControl SupportByLibrary OL12 OL14 
+	/// CoClass OlkTimeControl SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkTimeControl : _OlkTimeControl, IEventBinding 
 	{
@@ -109,14 +109,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_ClickEventHandler ClickEvent
 		{
 			add
@@ -131,14 +131,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_DoubleClickEventHandler _DoubleClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_DoubleClickEventHandler DoubleClickEvent
 		{
 			add
@@ -153,14 +153,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -175,14 +175,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -197,14 +197,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -219,14 +219,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_EnterEventHandler EnterEvent
 		{
 			add
@@ -241,14 +241,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_ExitEventHandler ExitEvent
 		{
 			add
@@ -263,14 +263,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -285,14 +285,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -307,14 +307,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -329,14 +329,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_ChangeEventHandler ChangeEvent
 		{
 			add
@@ -351,14 +351,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_DropButtonClickEventHandler _DropButtonClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_DropButtonClickEventHandler DropButtonClickEvent
 		{
 			add
@@ -373,14 +373,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -395,14 +395,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkTimeControl_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkTimeControl_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add

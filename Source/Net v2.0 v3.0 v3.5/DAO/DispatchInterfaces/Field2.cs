@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface Field2 SupportByLibrary DAO12 
+	/// DispatchInterface Field2 SupportByLibrary "DAO", 12
 	///</summary>
-	[SupportByLibrary("DAO12")]
+	[SupportByLibrary("DAO", 12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Field2 : _Field
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary DAO12 
+		/// SupportByLibrary 12 
 		/// </summary>
-		[SupportByLibrary("DAO12")]
+		[SupportByLibrary("DAO", 12)]
 		public NetOffice.DAOApi.Properties Properties
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO12 
+		/// SupportByLibrary 12 
 		/// </summary>
-		[SupportByLibrary("DAO12")]
+		[SupportByLibrary("DAO", 12)]
 		public NetOffice.DAOApi.ComplexType ComplexType
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO12 
+		/// SupportByLibrary 12 
 		/// </summary>
-		[SupportByLibrary("DAO12")]
+		[SupportByLibrary("DAO", 12)]
 		public bool IsComplex
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO12 
+		/// SupportByLibrary 12 
 		/// </summary>
-		[SupportByLibrary("DAO12")]
+		[SupportByLibrary("DAO", 12)]
 		public bool AppendOnly
 		{
 			get
@@ -112,9 +112,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO12 
+		/// SupportByLibrary 12 
 		/// </summary>
-		[SupportByLibrary("DAO12")]
+		[SupportByLibrary("DAO", 12)]
 		public string Expression
 		{
 			get
@@ -135,10 +135,10 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary DAO12 
+		/// SupportByLibrary 12 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("DAO12")]
+		[SupportByLibrary("DAO", 12)]
 		public void LoadFromFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -146,10 +146,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO12 
+		/// SupportByLibrary 12 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("DAO12")]
+		[SupportByLibrary("DAO", 12)]
 		public void SaveToFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);

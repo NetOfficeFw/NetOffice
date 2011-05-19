@@ -14,9 +14,9 @@ namespace NetOffice.DAOApi
 	#endregion
 
 	///<summary>
-	/// CoClass Relation SupportByLibrary DAO3.6 DAO12 
+	/// CoClass Relation SupportByLibrary "DAO", 6,12
 	///</summary>
-	[SupportByLibrary("DAO3.6","DAO12")]
+	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Relation : _Relation, IEventBinding 
 	{

@@ -4,58 +4,58 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcDataObjectType
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acActiveDataObject = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acDataTable = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acDataQuery = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acDataForm = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acDataServerView = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acDataStoredProcedure = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acDataFunction = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acDataReport = 3
 	}
 }

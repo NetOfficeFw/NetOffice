@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass StorageItem SupportByLibrary OL12 OL14 
+	/// CoClass StorageItem SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class StorageItem : _StorageItem, IEventBinding 
 	{

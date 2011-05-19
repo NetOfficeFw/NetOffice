@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface Parameter SupportByLibrary DAO3.6 DAO12 
+	/// DispatchInterface Parameter SupportByLibrary "DAO", 6,12
 	///</summary>
-	[SupportByLibrary("DAO3.6","DAO12")]
+	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Parameter : _DAO
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public string Name
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public object Value
 		{
 			get
@@ -91,9 +91,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public Int16 Type
 		{
 			get
@@ -110,9 +110,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public Int16 Direction
 		{
 			get

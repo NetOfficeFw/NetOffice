@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface ItemProperty SupportByLibrary OL10 OL11 OL12 OL14 
+	/// DispatchInterface ItemProperty SupportByLibrary "Outlook", 10,11,12,14
 	///</summary>
-	[SupportByLibrary("OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ItemProperty : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -108,9 +108,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public string Formula
 		{
 			get
@@ -127,9 +127,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public string Name
 		{
 			get
@@ -141,9 +141,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlUserPropertyType Type
 		{
 			get
@@ -155,9 +155,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public string ValidationFormula
 		{
 			get
@@ -174,9 +174,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public string ValidationText
 		{
 			get
@@ -193,9 +193,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public object Value
 		{
 			get
@@ -221,9 +221,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public bool IsUserProperty
 		{
 			get
@@ -239,9 +239,9 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

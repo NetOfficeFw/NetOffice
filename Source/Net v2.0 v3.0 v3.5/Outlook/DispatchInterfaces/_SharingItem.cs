@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _SharingItem SupportByLibrary OL12 OL14 
+	/// DispatchInterface _SharingItem SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _SharingItem : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -108,9 +108,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Actions Actions
 		{
 			get
@@ -123,9 +123,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Attachments Attachments
 		{
 			get
@@ -138,9 +138,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string BillingInformation
 		{
 			get
@@ -157,9 +157,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string Body
 		{
 			get
@@ -176,9 +176,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string Categories
 		{
 			get
@@ -195,9 +195,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string Companies
 		{
 			get
@@ -214,9 +214,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string ConversationIndex
 		{
 			get
@@ -228,9 +228,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string ConversationTopic
 		{
 			get
@@ -242,9 +242,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime CreationTime
 		{
 			get
@@ -256,9 +256,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string EntryID
 		{
 			get
@@ -270,9 +270,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.FormDescription FormDescription
 		{
 			get
@@ -285,9 +285,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Inspector GetInspector
 		{
 			get
@@ -300,9 +300,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlImportance Importance
 		{
 			get
@@ -319,9 +319,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime LastModificationTime
 		{
 			get
@@ -333,9 +333,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public COMObject MAPIOBJECT
 		{
 			get
@@ -348,9 +348,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string MessageClass
 		{
 			get
@@ -367,9 +367,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string Mileage
 		{
 			get
@@ -386,9 +386,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool NoAging
 		{
 			get
@@ -405,9 +405,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public Int32 OutlookInternalVersion
 		{
 			get
@@ -419,9 +419,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string OutlookVersion
 		{
 			get
@@ -433,9 +433,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool Saved
 		{
 			get
@@ -447,9 +447,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlSensitivity Sensitivity
 		{
 			get
@@ -466,9 +466,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public Int32 Size
 		{
 			get
@@ -480,9 +480,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string Subject
 		{
 			get
@@ -499,9 +499,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool UnRead
 		{
 			get
@@ -518,9 +518,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.UserProperties UserProperties
 		{
 			get
@@ -533,9 +533,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.PropertyAccessor PropertyAccessor
 		{
 			get
@@ -548,9 +548,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string RemoteName
 		{
 			get
@@ -562,9 +562,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string RemoteID
 		{
 			get
@@ -576,9 +576,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string RemotePath
 		{
 			get
@@ -590,9 +590,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string SharingProviderGuid
 		{
 			get
@@ -604,9 +604,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlSharingProvider SharingProvider
 		{
 			get
@@ -618,9 +618,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool AllowWriteAccess
 		{
 			get
@@ -637,9 +637,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlSharingMsgType Type
 		{
 			get
@@ -656,9 +656,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlDefaultFolders RequestedFolder
 		{
 			get
@@ -670,9 +670,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Account SendUsingAccount
 		{
 			get
@@ -690,9 +690,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool AlternateRecipientAllowed
 		{
 			get
@@ -709,9 +709,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool AutoForwarded
 		{
 			get
@@ -728,9 +728,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string BCC
 		{
 			get
@@ -747,9 +747,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string CC
 		{
 			get
@@ -766,9 +766,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime DeferredDeliveryTime
 		{
 			get
@@ -785,9 +785,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool DeleteAfterSubmit
 		{
 			get
@@ -804,9 +804,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime ExpiryTime
 		{
 			get
@@ -823,9 +823,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime FlagDueBy
 		{
 			get
@@ -842,9 +842,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string FlagRequest
 		{
 			get
@@ -861,9 +861,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlFlagStatus FlagStatus
 		{
 			get
@@ -880,9 +880,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string HTMLBody
 		{
 			get
@@ -899,9 +899,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool OriginatorDeliveryReportRequested
 		{
 			get
@@ -918,9 +918,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool ReadReceiptRequested
 		{
 			get
@@ -937,9 +937,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string ReceivedByEntryID
 		{
 			get
@@ -951,9 +951,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string ReceivedByName
 		{
 			get
@@ -965,9 +965,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string ReceivedOnBehalfOfEntryID
 		{
 			get
@@ -979,9 +979,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string ReceivedOnBehalfOfName
 		{
 			get
@@ -993,9 +993,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime ReceivedTime
 		{
 			get
@@ -1007,9 +1007,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool RecipientReassignmentProhibited
 		{
 			get
@@ -1026,9 +1026,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Recipients Recipients
 		{
 			get
@@ -1041,9 +1041,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool ReminderOverrideDefault
 		{
 			get
@@ -1060,9 +1060,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool ReminderPlaySound
 		{
 			get
@@ -1079,9 +1079,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool ReminderSet
 		{
 			get
@@ -1098,9 +1098,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string ReminderSoundFile
 		{
 			get
@@ -1117,9 +1117,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime ReminderTime
 		{
 			get
@@ -1136,9 +1136,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlRemoteStatus RemoteStatus
 		{
 			get
@@ -1155,9 +1155,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string ReplyRecipientNames
 		{
 			get
@@ -1169,9 +1169,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Recipients ReplyRecipients
 		{
 			get
@@ -1184,9 +1184,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.MAPIFolder SaveSentMessageFolder
 		{
 			get
@@ -1204,9 +1204,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string SenderName
 		{
 			get
@@ -1218,9 +1218,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool Sent
 		{
 			get
@@ -1232,9 +1232,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime SentOn
 		{
 			get
@@ -1246,9 +1246,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string SentOnBehalfOfName
 		{
 			get
@@ -1265,9 +1265,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool Submitted
 		{
 			get
@@ -1279,9 +1279,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string To
 		{
 			get
@@ -1298,9 +1298,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.ItemProperties ItemProperties
 		{
 			get
@@ -1313,9 +1313,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlBodyFormat BodyFormat
 		{
 			get
@@ -1332,9 +1332,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlDownloadState DownloadState
 		{
 			get
@@ -1346,9 +1346,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public Int32 InternetCodepage
 		{
 			get
@@ -1365,9 +1365,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlRemoteStatus MarkForDownload
 		{
 			get
@@ -1384,9 +1384,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool IsConflict
 		{
 			get
@@ -1398,9 +1398,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string TaskSubject
 		{
 			get
@@ -1417,9 +1417,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime TaskDueDate
 		{
 			get
@@ -1436,9 +1436,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime TaskStartDate
 		{
 			get
@@ -1455,9 +1455,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime TaskCompletedDate
 		{
 			get
@@ -1474,9 +1474,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public DateTime ToDoTaskOrdinal
 		{
 			get
@@ -1493,9 +1493,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlFlagIcon FlagIcon
 		{
 			get
@@ -1512,9 +1512,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Conflicts Conflicts
 		{
 			get
@@ -1527,9 +1527,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string SenderEmailAddress
 		{
 			get
@@ -1541,9 +1541,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public string SenderEmailType
 		{
 			get
@@ -1555,9 +1555,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool EnableSharedAttachments
 		{
 			get
@@ -1574,9 +1574,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlPermission Permission
 		{
 			get
@@ -1593,9 +1593,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlPermissionService PermissionService
 		{
 			get
@@ -1612,9 +1612,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public bool IsMarkedAsTask
 		{
 			get
@@ -1626,9 +1626,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public string ConversationID
 		{
 			get
@@ -1640,9 +1640,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public string PermissionTemplateGuid
 		{
 			get
@@ -1659,9 +1659,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public object RTFBody
 		{
 			get
@@ -1687,9 +1687,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public string RetentionPolicyName
 		{
 			get
@@ -1701,9 +1701,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public DateTime RetentionExpirationDate
 		{
 			get
@@ -1719,10 +1719,10 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="SaveMode">NetOffice.OutlookApi.Enums.OlInspectorClose SaveMode</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void Close(NetOffice.OutlookApi.Enums.OlInspectorClose saveMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveMode);
@@ -1730,9 +1730,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public COMObject Copy()
 		{
 			object[] paramsArray = null;
@@ -1742,9 +1742,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -1752,10 +1752,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Modal">optional object Modal</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void Display(object modal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(modal);
@@ -1763,9 +1763,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void Display()
 		{
 			object[] paramsArray = null;
@@ -1773,10 +1773,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="DestFldr">NetOffice.OutlookApi.MAPIFolder DestFldr</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public COMObject Move(NetOffice.OutlookApi.MAPIFolder destFldr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destFldr);
@@ -1786,9 +1786,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void PrintOut()
 		{
 			object[] paramsArray = null;
@@ -1796,9 +1796,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void Save()
 		{
 			object[] paramsArray = null;
@@ -1806,11 +1806,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		/// <param name="Type">optional object Type</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void SaveAs(string path, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, type);
@@ -1818,10 +1818,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Path">string Path</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void SaveAs(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -1829,9 +1829,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void Allow()
 		{
 			object[] paramsArray = null;
@@ -1839,9 +1839,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.SharingItem Deny()
 		{
 			object[] paramsArray = null;
@@ -1851,9 +1851,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.MAPIFolder OpenSharedFolder()
 		{
 			object[] paramsArray = null;
@@ -1863,9 +1863,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void ClearConversationIndex()
 		{
 			object[] paramsArray = null;
@@ -1873,9 +1873,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.SharingItem Forward()
 		{
 			object[] paramsArray = null;
@@ -1885,9 +1885,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.MailItem Reply()
 		{
 			object[] paramsArray = null;
@@ -1897,9 +1897,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.MailItem ReplyAll()
 		{
 			object[] paramsArray = null;
@@ -1909,9 +1909,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void Send()
 		{
 			object[] paramsArray = null;
@@ -1919,9 +1919,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void ShowCategoriesDialog()
 		{
 			object[] paramsArray = null;
@@ -1929,10 +1929,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="contact">NetOffice.OutlookApi.ContactItem contact</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void AddBusinessCard(NetOffice.OutlookApi.ContactItem contact)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(contact);
@@ -1940,10 +1940,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="MarkInterval">NetOffice.OutlookApi.Enums.OlMarkInterval MarkInterval</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void MarkAsTask(NetOffice.OutlookApi.Enums.OlMarkInterval markInterval)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(markInterval);
@@ -1951,9 +1951,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void ClearTaskFlag()
 		{
 			object[] paramsArray = null;
@@ -1961,9 +1961,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public NetOffice.OutlookApi._Conversation GetConversation()
 		{
 			object[] paramsArray = null;

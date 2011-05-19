@@ -4,58 +4,58 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcFormatConditionOperator
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acBetween = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acNotBetween = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acEqual = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acNotEqual = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acGreaterThan = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acLessThan = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acGreaterThanOrEqual = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acLessThanOrEqual = 7
 	}
 }

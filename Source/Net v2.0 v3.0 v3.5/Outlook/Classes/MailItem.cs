@@ -39,9 +39,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass MailItem SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+	/// CoClass MailItem SupportByLibrary "Outlook", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MailItem : _MailItem, IEventBinding 
 	{
@@ -127,14 +127,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_OpenEventHandler OpenEvent
 		{
 			add
@@ -149,14 +149,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_CustomActionEventHandler _CustomActionEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_CustomActionEventHandler CustomActionEvent
 		{
 			add
@@ -171,14 +171,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_CustomPropertyChangeEventHandler _CustomPropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_CustomPropertyChangeEventHandler CustomPropertyChangeEvent
 		{
 			add
@@ -193,14 +193,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_ForwardEventHandler _ForwardEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_ForwardEventHandler ForwardEvent
 		{
 			add
@@ -215,14 +215,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_CloseEventHandler CloseEvent
 		{
 			add
@@ -237,14 +237,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_PropertyChangeEventHandler _PropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_PropertyChangeEventHandler PropertyChangeEvent
 		{
 			add
@@ -259,14 +259,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_ReadEventHandler _ReadEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_ReadEventHandler ReadEvent
 		{
 			add
@@ -281,14 +281,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_ReplyEventHandler _ReplyEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_ReplyEventHandler ReplyEvent
 		{
 			add
@@ -303,14 +303,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_ReplyAllEventHandler _ReplyAllEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_ReplyAllEventHandler ReplyAllEvent
 		{
 			add
@@ -325,14 +325,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_SendEventHandler _SendEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_SendEventHandler SendEvent
 		{
 			add
@@ -347,14 +347,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_WriteEventHandler _WriteEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_WriteEventHandler WriteEvent
 		{
 			add
@@ -369,14 +369,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_BeforeCheckNamesEventHandler _BeforeCheckNamesEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_BeforeCheckNamesEventHandler BeforeCheckNamesEvent
 		{
 			add
@@ -391,14 +391,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_AttachmentAddEventHandler _AttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_AttachmentAddEventHandler AttachmentAddEvent
 		{
 			add
@@ -413,14 +413,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_AttachmentReadEventHandler _AttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_AttachmentReadEventHandler AttachmentReadEvent
 		{
 			add
@@ -435,14 +435,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event MailItem_BeforeAttachmentSaveEventHandler _BeforeAttachmentSaveEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event MailItem_BeforeAttachmentSaveEventHandler BeforeAttachmentSaveEvent
 		{
 			add
@@ -457,14 +457,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event MailItem_BeforeDeleteEventHandler _BeforeDeleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event MailItem_BeforeDeleteEventHandler BeforeDeleteEvent
 		{
 			add
@@ -479,14 +479,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event MailItem_AttachmentRemoveEventHandler _AttachmentRemoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event MailItem_AttachmentRemoveEventHandler AttachmentRemoveEvent
 		{
 			add
@@ -501,14 +501,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event MailItem_BeforeAttachmentAddEventHandler _BeforeAttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event MailItem_BeforeAttachmentAddEventHandler BeforeAttachmentAddEvent
 		{
 			add
@@ -523,14 +523,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event MailItem_BeforeAttachmentPreviewEventHandler _BeforeAttachmentPreviewEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event MailItem_BeforeAttachmentPreviewEventHandler BeforeAttachmentPreviewEvent
 		{
 			add
@@ -545,14 +545,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event MailItem_BeforeAttachmentReadEventHandler _BeforeAttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event MailItem_BeforeAttachmentReadEventHandler BeforeAttachmentReadEvent
 		{
 			add
@@ -567,14 +567,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event MailItem_BeforeAttachmentWriteToTempFileEventHandler _BeforeAttachmentWriteToTempFileEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event MailItem_BeforeAttachmentWriteToTempFileEventHandler BeforeAttachmentWriteToTempFileEvent
 		{
 			add
@@ -589,14 +589,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event MailItem_UnloadEventHandler _UnloadEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event MailItem_UnloadEventHandler UnloadEvent
 		{
 			add
@@ -611,14 +611,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event MailItem_BeforeAutoSaveEventHandler _BeforeAutoSaveEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event MailItem_BeforeAutoSaveEventHandler BeforeAutoSaveEvent
 		{
 			add
@@ -633,14 +633,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14
+		/// SupportByLibrary Outlook, 14
 		/// </summary>
 		private event MailItem_BeforeReadEventHandler _BeforeReadEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL14
+		/// SupportByLibrary Outlook 14
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public event MailItem_BeforeReadEventHandler BeforeReadEvent
 		{
 			add
@@ -655,14 +655,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14
+		/// SupportByLibrary Outlook, 14
 		/// </summary>
 		private event MailItem_AfterWriteEventHandler _AfterWriteEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL14
+		/// SupportByLibrary Outlook 14
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public event MailItem_AfterWriteEventHandler AfterWriteEvent
 		{
 			add

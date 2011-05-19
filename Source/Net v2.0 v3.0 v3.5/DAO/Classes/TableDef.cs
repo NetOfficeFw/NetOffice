@@ -14,9 +14,9 @@ namespace NetOffice.DAOApi
 	#endregion
 
 	///<summary>
-	/// CoClass TableDef SupportByLibrary DAO3.6 DAO12 
+	/// CoClass TableDef SupportByLibrary "DAO", 6,12
 	///</summary>
-	[SupportByLibrary("DAO3.6","DAO12")]
+	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TableDef : _TableDef, IEventBinding 
 	{

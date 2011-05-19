@@ -72,9 +72,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass FormOldV10 SupportByLibrary AC12 AC14 
+	/// CoClass FormOldV10 SupportByLibrary "Access", 12,14
 	///</summary>
-	[SupportByLibrary("AC12","AC14")]
+	[SupportByLibrary("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class FormOldV10 : _Form2, IEventBinding 
 	{
@@ -153,14 +153,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_LoadEventHandler _LoadEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_LoadEventHandler LoadEvent
 		{
 			add
@@ -175,14 +175,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_CurrentEventHandler _CurrentEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_CurrentEventHandler CurrentEvent
 		{
 			add
@@ -197,14 +197,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_BeforeInsertEventHandler _BeforeInsertEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_BeforeInsertEventHandler BeforeInsertEvent
 		{
 			add
@@ -219,14 +219,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_AfterInsertEventHandler _AfterInsertEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_AfterInsertEventHandler AfterInsertEvent
 		{
 			add
@@ -241,14 +241,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add
@@ -263,14 +263,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -285,14 +285,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_DeleteEventHandler _DeleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_DeleteEventHandler DeleteEvent
 		{
 			add
@@ -307,14 +307,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_BeforeDelConfirmEventHandler _BeforeDelConfirmEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_BeforeDelConfirmEventHandler BeforeDelConfirmEvent
 		{
 			add
@@ -329,14 +329,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_AfterDelConfirmEventHandler _AfterDelConfirmEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_AfterDelConfirmEventHandler AfterDelConfirmEvent
 		{
 			add
@@ -351,14 +351,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_OpenEventHandler OpenEvent
 		{
 			add
@@ -373,14 +373,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_ResizeEventHandler _ResizeEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_ResizeEventHandler ResizeEvent
 		{
 			add
@@ -395,14 +395,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_UnloadEventHandler _UnloadEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_UnloadEventHandler UnloadEvent
 		{
 			add
@@ -417,14 +417,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_CloseEventHandler CloseEvent
 		{
 			add
@@ -439,14 +439,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_ActivateEventHandler _ActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_ActivateEventHandler ActivateEvent
 		{
 			add
@@ -461,14 +461,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_DeactivateEventHandler _DeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_DeactivateEventHandler DeactivateEvent
 		{
 			add
@@ -483,14 +483,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -505,14 +505,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -527,14 +527,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_ClickEventHandler ClickEvent
 		{
 			add
@@ -549,14 +549,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -571,14 +571,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -593,14 +593,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -615,14 +615,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -637,14 +637,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -659,14 +659,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -681,14 +681,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -703,14 +703,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_ErrorEventHandler _ErrorEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_ErrorEventHandler ErrorEvent
 		{
 			add
@@ -725,14 +725,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_TimerEventHandler _TimerEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_TimerEventHandler TimerEvent
 		{
 			add
@@ -747,14 +747,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_FilterEventHandler _FilterEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_FilterEventHandler FilterEvent
 		{
 			add
@@ -769,14 +769,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_ApplyFilterEventHandler _ApplyFilterEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_ApplyFilterEventHandler ApplyFilterEvent
 		{
 			add
@@ -791,14 +791,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 9 10 11 12 14
 		/// </summary>
 		private event FormOldV10_DirtyEventHandler _DirtyEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public event FormOldV10_DirtyEventHandler DirtyEvent
 		{
 			add
@@ -813,14 +813,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_UndoEventHandler _UndoEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_UndoEventHandler UndoEvent
 		{
 			add
@@ -835,14 +835,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_RecordExitEventHandler _RecordExitEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_RecordExitEventHandler RecordExitEvent
 		{
 			add
@@ -857,14 +857,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_BeginBatchEditEventHandler _BeginBatchEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_BeginBatchEditEventHandler BeginBatchEditEvent
 		{
 			add
@@ -879,14 +879,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_UndoBatchEditEventHandler _UndoBatchEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_UndoBatchEditEventHandler UndoBatchEditEvent
 		{
 			add
@@ -901,14 +901,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_BeforeBeginTransactionEventHandler _BeforeBeginTransactionEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_BeforeBeginTransactionEventHandler BeforeBeginTransactionEvent
 		{
 			add
@@ -923,14 +923,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_AfterBeginTransactionEventHandler _AfterBeginTransactionEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_AfterBeginTransactionEventHandler AfterBeginTransactionEvent
 		{
 			add
@@ -945,14 +945,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_BeforeCommitTransactionEventHandler _BeforeCommitTransactionEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_BeforeCommitTransactionEventHandler BeforeCommitTransactionEvent
 		{
 			add
@@ -967,14 +967,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_AfterCommitTransactionEventHandler _AfterCommitTransactionEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_AfterCommitTransactionEventHandler AfterCommitTransactionEvent
 		{
 			add
@@ -989,14 +989,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_RollbackTransactionEventHandler _RollbackTransactionEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_RollbackTransactionEventHandler RollbackTransactionEvent
 		{
 			add
@@ -1011,14 +1011,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_OnConnectEventHandler _OnConnectEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_OnConnectEventHandler OnConnectEvent
 		{
 			add
@@ -1033,14 +1033,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_OnDisconnectEventHandler _OnDisconnectEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_OnDisconnectEventHandler OnDisconnectEvent
 		{
 			add
@@ -1055,14 +1055,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_PivotTableChangeEventHandler _PivotTableChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_PivotTableChangeEventHandler PivotTableChangeEvent
 		{
 			add
@@ -1077,14 +1077,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_QueryEventHandler _QueryEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_QueryEventHandler QueryEvent
 		{
 			add
@@ -1099,14 +1099,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_BeforeQueryEventHandler _BeforeQueryEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_BeforeQueryEventHandler BeforeQueryEvent
 		{
 			add
@@ -1121,14 +1121,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_SelectionChangeEventHandler _SelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_SelectionChangeEventHandler SelectionChangeEvent
 		{
 			add
@@ -1143,14 +1143,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_CommandBeforeExecuteEventHandler _CommandBeforeExecuteEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_CommandBeforeExecuteEventHandler CommandBeforeExecuteEvent
 		{
 			add
@@ -1165,14 +1165,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_CommandCheckedEventHandler _CommandCheckedEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_CommandCheckedEventHandler CommandCheckedEvent
 		{
 			add
@@ -1187,14 +1187,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_CommandEnabledEventHandler _CommandEnabledEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_CommandEnabledEventHandler CommandEnabledEvent
 		{
 			add
@@ -1209,14 +1209,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_CommandExecuteEventHandler _CommandExecuteEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_CommandExecuteEventHandler CommandExecuteEvent
 		{
 			add
@@ -1231,14 +1231,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_DataSetChangeEventHandler _DataSetChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_DataSetChangeEventHandler DataSetChangeEvent
 		{
 			add
@@ -1253,14 +1253,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_BeforeScreenTipEventHandler _BeforeScreenTipEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_BeforeScreenTipEventHandler BeforeScreenTipEvent
 		{
 			add
@@ -1275,14 +1275,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_BeforeRenderEventHandler _BeforeRenderEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_BeforeRenderEventHandler BeforeRenderEvent
 		{
 			add
@@ -1297,14 +1297,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_AfterRenderEventHandler _AfterRenderEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_AfterRenderEventHandler AfterRenderEvent
 		{
 			add
@@ -1319,14 +1319,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_AfterFinalRenderEventHandler _AfterFinalRenderEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_AfterFinalRenderEventHandler AfterFinalRenderEvent
 		{
 			add
@@ -1341,14 +1341,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_AfterLayoutEventHandler _AfterLayoutEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_AfterLayoutEventHandler AfterLayoutEvent
 		{
 			add
@@ -1363,14 +1363,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_MouseWheelEventHandler _MouseWheelEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_MouseWheelEventHandler MouseWheelEvent
 		{
 			add
@@ -1385,14 +1385,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_ViewChangeEventHandler _ViewChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_ViewChangeEventHandler ViewChangeEvent
 		{
 			add
@@ -1407,14 +1407,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access, 10 11 12 14
 		/// </summary>
 		private event FormOldV10_DataChangeEventHandler _DataChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14
+		/// SupportByLibrary Access 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public event FormOldV10_DataChangeEventHandler DataChangeEvent
 		{
 			add

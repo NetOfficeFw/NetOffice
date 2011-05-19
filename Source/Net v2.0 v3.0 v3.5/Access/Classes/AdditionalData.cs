@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass AdditionalData SupportByLibrary AC11 AC12 AC14 
+	/// CoClass AdditionalData SupportByLibrary "Access", 11,12,14
 	///</summary>
-	[SupportByLibrary("AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AdditionalData : _AdditionalData, IEventBinding 
 	{

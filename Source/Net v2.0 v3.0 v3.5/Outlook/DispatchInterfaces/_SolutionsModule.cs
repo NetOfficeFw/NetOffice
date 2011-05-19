@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _SolutionsModule SupportByLibrary OL14 
+	/// DispatchInterface _SolutionsModule SupportByLibrary "Outlook", 14
 	///</summary>
-	[SupportByLibrary("OL14")]
+	[SupportByLibrary("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _SolutionsModule : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public COMObject Parent
 		{
 			get
@@ -108,9 +108,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public NetOffice.OutlookApi.Enums.OlNavigationModuleType NavigationModuleType
 		{
 			get
@@ -122,9 +122,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public string Name
 		{
 			get
@@ -136,9 +136,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public Int32 Position
 		{
 			get
@@ -155,9 +155,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public bool Visible
 		{
 			get
@@ -178,11 +178,11 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Solution">NetOffice.OutlookApi.MAPIFolder Solution</param>
 		/// <param name="Scope">NetOffice.OutlookApi.Enums.OlSolutionScope Scope</param>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public void AddSolution(NetOffice.OutlookApi.MAPIFolder solution, NetOffice.OutlookApi.Enums.OlSolutionScope scope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(solution, scope);

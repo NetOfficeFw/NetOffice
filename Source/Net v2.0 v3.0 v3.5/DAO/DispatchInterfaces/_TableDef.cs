@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface _TableDef SupportByLibrary DAO3.6 DAO12 
+	/// DispatchInterface _TableDef SupportByLibrary "DAO", 6,12
 	///</summary>
-	[SupportByLibrary("DAO3.6","DAO12")]
+	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _TableDef : _DAO
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public Int32 Attributes
 		{
 			get
@@ -68,9 +68,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public string Connect
 		{
 			get
@@ -87,9 +87,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public object DateCreated
 		{
 			get
@@ -110,9 +110,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public object LastUpdated
 		{
 			get
@@ -133,9 +133,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public string Name
 		{
 			get
@@ -152,9 +152,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public string SourceTableName
 		{
 			get
@@ -171,9 +171,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public bool Updatable
 		{
 			get
@@ -185,9 +185,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public string ValidationText
 		{
 			get
@@ -204,9 +204,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public string ValidationRule
 		{
 			get
@@ -223,9 +223,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public Int32 RecordCount
 		{
 			get
@@ -237,9 +237,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Fields Fields
 		{
 			get
@@ -252,9 +252,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Indexes Indexes
 		{
 			get
@@ -267,9 +267,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public string ConflictTable
 		{
 			get
@@ -281,9 +281,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public object ReplicaFilter
 		{
 			get
@@ -313,11 +313,11 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Options">optional object Options</param>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset OpenRecordset(object type, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options);
@@ -327,9 +327,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset OpenRecordset()
 		{
 			object[] paramsArray = null;
@@ -339,9 +339,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public void RefreshLink()
 		{
 			object[] paramsArray = null;
@@ -349,12 +349,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Size">optional object Size</param>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Field CreateField(object name, object type, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, size);
@@ -364,9 +364,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Field CreateField()
 		{
 			object[] paramsArray = null;
@@ -376,10 +376,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Index CreateIndex(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -389,9 +389,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Index CreateIndex()
 		{
 			object[] paramsArray = null;
@@ -401,13 +401,13 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Value">optional object Value</param>
 		/// <param name="DDL">optional object DDL</param>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Property CreateProperty(object name, object type, object value, object dDL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, value, dDL);
@@ -417,9 +417,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO3.6 DAO12 
+		/// SupportByLibrary 6 12 
 		/// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Property CreateProperty()
 		{
 			object[] paramsArray = null;

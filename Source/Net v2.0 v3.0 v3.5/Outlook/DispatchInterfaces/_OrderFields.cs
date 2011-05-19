@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _OrderFields SupportByLibrary OL12 OL14 
+	/// DispatchInterface _OrderFields SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _OrderFields : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -108,9 +108,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -126,10 +126,10 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OutlookApi._OrderField this[object index]
 		{
@@ -143,11 +143,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="PropertyName">string PropertyName</param>
 		/// <param name="IsDescending">optional object IsDescending</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.OrderField Add(string propertyName, object isDescending)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyName, isDescending);
@@ -157,10 +157,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="PropertyName">string PropertyName</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.OrderField Add(string propertyName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyName);
@@ -170,10 +170,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void Remove(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -181,9 +181,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public void RemoveAll()
 		{
 			object[] paramsArray = null;
@@ -191,12 +191,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="PropertyName">string PropertyName</param>
 		/// <param name="Index">object Index</param>
 		/// <param name="IsDescending">optional object IsDescending</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.OrderField Insert(string propertyName, object index, object isDescending)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyName, index, isDescending);
@@ -206,11 +206,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="PropertyName">string PropertyName</param>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.OrderField Insert(string propertyName, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyName, index);

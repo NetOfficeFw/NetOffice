@@ -10,7 +10,7 @@ using LateBindingApi.Core;
     
     Contains the following Type Libraries:
 	Name - Description - SupportByLibrary
-	MSDATASRC - Microsoft Data Source Interfaces - DSI1.0
+	MSDATASRC - Microsoft Data Source Interfaces - 1
 
 */
 
@@ -31,7 +31,7 @@ using LateBindingApi.Core;
 /*
 Alias Table
  
-[SupportByLibrary("DSI1.0")]
+[SupportByLibrary("MSDATASRC", 1)]
 DataMember as string
 
 */

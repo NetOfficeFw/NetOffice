@@ -4,262 +4,262 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC10 AC11 AC12 AC14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcPrintPaperSize
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSLetter = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSLetterSmall = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSTabloid = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSLedger = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSLegal = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSStatement = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSExecutive = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSA3 = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSA4 = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSA4Small = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSA5 = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSB4 = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSB5 = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSFolio = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSQuarto = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPS10x14 = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPS11x17 = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSNote = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnv9 = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnv10 = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnv11 = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnv12 = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnv14 = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSCSheet = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSDSheet = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSESheet = 26,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvDL = 27,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvC3 = 29,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvC4 = 30,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvC5 = 28,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvC6 = 31,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvC65 = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvB4 = 33,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvB5 = 34,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvB6 = 35,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvItaly = 36,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvMonarch = 37,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSEnvPersonal = 38,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSFanfoldUS = 39,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSFanfoldStdGerman = 40,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSFanfoldLglGerman = 41,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acPRPSUser = 256
 	}
 }

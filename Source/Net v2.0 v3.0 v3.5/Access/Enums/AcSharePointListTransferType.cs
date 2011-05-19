@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC12 AC14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("AC12","AC14")]
+	[SupportByLibrary("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcSharePointListTransferType
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acImportSharePointList = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acLinkSharePointList = 1
 	}
 }

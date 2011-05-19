@@ -20,9 +20,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass OlkSenderPhoto SupportByLibrary OL12 OL14 
+	/// CoClass OlkSenderPhoto SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkSenderPhoto : _OlkSenderPhoto, IEventBinding 
 	{
@@ -101,14 +101,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkSenderPhoto_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkSenderPhoto_ClickEventHandler ClickEvent
 		{
 			add
@@ -123,14 +123,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkSenderPhoto_DoubleClickEventHandler _DoubleClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkSenderPhoto_DoubleClickEventHandler DoubleClickEvent
 		{
 			add
@@ -145,14 +145,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkSenderPhoto_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkSenderPhoto_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -167,14 +167,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkSenderPhoto_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkSenderPhoto_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -189,14 +189,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkSenderPhoto_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkSenderPhoto_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -211,14 +211,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event OlkSenderPhoto_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event OlkSenderPhoto_ChangeEventHandler ChangeEvent
 		{
 			add

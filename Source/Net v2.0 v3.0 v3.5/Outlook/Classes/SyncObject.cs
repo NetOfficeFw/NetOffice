@@ -18,9 +18,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass SyncObject SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+	/// CoClass SyncObject SupportByLibrary "Outlook", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SyncObject : _SyncObject, IEventBinding 
 	{
@@ -99,14 +99,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event SyncObject_SyncStartEventHandler _SyncStartEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event SyncObject_SyncStartEventHandler SyncStartEvent
 		{
 			add
@@ -121,14 +121,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event SyncObject_ProgressEventHandler _ProgressEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event SyncObject_ProgressEventHandler ProgressEvent
 		{
 			add
@@ -143,14 +143,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event SyncObject_OnErrorEventHandler _OnErrorEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event SyncObject_OnErrorEventHandler OnErrorEvent
 		{
 			add
@@ -165,14 +165,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event SyncObject_SyncEndEventHandler _SyncEndEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event SyncObject_SyncEndEventHandler SyncEndEvent
 		{
 			add

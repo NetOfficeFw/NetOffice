@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass ReturnVars SupportByLibrary AC14 
+	/// CoClass ReturnVars SupportByLibrary "Access", 14
 	///</summary>
-	[SupportByLibrary("AC14")]
+	[SupportByLibrary("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ReturnVars : _ReturnVars, IEventBinding 
 	{

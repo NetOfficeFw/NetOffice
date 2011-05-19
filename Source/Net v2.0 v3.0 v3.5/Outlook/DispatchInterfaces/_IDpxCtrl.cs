@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _IDpxCtrl SupportByLibrary OL10 
+	/// DispatchInterface _IDpxCtrl SupportByLibrary "Outlook", 10
 	///</summary>
-	[SupportByLibrary("OL10")]
+	[SupportByLibrary("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _IDpxCtrl : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OL10 
+		/// SupportByLibrary 10 
 		/// </summary>
-		[SupportByLibrary("OL10")]
+		[SupportByLibrary("Outlook", 10)]
 		public Int32 StartDate
 		{
 			get
@@ -68,9 +68,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 
+		/// SupportByLibrary 10 
 		/// </summary>
-		[SupportByLibrary("OL10")]
+		[SupportByLibrary("Outlook", 10)]
 		public Int32 EndDate
 		{
 			get

@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("AC14")]
+	[SupportByLibrary("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcWebBrowserState
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		acUnintialized = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		acLoading = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		acLoaded = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary AC14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		acInteractive = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary AC14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		acComplete = 4
 	}
 }

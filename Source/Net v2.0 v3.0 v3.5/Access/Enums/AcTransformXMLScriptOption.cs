@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC11 AC12 AC14 
+	 /// SupportByLibrary 11,12,14,
 	 /// </summary>
-	[SupportByLibrary("AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcTransformXMLScriptOption
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC11 AC12 AC14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		acEnableScript = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC11 AC12 AC14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		acPromptScript = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC11 AC12 AC14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		acDisableScript = 2
 	}
 }

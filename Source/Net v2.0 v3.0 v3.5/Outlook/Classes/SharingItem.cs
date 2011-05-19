@@ -39,9 +39,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass SharingItem SupportByLibrary OL12 OL14 
+	/// CoClass SharingItem SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SharingItem : _SharingItem, IEventBinding 
 	{
@@ -120,14 +120,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_OpenEventHandler OpenEvent
 		{
 			add
@@ -142,14 +142,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_CustomActionEventHandler _CustomActionEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_CustomActionEventHandler CustomActionEvent
 		{
 			add
@@ -164,14 +164,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_CustomPropertyChangeEventHandler _CustomPropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_CustomPropertyChangeEventHandler CustomPropertyChangeEvent
 		{
 			add
@@ -186,14 +186,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_ForwardEventHandler _ForwardEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_ForwardEventHandler ForwardEvent
 		{
 			add
@@ -208,14 +208,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_CloseEventHandler CloseEvent
 		{
 			add
@@ -230,14 +230,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_PropertyChangeEventHandler _PropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_PropertyChangeEventHandler PropertyChangeEvent
 		{
 			add
@@ -252,14 +252,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_ReadEventHandler _ReadEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_ReadEventHandler ReadEvent
 		{
 			add
@@ -274,14 +274,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_ReplyEventHandler _ReplyEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_ReplyEventHandler ReplyEvent
 		{
 			add
@@ -296,14 +296,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_ReplyAllEventHandler _ReplyAllEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_ReplyAllEventHandler ReplyAllEvent
 		{
 			add
@@ -318,14 +318,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_SendEventHandler _SendEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_SendEventHandler SendEvent
 		{
 			add
@@ -340,14 +340,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_WriteEventHandler _WriteEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_WriteEventHandler WriteEvent
 		{
 			add
@@ -362,14 +362,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_BeforeCheckNamesEventHandler _BeforeCheckNamesEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_BeforeCheckNamesEventHandler BeforeCheckNamesEvent
 		{
 			add
@@ -384,14 +384,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_AttachmentAddEventHandler _AttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_AttachmentAddEventHandler AttachmentAddEvent
 		{
 			add
@@ -406,14 +406,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_AttachmentReadEventHandler _AttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_AttachmentReadEventHandler AttachmentReadEvent
 		{
 			add
@@ -428,14 +428,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_BeforeAttachmentSaveEventHandler _BeforeAttachmentSaveEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_BeforeAttachmentSaveEventHandler BeforeAttachmentSaveEvent
 		{
 			add
@@ -450,14 +450,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event SharingItem_BeforeDeleteEventHandler _BeforeDeleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event SharingItem_BeforeDeleteEventHandler BeforeDeleteEvent
 		{
 			add
@@ -472,14 +472,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event SharingItem_AttachmentRemoveEventHandler _AttachmentRemoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event SharingItem_AttachmentRemoveEventHandler AttachmentRemoveEvent
 		{
 			add
@@ -494,14 +494,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event SharingItem_BeforeAttachmentAddEventHandler _BeforeAttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event SharingItem_BeforeAttachmentAddEventHandler BeforeAttachmentAddEvent
 		{
 			add
@@ -516,14 +516,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event SharingItem_BeforeAttachmentPreviewEventHandler _BeforeAttachmentPreviewEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event SharingItem_BeforeAttachmentPreviewEventHandler BeforeAttachmentPreviewEvent
 		{
 			add
@@ -538,14 +538,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event SharingItem_BeforeAttachmentReadEventHandler _BeforeAttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event SharingItem_BeforeAttachmentReadEventHandler BeforeAttachmentReadEvent
 		{
 			add
@@ -560,14 +560,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event SharingItem_BeforeAttachmentWriteToTempFileEventHandler _BeforeAttachmentWriteToTempFileEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event SharingItem_BeforeAttachmentWriteToTempFileEventHandler BeforeAttachmentWriteToTempFileEvent
 		{
 			add
@@ -582,14 +582,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event SharingItem_UnloadEventHandler _UnloadEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event SharingItem_UnloadEventHandler UnloadEvent
 		{
 			add
@@ -604,14 +604,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event SharingItem_BeforeAutoSaveEventHandler _BeforeAutoSaveEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event SharingItem_BeforeAutoSaveEventHandler BeforeAutoSaveEvent
 		{
 			add
@@ -626,14 +626,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14
+		/// SupportByLibrary Outlook, 14
 		/// </summary>
 		private event SharingItem_BeforeReadEventHandler _BeforeReadEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL14
+		/// SupportByLibrary Outlook 14
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public event SharingItem_BeforeReadEventHandler BeforeReadEvent
 		{
 			add
@@ -648,14 +648,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL14
+		/// SupportByLibrary Outlook, 14
 		/// </summary>
 		private event SharingItem_AfterWriteEventHandler _AfterWriteEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL14
+		/// SupportByLibrary Outlook 14
 		/// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		public event SharingItem_AfterWriteEventHandler AfterWriteEvent
 		{
 			add

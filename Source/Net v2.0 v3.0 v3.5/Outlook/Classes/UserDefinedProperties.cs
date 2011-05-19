@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass UserDefinedProperties SupportByLibrary OL12 OL14 
+	/// CoClass UserDefinedProperties SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class UserDefinedProperties : _UserDefinedProperties, IEventBinding 
 	{

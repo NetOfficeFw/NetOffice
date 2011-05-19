@@ -33,9 +33,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Application SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+	/// CoClass Application SupportByLibrary "Outlook", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Application : _Application, IEventBinding 
 	{
@@ -128,14 +128,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event Application_ItemSendEventHandler _ItemSendEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event Application_ItemSendEventHandler ItemSendEvent
 		{
 			add
@@ -150,14 +150,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event Application_NewMailEventHandler _NewMailEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event Application_NewMailEventHandler NewMailEvent
 		{
 			add
@@ -172,14 +172,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event Application_ReminderEventHandler _ReminderEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event Application_ReminderEventHandler ReminderEvent
 		{
 			add
@@ -194,14 +194,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event Application_OptionsPagesAddEventHandler _OptionsPagesAddEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event Application_OptionsPagesAddEventHandler OptionsPagesAddEvent
 		{
 			add
@@ -216,14 +216,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event Application_StartupEventHandler _StartupEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event Application_StartupEventHandler StartupEvent
 		{
 			add
@@ -238,14 +238,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 9 10 11 12 14
 		/// </summary>
 		private event Application_QuitEventHandler _QuitEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL09 OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public event Application_QuitEventHandler QuitEvent
 		{
 			add
@@ -260,14 +260,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event Application_AdvancedSearchCompleteEventHandler _AdvancedSearchCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event Application_AdvancedSearchCompleteEventHandler AdvancedSearchCompleteEvent
 		{
 			add
@@ -282,14 +282,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event Application_AdvancedSearchStoppedEventHandler _AdvancedSearchStoppedEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event Application_AdvancedSearchStoppedEventHandler AdvancedSearchStoppedEvent
 		{
 			add
@@ -304,14 +304,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 10 11 12 14
 		/// </summary>
 		private event Application_MAPILogonCompleteEventHandler _MAPILogonCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL10 OL11 OL12 OL14
+		/// SupportByLibrary Outlook 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public event Application_MAPILogonCompleteEventHandler MAPILogonCompleteEvent
 		{
 			add
@@ -326,14 +326,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL11 OL12 OL14
+		/// SupportByLibrary Outlook, 11 12 14
 		/// </summary>
 		private event Application_NewMailExEventHandler _NewMailExEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL11 OL12 OL14
+		/// SupportByLibrary Outlook 11 12 14
 		/// </summary>
-		[SupportByLibrary("OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 11,12,14)]
 		public event Application_NewMailExEventHandler NewMailExEvent
 		{
 			add
@@ -348,14 +348,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event Application_AttachmentContextMenuDisplayEventHandler _AttachmentContextMenuDisplayEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event Application_AttachmentContextMenuDisplayEventHandler AttachmentContextMenuDisplayEvent
 		{
 			add
@@ -370,14 +370,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event Application_FolderContextMenuDisplayEventHandler _FolderContextMenuDisplayEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event Application_FolderContextMenuDisplayEventHandler FolderContextMenuDisplayEvent
 		{
 			add
@@ -392,14 +392,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event Application_StoreContextMenuDisplayEventHandler _StoreContextMenuDisplayEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event Application_StoreContextMenuDisplayEventHandler StoreContextMenuDisplayEvent
 		{
 			add
@@ -414,14 +414,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event Application_ShortcutContextMenuDisplayEventHandler _ShortcutContextMenuDisplayEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event Application_ShortcutContextMenuDisplayEventHandler ShortcutContextMenuDisplayEvent
 		{
 			add
@@ -436,14 +436,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event Application_ViewContextMenuDisplayEventHandler _ViewContextMenuDisplayEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event Application_ViewContextMenuDisplayEventHandler ViewContextMenuDisplayEvent
 		{
 			add
@@ -458,14 +458,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event Application_ItemContextMenuDisplayEventHandler _ItemContextMenuDisplayEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event Application_ItemContextMenuDisplayEventHandler ItemContextMenuDisplayEvent
 		{
 			add
@@ -480,14 +480,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event Application_ContextMenuCloseEventHandler _ContextMenuCloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event Application_ContextMenuCloseEventHandler ContextMenuCloseEvent
 		{
 			add
@@ -502,14 +502,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event Application_ItemLoadEventHandler _ItemLoadEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event Application_ItemLoadEventHandler ItemLoadEvent
 		{
 			add
@@ -524,14 +524,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook, 12 14
 		/// </summary>
 		private event Application_BeforeFolderSharingDialogEventHandler _BeforeFolderSharingDialogEvent;
 
 		/// <summary>
-		/// SupportByLibrary OL12 OL14
+		/// SupportByLibrary Outlook 12 14
 		/// </summary>
-		[SupportByLibrary("OL12","OL14")]
+		[SupportByLibrary("Outlook", 12,14)]
 		public event Application_BeforeFolderSharingDialogEventHandler BeforeFolderSharingDialogEvent
 		{
 			add

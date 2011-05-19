@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _LocalVars SupportByLibrary AC14 
+	/// DispatchInterface _LocalVars SupportByLibrary "Access", 14
 	///</summary>
-	[SupportByLibrary("AC14")]
+	[SupportByLibrary("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _LocalVars : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -65,9 +65,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public COMObject Parent
 		{
 			get
@@ -80,10 +80,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.AccessApi.LocalVar this[object index]
 		{
@@ -97,9 +97,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public Int32 Count
 		{
 			get
@@ -115,11 +115,11 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public void Add(string name, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
@@ -127,10 +127,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -142,7 +142,7 @@ namespace NetOffice.AccessApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("AC14")]
+        [SupportByLibrary("Access", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

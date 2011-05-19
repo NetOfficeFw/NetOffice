@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass PlaySoundRuleAction SupportByLibrary OL12 OL14 
+	/// CoClass PlaySoundRuleAction SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PlaySoundRuleAction : _PlaySoundRuleAction, IEventBinding 
 	{

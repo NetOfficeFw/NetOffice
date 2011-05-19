@@ -4,46 +4,46 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcHyperlinkPart
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acDisplayedValue = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acDisplayText = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acAddress = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSubAddress = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acScreenTip = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acFullAddress = 5
 	}
 }

@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("AC14")]
+	[SupportByLibrary("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcWebUserGroupsDisplay
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		acWebUserGroupID = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		acWebUserGroupName = 1
 	}
 }

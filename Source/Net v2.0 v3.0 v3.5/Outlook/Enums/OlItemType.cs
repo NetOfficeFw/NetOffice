@@ -4,70 +4,70 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlItemType
 	{
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olMailItem = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olAppointmentItem = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olContactItem = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olTaskItem = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olJournalItem = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olNoteItem = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olPostItem = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary OL09 OL10 OL11 OL12 OL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL09","OL10","OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olDistributionListItem = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary OL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		olMobileItemSMS = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary OL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		olMobileItemMMS = 12
 	}
 }

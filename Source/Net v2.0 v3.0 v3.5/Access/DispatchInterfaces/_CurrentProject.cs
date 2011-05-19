@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _CurrentProject SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	/// DispatchInterface _CurrentProject SupportByLibrary "Access", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CurrentProject : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AllForms AllForms
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AllReports AllReports
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AllMacros AllMacros
 		{
 			get
@@ -94,9 +94,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AllModules AllModules
 		{
 			get
@@ -109,9 +109,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AllDataAccessPages AllDataAccessPages
 		{
 			get
@@ -124,9 +124,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Enums.AcProjectType ProjectType
 		{
 			get
@@ -138,9 +138,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string BaseConnectionString
 		{
 			get
@@ -152,9 +152,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool IsConnected
 		{
 			get
@@ -166,9 +166,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -180,9 +180,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string Path
 		{
 			get
@@ -194,9 +194,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string FullName
 		{
 			get
@@ -208,9 +208,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.ADODBApi.Connection Connection
 		{
 			get
@@ -223,9 +223,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AccessObjectProperties Properties
 		{
 			get
@@ -238,9 +238,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -253,9 +253,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -268,9 +268,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public bool RemovePersonalInformation
 		{
 			get
@@ -287,9 +287,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public NetOffice.AccessApi.Enums.AcFileFormat FileFormat
 		{
 			get
@@ -301,9 +301,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public NetOffice.ADODBApi.Connection AccessConnection
 		{
 			get
@@ -316,9 +316,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.ImportExportSpecifications ImportExportSpecifications
 		{
 			get
@@ -331,9 +331,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public bool IsTrusted
 		{
 			get
@@ -345,9 +345,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public string WebSite
 		{
 			get
@@ -359,9 +359,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public bool IsWeb
 		{
 			get
@@ -373,9 +373,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.SharedResources Resources
 		{
 			get
@@ -392,12 +392,12 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="BaseConnectionString">optional object BaseConnectionString</param>
 		/// <param name="UserID">optional object UserID</param>
 		/// <param name="Password">optional object Password</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void OpenConnection(object baseConnectionString, object userID, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(baseConnectionString, userID, password);
@@ -405,9 +405,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void OpenConnection()
 		{
 			object[] paramsArray = null;
@@ -415,9 +415,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void CloseConnection()
 		{
 			object[] paramsArray = null;
@@ -425,9 +425,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public void UpdateDependencyInfo()
 		{
 			object[] paramsArray = null;
@@ -435,10 +435,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -447,11 +447,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="SharedImageName">string SharedImageName</param>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public void AddSharedImage(string sharedImageName, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sharedImageName, fileName);

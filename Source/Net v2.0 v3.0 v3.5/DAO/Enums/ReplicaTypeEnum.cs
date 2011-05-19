@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary DAO3.6 DAO12 
+	 /// SupportByLibrary 6,12,
 	 /// </summary>
-	[SupportByLibrary("DAO3.6","DAO12")]
+	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ReplicaTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbRepMakeReadOnly = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbRepMakePartial = 1
 	}
 }

@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass FromRssFeedRuleCondition SupportByLibrary OL12 OL14 
+	/// CoClass FromRssFeedRuleCondition SupportByLibrary "Outlook", 12,14
 	///</summary>
-	[SupportByLibrary("OL12","OL14")]
+	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class FromRssFeedRuleCondition : _FromRssFeedRuleCondition, IEventBinding 
 	{

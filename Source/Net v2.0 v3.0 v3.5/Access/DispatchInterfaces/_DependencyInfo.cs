@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _DependencyInfo SupportByLibrary AC11 AC12 AC14 
+	/// DispatchInterface _DependencyInfo SupportByLibrary "Access", 11,12,14
 	///</summary>
-	[SupportByLibrary("AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _DependencyInfo : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public NetOffice.AccessApi._DependencyObjects Dependants
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public NetOffice.AccessApi._DependencyObjects Dependencies
 		{
 			get
@@ -94,9 +94,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public NetOffice.AccessApi._DependencyObjects OutOfDateObjects
 		{
 			get
@@ -109,9 +109,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public NetOffice.AccessApi._DependencyObjects InsufficientPermissions
 		{
 			get
@@ -124,9 +124,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public NetOffice.AccessApi._DependencyObjects UnsupportedObjects
 		{
 			get
@@ -143,10 +143,10 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

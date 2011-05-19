@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("AC14")]
+	[SupportByLibrary("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcBrowseToObjectType
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		acBrowseToForm = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary AC14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		acBrowseToReport = 3
 	}
 }

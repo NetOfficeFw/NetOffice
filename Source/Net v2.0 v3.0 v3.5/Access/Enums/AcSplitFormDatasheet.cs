@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC12 AC14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("AC12","AC14")]
+	[SupportByLibrary("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcSplitFormDatasheet
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acDatasheetAllowEdits = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC12 AC14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		acDatasheetReadOnly = 1
 	}
 }

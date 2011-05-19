@@ -14,9 +14,9 @@ namespace NetOffice.DAOApi
 	#endregion
 
 	///<summary>
-	/// CoClass Group SupportByLibrary DAO3.6 DAO12 
+	/// CoClass Group SupportByLibrary "DAO", 6,12
 	///</summary>
-	[SupportByLibrary("DAO3.6","DAO12")]
+	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Group : _Group, IEventBinding 
 	{

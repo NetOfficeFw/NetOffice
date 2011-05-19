@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OL14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("OL14")]
+	[SupportByLibrary("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlMobileFormat
 	{
 		 /// <summary>
-		 /// SupportByLibrary OL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		olSMS = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OL14")]
+		[SupportByLibrary("Outlook", 14)]
 		olMMS = 1
 	}
 }

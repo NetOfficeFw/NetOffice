@@ -14,9 +14,9 @@ namespace NetOffice.DAOApi
 	#endregion
 
 	///<summary>
-	/// CoClass User SupportByLibrary DAO3.6 DAO12 
+	/// CoClass User SupportByLibrary "DAO", 6,12
 	///</summary>
-	[SupportByLibrary("DAO3.6","DAO12")]
+	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class User : _User, IEventBinding 
 	{

@@ -10,8 +10,8 @@ using LateBindingApi.Core;
     
     Contains the following Type Libraries:
 	Name - Description - SupportByLibrary
-	DAO - Microsoft DAO 3.6 Object Library - DAO3.6
-	DAO - <NoDescription> - DAO12
+	DAO - Microsoft DAO 3.6 Object Library - 6
+	DAO - <NoDescription> - 12
 
 */
 

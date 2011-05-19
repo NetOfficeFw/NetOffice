@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC10 AC11 AC12 AC14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcExportXMLObjectType
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acExportTable = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acExportQuery = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acExportForm = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acExportReport = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acExportServerView = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acExportStoredProcedure = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acExportFunction = 10
 	}
 }

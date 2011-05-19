@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _Application SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	/// DispatchInterface _Application SupportByLibrary "Access", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Application : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public COMObject CodeContextObject
 		{
 			get
@@ -94,9 +94,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string MenuBar
 		{
 			get
@@ -113,9 +113,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 CurrentObjectType
 		{
 			get
@@ -127,9 +127,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string CurrentObjectName
 		{
 			get
@@ -141,9 +141,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Forms Forms
 		{
 			get
@@ -156,9 +156,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Reports Reports
 		{
 			get
@@ -171,9 +171,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Screen Screen
 		{
 			get
@@ -186,9 +186,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.DoCmd DoCmd
 		{
 			get
@@ -201,9 +201,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string ShortcutMenuBar
 		{
 			get
@@ -220,9 +220,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool Visible
 		{
 			get
@@ -239,9 +239,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool UserControl
 		{
 			get
@@ -258,9 +258,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.DAOApi.DBEngine DBEngine
 		{
 			get
@@ -273,9 +273,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
 		{
 			get
@@ -288,9 +288,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Assistant Assistant
 		{
 			get
@@ -303,9 +303,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.References References
 		{
 			get
@@ -318,9 +318,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Modules Modules
 		{
 			get
@@ -333,9 +333,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.FileSearch FileSearch
 		{
 			get
@@ -348,9 +348,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool IsCompiled
 		{
 			get
@@ -362,9 +362,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -377,9 +377,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.DataAccessPages DataAccessPages
 		{
 			get
@@ -392,9 +392,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string ADOConnectString
 		{
 			get
@@ -406,9 +406,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.CurrentProject CurrentProject
 		{
 			get
@@ -421,9 +421,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.CurrentData CurrentData
 		{
 			get
@@ -436,9 +436,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.CodeProject CodeProject
 		{
 			get
@@ -451,9 +451,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.CodeData CodeData
 		{
 			get
@@ -466,9 +466,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.WizHook WizHook
 		{
 			get
@@ -481,9 +481,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string ProductCode
 		{
 			get
@@ -495,9 +495,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.COMAddIns COMAddIns
 		{
 			get
@@ -510,9 +510,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -524,9 +524,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.DefaultWebOptions DefaultWebOptions
 		{
 			get
@@ -539,9 +539,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.LanguageSettings LanguageSettings
 		{
 			get
@@ -554,9 +554,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.AnswerWizard AnswerWizard
 		{
 			get
@@ -569,9 +569,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoFeatureInstall FeatureInstall
 		{
 			get
@@ -588,9 +588,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object VGXFrameInterval
 		{
 			get
@@ -611,10 +611,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="dialogType">NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public NetOffice.OfficeApi.FileDialog get_FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dialogType);
@@ -624,9 +624,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public bool BrokenReference
 		{
 			get
@@ -638,9 +638,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public NetOffice.AccessApi.Printers Printers
 		{
 			get
@@ -653,9 +653,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public NetOffice.AccessApi._Printer Printer
 		{
 			get
@@ -673,9 +673,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public NetOffice.OfficeApi.MsoDebugOptions MsoDebugOptions
 		{
 			get
@@ -688,9 +688,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public string Version
 		{
 			get
@@ -702,9 +702,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public Int32 Build
 		{
 			get
@@ -716,9 +716,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public NetOffice.OfficeApi.NewFile NewFileTaskPane
 		{
 			get
@@ -731,9 +731,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public NetOffice.AccessApi._AutoCorrect AutoCorrect
 		{
 			get
@@ -746,9 +746,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoAutomationSecurity AutomationSecurity
 		{
 			get
@@ -765,9 +765,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.MacroError MacroError
 		{
 			get
@@ -780,9 +780,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.TempVars TempVars
 		{
 			get
@@ -795,9 +795,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.OfficeApi.IAssistance Assistance
 		{
 			get
@@ -810,9 +810,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.WebServices WebServices
 		{
 			get
@@ -825,9 +825,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.LocalVars LocalVars
 		{
 			get
@@ -840,9 +840,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.ReturnVars ReturnVars
 		{
 			get
@@ -859,10 +859,10 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 
+		/// SupportByLibrary 9 10 11 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
-		[SupportByLibrary("AC09","AC10","AC11")]
+		[SupportByLibrary("Access", 9,10,11)]
 		public void NewCurrentDatabase(string filepath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath);
@@ -870,14 +870,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="FileFormat">NetOffice.AccessApi.Enums.AcNewDatabaseFormat FileFormat</param>
 		/// <param name="Template">object Template</param>
 		/// <param name="SiteAddress">string SiteAddress</param>
 		/// <param name="ListID">string ListID</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public void NewCurrentDatabase(string filepath, NetOffice.AccessApi.Enums.AcNewDatabaseFormat fileFormat, object template, string siteAddress, string listID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, fileFormat, template, siteAddress, listID);
@@ -885,11 +885,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 
+		/// SupportByLibrary 9 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="Exclusive">bool Exclusive</param>
-		[SupportByLibrary("AC09")]
+		[SupportByLibrary("Access", 9)]
 		public void OpenCurrentDatabase(string filepath, bool exclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive);
@@ -897,12 +897,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="Exclusive">bool Exclusive</param>
 		/// <param name="bstrPassword">string bstrPassword</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public void OpenCurrentDatabase(string filepath, bool exclusive, string bstrPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive, bstrPassword);
@@ -910,10 +910,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="OptionName">string OptionName</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object GetOption(string optionName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(optionName);
@@ -931,11 +931,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="OptionName">string OptionName</param>
 		/// <param name="Setting">object Setting</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void SetOption(string optionName, object setting)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(optionName, setting);
@@ -943,11 +943,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="EchoOn">Int16 EchoOn</param>
 		/// <param name="bstrStatusBarText">string bstrStatusBarText</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void Echo(Int16 echoOn, string bstrStatusBarText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(echoOn, bstrStatusBarText);
@@ -955,9 +955,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void CloseCurrentDatabase()
 		{
 			object[] paramsArray = null;
@@ -965,10 +965,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Option">NetOffice.AccessApi.Enums.AcQuitOption Option</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void Quit(NetOffice.AccessApi.Enums.AcQuitOption option)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option);
@@ -976,12 +976,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Action">NetOffice.AccessApi.Enums.AcSysCmdAction Action</param>
 		/// <param name="Argument2">optional object Argument2</param>
 		/// <param name="Argument3">optional object Argument3</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object SysCmd(NetOffice.AccessApi.Enums.AcSysCmdAction action, object argument2, object argument3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action, argument2, argument3);
@@ -999,10 +999,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Action">NetOffice.AccessApi.Enums.AcSysCmdAction Action</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object SysCmd(NetOffice.AccessApi.Enums.AcSysCmdAction action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action);
@@ -1020,11 +1020,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Database">optional object Database</param>
 		/// <param name="FormTemplate">optional object FormTemplate</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Form CreateForm(object database, object formTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(database, formTemplate);
@@ -1034,9 +1034,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Form CreateForm()
 		{
 			object[] paramsArray = null;
@@ -1046,11 +1046,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Database">optional object Database</param>
 		/// <param name="ReportTemplate">optional object ReportTemplate</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Report CreateReport(object database, object reportTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(database, reportTemplate);
@@ -1060,9 +1060,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Report CreateReport()
 		{
 			object[] paramsArray = null;
@@ -1072,7 +1072,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="FormName">string FormName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1083,7 +1083,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Top">optional object Top</param>
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top, width, height);
@@ -1093,12 +1093,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="FormName">string FormName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
 		/// <param name="Section">NetOffice.AccessApi.Enums.AcSection Section</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section);
@@ -1108,7 +1108,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ReportName">string ReportName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1119,7 +1119,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Top">optional object Top</param>
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top, width, height);
@@ -1129,12 +1129,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ReportName">string ReportName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
 		/// <param name="Section">NetOffice.AccessApi.Enums.AcSection Section</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section);
@@ -1144,7 +1144,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="FormName">string FormName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1155,7 +1155,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Control CreateControlEx(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlSource, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, controlSource, left, top, width, height);
@@ -1165,7 +1165,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ReportName">string ReportName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1176,7 +1176,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Control CreateReportControlEx(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlName, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, controlName, left, top, width, height);
@@ -1186,11 +1186,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="FormName">string FormName</param>
 		/// <param name="ControlName">string ControlName</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void DeleteControl(string formName, string controlName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlName);
@@ -1198,11 +1198,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ReportName">string ReportName</param>
 		/// <param name="ControlName">string ControlName</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void DeleteReportControl(string reportName, string controlName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlName);
@@ -1210,13 +1210,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ReportName">string ReportName</param>
 		/// <param name="Expression">string Expression</param>
 		/// <param name="Header">Int16 Header</param>
 		/// <param name="Footer">Int16 Footer</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 CreateGroupLevel(string reportName, string expression, Int16 header, Int16 footer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, expression, header, footer);
@@ -1225,12 +1225,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DMin(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1248,11 +1248,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DMin(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1270,12 +1270,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DMax(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1293,11 +1293,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DMax(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1315,12 +1315,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DSum(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1338,11 +1338,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DSum(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1360,12 +1360,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DAvg(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1383,11 +1383,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DAvg(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1405,12 +1405,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DLookup(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1428,11 +1428,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DLookup(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1450,12 +1450,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DLast(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1473,11 +1473,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DLast(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1495,12 +1495,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DVar(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1518,11 +1518,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DVar(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1540,12 +1540,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DVarP(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1563,11 +1563,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DVarP(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1585,12 +1585,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DStDev(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1608,11 +1608,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DStDev(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1630,12 +1630,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DStDevP(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1653,11 +1653,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DStDevP(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1675,12 +1675,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DFirst(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1698,11 +1698,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DFirst(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1720,12 +1720,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
 		/// <param name="Criteria">optional object Criteria</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DCount(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1743,11 +1743,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Expr">string Expr</param>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DCount(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1765,10 +1765,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="StringExpr">string StringExpr</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object Eval(string stringExpr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stringExpr);
@@ -1786,9 +1786,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string CurrentUser()
 		{
 			object[] paramsArray = null;
@@ -1797,11 +1797,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Application">string Application</param>
 		/// <param name="Topic">string Topic</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object DDEInitiate(string application, string topic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(application, topic);
@@ -1819,11 +1819,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ChanNum">object ChanNum</param>
 		/// <param name="Command">string Command</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void DDEExecute(object chanNum, string command)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chanNum, command);
@@ -1831,12 +1831,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ChanNum">object ChanNum</param>
 		/// <param name="Item">string Item</param>
 		/// <param name="Data">string Data</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void DDEPoke(object chanNum, string item, string data)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chanNum, item, data);
@@ -1844,11 +1844,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ChanNum">object ChanNum</param>
 		/// <param name="Item">string Item</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string DDERequest(object chanNum, string item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chanNum, item);
@@ -1857,10 +1857,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ChanNum">object ChanNum</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void DDETerminate(object chanNum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chanNum);
@@ -1868,9 +1868,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void DDETerminateAll()
 		{
 			object[] paramsArray = null;
@@ -1878,9 +1878,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.DAOApi.Database CurrentDb()
 		{
 			object[] paramsArray = null;
@@ -1890,9 +1890,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.DAOApi.Database CodeDb()
 		{
 			object[] paramsArray = null;
@@ -1902,10 +1902,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Hwnd">Int32 Hwnd</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void BeginUndoable(Int32 hwnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hwnd);
@@ -1913,10 +1913,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="yesno">Int16 yesno</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void SetUndoRecording(Int16 yesno)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(yesno);
@@ -1924,12 +1924,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Field">string Field</param>
 		/// <param name="FieldType">Int16 FieldType</param>
 		/// <param name="Expression">string Expression</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string BuildCriteria(string field, Int16 fieldType, string expression)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, fieldType, expression);
@@ -1938,11 +1938,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Text">string Text</param>
 		/// <param name="ModuleName">string ModuleName</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void InsertText(string text, string moduleName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, moduleName);
@@ -1950,9 +1950,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void ReloadAddIns()
 		{
 			object[] paramsArray = null;
@@ -1960,9 +1960,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.DAOApi.Workspace DefaultWorkspaceClone()
 		{
 			object[] paramsArray = null;
@@ -1972,9 +1972,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void RefreshTitleBar()
 		{
 			object[] paramsArray = null;
@@ -1982,11 +1982,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ChangeFrom">string ChangeFrom</param>
 		/// <param name="ChangeTo">string ChangeTo</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void AddAutoCorrect(string changeFrom, string changeTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(changeFrom, changeTo);
@@ -1994,10 +1994,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ChangeFrom">string ChangeFrom</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void DelAutoCorrect(string changeFrom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(changeFrom);
@@ -2005,9 +2005,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 hWndAccessApp()
 		{
 			object[] paramsArray = null;
@@ -2016,7 +2016,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Procedure">string Procedure</param>
 		/// <param name="Arg1">ref optional object Arg1</param>
@@ -2049,7 +2049,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Arg28">ref optional object Arg28</param>
 		/// <param name="Arg29">ref optional object Arg29</param>
 		/// <param name="Arg30">ref optional object Arg30</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object Run(string procedure, ref object arg1, ref object arg2, ref object arg3, ref object arg4, ref object arg5, ref object arg6, ref object arg7, ref object arg8, ref object arg9, ref object arg10, ref object arg11, ref object arg12, ref object arg13, ref object arg14, ref object arg15, ref object arg16, ref object arg17, ref object arg18, ref object arg19, ref object arg20, ref object arg21, ref object arg22, ref object arg23, ref object arg24, ref object arg25, ref object arg26, ref object arg27, ref object arg28, ref object arg29, ref object arg30)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
@@ -2128,10 +2128,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Procedure">string Procedure</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object Run(string procedure)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure);
@@ -2149,11 +2149,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Value">object Value</param>
 		/// <param name="ValueIfNull">optional object ValueIfNull</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object Nz(object value, object valueIfNull)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value, valueIfNull);
@@ -2171,10 +2171,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object Nz(object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -2192,10 +2192,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public COMObject LoadPicture(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -2205,13 +2205,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="objtyp">Int32 objtyp</param>
 		/// <param name="ModuleName">string ModuleName</param>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="token">Int32 token</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void ReplaceModule(Int32 objtyp, string moduleName, string fileName, Int32 token)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objtyp, moduleName, fileName, token);
@@ -2219,10 +2219,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ErrorNumber">object ErrorNumber</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object AccessError(object errorNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(errorNumber);
@@ -2240,9 +2240,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object BuilderString()
 		{
 			object[] paramsArray = null;
@@ -2260,10 +2260,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Guid">object Guid</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object StringFromGUID(object guid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(guid);
@@ -2281,10 +2281,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="String">object String</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object GUIDFromString(object _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string);
@@ -2302,10 +2302,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="id">Int32 id</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object AppLoadString(Int32 id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id);
@@ -2323,7 +2323,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Address">string Address</param>
 		/// <param name="SubAddress">string SubAddress</param>
@@ -2332,7 +2332,7 @@ namespace NetOffice.AccessApi
 		/// <param name="ExtraInfo">object ExtraInfo</param>
 		/// <param name="Method">NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method</param>
 		/// <param name="HeaderInfo">string HeaderInfo</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void FollowHyperlink(string address, string subAddress, bool newWindow, bool addHistory, object extraInfo, NetOffice.OfficeApi.Enums.MsoExtraInfoMethod method, string headerInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo, method, headerInfo);
@@ -2340,12 +2340,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">string ObjectName</param>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void SaveAsText(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, fileName);
@@ -2353,12 +2353,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">string ObjectName</param>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void LoadFromText(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, fileName);
@@ -2366,9 +2366,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void AddToFavorites()
 		{
 			object[] paramsArray = null;
@@ -2376,9 +2376,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void RefreshDatabaseWindow()
 		{
 			object[] paramsArray = null;
@@ -2386,10 +2386,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Command">NetOffice.AccessApi.Enums.AcCommand Command</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void RunCommand(NetOffice.AccessApi.Enums.AcCommand command)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(command);
@@ -2397,11 +2397,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Hyperlink">object Hyperlink</param>
 		/// <param name="Part">NetOffice.AccessApi.Enums.AcHyperlinkPart Part</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string HyperlinkPart(object hyperlink, NetOffice.AccessApi.Enums.AcHyperlinkPart part)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hyperlink, part);
@@ -2410,11 +2410,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">string ObjectName</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool GetHiddenAttribute(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
@@ -2423,12 +2423,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">string ObjectName</param>
 		/// <param name="fHidden">bool fHidden</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void SetHiddenAttribute(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName, bool fHidden)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, fHidden);
@@ -2436,11 +2436,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">object FileName</param>
 		/// <param name="CreateNewFile">bool CreateNewFile</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.DataAccessPage CreateDataAccessPage(object fileName, bool createNewFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, createNewFile);
@@ -2450,11 +2450,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="Connect">optional object Connect</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void NewAccessProject(string filepath, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, connect);
@@ -2462,10 +2462,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void NewAccessProject(string filepath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath);
@@ -2473,11 +2473,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="Exclusive">bool Exclusive</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void OpenAccessProject(string filepath, bool exclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive);
@@ -2485,11 +2485,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="Connect">optional object Connect</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void CreateAccessProject(string filepath, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, connect);
@@ -2497,10 +2497,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void CreateAccessProject(string filepath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath);
@@ -2508,14 +2508,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Number">Double Number</param>
 		/// <param name="SourceCurrency">string SourceCurrency</param>
 		/// <param name="TargetCurrency">string TargetCurrency</param>
 		/// <param name="FullPrecision">optional object FullPrecision</param>
 		/// <param name="TriangulationPrecision">optional object TriangulationPrecision</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency, object fullPrecision, object triangulationPrecision)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency, fullPrecision, triangulationPrecision);
@@ -2524,12 +2524,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Number">Double Number</param>
 		/// <param name="SourceCurrency">string SourceCurrency</param>
 		/// <param name="TargetCurrency">string TargetCurrency</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency);
@@ -2538,11 +2538,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="Exclusive">bool Exclusive</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public void OpenCurrentDatabaseOld(string filepath, bool exclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive);
@@ -2550,14 +2550,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		/// <param name="Name">string Name</param>
 		/// <param name="Company">string Company</param>
 		/// <param name="WorkgroupID">string WorkgroupID</param>
 		/// <param name="Replace">bool Replace</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public void CreateNewWorkgroupFile(string path, string name, string company, string workgroupID, bool replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, name, company, workgroupID, replace);
@@ -2565,10 +2565,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Path">string Path</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public void SetDefaultWorkgroupFile(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -2576,12 +2576,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="SourceFilename">string SourceFilename</param>
 		/// <param name="DestinationFilename">string DestinationFilename</param>
 		/// <param name="DestinationFileFormat">NetOffice.AccessApi.Enums.AcFileFormat DestinationFileFormat</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public void ConvertAccessProject(string sourceFilename, string destinationFilename, NetOffice.AccessApi.Enums.AcFileFormat destinationFileFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceFilename, destinationFilename, destinationFileFormat);
@@ -2589,12 +2589,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="SourceFile">string SourceFile</param>
 		/// <param name="DestinationFile">string DestinationFile</param>
 		/// <param name="LogFile">bool LogFile</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public bool CompactRepair(string sourceFile, string destinationFile, bool logFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceFile, destinationFile, logFile);
@@ -2603,7 +2603,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 
+		/// SupportByLibrary 10 
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="DataSource">string DataSource</param>
@@ -2613,7 +2613,7 @@ namespace NetOffice.AccessApi
 		/// <param name="ImageTarget">string ImageTarget</param>
 		/// <param name="Encoding">NetOffice.AccessApi.Enums.AcExportXMLEncoding Encoding</param>
 		/// <param name="OtherFlags">Int32 OtherFlags</param>
-		[SupportByLibrary("AC10")]
+		[SupportByLibrary("Access", 10)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget, NetOffice.AccessApi.Enums.AcExportXMLEncoding encoding, Int32 otherFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags);
@@ -2621,7 +2621,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="DataSource">string DataSource</param>
@@ -2633,7 +2633,7 @@ namespace NetOffice.AccessApi
 		/// <param name="OtherFlags">NetOffice.AccessApi.Enums.AcExportXMLOtherFlags OtherFlags</param>
 		/// <param name="WhereCondition">string WhereCondition</param>
 		/// <param name="AdditionalData">optional object AdditionalData</param>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget, NetOffice.AccessApi.Enums.AcExportXMLEncoding encoding, NetOffice.AccessApi.Enums.AcExportXMLOtherFlags otherFlags, string whereCondition, object additionalData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags, whereCondition, additionalData);
@@ -2641,7 +2641,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="DataSource">string DataSource</param>
@@ -2652,7 +2652,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Encoding">NetOffice.AccessApi.Enums.AcExportXMLEncoding Encoding</param>
 		/// <param name="OtherFlags">NetOffice.AccessApi.Enums.AcExportXMLOtherFlags OtherFlags</param>
 		/// <param name="WhereCondition">string WhereCondition</param>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget, NetOffice.AccessApi.Enums.AcExportXMLEncoding encoding, NetOffice.AccessApi.Enums.AcExportXMLOtherFlags otherFlags, string whereCondition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags, whereCondition);
@@ -2660,11 +2660,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="DataSource">string DataSource</param>
 		/// <param name="ImportOptions">NetOffice.AccessApi.Enums.AcImportXMLOption ImportOptions</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public void ImportXML(string dataSource, NetOffice.AccessApi.Enums.AcImportXMLOption importOptions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataSource, importOptions);
@@ -2672,7 +2672,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="DataSource">string DataSource</param>
@@ -2682,7 +2682,7 @@ namespace NetOffice.AccessApi
 		/// <param name="ImageTarget">string ImageTarget</param>
 		/// <param name="Encoding">NetOffice.AccessApi.Enums.AcExportXMLEncoding Encoding</param>
 		/// <param name="OtherFlags">Int32 OtherFlags</param>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget, NetOffice.AccessApi.Enums.AcExportXMLEncoding encoding, Int32 otherFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags);
@@ -2690,14 +2690,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="DataSource">string DataSource</param>
 		/// <param name="TransformSource">string TransformSource</param>
 		/// <param name="OutputTarget">string OutputTarget</param>
 		/// <param name="WellFormedXMLOutput">bool WellFormedXMLOutput</param>
 		/// <param name="ScriptOption">NetOffice.AccessApi.Enums.AcTransformXMLScriptOption ScriptOption</param>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public void TransformXML(string dataSource, string transformSource, string outputTarget, bool wellFormedXMLOutput, NetOffice.AccessApi.Enums.AcTransformXMLScriptOption scriptOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataSource, transformSource, outputTarget, wellFormedXMLOutput, scriptOption);
@@ -2705,9 +2705,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public NetOffice.AccessApi._AdditionalData CreateAdditionalData()
 		{
 			object[] paramsArray = null;
@@ -2717,10 +2717,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -2729,10 +2729,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public void NewCurrentDatabaseOld(string filepath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath);
@@ -2740,7 +2740,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="FormName">string FormName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -2751,7 +2751,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Top">optional object Top</param>
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top, width, height);
@@ -2761,12 +2761,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="FormName">string FormName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
 		/// <param name="Section">NetOffice.AccessApi.Enums.AcSection Section</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section);
@@ -2776,7 +2776,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="ReportName">string ReportName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -2787,7 +2787,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Top">optional object Top</param>
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top, width, height);
@@ -2797,12 +2797,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="ReportName">string ReportName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
 		/// <param name="Section">NetOffice.AccessApi.Enums.AcSection Section</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section);
@@ -2812,7 +2812,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="FormName">string FormName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -2823,7 +2823,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Control CreateControlExOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlSource, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, controlSource, left, top, width, height);
@@ -2833,7 +2833,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="ReportName">string ReportName</param>
 		/// <param name="ControlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -2844,7 +2844,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Control CreateReportControlExOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlName, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, controlName, left, top, width, height);
@@ -2854,11 +2854,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="RichText">object RichText</param>
 		/// <param name="Length">optional object Length</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string PlainText(object richText, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(richText, length);
@@ -2867,10 +2867,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="RichText">object RichText</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string PlainText(object richText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(richText);
@@ -2879,11 +2879,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="PlainText">object PlainText</param>
 		/// <param name="Length">optional object Length</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string HtmlEncode(object plainText, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(plainText, length);
@@ -2892,10 +2892,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="PlainText">object PlainText</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string HtmlEncode(object plainText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(plainText);
@@ -2904,11 +2904,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="CustomUIName">string CustomUIName</param>
 		/// <param name="CustomUIXML">string CustomUIXML</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public void LoadCustomUI(string customUIName, string customUIXML)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customUIName, customUIXML);
@@ -2916,10 +2916,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Path">string Path</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public void ExportNavigationPane(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -2927,11 +2927,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		/// <param name="fAppendOnly">bool fAppendOnly</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public void ImportNavigationPane(string path, bool fAppendOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fAppendOnly);
@@ -2939,12 +2939,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="TableName">string TableName</param>
 		/// <param name="ColumnName">string ColumnName</param>
 		/// <param name="queryString">string queryString</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string ColumnHistory(string tableName, string columnName, string queryString)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tableName, columnName, queryString);
@@ -2953,7 +2953,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="ExternalExporter">object ExternalExporter</param>
 		/// <param name="OutputFileName">string OutputFileName</param>
@@ -2962,7 +2962,7 @@ namespace NetOffice.AccessApi
 		/// <param name="SelectedRecords">bool SelectedRecords</param>
 		/// <param name="FromPage">Int32 FromPage</param>
 		/// <param name="ToPage">Int32 ToPage</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public void ExportCustomFixedFormat(object externalExporter, string outputFileName, string objectName, NetOffice.AccessApi.Enums.AcOutputObjectType objectType, bool selectedRecords, Int32 fromPage, Int32 toPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(externalExporter, outputFileName, objectName, objectType, selectedRecords, fromPage, toPage);
@@ -2970,12 +2970,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">string ObjectName</param>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public void SaveAsAXL(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, fileName);
@@ -2983,12 +2983,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">string ObjectName</param>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public void LoadFromAXL(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, fileName);
@@ -2996,7 +2996,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		/// <param name="Title">string Title</param>
@@ -3009,7 +3009,7 @@ namespace NetOffice.AccessApi
 		/// <param name="ApplicationPart">optional object ApplicationPart</param>
 		/// <param name="IncludeData">optional object IncludeData</param>
 		/// <param name="Variation">optional object Variation</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public void SaveAsTemplate(string path, string title, string iconPath, string coreTable, string category, object previewPath, object description, object instantiationForm, object applicationPart, object includeData, object variation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, title, iconPath, coreTable, category, previewPath, description, instantiationForm, applicationPart, includeData, variation);
@@ -3017,14 +3017,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		/// <param name="Title">string Title</param>
 		/// <param name="IconPath">string IconPath</param>
 		/// <param name="CoreTable">string CoreTable</param>
 		/// <param name="Category">string Category</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public void SaveAsTemplate(string path, string title, string iconPath, string coreTable, string category)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, title, iconPath, coreTable, category);
@@ -3032,10 +3032,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Path">string Path</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public void InstantiateTemplate(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -3043,10 +3043,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="DisplayOption">NetOffice.AccessApi.Enums.AcWebUserDisplay DisplayOption</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public object CurrentWebUser(NetOffice.AccessApi.Enums.AcWebUserDisplay displayOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(displayOption);
@@ -3064,10 +3064,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="DisplayOption">NetOffice.AccessApi.Enums.AcWebUserGroupsDisplay DisplayOption</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public object CurrentWebUserGroups(NetOffice.AccessApi.Enums.AcWebUserGroupsDisplay displayOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(displayOption);
@@ -3085,10 +3085,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="GroupNameOrID">object GroupNameOrID</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public bool IsCurrentWebUserInGroup(object groupNameOrID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupNameOrID);
@@ -3097,11 +3097,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">string ObjectName</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public void DirtyObject(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
@@ -3109,9 +3109,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public bool IsClient()
 		{
 			object[] paramsArray = null;

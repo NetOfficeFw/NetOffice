@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _WizHook SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	/// DispatchInterface _WizHook SupportByLibrary "Access", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _WizHook : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 Key
 		{
 			get
@@ -68,9 +68,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.VBIDEApi._VBProject DbcVbProject
 		{
 			get
@@ -83,10 +83,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrConnectionString">string bstrConnectionString</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool get_IsMatchToDbcConnectString(string bstrConnectionString)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrConnectionString);
@@ -99,10 +99,10 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Actid">Int32 Actid</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string NameFromActid(Int32 actid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(actid);
@@ -111,10 +111,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Actid">Int32 Actid</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 ArgsOfActid(Int32 actid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(actid);
@@ -123,14 +123,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Script">string Script</param>
 		/// <param name="Label">string Label</param>
 		/// <param name="OpenMode">Int32 OpenMode</param>
 		/// <param name="Extra">ref Int32 Extra</param>
 		/// <param name="Version">ref Int32 Version</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 OpenScript(string script, string label, Int32 openMode, ref Int32 extra, ref Int32 version)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true);
@@ -142,12 +142,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="HScr">Int32 HScr</param>
 		/// <param name="ScriptColumn">Int32 ScriptColumn</param>
 		/// <param name="Value">ref string Value</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool GetScriptString(Int32 hScr, Int32 scriptColumn, ref string value)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
@@ -158,12 +158,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="HScr">Int32 HScr</param>
 		/// <param name="ScriptColumn">Int32 ScriptColumn</param>
 		/// <param name="Value">string Value</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool SaveScriptString(Int32 hScr, Int32 scriptColumn, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hScr, scriptColumn, value);
@@ -172,10 +172,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool GlobalProcExists(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -184,11 +184,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Table">string Table</param>
 		/// <param name="Columns">string Columns</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool TableFieldHasUniqueIndex(string table, string columns)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(table, columns);
@@ -197,11 +197,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="String">ref string String</param>
 		/// <param name="flags">Int32 flags</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool BracketString(ref string _string, Int32 flags)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
@@ -212,12 +212,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="HelpFile">string HelpFile</param>
 		/// <param name="wCmd">Int32 wCmd</param>
 		/// <param name="ContextID">Int32 ContextID</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool WizHelp(string helpFile, Int32 wCmd, Int32 contextID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile, wCmd, contextID);
@@ -226,11 +226,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="File">ref string File</param>
 		/// <param name="Cancelled">ref bool Cancelled</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool OpenPictureFile(ref string file, ref bool cancelled)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
@@ -242,11 +242,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="In">string In</param>
 		/// <param name="Out">ref string Out</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool EnglishPictToLocal(string _in, ref string _out)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -257,13 +257,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="In">string In</param>
 		/// <param name="Out">ref string Out</param>
 		/// <param name="ParseFlags">Int32 ParseFlags</param>
 		/// <param name="TranslateFlags">Int32 TranslateFlags</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool TranslateExpression(string _in, ref string _out, Int32 parseFlags, Int32 translateFlags)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,false);
@@ -274,10 +274,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="File">string File</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool FileExists(string file)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(file);
@@ -286,11 +286,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="RelativePath">string RelativePath</param>
 		/// <param name="FullPath">ref string FullPath</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 FullPath(string relativePath, ref string fullPath)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -301,14 +301,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		/// <param name="Drive">ref string Drive</param>
 		/// <param name="Dir">ref string Dir</param>
 		/// <param name="File">ref string File</param>
 		/// <param name="Ext">ref string Ext</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void SplitPath(string path, ref string drive, ref string dir, ref string file, ref string ext)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true);
@@ -321,7 +321,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="FontName">string FontName</param>
 		/// <param name="Size">Int32 Size</param>
@@ -333,7 +333,7 @@ namespace NetOffice.AccessApi
 		/// <param name="MaxWidthCch">Int32 MaxWidthCch</param>
 		/// <param name="dx">ref Int32 dx</param>
 		/// <param name="dy">ref Int32 dy</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool TwipsFromFont(string fontName, Int32 size, Int32 weight, bool italic, bool underline, Int32 cch, string caption, Int32 maxWidthCch, ref Int32 dx, ref Int32 dy)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,false,false,true,true);
@@ -345,10 +345,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="RecordSource">string RecordSource</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 ObjTypOfRecordSource(string recordSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordSource);
@@ -357,10 +357,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Identifier">string Identifier</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool IsValidIdent(string identifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(identifier);
@@ -369,10 +369,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Array">ref String[] Array</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void SortStringArray(ref String[] array)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -382,14 +382,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Workspace">NetOffice.DAOApi.Workspace Workspace</param>
 		/// <param name="Database">NetOffice.DAOApi.Database Database</param>
 		/// <param name="Table">string Table</param>
 		/// <param name="ReturnDebugInfo">bool ReturnDebugInfo</param>
 		/// <param name="Results">ref string Results</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 AnalyzeTable(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string table, bool returnDebugInfo, ref string results)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
@@ -400,13 +400,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Workspace">NetOffice.DAOApi.Workspace Workspace</param>
 		/// <param name="Database">NetOffice.DAOApi.Database Database</param>
 		/// <param name="Query">string Query</param>
 		/// <param name="Results">ref string Results</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 AnalyzeQuery(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string query, ref string results)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -417,7 +417,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="hwndOwner">Int32 hwndOwner</param>
 		/// <param name="AppName">string AppName</param>
@@ -430,7 +430,7 @@ namespace NetOffice.AccessApi
 		/// <param name="View">Int32 View</param>
 		/// <param name="flags">Int32 flags</param>
 		/// <param name="fOpen">bool fOpen</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 GetFileName(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, ref string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false,false,false,false,false,false);
@@ -441,7 +441,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="DpName">string DpName</param>
 		/// <param name="CtlName">string CtlName</param>
@@ -453,7 +453,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Y">Int32 Y</param>
 		/// <param name="dx">Int32 dx</param>
 		/// <param name="dy">Int32 dy</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void CreateDataPageControl(string dpName, string ctlName, Int32 typ, string section, Int32 sectionType, string appletCode, Int32 x, Int32 y, Int32 dx, Int32 dy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dpName, ctlName, typ, section, sectionType, appletCode, x, y, dx, dy);
@@ -461,10 +461,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="fStart">bool fStart</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void KnownWizLeaks(bool fStart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fStart);
@@ -472,12 +472,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrDbName">string bstrDbName</param>
 		/// <param name="bstrConnect">string bstrConnect</param>
 		/// <param name="bstrPasswd">string bstrPasswd</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool SetVbaPassword(string bstrDbName, string bstrConnect, string bstrPasswd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDbName, bstrConnect, bstrPasswd);
@@ -486,9 +486,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string LocalFont()
 		{
 			object[] paramsArray = null;
@@ -497,11 +497,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
 		/// <param name="objtyp">Int16 objtyp</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void SaveObject(string bstrName, Int16 objtyp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrName, objtyp);
@@ -509,9 +509,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 CurrentLangID()
 		{
 			object[] paramsArray = null;
@@ -520,9 +520,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 KeyboardLangID()
 		{
 			object[] paramsArray = null;
@@ -531,9 +531,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string AccessUserDataDir()
 		{
 			object[] paramsArray = null;
@@ -542,9 +542,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string OfficeAddInDir()
 		{
 			object[] paramsArray = null;
@@ -553,11 +553,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="DpName">string DpName</param>
 		/// <param name="FileToInsert">string FileToInsert</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string EmbedFileOnDataPage(string dpName, string fileToInsert)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dpName, fileToInsert);
@@ -566,11 +566,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="fRptToFile">bool fRptToFile</param>
 		/// <param name="bstrFileOut">string bstrFileOut</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void ReportLeaksToFile(bool fRptToFile, string bstrFileOut)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fRptToFile, bstrFileOut);
@@ -578,10 +578,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrFilename">string bstrFilename</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void LoadImexSpecSolution(string bstrFilename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrFilename);
@@ -589,10 +589,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="fBlockKeys">bool fBlockKeys</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void SetDpBlockKeyInput(bool fBlockKeys)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fBlockKeys);
@@ -600,12 +600,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Name">ref string Name</param>
 		/// <param name="ObjType">NetOffice.AccessApi.Enums.AcObjectType ObjType</param>
 		/// <param name="Attribs">ref Int32 Attribs</param>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool FirstDbcDataObject(ref string name, NetOffice.AccessApi.Enums.AcObjectType objType, ref Int32 attribs)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false,true);
@@ -617,9 +617,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool CloseCurrentDatabase()
 		{
 			object[] paramsArray = null;
@@ -628,10 +628,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrWhich">string bstrWhich</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public string AccessWizFilePath(string bstrWhich)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrWhich);
@@ -640,9 +640,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public bool HideDates()
 		{
 			object[] paramsArray = null;
@@ -651,10 +651,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrBase">string bstrBase</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public string GetColumns(string bstrBase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrBase);
@@ -663,11 +663,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrExt">string bstrExt</param>
 		/// <param name="bstrFilename">ref string bstrFilename</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public Int32 GetFileOdso(string bstrExt, ref string bstrFilename)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -678,10 +678,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrBase">string bstrBase</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public string GetInfoForColumns(string bstrBase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrBase);
@@ -690,7 +690,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="hwndOwner">Int32 hwndOwner</param>
 		/// <param name="AppName">string AppName</param>
@@ -704,7 +704,7 @@ namespace NetOffice.AccessApi
 		/// <param name="flags">Int32 flags</param>
 		/// <param name="fOpen">bool fOpen</param>
 		/// <param name="fFileSystem">object fFileSystem</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public Int32 GetFileName2(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, ref string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen, object fFileSystem)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false,false,false,false,false,false,false);
@@ -715,10 +715,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="fBlockKeys">bool fBlockKeys</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public bool FGetMSDE(bool fBlockKeys)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fBlockKeys);
@@ -727,14 +727,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
 		/// <param name="wStyle">Int32 wStyle</param>
 		/// <param name="idHelpID">Int32 idHelpID</param>
 		/// <param name="bstrHelpFileName">string bstrHelpFileName</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public Int32 WizMsgBox(string bstrText, string bstrCaption, Int32 wStyle, Int32 idHelpID, string bstrHelpFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, wStyle, idHelpID, bstrHelpFileName);
@@ -743,11 +743,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="pbstrUID">ref string pbstrUID</param>
 		/// <param name="pbstrPwd">ref string pbstrPwd</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public bool AdpUIDPwd(ref string pbstrUID, ref string pbstrPwd)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
@@ -759,11 +759,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="lWhich">Int32 lWhich</param>
 		/// <param name="vValue">object vValue</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public void SetWizGlob(Int32 lWhich, object vValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lWhich, vValue);
@@ -771,10 +771,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="lWhich">Int32 lWhich</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public object GetWizGlob(Int32 lWhich)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lWhich);
@@ -792,10 +792,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrADPName">string bstrADPName</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public void WizCopyCmdbars(string bstrADPName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrADPName);
@@ -803,10 +803,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="bstrTableName">string bstrTableName</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public Int32 GetCurrentView(string bstrTableName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrTableName);
@@ -815,10 +815,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC10 AC11 AC12 AC14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="wch">Int32 wch</param>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		public bool FIsFEWch(Int32 wch)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wch);
@@ -827,10 +827,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -839,9 +839,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public string GetAccWizRCPath()
 		{
 			object[] paramsArray = null;
@@ -850,11 +850,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC11 AC12 AC14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="objtyp">Int16 objtyp</param>
 		/// <param name="bstrObjName">string bstrObjName</param>
-		[SupportByLibrary("AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 11,12,14)]
 		public bool FCreateNameMap(Int16 objtyp, string bstrObjName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objtyp, bstrObjName);
@@ -863,9 +863,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string GetAdeRegistryPath()
 		{
 			object[] paramsArray = null;
@@ -874,10 +874,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="bstrSpecXML">string bstrSpecXML</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public void ExecuteTempImexSpec(string bstrSpecXML)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSpecXML);
@@ -885,9 +885,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public bool FCacheStatus()
 		{
 			object[] paramsArray = null;
@@ -896,10 +896,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="bstrStatus">string bstrStatus</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public void CacheStatus(string bstrStatus)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrStatus);
@@ -907,10 +907,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="bstrSpecName">string bstrSpecName</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public void SetDefaultSpecName(string bstrSpecName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSpecName);
@@ -918,9 +918,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string GetImexTblName()
 		{
 			object[] paramsArray = null;
@@ -929,12 +929,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="bstrTableName">string bstrTableName</param>
 		/// <param name="bstrPropertyName">string bstrPropertyName</param>
 		/// <param name="fServer">bool fServer</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public string GetLinkedListProperty(string bstrTableName, string bstrPropertyName, bool fServer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrTableName, bstrPropertyName, fServer);
@@ -943,13 +943,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC12 AC14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="pProperty">NetOffice.AccessApi._AccessProperty pProperty</param>
 		/// <param name="OpenMode">Int32 OpenMode</param>
 		/// <param name="Extra">ref Int32 Extra</param>
 		/// <param name="Version">ref Int32 Version</param>
-		[SupportByLibrary("AC12","AC14")]
+		[SupportByLibrary("Access", 12,14)]
 		public Int32 OpenEmScript(NetOffice.AccessApi._AccessProperty pProperty, Int32 openMode, ref Int32 extra, ref Int32 version)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true);
@@ -961,9 +961,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public string GetDisabledExtensions()
 		{
 			object[] paramsArray = null;
@@ -972,12 +972,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="bstrObjectName">string bstrObjectName</param>
 		/// <param name="iobjtyp">NetOffice.AccessApi.Enums.AcObjectType iobjtyp</param>
 		/// <param name="fTablesAsClient">bool fTablesAsClient</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public Int32 GetObjPubOption(string bstrObjectName, NetOffice.AccessApi.Enums.AcObjectType iobjtyp, bool fTablesAsClient)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrObjectName, iobjtyp, fTablesAsClient);
@@ -986,10 +986,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="bstrObjectName">string bstrObjectName</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public bool FIsPublishedXasTable(string bstrObjectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrObjectName);
@@ -998,9 +998,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public bool FIsXasDb()
 		{
 			object[] paramsArray = null;
@@ -1009,11 +1009,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="bstrObjectName">string bstrObjectName</param>
 		/// <param name="iobjtyp">NetOffice.AccessApi.Enums.AcObjectType iobjtyp</param>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public bool FIsValidXasObjectName(string bstrObjectName, NetOffice.AccessApi.Enums.AcObjectType iobjtyp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrObjectName, iobjtyp);

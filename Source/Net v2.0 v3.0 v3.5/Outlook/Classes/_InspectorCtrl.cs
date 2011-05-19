@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass _InspectorCtrl SupportByLibrary OL10 
+	/// CoClass _InspectorCtrl SupportByLibrary "Outlook", 10
 	///</summary>
-	[SupportByLibrary("OL10")]
+	[SupportByLibrary("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _InspectorCtrl : _DInspectorCtrl, IEventBinding 
 	{

@@ -35,9 +35,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass WebBrowserControl SupportByLibrary AC14 
+	/// CoClass WebBrowserControl SupportByLibrary "Access", 14
 	///</summary>
-	[SupportByLibrary("AC14")]
+	[SupportByLibrary("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class WebBrowserControl : _WebBrowserControl, IEventBinding 
 	{
@@ -116,14 +116,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_UpdatedEventHandler _UpdatedEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_UpdatedEventHandler UpdatedEvent
 		{
 			add
@@ -138,14 +138,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add
@@ -160,14 +160,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -182,14 +182,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_EnterEventHandler EnterEvent
 		{
 			add
@@ -204,14 +204,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_ExitEventHandler ExitEvent
 		{
 			add
@@ -226,14 +226,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_DirtyEventHandler _DirtyEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_DirtyEventHandler DirtyEvent
 		{
 			add
@@ -248,14 +248,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_ChangeEventHandler ChangeEvent
 		{
 			add
@@ -270,14 +270,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -292,14 +292,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -314,14 +314,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_ClickEventHandler ClickEvent
 		{
 			add
@@ -336,14 +336,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -358,14 +358,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -380,14 +380,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -402,14 +402,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -424,14 +424,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -446,14 +446,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -468,14 +468,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -490,14 +490,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_BeforeNavigate2EventHandler _BeforeNavigate2Event;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_BeforeNavigate2EventHandler BeforeNavigate2Event
 		{
 			add
@@ -512,14 +512,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_DocumentCompleteEventHandler _DocumentCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_DocumentCompleteEventHandler DocumentCompleteEvent
 		{
 			add
@@ -534,14 +534,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_ProgressChangeEventHandler _ProgressChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_ProgressChangeEventHandler ProgressChangeEvent
 		{
 			add
@@ -556,14 +556,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event WebBrowserControl_NavigateErrorEventHandler _NavigateErrorEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event WebBrowserControl_NavigateErrorEventHandler NavigateErrorEvent
 		{
 			add

@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass DataAccessPage SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	/// CoClass DataAccessPage SupportByLibrary "Access", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataAccessPage : _DataAccessPage, IEventBinding 
 	{

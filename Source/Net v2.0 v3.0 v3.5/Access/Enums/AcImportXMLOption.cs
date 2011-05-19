@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC10 AC11 AC12 AC14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcImportXMLOption
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acStructureOnly = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acStructureAndData = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 10,11,12,14)]
 		acAppendData = 2
 	}
 }

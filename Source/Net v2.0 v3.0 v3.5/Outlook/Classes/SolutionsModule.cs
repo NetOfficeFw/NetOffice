@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass SolutionsModule SupportByLibrary OL14 
+	/// CoClass SolutionsModule SupportByLibrary "Outlook", 14
 	///</summary>
-	[SupportByLibrary("OL14")]
+	[SupportByLibrary("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SolutionsModule : _SolutionsModule, IEventBinding 
 	{

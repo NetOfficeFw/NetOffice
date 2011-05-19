@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass DataSourceObject SupportByLibrary OL10 
+	/// CoClass DataSourceObject SupportByLibrary "Outlook", 10
 	///</summary>
-	[SupportByLibrary("OL10")]
+	[SupportByLibrary("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataSourceObject : DDataSourceObject, IEventBinding 
 	{

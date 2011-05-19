@@ -10,11 +10,11 @@ using LateBindingApi.Core;
     
     Contains the following Type Libraries:
 	Name - Description - SupportByLibrary
-	Outlook - Microsoft Outlook 9.0 Object Library - OL09
-	Outlook - Microsoft Outlook 10.0 Object Library - OL10
-	Outlook - Microsoft.Office.Interop.Outlook, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c - OL11
-	Outlook - Microsoft.Office.Interop.Outlook, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - OL12
-	Outlook - Microsoft Outlook 14.0 Object Library - OL14
+	Outlook - Microsoft Outlook 9.0 Object Library - 9
+	Outlook - Microsoft Outlook 10.0 Object Library - 10
+	Outlook - Microsoft.Office.Interop.Outlook, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c - 11
+	Outlook - Microsoft.Office.Interop.Outlook, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 12
+	Outlook - Microsoft Outlook 14.0 Object Library - 14
 
 */
 

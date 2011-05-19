@@ -31,9 +31,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass NavigationControl SupportByLibrary AC14 
+	/// CoClass NavigationControl SupportByLibrary "Access", 14
 	///</summary>
-	[SupportByLibrary("AC14")]
+	[SupportByLibrary("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationControl : _NavigationControl, IEventBinding 
 	{
@@ -112,14 +112,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add
@@ -134,14 +134,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -156,14 +156,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_ChangeEventHandler ChangeEvent
 		{
 			add
@@ -178,14 +178,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_EnterEventHandler EnterEvent
 		{
 			add
@@ -200,14 +200,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_ExitEventHandler ExitEvent
 		{
 			add
@@ -222,14 +222,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -244,14 +244,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -266,14 +266,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_ClickEventHandler ClickEvent
 		{
 			add
@@ -288,14 +288,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -310,14 +310,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -332,14 +332,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -354,14 +354,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -376,14 +376,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -398,14 +398,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -420,14 +420,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -442,14 +442,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_DirtyEventHandler _DirtyEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_DirtyEventHandler DirtyEvent
 		{
 			add
@@ -464,14 +464,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access, 14
 		/// </summary>
 		private event NavigationControl_UndoEventHandler _UndoEvent;
 
 		/// <summary>
-		/// SupportByLibrary AC14
+		/// SupportByLibrary Access 14
 		/// </summary>
-		[SupportByLibrary("AC14")]
+		[SupportByLibrary("Access", 14)]
 		public event NavigationControl_UndoEventHandler UndoEvent
 		{
 			add

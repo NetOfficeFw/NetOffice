@@ -4,94 +4,94 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary DAO3.6 DAO12 
+	 /// SupportByLibrary 6,12,
 	 /// </summary>
-	[SupportByLibrary("DAO3.6","DAO12")]
+	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum SetOptionEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbPageTimeout = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbLockRetry = 57,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbMaxBufferSize = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbUserCommitSync = 58,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbImplicitCommitSync = 59,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbExclusiveAsyncDelay = 60,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbSharedAsyncDelay = 61,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbMaxLocksPerFile = 62,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbLockDelay = 63,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbRecycleLVs = 65,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO3.6 DAO12 
+		 /// SupportByLibrary 6,12,
 		 /// </summary>
-		[SupportByLibrary("DAO3.6","DAO12")]
+		[SupportByLibrary("DAO", 6,12)]
 		dbFlushTransactionTimeout = 66,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO12 
+		 /// SupportByLibrary 12,
 		 /// </summary>
-		[SupportByLibrary("DAO12")]
+		[SupportByLibrary("DAO", 12)]
 		dbPasswordEncryptionProvider = 80,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO12 
+		 /// SupportByLibrary 12,
 		 /// </summary>
-		[SupportByLibrary("DAO12")]
+		[SupportByLibrary("DAO", 12)]
 		dbPasswordEncryptionAlgorithm = 81,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO12 
+		 /// SupportByLibrary 12,
 		 /// </summary>
-		[SupportByLibrary("DAO12")]
+		[SupportByLibrary("DAO", 12)]
 		dbPasswordEncryptionKeyLength = 82
 	}
 }

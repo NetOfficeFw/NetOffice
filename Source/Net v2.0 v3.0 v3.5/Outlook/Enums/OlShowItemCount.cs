@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OL11 OL12 OL14 
+	 /// SupportByLibrary 11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OL11","OL12","OL14")]
+	[SupportByLibrary("Outlook", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlShowItemCount
 	{
 		 /// <summary>
-		 /// SupportByLibrary OL11 OL12 OL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 11,12,14)]
 		olNoItemCount = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OL11 OL12 OL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 11,12,14)]
 		olShowUnreadItemCount = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OL11 OL12 OL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OL11","OL12","OL14")]
+		[SupportByLibrary("Outlook", 11,12,14)]
 		olShowTotalItemCount = 2
 	}
 }

@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSDATASRCApi
 {
 	///<summary>
-	/// Interface DataSource SupportByLibrary DSI1.0 
+	/// Interface DataSource SupportByLibrary "MSDATASRC", 1
 	///</summary>
-	[SupportByLibrary("DSI1.0")]
+	[SupportByLibrary("MSDATASRC", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DataSource : COMObject
 	{
@@ -52,11 +52,11 @@ namespace NetOffice.MSDATASRCApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary DSI1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		/// <param name="riid">Guid riid</param>
-		[SupportByLibrary("DSI1.0")]
+		[SupportByLibrary("MSDATASRC", 1)]
 		public COMObject getDataMember(string bstrDM, Guid riid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM, riid);
@@ -66,10 +66,10 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DSI1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
-		[SupportByLibrary("DSI1.0")]
+		[SupportByLibrary("MSDATASRC", 1)]
 		public string getDataMemberName(Int32 lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
@@ -78,9 +78,9 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DSI1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
-		[SupportByLibrary("DSI1.0")]
+		[SupportByLibrary("MSDATASRC", 1)]
 		public Int32 getDataMemberCount()
 		{
 			object[] paramsArray = null;
@@ -89,10 +89,10 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DSI1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
-		[SupportByLibrary("DSI1.0")]
+		[SupportByLibrary("MSDATASRC", 1)]
 		public Int32 addDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDSL);
@@ -101,10 +101,10 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DSI1.0 
+		/// SupportByLibrary 1 
 		/// </summary>
 		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
-		[SupportByLibrary("DSI1.0")]
+		[SupportByLibrary("MSDATASRC", 1)]
 		public Int32 removeDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDSL);

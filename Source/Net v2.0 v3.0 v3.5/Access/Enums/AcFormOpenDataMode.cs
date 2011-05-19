@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcFormOpenDataMode
 	{
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acFormPropertySettings = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acFormAdd = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acFormEdit = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary AC09 AC10 AC11 AC12 AC14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("AC09","AC10","AC11","AC12","AC14")]
+		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acFormReadOnly = 2
 	}
 }

@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("OL10")]
+	[SupportByLibrary("Outlook", 10)]
 	[ComImport, Guid("2D9C6D57-BD3C-4275-BED2-73F0EDC18CCE"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _DInspectorEvents
 	{
