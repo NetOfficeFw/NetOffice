@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 11,12,14,
+	 /// SupportByLibrary Excel 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlListObjectSourceType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlSrcExternal = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlSrcRange = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlSrcXml = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		xlSrcQuery = 3

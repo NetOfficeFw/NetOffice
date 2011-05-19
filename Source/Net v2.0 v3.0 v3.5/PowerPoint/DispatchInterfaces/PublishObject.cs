@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PublishObject SupportByLibrary "PowerPoint", 9,10,11,12,14
+	/// DispatchInterface PublishObject SupportByLibrary PowerPoint, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public COMObject Parent
@@ -79,7 +79,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Enums.PpHTMLVersion HTMLVersion
@@ -98,7 +98,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Enums.PpPublishSourceType SourceType
@@ -117,7 +117,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public Int32 RangeStart
@@ -136,7 +136,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public Int32 RangeEnd
@@ -155,7 +155,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public string SlideShowName
@@ -174,7 +174,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState SpeakerNotes
@@ -193,7 +193,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public string FileName
@@ -216,7 +216,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public void Publish()

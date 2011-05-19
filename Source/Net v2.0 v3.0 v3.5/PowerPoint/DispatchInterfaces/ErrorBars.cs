@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface ErrorBars SupportByLibrary "PowerPoint", 14
+	/// DispatchInterface ErrorBars SupportByLibrary PowerPoint, 14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject Parent
@@ -64,7 +64,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Name
@@ -78,7 +78,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartBorder Border
@@ -93,7 +93,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlEndStyleCap EndStyle
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartFormat Format
@@ -127,7 +127,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Creator
@@ -141,7 +141,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -160,7 +160,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object Select()
@@ -180,7 +180,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object Delete()
@@ -200,7 +200,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object ClearFormats()

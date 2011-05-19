@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PropertyEffect SupportByLibrary "PowerPoint", 10,11,12,14
+	/// DispatchInterface PropertyEffect SupportByLibrary PowerPoint, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public COMObject Parent
@@ -79,7 +79,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Enums.MsoAnimProperty Property
@@ -98,7 +98,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.AnimationPoints Points
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public object From
@@ -141,7 +141,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public object To

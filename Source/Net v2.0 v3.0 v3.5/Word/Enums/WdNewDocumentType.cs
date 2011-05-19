@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdNewDocumentType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdNewBlankDocument = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdNewWebPage = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdNewEmailMessage = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdNewFrameset = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdNewXMLDocument = 4

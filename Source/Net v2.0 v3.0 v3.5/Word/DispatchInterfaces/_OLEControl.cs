@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface _OLEControl SupportByLibrary "Word", 9,10,11,12,14
+	/// DispatchInterface _OLEControl SupportByLibrary Word, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single Left
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single Top
@@ -87,7 +87,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single Height
@@ -106,7 +106,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single Width
@@ -125,7 +125,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string Name
@@ -144,7 +144,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Automation
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string AltHTML
@@ -182,7 +182,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Select()
@@ -192,7 +192,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Copy()
@@ -202,7 +202,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Cut()
@@ -212,7 +212,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Delete()
@@ -222,7 +222,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Activate()

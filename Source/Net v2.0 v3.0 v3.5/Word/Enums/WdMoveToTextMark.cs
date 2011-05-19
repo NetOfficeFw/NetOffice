@@ -4,56 +4,56 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Word 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdMoveToTextMark
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdMoveToTextMarkNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdMoveToTextMarkBold = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdMoveToTextMarkItalic = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdMoveToTextMarkUnderline = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdMoveToTextMarkDoubleUnderline = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdMoveToTextMarkColorOnly = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdMoveToTextMarkStrikeThrough = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdMoveToTextMarkDoubleStrikeThrough = 7

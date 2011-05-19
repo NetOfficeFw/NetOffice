@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IErrors SupportByLibrary "Excel", 10,11,12,14
+	/// Interface IErrors SupportByLibrary Excel, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -48,7 +48,7 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public COMObject Parent
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]

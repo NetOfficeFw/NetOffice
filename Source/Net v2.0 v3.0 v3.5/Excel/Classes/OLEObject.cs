@@ -16,7 +16,7 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass OLEObject SupportByLibrary "Excel", 9,10,11,12,14
+	/// CoClass OLEObject SupportByLibrary Excel, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event OLEObject_GotFocusEventHandler _GotFocusEvent;
 
@@ -119,7 +119,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event OLEObject_LostFocusEventHandler _LostFocusEvent;
 

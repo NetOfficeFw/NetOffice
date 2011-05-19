@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _Results SupportByLibrary "Outlook", 10,11,12,14
+	/// DispatchInterface _Results SupportByLibrary Outlook, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -78,7 +78,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -93,7 +93,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject Parent
@@ -108,7 +108,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public Int32 Count
@@ -122,7 +122,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject RawTable
@@ -137,7 +137,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlItemType DefaultItemType
@@ -160,7 +160,7 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
@@ -177,7 +177,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject GetFirst()
@@ -189,7 +189,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject GetLast()
@@ -201,7 +201,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject GetNext()
@@ -213,7 +213,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject GetPrevious()
@@ -225,7 +225,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public void ResetColumns()
@@ -235,7 +235,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Columns">string Columns</param>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
@@ -246,7 +246,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Property">string Property</param>
 		/// <param name="Descending">optional object Descending</param>
@@ -258,7 +258,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Property">string Property</param>
 		[SupportByLibrary("Outlook", 10,11,12,14)]

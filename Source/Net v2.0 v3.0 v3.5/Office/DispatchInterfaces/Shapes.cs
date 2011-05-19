@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface Shapes SupportByLibrary "Office", 9,10,11,12,14
+	/// DispatchInterface Shapes SupportByLibrary Office, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public COMObject Parent
@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 Count
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Shape Background
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Shape Default
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoCalloutType Type</param>
 		/// <param name="Left">Single Left</param>
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoConnectorType Type</param>
 		/// <param name="BeginX">Single BeginX</param>
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SafeArrayOfPoints">object SafeArrayOfPoints</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
 		/// <param name="Left">Single Left</param>
@@ -194,7 +194,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="BeginX">Single BeginX</param>
 		/// <param name="BeginY">Single BeginY</param>
@@ -210,7 +210,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="LinkToFile">NetOffice.OfficeApi.Enums.MsoTriState LinkToFile</param>
@@ -229,7 +229,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SafeArrayOfPoints">object SafeArrayOfPoints</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -242,7 +242,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoAutoShapeType Type</param>
 		/// <param name="Left">Single Left</param>
@@ -259,7 +259,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="PresetTextEffect">NetOffice.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect</param>
 		/// <param name="Text">string Text</param>
@@ -279,7 +279,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
 		/// <param name="Left">Single Left</param>
@@ -296,7 +296,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="EditingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
 		/// <param name="X1">Single X1</param>
@@ -311,7 +311,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -324,7 +324,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void SelectAll()
@@ -334,7 +334,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoDiagramType Type</param>
 		/// <param name="Left">Single Left</param>
@@ -351,7 +351,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Left">Single Left</param>
 		/// <param name="Top">Single Top</param>
@@ -367,7 +367,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.XlChartType Type</param>
 		/// <param name="Left">Single Left</param>
@@ -384,7 +384,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="NumRows">Int32 NumRows</param>
 		/// <param name="NumColumns">Int32 NumColumns</param>
@@ -402,7 +402,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="Layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		/// <param name="Left">Single Left</param>

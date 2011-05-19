@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _NameSpace SupportByLibrary "Outlook", 9,10,11,12,14
+	/// DispatchInterface _NameSpace SupportByLibrary Outlook, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -78,7 +78,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -93,7 +93,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public COMObject Parent
@@ -108,7 +108,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Recipient CurrentUser
@@ -123,7 +123,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Folders Folders
@@ -138,7 +138,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public string Type
@@ -152,7 +152,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.AddressLists AddressLists
@@ -167,7 +167,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.SyncObjects SyncObjects
@@ -182,7 +182,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public bool Offline
@@ -196,7 +196,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject MAPIOBJECT
@@ -211,7 +211,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Outlook 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlExchangeConnectionMode ExchangeConnectionMode
@@ -225,7 +225,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Accounts Accounts
@@ -240,7 +240,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string CurrentProfileName
@@ -254,7 +254,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Stores Stores
@@ -269,7 +269,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Store DefaultStore
@@ -284,7 +284,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Categories Categories
@@ -299,7 +299,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string ExchangeMailboxServerName
@@ -313,7 +313,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string ExchangeMailboxServerVersion
@@ -327,7 +327,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string AutoDiscoverXml
@@ -341,7 +341,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlAutoDiscoverConnectionMode AutoDiscoverConnectionMode
@@ -359,7 +359,7 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="RecipientName">string RecipientName</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
@@ -372,7 +372,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FolderType">NetOffice.OutlookApi.Enums.OlDefaultFolders FolderType</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
@@ -385,7 +385,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="EntryIDFolder">string EntryIDFolder</param>
 		/// <param name="EntryIDStore">optional object EntryIDStore</param>
@@ -399,7 +399,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="EntryIDFolder">string EntryIDFolder</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
@@ -412,7 +412,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="EntryIDItem">string EntryIDItem</param>
 		/// <param name="EntryIDStore">optional object EntryIDStore</param>
@@ -426,7 +426,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="EntryIDItem">string EntryIDItem</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
@@ -439,7 +439,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="EntryID">string EntryID</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
@@ -452,7 +452,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Recipient">NetOffice.OutlookApi.Recipient Recipient</param>
 		/// <param name="FolderType">NetOffice.OutlookApi.Enums.OlDefaultFolders FolderType</param>
@@ -466,7 +466,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public void Logoff()
@@ -476,7 +476,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Profile">optional object Profile</param>
 		/// <param name="Password">optional object Password</param>
@@ -490,7 +490,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public void Logon()
@@ -500,7 +500,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.MAPIFolder PickFolder()
@@ -512,7 +512,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public void RefreshRemoteHeaders()
@@ -522,7 +522,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Store">object Store</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
@@ -533,7 +533,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Folder">NetOffice.OutlookApi.MAPIFolder Folder</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
@@ -544,7 +544,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ContactItem">optional object ContactItem</param>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
@@ -555,7 +555,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public void Dial()
@@ -565,7 +565,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Outlook 11, 12, 14
 		/// </summary>
 		/// <param name="Store">object Store</param>
 		/// <param name="Type">NetOffice.OutlookApi.Enums.OlStoreType Type</param>
@@ -577,7 +577,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.SelectNamesDialog GetSelectNamesDialog()
@@ -589,7 +589,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="showProgressDialog">bool showProgressDialog</param>
 		[SupportByLibrary("Outlook", 12,14)]
@@ -600,7 +600,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="ID">string ID</param>
 		[SupportByLibrary("Outlook", 12,14)]
@@ -613,7 +613,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.AddressList GetGlobalAddressList()
@@ -625,7 +625,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="ID">string ID</param>
 		[SupportByLibrary("Outlook", 12,14)]
@@ -638,7 +638,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		/// <param name="Name">optional object Name</param>
@@ -654,7 +654,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		[SupportByLibrary("Outlook", 12,14)]
@@ -667,7 +667,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		[SupportByLibrary("Outlook", 12,14)]
@@ -680,7 +680,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Context">object Context</param>
 		/// <param name="Provider">optional object Provider</param>
@@ -694,7 +694,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Context">object Context</param>
 		[SupportByLibrary("Outlook", 12,14)]
@@ -707,7 +707,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="FirstEntryID">string FirstEntryID</param>
 		/// <param name="SecondEntryID">string SecondEntryID</param>
@@ -720,7 +720,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Outlook 14
 		/// </summary>
 		/// <param name="AddressEntry">NetOffice.OutlookApi.AddressEntry AddressEntry</param>
 		[SupportByLibrary("Outlook", 14)]

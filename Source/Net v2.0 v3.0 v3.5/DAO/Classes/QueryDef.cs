@@ -14,7 +14,7 @@ namespace NetOffice.DAOApi
 	#endregion
 
 	///<summary>
-	/// CoClass QueryDef SupportByLibrary "DAO", 6,12
+	/// CoClass QueryDef SupportByLibrary DAO, 6,12
 	///</summary>
 	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

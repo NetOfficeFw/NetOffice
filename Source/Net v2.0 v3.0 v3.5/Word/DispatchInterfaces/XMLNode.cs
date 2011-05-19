@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface XMLNode SupportByLibrary "Word", 11,12,14
+	/// DispatchInterface XMLNode SupportByLibrary Word, 11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public string BaseName
@@ -63,7 +63,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Application Application
@@ -78,7 +78,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 Creator
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public COMObject Parent
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Range Range
@@ -122,7 +122,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public string Text
@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public string NamespaceURI
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="DataOnly">bool DataOnly</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -167,7 +167,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.XMLNode NextSibling
@@ -182,7 +182,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.XMLNode PreviousSibling
@@ -197,7 +197,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.XMLNode ParentNode
@@ -212,7 +212,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.XMLNode FirstChild
@@ -227,7 +227,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.XMLNode LastChild
@@ -242,7 +242,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Document OwnerDocument
@@ -257,7 +257,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Enums.WdXMLNodeType NodeType
@@ -271,7 +271,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.XMLNodes ChildNodes
@@ -286,7 +286,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.XMLNodes Attributes
@@ -301,7 +301,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public string NodeValue
@@ -320,7 +320,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public bool HasChildNodes
@@ -334,7 +334,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.XMLChildNodeSuggestions ChildNodeSuggestions
@@ -349,7 +349,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Enums.WdXMLNodeLevel Level
@@ -363,7 +363,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Enums.WdXMLValidationStatus ValidationStatus
@@ -377,7 +377,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.SmartTag SmartTag
@@ -392,7 +392,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Advanced">bool Advanced</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -404,7 +404,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public string PlaceholderText
@@ -423,7 +423,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public string WordOpenXML
@@ -441,7 +441,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="XPath">string XPath</param>
 		/// <param name="PrefixMapping">string PrefixMapping</param>
@@ -456,7 +456,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="XPath">string XPath</param>
 		/// <param name="PrefixMapping">string PrefixMapping</param>
@@ -471,7 +471,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public void Delete()
@@ -481,7 +481,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public void Copy()
@@ -491,7 +491,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="ChildElement">NetOffice.WordApi.XMLNode ChildElement</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -502,7 +502,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public void Cut()
@@ -512,7 +512,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public void Validate()
@@ -522,7 +522,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Status">NetOffice.WordApi.Enums.WdXMLValidationStatus Status</param>
 		/// <param name="ErrorText">ref object ErrorText</param>

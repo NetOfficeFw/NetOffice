@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary Access 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcExportXMLSchemaFormat
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acSchemaNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acSchemaXSD = 1

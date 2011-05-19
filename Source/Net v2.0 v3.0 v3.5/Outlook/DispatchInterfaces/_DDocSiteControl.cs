@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _DDocSiteControl SupportByLibrary "Outlook", 9,10,11,12,14
+	/// DispatchInterface _DDocSiteControl SupportByLibrary Outlook, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public bool ReadOnly
@@ -68,7 +68,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public Int16 SuppressAttachments

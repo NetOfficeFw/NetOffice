@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlAxisType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlCategory = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlSeriesAxis = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlValue = 2

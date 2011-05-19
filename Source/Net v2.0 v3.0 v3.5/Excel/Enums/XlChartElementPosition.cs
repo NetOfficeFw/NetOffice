@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Excel 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlChartElementPosition
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		xlChartElementPositionAutomatic = -4105,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		xlChartElementPositionCustom = -4114

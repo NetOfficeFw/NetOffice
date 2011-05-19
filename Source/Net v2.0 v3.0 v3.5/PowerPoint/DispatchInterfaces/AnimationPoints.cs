@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface AnimationPoints SupportByLibrary "PowerPoint", 10,11,12,14
+	/// DispatchInterface AnimationPoints SupportByLibrary PowerPoint, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public COMObject Parent
@@ -79,7 +79,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Smooth
@@ -102,7 +102,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
@@ -119,7 +119,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]

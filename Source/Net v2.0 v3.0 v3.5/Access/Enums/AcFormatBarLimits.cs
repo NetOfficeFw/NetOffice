@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary Access 14, 
 	 /// </summary>
 	[SupportByLibrary("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcFormatBarLimits
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acAutomatic = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acNumber = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acPercent = 2

@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ICTPFactory SupportByLibrary "Office", 12,14
+	/// DispatchInterface ICTPFactory SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="CTPAxID">string CTPAxID</param>
 		/// <param name="CTPTitle">string CTPTitle</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="CTPAxID">string CTPAxID</param>
 		/// <param name="CTPTitle">string CTPTitle</param>

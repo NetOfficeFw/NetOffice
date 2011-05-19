@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface Styles SupportByLibrary "Excel", 9,10,11,12,14
+	/// DispatchInterface Styles SupportByLibrary Excel, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject Parent
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 Count
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="BasedOn">optional object BasedOn</param>
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Workbook">object Workbook</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]

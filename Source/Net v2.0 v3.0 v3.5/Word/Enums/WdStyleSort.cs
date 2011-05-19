@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Word 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdStyleSort
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdStyleSortByName = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdStyleSortRecommended = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdStyleSortByFont = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdStyleSortByBasedOn = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdStyleSortByType = 4

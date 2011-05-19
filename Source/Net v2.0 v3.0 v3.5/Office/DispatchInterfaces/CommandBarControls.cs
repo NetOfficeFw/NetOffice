@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface CommandBarControls SupportByLibrary "Office", 9,10,11,12,14
+	/// DispatchInterface CommandBarControls SupportByLibrary Office, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 Count
@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBar Parent
@@ -100,7 +100,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Id">optional object Id</param>
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBarControl Add()

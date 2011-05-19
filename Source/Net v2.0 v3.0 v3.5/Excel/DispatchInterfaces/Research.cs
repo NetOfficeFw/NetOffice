@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface Research SupportByLibrary "Excel", 12,14
+	/// DispatchInterface Research SupportByLibrary Excel, 12,14
 	///</summary>
 	[SupportByLibrary("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public COMObject Parent
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		/// <param name="ServiceID">string ServiceID</param>
 		/// <param name="QueryString">optional object QueryString</param>
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		/// <param name="ServiceID">string ServiceID</param>
 		[SupportByLibrary("Excel", 12,14)]
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		/// <param name="ServiceID">string ServiceID</param>
 		[SupportByLibrary("Excel", 12,14)]
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		/// <param name="LanguageFrom">Int32 LanguageFrom</param>
 		/// <param name="LanguageTo">Int32 LanguageTo</param>

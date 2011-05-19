@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary Word 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlReadingOrder
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Word 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 14)]
 		xlContext = -5002,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Word 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 14)]
 		xlLTR = -5003,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Word 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 14)]
 		xlRTL = -5004

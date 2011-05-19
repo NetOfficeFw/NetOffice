@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Word 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdExportFormat
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdExportFormatPDF = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdExportFormatXPS = 18

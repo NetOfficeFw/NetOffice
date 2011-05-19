@@ -14,7 +14,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass FormRegionStartup SupportByLibrary "Outlook", 12,14
+	/// CoClass FormRegionStartup SupportByLibrary Outlook, 12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

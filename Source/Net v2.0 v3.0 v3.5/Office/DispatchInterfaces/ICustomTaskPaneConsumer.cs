@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ICustomTaskPaneConsumer SupportByLibrary "Office", 12,14
+	/// DispatchInterface ICustomTaskPaneConsumer SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="CTPFactoryInst">NetOffice.OfficeApi.ICTPFactory CTPFactoryInst</param>
 		[SupportByLibrary("Office", 12,14)]

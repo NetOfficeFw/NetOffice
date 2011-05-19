@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Row SupportByLibrary "Word", 9,10,11,12,14
+	/// DispatchInterface Row SupportByLibrary Word, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range Range
@@ -64,7 +64,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
@@ -79,7 +79,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
@@ -93,7 +93,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 AllowBreakAcrossPages
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdRowAlignment Alignment
@@ -146,7 +146,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 HeadingFormat
@@ -165,7 +165,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single SpaceBetweenColumns
@@ -184,7 +184,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single Height
@@ -203,7 +203,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdRowHeightRule HeightRule
@@ -222,7 +222,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single LeftIndent
@@ -241,7 +241,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool IsLast
@@ -255,7 +255,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool IsFirst
@@ -269,7 +269,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Index
@@ -283,7 +283,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Cells Cells
@@ -298,7 +298,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Borders Borders
@@ -318,7 +318,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Shading Shading
@@ -333,7 +333,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Row Next
@@ -348,7 +348,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Row Previous
@@ -363,7 +363,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 NestingLevel
@@ -377,7 +377,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string ID
@@ -400,7 +400,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Select()
@@ -410,7 +410,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Delete()
@@ -420,7 +420,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="LeftIndent">Single LeftIndent</param>
 		/// <param name="RulerStyle">NetOffice.WordApi.Enums.WdRulerStyle RulerStyle</param>
@@ -432,7 +432,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="RowHeight">Single RowHeight</param>
 		/// <param name="HeightRule">NetOffice.WordApi.Enums.WdRowHeightRule HeightRule</param>
@@ -444,7 +444,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Separator">ref optional object Separator</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -459,7 +459,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range ConvertToTextOld()
@@ -471,7 +471,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Separator">ref optional object Separator</param>
 		/// <param name="NestedTables">ref optional object NestedTables</param>
@@ -488,7 +488,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range ConvertToText()

@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface Moniker SupportByLibrary "OWC10", 1
+	/// DispatchInterface Moniker SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="RelativeTo">object RelativeTo</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -61,7 +61,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Moniker">string Moniker</param>
 		[SupportByLibrary("OWC10", 1)]

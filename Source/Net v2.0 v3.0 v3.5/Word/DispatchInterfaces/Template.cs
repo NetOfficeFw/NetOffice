@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Template SupportByLibrary "Word", 9,10,11,12,14
+	/// DispatchInterface Template SupportByLibrary Word, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string Name
@@ -63,7 +63,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
@@ -78,7 +78,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string Path
@@ -121,7 +121,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.AutoTextEntries AutoTextEntries
@@ -136,7 +136,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageID
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool Saved
@@ -174,7 +174,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdTemplateType Type
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string FullName
@@ -202,7 +202,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject BuiltInDocumentProperties
@@ -217,7 +217,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject CustomDocumentProperties
@@ -232,7 +232,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ListTemplates ListTemplates
@@ -247,7 +247,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageIDFarEast
@@ -266,7 +266,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.VBIDEApi.VBProject VBProject
@@ -281,7 +281,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool KerningByAlgorithm
@@ -300,7 +300,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdJustificationMode JustificationMode
@@ -319,7 +319,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdFarEastLineBreakLevel FarEastLineBreakLevel
@@ -338,7 +338,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string NoLineBreakBefore
@@ -357,7 +357,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string NoLineBreakAfter
@@ -376,7 +376,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 NoProofing
@@ -395,7 +395,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdFarEastLineBreakLanguageID FarEastLineBreakLanguage
@@ -414,7 +414,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.BuildingBlockEntries BuildingBlockEntries
@@ -429,7 +429,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.BuildingBlockTypes BuildingBlockTypes
@@ -448,7 +448,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenAsDocument()
@@ -460,7 +460,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Save()

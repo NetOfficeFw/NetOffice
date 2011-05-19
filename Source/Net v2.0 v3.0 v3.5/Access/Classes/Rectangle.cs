@@ -19,7 +19,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass Rectangle SupportByLibrary "Access", 9,10,11,12,14
+	/// CoClass Rectangle SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -107,7 +107,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Rectangle_ClickEventHandler _ClickEvent;
 
@@ -129,7 +129,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Rectangle_DblClickEventHandler _DblClickEvent;
 
@@ -151,7 +151,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Rectangle_MouseDownEventHandler _MouseDownEvent;
 
@@ -173,7 +173,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Rectangle_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -195,7 +195,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Rectangle_MouseUpEventHandler _MouseUpEvent;
 

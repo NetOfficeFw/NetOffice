@@ -14,7 +14,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass Application SupportByLibrary "Access", 9,10,11,12,14
+	/// CoClass Application SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

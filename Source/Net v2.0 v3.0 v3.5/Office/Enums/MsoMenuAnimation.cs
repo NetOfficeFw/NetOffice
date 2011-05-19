@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoMenuAnimation
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoMenuAnimationNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoMenuAnimationRandom = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoMenuAnimationUnfold = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoMenuAnimationSlide = 3

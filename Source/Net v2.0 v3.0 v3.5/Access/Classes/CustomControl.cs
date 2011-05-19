@@ -19,7 +19,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass CustomControl SupportByLibrary "Access", 9,10,11,12,14
+	/// CoClass CustomControl SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -107,7 +107,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event CustomControl_UpdatedEventHandler _UpdatedEvent;
 
@@ -129,7 +129,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event CustomControl_EnterEventHandler _EnterEvent;
 
@@ -151,7 +151,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event CustomControl_ExitEventHandler _ExitEvent;
 
@@ -173,7 +173,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event CustomControl_GotFocusEventHandler _GotFocusEvent;
 
@@ -195,7 +195,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event CustomControl_LostFocusEventHandler _LostFocusEvent;
 

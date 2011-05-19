@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface IConverterUICallback SupportByLibrary "Office", 14
+	/// Interface IConverterUICallback SupportByLibrary Office, 14
 	///</summary>
 	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="uPercentComplete">UIntPtr uPercentComplete</param>
 		[SupportByLibrary("Office", 14)]
@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>

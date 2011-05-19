@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface Crop SupportByLibrary "Office", 14
+	/// DispatchInterface Crop SupportByLibrary Office, 14
 	///</summary>
 	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Single PictureOffsetX
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Single PictureOffsetY
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Single PictureWidth
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Single PictureHeight
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Single ShapeLeft
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Single ShapeTop
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Single ShapeWidth
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Single ShapeHeight

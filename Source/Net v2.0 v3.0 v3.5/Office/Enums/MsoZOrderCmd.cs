@@ -4,44 +4,44 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoZOrderCmd
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoBringToFront = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoSendToBack = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoBringForward = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoSendBackward = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoBringInFrontOfText = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoSendBehindText = 5

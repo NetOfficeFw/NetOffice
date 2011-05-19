@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _CodePane SupportByLibrary "VBIDE", 5.3,12
+	/// DispatchInterface _CodePane SupportByLibrary VBIDE, 5.3,12
 	///</summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.CodePanes Collection
@@ -64,7 +64,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -79,7 +79,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Window Window
@@ -94,7 +94,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 TopLine
@@ -113,7 +113,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 CountOfVisibleLines
@@ -127,7 +127,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.CodeModule CodeModule
@@ -142,7 +142,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Enums.vbext_CodePaneview CodePaneView
@@ -160,7 +160,7 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="StartLine">ref Int32 StartLine</param>
 		/// <param name="StartColumn">ref Int32 StartColumn</param>
@@ -179,7 +179,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="StartLine">Int32 StartLine</param>
 		/// <param name="StartColumn">Int32 StartColumn</param>
@@ -193,7 +193,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public void Show()

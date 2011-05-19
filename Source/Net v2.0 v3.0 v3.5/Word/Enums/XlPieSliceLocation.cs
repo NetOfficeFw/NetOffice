@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary Word 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlPieSliceLocation
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Word 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 14)]
 		xlHorizontalCoordinate = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Word 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 14)]
 		xlVerticalCoordinate = 2

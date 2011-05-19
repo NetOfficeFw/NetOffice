@@ -4,44 +4,44 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Excel 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlFilterAllDatesInPeriod
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		xlFilterAllDatesInPeriodYear = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		xlFilterAllDatesInPeriodMonth = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		xlFilterAllDatesInPeriodDay = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		xlFilterAllDatesInPeriodHour = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		xlFilterAllDatesInPeriodMinute = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		xlFilterAllDatesInPeriodSecond = 5

@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary Word 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdProtectedViewCloseReason
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Word 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 14)]
 		wdProtectedViewCloseNormal = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Word 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 14)]
 		wdProtectedViewCloseEdit = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Word 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 14)]
 		wdProtectedViewCloseForced = 2

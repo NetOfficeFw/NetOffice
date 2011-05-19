@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface _NumberFormat SupportByLibrary "OWC10", 1
+	/// DispatchInterface _NumberFormat SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string Name
@@ -68,7 +68,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string Code
@@ -87,7 +87,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Value">object Value</param>
 		/// <param name="Count">Int32 Count</param>
@@ -100,7 +100,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="Value">object Value</param>
@@ -113,7 +113,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="Value">object Value</param>
@@ -130,7 +130,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="hDCInfo">Int32 hDCInfo</param>

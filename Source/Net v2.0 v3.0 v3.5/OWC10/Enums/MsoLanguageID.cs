@@ -4,1052 +4,1052 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 1,
+	 /// SupportByLibrary OWC10 1, 
 	 /// </summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoLanguageID
 	{
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDNoProofing = 1024,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDAfrikaans = 1078,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDAlbanian = 1052,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicAlgeria = 5121,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicBahrain = 15361,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicEgypt = 3073,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicIraq = 2049,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicJordan = 11265,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicKuwait = 13313,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicLebanon = 12289,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicLibya = 4097,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicMorocco = 6145,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicOman = 8193,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicQatar = 16385,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabic = 1025,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicSyria = 10241,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicTunisia = 7169,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicUAE = 14337,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArabicYemen = 9217,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDArmenian = 1067,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDAssamese = 1101,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDAzeriCyrillic = 2092,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDAzeriLatin = 1068,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDBasque = 1069,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDByelorussian = 1059,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDBengali = 1093,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDBulgarian = 1026,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDBurmese = 1109,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDCatalan = 1027,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDChineseHongKong = 3076,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDChineseMacao = 5124,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSimplifiedChinese = 2052,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDChineseSingapore = 4100,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDTraditionalChinese = 1028,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDCroatian = 1050,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDCzech = 1029,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDDanish = 1030,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDBelgianDutch = 2067,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDDutch = 1043,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishAUS = 3081,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishBelize = 10249,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishCanadian = 4105,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishCaribbean = 9225,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishIreland = 6153,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishJamaica = 8201,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishNewZealand = 5129,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishPhilippines = 13321,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishSouthAfrica = 7177,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishTrinidad = 11273,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishUK = 2057,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishUS = 1033,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEnglishZimbabwe = 12297,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDEstonian = 1061,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFaeroese = 1080,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFarsi = 1065,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFinnish = 1035,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDBelgianFrench = 2060,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrenchCameroon = 11276,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrenchCanadian = 3084,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrenchCotedIvoire = 12300,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrench = 1036,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrenchLuxembourg = 5132,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrenchMali = 13324,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrenchMonaco = 6156,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrenchReunion = 8204,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrenchSenegal = 10252,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSwissFrench = 4108,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrenchWestIndies = 7180,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrenchZaire = 9228,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDFrisianNetherlands = 1122,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDGaelicIreland = 2108,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDGaelicScotland = 1084,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDGalician = 1110,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDGeorgian = 1079,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDGermanAustria = 3079,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDGerman = 1031,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDGermanLiechtenstein = 5127,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDGermanLuxembourg = 4103,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSwissGerman = 2055,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDGreek = 1032,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDGujarati = 1095,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDHebrew = 1037,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDHindi = 1081,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDHungarian = 1038,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDIcelandic = 1039,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDIndonesian = 1057,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDItalian = 1040,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSwissItalian = 2064,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDJapanese = 1041,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDKannada = 1099,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDKashmiri = 1120,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDKazakh = 1087,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDKhmer = 1107,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDKirghiz = 1088,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDKonkani = 1111,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDKorean = 1042,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDLao = 1108,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDLatvian = 1062,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDLithuanian = 1063,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDMacedonian = 1071,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDMalaysian = 1086,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDMalayBruneiDarussalam = 2110,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDMalayalam = 1100,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDMaltese = 1082,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDManipuri = 1112,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDMarathi = 1102,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDMongolian = 1104,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDNepali = 1121,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDNorwegianBokmol = 1044,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDNorwegianNynorsk = 2068,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDOriya = 1096,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDPolish = 1045,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDBrazilianPortuguese = 1046,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDPortuguese = 2070,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDPunjabi = 1094,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDRhaetoRomanic = 1047,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDRomanianMoldova = 2072,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDRomanian = 1048,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDRussianMoldova = 2073,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDRussian = 1049,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSamiLappish = 1083,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSanskrit = 1103,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSerbianCyrillic = 3098,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSerbianLatin = 2074,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSesotho = 1072,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSindhi = 1113,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSlovak = 1051,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSlovenian = 1060,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSorbian = 1070,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishArgentina = 11274,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishBolivia = 16394,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishChile = 13322,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishColombia = 9226,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishCostaRica = 5130,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishDominicanRepublic = 7178,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishEcuador = 12298,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishElSalvador = 17418,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishGuatemala = 4106,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishHonduras = 18442,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDMexicanSpanish = 2058,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishNicaragua = 19466,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishPanama = 6154,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishParaguay = 15370,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishPeru = 10250,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishPuertoRico = 20490,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishModernSort = 3082,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanish = 1034,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishUruguay = 14346,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSpanishVenezuela = 8202,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSutu = 1072,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSwahili = 1089,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSwedishFinland = 2077,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDSwedish = 1053,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDTajik = 1064,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDTamil = 1097,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDTatar = 1092,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDTelugu = 1098,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDThai = 1054,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDTibetan = 1105,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDTsonga = 1073,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDTswana = 1074,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDTurkish = 1055,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDTurkmen = 1090,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDUkrainian = 1058,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDUrdu = 1056,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDUzbekCyrillic = 2115,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDUzbekLatin = 1091,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDVenda = 1075,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDVietnamese = 1066,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDWelsh = 1106,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDXhosa = 1076,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		msoLanguageIDZulu = 1077

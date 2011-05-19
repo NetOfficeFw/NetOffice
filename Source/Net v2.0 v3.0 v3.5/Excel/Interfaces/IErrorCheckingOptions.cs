@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IErrorCheckingOptions SupportByLibrary "Excel", 10,11,12,14
+	/// Interface IErrorCheckingOptions SupportByLibrary Excel, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -48,7 +48,7 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public COMObject Parent
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool BackgroundChecking
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlColorIndex IndicatorColorIndex
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool EvaluateToError
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool TextDate
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool NumberAsText
@@ -187,7 +187,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool InconsistentFormula
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool OmittedCells
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool UnlockedFormulaCells
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool EmptyCellReferences
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public bool ListDataValidation
@@ -282,7 +282,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool InconsistentTableFormula

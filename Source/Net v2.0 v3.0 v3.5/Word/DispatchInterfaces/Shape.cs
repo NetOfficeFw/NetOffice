@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Shape SupportByLibrary "Word", 9,10,11,12,14
+	/// DispatchInterface Shape SupportByLibrary Word, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
@@ -78,7 +78,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
@@ -93,7 +93,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Adjustments Adjustments
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoAutoShapeType AutoShapeType
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.CalloutFormat Callout
@@ -142,7 +142,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 ConnectionSiteCount
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Connector
@@ -170,7 +170,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ConnectorFormat ConnectorFormat
@@ -185,7 +185,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.FillFormat Fill
@@ -200,7 +200,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.GroupShapes GroupItems
@@ -215,7 +215,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single Height
@@ -234,7 +234,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState HorizontalFlip
@@ -248,7 +248,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single Left
@@ -267,7 +267,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.LineFormat Line
@@ -282,7 +282,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState LockAspectRatio
@@ -301,7 +301,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string Name
@@ -320,7 +320,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ShapeNodes Nodes
@@ -335,7 +335,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single Rotation
@@ -354,7 +354,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.PictureFormat PictureFormat
@@ -369,7 +369,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ShadowFormat Shadow
@@ -384,7 +384,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.TextEffectFormat TextEffect
@@ -399,7 +399,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.TextFrame TextFrame
@@ -414,7 +414,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ThreeDFormat ThreeD
@@ -429,7 +429,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single Top
@@ -448,7 +448,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoShapeType Type
@@ -462,7 +462,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState VerticalFlip
@@ -476,7 +476,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public object Vertices
@@ -499,7 +499,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Visible
@@ -518,7 +518,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Single Width
@@ -537,7 +537,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 ZOrderPosition
@@ -551,7 +551,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Hyperlink Hyperlink
@@ -566,7 +566,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdRelativeHorizontalPosition RelativeHorizontalPosition
@@ -585,7 +585,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdRelativeVerticalPosition RelativeVerticalPosition
@@ -604,7 +604,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 LockAnchor
@@ -623,7 +623,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.WrapFormat WrapFormat
@@ -638,7 +638,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.OLEFormat OLEFormat
@@ -653,7 +653,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range Anchor
@@ -668,7 +668,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.LinkFormat LinkFormat
@@ -683,7 +683,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string AlternativeText
@@ -702,7 +702,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Script Script
@@ -717,7 +717,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState HasDiagram
@@ -731,7 +731,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.OfficeApi.IMsoDiagram Diagram
@@ -746,7 +746,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState HasDiagramNode
@@ -760,7 +760,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.DiagramNode DiagramNode
@@ -775,7 +775,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Child
@@ -789,7 +789,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Shape ParentGroup
@@ -804,7 +804,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.CanvasShapes CanvasItems
@@ -819,7 +819,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public Int32 ID
@@ -833,7 +833,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public string RTF
@@ -852,7 +852,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 LayoutInCell
@@ -871,7 +871,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState HasChart
@@ -885,7 +885,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 
+		/// SupportByLibrary Word 12
 		/// </summary>
 		[SupportByLibrary("Word", 12)]
 		public bool Dummy1
@@ -899,7 +899,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public Single LeftRelative
@@ -918,7 +918,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public Single TopRelative
@@ -937,7 +937,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public Single WidthRelative
@@ -956,7 +956,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public Single HeightRelative
@@ -975,7 +975,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdRelativeHorizontalSize RelativeHorizontalSize
@@ -994,7 +994,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdRelativeVerticalSize RelativeVerticalSize
@@ -1013,7 +1013,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.SoftEdgeFormat SoftEdge
@@ -1028,7 +1028,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.GlowFormat Glow
@@ -1043,7 +1043,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.ReflectionFormat Reflection
@@ -1058,7 +1058,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.OfficeApi.TextFrame2 TextFrame2
@@ -1073,7 +1073,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Chart Chart
@@ -1088,7 +1088,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState HasSmartArt
@@ -1102,7 +1102,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.OfficeApi.SmartArt SmartArt
@@ -1117,7 +1117,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.OfficeApi.Enums.MsoShapeStyleIndex ShapeStyle
@@ -1136,7 +1136,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.OfficeApi.Enums.MsoBackgroundStyleIndex BackgroundStyle
@@ -1155,7 +1155,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string Title
@@ -1174,7 +1174,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 AnchorID
@@ -1188,7 +1188,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 EditID
@@ -1206,7 +1206,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Apply()
@@ -1216,7 +1216,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Delete()
@@ -1226,7 +1226,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Shape Duplicate()
@@ -1238,7 +1238,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FlipCmd">NetOffice.OfficeApi.Enums.MsoFlipCmd FlipCmd</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -1249,7 +1249,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Increment">Single Increment</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -1260,7 +1260,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Increment">Single Increment</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -1271,7 +1271,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Increment">Single Increment</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -1282,7 +1282,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void PickUp()
@@ -1292,7 +1292,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void RerouteConnections()
@@ -1302,7 +1302,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Factor">Single Factor</param>
 		/// <param name="RelativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
@@ -1315,7 +1315,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Factor">Single Factor</param>
 		/// <param name="RelativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
@@ -1328,7 +1328,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Replace">ref optional object Replace</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -1341,7 +1341,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Select()
@@ -1351,7 +1351,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void SetShapesDefaultProperties()
@@ -1361,7 +1361,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ShapeRange Ungroup()
@@ -1373,7 +1373,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ZOrderCmd">NetOffice.OfficeApi.Enums.MsoZOrderCmd ZOrderCmd</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -1384,7 +1384,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.InlineShape ConvertToInlineShape()
@@ -1396,7 +1396,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Frame ConvertToFrame()
@@ -1408,7 +1408,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void Activate()
@@ -1418,7 +1418,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Increment">Single Increment</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
@@ -1429,7 +1429,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Increment">Single Increment</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
@@ -1440,7 +1440,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Increment">Single Increment</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
@@ -1451,7 +1451,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Increment">Single Increment</param>
 		[SupportByLibrary("Word", 10,11,12,14)]

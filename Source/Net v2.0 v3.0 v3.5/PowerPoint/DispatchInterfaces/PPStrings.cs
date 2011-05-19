@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PPStrings SupportByLibrary "PowerPoint", 9
+	/// DispatchInterface PPStrings SupportByLibrary PowerPoint, 9
 	///</summary>
 	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByLibrary("PowerPoint", 9)]
@@ -69,7 +69,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		/// <param name="String">string String</param>
 		[SupportByLibrary("PowerPoint", 9)]
@@ -81,7 +81,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		/// <param name="String">string String</param>
 		/// <param name="Position">Int32 Position</param>
@@ -93,7 +93,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByLibrary("PowerPoint", 9)]

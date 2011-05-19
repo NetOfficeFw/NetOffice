@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Outlook 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlCalendarViewMode
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olCalendarViewDay = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olCalendarViewWeek = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olCalendarViewMonth = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olCalendarViewMultiDay = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olCalendarView5DayWeek = 4

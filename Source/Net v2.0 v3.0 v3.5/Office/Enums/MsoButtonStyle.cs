@@ -4,56 +4,56 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoButtonStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoButtonAutomatic = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoButtonIcon = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoButtonCaption = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoButtonIconAndCaption = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoButtonIconAndWrapCaption = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoButtonIconAndCaptionBelow = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoButtonWrapCaption = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoButtonIconAndWrapCaptionBelow = 15

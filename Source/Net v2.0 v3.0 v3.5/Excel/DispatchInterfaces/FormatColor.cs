@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface FormatColor SupportByLibrary "Excel", 12,14
+	/// DispatchInterface FormatColor SupportByLibrary Excel, 12,14
 	///</summary>
 	[SupportByLibrary("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public COMObject Parent
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public object Color
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public object ThemeColor
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public object TintAndShade

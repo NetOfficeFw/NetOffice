@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface DoCmd SupportByLibrary "Access", 9,10,11,12,14
+	/// DispatchInterface DoCmd SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="MenuName">object MenuName</param>
 		/// <param name="MenuMacroName">object MenuMacroName</param>
@@ -66,7 +66,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 
+		/// SupportByLibrary Access 9, 10, 11
 		/// </summary>
 		/// <param name="FilterName">optional object FilterName</param>
 		/// <param name="WhereCondition">optional object WhereCondition</param>
@@ -78,7 +78,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="FilterName">optional object FilterName</param>
 		/// <param name="WhereCondition">optional object WhereCondition</param>
@@ -91,7 +91,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void ApplyFilter()
@@ -101,7 +101,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void Beep()
@@ -111,7 +111,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void CancelEvent()
@@ -121,7 +121,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
@@ -134,7 +134,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="DestinationDatabase">object DestinationDatabase</param>
 		/// <param name="NewName">object NewName</param>
@@ -148,7 +148,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="DestinationDatabase">object DestinationDatabase</param>
 		/// <param name="NewName">object NewName</param>
@@ -161,7 +161,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="MenuBar">object MenuBar</param>
 		/// <param name="MenuName">object MenuName</param>
@@ -176,7 +176,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="MenuBar">object MenuBar</param>
 		/// <param name="MenuName">object MenuName</param>
@@ -189,7 +189,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="EchoOn">object EchoOn</param>
 		/// <param name="StatusBarText">optional object StatusBarText</param>
@@ -201,7 +201,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="EchoOn">object EchoOn</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -212,7 +212,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void FindNext()
@@ -222,7 +222,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FindWhat">object FindWhat</param>
 		/// <param name="Match">NetOffice.AccessApi.Enums.AcFindMatch Match</param>
@@ -239,7 +239,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FindWhat">object FindWhat</param>
 		/// <param name="Match">NetOffice.AccessApi.Enums.AcFindMatch Match</param>
@@ -255,7 +255,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ControlName">object ControlName</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -266,7 +266,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="PageNumber">object PageNumber</param>
 		/// <param name="Right">optional object Right</param>
@@ -279,7 +279,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="PageNumber">object PageNumber</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -290,7 +290,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcDataObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
@@ -304,7 +304,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcDataObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
@@ -317,7 +317,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="HourglassOn">object HourglassOn</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -328,7 +328,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void Maximize()
@@ -338,7 +338,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void Minimize()
@@ -348,7 +348,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Right">optional object Right</param>
 		/// <param name="Down">optional object Down</param>
@@ -362,7 +362,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void MoveSize()
@@ -372,7 +372,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FormName">object FormName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcFormView View</param>
@@ -389,7 +389,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FormName">object FormName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcFormView View</param>
@@ -405,7 +405,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="QueryName">object QueryName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
@@ -418,7 +418,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TableName">object TableName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
@@ -431,7 +431,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="PrintRange">NetOffice.AccessApi.Enums.AcPrintRange PrintRange</param>
 		/// <param name="PageFrom">object PageFrom</param>
@@ -447,7 +447,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="PrintRange">NetOffice.AccessApi.Enums.AcPrintRange PrintRange</param>
 		/// <param name="PageFrom">object PageFrom</param>
@@ -461,7 +461,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Options">NetOffice.AccessApi.Enums.AcQuitOption Options</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -472,7 +472,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ControlName">optional object ControlName</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -483,7 +483,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void Requery()
@@ -493,7 +493,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
@@ -505,7 +505,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -516,7 +516,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="NewName">object NewName</param>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
@@ -529,7 +529,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="NewName">object NewName</param>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
@@ -541,7 +541,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void Restore()
@@ -551,7 +551,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="MacroName">object MacroName</param>
 		/// <param name="RepeatCount">optional object RepeatCount</param>
@@ -564,7 +564,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="MacroName">object MacroName</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -575,7 +575,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SQLStatement">object SQLStatement</param>
 		/// <param name="UseTransaction">optional object UseTransaction</param>
@@ -587,7 +587,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SQLStatement">object SQLStatement</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -598,7 +598,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
@@ -611,7 +611,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -622,7 +622,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="WarningsOn">object WarningsOn</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -633,7 +633,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void ShowAllRecords()
@@ -643,7 +643,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary Access 9
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
@@ -657,7 +657,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
@@ -673,7 +673,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary Access 9
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
@@ -685,7 +685,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
@@ -700,7 +700,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcDataTransferType TransferType</param>
 		/// <param name="DatabaseType">object DatabaseType</param>
@@ -718,7 +718,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcDataTransferType TransferType</param>
 		/// <param name="DatabaseType">object DatabaseType</param>
@@ -732,7 +732,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcDataTransferType TransferType</param>
 		/// <param name="SpreadsheetType">NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType</param>
@@ -749,7 +749,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcDataTransferType TransferType</param>
 		/// <param name="SpreadsheetType">NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType</param>
@@ -761,7 +761,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcTextTransferType TransferType</param>
 		/// <param name="SpecificationName">optional object SpecificationName</param>
@@ -778,7 +778,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcTextTransferType TransferType</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -789,7 +789,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary Access 9
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
@@ -805,7 +805,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 
+		/// SupportByLibrary Access 10, 11
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
@@ -822,7 +822,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
@@ -840,7 +840,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 
+		/// SupportByLibrary Access 9, 10, 11
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		[SupportByLibrary("Access", 9,10,11)]
@@ -851,7 +851,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
@@ -863,7 +863,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -874,7 +874,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ModuleName">optional object ModuleName</param>
 		/// <param name="ProcedureName">optional object ProcedureName</param>
@@ -886,7 +886,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void OpenModule()
@@ -896,7 +896,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcSendObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
@@ -916,7 +916,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcSendObjectType ObjectType</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -927,7 +927,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ToolbarName">object ToolbarName</param>
 		/// <param name="Show">NetOffice.AccessApi.Enums.AcShowToolbar Show</param>
@@ -939,7 +939,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
@@ -951,7 +951,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -962,7 +962,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="MenuIndex">object MenuIndex</param>
 		/// <param name="CommandIndex">optional object CommandIndex</param>
@@ -976,7 +976,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="MenuIndex">object MenuIndex</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -987,7 +987,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Command">NetOffice.AccessApi.Enums.AcCommand Command</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -998,7 +998,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="DataAccessPageName">object DataAccessPageName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcDataAccessPageView View</param>
@@ -1010,7 +1010,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ViewName">object ViewName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
@@ -1023,7 +1023,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="DiagramName">object DiagramName</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -1034,7 +1034,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ProcedureName">object ProcedureName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
@@ -1047,7 +1047,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
@@ -1061,7 +1061,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ReportName">object ReportName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
@@ -1073,7 +1073,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
@@ -1089,7 +1089,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
@@ -1100,7 +1100,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Server">object Server</param>
 		/// <param name="Database">object Database</param>
@@ -1116,7 +1116,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Server">object Server</param>
 		/// <param name="Database">object Database</param>
@@ -1128,7 +1128,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="DatabaseFileName">object DatabaseFileName</param>
 		/// <param name="OverwriteExistingFile">optional object OverwriteExistingFile</param>
@@ -1141,7 +1141,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="DatabaseFileName">object DatabaseFileName</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
@@ -1152,7 +1152,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FunctionName">object FunctionName</param>
 		/// <param name="View">NetOffice.AccessApi.Enums.AcView View</param>
@@ -1165,7 +1165,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="FilterName">optional object FilterName</param>
 		/// <param name="WhereCondition">optional object WhereCondition</param>
@@ -1177,7 +1177,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public void ApplyFilterOld0()
@@ -1187,7 +1187,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="ObjectName">optional object ObjectName</param>
@@ -1204,7 +1204,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		[SupportByLibrary("Access", 12,14)]
@@ -1215,7 +1215,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
 		/// <param name="SiteAddress">object SiteAddress</param>
@@ -1231,7 +1231,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="TransferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
 		/// <param name="SiteAddress">object SiteAddress</param>
@@ -1244,7 +1244,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public void CloseDatabase()
@@ -1254,7 +1254,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="Category">optional object Category</param>
 		/// <param name="Group">optional object Group</param>
@@ -1266,7 +1266,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public void NavigateTo()
@@ -1276,7 +1276,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcDataObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
@@ -1290,7 +1290,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcDataObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
@@ -1303,7 +1303,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="ControlName">object ControlName</param>
 		/// <param name="Property">NetOffice.AccessApi.Enums.AcProperty Property</param>
@@ -1316,7 +1316,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="ControlName">object ControlName</param>
 		/// <param name="Property">NetOffice.AccessApi.Enums.AcProperty Property</param>
@@ -1328,7 +1328,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public void SingleStep()
@@ -1338,7 +1338,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public void ClearMacroError()
@@ -1348,7 +1348,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="Show">object Show</param>
 		/// <param name="Category">optional object Category</param>
@@ -1360,7 +1360,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="Show">object Show</param>
 		[SupportByLibrary("Access", 12,14)]
@@ -1371,7 +1371,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="Lock">object Lock</param>
 		[SupportByLibrary("Access", 12,14)]
@@ -1382,7 +1382,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="SavedImportExportName">object SavedImportExportName</param>
 		[SupportByLibrary("Access", 12,14)]
@@ -1393,7 +1393,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="ObjectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
 		/// <param name="ObjectName">object ObjectName</param>
@@ -1409,7 +1409,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="Name">object Name</param>
 		/// <param name="Expression">object Expression</param>
@@ -1421,7 +1421,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="MacroName">object MacroName</param>
 		[SupportByLibrary("Access", 14)]
@@ -1432,7 +1432,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="OrderBy">object OrderBy</param>
 		/// <param name="ControlName">optional object ControlName</param>
@@ -1444,7 +1444,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="OrderBy">object OrderBy</param>
 		[SupportByLibrary("Access", 14)]
@@ -1455,7 +1455,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="FilterName">optional object FilterName</param>
 		/// <param name="WhereCondition">optional object WhereCondition</param>
@@ -1468,7 +1468,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public void SetFilter()
@@ -1478,7 +1478,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public void RefreshRecord()

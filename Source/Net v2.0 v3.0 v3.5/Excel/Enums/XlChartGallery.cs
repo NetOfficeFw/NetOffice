@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlChartGallery
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlBuiltIn = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlUserDefined = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlAnyGallery = 23

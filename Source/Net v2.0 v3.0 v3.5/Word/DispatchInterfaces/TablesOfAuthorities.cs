@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface TablesOfAuthorities SupportByLibrary "Word", 9,10,11,12,14
+	/// DispatchInterface TablesOfAuthorities SupportByLibrary Word, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
@@ -65,7 +65,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
@@ -79,7 +79,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
@@ -94,7 +94,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Count
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdToaFormat Format
@@ -131,7 +131,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -148,7 +148,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Category">ref optional object Category</param>
@@ -182,7 +182,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -195,7 +195,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ShortCitation">string ShortCitation</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -206,7 +206,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="ShortCitation">string ShortCitation</param>
@@ -227,7 +227,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="ShortCitation">string ShortCitation</param>
@@ -241,7 +241,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ShortCitation">string ShortCitation</param>
 		/// <param name="LongCitation">ref optional object LongCitation</param>
@@ -259,7 +259,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ShortCitation">string ShortCitation</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]

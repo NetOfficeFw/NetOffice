@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _VBComponents SupportByLibrary "VBIDE", 5.3,12
+	/// DispatchInterface _VBComponents SupportByLibrary VBIDE, 5.3,12
 	///</summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="ProgId">string ProgId</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -66,7 +66,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]

@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface RTD SupportByLibrary "Excel", 10,11,12,14
+	/// DispatchInterface RTD SupportByLibrary Excel, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public Int32 ThrottleInterval
@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public void RefreshData()
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public void RestartServers()

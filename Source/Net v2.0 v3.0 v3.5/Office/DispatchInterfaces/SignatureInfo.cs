@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SignatureInfo SupportByLibrary "Office", 12,14
+	/// DispatchInterface SignatureInfo SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public bool ReadOnly
@@ -63,7 +63,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string SignatureProvider
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string SignatureText
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public stdole.Picture SignatureImage
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string SignatureComment
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.ContentVerificationResults ContentVerificationResults
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.CertificateVerificationResults CertificateVerificationResults
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public bool IsValid
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public bool IsCertificateExpired
@@ -191,7 +191,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public bool IsCertificateRevoked
@@ -205,7 +205,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public bool IsCertificateUntrusted
@@ -223,7 +223,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="sigdet">NetOffice.OfficeApi.Enums.SignatureDetail sigdet</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -244,7 +244,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="certdet">NetOffice.OfficeApi.Enums.CertificateDetail certdet</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -265,7 +265,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -276,7 +276,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -287,7 +287,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="bstrThumbprint">string bstrThumbprint</param>
 		[SupportByLibrary("Office", 12,14)]

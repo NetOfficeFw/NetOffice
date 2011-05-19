@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IDocEvents SupportByLibrary "Excel", 9,10,11,12,14
+	/// Interface IDocEvents SupportByLibrary Excel, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
 		/// <param name="Cancel">ref bool Cancel</param>
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
 		/// <param name="Cancel">ref bool Cancel</param>
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 Activate()
@@ -105,7 +105,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 Deactivate()
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 Calculate()
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Target">NetOffice.ExcelApi.Hyperlink Target</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Target">NetOffice.ExcelApi.PivotTable Target</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
@@ -163,7 +163,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="TargetRange">NetOffice.ExcelApi.Range TargetRange</param>
@@ -176,7 +176,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="ValueChangeStart">Int32 ValueChangeStart</param>
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="ValueChangeStart">Int32 ValueChangeStart</param>
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="ValueChangeStart">Int32 ValueChangeStart</param>
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Target">NetOffice.ExcelApi.PivotTable Target</param>
 		[SupportByLibrary("Excel", 14)]

@@ -4,44 +4,44 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Outlook 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlContextMenu
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olItemContextMenu = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olViewContextMenu = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olFolderContextMenu = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olAttachmentContextMenu = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olStoreContextMenu = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olShortcutContextMenu = 5

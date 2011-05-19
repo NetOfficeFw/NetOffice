@@ -45,7 +45,7 @@ namespace NetOffice.PowerPointApi
 	#endregion
 
 	///<summary>
-	/// CoClass Application SupportByLibrary "PowerPoint", 9,10,11,12,14
+	/// CoClass Application SupportByLibrary PowerPoint, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -126,7 +126,7 @@ namespace NetOffice.PowerPointApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_WindowSelectionChangeEventHandler _WindowSelectionChangeEvent;
 
@@ -148,7 +148,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_WindowBeforeRightClickEventHandler _WindowBeforeRightClickEvent;
 
@@ -170,7 +170,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_WindowBeforeDoubleClickEventHandler _WindowBeforeDoubleClickEvent;
 
@@ -192,7 +192,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_PresentationCloseEventHandler _PresentationCloseEvent;
 
@@ -214,7 +214,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_PresentationSaveEventHandler _PresentationSaveEvent;
 
@@ -236,7 +236,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_PresentationOpenEventHandler _PresentationOpenEvent;
 
@@ -258,7 +258,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_NewPresentationEventHandler _NewPresentationEvent;
 
@@ -280,7 +280,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_PresentationNewSlideEventHandler _PresentationNewSlideEvent;
 
@@ -302,7 +302,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_WindowActivateEventHandler _WindowActivateEvent;
 
@@ -324,7 +324,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_WindowDeactivateEventHandler _WindowDeactivateEvent;
 
@@ -346,7 +346,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_SlideShowBeginEventHandler _SlideShowBeginEvent;
 
@@ -368,7 +368,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_SlideShowNextBuildEventHandler _SlideShowNextBuildEvent;
 
@@ -390,7 +390,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_SlideShowNextSlideEventHandler _SlideShowNextSlideEvent;
 
@@ -412,7 +412,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_SlideShowEndEventHandler _SlideShowEndEvent;
 
@@ -434,7 +434,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event Application_PresentationPrintEventHandler _PresentationPrintEvent;
 
@@ -456,7 +456,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 10 11 12 14
+		/// SupportByLibrary PowerPoint, 10,11,12,14
 		/// </summary>
 		private event Application_SlideSelectionChangedEventHandler _SlideSelectionChangedEvent;
 
@@ -478,7 +478,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 10 11 12 14
+		/// SupportByLibrary PowerPoint, 10,11,12,14
 		/// </summary>
 		private event Application_ColorSchemeChangedEventHandler _ColorSchemeChangedEvent;
 
@@ -500,7 +500,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 10 11 12 14
+		/// SupportByLibrary PowerPoint, 10,11,12,14
 		/// </summary>
 		private event Application_PresentationBeforeSaveEventHandler _PresentationBeforeSaveEvent;
 
@@ -522,7 +522,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 10 11 12 14
+		/// SupportByLibrary PowerPoint, 10,11,12,14
 		/// </summary>
 		private event Application_SlideShowNextClickEventHandler _SlideShowNextClickEvent;
 
@@ -544,7 +544,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 11 12 14
+		/// SupportByLibrary PowerPoint, 11,12,14
 		/// </summary>
 		private event Application_AfterNewPresentationEventHandler _AfterNewPresentationEvent;
 
@@ -566,7 +566,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 11 12 14
+		/// SupportByLibrary PowerPoint, 11,12,14
 		/// </summary>
 		private event Application_AfterPresentationOpenEventHandler _AfterPresentationOpenEvent;
 
@@ -588,7 +588,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 11 12 14
+		/// SupportByLibrary PowerPoint, 11,12,14
 		/// </summary>
 		private event Application_PresentationSyncEventHandler _PresentationSyncEvent;
 
@@ -610,7 +610,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 12 14
+		/// SupportByLibrary PowerPoint, 12,14
 		/// </summary>
 		private event Application_SlideShowOnNextEventHandler _SlideShowOnNextEvent;
 
@@ -632,7 +632,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 12 14
+		/// SupportByLibrary PowerPoint, 12,14
 		/// </summary>
 		private event Application_SlideShowOnPreviousEventHandler _SlideShowOnPreviousEvent;
 

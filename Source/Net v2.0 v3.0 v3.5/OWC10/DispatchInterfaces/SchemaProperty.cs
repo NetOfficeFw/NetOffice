@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface SchemaProperty SupportByLibrary "OWC10", 1
+	/// DispatchInterface SchemaProperty SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string Name
@@ -63,7 +63,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public object Value

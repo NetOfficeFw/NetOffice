@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlMeetingStatus
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olNonMeeting = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olMeeting = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olMeetingReceived = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olMeetingCanceled = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olMeetingReceivedAndCanceled = 7

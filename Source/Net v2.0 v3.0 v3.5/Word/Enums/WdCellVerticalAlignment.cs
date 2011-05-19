@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdCellVerticalAlignment
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdCellAlignVerticalTop = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdCellAlignVerticalCenter = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdCellAlignVerticalBottom = 3

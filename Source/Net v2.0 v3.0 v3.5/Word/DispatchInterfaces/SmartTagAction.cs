@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface SmartTagAction SupportByLibrary "Word", 11,12,14
+	/// DispatchInterface SmartTagAction SupportByLibrary Word, 11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public string Name
@@ -63,7 +63,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Application Application
@@ -78,7 +78,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 Creator
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public COMObject Parent
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public NetOffice.WordApi.Enums.WdSmartTagControlType Type
@@ -121,7 +121,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public bool PresentInPane
@@ -135,7 +135,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public bool ExpandHelp
@@ -154,7 +154,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public bool CheckboxState
@@ -173,7 +173,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public string TextboxText
@@ -192,7 +192,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 ListSelection
@@ -211,7 +211,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public Int32 RadioGroupSelection
@@ -230,7 +230,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public bool ExpandDocumentFragment
@@ -249,7 +249,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public COMObject ActiveXControl
@@ -268,7 +268,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public void Execute()

@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface Connection SupportByLibrary "DAO", 6,12
+	/// DispatchInterface Connection SupportByLibrary DAO, 6,12
 	///</summary>
 	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Name
@@ -63,7 +63,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Connect
@@ -77,7 +77,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Database Database
@@ -92,7 +92,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 hDbc
@@ -106,7 +106,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int16 QueryTimeout
@@ -125,7 +125,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Transactions
@@ -139,7 +139,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 RecordsAffected
@@ -153,7 +153,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool StillExecuting
@@ -167,7 +167,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Updatable
@@ -181,7 +181,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.QueryDefs QueryDefs
@@ -196,7 +196,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordsets Recordsets
@@ -215,7 +215,7 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public void Cancel()
@@ -225,7 +225,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public void Close()
@@ -235,7 +235,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="SQLText">optional object SQLText</param>
@@ -249,7 +249,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.QueryDef CreateQueryDef()
@@ -261,7 +261,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Query">string Query</param>
 		/// <param name="Options">optional object Options</param>
@@ -273,7 +273,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Query">string Query</param>
 		[SupportByLibrary("DAO", 6,12)]
@@ -284,7 +284,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Type">optional object Type</param>
@@ -300,7 +300,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("DAO", 6,12)]

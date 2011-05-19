@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpRevisionInfo
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppRevisionInfoNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppRevisionInfoBaseline = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppRevisionInfoMerged = 2

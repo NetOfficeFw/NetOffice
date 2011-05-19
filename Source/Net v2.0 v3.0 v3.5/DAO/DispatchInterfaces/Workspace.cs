@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface Workspace SupportByLibrary "DAO", 6,12
+	/// DispatchInterface Workspace SupportByLibrary DAO, 6,12
 	///</summary>
 	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Name
@@ -68,7 +68,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string UserName
@@ -82,7 +82,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string _30_UserName
@@ -101,7 +101,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string _30_Password
@@ -120,7 +120,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int16 IsolateODBCTrans
@@ -139,7 +139,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Databases Databases
@@ -154,7 +154,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Users Users
@@ -169,7 +169,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Groups Groups
@@ -184,7 +184,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 LoginTimeout
@@ -203,7 +203,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 DefaultCursorDriver
@@ -222,7 +222,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 hEnv
@@ -236,7 +236,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 Type
@@ -250,7 +250,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Connections Connections
@@ -269,7 +269,7 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public void BeginTrans()
@@ -279,7 +279,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Options">Int32 Options</param>
 		[SupportByLibrary("DAO", 6,12)]
@@ -290,7 +290,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public void Close()
@@ -300,7 +300,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public void Rollback()
@@ -310,7 +310,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Options">optional object Options</param>
@@ -326,7 +326,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("DAO", 6,12)]
@@ -339,7 +339,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Connect">string Connect</param>
@@ -354,7 +354,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Connect">string Connect</param>
@@ -368,7 +368,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="PID">optional object PID</param>
@@ -383,7 +383,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.User CreateUser()
@@ -395,7 +395,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="PID">optional object PID</param>
@@ -409,7 +409,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Group CreateGroup()
@@ -421,7 +421,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Options">optional object Options</param>
@@ -437,7 +437,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("DAO", 6,12)]

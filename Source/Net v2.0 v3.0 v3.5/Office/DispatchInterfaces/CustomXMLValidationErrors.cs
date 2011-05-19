@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface CustomXMLValidationErrors SupportByLibrary "Office", 12,14
+	/// DispatchInterface CustomXMLValidationErrors SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public COMObject Parent
@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 Count
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -100,7 +100,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		/// <param name="ErrorName">string ErrorName</param>

@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface AddIns2 SupportByLibrary "Excel", 14
+	/// DispatchInterface AddIns2 SupportByLibrary Excel, 14
 	///</summary>
 	[SupportByLibrary("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public COMObject Parent
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Int32 Count
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Excel", 14)]
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Excel", 14)]
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		/// <param name="CopyFile">optional object CopyFile</param>
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		[SupportByLibrary("Excel", 14)]

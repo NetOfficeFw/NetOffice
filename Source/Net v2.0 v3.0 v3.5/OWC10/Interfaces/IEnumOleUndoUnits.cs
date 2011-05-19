@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface IEnumOleUndoUnits SupportByLibrary "OWC10", 1
+	/// Interface IEnumOleUndoUnits SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		/// <param name="rgElt">ref NetOffice.OWC10Api.IOleUndoUnit rgElt</param>
@@ -69,7 +69,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -81,7 +81,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Reset()
@@ -92,7 +92,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="ppEnum">ref NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
 		[SupportByLibrary("OWC10", 1)]

@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface SectionProperties SupportByLibrary "PowerPoint", 14
+	/// DispatchInterface SectionProperties SupportByLibrary PowerPoint, 14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject Parent
@@ -79,7 +79,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Count
@@ -97,7 +97,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -109,7 +109,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="sectionName">string sectionName</param>
@@ -121,7 +121,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -133,7 +133,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -145,7 +145,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="SlideIndex">Int32 SlideIndex</param>
 		/// <param name="sectionName">string sectionName</param>
@@ -158,7 +158,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="sectionName">optional object sectionName</param>
@@ -171,7 +171,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -183,7 +183,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="toPos">Int32 toPos</param>
@@ -195,7 +195,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="deleteSlides">bool deleteSlides</param>
@@ -207,7 +207,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		[SupportByLibrary("PowerPoint", 14)]

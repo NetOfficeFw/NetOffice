@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface IConverterApplicationPreferences SupportByLibrary "Office", 14
+	/// Interface IConverterApplicationPreferences SupportByLibrary Office, 14
 	///</summary>
 	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="plcid">ref Int32 plcid</param>
 		[SupportByLibrary("Office", 14)]
@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="phwnd">ref Int32 phwnd</param>
 		[SupportByLibrary("Office", 14)]
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="pbstrApplication">ref string pbstrApplication</param>
 		[SupportByLibrary("Office", 14)]
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="pFormat">ref Int32 pFormat</param>
 		[SupportByLibrary("Office", 14)]

@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdTCSCConverterDirection
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdTCSCConverterDirectionSCTC = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdTCSCConverterDirectionTCSC = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdTCSCConverterDirectionAuto = 2

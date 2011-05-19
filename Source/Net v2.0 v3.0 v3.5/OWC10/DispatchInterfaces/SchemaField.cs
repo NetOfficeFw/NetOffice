@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface SchemaField SupportByLibrary "OWC10", 1
+	/// DispatchInterface SchemaField SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string Name
@@ -68,7 +68,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.ADODBApi.Enums.DataTypeEnum DataType
@@ -87,7 +87,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Length
@@ -106,7 +106,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool IsKey
@@ -125,7 +125,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool IsRenamed
@@ -139,7 +139,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaProperties Properties
@@ -154,7 +154,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool IsHyperlink
@@ -168,7 +168,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string BaseTableName
@@ -182,7 +182,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string BaseColumnName
@@ -200,7 +200,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public void Delete()

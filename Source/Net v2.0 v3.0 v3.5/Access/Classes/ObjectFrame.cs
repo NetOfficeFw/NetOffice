@@ -24,7 +24,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass ObjectFrame SupportByLibrary "Access", 9,10,11,12,14
+	/// CoClass ObjectFrame SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -112,7 +112,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ObjectFrame_UpdatedEventHandler _UpdatedEvent;
 
@@ -134,7 +134,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ObjectFrame_EnterEventHandler _EnterEvent;
 
@@ -156,7 +156,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ObjectFrame_ExitEventHandler _ExitEvent;
 
@@ -178,7 +178,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ObjectFrame_GotFocusEventHandler _GotFocusEvent;
 
@@ -200,7 +200,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ObjectFrame_LostFocusEventHandler _LostFocusEvent;
 
@@ -222,7 +222,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ObjectFrame_ClickEventHandler _ClickEvent;
 
@@ -244,7 +244,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ObjectFrame_DblClickEventHandler _DblClickEvent;
 
@@ -266,7 +266,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ObjectFrame_MouseDownEventHandler _MouseDownEvent;
 
@@ -288,7 +288,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ObjectFrame_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -310,7 +310,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ObjectFrame_MouseUpEventHandler _MouseUpEvent;
 

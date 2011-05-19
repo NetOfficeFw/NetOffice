@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// Interface _VBProjectsEvents SupportByLibrary "VBIDE", 5.3,12
+	/// Interface _VBProjectsEvents SupportByLibrary VBIDE, 5.3,12
 	///</summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsInterface)]

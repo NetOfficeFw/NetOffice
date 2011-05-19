@@ -27,7 +27,7 @@ namespace NetOffice.WordApi
 	#endregion
 
 	///<summary>
-	/// CoClass Document SupportByLibrary "Word", 9,10,11,12,14
+	/// CoClass Document SupportByLibrary Word, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -115,7 +115,7 @@ namespace NetOffice.WordApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Document_NewEventHandler _NewEvent;
 
@@ -137,7 +137,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Document_OpenEventHandler _OpenEvent;
 
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Document_CloseEventHandler _CloseEvent;
 
@@ -181,7 +181,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 11 12 14
+		/// SupportByLibrary Word, 11,12,14
 		/// </summary>
 		private event Document_SyncEventHandler _SyncEvent;
 
@@ -203,7 +203,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 11 12 14
+		/// SupportByLibrary Word, 11,12,14
 		/// </summary>
 		private event Document_XMLAfterInsertEventHandler _XMLAfterInsertEvent;
 
@@ -225,7 +225,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 11 12 14
+		/// SupportByLibrary Word, 11,12,14
 		/// </summary>
 		private event Document_XMLBeforeDeleteEventHandler _XMLBeforeDeleteEvent;
 
@@ -247,7 +247,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 12 14
+		/// SupportByLibrary Word, 12,14
 		/// </summary>
 		private event Document_ContentControlAfterAddEventHandler _ContentControlAfterAddEvent;
 
@@ -269,7 +269,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 12 14
+		/// SupportByLibrary Word, 12,14
 		/// </summary>
 		private event Document_ContentControlBeforeDeleteEventHandler _ContentControlBeforeDeleteEvent;
 
@@ -291,7 +291,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 12 14
+		/// SupportByLibrary Word, 12,14
 		/// </summary>
 		private event Document_ContentControlOnExitEventHandler _ContentControlOnExitEvent;
 
@@ -313,7 +313,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 12 14
+		/// SupportByLibrary Word, 12,14
 		/// </summary>
 		private event Document_ContentControlOnEnterEventHandler _ContentControlOnEnterEvent;
 
@@ -335,7 +335,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 12 14
+		/// SupportByLibrary Word, 12,14
 		/// </summary>
 		private event Document_ContentControlBeforeStoreUpdateEventHandler _ContentControlBeforeStoreUpdateEvent;
 
@@ -357,7 +357,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 12 14
+		/// SupportByLibrary Word, 12,14
 		/// </summary>
 		private event Document_ContentControlBeforeContentUpdateEventHandler _ContentControlBeforeContentUpdateEvent;
 
@@ -379,7 +379,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 12 14
+		/// SupportByLibrary Word, 12,14
 		/// </summary>
 		private event Document_BuildingBlockInsertEventHandler _BuildingBlockInsertEvent;
 

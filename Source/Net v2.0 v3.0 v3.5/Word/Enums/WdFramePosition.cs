@@ -4,50 +4,50 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdFramePosition
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdFrameTop = -999999,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdFrameLeft = -999998,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdFrameBottom = -999997,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdFrameRight = -999996,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdFrameCenter = -999995,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdFrameInside = -999994,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdFrameOutside = -999993

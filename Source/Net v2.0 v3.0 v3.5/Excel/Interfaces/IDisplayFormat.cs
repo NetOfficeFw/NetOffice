@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IDisplayFormat SupportByLibrary "Excel", 14
+	/// Interface IDisplayFormat SupportByLibrary Excel, 14
 	///</summary>
 	[SupportByLibrary("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -48,7 +48,7 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public COMObject Parent
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Borders Borders
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Start">optional object Start</param>
 		/// <param name="Length">optional object Length</param>
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Characters Characters
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Font Font
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object Style
@@ -174,7 +174,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object AddIndent
@@ -197,7 +197,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object FormulaHidden
@@ -220,7 +220,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object HorizontalAlignment
@@ -243,7 +243,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object IndentLevel
@@ -266,7 +266,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Interior Interior
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object Locked
@@ -304,7 +304,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object MergeCells
@@ -327,7 +327,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object NumberFormat
@@ -350,7 +350,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object NumberFormatLocal
@@ -373,7 +373,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object Orientation
@@ -396,7 +396,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Int32 ReadingOrder
@@ -410,7 +410,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object ShrinkToFit
@@ -433,7 +433,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object VerticalAlignment
@@ -456,7 +456,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object WrapText

@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Outlook 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlMouseButton
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olMouseButtonLeft = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olMouseButtonRight = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olMouseButtonMiddle = 4

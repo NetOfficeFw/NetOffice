@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface FileDialogFilters SupportByLibrary "Office", 10,11,12,14
+	/// DispatchInterface FileDialogFilters SupportByLibrary Office, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public COMObject Parent
@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public Int32 Count
@@ -83,7 +83,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("Office", 10,11,12,14)]
@@ -100,7 +100,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="filter">optional object filter</param>
 		[SupportByLibrary("Office", 10,11,12,14)]
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public void Delete()
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public void Clear()
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Description">string Description</param>
 		/// <param name="Extensions">string Extensions</param>
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Description">string Description</param>
 		/// <param name="Extensions">string Extensions</param>

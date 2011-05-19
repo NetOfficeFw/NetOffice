@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface ChartColorFormat SupportByLibrary "Office", 12,14
+	/// Interface ChartColorFormat SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -48,7 +48,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public COMObject Parent
@@ -63,7 +63,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 SchemeColor
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 RGB
@@ -101,7 +101,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 _Default
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 Type
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public COMObject Application
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Int32 Creator

@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _VBComponents_Old SupportByLibrary "VBIDE", 5.3,12
+	/// DispatchInterface _VBComponents_Old SupportByLibrary VBIDE, 5.3,12
 	///</summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBProject Parent
@@ -65,7 +65,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 Count
@@ -79,7 +79,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -98,7 +98,7 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -115,7 +115,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -126,7 +126,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="ComponentType">NetOffice.VBIDEApi.Enums.vbext_ComponentType ComponentType</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -139,7 +139,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]

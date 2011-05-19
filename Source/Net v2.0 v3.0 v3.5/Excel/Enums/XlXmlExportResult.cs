@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 11,12,14,
+	 /// SupportByLibrary Excel 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlXmlExportResult
 	{
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlXmlExportSuccess = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlXmlExportValidationFailed = 1

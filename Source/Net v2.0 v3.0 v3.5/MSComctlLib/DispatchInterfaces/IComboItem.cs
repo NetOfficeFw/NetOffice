@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface IComboItem SupportByLibrary "MSComctlLib", 6
+	/// DispatchInterface IComboItem SupportByLibrary MSComctlLib, 6
 	///</summary>
 	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string _ObjectDefault
@@ -68,7 +68,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public object Image
@@ -96,7 +96,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int16 Indentation
@@ -115,7 +115,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 Index
@@ -134,7 +134,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string Key
@@ -153,7 +153,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Selected
@@ -172,7 +172,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public object SelImage
@@ -200,7 +200,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public object Tag
@@ -228,7 +228,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string Text

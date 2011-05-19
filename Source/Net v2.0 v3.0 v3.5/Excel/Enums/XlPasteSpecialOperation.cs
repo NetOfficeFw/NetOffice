@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlPasteSpecialOperation
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlPasteSpecialOperationAdd = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlPasteSpecialOperationDivide = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlPasteSpecialOperationMultiply = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlPasteSpecialOperationNone = -4142,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlPasteSpecialOperationSubtract = 3

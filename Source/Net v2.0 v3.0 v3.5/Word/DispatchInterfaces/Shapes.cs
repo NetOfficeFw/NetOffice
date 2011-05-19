@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Shapes SupportByLibrary "Word", 9,10,11,12,14
+	/// DispatchInterface Shapes SupportByLibrary Word, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
@@ -65,7 +65,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
@@ -79,7 +79,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
@@ -94,7 +94,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Count
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -129,7 +129,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoCalloutType Type</param>
 		/// <param name="Left">Single Left</param>
@@ -149,7 +149,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoCalloutType Type</param>
 		/// <param name="Left">Single Left</param>
@@ -166,7 +166,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoConnectorType Type</param>
 		/// <param name="BeginX">Single BeginX</param>
@@ -183,7 +183,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SafeArrayOfPoints">ref object SafeArrayOfPoints</param>
 		/// <param name="Anchor">ref optional object Anchor</param>
@@ -200,7 +200,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SafeArrayOfPoints">ref object SafeArrayOfPoints</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -215,7 +215,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
 		/// <param name="Left">Single Left</param>
@@ -235,7 +235,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
 		/// <param name="Left">Single Left</param>
@@ -252,7 +252,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="BeginX">Single BeginX</param>
 		/// <param name="BeginY">Single BeginY</param>
@@ -271,7 +271,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="BeginX">Single BeginX</param>
 		/// <param name="BeginY">Single BeginY</param>
@@ -287,7 +287,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="LinkToFile">ref optional object LinkToFile</param>
@@ -315,7 +315,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -328,7 +328,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SafeArrayOfPoints">ref object SafeArrayOfPoints</param>
 		/// <param name="Anchor">ref optional object Anchor</param>
@@ -345,7 +345,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SafeArrayOfPoints">ref object SafeArrayOfPoints</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -360,7 +360,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">Int32 Type</param>
 		/// <param name="Left">Single Left</param>
@@ -380,7 +380,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">Int32 Type</param>
 		/// <param name="Left">Single Left</param>
@@ -397,7 +397,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="PresetTextEffect">NetOffice.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect</param>
 		/// <param name="Text">string Text</param>
@@ -420,7 +420,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="PresetTextEffect">NetOffice.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect</param>
 		/// <param name="Text">string Text</param>
@@ -440,7 +440,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
 		/// <param name="Left">Single Left</param>
@@ -460,7 +460,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
 		/// <param name="Left">Single Left</param>
@@ -477,7 +477,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="EditingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
 		/// <param name="X1">Single X1</param>
@@ -492,7 +492,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
@@ -507,7 +507,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void SelectAll()
@@ -517,7 +517,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ClassType">ref optional object ClassType</param>
 		/// <param name="FileName">ref optional object FileName</param>
@@ -554,7 +554,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Shape AddOLEObject()
@@ -566,7 +566,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ClassType">ref optional object ClassType</param>
 		/// <param name="Left">ref optional object Left</param>
@@ -591,7 +591,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Shape AddOLEControl()
@@ -603,7 +603,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoDiagramType Type</param>
 		/// <param name="Left">Single Left</param>
@@ -623,7 +623,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoDiagramType Type</param>
 		/// <param name="Left">Single Left</param>
@@ -640,7 +640,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Left">Single Left</param>
 		/// <param name="Top">Single Top</param>
@@ -659,7 +659,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Left">Single Left</param>
 		/// <param name="Top">Single Top</param>
@@ -675,7 +675,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.XlChartType Type</param>
 		/// <param name="Left">ref optional object Left</param>
@@ -699,7 +699,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.XlChartType Type</param>
 		[SupportByLibrary("Word", 12,14)]
@@ -712,7 +712,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		/// <param name="Left">ref optional object Left</param>
@@ -736,7 +736,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		[SupportByLibrary("Word", 14)]

@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface Sync SupportByLibrary "Office", 11,12,14
+	/// DispatchInterface Sync SupportByLibrary Office, 11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoSyncStatusType Status
@@ -63,7 +63,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public string WorkspaceLastChangedBy
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public object LastSyncTime
@@ -100,7 +100,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoSyncErrorType ErrorType
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public COMObject Parent
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public void GetUpdate()
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public void PutUpdate()
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="SyncVersionType">NetOffice.OfficeApi.Enums.MsoSyncVersionType SyncVersionType</param>
 		[SupportByLibrary("Office", 11,12,14)]
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="SyncConflictResolution">NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType SyncConflictResolution</param>
 		[SupportByLibrary("Office", 11,12,14)]
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public void Unsuspend()

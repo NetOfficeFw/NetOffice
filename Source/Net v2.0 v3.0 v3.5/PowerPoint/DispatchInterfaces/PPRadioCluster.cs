@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PPRadioCluster SupportByLibrary "PowerPoint", 9
+	/// DispatchInterface PPRadioCluster SupportByLibrary PowerPoint, 9
 	///</summary>
 	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 Count
@@ -63,7 +63,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPRadioButton Selected
@@ -78,7 +78,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public string OnClick
@@ -101,7 +101,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("PowerPoint", 9)]
@@ -118,7 +118,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		/// <param name="Left">Single Left</param>
 		/// <param name="Top">Single Top</param>

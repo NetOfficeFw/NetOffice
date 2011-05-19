@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface _Group SupportByLibrary "DAO", 6,12
+	/// DispatchInterface _Group SupportByLibrary DAO, 6,12
 	///</summary>
 	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Name
@@ -68,7 +68,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string PID
@@ -87,7 +87,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Users Users
@@ -106,7 +106,7 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="PID">optional object PID</param>
@@ -121,7 +121,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.User CreateUser()

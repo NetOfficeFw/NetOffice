@@ -23,7 +23,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass TabControl SupportByLibrary "Access", 9,10,11,12,14
+	/// CoClass TabControl SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -111,7 +111,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TabControl_ClickEventHandler _ClickEvent;
 
@@ -133,7 +133,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TabControl_DblClickEventHandler _DblClickEvent;
 
@@ -155,7 +155,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TabControl_MouseDownEventHandler _MouseDownEvent;
 
@@ -177,7 +177,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TabControl_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -199,7 +199,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TabControl_MouseUpEventHandler _MouseUpEvent;
 
@@ -221,7 +221,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TabControl_KeyDownEventHandler _KeyDownEvent;
 
@@ -243,7 +243,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TabControl_KeyPressEventHandler _KeyPressEvent;
 
@@ -265,7 +265,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TabControl_KeyUpEventHandler _KeyUpEvent;
 
@@ -287,7 +287,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TabControl_ChangeEventHandler _ChangeEvent;
 

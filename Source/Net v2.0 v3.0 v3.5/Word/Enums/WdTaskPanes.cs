@@ -4,128 +4,128 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary Word 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdTaskPanes
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		wdTaskPaneFormatting = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		wdTaskPaneRevealFormatting = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		wdTaskPaneMailMerge = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		wdTaskPaneTranslate = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		wdTaskPaneSearch = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdTaskPaneXMLStructure = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdTaskPaneDocumentProtection = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdTaskPaneDocumentActions = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdTaskPaneSharedWorkspace = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdTaskPaneHelp = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdTaskPaneResearch = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdTaskPaneFaxService = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdTaskPaneXMLDocument = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdTaskPaneDocumentUpdates = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdTaskPaneSignature = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdTaskPaneStyleInspector = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdTaskPaneDocumentManagement = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdTaskPaneApplyStyles = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Word 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 14)]
 		wdTaskPaneNav = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Word 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 14)]
 		wdTaskPaneSelection = 19

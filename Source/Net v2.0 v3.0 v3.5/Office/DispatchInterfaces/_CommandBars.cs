@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface _CommandBars SupportByLibrary "Office", 9,10,11,12,14
+	/// DispatchInterface _CommandBars SupportByLibrary Office, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBarControl ActionControl
@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBar ActiveMenuBar
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 Count
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public bool DisplayTooltips
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public bool DisplayKeysInTooltips
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public bool LargeButtons
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoMenuAnimation MenuAnimationStyle
@@ -187,7 +187,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public COMObject Parent
@@ -202,7 +202,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ids">Int32 ids</param>
 		/// <param name="pbstrName">ref string pbstrName</param>
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="tmc">Int32 tmc</param>
 		/// <param name="pbstrName">ref string pbstrName</param>
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public bool AdaptiveMenus
@@ -251,7 +251,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public bool DisplayFonts
@@ -270,7 +270,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public bool DisableCustomize
@@ -289,7 +289,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public bool DisableAskAQuestionDropdown
@@ -312,7 +312,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="Position">optional object Position</param>
@@ -328,7 +328,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBar Add()
@@ -340,7 +340,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Id">optional object Id</param>
@@ -356,7 +356,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBarControl FindControl()
@@ -368,7 +368,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void ReleaseFocus()
@@ -378,7 +378,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Id">optional object Id</param>
@@ -394,7 +394,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBarControls FindControls()
@@ -406,7 +406,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TbidOrName">optional object TbidOrName</param>
 		/// <param name="Position">optional object Position</param>
@@ -423,7 +423,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBar AddEx()
@@ -435,7 +435,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="idMso">string idMso</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -446,7 +446,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="idMso">string idMso</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -458,7 +458,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="idMso">string idMso</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -470,7 +470,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="idMso">string idMso</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -482,7 +482,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="idMso">string idMso</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -494,7 +494,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="idMso">string idMso</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -506,7 +506,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="idMso">string idMso</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -518,7 +518,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="idMso">string idMso</param>
 		/// <param name="Width">Int32 Width</param>
@@ -533,7 +533,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="hwnd">Int32 hwnd</param>
 		[SupportByLibrary("Office", 14)]

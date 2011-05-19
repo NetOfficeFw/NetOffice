@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi
 	#endregion
 
 	///<summary>
-	/// CoClass CommandBars SupportByLibrary "Office", 9,10,11,12,14
+	/// CoClass CommandBars SupportByLibrary Office, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Office, 9 10 11 12 14
+		/// SupportByLibrary Office, 9,10,11,12,14
 		/// </summary>
 		private event CommandBars_OnUpdateEventHandler _OnUpdateEvent;
 

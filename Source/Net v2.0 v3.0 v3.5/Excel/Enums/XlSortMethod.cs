@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlSortMethod
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlPinYin = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlStroke = 2

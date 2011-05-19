@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface _Field SupportByLibrary "DAO", 6,12
+	/// DispatchInterface _Field SupportByLibrary DAO, 6,12
 	///</summary>
 	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 CollatingOrder
@@ -63,7 +63,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int16 Type
@@ -82,7 +82,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Name
@@ -101,7 +101,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 Size
@@ -120,7 +120,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string SourceField
@@ -134,7 +134,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string SourceTable
@@ -148,7 +148,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object Value
@@ -176,7 +176,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 Attributes
@@ -195,7 +195,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int16 OrdinalPosition
@@ -214,7 +214,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string ValidationText
@@ -233,7 +233,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool ValidateOnSet
@@ -252,7 +252,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string ValidationRule
@@ -271,7 +271,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object DefaultValue
@@ -299,7 +299,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Required
@@ -318,7 +318,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool AllowZeroLength
@@ -337,7 +337,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool DataUpdatable
@@ -351,7 +351,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string ForeignName
@@ -370,7 +370,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int16 CollectionIndex
@@ -384,7 +384,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object OriginalValue
@@ -407,7 +407,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object VisibleValue
@@ -430,7 +430,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 FieldSize
@@ -448,7 +448,7 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Val">object Val</param>
 		[SupportByLibrary("DAO", 6,12)]
@@ -459,7 +459,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Offset">Int32 Offset</param>
 		/// <param name="Bytes">Int32 Bytes</param>
@@ -481,7 +481,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 _30_FieldSize()
@@ -492,7 +492,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="Type">optional object Type</param>
@@ -508,7 +508,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 12 
+		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Property CreateProperty()

@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary Word 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdStyleSheetPrecedence
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		wdStyleSheetPrecedenceHigher = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		wdStyleSheetPrecedenceLower = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		wdStyleSheetPrecedenceHighest = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		wdStyleSheetPrecedenceLowest = 0

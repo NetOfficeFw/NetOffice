@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	#endregion
 
 	///<summary>
-	/// CoClass Font SupportByLibrary "Word", 9,10,11,12,14
+	/// CoClass Font SupportByLibrary Word, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

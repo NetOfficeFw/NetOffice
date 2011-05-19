@@ -4,50 +4,50 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 1,
+	 /// SupportByLibrary OWC10 1, 
 	 /// </summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum FieldListObjectTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		flTables = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		flViews = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		flStoredProcedures = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		flCmdText = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		flSchemaDiagrams = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		flOLAPCube = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		flAll = 63

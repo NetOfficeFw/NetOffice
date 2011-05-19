@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface Chart SupportByLibrary "PowerPoint", 14
+	/// DispatchInterface Chart SupportByLibrary PowerPoint, 14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject Parent
@@ -64,7 +64,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.OfficeApi.Enums.XlChartType ChartType
@@ -83,7 +83,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool HasDataTable
@@ -102,7 +102,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlRowCol PlotBy
@@ -121,7 +121,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.DataTable DataTable
@@ -136,7 +136,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlBarShape BarShape
@@ -155,7 +155,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Walls SideWall
@@ -170,7 +170,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Walls BackWall
@@ -185,7 +185,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object ChartStyle
@@ -213,7 +213,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool HasPivotFields
@@ -232,7 +232,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowDataLabelsOverMaximum
@@ -251,7 +251,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartData ChartData
@@ -266,7 +266,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Shapes Shapes
@@ -281,7 +281,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Creator
@@ -295,7 +295,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartGroup Area3DGroup
@@ -310,7 +310,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartGroup Bar3DGroup
@@ -325,7 +325,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartGroup Column3DGroup
@@ -340,7 +340,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartGroup Line3DGroup
@@ -355,7 +355,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartGroup Pie3DGroup
@@ -370,7 +370,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartGroup SurfaceGroup
@@ -385,7 +385,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -400,7 +400,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool AutoScaling
@@ -419,7 +419,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartArea ChartArea
@@ -434,7 +434,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartTitle ChartTitle
@@ -449,7 +449,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Corners Corners
@@ -464,7 +464,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 DepthPercent
@@ -483,7 +483,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlDisplayBlanksAs DisplayBlanksAs
@@ -502,7 +502,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Elevation
@@ -521,7 +521,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Floor Floor
@@ -536,7 +536,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 GapDepth
@@ -555,7 +555,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index1">optional object Index1</param>
 		/// <param name="Index2">optional object Index2</param>
@@ -577,7 +577,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index1">optional object Index1</param>
 		/// <param name="Index2">optional object Index2</param>
@@ -589,7 +589,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object HasAxis
@@ -617,7 +617,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool HasLegend
@@ -636,7 +636,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool HasTitle
@@ -655,7 +655,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 HeightPercent
@@ -674,7 +674,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Legend Legend
@@ -689,7 +689,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Name
@@ -708,7 +708,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Perspective
@@ -727,7 +727,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.PlotArea PlotArea
@@ -742,7 +742,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool PlotVisibleOnly
@@ -761,7 +761,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object RightAngleAxes
@@ -789,7 +789,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object Rotation
@@ -817,7 +817,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Subtype
@@ -836,7 +836,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Type
@@ -855,7 +855,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Walls Walls
@@ -870,7 +870,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartFormat Format
@@ -885,7 +885,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowReportFilterFieldButtons
@@ -904,7 +904,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowLegendFieldButtons
@@ -923,7 +923,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowAxisFieldButtons
@@ -942,7 +942,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowValueFieldButtons
@@ -961,7 +961,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowAllFieldButtons
@@ -980,7 +980,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string AlternativeText
@@ -999,7 +999,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Title
@@ -1022,7 +1022,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
 		/// <param name="LegendKey">optional object LegendKey</param>
@@ -1042,7 +1042,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1053,7 +1053,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="ChartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
 		/// <param name="TypeName">optional object TypeName</param>
@@ -1065,7 +1065,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="ChartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1076,7 +1076,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="X">Int32 X</param>
 		/// <param name="Y">Int32 Y</param>
@@ -1095,7 +1095,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Source">string Source</param>
 		/// <param name="PlotBy">optional object PlotBy</param>
@@ -1107,7 +1107,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Source">string Source</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1118,7 +1118,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Gallery">Int32 Gallery</param>
 		/// <param name="Format">optional object Format</param>
@@ -1130,7 +1130,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Gallery">Int32 Gallery</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1141,7 +1141,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1152,7 +1152,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Type">optional object Type</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1163,7 +1163,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public void Paste()
@@ -1173,7 +1173,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Name">object Name</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1184,7 +1184,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1195,7 +1195,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1206,7 +1206,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public void ClearToMatchStyle()
@@ -1216,7 +1216,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Layout">Int32 Layout</param>
 		/// <param name="ChartType">optional object ChartType</param>
@@ -1228,7 +1228,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Layout">Int32 Layout</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1239,7 +1239,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public void Refresh()
@@ -1249,7 +1249,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1262,7 +1262,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject AreaGroups()
@@ -1274,7 +1274,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1287,7 +1287,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject BarGroups()
@@ -1299,7 +1299,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1312,7 +1312,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject ColumnGroups()
@@ -1324,7 +1324,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1337,7 +1337,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject LineGroups()
@@ -1349,7 +1349,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1362,7 +1362,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject PieGroups()
@@ -1374,7 +1374,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1387,7 +1387,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject DoughnutGroups()
@@ -1399,7 +1399,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1412,7 +1412,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject RadarGroups()
@@ -1424,7 +1424,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1437,7 +1437,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject XYGroups()
@@ -1449,7 +1449,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
 		/// <param name="LegendKey">optional object LegendKey</param>
@@ -1463,7 +1463,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1474,7 +1474,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Type">object Type</param>
 		/// <param name="AxisGroup">NetOffice.PowerPointApi.Enums.XlAxisGroup AxisGroup</param>
@@ -1488,7 +1488,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1501,7 +1501,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject ChartGroups()
@@ -1513,7 +1513,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Source">optional object Source</param>
 		/// <param name="Gallery">optional object Gallery</param>
@@ -1534,7 +1534,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public void ChartWizard()
@@ -1544,7 +1544,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
@@ -1556,7 +1556,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public void Copy()
@@ -1566,7 +1566,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Appearance">NetOffice.PowerPointApi.Enums.XlPictureAppearance Appearance</param>
 		/// <param name="Format">NetOffice.PowerPointApi.Enums.XlCopyPictureFormat Format</param>
@@ -1579,7 +1579,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public void Delete()
@@ -1589,7 +1589,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="FilterName">optional object FilterName</param>
@@ -1603,7 +1603,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1615,7 +1615,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1626,7 +1626,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public void Select()
@@ -1636,7 +1636,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PowerPoint", 14)]
@@ -1649,7 +1649,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject SeriesCollection()
@@ -1661,7 +1661,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Element">NetOffice.OfficeApi.Enums.MsoChartElementType Element</param>
 		[SupportByLibrary("PowerPoint", 14)]

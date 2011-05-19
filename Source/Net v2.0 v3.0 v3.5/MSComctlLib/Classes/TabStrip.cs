@@ -28,7 +28,7 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass TabStrip SupportByLibrary "MSComctlLib", 6
+	/// CoClass TabStrip SupportByLibrary MSComctlLib, 6
 	///</summary>
 	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

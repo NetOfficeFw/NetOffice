@@ -4,44 +4,44 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlLegendPosition
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlLegendPositionBottom = -4107,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlLegendPositionCorner = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlLegendPositionLeft = -4131,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlLegendPositionRight = -4152,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlLegendPositionTop = -4160,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		xlLegendPositionCustom = -4161

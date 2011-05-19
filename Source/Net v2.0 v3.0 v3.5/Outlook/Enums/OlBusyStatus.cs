@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlBusyStatus
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olFree = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olTentative = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olBusy = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olOutOfOffice = 3

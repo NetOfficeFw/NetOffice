@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Series SupportByLibrary "Word", 14
+	/// DispatchInterface Series SupportByLibrary Word, 14
 	///</summary>
 	[SupportByLibrary("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public COMObject Parent
@@ -64,7 +64,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Enums.XlAxisGroup AxisGroup
@@ -83,7 +83,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartBorder Border
@@ -98,7 +98,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ErrorBars ErrorBars
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Explosion
@@ -132,7 +132,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string Formula
@@ -151,7 +151,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string FormulaLocal
@@ -170,7 +170,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string FormulaR1C1
@@ -189,7 +189,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string FormulaR1C1Local
@@ -208,7 +208,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool HasDataLabels
@@ -227,7 +227,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool HasErrorBars
@@ -246,7 +246,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Interior Interior
@@ -261,7 +261,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartFillFormat Fill
@@ -276,7 +276,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool InvertIfNegative
@@ -295,7 +295,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 MarkerBackgroundColor
@@ -314,7 +314,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Enums.XlColorIndex MarkerBackgroundColorIndex
@@ -333,7 +333,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 MarkerForegroundColor
@@ -352,7 +352,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Enums.XlColorIndex MarkerForegroundColorIndex
@@ -371,7 +371,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 MarkerSize
@@ -390,7 +390,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Enums.XlMarkerStyle MarkerStyle
@@ -409,7 +409,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string Name
@@ -428,7 +428,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Enums.XlChartPictureType PictureType
@@ -447,7 +447,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Double PictureUnit
@@ -466,7 +466,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 PlotOrder
@@ -485,7 +485,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool Smooth
@@ -504,7 +504,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Type
@@ -523,7 +523,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.OfficeApi.Enums.XlChartType ChartType
@@ -542,7 +542,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object Values
@@ -570,7 +570,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object XValues
@@ -598,7 +598,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object BubbleSizes
@@ -626,7 +626,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Enums.XlBarShape BarShape
@@ -645,7 +645,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool ApplyPictToSides
@@ -664,7 +664,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool ApplyPictToFront
@@ -683,7 +683,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool ApplyPictToEnd
@@ -702,7 +702,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool Has3DEffect
@@ -721,7 +721,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool Shadow
@@ -740,7 +740,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool HasLeaderLines
@@ -759,7 +759,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.LeaderLines LeaderLines
@@ -774,7 +774,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartFormat Format
@@ -789,7 +789,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public COMObject Application
@@ -804,7 +804,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Creator
@@ -818,7 +818,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Double PictureUnit2
@@ -837,7 +837,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 PlotColorIndex
@@ -851,7 +851,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 InvertColor
@@ -870,7 +870,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Enums.XlColorIndex InvertColorIndex
@@ -893,7 +893,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object ClearFormats()
@@ -913,7 +913,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object Copy()
@@ -933,7 +933,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Word", 14)]
@@ -946,7 +946,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public COMObject DataLabels()
@@ -958,7 +958,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object Delete()
@@ -978,7 +978,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Direction">NetOffice.WordApi.Enums.XlErrorBarDirection Direction</param>
 		/// <param name="Include">NetOffice.WordApi.Enums.XlErrorBarInclude Include</param>
@@ -1003,7 +1003,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Direction">NetOffice.WordApi.Enums.XlErrorBarDirection Direction</param>
 		/// <param name="Include">NetOffice.WordApi.Enums.XlErrorBarInclude Include</param>
@@ -1026,7 +1026,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object Paste()
@@ -1046,7 +1046,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Word", 14)]
@@ -1059,7 +1059,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public COMObject Points()
@@ -1071,7 +1071,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object Select()
@@ -1091,7 +1091,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Word", 14)]
@@ -1104,7 +1104,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public COMObject Trendlines()
@@ -1116,7 +1116,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="ChartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
 		[SupportByLibrary("Word", 14)]
@@ -1127,7 +1127,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Type">NetOffice.WordApi.Enums.XlDataLabelsType Type</param>
 		/// <param name="LegendKey">optional object LegendKey</param>
@@ -1157,7 +1157,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Type">NetOffice.WordApi.Enums.XlDataLabelsType Type</param>
 		[SupportByLibrary("Word", 14)]

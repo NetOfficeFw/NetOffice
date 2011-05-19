@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary Excel 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlArabicModes
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlArabicNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlArabicStrictAlefHamza = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlArabicStrictFinalYaa = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlArabicBothStrict = 3

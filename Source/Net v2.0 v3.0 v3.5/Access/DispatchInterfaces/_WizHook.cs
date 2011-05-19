@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _WizHook SupportByLibrary "Access", 9,10,11,12,14
+	/// DispatchInterface _WizHook SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 Key
@@ -68,7 +68,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.VBIDEApi._VBProject DbcVbProject
@@ -83,7 +83,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrConnectionString">string bstrConnectionString</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -99,7 +99,7 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Actid">Int32 Actid</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -111,7 +111,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Actid">Int32 Actid</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -123,7 +123,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Script">string Script</param>
 		/// <param name="Label">string Label</param>
@@ -142,7 +142,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="HScr">Int32 HScr</param>
 		/// <param name="ScriptColumn">Int32 ScriptColumn</param>
@@ -158,7 +158,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="HScr">Int32 HScr</param>
 		/// <param name="ScriptColumn">Int32 ScriptColumn</param>
@@ -172,7 +172,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -184,7 +184,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Table">string Table</param>
 		/// <param name="Columns">string Columns</param>
@@ -197,7 +197,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="String">ref string String</param>
 		/// <param name="flags">Int32 flags</param>
@@ -212,7 +212,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="HelpFile">string HelpFile</param>
 		/// <param name="wCmd">Int32 wCmd</param>
@@ -226,7 +226,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="File">ref string File</param>
 		/// <param name="Cancelled">ref bool Cancelled</param>
@@ -242,7 +242,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="In">string In</param>
 		/// <param name="Out">ref string Out</param>
@@ -257,7 +257,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="In">string In</param>
 		/// <param name="Out">ref string Out</param>
@@ -274,7 +274,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="File">string File</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -286,7 +286,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="RelativePath">string RelativePath</param>
 		/// <param name="FullPath">ref string FullPath</param>
@@ -301,7 +301,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		/// <param name="Drive">ref string Drive</param>
@@ -321,7 +321,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FontName">string FontName</param>
 		/// <param name="Size">Int32 Size</param>
@@ -345,7 +345,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="RecordSource">string RecordSource</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -357,7 +357,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Identifier">string Identifier</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -369,7 +369,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Array">ref String[] Array</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -382,7 +382,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Workspace">NetOffice.DAOApi.Workspace Workspace</param>
 		/// <param name="Database">NetOffice.DAOApi.Database Database</param>
@@ -400,7 +400,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Workspace">NetOffice.DAOApi.Workspace Workspace</param>
 		/// <param name="Database">NetOffice.DAOApi.Database Database</param>
@@ -417,7 +417,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="hwndOwner">Int32 hwndOwner</param>
 		/// <param name="AppName">string AppName</param>
@@ -441,7 +441,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="DpName">string DpName</param>
 		/// <param name="CtlName">string CtlName</param>
@@ -461,7 +461,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fStart">bool fStart</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -472,7 +472,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrDbName">string bstrDbName</param>
 		/// <param name="bstrConnect">string bstrConnect</param>
@@ -486,7 +486,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string LocalFont()
@@ -497,7 +497,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
 		/// <param name="objtyp">Int16 objtyp</param>
@@ -509,7 +509,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 CurrentLangID()
@@ -520,7 +520,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 KeyboardLangID()
@@ -531,7 +531,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string AccessUserDataDir()
@@ -542,7 +542,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string OfficeAddInDir()
@@ -553,7 +553,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="DpName">string DpName</param>
 		/// <param name="FileToInsert">string FileToInsert</param>
@@ -566,7 +566,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fRptToFile">bool fRptToFile</param>
 		/// <param name="bstrFileOut">string bstrFileOut</param>
@@ -578,7 +578,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrFilename">string bstrFilename</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -589,7 +589,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fBlockKeys">bool fBlockKeys</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
@@ -600,7 +600,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">ref string Name</param>
 		/// <param name="ObjType">NetOffice.AccessApi.Enums.AcObjectType ObjType</param>
@@ -617,7 +617,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool CloseCurrentDatabase()
@@ -628,7 +628,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrWhich">string bstrWhich</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
@@ -640,7 +640,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		public bool HideDates()
@@ -651,7 +651,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrBase">string bstrBase</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
@@ -663,7 +663,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrExt">string bstrExt</param>
 		/// <param name="bstrFilename">ref string bstrFilename</param>
@@ -678,7 +678,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrBase">string bstrBase</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
@@ -690,7 +690,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="hwndOwner">Int32 hwndOwner</param>
 		/// <param name="AppName">string AppName</param>
@@ -715,7 +715,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fBlockKeys">bool fBlockKeys</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
@@ -727,7 +727,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
@@ -743,7 +743,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pbstrUID">ref string pbstrUID</param>
 		/// <param name="pbstrPwd">ref string pbstrPwd</param>
@@ -759,7 +759,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="lWhich">Int32 lWhich</param>
 		/// <param name="vValue">object vValue</param>
@@ -771,7 +771,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="lWhich">Int32 lWhich</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
@@ -792,7 +792,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrADPName">string bstrADPName</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
@@ -803,7 +803,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrTableName">string bstrTableName</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
@@ -815,7 +815,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="wch">Int32 wch</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
@@ -827,7 +827,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[SupportByLibrary("Access", 11,12,14)]
@@ -839,7 +839,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 11,12,14)]
 		public string GetAccWizRCPath()
@@ -850,7 +850,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="objtyp">Int16 objtyp</param>
 		/// <param name="bstrObjName">string bstrObjName</param>
@@ -863,7 +863,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string GetAdeRegistryPath()
@@ -874,7 +874,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="bstrSpecXML">string bstrSpecXML</param>
 		[SupportByLibrary("Access", 12,14)]
@@ -885,7 +885,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public bool FCacheStatus()
@@ -896,7 +896,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="bstrStatus">string bstrStatus</param>
 		[SupportByLibrary("Access", 12,14)]
@@ -907,7 +907,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="bstrSpecName">string bstrSpecName</param>
 		[SupportByLibrary("Access", 12,14)]
@@ -918,7 +918,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string GetImexTblName()
@@ -929,7 +929,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="bstrTableName">string bstrTableName</param>
 		/// <param name="bstrPropertyName">string bstrPropertyName</param>
@@ -943,7 +943,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="pProperty">NetOffice.AccessApi._AccessProperty pProperty</param>
 		/// <param name="OpenMode">Int32 OpenMode</param>
@@ -961,7 +961,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string GetDisabledExtensions()
@@ -972,7 +972,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="bstrObjectName">string bstrObjectName</param>
 		/// <param name="iobjtyp">NetOffice.AccessApi.Enums.AcObjectType iobjtyp</param>
@@ -986,7 +986,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="bstrObjectName">string bstrObjectName</param>
 		[SupportByLibrary("Access", 14)]
@@ -998,7 +998,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public bool FIsXasDb()
@@ -1009,7 +1009,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="bstrObjectName">string bstrObjectName</param>
 		/// <param name="iobjtyp">NetOffice.AccessApi.Enums.AcObjectType iobjtyp</param>

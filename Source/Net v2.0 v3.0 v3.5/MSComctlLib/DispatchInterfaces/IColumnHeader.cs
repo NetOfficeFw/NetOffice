@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface IColumnHeader SupportByLibrary "MSComctlLib", 6
+	/// DispatchInterface IColumnHeader SupportByLibrary MSComctlLib, 6
 	///</summary>
 	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string Default
@@ -68,7 +68,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string Text
@@ -87,7 +87,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.ListColumnAlignmentConstants Alignment
@@ -106,7 +106,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 Index
@@ -125,7 +125,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string Key
@@ -144,7 +144,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Left
@@ -163,7 +163,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int16 SubItemIndex
@@ -182,7 +182,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public object Tag
@@ -210,7 +210,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Width
@@ -229,7 +229,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public object Icon
@@ -257,7 +257,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int16 Position

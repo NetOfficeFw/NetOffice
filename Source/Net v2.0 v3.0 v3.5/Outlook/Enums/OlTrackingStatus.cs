@@ -4,56 +4,56 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlTrackingStatus
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olTrackingNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olTrackingDelivered = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olTrackingNotDelivered = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olTrackingNotRead = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olTrackingRecallFailure = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olTrackingRecallSuccess = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olTrackingRead = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olTrackingReplied = 7

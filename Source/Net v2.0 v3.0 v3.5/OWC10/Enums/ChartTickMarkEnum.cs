@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 1,
+	 /// SupportByLibrary OWC10 1, 
 	 /// </summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ChartTickMarkEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		chTickMarkAutomatic = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		chTickMarkNone = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		chTickMarkInside = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		chTickMarkOutside = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		chTickMarkCross = 4

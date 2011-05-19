@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdFontBias
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdFontBiasDontCare = 255,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdFontBiasDefault = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		wdFontBiasFareast = 1

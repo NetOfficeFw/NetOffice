@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary Excel 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlImportDataAs
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlQueryTable = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlPivotTableReport = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		xlTable = 2

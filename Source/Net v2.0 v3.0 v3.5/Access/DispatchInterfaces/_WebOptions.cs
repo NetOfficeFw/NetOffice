@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _WebOptions SupportByLibrary "Access", 9,10,11,12,14
+	/// DispatchInterface _WebOptions SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public COMObject Parent
@@ -79,7 +79,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool OrganizeInFolder
@@ -98,7 +98,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool UseLongFileNames
@@ -117,7 +117,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool DownloadComponents
@@ -136,7 +136,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string LocationOfComponents
@@ -155,7 +155,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoEncoding Encoding
@@ -174,7 +174,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string FolderSuffix
@@ -188,7 +188,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTargetBrowser TargetBrowser
@@ -211,7 +211,7 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public void UseDefaultFolderSuffix()
@@ -221,7 +221,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[SupportByLibrary("Access", 11,12,14)]

@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface EncryptionProvider SupportByLibrary "Office", 12,14
+	/// DispatchInterface EncryptionProvider SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="encprovdet">NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="EncryptionData">object EncryptionData</param>
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		/// <param name="EncryptionData">object EncryptionData</param>
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		/// <param name="StreamName">string StreamName</param>
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		/// <param name="StreamName">string StreamName</param>
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		/// <param name="ParentWindow">object ParentWindow</param>

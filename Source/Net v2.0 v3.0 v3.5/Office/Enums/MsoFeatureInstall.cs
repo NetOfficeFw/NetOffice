@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoFeatureInstall
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoFeatureInstallNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoFeatureInstallOnDemand = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoFeatureInstallOnDemandWithUI = 2

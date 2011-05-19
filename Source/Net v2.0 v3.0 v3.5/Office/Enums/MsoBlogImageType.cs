@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Office 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoBlogImageType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoblogImageTypeJPEG = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoblogImageTypeGIF = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoblogImageTypePNG = 3

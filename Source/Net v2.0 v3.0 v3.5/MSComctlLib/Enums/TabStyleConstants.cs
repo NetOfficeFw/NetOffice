@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 6,
+	 /// SupportByLibrary MSComctlLib 6, 
 	 /// </summary>
 	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum TabStyleConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		tabTabs = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		tabButtons = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		tabFlatButtons = 2

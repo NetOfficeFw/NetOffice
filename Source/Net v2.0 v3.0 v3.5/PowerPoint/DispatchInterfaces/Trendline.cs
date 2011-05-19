@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface Trendline SupportByLibrary "PowerPoint", 14
+	/// DispatchInterface Trendline SupportByLibrary PowerPoint, 14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject Parent
@@ -64,7 +64,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartBorder Border
@@ -79,7 +79,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.DataLabel DataLabel
@@ -94,7 +94,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool DisplayEquation
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool DisplayRSquared
@@ -132,7 +132,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Index
@@ -146,7 +146,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Double Intercept
@@ -165,7 +165,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool InterceptIsAuto
@@ -184,7 +184,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Name
@@ -203,7 +203,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool NameIsAuto
@@ -222,7 +222,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Order
@@ -241,7 +241,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Period
@@ -260,7 +260,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlTrendlineType Type
@@ -279,7 +279,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartFormat Format
@@ -294,7 +294,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Creator
@@ -308,7 +308,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Double Backward2
@@ -327,7 +327,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Double Forward2
@@ -346,7 +346,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -361,7 +361,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Backward
@@ -380,7 +380,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Forward
@@ -403,7 +403,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object ClearFormats()
@@ -423,7 +423,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object Delete()
@@ -443,7 +443,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object Select()

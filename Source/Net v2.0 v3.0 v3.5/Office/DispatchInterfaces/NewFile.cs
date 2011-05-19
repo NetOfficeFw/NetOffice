@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface NewFile SupportByLibrary "Office", 10,11,12,14
+	/// DispatchInterface NewFile SupportByLibrary Office, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Section">optional object Section</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("Office", 10,11,12,14)]
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Section">optional object Section</param>
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("Office", 10,11,12,14)]

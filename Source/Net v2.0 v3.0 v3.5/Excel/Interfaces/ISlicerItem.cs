@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface ISlicerItem SupportByLibrary "Excel", 14
+	/// Interface ISlicerItem SupportByLibrary Excel, 14
 	///</summary>
 	[SupportByLibrary("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -48,7 +48,7 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SlicerCache Parent
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string Caption
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string Name
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object SourceName
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string SourceNameStandard
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string Value
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public bool Selected
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public bool HasData

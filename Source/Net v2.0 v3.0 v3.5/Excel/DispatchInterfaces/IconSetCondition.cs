@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface IconSetCondition SupportByLibrary "Excel", 12,14
+	/// DispatchInterface IconSetCondition SupportByLibrary Excel, 12,14
 	///</summary>
 	[SupportByLibrary("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public COMObject Parent
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public Int32 Priority
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool StopIfTrue
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Range AppliesTo
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public Int32 Type
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool PTCondition
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlPivotConditionScope ScopeType
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool ReverseOrder
@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool PercentileValues
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool ShowIconOnly
@@ -245,7 +245,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public string Formula
@@ -264,7 +264,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public object IconSet
@@ -292,7 +292,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.IconCriteria IconCriteria
@@ -311,7 +311,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.ExcelApi.Range Range</param>
 		[SupportByLibrary("Excel", 12,14)]
@@ -322,7 +322,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public void SetFirstPriority()
@@ -332,7 +332,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public void SetLastPriority()
@@ -342,7 +342,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public void Delete()

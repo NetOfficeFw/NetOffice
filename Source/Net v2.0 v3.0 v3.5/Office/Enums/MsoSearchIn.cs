@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary Office 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoSearchIn
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		msoSearchInMyComputer = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		msoSearchInOutlook = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		msoSearchInMyNetworkPlaces = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		msoSearchInCustom = 3

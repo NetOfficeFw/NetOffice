@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface ITreeView SupportByLibrary "MSComctlLib", 6
+	/// DispatchInterface ITreeView SupportByLibrary MSComctlLib, 6
 	///</summary>
 	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode DropHighlight
@@ -69,7 +69,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool HideSelection
@@ -88,7 +88,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public COMObject ImageList
@@ -108,7 +108,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Indentation
@@ -127,7 +127,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.LabelEditConstants LabelEdit
@@ -146,7 +146,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.TreeLineStyleConstants LineStyle
@@ -165,7 +165,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer
@@ -184,7 +184,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public stdole.Picture MouseIcon
@@ -204,7 +204,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INodes Nodes
@@ -224,7 +224,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string PathSeparator
@@ -243,7 +243,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode SelectedItem
@@ -263,7 +263,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Sorted
@@ -282,7 +282,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.TreeStyleConstants Style
@@ -301,7 +301,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.OLEDragConstants OLEDragMode
@@ -320,7 +320,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
@@ -339,7 +339,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.AppearanceConstants Appearance
@@ -358,7 +358,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.BorderStyleConstants BorderStyle
@@ -377,7 +377,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Enabled
@@ -396,7 +396,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public stdole.Font Font
@@ -416,7 +416,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 hWnd
@@ -435,7 +435,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Checkboxes
@@ -454,7 +454,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool FullRowSelect
@@ -473,7 +473,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool HotTracking
@@ -492,7 +492,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Scroll
@@ -511,7 +511,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool SingleSel
@@ -534,7 +534,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
@@ -548,7 +548,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 GetVisibleCount()
@@ -559,7 +559,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public void StartLabelEdit()
@@ -569,7 +569,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public void Refresh()
@@ -579,7 +579,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public void AboutBox()
@@ -589,7 +589,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public void OLEDrag()

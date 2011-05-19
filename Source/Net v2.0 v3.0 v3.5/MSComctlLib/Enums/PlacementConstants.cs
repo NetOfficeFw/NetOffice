@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 6,
+	 /// SupportByLibrary MSComctlLib 6, 
 	 /// </summary>
 	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PlacementConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		tabPlacementTop = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		tabPlacementBottom = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		tabPlacementLeft = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		tabPlacementRight = 3

@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _FormRegionStartup SupportByLibrary "Outlook", 12,14
+	/// DispatchInterface _FormRegionStartup SupportByLibrary Outlook, 12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="FormRegionName">string FormRegionName</param>
 		/// <param name="Item">object Item</param>
@@ -78,7 +78,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="FormRegion">NetOffice.OutlookApi.FormRegion FormRegion</param>
 		[SupportByLibrary("Outlook", 12,14)]
@@ -89,7 +89,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="FormRegionName">string FormRegionName</param>
 		/// <param name="LCID">Int32 LCID</param>
@@ -111,7 +111,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="FormRegionName">string FormRegionName</param>
 		/// <param name="LCID">Int32 LCID</param>

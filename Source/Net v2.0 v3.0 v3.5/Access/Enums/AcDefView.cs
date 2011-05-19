@@ -4,44 +4,44 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary Access 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcDefView
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acDefViewSingle = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acDefViewContinuous = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acDefViewDatasheet = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acDefViewPivotTable = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acDefViewPivotChart = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acDefViewSplitForm = 5

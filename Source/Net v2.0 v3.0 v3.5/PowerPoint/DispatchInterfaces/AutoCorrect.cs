@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface AutoCorrect SupportByLibrary "PowerPoint", 10,11,12,14
+	/// DispatchInterface AutoCorrect SupportByLibrary PowerPoint, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public bool DisplayAutoCorrectOptions
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public bool DisplayAutoLayoutOptions

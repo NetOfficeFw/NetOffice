@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface _CommandBarComboBox SupportByLibrary "Office", 9,10,11,12,14
+	/// DispatchInterface _CommandBarComboBox SupportByLibrary Office, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public COMObject accParent
@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 accChildCount
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accName
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accValue
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -187,7 +187,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accDescription
@@ -201,7 +201,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -222,7 +222,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object accRole
@@ -245,7 +245,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -266,7 +266,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object accState
@@ -289,7 +289,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -301,7 +301,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accHelp
@@ -315,7 +315,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pszHelpFile">ref string pszHelpFile</param>
 		/// <param name="varChild">optional object varChild</param>
@@ -330,7 +330,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pszHelpFile">ref string pszHelpFile</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -344,7 +344,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -356,7 +356,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accKeyboardShortcut
@@ -370,7 +370,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object accFocus
@@ -393,7 +393,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object accSelection
@@ -416,7 +416,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -428,7 +428,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accDefaultAction
@@ -442,7 +442,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public COMObject Application
@@ -457,7 +457,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 Creator
@@ -471,7 +471,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 DropDownLines
@@ -490,7 +490,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 DropDownWidth
@@ -509,7 +509,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -521,7 +521,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -532,7 +532,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 ListCount
@@ -546,7 +546,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 ListHeaderCount
@@ -565,7 +565,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 ListIndex
@@ -584,7 +584,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoComboStyle Style
@@ -603,7 +603,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string Text
@@ -622,7 +622,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public object InstanceIdPtr
@@ -649,7 +649,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="flagsSelect">Int32 flagsSelect</param>
 		/// <param name="varChild">optional object varChild</param>
@@ -661,7 +661,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="flagsSelect">Int32 flagsSelect</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -672,7 +672,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pxLeft">ref Int32 pxLeft</param>
 		/// <param name="pyTop">ref Int32 pyTop</param>
@@ -692,7 +692,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pxLeft">ref Int32 pxLeft</param>
 		/// <param name="pyTop">ref Int32 pyTop</param>
@@ -711,7 +711,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="navDir">Int32 navDir</param>
 		/// <param name="varStart">optional object varStart</param>
@@ -733,7 +733,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="navDir">Int32 navDir</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -754,7 +754,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="xLeft">Int32 xLeft</param>
 		/// <param name="yTop">Int32 yTop</param>
@@ -776,7 +776,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -787,7 +787,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void accDoDefaultAction()
@@ -797,7 +797,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Text">string Text</param>
 		/// <param name="Index">optional object Index</param>
@@ -809,7 +809,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Text">string Text</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -820,7 +820,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void Clear()
@@ -830,7 +830,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]

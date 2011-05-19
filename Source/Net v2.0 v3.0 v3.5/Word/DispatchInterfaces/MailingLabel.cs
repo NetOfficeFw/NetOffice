@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface MailingLabel SupportByLibrary "Word", 9,10,11,12,14
+	/// DispatchInterface MailingLabel SupportByLibrary Word, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
@@ -78,7 +78,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
@@ -93,7 +93,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool DefaultPrintBarCode
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdPaperTray DefaultLaserTray
@@ -131,7 +131,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.CustomLabels CustomLabels
@@ -146,7 +146,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string DefaultLabelName
@@ -165,7 +165,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public bool Vertical
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary Word 9
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -211,7 +211,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -238,7 +238,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document CreateNewDocument()
@@ -250,7 +250,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary Word 9
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -275,7 +275,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -304,7 +304,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public void PrintOut()
@@ -314,7 +314,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -337,7 +337,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document CreateNewDocument2000()
@@ -349,7 +349,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">ref optional object Name</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -374,7 +374,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public void PrintOut2000()
@@ -384,7 +384,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public void LabelOptions()
@@ -394,7 +394,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		/// <param name="LabelID">ref optional object LabelID</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -421,7 +421,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID()
@@ -433,7 +433,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		/// <param name="LabelID">ref optional object LabelID</param>
 		/// <param name="Address">ref optional object Address</param>
@@ -462,7 +462,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public void PrintOutByID()

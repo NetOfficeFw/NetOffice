@@ -14,7 +14,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass Printer SupportByLibrary "Access", 10,11,12,14
+	/// CoClass Printer SupportByLibrary Access, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

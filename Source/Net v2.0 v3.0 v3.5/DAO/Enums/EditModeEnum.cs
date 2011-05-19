@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 6,12,
+	 /// SupportByLibrary DAO 6, 12, 
 	 /// </summary>
 	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum EditModeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbEditNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbEditInProgress = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbEditAdd = 2

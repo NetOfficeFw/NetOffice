@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface _Stream SupportByLibrary "ADODB", 2.5
+	/// DispatchInterface _Stream SupportByLibrary ADODB, 2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public Int32 Size
@@ -63,7 +63,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public bool EOS
@@ -77,7 +77,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public Int32 Position
@@ -96,7 +96,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.StreamTypeEnum Type
@@ -115,7 +115,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.LineSeparatorEnum LineSeparator
@@ -134,7 +134,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.ObjectStateEnum State
@@ -148,7 +148,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.ConnectModeEnum Mode
@@ -167,7 +167,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public string Charset
@@ -190,7 +190,7 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="NumBytes">Int32 NumBytes</param>
 		[SupportByLibrary("ADODB", 2.5)]
@@ -211,7 +211,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="Source">object Source</param>
 		/// <param name="Mode">NetOffice.ADODBApi.Enums.ConnectModeEnum Mode</param>
@@ -226,7 +226,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public void Close()
@@ -236,7 +236,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public void SkipLine()
@@ -246,7 +246,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="Buffer">object Buffer</param>
 		[SupportByLibrary("ADODB", 2.5)]
@@ -257,7 +257,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public void SetEOS()
@@ -267,7 +267,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="DestStream">NetOffice.ADODBApi._Stream DestStream</param>
 		/// <param name="CharNumber">Int32 CharNumber</param>
@@ -279,7 +279,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public void Flush()
@@ -289,7 +289,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Options">NetOffice.ADODBApi.Enums.SaveOptionsEnum Options</param>
@@ -301,7 +301,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("ADODB", 2.5)]
@@ -312,7 +312,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="NumChars">Int32 NumChars</param>
 		[SupportByLibrary("ADODB", 2.5)]
@@ -324,7 +324,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="Data">string Data</param>
 		/// <param name="Options">NetOffice.ADODBApi.Enums.StreamWriteEnum Options</param>
@@ -336,7 +336,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public void Cancel()

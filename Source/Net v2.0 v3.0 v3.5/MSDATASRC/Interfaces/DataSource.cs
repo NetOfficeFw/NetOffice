@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.MSDATASRCApi
 {
 	///<summary>
-	/// Interface DataSource SupportByLibrary "MSDATASRC", 1
+	/// Interface DataSource SupportByLibrary MSDATASRC, 1
 	///</summary>
 	[SupportByLibrary("MSDATASRC", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.MSDATASRCApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary MSDATASRC 1
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		/// <param name="riid">Guid riid</param>
@@ -66,7 +66,7 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary MSDATASRC 1
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[SupportByLibrary("MSDATASRC", 1)]
@@ -78,7 +78,7 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary MSDATASRC 1
 		/// </summary>
 		[SupportByLibrary("MSDATASRC", 1)]
 		public Int32 getDataMemberCount()
@@ -89,7 +89,7 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary MSDATASRC 1
 		/// </summary>
 		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
 		[SupportByLibrary("MSDATASRC", 1)]
@@ -101,7 +101,7 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary MSDATASRC 1
 		/// </summary>
 		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
 		[SupportByLibrary("MSDATASRC", 1)]

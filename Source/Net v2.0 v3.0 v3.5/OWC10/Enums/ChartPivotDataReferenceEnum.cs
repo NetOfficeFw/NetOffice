@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 1,
+	 /// SupportByLibrary OWC10 1, 
 	 /// </summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ChartPivotDataReferenceEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		chPivotColumns = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		chPivotRows = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		chPivotColAggregates = -3,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		chPivotRowAggregates = -4

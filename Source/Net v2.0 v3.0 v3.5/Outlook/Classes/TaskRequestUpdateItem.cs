@@ -39,7 +39,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass TaskRequestUpdateItem SupportByLibrary "Outlook", 9,10,11,12,14
+	/// CoClass TaskRequestUpdateItem SupportByLibrary Outlook, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -127,7 +127,7 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_OpenEventHandler _OpenEvent;
 
@@ -149,7 +149,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_CustomActionEventHandler _CustomActionEvent;
 
@@ -171,7 +171,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_CustomPropertyChangeEventHandler _CustomPropertyChangeEvent;
 
@@ -193,7 +193,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_ForwardEventHandler _ForwardEvent;
 
@@ -215,7 +215,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_CloseEventHandler _CloseEvent;
 
@@ -237,7 +237,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_PropertyChangeEventHandler _PropertyChangeEvent;
 
@@ -259,7 +259,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_ReadEventHandler _ReadEvent;
 
@@ -281,7 +281,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_ReplyEventHandler _ReplyEvent;
 
@@ -303,7 +303,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_ReplyAllEventHandler _ReplyAllEvent;
 
@@ -325,7 +325,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_SendEventHandler _SendEvent;
 
@@ -347,7 +347,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_WriteEventHandler _WriteEvent;
 
@@ -369,7 +369,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_BeforeCheckNamesEventHandler _BeforeCheckNamesEvent;
 
@@ -391,7 +391,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_AttachmentAddEventHandler _AttachmentAddEvent;
 
@@ -413,7 +413,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_AttachmentReadEventHandler _AttachmentReadEvent;
 
@@ -435,7 +435,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_BeforeAttachmentSaveEventHandler _BeforeAttachmentSaveEvent;
 
@@ -457,7 +457,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_BeforeDeleteEventHandler _BeforeDeleteEvent;
 
@@ -479,7 +479,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_AttachmentRemoveEventHandler _AttachmentRemoveEvent;
 
@@ -501,7 +501,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_BeforeAttachmentAddEventHandler _BeforeAttachmentAddEvent;
 
@@ -523,7 +523,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_BeforeAttachmentPreviewEventHandler _BeforeAttachmentPreviewEvent;
 
@@ -545,7 +545,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_BeforeAttachmentReadEventHandler _BeforeAttachmentReadEvent;
 
@@ -567,7 +567,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_BeforeAttachmentWriteToTempFileEventHandler _BeforeAttachmentWriteToTempFileEvent;
 
@@ -589,7 +589,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_UnloadEventHandler _UnloadEvent;
 
@@ -611,7 +611,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event TaskRequestUpdateItem_BeforeAutoSaveEventHandler _BeforeAutoSaveEvent;
 

@@ -4,14 +4,14 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Word 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdShapePositionRelative
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		wdShapePositionRelativeNone = -999999

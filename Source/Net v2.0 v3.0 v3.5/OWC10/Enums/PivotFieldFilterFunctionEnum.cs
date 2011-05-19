@@ -4,50 +4,50 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 1,
+	 /// SupportByLibrary OWC10 1, 
 	 /// </summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PivotFieldFilterFunctionEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		plFilterFunctionNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		plFilterFunctionTopCount = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		plFilterFunctionBottomCount = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		plFilterFunctionTopPercent = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		plFilterFunctionBottomPercent = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		plFilterFunctionTopSum = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 1,
+		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		plFilterFunctionBottomSum = 8

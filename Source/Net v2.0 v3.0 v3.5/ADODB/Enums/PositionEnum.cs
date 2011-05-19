@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 2.1,2.5,
+	 /// SupportByLibrary ADODB 2.1, 2.5, 
 	 /// </summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PositionEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adPosUnknown = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adPosBOF = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adPosEOF = -3

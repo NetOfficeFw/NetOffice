@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface AddIns SupportByLibrary "PowerPoint", 9,10,11,12,14
+	/// DispatchInterface AddIns SupportByLibrary PowerPoint, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		public COMObject Parent
@@ -83,7 +83,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
@@ -100,7 +100,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="index">ref object index</param>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]

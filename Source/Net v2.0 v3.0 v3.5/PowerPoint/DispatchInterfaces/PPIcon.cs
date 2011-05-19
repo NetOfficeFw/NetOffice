@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PPIcon SupportByLibrary "PowerPoint", 9
+	/// DispatchInterface PPIcon SupportByLibrary PowerPoint, 9
 	///</summary>
 	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 ResourceID

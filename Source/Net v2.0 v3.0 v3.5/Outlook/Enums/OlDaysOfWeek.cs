@@ -4,50 +4,50 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlDaysOfWeek
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olSunday = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olMonday = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olTuesday = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olWednesday = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olThursday = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olFriday = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olSaturday = 64

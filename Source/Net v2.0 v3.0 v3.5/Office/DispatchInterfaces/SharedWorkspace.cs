@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SharedWorkspace SupportByLibrary "Office", 11,12,14
+	/// DispatchInterface SharedWorkspace SupportByLibrary Office, 11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public string Name
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceMembers Members
@@ -83,7 +83,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceTasks Tasks
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceFiles Files
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceFolders Folders
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceLinks Links
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public COMObject Parent
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public string URL
@@ -172,7 +172,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public bool Connected
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public object LastRefreshed
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public string SourceURL
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public void Refresh()
@@ -242,7 +242,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="URL">optional object URL</param>
 		/// <param name="Name">optional object Name</param>
@@ -254,7 +254,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public void CreateNew()
@@ -264,7 +264,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public void Delete()
@@ -274,7 +274,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public void RemoveDocument()
@@ -284,7 +284,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public void Disconnect()

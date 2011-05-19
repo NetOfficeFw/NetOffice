@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// Interface _IInspectorCtrl SupportByLibrary "Outlook", 10
+	/// Interface _IInspectorCtrl SupportByLibrary Outlook, 10
 	///</summary>
 	[SupportByLibrary("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -48,7 +48,7 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 
+		/// SupportByLibrary Outlook 10
 		/// </summary>
 		[SupportByLibrary("Outlook", 10)]
 		public string URL
@@ -67,7 +67,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 
+		/// SupportByLibrary Outlook 10
 		/// </summary>
 		[SupportByLibrary("Outlook", 10)]
 		public COMObject Item
@@ -86,7 +86,7 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 10 
+		/// SupportByLibrary Outlook 10
 		/// </summary>
 		/// <param name="pdispItem">object pdispItem</param>
 		[SupportByLibrary("Outlook", 10)]

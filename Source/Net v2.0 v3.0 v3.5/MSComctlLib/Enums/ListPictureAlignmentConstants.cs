@@ -4,44 +4,44 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 6,
+	 /// SupportByLibrary MSComctlLib 6, 
 	 /// </summary>
 	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ListPictureAlignmentConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		lvwTopLeft = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		lvwTopRight = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		lvwBottomLeft = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		lvwBottomRight = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		lvwCenter = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		lvwTile = 5

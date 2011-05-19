@@ -4,44 +4,44 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 2.5,
+	 /// SupportByLibrary ADODB 2.5, 
 	 /// </summary>
 	[SupportByLibrary("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum RecordCreateOptionsEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adCreateCollection = 8192,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adCreateStructDoc = -2147483648,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adCreateNonCollection = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adOpenIfExists = 33554432,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adCreateOverwrite = 67108864,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adFailIfNotExists = -1

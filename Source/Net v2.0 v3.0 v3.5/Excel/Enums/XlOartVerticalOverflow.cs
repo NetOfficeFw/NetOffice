@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary Excel 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlOartVerticalOverflow
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 14)]
 		xlOartVerticalOverflowOverflow = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 14)]
 		xlOartVerticalOverflowClip = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 14)]
 		xlOartVerticalOverflowEllipsis = 2

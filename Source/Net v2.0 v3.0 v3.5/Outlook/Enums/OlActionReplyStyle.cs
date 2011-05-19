@@ -4,50 +4,50 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlActionReplyStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olOmitOriginalText = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olEmbedOriginalItem = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olIncludeOriginalText = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olIndentOriginalText = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olLinkOriginalItem = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olUserPreference = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		olReplyTickOriginalText = 1000

@@ -14,7 +14,7 @@ namespace NetOffice.VBIDEApi
 	#endregion
 
 	///<summary>
-	/// CoClass CodePanes SupportByLibrary "VBIDE", 5.3,12
+	/// CoClass CodePanes SupportByLibrary VBIDE, 5.3,12
 	///</summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

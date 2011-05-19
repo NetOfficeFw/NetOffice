@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IAppEvents SupportByLibrary "Excel", 9,10,11,12,14
+	/// Interface IAppEvents SupportByLibrary Excel, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Cancel">ref bool Cancel</param>
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="SaveAsUI">bool SaveAsUI</param>
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Cancel">ref bool Cancel</param>
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Sh">object Sh</param>
@@ -253,7 +253,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -265,7 +265,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -277,7 +277,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Wn">NetOffice.ExcelApi.Window Wn</param>
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Wn">NetOffice.ExcelApi.Window Wn</param>
@@ -303,7 +303,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Wn">NetOffice.ExcelApi.Window Wn</param>
@@ -316,7 +316,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 10 11 12 14 
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Hyperlink Target</param>
@@ -329,7 +329,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.PivotTable Target</param>
@@ -342,7 +342,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Target">NetOffice.ExcelApi.PivotTable Target</param>
@@ -355,7 +355,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Target">NetOffice.ExcelApi.PivotTable Target</param>
@@ -368,7 +368,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="SyncEventType">NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType</param>
@@ -381,7 +381,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
@@ -399,7 +399,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
@@ -414,7 +414,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
@@ -431,7 +431,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
@@ -446,7 +446,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Description">string Description</param>
@@ -461,7 +461,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public Int32 AfterCalculate()
@@ -472,7 +472,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
@@ -486,7 +486,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
@@ -504,7 +504,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
@@ -522,7 +522,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
@@ -537,7 +537,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByLibrary("Excel", 14)]
@@ -549,7 +549,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		/// <param name="Cancel">ref bool Cancel</param>
@@ -564,7 +564,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		/// <param name="Reason">NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason Reason</param>
@@ -580,7 +580,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByLibrary("Excel", 14)]
@@ -592,7 +592,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByLibrary("Excel", 14)]
@@ -604,7 +604,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByLibrary("Excel", 14)]
@@ -616,7 +616,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Success">bool Success</param>
@@ -629,7 +629,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Ch">NetOffice.ExcelApi.Chart Ch</param>

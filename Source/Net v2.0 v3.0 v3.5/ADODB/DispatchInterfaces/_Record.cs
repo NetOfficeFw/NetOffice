@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface _Record SupportByLibrary "ADODB", 2.5
+	/// DispatchInterface _Record SupportByLibrary ADODB, 2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public object ActiveConnection
@@ -77,7 +77,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.ObjectStateEnum State
@@ -91,7 +91,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public object Source
@@ -119,7 +119,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.ConnectModeEnum Mode
@@ -138,7 +138,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public string ParentURL
@@ -152,7 +152,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Fields Fields
@@ -167,7 +167,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.RecordTypeEnum RecordType
@@ -185,7 +185,7 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="Source">string Source</param>
 		/// <param name="Destination">string Destination</param>
@@ -202,7 +202,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="Source">string Source</param>
 		/// <param name="Destination">string Destination</param>
@@ -219,7 +219,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="Source">string Source</param>
 		/// <param name="Async">bool Async</param>
@@ -231,7 +231,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="Source">object Source</param>
 		/// <param name="ActiveConnection">object ActiveConnection</param>
@@ -248,7 +248,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public void Close()
@@ -258,7 +258,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Recordset GetChildren()
@@ -270,7 +270,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public void Cancel()

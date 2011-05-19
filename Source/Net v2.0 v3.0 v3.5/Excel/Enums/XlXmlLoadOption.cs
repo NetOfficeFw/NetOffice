@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 11,12,14,
+	 /// SupportByLibrary Excel 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlXmlLoadOption
 	{
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlXmlLoadPromptUser = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlXmlLoadOpenXml = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlXmlLoadImportToList = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlXmlLoadMapXml = 3

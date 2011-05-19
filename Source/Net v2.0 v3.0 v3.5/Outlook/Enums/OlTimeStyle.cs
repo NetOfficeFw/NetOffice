@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Outlook 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlTimeStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olTimeStyleTimeOnly = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olTimeStyleTimeDuration = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		olTimeStyleShortDuration = 4

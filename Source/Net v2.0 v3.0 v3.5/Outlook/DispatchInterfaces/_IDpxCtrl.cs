@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _IDpxCtrl SupportByLibrary "Outlook", 10
+	/// DispatchInterface _IDpxCtrl SupportByLibrary Outlook, 10
 	///</summary>
 	[SupportByLibrary("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 
+		/// SupportByLibrary Outlook 10
 		/// </summary>
 		[SupportByLibrary("Outlook", 10)]
 		public Int32 StartDate
@@ -68,7 +68,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 
+		/// SupportByLibrary Outlook 10
 		/// </summary>
 		[SupportByLibrary("Outlook", 10)]
 		public Int32 EndDate

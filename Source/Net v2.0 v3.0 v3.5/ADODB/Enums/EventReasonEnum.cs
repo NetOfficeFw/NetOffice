@@ -4,98 +4,98 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 2.1,2.5,
+	 /// SupportByLibrary ADODB 2.1, 2.5, 
 	 /// </summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum EventReasonEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnAddNew = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnDelete = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnUpdate = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnUndoUpdate = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnUndoAddNew = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnUndoDelete = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnRequery = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnResynch = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnClose = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnMove = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnFirstChange = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnMoveFirst = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnMoveNext = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnMovePrevious = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adRsnMoveLast = 15

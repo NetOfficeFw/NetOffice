@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface TableStyle SupportByLibrary "PowerPoint", 12,14
+	/// DispatchInterface TableStyle SupportByLibrary PowerPoint, 12,14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary PowerPoint 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		public string Name
@@ -63,7 +63,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary PowerPoint 12, 14
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		public string Id

@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 11,12,14,
+	 /// SupportByLibrary Office 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoSyncAvailableType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		msoSyncAvailableNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		msoSyncAvailableOffline = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		msoSyncAvailableAnywhere = 2

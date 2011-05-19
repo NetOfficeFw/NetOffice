@@ -25,7 +25,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass OlkContactPhoto SupportByLibrary "Outlook", 12,14
+	/// CoClass OlkContactPhoto SupportByLibrary Outlook, 12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -106,7 +106,7 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkContactPhoto_ClickEventHandler _ClickEvent;
 
@@ -128,7 +128,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkContactPhoto_DoubleClickEventHandler _DoubleClickEvent;
 
@@ -150,7 +150,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkContactPhoto_MouseDownEventHandler _MouseDownEvent;
 
@@ -172,7 +172,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkContactPhoto_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -194,7 +194,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkContactPhoto_MouseUpEventHandler _MouseUpEvent;
 
@@ -216,7 +216,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkContactPhoto_EnterEventHandler _EnterEvent;
 
@@ -238,7 +238,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkContactPhoto_ExitEventHandler _ExitEvent;
 
@@ -260,7 +260,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkContactPhoto_KeyDownEventHandler _KeyDownEvent;
 
@@ -282,7 +282,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkContactPhoto_KeyPressEventHandler _KeyPressEvent;
 
@@ -304,7 +304,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkContactPhoto_KeyUpEventHandler _KeyUpEvent;
 
@@ -326,7 +326,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkContactPhoto_ChangeEventHandler _ChangeEvent;
 

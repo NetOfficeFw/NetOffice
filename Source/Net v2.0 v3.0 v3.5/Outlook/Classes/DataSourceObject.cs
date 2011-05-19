@@ -14,7 +14,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass DataSourceObject SupportByLibrary "Outlook", 10
+	/// CoClass DataSourceObject SupportByLibrary Outlook, 10
 	///</summary>
 	[SupportByLibrary("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

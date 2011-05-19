@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface IControls SupportByLibrary "MSComctlLib", 6
+	/// DispatchInterface IControls SupportByLibrary MSComctlLib, 6
 	///</summary>
 	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 Count
@@ -64,7 +64,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 6 
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]

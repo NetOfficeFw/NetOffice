@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary Excel 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlDataBarBorderType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 14)]
 		xlDataBarBorderNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 14)]
 		xlDataBarBorderSolid = 1

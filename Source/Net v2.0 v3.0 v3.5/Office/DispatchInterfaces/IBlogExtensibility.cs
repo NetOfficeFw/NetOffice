@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface IBlogExtensibility SupportByLibrary "Office", 12,14
+	/// DispatchInterface IBlogExtensibility SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="BlogProvider">ref string BlogProvider</param>
 		/// <param name="FriendlyName">ref string FriendlyName</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="PostID">string PostID</param>
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>

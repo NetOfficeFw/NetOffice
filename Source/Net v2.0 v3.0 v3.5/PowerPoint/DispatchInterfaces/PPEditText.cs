@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PPEditText SupportByLibrary "PowerPoint", 9
+	/// DispatchInterface PPEditText SupportByLibrary PowerPoint, 9
 	///</summary>
 	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState MultiLine
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState VerticalScrollBar
@@ -87,7 +87,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState WordWrap
@@ -106,7 +106,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState ReadOnly
@@ -125,7 +125,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public string Text
@@ -144,7 +144,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 MaxLength
@@ -163,7 +163,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 9 
+		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public string OnAChange

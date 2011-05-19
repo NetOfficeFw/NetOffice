@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 11,12,14,
+	 /// SupportByLibrary Word 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdXMLValidationStatus
 	{
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdXMLValidationStatusOK = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdXMLValidationStatusCustom = -1072898048

@@ -17,7 +17,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass OutlookBarShortcuts SupportByLibrary "Outlook", 9,10,11,12,14
+	/// CoClass OutlookBarShortcuts SupportByLibrary Outlook, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -98,7 +98,7 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event OutlookBarShortcuts_ShortcutAddEventHandler _ShortcutAddEvent;
 
@@ -120,7 +120,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event OutlookBarShortcuts_BeforeShortcutAddEventHandler _BeforeShortcutAddEvent;
 
@@ -142,7 +142,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event OutlookBarShortcuts_BeforeShortcutRemoveEventHandler _BeforeShortcutRemoveEvent;
 

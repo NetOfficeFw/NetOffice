@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _VBProjects_Old SupportByLibrary "VBIDE", 5.3,12
+	/// DispatchInterface _VBProjects_Old SupportByLibrary VBIDE, 5.3,12
 	///</summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -65,7 +65,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE Parent
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 Count
@@ -98,7 +98,7 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]

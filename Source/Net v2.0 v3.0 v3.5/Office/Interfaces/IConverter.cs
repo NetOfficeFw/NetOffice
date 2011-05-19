@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface IConverter SupportByLibrary "Office", 14
+	/// Interface IConverter SupportByLibrary Office, 14
 	///</summary>
 	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">ref NetOffice.OfficeApi.IConverterPreferences ppcp</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
 		[SupportByLibrary("Office", 14)]
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="bstrSourcePath">string bstrSourcePath</param>
 		/// <param name="bstrDestPath">string bstrDestPath</param>
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="bstrSourcePath">string bstrSourcePath</param>
 		/// <param name="bstrDestPath">string bstrDestPath</param>
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="bstrPath">string bstrPath</param>
 		/// <param name="pbstrClass">ref string pbstrClass</param>
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="hrErr">Int32 hrErr</param>
 		/// <param name="pbstrErrorMsg">ref string pbstrErrorMsg</param>

@@ -26,7 +26,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass NavigationButton SupportByLibrary "Access", 14
+	/// CoClass NavigationButton SupportByLibrary Access, 14
 	///</summary>
 	[SupportByLibrary("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

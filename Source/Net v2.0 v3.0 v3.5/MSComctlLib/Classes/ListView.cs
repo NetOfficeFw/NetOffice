@@ -33,7 +33,7 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass ListView SupportByLibrary "MSComctlLib", 6
+	/// CoClass ListView SupportByLibrary MSComctlLib, 6
 	///</summary>
 	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

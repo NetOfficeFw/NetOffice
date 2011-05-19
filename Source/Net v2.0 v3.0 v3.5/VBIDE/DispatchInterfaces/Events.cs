@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface Events SupportByLibrary "VBIDE", 5.3,12
+	/// DispatchInterface Events SupportByLibrary VBIDE, 5.3,12
 	///</summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -62,7 +62,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="CommandBarControl">object CommandBarControl</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]

@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpTransitionSpeed
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppTransitionSpeedMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppTransitionSpeedSlow = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppTransitionSpeedMedium = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppTransitionSpeedFast = 3

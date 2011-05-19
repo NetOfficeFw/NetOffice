@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,
+	 /// SupportByLibrary PowerPoint 9, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpDialogPositioning
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,
+		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		ppDialogPositionNormal = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,
+		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		ppDialogPositionCenterParent = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,
+		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		ppDialogPositionCenterScreen = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,
+		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		ppDialogPositionRememberLast = 4

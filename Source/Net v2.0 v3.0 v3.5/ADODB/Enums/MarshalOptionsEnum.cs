@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 2.1,2.5,
+	 /// SupportByLibrary ADODB 2.1, 2.5, 
 	 /// </summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MarshalOptionsEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adMarshalAll = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adMarshalModifiedOnly = 1

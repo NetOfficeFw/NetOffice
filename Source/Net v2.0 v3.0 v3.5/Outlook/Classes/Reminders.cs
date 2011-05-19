@@ -20,7 +20,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Reminders SupportByLibrary "Outlook", 10,11,12,14
+	/// CoClass Reminders SupportByLibrary Outlook, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -101,7 +101,7 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Reminders_BeforeReminderShowEventHandler _BeforeReminderShowEvent;
 
@@ -123,7 +123,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Reminders_ReminderAddEventHandler _ReminderAddEvent;
 
@@ -145,7 +145,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Reminders_ReminderChangeEventHandler _ReminderChangeEvent;
 
@@ -167,7 +167,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Reminders_ReminderFireEventHandler _ReminderFireEvent;
 
@@ -189,7 +189,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Reminders_ReminderRemoveEventHandler _ReminderRemoveEvent;
 
@@ -211,7 +211,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Reminders_SnoozeEventHandler _SnoozeEvent;
 

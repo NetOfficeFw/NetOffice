@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoScaleFrom
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoScaleFromTopLeft = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoScaleFromMiddle = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoScaleFromBottomRight = 2

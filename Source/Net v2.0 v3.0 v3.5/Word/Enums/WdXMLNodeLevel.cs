@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 11,12,14,
+	 /// SupportByLibrary Word 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdXMLNodeLevel
 	{
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdXMLNodeLevelInline = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdXMLNodeLevelParagraph = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdXMLNodeLevelRow = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdXMLNodeLevelCell = 3

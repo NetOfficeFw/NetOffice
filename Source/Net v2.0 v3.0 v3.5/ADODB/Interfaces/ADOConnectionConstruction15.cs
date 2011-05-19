@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// Interface ADOConnectionConstruction15 SupportByLibrary "ADODB", 2.1,2.5
+	/// Interface ADOConnectionConstruction15 SupportByLibrary ADODB, 2.1,2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -48,7 +48,7 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public COMObject DSO
@@ -63,7 +63,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public COMObject Session
@@ -82,7 +82,7 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="pDSO">object pDSO</param>
 		/// <param name="pSession">object pSession</param>

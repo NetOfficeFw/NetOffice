@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary PowerPoint 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpFixedFormatIntent
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppFixedFormatIntentScreen = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppFixedFormatIntentPrint = 2

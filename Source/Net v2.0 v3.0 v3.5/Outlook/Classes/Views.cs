@@ -16,7 +16,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Views SupportByLibrary "Outlook", 10,11,12,14
+	/// CoClass Views SupportByLibrary Outlook, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -97,7 +97,7 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Views_ViewAddEventHandler _ViewAddEvent;
 
@@ -119,7 +119,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Views_ViewRemoveEventHandler _ViewRemoveEvent;
 

@@ -14,7 +14,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Reminder SupportByLibrary "Outlook", 10,11,12,14
+	/// CoClass Reminder SupportByLibrary Outlook, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

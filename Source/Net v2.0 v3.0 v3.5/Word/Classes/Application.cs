@@ -49,7 +49,7 @@ namespace NetOffice.WordApi
 	#endregion
 
 	///<summary>
-	/// CoClass Application SupportByLibrary "Word", 9,10,11,12,14
+	/// CoClass Application SupportByLibrary Word, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -144,7 +144,7 @@ namespace NetOffice.WordApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_StartupEventHandler _StartupEvent;
 
@@ -166,7 +166,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_QuitEventHandler _QuitEvent;
 
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_DocumentChangeEventHandler _DocumentChangeEvent;
 
@@ -210,7 +210,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_DocumentOpenEventHandler _DocumentOpenEvent;
 
@@ -232,7 +232,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_DocumentBeforeCloseEventHandler _DocumentBeforeCloseEvent;
 
@@ -254,7 +254,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_DocumentBeforePrintEventHandler _DocumentBeforePrintEvent;
 
@@ -276,7 +276,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_DocumentBeforeSaveEventHandler _DocumentBeforeSaveEvent;
 
@@ -298,7 +298,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_NewDocumentEventHandler _NewDocumentEvent;
 
@@ -320,7 +320,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_WindowActivateEventHandler _WindowActivateEvent;
 
@@ -342,7 +342,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_WindowDeactivateEventHandler _WindowDeactivateEvent;
 
@@ -364,7 +364,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_WindowSelectionChangeEventHandler _WindowSelectionChangeEvent;
 
@@ -386,7 +386,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_WindowBeforeRightClickEventHandler _WindowBeforeRightClickEvent;
 
@@ -408,7 +408,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event Application_WindowBeforeDoubleClickEventHandler _WindowBeforeDoubleClickEvent;
 
@@ -430,7 +430,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 10 11 12 14
+		/// SupportByLibrary Word, 10,11,12,14
 		/// </summary>
 		private event Application_EPostagePropertyDialogEventHandler _EPostagePropertyDialogEvent;
 
@@ -452,7 +452,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 10 11 12 14
+		/// SupportByLibrary Word, 10,11,12,14
 		/// </summary>
 		private event Application_EPostageInsertEventHandler _EPostageInsertEvent;
 
@@ -474,7 +474,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 10 11 12 14
+		/// SupportByLibrary Word, 10,11,12,14
 		/// </summary>
 		private event Application_MailMergeAfterMergeEventHandler _MailMergeAfterMergeEvent;
 
@@ -496,7 +496,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 10 11 12 14
+		/// SupportByLibrary Word, 10,11,12,14
 		/// </summary>
 		private event Application_MailMergeAfterRecordMergeEventHandler _MailMergeAfterRecordMergeEvent;
 
@@ -518,7 +518,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 10 11 12 14
+		/// SupportByLibrary Word, 10,11,12,14
 		/// </summary>
 		private event Application_MailMergeBeforeMergeEventHandler _MailMergeBeforeMergeEvent;
 
@@ -540,7 +540,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 10 11 12 14
+		/// SupportByLibrary Word, 10,11,12,14
 		/// </summary>
 		private event Application_MailMergeBeforeRecordMergeEventHandler _MailMergeBeforeRecordMergeEvent;
 
@@ -562,7 +562,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 10 11 12 14
+		/// SupportByLibrary Word, 10,11,12,14
 		/// </summary>
 		private event Application_MailMergeDataSourceLoadEventHandler _MailMergeDataSourceLoadEvent;
 
@@ -584,7 +584,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 10 11 12 14
+		/// SupportByLibrary Word, 10,11,12,14
 		/// </summary>
 		private event Application_MailMergeDataSourceValidateEventHandler _MailMergeDataSourceValidateEvent;
 
@@ -606,7 +606,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 10 11 12 14
+		/// SupportByLibrary Word, 10,11,12,14
 		/// </summary>
 		private event Application_MailMergeWizardSendToCustomEventHandler _MailMergeWizardSendToCustomEvent;
 
@@ -628,7 +628,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 10 11 12 14
+		/// SupportByLibrary Word, 10,11,12,14
 		/// </summary>
 		private event Application_MailMergeWizardStateChangeEventHandler _MailMergeWizardStateChangeEvent;
 
@@ -650,7 +650,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 10 11 12 14
+		/// SupportByLibrary Word, 10,11,12,14
 		/// </summary>
 		private event Application_WindowSizeEventHandler _WindowSizeEvent;
 
@@ -672,7 +672,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 11 12 14
+		/// SupportByLibrary Word, 11,12,14
 		/// </summary>
 		private event Application_XMLSelectionChangeEventHandler _XMLSelectionChangeEvent;
 
@@ -694,7 +694,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 11 12 14
+		/// SupportByLibrary Word, 11,12,14
 		/// </summary>
 		private event Application_XMLValidationErrorEventHandler _XMLValidationErrorEvent;
 
@@ -716,7 +716,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 11 12 14
+		/// SupportByLibrary Word, 11,12,14
 		/// </summary>
 		private event Application_DocumentSyncEventHandler _DocumentSyncEvent;
 
@@ -738,7 +738,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 11 12 14
+		/// SupportByLibrary Word, 11,12,14
 		/// </summary>
 		private event Application_EPostageInsertExEventHandler _EPostageInsertExEvent;
 
@@ -760,7 +760,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 12 14
+		/// SupportByLibrary Word, 12,14
 		/// </summary>
 		private event Application_MailMergeDataSourceValidate2EventHandler _MailMergeDataSourceValidate2Event;
 

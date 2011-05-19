@@ -4,74 +4,74 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary PowerPoint 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpRemoveDocInfoType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIComments = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIRemovePersonalInformation = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIDocumentProperties = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIDocumentWorkspace = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIInkAnnotations = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIPublishPath = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIDocumentServerProperties = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIDocumentManagementPolicy = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIContentType = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDISlideUpdateInformation = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		ppRDIAll = 99

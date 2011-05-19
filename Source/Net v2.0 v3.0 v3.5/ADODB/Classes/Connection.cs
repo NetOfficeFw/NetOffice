@@ -23,7 +23,7 @@ namespace NetOffice.ADODBApi
 	#endregion
 
 	///<summary>
-	/// CoClass Connection SupportByLibrary "ADODB", 2.1,2.5
+	/// CoClass Connection SupportByLibrary ADODB, 2.1,2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -104,7 +104,7 @@ namespace NetOffice.ADODBApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Connection_InfoMessageEventHandler _InfoMessageEvent;
 
@@ -126,7 +126,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Connection_BeginTransCompleteEventHandler _BeginTransCompleteEvent;
 
@@ -148,7 +148,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Connection_CommitTransCompleteEventHandler _CommitTransCompleteEvent;
 
@@ -170,7 +170,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Connection_RollbackTransCompleteEventHandler _RollbackTransCompleteEvent;
 
@@ -192,7 +192,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Connection_WillExecuteEventHandler _WillExecuteEvent;
 
@@ -214,7 +214,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Connection_ExecuteCompleteEventHandler _ExecuteCompleteEvent;
 
@@ -236,7 +236,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Connection_WillConnectEventHandler _WillConnectEvent;
 
@@ -258,7 +258,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Connection_ConnectCompleteEventHandler _ConnectCompleteEvent;
 
@@ -280,7 +280,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Connection_DisconnectEventHandler _DisconnectEvent;
 

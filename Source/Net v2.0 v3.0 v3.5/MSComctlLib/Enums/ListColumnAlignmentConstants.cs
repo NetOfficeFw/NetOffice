@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 6,
+	 /// SupportByLibrary MSComctlLib 6, 
 	 /// </summary>
 	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ListColumnAlignmentConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		lvwColumnLeft = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		lvwColumnRight = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		lvwColumnCenter = 2

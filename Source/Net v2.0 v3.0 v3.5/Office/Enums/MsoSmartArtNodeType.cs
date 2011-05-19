@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary Office 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoSmartArtNodeType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Office 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 14)]
 		msoSmartArtNodeTypeDefault = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Office 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 14)]
 		msoSmartArtNodeTypeAssistant = 2

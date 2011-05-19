@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 11,12,14,
+	 /// SupportByLibrary Excel 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlListConflict
 	{
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlListConflictDialog = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlListConflictRetryAllConflicts = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlListConflictDiscardAllConflicts = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		xlListConflictError = 3

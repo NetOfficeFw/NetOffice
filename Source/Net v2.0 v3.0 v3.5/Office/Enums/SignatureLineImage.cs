@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Office 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum SignatureLineImage
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		siglnimgSoftwareRequired = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		siglnimgUnsigned = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		siglnimgSignedValid = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		siglnimgSignedInvalid = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		siglnimgSigned = 4

@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SharedWorkspaceTasks SupportByLibrary "Office", 11,12,14
+	/// DispatchInterface SharedWorkspaceTasks SupportByLibrary Office, 11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("Office", 11,12,14)]
@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public Int32 Count
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public COMObject Parent
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public bool ItemCountExceeded
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="Title">string Title</param>
 		/// <param name="Status">optional object Status</param>
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="Title">string Title</param>
 		[SupportByLibrary("Office", 11,12,14)]

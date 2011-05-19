@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary Word 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Word", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdRevisionsMode
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		wdBalloonRevisions = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		wdInLineRevisions = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		wdMixedRevisions = 2

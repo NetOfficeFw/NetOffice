@@ -4,200 +4,200 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary PowerPoint 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlChartItem
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlDataLabel = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlChartArea = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlSeries = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlChartTitle = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlWalls = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlCorners = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlDataTable = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlTrendline = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlErrorBars = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlXErrorBars = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlYErrorBars = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlLegendEntry = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlLegendKey = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlShape = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlMajorGridlines = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlMinorGridlines = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlAxisTitle = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlUpBars = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlPlotArea = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlDownBars = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlAxis = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlSeriesLines = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlFloor = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlLegend = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlHiLoLines = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlDropLines = 26,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlRadarAxisLabels = 27,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlNothing = 28,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlLeaderLines = 29,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlDisplayUnitLabel = 30,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlPivotChartFieldButton = 31,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlPivotChartDropZone = 32

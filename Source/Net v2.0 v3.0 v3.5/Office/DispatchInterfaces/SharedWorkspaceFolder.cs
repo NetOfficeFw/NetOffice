@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SharedWorkspaceFolder SupportByLibrary "Office", 11,12,14
+	/// DispatchInterface SharedWorkspaceFolder SupportByLibrary Office, 11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public string FolderName
@@ -63,7 +63,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public COMObject Parent
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="DeleteEventIfFolderContainsFiles">optional object DeleteEventIfFolderContainsFiles</param>
 		[SupportByLibrary("Office", 11,12,14)]
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public void Delete()

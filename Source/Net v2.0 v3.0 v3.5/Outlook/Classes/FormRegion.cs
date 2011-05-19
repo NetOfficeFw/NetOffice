@@ -16,7 +16,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass FormRegion SupportByLibrary "Outlook", 12,14
+	/// CoClass FormRegion SupportByLibrary Outlook, 12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -97,7 +97,7 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event FormRegion_ExpandedEventHandler _ExpandedEvent;
 
@@ -119,7 +119,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event FormRegion_CloseEventHandler _CloseEvent;
 

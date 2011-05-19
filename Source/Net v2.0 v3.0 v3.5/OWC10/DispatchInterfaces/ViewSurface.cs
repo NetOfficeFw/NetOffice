@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface ViewSurface SupportByLibrary "OWC10", 1
+	/// DispatchInterface ViewSurface SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 hDC
@@ -63,7 +63,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 hDCInfo
@@ -77,7 +77,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Color">Int32 Color</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -89,7 +89,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="TextFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
 		/// <param name="Text">object Text</param>
@@ -102,7 +102,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="TextFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
 		/// <param name="Text">object Text</param>
@@ -115,7 +115,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Picture">stdole.Picture Picture</param>
 		/// <param name="Mask">stdole.Picture Mask</param>
@@ -129,7 +129,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -141,7 +141,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="y">Int32 y</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -157,7 +157,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="cx1">Int32 cx1</param>
 		/// <param name="cy1">Int32 cy1</param>
@@ -176,7 +176,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="cx1">Int32 cx1</param>
 		/// <param name="cy1">Int32 cy1</param>
@@ -195,7 +195,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="cx1">Int32 cx1</param>
 		/// <param name="cy1">Int32 cy1</param>
@@ -215,7 +215,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="cx1">Int32 cx1</param>
 		/// <param name="cy1">Int32 cy1</param>
@@ -234,7 +234,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="cx1">Int32 cx1</param>
 		/// <param name="cy1">Int32 cy1</param>

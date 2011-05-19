@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 2.5,
+	 /// SupportByLibrary ADODB 2.5, 
 	 /// </summary>
 	[SupportByLibrary("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum SaveOptionsEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adSaveCreateNotExist = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adSaveCreateOverWrite = 2

@@ -4,254 +4,254 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 2.1,2.5,
+	 /// SupportByLibrary ADODB 2.1, 2.5, 
 	 /// </summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum DataTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adEmpty = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adTinyInt = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adSmallInt = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adInteger = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adBigInt = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adUnsignedTinyInt = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adUnsignedSmallInt = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adUnsignedInt = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adUnsignedBigInt = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adSingle = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adDouble = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCurrency = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adDecimal = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adNumeric = 131,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adBoolean = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adError = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adUserDefined = 132,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adVariant = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adIDispatch = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adIUnknown = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adGUID = 72,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adDate = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adDBDate = 133,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adDBTime = 134,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adDBTimeStamp = 135,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adBSTR = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adChar = 129,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adVarChar = 200,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adLongVarChar = 201,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adWChar = 130,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adVarWChar = 202,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adLongVarWChar = 203,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adBinary = 128,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adVarBinary = 204,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adLongVarBinary = 205,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adChapter = 136,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adFileTime = 64,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,
+		 /// SupportByLibrary ADODB 2.1, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		adDBFileTime = 137,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adPropVariant = 138,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adVarNumeric = 139,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adArray = 8192

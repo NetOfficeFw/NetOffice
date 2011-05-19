@@ -4,44 +4,44 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary Office 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoPickerField
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Office 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 14)]
 		msoPickerFieldUnknown = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Office 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 14)]
 		msoPickerFieldDateTime = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Office 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 14)]
 		msoPickerFieldNumber = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Office 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 14)]
 		msoPickerFieldText = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Office 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 14)]
 		msoPickerFieldUser = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Office 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 14)]
 		msoPickerFieldMax = 5

@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary PowerPoint 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlEndStyleCap
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlCap = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlNoCap = 2

@@ -30,7 +30,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Explorer SupportByLibrary "Outlook", 9,10,11,12,14
+	/// CoClass Explorer SupportByLibrary Outlook, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -118,7 +118,7 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Explorer_ActivateEventHandler _ActivateEvent;
 
@@ -140,7 +140,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Explorer_FolderSwitchEventHandler _FolderSwitchEvent;
 
@@ -162,7 +162,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Explorer_BeforeFolderSwitchEventHandler _BeforeFolderSwitchEvent;
 
@@ -184,7 +184,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Explorer_ViewSwitchEventHandler _ViewSwitchEvent;
 
@@ -206,7 +206,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Explorer_BeforeViewSwitchEventHandler _BeforeViewSwitchEvent;
 
@@ -228,7 +228,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Explorer_DeactivateEventHandler _DeactivateEvent;
 
@@ -250,7 +250,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Explorer_SelectionChangeEventHandler _SelectionChangeEvent;
 
@@ -272,7 +272,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Explorer_CloseEventHandler _CloseEvent;
 
@@ -294,7 +294,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Explorer_BeforeMaximizeEventHandler _BeforeMaximizeEvent;
 
@@ -316,7 +316,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Explorer_BeforeMinimizeEventHandler _BeforeMinimizeEvent;
 
@@ -338,7 +338,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Explorer_BeforeMoveEventHandler _BeforeMoveEvent;
 
@@ -360,7 +360,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Explorer_BeforeSizeEventHandler _BeforeSizeEvent;
 
@@ -382,7 +382,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Explorer_BeforeItemCopyEventHandler _BeforeItemCopyEvent;
 
@@ -404,7 +404,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Explorer_BeforeItemCutEventHandler _BeforeItemCutEvent;
 
@@ -426,7 +426,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Explorer_BeforeItemPasteEventHandler _BeforeItemPasteEvent;
 

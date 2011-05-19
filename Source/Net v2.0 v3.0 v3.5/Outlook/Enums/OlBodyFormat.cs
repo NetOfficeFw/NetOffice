@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlBodyFormat
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		olFormatUnspecified = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		olFormatPlain = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		olFormatHTML = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		olFormatRichText = 3

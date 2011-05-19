@@ -4,56 +4,56 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Office 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoParagraphAlignment
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoAlignMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoAlignLeft = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoAlignCenter = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoAlignRight = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoAlignJustify = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoAlignDistribute = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoAlignThaiDistribute = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoAlignJustifyLow = 7

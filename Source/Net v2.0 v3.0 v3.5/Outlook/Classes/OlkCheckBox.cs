@@ -27,7 +27,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass OlkCheckBox SupportByLibrary "Outlook", 12,14
+	/// CoClass OlkCheckBox SupportByLibrary Outlook, 12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -108,7 +108,7 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_ClickEventHandler _ClickEvent;
 
@@ -130,7 +130,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_DoubleClickEventHandler _DoubleClickEvent;
 
@@ -152,7 +152,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_MouseDownEventHandler _MouseDownEvent;
 
@@ -174,7 +174,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -196,7 +196,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_MouseUpEventHandler _MouseUpEvent;
 
@@ -218,7 +218,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_EnterEventHandler _EnterEvent;
 
@@ -240,7 +240,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_ExitEventHandler _ExitEvent;
 
@@ -262,7 +262,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_KeyDownEventHandler _KeyDownEvent;
 
@@ -284,7 +284,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_KeyPressEventHandler _KeyPressEvent;
 
@@ -306,7 +306,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_KeyUpEventHandler _KeyUpEvent;
 
@@ -328,7 +328,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_ChangeEventHandler _ChangeEvent;
 
@@ -350,7 +350,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_AfterUpdateEventHandler _AfterUpdateEvent;
 
@@ -372,7 +372,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event OlkCheckBox_BeforeUpdateEventHandler _BeforeUpdateEvent;
 

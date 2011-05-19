@@ -4,74 +4,74 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Access 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcProperty
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acPropertyEnabled = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acPropertyVisible = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acPropertyLocked = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acPropertyLeft = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acPropertyTop = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acPropertyWidth = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acPropertyHeight = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acPropertyForeColor = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acPropertyBackColor = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acPropertyCaption = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acPropertyValue = 10

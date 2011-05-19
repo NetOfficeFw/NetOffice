@@ -10,7 +10,7 @@ namespace NetOffice.OfficeApi
 {
 	#pragma warning disable
 	///<summary>
-	/// DispatchInterface IRibbonControl SupportByLibrary "Office", 12,14
+	/// DispatchInterface IRibbonControl SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[ComImport, Guid("000C0395-0000-0000-C000-000000000046"), TypeLibType((short) 4160)]

@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Office 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoCustomXMLValidationErrorType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoCustomXMLValidationErrorSchemaGenerated = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoCustomXMLValidationErrorAutomaticallyCleared = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		msoCustomXMLValidationErrorManual = 2

@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _VBProjects SupportByLibrary "VBIDE", 5.3,12
+	/// DispatchInterface _VBProjects SupportByLibrary VBIDE, 5.3,12
 	///</summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="Type">NetOffice.VBIDEApi.Enums.vbext_ProjectType Type</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -66,7 +66,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="lpc">NetOffice.VBIDEApi.VBProject lpc</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -77,7 +77,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="bstrPath">string bstrPath</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]

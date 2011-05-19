@@ -28,7 +28,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass _OptionButtonInOption SupportByLibrary "Access", 9,10,11,12,14
+	/// CoClass _OptionButtonInOption SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -116,7 +116,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event _OptionButtonInOption_GotFocusEventHandler _GotFocusEvent;
 
@@ -138,7 +138,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event _OptionButtonInOption_LostFocusEventHandler _LostFocusEvent;
 
@@ -160,7 +160,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event _OptionButtonInOption_MouseDownEventHandler _MouseDownEvent;
 
@@ -182,7 +182,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event _OptionButtonInOption_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -204,7 +204,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event _OptionButtonInOption_MouseUpEventHandler _MouseUpEvent;
 
@@ -226,7 +226,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event _OptionButtonInOption_KeyDownEventHandler _KeyDownEvent;
 
@@ -248,7 +248,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event _OptionButtonInOption_KeyPressEventHandler _KeyPressEvent;
 
@@ -270,7 +270,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event _OptionButtonInOption_KeyUpEventHandler _KeyUpEvent;
 
@@ -292,7 +292,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event _OptionButtonInOption_ClickEventHandler _ClickEvent;
 
@@ -314,7 +314,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event _OptionButtonInOption_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
@@ -336,7 +336,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event _OptionButtonInOption_AfterUpdateEventHandler _AfterUpdateEvent;
 
@@ -358,7 +358,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event _OptionButtonInOption_EnterEventHandler _EnterEvent;
 
@@ -380,7 +380,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event _OptionButtonInOption_ExitEventHandler _ExitEvent;
 
@@ -402,7 +402,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event _OptionButtonInOption_DblClickEventHandler _DblClickEvent;
 

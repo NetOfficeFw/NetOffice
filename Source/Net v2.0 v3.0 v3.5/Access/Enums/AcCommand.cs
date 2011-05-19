@@ -4,4244 +4,4244 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcCommand
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdWindowUnhide = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdWindowHide = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdExit = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCompactDatabase = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdEncryptDecryptDatabase = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRepairDatabase = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdMakeMDEFile = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdMoreWindows = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAppRestore = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAppMaximize = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAppMinimize = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAppMove = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAppSize = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDocRestore = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDocMaximize = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDocMove = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDocSize = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRefresh = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFont = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSave = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSaveAs = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdWindowCascade = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdTileVertically = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdWindowArrangeIcons = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOpenDatabase = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewDatabase = 26,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOLEDDELinks = 27,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRecordsGoToNew = 28,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdReplace = 29,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFind = 30,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRunMacro = 31,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPageSetup = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertObject = 33,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDuplicate = 34,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAboutMicrosoftAccess = 35,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFormHdrFtr = 36,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdReportHdrFtr = 37,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPasteAppend = 38,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertFile = 39,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSelectForm = 40,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdTabOrder = 41,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFieldList = 42,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAlignLeft = 43,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAlignRight = 44,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAlignTop = 45,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAlignBottom = 46,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAlignToGrid = 47,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSizeToGrid = 48,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOptions = 49,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSelectRecord = 50,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSortingAndGrouping = 51,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdBringToFront = 52,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSendToBack = 53,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPrintPreview = 54,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdApplyDefault = 55,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSetControlDefaults = 56,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOLEObjectDefaultVerb = 57,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdClose = 58,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSizeToFit = 59,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDocMinimize = 60,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewRuler = 61,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSnapToGrid = 62,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewGrid = 63,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPasteSpecial = 64,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRecordsGoToNext = 65,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRecordsGoToPrevious = 66,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRecordsGoToFirst = 67,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRecordsGoToLast = 68,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSizeToFitForm = 69,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdEditingAllowed = 70,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdClearGrid = 71,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdJoinProperties = 72,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryTotals = 73,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryTypeCrosstab = 74,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdTableNames = 75,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryParameters = 76,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFormatCells = 77,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDataEntry = 78,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdHideColumns = 79,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdUnhideColumns = 80,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDeleteQueryColumn = 81,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertQueryColumn = 82,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRemoveTable = 84,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewToolbox = 85,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdMacroNames = 86,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdMacroConditions = 87,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSingleStep = 88,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryTypeSelect = 89,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryTypeUpdate = 90,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryTypeAppend = 91,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryTypeDelete = 92,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdApplyFilterSort = 93,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryTypeMakeTable = 94,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdLoadFromQuery = 95,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSaveAsQuery = 96,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSaveRecord = 97,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAdvancedFilterSort = 99,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdMicrosoftAccessHelpTopics = 100,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdLinkTables = 102,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdUserAndGroupPermissions = 103,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdUserAndGroupAccounts = 104,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFreezeColumn = 105,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdUnfreezeAllColumns = 106,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPrimaryKey = 107,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSubformDatasheet = 108,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSelectAllRecords = 109,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewTables = 110,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewQueries = 111,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewForms = 112,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewReports = 113,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewMacros = 114,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewModules = 115,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRowHeight = 116,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdColumnWidth = 117,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertFileIntoModule = 118,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSaveModuleAsText = 119,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFindPrevious = 120,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdWindowSplit = 121,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdProcedureDefinition = 122,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDebugWindow = 123,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdReset = 124,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCompileAllModules = 125,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCompileAndSaveAllModules = 126,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdGoContinue = 127,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdStepOver = 128,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSetNextStatement = 129,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdShowNextStatement = 130,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdToggleBreakpoint = 131,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdClearAllBreakpoints = 132,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRelationships = 133,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectTable = 134,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectQuery = 135,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectForm = 136,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectReport = 137,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectMacro = 138,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectModule = 139,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectClassModule = 140,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdLayoutPreview = 141,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSaveAsReport = 142,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRename = 143,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRemoveFilterSort = 144,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSaveLayout = 145,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdClearAll = 146,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdHideTable = 147,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdShowDirectRelationships = 148,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdShowAllRelationships = 149,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCreateRelationship = 150,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdEditRelationship = 151,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdIndexes = 152,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAlignToShortest = 153,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAlignToTallest = 154,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSizeToNarrowest = 155,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSizeToWidest = 156,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdHorizontalSpacingMakeEqual = 157,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdHorizontalSpacingDecrease = 158,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdHorizontalSpacingIncrease = 159,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdVerticalSpacingMakeEqual = 160,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdVerticalSpacingDecrease = 161,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdVerticalSpacingIncrease = 162,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSortAscending = 163,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSortDescending = 164,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdToolbarsCustomize = 165,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOLEObjectConvert = 167,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryTypeSQLDataDefinition = 168,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryTypeSQLPassThrough = 169,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewCode = 170,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdConvertDatabase = 171,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCallStack = 172,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSend = 173,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOutputToExcel = 175,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOutputToRTF = 176,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOutputToText = 177,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInvokeBuilder = 178,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdZoomBox = 179,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryTypeSQLUnion = 180,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRun = 181,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPageHdrFtr = 182,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDesignView = 183,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSQLView = 184,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdShowTable = 185,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCloseWindow = 186,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertRows = 187,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDeleteRows = 188,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCut = 189,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCopy = 190,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPaste = 191,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAutoDial = 192,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectAutoForm = 193,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectAutoReport = 194,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdWordMailMerge = 195,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdTestValidationRules = 196,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdControlWizardsToggle = 197,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdEnd = 198,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRedo = 199,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdObjectBrowser = 200,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAddWatch = 201,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdEditWatch = 202,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQuickWatch = 203,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdStepToCursor = 204,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdIndent = 205,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOutdent = 206,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFilterByForm = 207,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFilterBySelection = 208,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewLargeIcons = 209,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewDetails = 210,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewSmallIcons = 211,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewList = 212,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdLineUpIcons = 213,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdArrangeIconsByName = 214,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdArrangeIconsByType = 215,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdArrangeIconsByCreated = 216,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdArrangeIconsByModified = 217,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdArrangeIconsAuto = 218,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCreateShortcut = 219,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdToggleFilter = 220,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOpenTable = 221,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertPicture = 222,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDeleteRecord = 223,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdStartupProperties = 224,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPageNumber = 225,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDateAndTime = 226,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdChangeToTextBox = 227,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdChangeToLabel = 228,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdChangeToListBox = 229,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdChangeToComboBox = 230,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdChangeToCheckBox = 231,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdChangeToToggleButton = 232,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdChangeToOptionButton = 233,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdChangeToImage = 234,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAnswerWizard = 235,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdMicrosoftOnTheWeb = 236,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdClearItemDefaults = 237,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdZoom200 = 238,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdZoom150 = 239,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdZoom100 = 240,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdZoom75 = 241,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdZoom50 = 242,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdZoom25 = 243,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdZoom10 = 244,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFitToWindow = 245,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPreviewOnePage = 246,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPreviewTwoPages = 247,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPreviewFourPages = 248,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPreviewEightPages = 249,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPreviewTwelvePages = 250,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOpenURL = 251,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOpenStartPage = 252,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOpenSearchPage = 253,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRegisterActiveXControls = 254,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDeleteTab = 255,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDatabaseProperties = 256,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdImport = 257,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertActiveXControl = 258,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertHyperlink = 259,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdReferences = 260,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAutoCorrect = 261,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertProcedure = 262,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCreateReplica = 263,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSynchronizeNow = 264,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRecoverDesignMaster = 265,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdResolveConflicts = 266,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDeleteWatch = 267,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSpelling = 269,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAutoFormat = 270,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDeleteTableColumn = 271,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertTableColumn = 272,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertLookupColumn = 273,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRenameColumn = 274,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSetDatabasePassword = 275,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdUserLevelSecurityWizard = 276,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFilterExcludingSelection = 277,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQuickPrint = 278,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdConvertMacrosToVisualBasic = 279,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSaveAllModules = 280,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFormView = 281,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDatasheetView = 282,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAnalyzePerformance = 283,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdAnalyzeTable = 284,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDocumenter = 285,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdTileHorizontally = 286,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdProperties = 287,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdTransparentBackground = 288,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdTransparentBorder = 289,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCompileLoadedModules = 290,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertLookupField = 291,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdUndo = 292,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertChart = 293,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdGoBack = 294,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdGoForward = 295,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdStopLoadingPage = 296,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRefreshPage = 297,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFavoritesOpen = 298,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFavoritesAddTo = 299,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdShowOnlyWebToolbar = 300,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdToolbarControlProperties = 301,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdShowMembers = 302,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdListConstants = 303,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQuickInfo = 304,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdParameterInfo = 305,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCompleteWord = 306,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdBookmarksToggle = 307,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdBookmarksNext = 308,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdBookmarksPrevious = 309,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdBookmarksClearAll = 310,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdStepOut = 311,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFindPrevWordUnderCursor = 312,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFindNextWordUnderCursor = 313,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdObjBrwFindWholeWordOnly = 314,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdObjBrwShowHiddenMembers = 315,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdObjBrwHelp = 316,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdObjBrwViewDefinition = 317,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdObjBrwGroupMembers = 318,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSelectReport = 319,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,
+		 /// SupportByLibrary Access 9, 10, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10)]
 		acCmdPublish = 320,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSaveAsHTML = 321,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSaveAsIDC = 322,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSaveAsASP = 323,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPublishDefaults = 324,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdEditHyperlink = 325,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOpenHyperlink = 326,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdOpenNewHyperlink = 327,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCopyHyperlink = 328,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdHyperlinkDisplayText = 329,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdTabControlPageOrder = 330,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdInsertPage = 331,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDeletePage = 332,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSelectAll = 333,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCreateMenuFromMacro = 334,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCreateToolbarFromMacro = 335,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdCreateShortcutMenuFromMacro = 336,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDelete = 337,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRunOpenMacro = 338,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdLastPosition = 339,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPrint = 340,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdFindNext = 341,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdStepInto = 342,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdClearHyperlink = 343,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDataAccessPageBrowse = 344,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectDataAccessPage = 346,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSelectDataAccessPage = 347,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewDataAccessPages = 349,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectView = 350,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectStoredProcedure = 351,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdNewObjectDiagram = 352,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewFieldList = 353,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewDiagrams = 354,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewStoredProcedures = 355,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewViews = 356,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewShowPaneSQL = 357,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewShowPaneDiagram = 358,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewShowPaneGrid = 359,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewVerifySQL = 360,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryGroupBy = 361,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdQueryAddToOutput = 362,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewTableColumnNames = 363,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewTableNameOnly = 364,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdHidePane = 365,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdRemove = 366,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewTableColumnProperties = 368,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewTableKeys = 369,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdViewTableUserView = 370,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdZoomSelection = 371,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDiagramNewLabel = 372,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDiagramAddRelatedTables = 373,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDiagramShowRelationshipLabels = 374,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDiagramModifyUserDefinedView = 375,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDiagramViewPageBreaks = 376,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDiagramRecalculatePageBreaks = 377,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDiagramAutosizeSelectedTables = 378,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDiagramLayoutSelection = 379,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDiagramLayoutDiagram = 380,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDiagramNewTable = 381,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDiagramDeleteRelationship = 382,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdConnection = 383,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdEditTriggers = 384,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDataAccessPageDesignView = 385,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdPromote = 386,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdGroupByTable = 387,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdDemote = 388,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdSaveAsDataAccessPage = 389,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acCmdMicrosoftScriptEditor = 390,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdWorkgroupAdministrator = 391,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdNewObjectFunction = 394,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdViewFunctions = 395,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableView = 396,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotChartView = 397,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotAutoFilter = 398,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableSubtotal = 399,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotCollapse = 400,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotExpand = 401,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableHideDetails = 402,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableShowDetails = 403,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotRefresh = 404,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableExportToExcel = 405,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableMoveToRowArea = 406,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableMoveToColumnArea = 407,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableMoveToFilterArea = 408,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableMoveToDetailArea = 409,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTablePromote = 410,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableDemote = 411,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotAutoSum = 412,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotAutoCount = 413,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotAutoMin = 414,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotAutoMax = 415,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotAutoAverage = 416,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotAutoStdDev = 417,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotAutoVar = 418,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotAutoStdDevP = 419,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotAutoVarP = 420,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowTop1 = 421,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowTop2 = 422,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowTop5 = 423,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowTop10 = 424,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowTop25 = 425,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowTop1Percent = 426,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowTop2Percent = 427,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowTop5Percent = 428,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowTop10Percent = 429,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowTop25Percent = 430,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowTopOther = 431,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowBottom1 = 432,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowBottom2 = 433,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowBottom5 = 434,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowBottom10 = 435,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowBottom25 = 436,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowBottom1Percent = 437,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowBottom2Percent = 438,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowBottom5Percent = 439,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowBottom10Percent = 440,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowBottom25Percent = 441,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowBottomOther = 442,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableCreateCalcTotal = 443,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableCreateCalcField = 444,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableShowAsNormal = 445,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTablePercentRowTotal = 446,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTablePercentColumnTotal = 447,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTablePercentParentRowItem = 448,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTablePercentParentColumnItem = 449,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTablePercentGrandTotal = 450,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableExpandIndicators = 451,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotDropAreas = 452,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotChartType = 453,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotDelete = 454,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotChartShowLegend = 455,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotChartByRowByColumn = 456,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotChartDrillInto = 457,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotChartMultiplePlots = 458,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotChartMultiplePlotsUnifiedScale = 459,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotChartUndo = 460,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotShowAll = 461,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdSubformFormView = 462,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdSubformDatasheetView = 463,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdSubformPivotTableView = 464,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdSubformPivotChartView = 465,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdWebPagePreview = 466,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPageProperties = 467,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdDataOutline = 468,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdInsertMovieFromFile = 469,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdInsertPivotTable = 470,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdInsertSpreadsheet = 471,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdInsertUnboundSection = 472,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdWebTheme = 473,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdBackgroundPicture = 474,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdBackgroundSound = 475,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdAlignMiddle = 476,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdAlignCenter = 477,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdAlignmentAndSizing = 478,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdDataAccessPageFieldListRefresh = 479,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdDataAccessPageAddToPage = 480,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdZoom500 = 481,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdZoom1000 = 482,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPrintRelationships = 483,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdGroupControls = 484,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdUngroupControls = 485,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdWebPageProperties = 486,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdExport = 487,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdOfficeClipboard = 488,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdDeleteTable = 489,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPasteAsHyperlink = 490,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdNewGroup = 491,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdRenameGroup = 492,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdDeleteGroup = 493,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdAddToNewGroup = 494,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdSubformInNewWindow = 495,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdServerProperties = 496,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdTableCustomView = 497,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdTableAddTable = 498,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdInsertSubdatasheet = 499,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdConditionalFormatting = 500,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdChangeToCommandButton = 501,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdSubdatasheetExpandAll = 504,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdSubdatasheetCollapseAll = 505,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdSubdatasheetRemove = 506,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdServerFilterByForm = 507,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdMaximiumRecords = 508,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdSpeech = 511,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdBackup = 513,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdRestore = 514,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdTransferSQLDatabase = 515,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdCopyDatabaseFile = 516,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdDropSQLDatabase = 517,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdLinkedTableManager = 519,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdDatabaseSplitter = 520,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdSwitchboardManager = 521,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdUpsizingWizard = 522,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPartialReplicaWizard = 524,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdVisualBasicEditor = 525,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdAddInManager = 526,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableClearCustomOrdering = 527,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableFilterBySelection = 528,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableRemove = 529,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableGroupItems = 530,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotTableUngroupItems = 531,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotChartDrillOut = 532,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdShowEnvelope = 533,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotChartSortAscByTotal = 534,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCmdPivotChartSortDescByTotal = 535,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Access 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 11,12,14)]
 		acCmdViewObjectDependencies = 536,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdPublishDatabase = 537,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdCloseDatabase = 538,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdReportView = 539,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdToggleOffline = 540,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdRefreshData = 541,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdShareOnSharePoint = 542,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdSavedImports = 543,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdImportAttachAccess = 544,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdImportAttachExcel = 545,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdImportAttachText = 546,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdImportAttachSharePointList = 547,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdImportAttachXML = 548,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdImportAttachODBC = 549,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdImportAttachHTML = 550,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdImportAttachOutlook = 551,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdImportAttachdBase = 552,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdImportAttachParadox = 553,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdImportAttachLotus = 554,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdSavedExports = 555,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportExcel = 556,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportSharePointList = 557,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportRTF = 558,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportAccess = 559,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportText = 560,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportXML = 561,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportODBC = 562,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportSnapShot = 563,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportHTML = 564,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportdBase = 565,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportParadox = 566,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportLotus = 567,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdStackedLayout = 568,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdTabularLayout = 569,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdSelectEntireRow = 570,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdSelectEntireColumn = 571,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdMoveColumnCellUp = 572,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdMoveColumnCellDown = 573,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdLayoutGridlinesBoth = 574,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdLayoutGridlinesVertical = 575,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdLayoutGridlinesHorizontal = 576,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdLayoutGridlinesNone = 577,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdLayoutGridlinesCrossHatch = 578,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdLayoutGridlinesTop = 579,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdLayoutGridlinesBottom = 580,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdLayoutGridlinesOutline = 581,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdRemoveFromLayout = 582,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdAddFromOutlook = 583,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdSaveAsOutlookContact = 584,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdInsertLogo = 585,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdInsertTitle = 586,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdPasteFormatting = 587,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdMacroArguments = 588,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdMacroAllActions = 589,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdPrintSelection = 590,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdPublishFixedFormat = 591,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdExportFixedFormat = 592,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdLayoutView = 593,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectContinuousForm = 594,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectSplitForm = 595,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectPivotChart = 596,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectPivotTable = 597,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectDatasheetForm = 598,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectModalForm = 599,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectBlankForm = 600,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectLabelsReport = 601,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectBlankReport = 602,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectDesignQuery = 603,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectDesignForm = 604,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectDesignReport = 605,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdNewObjectDesignTable = 606,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdEditListItems = 607,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdCollectDataViaEmail = 608,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdManageReplies = 609,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdAnchorTopLeft = 610,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdAnchorStretchAcross = 611,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdAnchorTopRight = 612,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdAnchorStretchDown = 613,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdAnchorStretchDownAcross = 614,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdAnchorStretchDownRight = 615,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdAnchorBottomLeft = 616,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdAnchorBottomStretchAcross = 617,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdAnchorBottomRight = 618,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdFilterMenu = 619,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdShowColumnHistory = 620,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdBrowseSharePointList = 621,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdModifySharePointList = 622,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdModifySharePointListAlerts = 623,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdModifySharePointListWorkflow = 624,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdModifySharePointListPermissions = 625,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdRefreshSharePointList = 626,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdDeleteSharePointList = 627,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdControlMarginsNone = 628,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdControlMarginsNarrow = 629,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdControlMarginsMedium = 630,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdControlMarginsWide = 631,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdControlPaddingNone = 632,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdControlPaddingNarrow = 633,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdControlPaddingMedium = 634,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdControlPaddingWide = 635,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdShowDatePicker = 636,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdSetCaption = 637,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdSynchronize = 638,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdDiscardChanges = 639,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdDiscardChangesAndRefresh = 640,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdSharePointSiteRecycleBin = 641,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdToggleCacheListData = 642,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdRemoveFilterFromCurrentColumn = 643,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdRemoveAllFilters = 644,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdRemoveAllSorts = 645,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdCloseAll = 646,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdFieldTemplates = 647,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat1 = 648,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat2 = 649,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat3 = 650,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat4 = 651,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat5 = 652,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat6 = 653,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat7 = 654,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat8 = 655,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat9 = 656,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat10 = 657,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat11 = 658,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat12 = 659,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat13 = 660,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat14 = 661,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat15 = 662,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat16 = 663,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat17 = 664,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat18 = 665,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat19 = 666,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat20 = 667,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat21 = 668,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat22 = 669,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat23 = 670,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat24 = 671,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdApplyAutoFormat25 = 672,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdManageAttachments = 673,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdWorkflowTasks = 674,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdStartNewWorkflow = 675,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdShowMessageBar = 676,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCmdHideMessageBar = 677,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdLayoutInsertRowAbove = 678,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdLayoutInsertRowBelow = 679,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdLayoutInsertColumnLeft = 680,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdLayoutInsertColumnRight = 681,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdLayoutMergeCells = 682,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdLayoutSplitColumnCell = 683,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdLayoutSplitRowCell = 684,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdShowLogicCatalog = 685,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdSaveAsTemplate = 686,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdSaveDatabaseAsNewTemplatePart = 687,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdSaveSelectionAsNewDataType = 688,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationTop = 689,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationLeft = 690,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationRight = 691,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationTopTop = 692,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationTopLeft = 693,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationTopRight = 694,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdCompatCheckDatabase = 695,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdCompatCheckCurrentObject = 696,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdDesignObject = 697,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdCalculatedColumn = 698,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdSyncWebApplication = 699,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdConvertLinkedTableToLocal = 700,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectContinuousFormWeb = 701,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectDatasheetFormWeb = 702,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectBlankFormWeb = 703,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectBlankReportWeb = 704,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectAutoFormWeb = 705,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectAutoReportWeb = 706,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectQueryWeb = 707,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectMacroWeb = 708,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationTopWeb = 709,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationLeftWeb = 710,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationRightWeb = 711,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationTopTopWeb = 712,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationTopLeftWeb = 713,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdNewObjectNavigationTopRightWeb = 714,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdSelectEntireLayout = 715,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdPrepareDatabaseForWeb = 716,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdManageTableEvents = 717,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdAddDataMacroAfterInsert = 718,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdAddDataMacroAfterUpdate = 719,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdAddDataMacroAfterDelete = 720,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdAddDataMacroBeforeDelete = 721,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdAddDataMacroBeforeChange = 722,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdAddNamedDataMacro = 723,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acCmdInsertNavigationButton = 724

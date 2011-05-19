@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 6,12,
+	 /// SupportByLibrary DAO 6, 12, 
 	 /// </summary>
 	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum CursorDriverEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbUseDefaultCursor = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbUseODBCCursor = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbUseServerCursor = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbUseClientBatchCursor = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbUseNoCursor = 4

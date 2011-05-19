@@ -4,140 +4,140 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 12,14,
+	 /// SupportByLibrary Office 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum SignatureDetail
 	{
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetLocalSigningTime = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetApplicationName = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetApplicationVersion = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetOfficeVersion = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetWindowsVersion = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetNumberOfMonitors = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetHorizResolution = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetVertResolution = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetColorDepth = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetSignedData = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetDocPreviewImg = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetIPFormHash = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetIPCurrentView = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetSignatureType = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetHashAlgorithm = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetShouldShowViewWarning = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetDelSuggSigner = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetDelSuggSignerSet = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetDelSuggSignerLine2 = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetDelSuggSignerLine2Set = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetDelSuggSignerEmail = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		sigdetDelSuggSignerEmailSet = 21

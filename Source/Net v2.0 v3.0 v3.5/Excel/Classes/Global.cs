@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass Global SupportByLibrary "Excel", 9,10,11,12,14
+	/// CoClass Global SupportByLibrary Excel, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

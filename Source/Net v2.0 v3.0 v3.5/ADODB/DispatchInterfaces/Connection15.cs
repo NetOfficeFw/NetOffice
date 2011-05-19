@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface Connection15 SupportByLibrary "ADODB", 2.1,2.5
+	/// DispatchInterface Connection15 SupportByLibrary ADODB, 2.1,2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string ConnectionString
@@ -68,7 +68,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 CommandTimeout
@@ -87,7 +87,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 ConnectionTimeout
@@ -106,7 +106,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string Version
@@ -120,7 +120,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Errors Errors
@@ -135,7 +135,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string DefaultDatabase
@@ -154,7 +154,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.IsolationLevelEnum IsolationLevel
@@ -173,7 +173,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 Attributes
@@ -192,7 +192,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.CursorLocationEnum CursorLocation
@@ -211,7 +211,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.ConnectModeEnum Mode
@@ -230,7 +230,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string Provider
@@ -249,7 +249,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 State
@@ -267,7 +267,7 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public void Close()
@@ -277,7 +277,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="CommandText">string CommandText</param>
 		/// <param name="RecordsAffected">ref object RecordsAffected</param>
@@ -294,7 +294,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 BeginTrans()
@@ -305,7 +305,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public void CommitTrans()
@@ -315,7 +315,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public void RollbackTrans()
@@ -325,7 +325,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="ConnectionString">string ConnectionString</param>
 		/// <param name="UserID">string UserID</param>
@@ -339,7 +339,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="Schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
 		/// <param name="Restrictions">optional object Restrictions</param>
@@ -354,7 +354,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="Schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]

@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.MSDATASRCApi
 {
 	///<summary>
-	/// Interface DataSourceListener SupportByLibrary "MSDATASRC", 1
+	/// Interface DataSourceListener SupportByLibrary MSDATASRC, 1
 	///</summary>
 	[SupportByLibrary("MSDATASRC", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.MSDATASRCApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary MSDATASRC 1
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[SupportByLibrary("MSDATASRC", 1)]
@@ -64,7 +64,7 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary MSDATASRC 1
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[SupportByLibrary("MSDATASRC", 1)]
@@ -76,7 +76,7 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary MSDATASRC 1
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[SupportByLibrary("MSDATASRC", 1)]

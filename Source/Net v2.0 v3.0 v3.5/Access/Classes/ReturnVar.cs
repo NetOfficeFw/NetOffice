@@ -14,7 +14,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass ReturnVar SupportByLibrary "Access", 14
+	/// CoClass ReturnVar SupportByLibrary Access, 14
 	///</summary>
 	[SupportByLibrary("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

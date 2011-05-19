@@ -39,7 +39,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass Report SupportByLibrary "Access", 9,10,11,12,14
+	/// CoClass Report SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -127,7 +127,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Report_OpenEventHandler _OpenEvent;
 
@@ -149,7 +149,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Report_CloseEventHandler _CloseEvent;
 
@@ -171,7 +171,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Report_ActivateEventHandler _ActivateEvent;
 
@@ -193,7 +193,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Report_DeactivateEventHandler _DeactivateEvent;
 
@@ -215,7 +215,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Report_ErrorEventHandler _ErrorEvent;
 
@@ -237,7 +237,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Report_NoDataEventHandler _NoDataEvent;
 
@@ -259,7 +259,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Report_PageEventHandler _PageEvent;
 
@@ -281,7 +281,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_CurrentEventHandler _CurrentEvent;
 
@@ -303,7 +303,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_LoadEventHandler _LoadEvent;
 
@@ -325,7 +325,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_ResizeEventHandler _ResizeEvent;
 
@@ -347,7 +347,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_UnloadEventHandler _UnloadEvent;
 
@@ -369,7 +369,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_GotFocusEventHandler _GotFocusEvent;
 
@@ -391,7 +391,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_LostFocusEventHandler _LostFocusEvent;
 
@@ -413,7 +413,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_ClickEventHandler _ClickEvent;
 
@@ -435,7 +435,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_DblClickEventHandler _DblClickEvent;
 
@@ -457,7 +457,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_MouseDownEventHandler _MouseDownEvent;
 
@@ -479,7 +479,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -501,7 +501,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_MouseUpEventHandler _MouseUpEvent;
 
@@ -523,7 +523,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_KeyDownEventHandler _KeyDownEvent;
 
@@ -545,7 +545,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_KeyPressEventHandler _KeyPressEvent;
 
@@ -567,7 +567,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_KeyUpEventHandler _KeyUpEvent;
 
@@ -589,7 +589,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_TimerEventHandler _TimerEvent;
 
@@ -611,7 +611,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_FilterEventHandler _FilterEvent;
 
@@ -633,7 +633,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_ApplyFilterEventHandler _ApplyFilterEvent;
 
@@ -655,7 +655,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Report_MouseWheelEventHandler _MouseWheelEvent;
 

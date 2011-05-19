@@ -4,86 +4,86 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcSysCmdAction
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdInitMeter = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdUpdateMeter = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdRemoveMeter = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdSetStatus = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdClearStatus = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdRuntime = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdAccessVer = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdIniFile = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdAccessDir = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdGetObjectState = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdClearHelpTopic = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdProfile = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSysCmdGetWorkgroupFile = 13

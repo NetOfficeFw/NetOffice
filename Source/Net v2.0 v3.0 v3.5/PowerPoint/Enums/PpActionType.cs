@@ -4,92 +4,92 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpActionType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionNextSlide = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionPreviousSlide = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionFirstSlide = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionLastSlide = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionLastSlideViewed = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionEndShow = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionHyperlink = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionRunMacro = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionRunProgram = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionNamedSlideShow = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionOLEVerb = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppActionPlay = 12

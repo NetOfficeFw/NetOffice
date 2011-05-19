@@ -72,7 +72,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass Form SupportByLibrary "Access", 9,10,11,12,14
+	/// CoClass Form SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -160,7 +160,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_LoadEventHandler _LoadEvent;
 
@@ -182,7 +182,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_CurrentEventHandler _CurrentEvent;
 
@@ -204,7 +204,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_BeforeInsertEventHandler _BeforeInsertEvent;
 
@@ -226,7 +226,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_AfterInsertEventHandler _AfterInsertEvent;
 
@@ -248,7 +248,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
@@ -270,7 +270,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_AfterUpdateEventHandler _AfterUpdateEvent;
 
@@ -292,7 +292,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_DeleteEventHandler _DeleteEvent;
 
@@ -314,7 +314,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_BeforeDelConfirmEventHandler _BeforeDelConfirmEvent;
 
@@ -336,7 +336,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_AfterDelConfirmEventHandler _AfterDelConfirmEvent;
 
@@ -358,7 +358,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_OpenEventHandler _OpenEvent;
 
@@ -380,7 +380,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_ResizeEventHandler _ResizeEvent;
 
@@ -402,7 +402,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_UnloadEventHandler _UnloadEvent;
 
@@ -424,7 +424,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_CloseEventHandler _CloseEvent;
 
@@ -446,7 +446,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_ActivateEventHandler _ActivateEvent;
 
@@ -468,7 +468,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_DeactivateEventHandler _DeactivateEvent;
 
@@ -490,7 +490,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_GotFocusEventHandler _GotFocusEvent;
 
@@ -512,7 +512,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_LostFocusEventHandler _LostFocusEvent;
 
@@ -534,7 +534,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_ClickEventHandler _ClickEvent;
 
@@ -556,7 +556,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_DblClickEventHandler _DblClickEvent;
 
@@ -578,7 +578,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_MouseDownEventHandler _MouseDownEvent;
 
@@ -600,7 +600,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -622,7 +622,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_MouseUpEventHandler _MouseUpEvent;
 
@@ -644,7 +644,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_KeyDownEventHandler _KeyDownEvent;
 
@@ -666,7 +666,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_KeyPressEventHandler _KeyPressEvent;
 
@@ -688,7 +688,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_KeyUpEventHandler _KeyUpEvent;
 
@@ -710,7 +710,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_ErrorEventHandler _ErrorEvent;
 
@@ -732,7 +732,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_TimerEventHandler _TimerEvent;
 
@@ -754,7 +754,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_FilterEventHandler _FilterEvent;
 
@@ -776,7 +776,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_ApplyFilterEventHandler _ApplyFilterEvent;
 
@@ -798,7 +798,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event Form_DirtyEventHandler _DirtyEvent;
 
@@ -820,7 +820,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_UndoEventHandler _UndoEvent;
 
@@ -842,7 +842,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_RecordExitEventHandler _RecordExitEvent;
 
@@ -864,7 +864,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_BeginBatchEditEventHandler _BeginBatchEditEvent;
 
@@ -886,7 +886,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_UndoBatchEditEventHandler _UndoBatchEditEvent;
 
@@ -908,7 +908,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_BeforeBeginTransactionEventHandler _BeforeBeginTransactionEvent;
 
@@ -930,7 +930,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_AfterBeginTransactionEventHandler _AfterBeginTransactionEvent;
 
@@ -952,7 +952,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_BeforeCommitTransactionEventHandler _BeforeCommitTransactionEvent;
 
@@ -974,7 +974,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_AfterCommitTransactionEventHandler _AfterCommitTransactionEvent;
 
@@ -996,7 +996,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_RollbackTransactionEventHandler _RollbackTransactionEvent;
 
@@ -1018,7 +1018,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_OnConnectEventHandler _OnConnectEvent;
 
@@ -1040,7 +1040,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_OnDisconnectEventHandler _OnDisconnectEvent;
 
@@ -1062,7 +1062,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_PivotTableChangeEventHandler _PivotTableChangeEvent;
 
@@ -1084,7 +1084,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_QueryEventHandler _QueryEvent;
 
@@ -1106,7 +1106,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_BeforeQueryEventHandler _BeforeQueryEvent;
 
@@ -1128,7 +1128,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_SelectionChangeEventHandler _SelectionChangeEvent;
 
@@ -1150,7 +1150,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_CommandBeforeExecuteEventHandler _CommandBeforeExecuteEvent;
 
@@ -1172,7 +1172,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_CommandCheckedEventHandler _CommandCheckedEvent;
 
@@ -1194,7 +1194,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_CommandEnabledEventHandler _CommandEnabledEvent;
 
@@ -1216,7 +1216,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_CommandExecuteEventHandler _CommandExecuteEvent;
 
@@ -1238,7 +1238,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_DataSetChangeEventHandler _DataSetChangeEvent;
 
@@ -1260,7 +1260,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_BeforeScreenTipEventHandler _BeforeScreenTipEvent;
 
@@ -1282,7 +1282,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_BeforeRenderEventHandler _BeforeRenderEvent;
 
@@ -1304,7 +1304,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_AfterRenderEventHandler _AfterRenderEvent;
 
@@ -1326,7 +1326,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_AfterFinalRenderEventHandler _AfterFinalRenderEvent;
 
@@ -1348,7 +1348,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_AfterLayoutEventHandler _AfterLayoutEvent;
 
@@ -1370,7 +1370,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_MouseWheelEventHandler _MouseWheelEvent;
 
@@ -1392,7 +1392,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_ViewChangeEventHandler _ViewChangeEvent;
 
@@ -1414,7 +1414,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event Form_DataChangeEventHandler _DataChangeEvent;
 

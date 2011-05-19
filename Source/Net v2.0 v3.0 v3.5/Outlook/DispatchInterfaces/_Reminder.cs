@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _Reminder SupportByLibrary "Outlook", 10,11,12,14
+	/// DispatchInterface _Reminder SupportByLibrary Outlook, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
@@ -64,7 +64,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -78,7 +78,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -93,7 +93,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject Parent
@@ -108,7 +108,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public string Caption
@@ -122,7 +122,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public bool IsVisible
@@ -136,7 +136,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject Item
@@ -151,7 +151,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public DateTime NextReminderDate
@@ -165,7 +165,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public DateTime OriginalReminderDate
@@ -183,7 +183,7 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public void Dismiss()
@@ -193,7 +193,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SnoozeTime">optional object SnoozeTime</param>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
@@ -204,7 +204,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 10 11 12 14 
+		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public void Snooze()

@@ -4,44 +4,44 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary PowerPoint 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlLegendPosition
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlLegendPositionBottom = -4107,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlLegendPositionCorner = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlLegendPositionLeft = -4131,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlLegendPositionRight = -4152,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlLegendPositionTop = -4160,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlLegendPositionCustom = -4161

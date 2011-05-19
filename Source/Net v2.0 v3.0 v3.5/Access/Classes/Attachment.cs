@@ -31,7 +31,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass Attachment SupportByLibrary "Access", 12,14
+	/// CoClass Attachment SupportByLibrary Access, 12,14
 	///</summary>
 	[SupportByLibrary("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -112,7 +112,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
@@ -134,7 +134,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_AfterUpdateEventHandler _AfterUpdateEvent;
 
@@ -156,7 +156,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_EnterEventHandler _EnterEvent;
 
@@ -178,7 +178,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_ExitEventHandler _ExitEvent;
 
@@ -200,7 +200,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_DirtyEventHandler _DirtyEvent;
 
@@ -222,7 +222,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_ChangeEventHandler _ChangeEvent;
 
@@ -244,7 +244,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_GotFocusEventHandler _GotFocusEvent;
 
@@ -266,7 +266,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_LostFocusEventHandler _LostFocusEvent;
 
@@ -288,7 +288,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_ClickEventHandler _ClickEvent;
 
@@ -310,7 +310,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_DblClickEventHandler _DblClickEvent;
 
@@ -332,7 +332,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_MouseDownEventHandler _MouseDownEvent;
 
@@ -354,7 +354,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -376,7 +376,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_MouseUpEventHandler _MouseUpEvent;
 
@@ -398,7 +398,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_KeyDownEventHandler _KeyDownEvent;
 
@@ -420,7 +420,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_KeyPressEventHandler _KeyPressEvent;
 
@@ -442,7 +442,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_KeyUpEventHandler _KeyUpEvent;
 
@@ -464,7 +464,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 12 14
+		/// SupportByLibrary Access, 12,14
 		/// </summary>
 		private event Attachment_AttachmentCurrentEventHandler _AttachmentCurrentEvent;
 

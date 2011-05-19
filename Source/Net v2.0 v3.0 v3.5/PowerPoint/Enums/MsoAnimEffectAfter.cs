@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoAnimEffectAfter
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimEffectAfterFreeze = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimEffectAfterRemove = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimEffectAfterHold = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		msoAnimEffectAfterTransition = 4

@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 11,12,14,
+	 /// SupportByLibrary Office 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoSyncVersionType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		msoSyncVersionLastViewed = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		msoSyncVersionServer = 1

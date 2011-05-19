@@ -33,7 +33,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Application SupportByLibrary "Outlook", 9,10,11,12,14
+	/// CoClass Application SupportByLibrary Outlook, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -128,7 +128,7 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Application_ItemSendEventHandler _ItemSendEvent;
 
@@ -150,7 +150,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Application_NewMailEventHandler _NewMailEvent;
 
@@ -172,7 +172,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Application_ReminderEventHandler _ReminderEvent;
 
@@ -194,7 +194,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Application_OptionsPagesAddEventHandler _OptionsPagesAddEvent;
 
@@ -216,7 +216,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Application_StartupEventHandler _StartupEvent;
 
@@ -238,7 +238,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 9 10 11 12 14
+		/// SupportByLibrary Outlook, 9,10,11,12,14
 		/// </summary>
 		private event Application_QuitEventHandler _QuitEvent;
 
@@ -260,7 +260,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Application_AdvancedSearchCompleteEventHandler _AdvancedSearchCompleteEvent;
 
@@ -282,7 +282,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Application_AdvancedSearchStoppedEventHandler _AdvancedSearchStoppedEvent;
 
@@ -304,7 +304,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 10 11 12 14
+		/// SupportByLibrary Outlook, 10,11,12,14
 		/// </summary>
 		private event Application_MAPILogonCompleteEventHandler _MAPILogonCompleteEvent;
 
@@ -326,7 +326,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 11 12 14
+		/// SupportByLibrary Outlook, 11,12,14
 		/// </summary>
 		private event Application_NewMailExEventHandler _NewMailExEvent;
 
@@ -348,7 +348,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event Application_AttachmentContextMenuDisplayEventHandler _AttachmentContextMenuDisplayEvent;
 
@@ -370,7 +370,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event Application_FolderContextMenuDisplayEventHandler _FolderContextMenuDisplayEvent;
 
@@ -392,7 +392,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event Application_StoreContextMenuDisplayEventHandler _StoreContextMenuDisplayEvent;
 
@@ -414,7 +414,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event Application_ShortcutContextMenuDisplayEventHandler _ShortcutContextMenuDisplayEvent;
 
@@ -436,7 +436,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event Application_ViewContextMenuDisplayEventHandler _ViewContextMenuDisplayEvent;
 
@@ -458,7 +458,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event Application_ItemContextMenuDisplayEventHandler _ItemContextMenuDisplayEvent;
 
@@ -480,7 +480,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event Application_ContextMenuCloseEventHandler _ContextMenuCloseEvent;
 
@@ -502,7 +502,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event Application_ItemLoadEventHandler _ItemLoadEvent;
 
@@ -524,7 +524,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event Application_BeforeFolderSharingDialogEventHandler _BeforeFolderSharingDialogEvent;
 

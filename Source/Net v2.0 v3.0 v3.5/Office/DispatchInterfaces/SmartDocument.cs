@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SmartDocument SupportByLibrary "Office", 11,12,14
+	/// DispatchInterface SmartDocument SupportByLibrary Office, 11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public string SolutionID
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public string SolutionURL
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="ConsiderAllSchemas">bool ConsiderAllSchemas</param>
 		[SupportByLibrary("Office", 11,12,14)]
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public void RefreshPane()

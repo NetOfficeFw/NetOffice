@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// Interface ConnectionEventsVt SupportByLibrary "ADODB", 2.1,2.5
+	/// Interface ConnectionEventsVt SupportByLibrary ADODB, 2.1,2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
@@ -66,7 +66,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="TransactionLevel">Int32 TransactionLevel</param>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
@@ -81,7 +81,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
@@ -95,7 +95,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
@@ -109,7 +109,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="Source">ref string Source</param>
 		/// <param name="CursorType">NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType</param>
@@ -131,7 +131,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="RecordsAffected">Int32 RecordsAffected</param>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
@@ -148,7 +148,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="ConnectionString">ref string ConnectionString</param>
 		/// <param name="UserID">ref string UserID</param>
@@ -170,7 +170,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
@@ -184,7 +184,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>

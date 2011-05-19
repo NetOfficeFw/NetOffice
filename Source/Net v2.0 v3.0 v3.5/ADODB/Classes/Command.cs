@@ -14,7 +14,7 @@ namespace NetOffice.ADODBApi
 	#endregion
 
 	///<summary>
-	/// CoClass Command SupportByLibrary "ADODB", 2.1,2.5
+	/// CoClass Command SupportByLibrary ADODB, 2.1,2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

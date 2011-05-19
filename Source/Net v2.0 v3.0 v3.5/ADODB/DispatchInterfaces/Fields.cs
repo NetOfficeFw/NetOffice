@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface Fields SupportByLibrary "ADODB", 2.1,2.5
+	/// DispatchInterface Fields SupportByLibrary ADODB, 2.1,2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -50,7 +50,7 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 Count
@@ -64,7 +64,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("ADODB", 2.5)]
@@ -85,7 +85,7 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public void Refresh()
@@ -95,7 +95,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 2.5 
+		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
@@ -109,7 +109,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
@@ -124,7 +124,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("ADODB", 2.1)]
@@ -135,7 +135,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public void Update()
@@ -145,7 +145,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="ResyncValues">NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues</param>
 		[SupportByLibrary("ADODB", 2.5)]
@@ -156,7 +156,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public void CancelUpdate()

@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 6,12,
+	 /// SupportByLibrary DAO 6, 12, 
 	 /// </summary>
 	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum LockTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbPessimistic = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbOptimistic = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbOptimisticValue = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbOptimisticBatch = 5

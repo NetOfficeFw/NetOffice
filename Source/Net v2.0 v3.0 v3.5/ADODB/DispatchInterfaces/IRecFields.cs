@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface IRecFields SupportByLibrary "ADODB", 2.5
+	/// DispatchInterface IRecFields SupportByLibrary ADODB, 2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public void ADOCheck()

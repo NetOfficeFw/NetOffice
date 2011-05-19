@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcSearchDirection
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acUp = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acDown = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSearchAll = 2

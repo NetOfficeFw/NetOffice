@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// Interface ADOConnectionConstruction SupportByLibrary "ADODB", 2.1,2.5
+	/// Interface ADOConnectionConstruction SupportByLibrary ADODB, 2.1,2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsInterface)]

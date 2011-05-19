@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface Field SupportByLibrary "ADODB", 2.1,2.5
+	/// DispatchInterface Field SupportByLibrary ADODB, 2.1,2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public Int32 ActualSize
@@ -63,7 +63,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public Int32 Attributes
@@ -82,7 +82,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public Int32 DefinedSize
@@ -101,7 +101,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public string Name
@@ -115,7 +115,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public NetOffice.ADODBApi.Enums.DataTypeEnum Type
@@ -134,7 +134,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public object Value
@@ -162,7 +162,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public byte Precision
@@ -181,7 +181,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public byte NumericScale
@@ -200,7 +200,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public object OriginalValue
@@ -223,7 +223,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public object UnderlyingValue
@@ -246,7 +246,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public COMObject DataFormat
@@ -266,7 +266,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Properties Properties
@@ -281,7 +281,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.5 
+		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public Int32 Status
@@ -299,7 +299,7 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		/// <param name="Data">object Data</param>
 		[SupportByLibrary("ADODB", 2.1)]
@@ -310,7 +310,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 2.1 
+		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		/// <param name="Length">Int32 Length</param>
 		[SupportByLibrary("ADODB", 2.1)]

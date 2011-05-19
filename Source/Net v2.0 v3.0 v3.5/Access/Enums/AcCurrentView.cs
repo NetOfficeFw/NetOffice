@@ -4,56 +4,56 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary Access 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcCurrentView
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCurViewDesign = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCurViewFormBrowse = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCurViewDatasheet = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCurViewPivotTable = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCurViewPivotChart = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		acCurViewPreview = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCurViewReportBrowse = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,14,
+		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		acCurViewLayout = 7

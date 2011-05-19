@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 6,
+	 /// SupportByLibrary MSComctlLib 6, 
 	 /// </summary>
 	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OLEDropEffectConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		ccOLEDropEffectNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		ccOLEDropEffectCopy = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		ccOLEDropEffectMove = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,
+		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		ccOLEDropEffectScroll = -2147483648

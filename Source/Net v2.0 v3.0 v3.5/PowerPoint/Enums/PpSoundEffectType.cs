@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpSoundEffectType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppSoundEffectsMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppSoundNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppSoundStopPrevious = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppSoundFile = 2

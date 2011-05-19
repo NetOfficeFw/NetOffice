@@ -14,7 +14,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass ConversationHeader SupportByLibrary "Outlook", 14
+	/// CoClass ConversationHeader SupportByLibrary Outlook, 14
 	///</summary>
 	[SupportByLibrary("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

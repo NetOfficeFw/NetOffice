@@ -16,7 +16,7 @@ namespace NetOffice.OfficeApi
 	#endregion
 
 	///<summary>
-	/// CoClass MsoEnvelope SupportByLibrary "Office", 10,11,12,14
+	/// CoClass MsoEnvelope SupportByLibrary Office, 10,11,12,14
 	///</summary>
 	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -97,7 +97,7 @@ namespace NetOffice.OfficeApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Office, 10 11 12 14
+		/// SupportByLibrary Office, 10,11,12,14
 		/// </summary>
 		private event MsoEnvelope_EnvelopeShowEventHandler _EnvelopeShowEvent;
 
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office, 10 11 12 14
+		/// SupportByLibrary Office, 10,11,12,14
 		/// </summary>
 		private event MsoEnvelope_EnvelopeHideEventHandler _EnvelopeHideEvent;
 

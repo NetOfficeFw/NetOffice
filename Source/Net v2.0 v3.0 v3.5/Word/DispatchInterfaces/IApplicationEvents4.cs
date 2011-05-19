@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface IApplicationEvents4 SupportByLibrary "Word", 11,12,14
+	/// DispatchInterface IApplicationEvents4 SupportByLibrary Word, 11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public void Startup()
@@ -63,7 +63,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public void Quit()
@@ -73,7 +73,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public void DocumentChange()
@@ -83,7 +83,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -94,7 +94,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Cancel">ref bool Cancel</param>
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Cancel">ref bool Cancel</param>
@@ -122,7 +122,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="SaveAsUI">ref bool SaveAsUI</param>
@@ -138,7 +138,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -149,7 +149,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Wn">NetOffice.WordApi.Window Wn</param>
@@ -161,7 +161,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Wn">NetOffice.WordApi.Window Wn</param>
@@ -173,7 +173,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -184,7 +184,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="Cancel">ref bool Cancel</param>
@@ -198,7 +198,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="Cancel">ref bool Cancel</param>
@@ -212,7 +212,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -223,7 +223,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -234,7 +234,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="DocResult">NetOffice.WordApi.Document DocResult</param>
@@ -246,7 +246,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -257,7 +257,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="StartRecord">Int32 StartRecord</param>
@@ -273,7 +273,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Cancel">ref bool Cancel</param>
@@ -287,7 +287,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -298,7 +298,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Handled">ref bool Handled</param>
@@ -312,7 +312,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -323,7 +323,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="FromState">ref Int32 FromState</param>
@@ -341,7 +341,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Wn">NetOffice.WordApi.Window Wn</param>
@@ -353,7 +353,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="OldXMLNode">NetOffice.WordApi.XMLNode OldXMLNode</param>
@@ -369,7 +369,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="XMLNode">NetOffice.WordApi.XMLNode XMLNode</param>
 		[SupportByLibrary("Word", 11,12,14)]
@@ -380,7 +380,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="SyncEventType">NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType</param>
@@ -392,7 +392,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 11 12 14 
+		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="cpDeliveryAddrStart">Int32 cpDeliveryAddrStart</param>
@@ -415,7 +415,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Handled">ref bool Handled</param>
@@ -430,7 +430,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		[SupportByLibrary("Word", 14)]
@@ -442,7 +442,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		/// <param name="Cancel">ref bool Cancel</param>
@@ -457,7 +457,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		/// <param name="CloseReason">Int32 CloseReason</param>
@@ -473,7 +473,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		[SupportByLibrary("Word", 14)]
@@ -485,7 +485,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		[SupportByLibrary("Word", 14)]
@@ -497,7 +497,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 14 
+		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		[SupportByLibrary("Word", 14)]

@@ -28,7 +28,7 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass Worksheet SupportByLibrary "Excel", 9,10,11,12,14
+	/// CoClass Worksheet SupportByLibrary Excel, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Worksheet_SelectionChangeEventHandler _SelectionChangeEvent;
 
@@ -131,7 +131,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Worksheet_BeforeDoubleClickEventHandler _BeforeDoubleClickEvent;
 
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Worksheet_BeforeRightClickEventHandler _BeforeRightClickEvent;
 
@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Worksheet_ActivateEventHandler _ActivateEvent;
 
@@ -197,7 +197,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Worksheet_DeactivateEventHandler _DeactivateEvent;
 
@@ -219,7 +219,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Worksheet_CalculateEventHandler _CalculateEvent;
 
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Worksheet_ChangeEventHandler _ChangeEvent;
 
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Worksheet_FollowHyperlinkEventHandler _FollowHyperlinkEvent;
 
@@ -285,7 +285,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 10 11 12 14
+		/// SupportByLibrary Excel, 10,11,12,14
 		/// </summary>
 		private event Worksheet_PivotTableUpdateEventHandler _PivotTableUpdateEvent;
 

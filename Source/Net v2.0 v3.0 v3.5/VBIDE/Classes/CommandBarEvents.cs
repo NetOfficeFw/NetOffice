@@ -15,7 +15,7 @@ namespace NetOffice.VBIDEApi
 	#endregion
 
 	///<summary>
-	/// CoClass CommandBarEvents SupportByLibrary "VBIDE", 5.3,12
+	/// CoClass CommandBarEvents SupportByLibrary VBIDE, 5.3,12
 	///</summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -96,7 +96,7 @@ namespace NetOffice.VBIDEApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary VBIDE, 5.3 12
+		/// SupportByLibrary VBIDE, 5.3,12
 		/// </summary>
 		private event CommandBarEvents_ClickEventHandler _ClickEvent;
 

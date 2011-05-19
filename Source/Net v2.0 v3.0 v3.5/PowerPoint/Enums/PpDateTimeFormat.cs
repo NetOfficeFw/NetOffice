@@ -4,98 +4,98 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpDateTimeFormat
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimeFormatMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimeMdyy = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimeddddMMMMddyyyy = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimedMMMMyyyy = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimeMMMMdyyyy = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimedMMMyy = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimeMMMMyy = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimeMMyy = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimeMMddyyHmm = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimeMMddyyhmmAMPM = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimeHmm = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimeHmmss = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimehmmAMPM = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppDateTimehmmssAMPM = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppDateTimeFigureOut = 14

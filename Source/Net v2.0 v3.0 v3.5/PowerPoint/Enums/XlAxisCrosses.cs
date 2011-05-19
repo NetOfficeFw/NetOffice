@@ -4,32 +4,32 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary PowerPoint 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlAxisCrosses
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlAxisCrossesAutomatic = -4105,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlAxisCrossesCustom = -4114,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlAxisCrossesMaximum = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		xlAxisCrossesMinimum = 4

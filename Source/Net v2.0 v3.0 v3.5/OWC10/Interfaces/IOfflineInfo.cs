@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface IOfflineInfo SupportByLibrary "OWC10", 1
+	/// Interface IOfflineInfo SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pwzServerFilter">string pwzServerFilter</param>
@@ -65,7 +65,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pwzServerFilter">ref string pwzServerFilter</param>
@@ -80,7 +80,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pfSubscribed">ref Int32 pfSubscribed</param>
@@ -95,7 +95,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pbstrPath">ref string pbstrPath</param>
 		[SupportByLibrary("OWC10", 1)]

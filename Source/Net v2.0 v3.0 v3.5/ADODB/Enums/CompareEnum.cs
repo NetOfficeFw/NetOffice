@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 2.1,2.5,
+	 /// SupportByLibrary ADODB 2.1, 2.5, 
 	 /// </summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum CompareEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCompareLessThan = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCompareEqual = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCompareGreaterThan = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCompareNotEqual = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.1,2.5,
+		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCompareNotComparable = 4

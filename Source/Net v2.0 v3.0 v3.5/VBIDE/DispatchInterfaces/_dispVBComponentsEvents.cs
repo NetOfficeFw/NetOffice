@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _dispVBComponentsEvents SupportByLibrary "VBIDE", 5.3,12
+	/// DispatchInterface _dispVBComponentsEvents SupportByLibrary VBIDE, 5.3,12
 	///</summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -64,7 +64,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -75,7 +75,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		/// <param name="OldName">string OldName</param>
@@ -87,7 +87,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -98,7 +98,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -109,7 +109,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 5.3 12 
+		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]

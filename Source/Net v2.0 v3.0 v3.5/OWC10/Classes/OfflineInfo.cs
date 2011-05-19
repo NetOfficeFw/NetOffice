@@ -14,7 +14,7 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass OfflineInfo SupportByLibrary "OWC10", 1
+	/// CoClass OfflineInfo SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

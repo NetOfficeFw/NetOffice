@@ -40,7 +40,7 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass ChartSpace SupportByLibrary "OWC10", 1
+	/// CoClass ChartSpace SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

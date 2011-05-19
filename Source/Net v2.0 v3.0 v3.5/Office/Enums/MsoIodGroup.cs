@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary Office 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoIodGroup
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Office 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 14)]
 		msoIodGroupPIAs = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Office 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 14)]
 		msoIodGroupVSTOR35Mgd = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Office 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 14)]
 		msoIodGroupVSTOR40Mgd = 2

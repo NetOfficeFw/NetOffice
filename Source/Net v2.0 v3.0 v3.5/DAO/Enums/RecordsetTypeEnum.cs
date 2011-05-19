@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 6,12,
+	 /// SupportByLibrary DAO 6, 12, 
 	 /// </summary>
 	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum RecordsetTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbOpenTable = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbOpenDynaset = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbOpenSnapshot = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbOpenForwardOnly = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbOpenDynamic = 16

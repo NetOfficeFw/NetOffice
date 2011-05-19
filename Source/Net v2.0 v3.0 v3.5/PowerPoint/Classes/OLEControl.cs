@@ -16,7 +16,7 @@ namespace NetOffice.PowerPointApi
 	#endregion
 
 	///<summary>
-	/// CoClass OLEControl SupportByLibrary "PowerPoint", 9,10,11,12,14
+	/// CoClass OLEControl SupportByLibrary PowerPoint, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -97,7 +97,7 @@ namespace NetOffice.PowerPointApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event OLEControl_GotFocusEventHandler _GotFocusEvent;
 
@@ -119,7 +119,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint, 9 10 11 12 14
+		/// SupportByLibrary PowerPoint, 9,10,11,12,14
 		/// </summary>
 		private event OLEControl_LostFocusEventHandler _LostFocusEvent;
 

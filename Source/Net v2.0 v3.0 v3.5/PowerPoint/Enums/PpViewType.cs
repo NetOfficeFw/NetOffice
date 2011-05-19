@@ -4,80 +4,80 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpViewType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppViewSlide = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppViewSlideMaster = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppViewNotesPage = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppViewHandoutMaster = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppViewNotesMaster = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppViewOutline = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppViewSlideSorter = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppViewTitleMaster = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		ppViewNormal = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppViewPrintPreview = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppViewThumbnails = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		ppViewMasterThumbnails = 12

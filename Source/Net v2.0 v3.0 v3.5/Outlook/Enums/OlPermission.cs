@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 11,12,14,
+	 /// SupportByLibrary Outlook 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlPermission
 	{
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olUnrestricted = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olDoNotForward = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olPermissionTemplate = 2

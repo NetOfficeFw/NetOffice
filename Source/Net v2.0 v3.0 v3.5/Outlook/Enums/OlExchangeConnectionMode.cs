@@ -4,62 +4,62 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 11,12,14,
+	 /// SupportByLibrary Outlook 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlExchangeConnectionMode
 	{
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olNoExchange = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olOffline = 100,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olCachedOffline = 200,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olDisconnected = 300,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olCachedDisconnected = 400,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olCachedConnectedHeaders = 500,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olCachedConnectedDrizzle = 600,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olCachedConnectedFull = 700,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 11,12,14)]
 		olOnline = 800

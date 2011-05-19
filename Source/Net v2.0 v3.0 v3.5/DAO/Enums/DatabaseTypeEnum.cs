@@ -4,62 +4,62 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 6,12,
+	 /// SupportByLibrary DAO 6, 12, 
 	 /// </summary>
 	[SupportByLibrary("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum DatabaseTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbVersion10 = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbEncrypt = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbDecrypt = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbVersion11 = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbVersion20 = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbVersion30 = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary 6,12,
+		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		dbVersion40 = 64,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,
+		 /// SupportByLibrary DAO 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 12)]
 		dbVersion120 = 128,
 
 		 /// <summary>
-		 /// SupportByLibrary 12,
+		 /// SupportByLibrary DAO 12, 
 		 /// </summary>
 		[SupportByLibrary("DAO", 12)]
 		dbVersion140 = 256

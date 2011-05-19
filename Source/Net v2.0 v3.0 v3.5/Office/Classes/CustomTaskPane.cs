@@ -16,7 +16,7 @@ namespace NetOffice.OfficeApi
 	#endregion
 
 	///<summary>
-	/// CoClass CustomTaskPane SupportByLibrary "Office", 12,14
+	/// CoClass CustomTaskPane SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -97,7 +97,7 @@ namespace NetOffice.OfficeApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Office, 12 14
+		/// SupportByLibrary Office, 12,14
 		/// </summary>
 		private event CustomTaskPane_VisibleStateChangeEventHandler _VisibleStateChangeEvent;
 
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office, 12 14
+		/// SupportByLibrary Office, 12,14
 		/// </summary>
 		private event CustomTaskPane_DockPositionStateChangeEventHandler _DockPositionStateChangeEvent;
 

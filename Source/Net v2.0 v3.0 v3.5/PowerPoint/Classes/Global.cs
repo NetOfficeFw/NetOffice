@@ -14,7 +14,7 @@ namespace NetOffice.PowerPointApi
 	#endregion
 
 	///<summary>
-	/// CoClass Global SupportByLibrary "PowerPoint", 9,10,11,12,14
+	/// CoClass Global SupportByLibrary PowerPoint, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

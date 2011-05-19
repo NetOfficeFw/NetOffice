@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface PivotClassFactory SupportByLibrary "OWC10", 1
+	/// DispatchInterface PivotClassFactory SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="DetailCell">NetOffice.OWC10Api.PivotDetailCell DetailCell</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -62,7 +62,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Aggregate">NetOffice.OWC10Api.PivotAggregate Aggregate</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -75,7 +75,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="RowMember">NetOffice.OWC10Api.PivotRowMember RowMember</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -88,7 +88,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="ColumnMember">NetOffice.OWC10Api.PivotColumnMember ColumnMember</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -101,7 +101,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Cell">NetOffice.OWC10Api.PivotCell Cell</param>
 		[SupportByLibrary("OWC10", 1)]

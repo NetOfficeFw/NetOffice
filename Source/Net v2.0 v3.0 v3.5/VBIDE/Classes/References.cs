@@ -16,7 +16,7 @@ namespace NetOffice.VBIDEApi
 	#endregion
 
 	///<summary>
-	/// CoClass References SupportByLibrary "VBIDE", 5.3,12
+	/// CoClass References SupportByLibrary VBIDE, 5.3,12
 	///</summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -97,7 +97,7 @@ namespace NetOffice.VBIDEApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary VBIDE, 5.3 12
+		/// SupportByLibrary VBIDE, 5.3,12
 		/// </summary>
 		private event References_ItemAddedEventHandler _ItemAddedEvent;
 
@@ -119,7 +119,7 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE, 5.3 12
+		/// SupportByLibrary VBIDE, 5.3,12
 		/// </summary>
 		private event References_ItemRemovedEventHandler _ItemRemovedEvent;
 

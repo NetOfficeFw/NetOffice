@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,10,11,12,14,
+	 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcCloseSave
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSavePrompt = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSaveYes = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,10,11,12,14,
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		acSaveNo = 2

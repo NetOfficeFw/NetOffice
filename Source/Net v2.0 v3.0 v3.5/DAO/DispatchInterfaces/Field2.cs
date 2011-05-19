@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface Field2 SupportByLibrary "DAO", 12
+	/// DispatchInterface Field2 SupportByLibrary DAO, 12
 	///</summary>
 	[SupportByLibrary("DAO", 12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 12 
+		/// SupportByLibrary DAO 12
 		/// </summary>
 		[SupportByLibrary("DAO", 12)]
 		public NetOffice.DAOApi.Properties Properties
@@ -64,7 +64,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 
+		/// SupportByLibrary DAO 12
 		/// </summary>
 		[SupportByLibrary("DAO", 12)]
 		public NetOffice.DAOApi.ComplexType ComplexType
@@ -79,7 +79,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 
+		/// SupportByLibrary DAO 12
 		/// </summary>
 		[SupportByLibrary("DAO", 12)]
 		public bool IsComplex
@@ -93,7 +93,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 
+		/// SupportByLibrary DAO 12
 		/// </summary>
 		[SupportByLibrary("DAO", 12)]
 		public bool AppendOnly
@@ -112,7 +112,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 
+		/// SupportByLibrary DAO 12
 		/// </summary>
 		[SupportByLibrary("DAO", 12)]
 		public string Expression
@@ -135,7 +135,7 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 
+		/// SupportByLibrary DAO 12
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("DAO", 12)]
@@ -146,7 +146,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 
+		/// SupportByLibrary DAO 12
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		[SupportByLibrary("DAO", 12)]

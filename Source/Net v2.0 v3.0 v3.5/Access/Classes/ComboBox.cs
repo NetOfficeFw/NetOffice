@@ -32,7 +32,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass ComboBox SupportByLibrary "Access", 9,10,11,12,14
+	/// CoClass ComboBox SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -120,7 +120,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
@@ -142,7 +142,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_AfterUpdateEventHandler _AfterUpdateEvent;
 
@@ -164,7 +164,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_ChangeEventHandler _ChangeEvent;
 
@@ -186,7 +186,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_NotInListEventHandler _NotInListEvent;
 
@@ -208,7 +208,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_EnterEventHandler _EnterEvent;
 
@@ -230,7 +230,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_ExitEventHandler _ExitEvent;
 
@@ -252,7 +252,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_GotFocusEventHandler _GotFocusEvent;
 
@@ -274,7 +274,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_LostFocusEventHandler _LostFocusEvent;
 
@@ -296,7 +296,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_ClickEventHandler _ClickEvent;
 
@@ -318,7 +318,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_DblClickEventHandler _DblClickEvent;
 
@@ -340,7 +340,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_MouseDownEventHandler _MouseDownEvent;
 
@@ -362,7 +362,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -384,7 +384,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_MouseUpEventHandler _MouseUpEvent;
 
@@ -406,7 +406,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_KeyDownEventHandler _KeyDownEvent;
 
@@ -428,7 +428,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_KeyPressEventHandler _KeyPressEvent;
 
@@ -450,7 +450,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event ComboBox_KeyUpEventHandler _KeyUpEvent;
 
@@ -472,7 +472,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event ComboBox_DirtyEventHandler _DirtyEvent;
 
@@ -494,7 +494,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event ComboBox_UndoEventHandler _UndoEvent;
 

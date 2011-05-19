@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _MacroError SupportByLibrary "Access", 12,14
+	/// DispatchInterface _MacroError SupportByLibrary Access, 12,14
 	///</summary>
 	[SupportByLibrary("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string Condition
@@ -63,7 +63,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string ActionName
@@ -77,7 +77,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string Arguments
@@ -91,7 +91,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string Description
@@ -105,7 +105,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public Int32 Number
@@ -119,7 +119,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string MacroName
@@ -137,7 +137,7 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[SupportByLibrary("Access", 12,14)]

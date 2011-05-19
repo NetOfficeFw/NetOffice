@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface IOleParentUndoUnit SupportByLibrary "OWC10", 1
+	/// Interface IOleParentUndoUnit SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pPUU">NetOffice.OWC10Api.IOleParentUndoUnit pPUU</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -64,7 +64,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pPUU">NetOffice.OWC10Api.IOleParentUndoUnit pPUU</param>
 		/// <param name="fCommit">Int32 fCommit</param>
@@ -77,7 +77,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -89,7 +89,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -101,7 +101,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pdwState">ref Int32 pdwState</param>
 		[SupportByLibrary("OWC10", 1)]

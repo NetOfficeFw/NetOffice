@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary Outlook 14, 
 	 /// </summary>
 	[SupportByLibrary("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlSelectionLocation
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		olViewList = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		olToDoBarTaskList = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		olToDoBarAppointmentList = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		olDailyTaskList = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		olAttachmentWell = 4

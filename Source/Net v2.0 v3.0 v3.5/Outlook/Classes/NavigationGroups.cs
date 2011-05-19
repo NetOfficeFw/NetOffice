@@ -17,7 +17,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass NavigationGroups SupportByLibrary "Outlook", 12,14
+	/// CoClass NavigationGroups SupportByLibrary Outlook, 12,14
 	///</summary>
 	[SupportByLibrary("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -98,7 +98,7 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event NavigationGroups_SelectedChangeEventHandler _SelectedChangeEvent;
 
@@ -120,7 +120,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event NavigationGroups_NavigationFolderAddEventHandler _NavigationFolderAddEvent;
 
@@ -142,7 +142,7 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook, 12 14
+		/// SupportByLibrary Outlook, 12,14
 		/// </summary>
 		private event NavigationGroups_NavigationFolderRemoveEventHandler _NavigationFolderRemoveEvent;
 

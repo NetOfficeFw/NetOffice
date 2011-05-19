@@ -14,7 +14,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass MacroError SupportByLibrary "Access", 12,14
+	/// CoClass MacroError SupportByLibrary Access, 12,14
 	///</summary>
 	[SupportByLibrary("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

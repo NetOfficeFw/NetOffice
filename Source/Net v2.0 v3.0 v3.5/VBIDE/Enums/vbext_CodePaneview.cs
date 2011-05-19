@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 5.3,12,
+	 /// SupportByLibrary VBIDE 5.3, 12, 
 	 /// </summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum vbext_CodePaneview
 	{
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_cv_ProcedureView = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbext_cv_FullModuleView = 1

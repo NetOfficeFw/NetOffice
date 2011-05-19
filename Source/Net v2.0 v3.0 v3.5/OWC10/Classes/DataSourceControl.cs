@@ -36,7 +36,7 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass DataSourceControl SupportByLibrary "OWC10", 1
+	/// CoClass DataSourceControl SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

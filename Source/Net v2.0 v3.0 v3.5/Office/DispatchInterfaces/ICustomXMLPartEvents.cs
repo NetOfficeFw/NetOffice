@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ICustomXMLPartEvents SupportByLibrary "Office", 12,14
+	/// DispatchInterface ICustomXMLPartEvents SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="NewNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>
 		/// <param name="InUndoRedo">bool InUndoRedo</param>
@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="OldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
 		/// <param name="OldParentNode">NetOffice.OfficeApi.CustomXMLNode OldParentNode</param>
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="OldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
 		/// <param name="NewNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>

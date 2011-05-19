@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 14,
+	 /// SupportByLibrary Access 14, 
 	 /// </summary>
 	[SupportByLibrary("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcResourceType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acResourceTheme = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 14,
+		 /// SupportByLibrary Access 14, 
 		 /// </summary>
 		[SupportByLibrary("Access", 14)]
 		acResourceImage = 1

@@ -4,86 +4,86 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 5.3,12,
+	 /// SupportByLibrary VBIDE 5.3, 12, 
 	 /// </summary>
 	[SupportByLibrary("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum vbextFileTypes
 	{
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeForm = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeModule = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeClass = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeProject = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeExe = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeFrx = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeRes = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeUserControl = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypePropertyPage = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeDocObject = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeBinary = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeGroupProject = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary 5.3,12,
+		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		vbextFileTypeDesigners = 12

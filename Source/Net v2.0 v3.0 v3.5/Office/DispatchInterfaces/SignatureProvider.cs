@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SignatureProvider SupportByLibrary "Office", 12,14
+	/// DispatchInterface SignatureProvider SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="siglnimg">NetOffice.OfficeApi.Enums.SignatureLineImage siglnimg</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="QueryContinue">object QueryContinue</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="QueryContinue">object QueryContinue</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="sigprovdet">NetOffice.OfficeApi.Enums.SignatureProviderDetail sigprovdet</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="QueryContinue">object QueryContinue</param>
 		/// <param name="Stream">object Stream</param>

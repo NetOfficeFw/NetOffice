@@ -4,50 +4,50 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 10,11,12,14,
+	 /// SupportByLibrary Office 10, 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoDiagramType
 	{
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramOrgChart = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramCycle = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramRadial = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramPyramid = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramVenn = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary 10,11,12,14,
+		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramTarget = 6

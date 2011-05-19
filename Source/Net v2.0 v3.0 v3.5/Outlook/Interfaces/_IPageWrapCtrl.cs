@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// Interface _IPageWrapCtrl SupportByLibrary "Outlook", 10
+	/// Interface _IPageWrapCtrl SupportByLibrary Outlook, 10
 	///</summary>
 	[SupportByLibrary("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -48,7 +48,7 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 10 
+		/// SupportByLibrary Outlook 10
 		/// </summary>
 		[SupportByLibrary("Outlook", 10)]
 		public Int32 BackColor

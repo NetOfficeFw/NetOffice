@@ -31,7 +31,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass TextBox SupportByLibrary "Access", 9,10,11,12,14
+	/// CoClass TextBox SupportByLibrary Access, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -119,7 +119,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
@@ -141,7 +141,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_AfterUpdateEventHandler _AfterUpdateEvent;
 
@@ -163,7 +163,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_ChangeEventHandler _ChangeEvent;
 
@@ -185,7 +185,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_EnterEventHandler _EnterEvent;
 
@@ -207,7 +207,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_ExitEventHandler _ExitEvent;
 
@@ -229,7 +229,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_GotFocusEventHandler _GotFocusEvent;
 
@@ -251,7 +251,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_LostFocusEventHandler _LostFocusEvent;
 
@@ -273,7 +273,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_ClickEventHandler _ClickEvent;
 
@@ -295,7 +295,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_DblClickEventHandler _DblClickEvent;
 
@@ -317,7 +317,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_MouseDownEventHandler _MouseDownEvent;
 
@@ -339,7 +339,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -361,7 +361,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_MouseUpEventHandler _MouseUpEvent;
 
@@ -383,7 +383,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_KeyDownEventHandler _KeyDownEvent;
 
@@ -405,7 +405,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_KeyPressEventHandler _KeyPressEvent;
 
@@ -427,7 +427,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 9 10 11 12 14
+		/// SupportByLibrary Access, 9,10,11,12,14
 		/// </summary>
 		private event TextBox_KeyUpEventHandler _KeyUpEvent;
 
@@ -449,7 +449,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event TextBox_DirtyEventHandler _DirtyEvent;
 
@@ -471,7 +471,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access, 10 11 12 14
+		/// SupportByLibrary Access, 10,11,12,14
 		/// </summary>
 		private event TextBox_UndoEventHandler _UndoEvent;
 

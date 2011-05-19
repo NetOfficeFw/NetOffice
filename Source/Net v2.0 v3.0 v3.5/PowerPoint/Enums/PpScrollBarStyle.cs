@@ -4,20 +4,20 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 9,
+	 /// SupportByLibrary PowerPoint 9, 
 	 /// </summary>
 	[SupportByLibrary("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpScrollBarStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary 9,
+		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		ppScrollBarVertical = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 9,
+		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		ppScrollBarHorizontal = 1

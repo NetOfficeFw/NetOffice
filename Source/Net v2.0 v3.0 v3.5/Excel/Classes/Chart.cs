@@ -27,7 +27,7 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass Chart SupportByLibrary "Excel", 9,10,11,12,14
+	/// CoClass Chart SupportByLibrary Excel, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_ActivateEventHandler _ActivateEvent;
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_DeactivateEventHandler _DeactivateEvent;
 
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_ResizeEventHandler _ResizeEvent;
 
@@ -174,7 +174,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_MouseDownEventHandler _MouseDownEvent;
 
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_MouseUpEventHandler _MouseUpEvent;
 
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_MouseMoveEventHandler _MouseMoveEvent;
 
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_BeforeRightClickEventHandler _BeforeRightClickEvent;
 
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_DragPlotEventHandler _DragPlotEvent;
 
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_DragOverEventHandler _DragOverEvent;
 
@@ -306,7 +306,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_BeforeDoubleClickEventHandler _BeforeDoubleClickEvent;
 
@@ -328,7 +328,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_SelectEventHandler _SelectEvent;
 
@@ -350,7 +350,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_SeriesChangeEventHandler _SeriesChangeEvent;
 
@@ -372,7 +372,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel, 9 10 11 12 14
+		/// SupportByLibrary Excel, 9,10,11,12,14
 		/// </summary>
 		private event Chart_CalculateEventHandler _CalculateEvent;
 

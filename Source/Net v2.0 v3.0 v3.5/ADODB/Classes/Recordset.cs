@@ -25,7 +25,7 @@ namespace NetOffice.ADODBApi
 	#endregion
 
 	///<summary>
-	/// CoClass Recordset SupportByLibrary "ADODB", 2.1,2.5
+	/// CoClass Recordset SupportByLibrary ADODB, 2.1,2.5
 	///</summary>
 	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -106,7 +106,7 @@ namespace NetOffice.ADODBApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Recordset_WillChangeFieldEventHandler _WillChangeFieldEvent;
 
@@ -128,7 +128,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Recordset_FieldChangeCompleteEventHandler _FieldChangeCompleteEvent;
 
@@ -150,7 +150,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Recordset_WillChangeRecordEventHandler _WillChangeRecordEvent;
 
@@ -172,7 +172,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Recordset_RecordChangeCompleteEventHandler _RecordChangeCompleteEvent;
 
@@ -194,7 +194,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Recordset_WillChangeRecordsetEventHandler _WillChangeRecordsetEvent;
 
@@ -216,7 +216,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Recordset_RecordsetChangeCompleteEventHandler _RecordsetChangeCompleteEvent;
 
@@ -238,7 +238,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Recordset_WillMoveEventHandler _WillMoveEvent;
 
@@ -260,7 +260,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Recordset_MoveCompleteEventHandler _MoveCompleteEvent;
 
@@ -282,7 +282,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Recordset_EndOfRecordsetEventHandler _EndOfRecordsetEvent;
 
@@ -304,7 +304,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Recordset_FetchProgressEventHandler _FetchProgressEvent;
 
@@ -326,7 +326,7 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB, 2.1 2.5
+		/// SupportByLibrary ADODB, 2.1,2.5
 		/// </summary>
 		private event Recordset_FetchCompleteEventHandler _FetchCompleteEvent;
 

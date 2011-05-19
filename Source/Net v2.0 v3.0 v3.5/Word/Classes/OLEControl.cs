@@ -16,7 +16,7 @@ namespace NetOffice.WordApi
 	#endregion
 
 	///<summary>
-	/// CoClass OLEControl SupportByLibrary "Word", 9,10,11,12,14
+	/// CoClass OLEControl SupportByLibrary Word, 9,10,11,12,14
 	///</summary>
 	[SupportByLibrary("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
@@ -97,7 +97,7 @@ namespace NetOffice.WordApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event OLEControl_GotFocusEventHandler _GotFocusEvent;
 
@@ -119,7 +119,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word, 9 10 11 12 14
+		/// SupportByLibrary Word, 9,10,11,12,14
 		/// </summary>
 		private event OLEControl_LostFocusEventHandler _LostFocusEvent;
 

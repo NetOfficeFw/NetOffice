@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface CustomTaskPaneEvents SupportByLibrary "Office", 12,14
+	/// DispatchInterface CustomTaskPaneEvents SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -53,7 +53,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="CustomTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
 		[SupportByLibrary("Office", 12,14)]
@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 14 
+		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="CustomTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
 		[SupportByLibrary("Office", 12,14)]

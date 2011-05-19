@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
 	#endregion
 
 	///<summary>
-	/// CoClass CustomXMLSchemaCollection SupportByLibrary "Office", 12,14
+	/// CoClass CustomXMLSchemaCollection SupportByLibrary Office, 12,14
 	///</summary>
 	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]

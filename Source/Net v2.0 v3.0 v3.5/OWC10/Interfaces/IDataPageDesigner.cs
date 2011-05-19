@@ -8,7 +8,7 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface IDataPageDesigner SupportByLibrary "OWC10", 1
+	/// Interface IDataPageDesigner SupportByLibrary OWC10, 1
 	///</summary>
 	[SupportByLibrary("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
@@ -52,7 +52,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pDataSourceControl">NetOffice.OWC10Api.IDataSourceControl pDataSourceControl</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -64,7 +64,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="SectType">NetOffice.OWC10Api.Enums.SectTypeEnum SectType</param>
 		/// <param name="wzRecordsetName">string wzRecordsetName</param>
@@ -77,7 +77,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="SectType">NetOffice.OWC10Api.Enums.SectTypeEnum SectType</param>
 		/// <param name="wzRecordsetName">string wzRecordsetName</param>
@@ -91,7 +91,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -103,7 +103,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 OnGroupLevelDeleted()
@@ -114,7 +114,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		/// <param name="wzRecordsetNameOld">string wzRecordsetNameOld</param>
@@ -128,7 +128,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
 		/// <param name="ppUnknownSharedConnection">ref object ppUnknownSharedConnection</param>
@@ -143,7 +143,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="lMarker">Int32 lMarker</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -155,7 +155,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
 		/// <param name="pfSecure">ref Int32 pfSecure</param>
@@ -170,7 +170,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="dispidChanged">Int32 dispidChanged</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -182,7 +182,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
 		/// <param name="ppUnknownSharedDBNS">ref object ppUnknownSharedDBNS</param>
@@ -197,7 +197,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="ppbstrFileName">ref string ppbstrFileName</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -211,7 +211,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pfDesignMode">ref Int32 pfDesignMode</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -225,7 +225,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pRequestingDSC">NetOffice.OWC10Api.IDataSourceControl pRequestingDSC</param>
 		/// <param name="vfForceRefresh">bool vfForceRefresh</param>
@@ -239,7 +239,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="ppbstrInstId">ref string ppbstrInstId</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -253,7 +253,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pioum">ref NetOffice.OWC10Api.IOleUndoManager pioum</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -267,7 +267,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary 1 
+		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pDSC">NetOffice.OWC10Api.IDataSourceControl pDSC</param>
 		/// <param name="bstrRecordSetDef">string bstrRecordSetDef</param>

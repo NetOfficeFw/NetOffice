@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 11,12,14,
+	 /// SupportByLibrary Office 11, 12, 14, 
 	 /// </summary>
 	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoSharedWorkspaceTaskPriority
 	{
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		msoSharedWorkspaceTaskPriorityHigh = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		msoSharedWorkspaceTaskPriorityNormal = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary 11,12,14,
+		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		msoSharedWorkspaceTaskPriorityLow = 3

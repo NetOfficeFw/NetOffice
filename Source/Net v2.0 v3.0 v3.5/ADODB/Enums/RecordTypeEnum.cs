@@ -4,26 +4,26 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary 2.5,
+	 /// SupportByLibrary ADODB 2.5, 
 	 /// </summary>
 	[SupportByLibrary("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum RecordTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adSimpleRecord = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adCollectionRecord = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary 2.5,
+		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		adStructDoc = 2

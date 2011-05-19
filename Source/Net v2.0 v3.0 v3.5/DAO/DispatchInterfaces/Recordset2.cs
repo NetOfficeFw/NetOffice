@@ -9,7 +9,7 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface Recordset2 SupportByLibrary "DAO", 12
+	/// DispatchInterface Recordset2 SupportByLibrary DAO, 12
 	///</summary>
 	[SupportByLibrary("DAO", 12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
@@ -49,7 +49,7 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary 12 
+		/// SupportByLibrary DAO 12
 		/// </summary>
 		[SupportByLibrary("DAO", 12)]
 		public NetOffice.DAOApi.Properties Properties
@@ -64,7 +64,7 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary 12 
+		/// SupportByLibrary DAO 12
 		/// </summary>
 		[SupportByLibrary("DAO", 12)]
 		public NetOffice.DAOApi.Recordset ParentRecordset
