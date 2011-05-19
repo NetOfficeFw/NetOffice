@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlPlacement
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlFreeFloating = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlMove = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlMoveAndSize = 1
 	}
 }

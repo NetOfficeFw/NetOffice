@@ -10,7 +10,7 @@ using LateBindingApi.Core;
     
     Contains the following Type Libraries:
 	Name - Description - SupportByLibrary
-	MSComctlLib - Microsoft Windows Common Controls 6.0 - WCC6.0
+	MSComctlLib - Microsoft Windows Common Controls 6.0 - 6
 
 */
 

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface _CommandBarComboBox SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+	/// DispatchInterface _CommandBarComboBox SupportByLibrary "Office", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CommandBarComboBox : CommandBarControl
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public COMObject accParent
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 accChildCount
 		{
 			get
@@ -78,10 +78,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public COMObject get_accChild(object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -91,10 +91,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string get_accName(object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -103,10 +103,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void set_accName(object varChild, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -114,9 +114,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accName
 		{
 			get
@@ -133,10 +133,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string get_accValue(object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -145,10 +145,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void set_accValue(object varChild, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -156,9 +156,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accValue
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string get_accDescription(object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -187,9 +187,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accDescription
 		{
 			get
@@ -201,10 +201,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object get_accRole(object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -222,9 +222,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object accRole
 		{
 			get
@@ -245,10 +245,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object get_accState(object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -266,9 +266,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object accState
 		{
 			get
@@ -289,10 +289,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string get_accHelp(object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -301,9 +301,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accHelp
 		{
 			get
@@ -315,11 +315,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="pszHelpFile">ref string pszHelpFile</param>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 get_accHelpTopic(ref string pszHelpFile, object varChild)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
@@ -330,10 +330,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="pszHelpFile">ref string pszHelpFile</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 get_accHelpTopic(ref string pszHelpFile)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -344,10 +344,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string get_accKeyboardShortcut(object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -356,9 +356,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accKeyboardShortcut
 		{
 			get
@@ -370,9 +370,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object accFocus
 		{
 			get
@@ -393,9 +393,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object accSelection
 		{
 			get
@@ -416,10 +416,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string get_accDefaultAction(object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -428,9 +428,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string accDefaultAction
 		{
 			get
@@ -442,9 +442,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public COMObject Application
 		{
 			get
@@ -457,9 +457,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -471,9 +471,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 DropDownLines
 		{
 			get
@@ -490,9 +490,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 DropDownWidth
 		{
 			get
@@ -509,10 +509,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string get_List(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -521,10 +521,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void set_List(Int32 index, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -532,9 +532,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 ListCount
 		{
 			get
@@ -546,9 +546,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 ListHeaderCount
 		{
 			get
@@ -565,9 +565,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public Int32 ListIndex
 		{
 			get
@@ -584,9 +584,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoComboStyle Style
 		{
 			get
@@ -603,9 +603,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string Text
 		{
 			get
@@ -622,9 +622,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public object InstanceIdPtr
 		{
 			get
@@ -649,11 +649,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="flagsSelect">Int32 flagsSelect</param>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void accSelect(Int32 flagsSelect, object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(flagsSelect, varChild);
@@ -661,10 +661,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="flagsSelect">Int32 flagsSelect</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void accSelect(Int32 flagsSelect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(flagsSelect);
@@ -672,14 +672,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="pxLeft">ref Int32 pxLeft</param>
 		/// <param name="pyTop">ref Int32 pyTop</param>
 		/// <param name="pcxWidth">ref Int32 pcxWidth</param>
 		/// <param name="pcyHeight">ref Int32 pcyHeight</param>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void accLocation(ref Int32 pxLeft, ref Int32 pyTop, ref Int32 pcxWidth, ref Int32 pcyHeight, object varChild)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,false);
@@ -692,13 +692,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="pxLeft">ref Int32 pxLeft</param>
 		/// <param name="pyTop">ref Int32 pyTop</param>
 		/// <param name="pcxWidth">ref Int32 pcxWidth</param>
 		/// <param name="pcyHeight">ref Int32 pcyHeight</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void accLocation(ref Int32 pxLeft, ref Int32 pyTop, ref Int32 pcxWidth, ref Int32 pcyHeight)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
@@ -711,11 +711,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="navDir">Int32 navDir</param>
 		/// <param name="varStart">optional object varStart</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object accNavigate(Int32 navDir, object varStart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(navDir, varStart);
@@ -733,10 +733,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="navDir">Int32 navDir</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object accNavigate(Int32 navDir)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(navDir);
@@ -754,11 +754,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="xLeft">Int32 xLeft</param>
 		/// <param name="yTop">Int32 yTop</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public object accHitTest(Int32 xLeft, Int32 yTop)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xLeft, yTop);
@@ -776,10 +776,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void accDoDefaultAction(object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -787,9 +787,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void accDoDefaultAction()
 		{
 			object[] paramsArray = null;
@@ -797,11 +797,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Text">string Text</param>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void AddItem(string text, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, index);
@@ -809,10 +809,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Text">string Text</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void AddItem(string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
@@ -820,9 +820,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -830,10 +830,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void RemoveItem(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

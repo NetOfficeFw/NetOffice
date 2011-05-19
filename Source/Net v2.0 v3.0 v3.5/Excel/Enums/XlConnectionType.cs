@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL12 XL14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("XL12","XL14")]
+	[SupportByLibrary("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlConnectionType
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlConnectionTypeOLEDB = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlConnectionTypeODBC = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlConnectionTypeXMLMAP = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlConnectionTypeTEXT = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlConnectionTypeWEB = 5
 	}
 }

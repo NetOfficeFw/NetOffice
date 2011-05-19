@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IListColumn SupportByLibrary XL11 XL12 XL14 
+	/// Interface IListColumn SupportByLibrary "Excel", 11,12,14
 	///</summary>
-	[SupportByLibrary("XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IListColumn : COMObject
 	{
@@ -48,9 +48,9 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -92,9 +92,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public string _Default
 		{
 			get
@@ -106,9 +106,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.ListDataFormat ListDataFormat
 		{
 			get
@@ -121,9 +121,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public Int32 Index
 		{
 			get
@@ -135,9 +135,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public string Name
 		{
 			get
@@ -154,9 +154,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Range Range
 		{
 			get
@@ -169,9 +169,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlTotalsCalculation TotalsCalculation
 		{
 			get
@@ -188,9 +188,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.XPath XPath
 		{
 			get
@@ -203,9 +203,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public string SharePointFormula
 		{
 			get
@@ -217,9 +217,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Range DataBodyRange
 		{
 			get
@@ -232,9 +232,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Range Total
 		{
 			get
@@ -251,9 +251,9 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public Int32 Delete()
 		{
 			object[] paramsArray = null;

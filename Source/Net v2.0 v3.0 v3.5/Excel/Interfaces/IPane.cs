@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IPane SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	/// Interface IPane SupportByLibrary "Excel", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IPane : COMObject
 	{
@@ -48,9 +48,9 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -92,9 +92,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 Index
 		{
 			get
@@ -106,9 +106,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 ScrollColumn
 		{
 			get
@@ -125,9 +125,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 ScrollRow
 		{
 			get
@@ -144,9 +144,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range VisibleRange
 		{
 			get
@@ -163,9 +163,9 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool Activate()
 		{
 			object[] paramsArray = null;
@@ -174,13 +174,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Down">optional object Down</param>
 		/// <param name="Up">optional object Up</param>
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object LargeScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
@@ -198,9 +198,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object LargeScroll()
 		{
 			object[] paramsArray = null;
@@ -218,13 +218,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Down">optional object Down</param>
 		/// <param name="Up">optional object Up</param>
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object SmallScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
@@ -242,9 +242,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object SmallScroll()
 		{
 			object[] paramsArray = null;
@@ -262,14 +262,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Left">Int32 Left</param>
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
 		/// <param name="Start">optional object Start</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, start);
@@ -278,13 +278,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Left">Int32 Left</param>
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
@@ -293,10 +293,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Points">Int32 Points</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Int32 PointsToScreenPixelsX(Int32 points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
@@ -305,10 +305,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Points">Int32 Points</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Int32 PointsToScreenPixelsY(Int32 points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);

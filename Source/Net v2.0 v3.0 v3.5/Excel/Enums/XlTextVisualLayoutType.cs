@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL11 XL12 XL14 
+	 /// SupportByLibrary 11,12,14,
 	 /// </summary>
-	[SupportByLibrary("XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlTextVisualLayoutType
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlTextVisualLTR = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlTextVisualRTL = 2
 	}
 }

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SharedWorkspaceMember SupportByLibrary OF11 OF12 OF14 
+	/// DispatchInterface SharedWorkspaceMember SupportByLibrary "Office", 11,12,14
 	///</summary>
-	[SupportByLibrary("OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceMember : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public string DomainName
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public string Name
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public string Email
 		{
 			get
@@ -91,9 +91,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public string Id
 		{
 			get
@@ -105,9 +105,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -124,9 +124,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

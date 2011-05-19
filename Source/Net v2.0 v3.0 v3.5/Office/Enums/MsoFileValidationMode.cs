@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("OF14")]
+	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoFileValidationMode
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		msoFileValidationDefault = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		msoFileValidationSkip = 1
 	}
 }

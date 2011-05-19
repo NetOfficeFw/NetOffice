@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface INode SupportByLibrary WCC6.0 
+	/// DispatchInterface INode SupportByLibrary "MSComctlLib", 6
 	///</summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class INode : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public string _ObjectDefault
 		{
 			get
@@ -68,9 +68,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Child
 		{
 			get
@@ -88,9 +88,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public Int16 Children
 		{
 			get
@@ -107,9 +107,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Expanded
 		{
 			get
@@ -126,9 +126,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public object ExpandedImage
 		{
 			get
@@ -154,9 +154,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode FirstSibling
 		{
 			get
@@ -174,9 +174,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public string FullPath
 		{
 			get
@@ -193,9 +193,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public object Image
 		{
 			get
@@ -221,9 +221,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public Int16 Index
 		{
 			get
@@ -240,9 +240,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public string Key
 		{
 			get
@@ -259,9 +259,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode LastSibling
 		{
 			get
@@ -279,9 +279,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Next
 		{
 			get
@@ -299,9 +299,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Parent
 		{
 			get
@@ -319,9 +319,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Previous
 		{
 			get
@@ -339,9 +339,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Root
 		{
 			get
@@ -359,9 +359,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Selected
 		{
 			get
@@ -378,9 +378,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public object SelectedImage
 		{
 			get
@@ -406,9 +406,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Sorted
 		{
 			get
@@ -425,9 +425,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public object Tag
 		{
 			get
@@ -453,9 +453,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public string Text
 		{
 			get
@@ -472,9 +472,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Visible
 		{
 			get
@@ -491,9 +491,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 BackColor
 		{
 			get
@@ -510,9 +510,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Bold
 		{
 			get
@@ -529,9 +529,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Checked
 		{
 			get
@@ -548,9 +548,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 ForeColor
 		{
 			get
@@ -571,9 +571,9 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public stdole.Picture CreateDragImage()
 		{
 			object[] paramsArray = null;
@@ -583,9 +583,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public bool EnsureVisible()
 		{
 			object[] paramsArray = null;

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface PickerProperty SupportByLibrary OF14 
+	/// DispatchInterface PickerProperty SupportByLibrary "Office", 14
 	///</summary>
-	[SupportByLibrary("OF14")]
+	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PickerProperty : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public string Id
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public object Value
 		{
 			get
@@ -86,9 +86,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.Enums.MsoPickerField Type
 		{
 			get

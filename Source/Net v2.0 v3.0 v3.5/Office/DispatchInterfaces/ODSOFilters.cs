@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ODSOFilters SupportByLibrary OF10 OF11 OF12 OF14 
+	/// DispatchInterface ODSOFilters SupportByLibrary "Office", 10,11,12,14
 	///</summary>
-	[SupportByLibrary("OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ODSOFilters : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -82,10 +82,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public COMObject this[Int32 index]
 		{
@@ -99,14 +99,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Column">string Column</param>
 		/// <param name="Comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison Comparison</param>
 		/// <param name="Conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction Conjunction</param>
 		/// <param name="bstrCompareTo">string bstrCompareTo</param>
 		/// <param name="DeferUpdate">bool DeferUpdate</param>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, string bstrCompareTo, bool deferUpdate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(column, comparison, conjunction, bstrCompareTo, deferUpdate);
@@ -114,11 +114,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		/// <param name="DeferUpdate">bool DeferUpdate</param>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public void Delete(Int32 index, bool deferUpdate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, deferUpdate);

@@ -4,160 +4,160 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoPresetGradientType
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoPresetGradientMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientEarlySunset = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientLateSunset = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientNightfall = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientDaybreak = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientHorizon = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientDesert = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientOcean = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientCalmWater = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientFire = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientFog = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientMoss = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientPeacock = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientWheat = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientParchment = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientMahogany = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientRainbow = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientRainbowII = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientGold = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientGoldII = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientBrass = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientChrome = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientChromeII = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientSilver = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoGradientSapphire = 24
 	}
 }

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface Script SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+	/// DispatchInterface Script SupportByLibrary "Office", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Script : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string Extended
 		{
 			get
@@ -83,9 +83,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string Id
 		{
 			get
@@ -102,9 +102,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoScriptLanguage Language
 		{
 			get
@@ -121,9 +121,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoScriptLocation Location
 		{
 			get
@@ -135,9 +135,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public COMObject Shape
 		{
 			get
@@ -150,9 +150,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string ScriptText
 		{
 			get
@@ -173,9 +173,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

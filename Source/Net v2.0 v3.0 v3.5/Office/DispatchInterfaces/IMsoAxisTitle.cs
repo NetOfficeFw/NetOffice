@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface IMsoAxisTitle SupportByLibrary OF12 OF14 
+	/// DispatchInterface IMsoAxisTitle SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IMsoAxisTitle : IMsoChartTitle
 	{

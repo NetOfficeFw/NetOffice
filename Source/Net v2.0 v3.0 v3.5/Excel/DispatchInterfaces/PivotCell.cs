@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface PivotCell SupportByLibrary XL10 XL11 XL12 XL14 
+	/// DispatchInterface PivotCell SupportByLibrary "Excel", 10,11,12,14
 	///</summary>
-	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotCell : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -78,9 +78,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,9 +93,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlPivotCellType PivotCellType
 		{
 			get
@@ -107,9 +107,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.PivotTable PivotTable
 		{
 			get
@@ -122,9 +122,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.PivotField DataField
 		{
 			get
@@ -137,9 +137,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.PivotField PivotField
 		{
 			get
@@ -152,9 +152,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.PivotItem PivotItem
 		{
 			get
@@ -167,9 +167,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.PivotItemList RowItems
 		{
 			get
@@ -182,9 +182,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.PivotItemList ColumnItems
 		{
 			get
@@ -197,9 +197,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Range Range
 		{
 			get
@@ -212,9 +212,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string Dummy18
 		{
 			get
@@ -226,9 +226,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlConsolidationFunction CustomSubtotalFunction
 		{
 			get
@@ -240,9 +240,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.PivotLine PivotRowLine
 		{
 			get
@@ -255,9 +255,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.PivotLine PivotColumnLine
 		{
 			get
@@ -270,9 +270,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public object DataSourceValue
 		{
 			get
@@ -293,9 +293,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCellChangedState CellChanged
 		{
 			get
@@ -307,9 +307,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public string MDX
 		{
 			get
@@ -325,9 +325,9 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public void AllocateChange()
 		{
 			object[] paramsArray = null;
@@ -335,9 +335,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public void DiscardChange()
 		{
 			object[] paramsArray = null;

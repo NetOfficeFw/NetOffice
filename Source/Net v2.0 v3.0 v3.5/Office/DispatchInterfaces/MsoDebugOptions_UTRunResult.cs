@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface MsoDebugOptions_UTRunResult SupportByLibrary OF12 OF14 
+	/// DispatchInterface MsoDebugOptions_UTRunResult SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MsoDebugOptions_UTRunResult : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public bool Passed
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public string ErrorString
 		{
 			get

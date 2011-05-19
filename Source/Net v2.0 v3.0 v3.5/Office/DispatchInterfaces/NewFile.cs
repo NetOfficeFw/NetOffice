@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface NewFile SupportByLibrary OF10 OF11 OF12 OF14 
+	/// DispatchInterface NewFile SupportByLibrary "Office", 10,11,12,14
 	///</summary>
-	[SupportByLibrary("OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class NewFile : _IMsoDispObj
 	{
@@ -53,13 +53,13 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Section">optional object Section</param>
 		/// <param name="DisplayName">optional object DisplayName</param>
 		/// <param name="Action">optional object Action</param>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public bool Add(string fileName, object section, object displayName, object action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName, action);
@@ -68,10 +68,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public bool Add(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -80,13 +80,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Section">optional object Section</param>
 		/// <param name="DisplayName">optional object DisplayName</param>
 		/// <param name="Action">optional object Action</param>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public bool Remove(string fileName, object section, object displayName, object action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName, action);
@@ -95,10 +95,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public bool Remove(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);

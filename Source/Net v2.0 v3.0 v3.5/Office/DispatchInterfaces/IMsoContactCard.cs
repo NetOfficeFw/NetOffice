@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface IMsoContactCard SupportByLibrary OF14 
+	/// DispatchInterface IMsoContactCard SupportByLibrary "Office", 14
 	///</summary>
-	[SupportByLibrary("OF14")]
+	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IMsoContactCard : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public string Address
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.Enums.MsoContactCardAddressType AddressType
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.Enums.MsoContactCardType CardType
 		{
 			get
@@ -91,9 +91,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public COMObject Parent
 		{
 			get

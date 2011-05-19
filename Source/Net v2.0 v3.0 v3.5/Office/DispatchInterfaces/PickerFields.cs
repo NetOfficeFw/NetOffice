@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface PickerFields SupportByLibrary OF14 
+	/// DispatchInterface PickerFields SupportByLibrary "Office", 14
 	///</summary>
-	[SupportByLibrary("OF14")]
+	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PickerFields : _IMsoDispObj ,IEnumerable
 	{
@@ -50,10 +50,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.PickerField this[Int32 index]
 		{
@@ -67,9 +67,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Int32 Count
 		{
 			get
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("OF14")]
+        [SupportByLibrary("Office", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

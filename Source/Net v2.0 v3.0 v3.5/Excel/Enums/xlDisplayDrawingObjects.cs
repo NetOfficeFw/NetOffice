@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum xlDisplayDrawingObjects
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlDisplayShapes = -4104,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlHide = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlPlaceholders = 2
 	}
 }

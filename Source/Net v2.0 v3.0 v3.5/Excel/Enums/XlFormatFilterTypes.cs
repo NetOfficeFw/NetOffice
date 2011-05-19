@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL12 XL14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("XL12","XL14")]
+	[SupportByLibrary("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlFormatFilterTypes
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterBottom = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterTop = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterBottomPercent = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterTopPercent = 3
 	}
 }

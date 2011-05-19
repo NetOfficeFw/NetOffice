@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface CubeFields SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	/// DispatchInterface CubeFields SupportByLibrary "Excel", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CubeFields : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -65,9 +65,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -94,9 +94,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -108,10 +108,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.CubeField this[object index]
 		{
@@ -125,10 +125,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.CubeField get__Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -142,11 +142,11 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Caption">string Caption</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.CubeField AddSet(string name, string caption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, caption);
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+        [SupportByLibrary("Excel", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

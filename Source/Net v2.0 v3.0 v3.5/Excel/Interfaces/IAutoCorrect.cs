@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IAutoCorrect SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	/// Interface IAutoCorrect SupportByLibrary "Excel", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IAutoCorrect : COMObject
 	{
@@ -48,9 +48,9 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -92,9 +92,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool CapitalizeNamesOfDays
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object get_ReplacementList(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -132,10 +132,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public void set_ReplacementList(object index, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -143,9 +143,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object ReplacementList
 		{
 			get
@@ -171,9 +171,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool ReplaceText
 		{
 			get
@@ -190,9 +190,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool TwoInitialCapitals
 		{
 			get
@@ -209,9 +209,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool CorrectSentenceCap
 		{
 			get
@@ -228,9 +228,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool CorrectCapsLock
 		{
 			get
@@ -247,9 +247,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool DisplayAutoCorrectOptions
 		{
 			get
@@ -266,9 +266,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public bool AutoExpandListRange
 		{
 			get
@@ -285,9 +285,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public bool AutoFillFormulasInLists
 		{
 			get
@@ -308,11 +308,11 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="What">string What</param>
 		/// <param name="Replacement">string Replacement</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object AddReplacement(string what, string replacement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, replacement);
@@ -330,10 +330,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="What">string What</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object DeleteReplacement(string what)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what);

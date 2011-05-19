@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SharedWorkspaceFile SupportByLibrary OF11 OF12 OF14 
+	/// DispatchInterface SharedWorkspaceFile SupportByLibrary "Office", 11,12,14
 	///</summary>
-	[SupportByLibrary("OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceFile : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public string URL
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public string CreatedBy
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public object CreatedDate
 		{
 			get
@@ -100,9 +100,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public string ModifiedBy
 		{
 			get
@@ -114,9 +114,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public object ModifiedDate
 		{
 			get
@@ -137,9 +137,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -156,9 +156,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

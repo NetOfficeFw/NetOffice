@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF11 OF12 OF14 
+	 /// SupportByLibrary 11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoSyncConflictResolutionType
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoSyncConflictClientWins = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoSyncConflictServerWins = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoSyncConflictMerge = 2
 	}
 }

@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface ICellFormat SupportByLibrary XL10 XL11 XL12 XL14 
+	/// Interface ICellFormat SupportByLibrary "Excel", 10,11,12,14
 	///</summary>
-	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ICellFormat : COMObject
 	{
@@ -48,9 +48,9 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -92,9 +92,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Borders Borders
 		{
 			get
@@ -112,9 +112,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Font Font
 		{
 			get
@@ -132,9 +132,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Interior Interior
 		{
 			get
@@ -152,9 +152,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object NumberFormat
 		{
 			get
@@ -180,9 +180,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object NumberFormatLocal
 		{
 			get
@@ -208,9 +208,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object AddIndent
 		{
 			get
@@ -236,9 +236,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object IndentLevel
 		{
 			get
@@ -264,9 +264,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object HorizontalAlignment
 		{
 			get
@@ -292,9 +292,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object VerticalAlignment
 		{
 			get
@@ -320,9 +320,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object Orientation
 		{
 			get
@@ -348,9 +348,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object ShrinkToFit
 		{
 			get
@@ -376,9 +376,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object WrapText
 		{
 			get
@@ -404,9 +404,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object Locked
 		{
 			get
@@ -432,9 +432,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object FormulaHidden
 		{
 			get
@@ -460,9 +460,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object MergeCells
 		{
 			get
@@ -492,9 +492,9 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public Int32 Clear()
 		{
 			object[] paramsArray = null;

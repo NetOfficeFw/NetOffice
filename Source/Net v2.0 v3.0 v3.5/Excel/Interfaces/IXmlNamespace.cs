@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IXmlNamespace SupportByLibrary XL11 XL12 XL14 
+	/// Interface IXmlNamespace SupportByLibrary "Excel", 11,12,14
 	///</summary>
-	[SupportByLibrary("XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IXmlNamespace : COMObject
 	{
@@ -48,9 +48,9 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -92,9 +92,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public string _Default
 		{
 			get
@@ -106,9 +106,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public string Uri
 		{
 			get
@@ -120,9 +120,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public string Prefix
 		{
 			get

@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL12 XL14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("XL12","XL14")]
+	[SupportByLibrary("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlGenerateTableRefs
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlGenerateTableRefA1 = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlGenerateTableRefStruct = 1
 	}
 }

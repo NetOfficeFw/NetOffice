@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ReflectionFormat SupportByLibrary OF12 OF14 
+	/// DispatchInterface ReflectionFormat SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ReflectionFormat : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoReflectionType Type
 		{
 			get
@@ -68,9 +68,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Single Transparency
 		{
 			get
@@ -87,9 +87,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Single Size
 		{
 			get
@@ -106,9 +106,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Single Offset
 		{
 			get
@@ -125,9 +125,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Single Blur
 		{
 			get

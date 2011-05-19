@@ -4,64 +4,64 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("OF14")]
+	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlPieSliceIndex
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		xlOuterCounterClockwisePoint = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		xlOuterCenterPoint = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		xlOuterClockwisePoint = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		xlMidClockwiseRadiusPoint = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		xlCenterPoint = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		xlMidCounterClockwiseRadiusPoint = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		xlInnerClockwisePoint = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		xlInnerCenterPoint = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		xlInnerCounterClockwisePoint = 9
 	}
 }

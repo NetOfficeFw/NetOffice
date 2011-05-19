@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface IConverterApplicationPreferences SupportByLibrary OF14 
+	/// Interface IConverterApplicationPreferences SupportByLibrary "Office", 14
 	///</summary>
-	[SupportByLibrary("OF14")]
+	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterApplicationPreferences : COMObject
 	{
@@ -52,10 +52,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="plcid">ref Int32 plcid</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Int32 HrGetLcid(ref Int32 plcid)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -66,10 +66,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="phwnd">ref Int32 phwnd</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Int32 HrGetHwnd(ref Int32 phwnd)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -80,10 +80,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="pbstrApplication">ref string pbstrApplication</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Int32 HrGetApplication(ref string pbstrApplication)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -94,10 +94,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="pFormat">ref Int32 pFormat</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Int32 HrCheckFormat(ref Int32 pFormat)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);

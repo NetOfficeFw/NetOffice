@@ -4,70 +4,70 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoPresetLightingDirection
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoPresetLightingDirectionMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLightingTopLeft = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLightingTop = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLightingTopRight = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLightingLeft = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLightingNone = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLightingRight = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLightingBottomLeft = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLightingBottom = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLightingBottomRight = 9
 	}
 }

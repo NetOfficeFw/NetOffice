@@ -10,8 +10,8 @@ using LateBindingApi.Core;
     
     Contains the following Type Libraries:
 	Name - Description - SupportByLibrary
-	ADODB - Microsoft ActiveX Data Objects 2.1 Library - ADO2.1
-	ADODB - Microsoft ActiveX Data Objects 2.5 Library - ADO2.5
+	ADODB - Microsoft ActiveX Data Objects 2.1 Library - 2.1
+	ADODB - Microsoft ActiveX Data Objects 2.5 Library - 2.5
 
 */
 

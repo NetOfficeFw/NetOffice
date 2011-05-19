@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface ITabs SupportByLibrary WCC6.0 
+	/// DispatchInterface ITabs SupportByLibrary "MSComctlLib", 6
 	///</summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ITabs : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public Int16 Count
 		{
 			get
@@ -69,10 +69,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
 		/// <param name="pvIndex">ref object pvIndex</param>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.ITab get_ControlDefault(ref object pvIndex)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -84,10 +84,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
 		/// <param name="pvIndex">ref object pvIndex</param>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public void set_ControlDefault(ref object pvIndex, NetOffice.MSComctlLibApi.ITab value)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -97,10 +97,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
 		/// <param name="pvIndex">object pvIndex</param>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSComctlLibApi.ITab this[object pvIndex]
 		{
@@ -118,10 +118,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
 		/// <param name="pvIndex">ref object pvIndex</param>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public void Remove(ref object pvIndex)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -131,9 +131,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -141,13 +141,13 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
 		/// <param name="pvIndex">ref optional object pvIndex</param>
 		/// <param name="pvKey">ref optional object pvKey</param>
 		/// <param name="pvCaption">ref optional object pvCaption</param>
 		/// <param name="pvImage">ref optional object pvImage</param>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.ITab Add(ref object pvIndex, ref object pvKey, ref object pvCaption, ref object pvImage)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
@@ -162,9 +162,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.ITab Add()
 		{
 			object[] paramsArray = null;
@@ -177,7 +177,7 @@ namespace NetOffice.MSComctlLibApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("WCC6.0")]
+        [SupportByLibrary("MSComctlLib", 6)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF12 OF14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoAutoSize
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoAutoSizeMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoAutoSizeNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoAutoSizeShapeToFitText = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoAutoSizeTextToFitShape = 2
 	}
 }

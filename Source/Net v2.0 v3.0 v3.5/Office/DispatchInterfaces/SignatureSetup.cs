@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SignatureSetup SupportByLibrary OF12 OF14 
+	/// DispatchInterface SignatureSetup SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SignatureSetup : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public bool ReadOnly
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public string Id
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public string SignatureProvider
 		{
 			get
@@ -91,9 +91,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public string SuggestedSigner
 		{
 			get
@@ -110,9 +110,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public string SuggestedSignerLine2
 		{
 			get
@@ -129,9 +129,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public string SuggestedSignerEmail
 		{
 			get
@@ -148,9 +148,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public string SigningInstructions
 		{
 			get
@@ -167,9 +167,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public bool AllowComments
 		{
 			get
@@ -186,9 +186,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public bool ShowSignDate
 		{
 			get
@@ -205,9 +205,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public string AdditionalXml
 		{
 			get

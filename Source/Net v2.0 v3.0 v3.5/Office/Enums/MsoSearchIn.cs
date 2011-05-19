@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF10 OF11 OF12 OF14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoSearchIn
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoSearchInMyComputer = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoSearchInOutlook = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoSearchInMyNetworkPlaces = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoSearchInCustom = 3
 	}
 }

@@ -33,9 +33,9 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass ListView SupportByLibrary WCC6.0 
+	/// CoClass ListView SupportByLibrary "MSComctlLib", 6
 	///</summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ListView : IListView, IEventBinding 
 	{
@@ -114,14 +114,14 @@ namespace NetOffice.MSComctlLibApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_BeforeLabelEditEventHandler _BeforeLabelEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_BeforeLabelEditEventHandler BeforeLabelEditEvent
 		{
 			add
@@ -136,14 +136,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_AfterLabelEditEventHandler _AfterLabelEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_AfterLabelEditEventHandler AfterLabelEditEvent
 		{
 			add
@@ -158,14 +158,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_ColumnClickEventHandler _ColumnClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_ColumnClickEventHandler ColumnClickEvent
 		{
 			add
@@ -180,14 +180,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_ItemClickEventHandler _ItemClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_ItemClickEventHandler ItemClickEvent
 		{
 			add
@@ -202,14 +202,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -224,14 +224,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -246,14 +246,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -268,14 +268,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -290,14 +290,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -312,14 +312,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -334,14 +334,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_ClickEventHandler ClickEvent
 		{
 			add
@@ -356,14 +356,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -378,14 +378,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_OLEStartDragEventHandler _OLEStartDragEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_OLEStartDragEventHandler OLEStartDragEvent
 		{
 			add
@@ -400,14 +400,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_OLEGiveFeedbackEventHandler _OLEGiveFeedbackEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_OLEGiveFeedbackEventHandler OLEGiveFeedbackEvent
 		{
 			add
@@ -422,14 +422,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_OLESetDataEventHandler _OLESetDataEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_OLESetDataEventHandler OLESetDataEvent
 		{
 			add
@@ -444,14 +444,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_OLECompleteDragEventHandler _OLECompleteDragEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_OLECompleteDragEventHandler OLECompleteDragEvent
 		{
 			add
@@ -466,14 +466,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_OLEDragOverEventHandler _OLEDragOverEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_OLEDragOverEventHandler OLEDragOverEvent
 		{
 			add
@@ -488,14 +488,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_OLEDragDropEventHandler _OLEDragDropEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_OLEDragDropEventHandler OLEDragDropEvent
 		{
 			add
@@ -510,14 +510,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ListView_ItemCheckEventHandler _ItemCheckEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ListView_ItemCheckEventHandler ItemCheckEvent
 		{
 			add

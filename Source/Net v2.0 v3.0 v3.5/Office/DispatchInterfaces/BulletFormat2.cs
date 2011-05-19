@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface BulletFormat2 SupportByLibrary OF12 OF14 
+	/// DispatchInterface BulletFormat2 SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class BulletFormat2 : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -64,9 +64,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public Int32 Character
 		{
 			get
@@ -83,9 +83,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Font2 Font
 		{
 			get
@@ -98,9 +98,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public Int32 Number
 		{
 			get
@@ -112,9 +112,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public Single RelativeSize
 		{
 			get
@@ -131,9 +131,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public Int32 StartValue
 		{
 			get
@@ -150,9 +150,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoNumberedBulletStyle Style
 		{
 			get
@@ -169,9 +169,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoBulletType Type
 		{
 			get
@@ -188,9 +188,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState UseTextColor
 		{
 			get
@@ -207,9 +207,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState UseTextFont
 		{
 			get
@@ -226,9 +226,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
@@ -249,10 +249,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void Picture(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);

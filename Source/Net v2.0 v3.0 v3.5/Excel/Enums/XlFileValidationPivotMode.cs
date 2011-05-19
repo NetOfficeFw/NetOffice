@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("XL14")]
+	[SupportByLibrary("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlFileValidationPivotMode
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		xlFileValidationPivotDefault = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary XL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		xlFileValidationPivotRun = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		xlFileValidationPivotSkip = 2
 	}
 }

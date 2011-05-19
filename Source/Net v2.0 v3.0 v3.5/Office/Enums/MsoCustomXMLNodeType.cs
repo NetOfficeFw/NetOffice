@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF12 OF14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoCustomXMLNodeType
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoCustomXMLNodeElement = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoCustomXMLNodeAttribute = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoCustomXMLNodeText = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoCustomXMLNodeCData = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoCustomXMLNodeProcessingInstruction = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoCustomXMLNodeComment = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoCustomXMLNodeDocument = 9
 	}
 }

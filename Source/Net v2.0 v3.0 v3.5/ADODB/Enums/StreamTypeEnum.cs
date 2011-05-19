@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADO2.5 
+	 /// SupportByLibrary 2.5,
 	 /// </summary>
-	[SupportByLibrary("ADO2.5")]
+	[SupportByLibrary("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum StreamTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adTypeBinary = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adTypeText = 2
 	}
 }

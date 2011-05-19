@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF12 OF14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum SignatureProviderDetail
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		sigprovdetUrl = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		sigprovdetHashAlgorithm = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		sigprovdetUIOnly = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		sigprovdetUseOfficeUI = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		sigprovdetUseOfficeStampUI = 4
 	}
 }

@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface INegativeBarFormat SupportByLibrary XL14 
+	/// Interface INegativeBarFormat SupportByLibrary "Excel", 14
 	///</summary>
-	[SupportByLibrary("XL14")]
+	[SupportByLibrary("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class INegativeBarFormat : COMObject
 	{
@@ -48,9 +48,9 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public COMObject Parent
 		{
 			get
@@ -92,9 +92,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlDataBarNegativeColorType ColorType
 		{
 			get
@@ -111,9 +111,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlDataBarNegativeColorType BorderColorType
 		{
 			get
@@ -130,9 +130,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public COMObject Color
 		{
 			get
@@ -145,9 +145,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public COMObject BorderColor
 		{
 			get

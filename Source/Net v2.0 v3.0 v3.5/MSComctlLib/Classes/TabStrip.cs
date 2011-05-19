@@ -28,9 +28,9 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass TabStrip SupportByLibrary WCC6.0 
+	/// CoClass TabStrip SupportByLibrary "MSComctlLib", 6
 	///</summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TabStrip : ITabStrip, IEventBinding 
 	{
@@ -109,14 +109,14 @@ namespace NetOffice.MSComctlLibApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_ClickEventHandler ClickEvent
 		{
 			add
@@ -131,14 +131,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -153,14 +153,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -175,14 +175,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -197,14 +197,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -219,14 +219,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -241,14 +241,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -263,14 +263,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_BeforeClickEventHandler _BeforeClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_BeforeClickEventHandler BeforeClickEvent
 		{
 			add
@@ -285,14 +285,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_OLEStartDragEventHandler _OLEStartDragEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_OLEStartDragEventHandler OLEStartDragEvent
 		{
 			add
@@ -307,14 +307,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_OLEGiveFeedbackEventHandler _OLEGiveFeedbackEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_OLEGiveFeedbackEventHandler OLEGiveFeedbackEvent
 		{
 			add
@@ -329,14 +329,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_OLESetDataEventHandler _OLESetDataEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_OLESetDataEventHandler OLESetDataEvent
 		{
 			add
@@ -351,14 +351,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_OLECompleteDragEventHandler _OLECompleteDragEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_OLECompleteDragEventHandler OLECompleteDragEvent
 		{
 			add
@@ -373,14 +373,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_OLEDragOverEventHandler _OLEDragOverEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_OLEDragOverEventHandler OLEDragOverEvent
 		{
 			add
@@ -395,14 +395,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TabStrip_OLEDragDropEventHandler _OLEDragDropEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TabStrip_OLEDragDropEventHandler OLEDragDropEvent
 		{
 			add

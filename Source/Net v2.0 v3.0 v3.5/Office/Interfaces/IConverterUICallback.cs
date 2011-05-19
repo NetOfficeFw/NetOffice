@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface IConverterUICallback SupportByLibrary OF14 
+	/// Interface IConverterUICallback SupportByLibrary "Office", 14
 	///</summary>
-	[SupportByLibrary("OF14")]
+	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterUICallback : COMObject
 	{
@@ -52,10 +52,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="uPercentComplete">UIntPtr uPercentComplete</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Int32 HrReportProgress(UIntPtr uPercentComplete)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uPercentComplete);
@@ -64,13 +64,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
 		/// <param name="uType">UIntPtr uType</param>
 		/// <param name="pidResult">ref Int32 pidResult</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Int32 HrMessageBox(string bstrText, string bstrCaption, UIntPtr uType, ref Int32 pidResult)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -81,13 +81,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
 		/// <param name="pbstrInput">ref string pbstrInput</param>
 		/// <param name="fPassword">Int32 fPassword</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Int32 HrInputBox(string bstrText, string bstrCaption, ref string pbstrInput, Int32 fPassword)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,false);

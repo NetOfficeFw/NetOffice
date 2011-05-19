@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface IListItems SupportByLibrary WCC6.0 
+	/// DispatchInterface IListItems SupportByLibrary "MSComctlLib", 6
 	///</summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IListItems : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 Count
 		{
 			get
@@ -69,10 +69,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem get_ControlDefault(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -84,10 +84,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSComctlLibApi.IListItem this[object index]
 		{
@@ -105,14 +105,14 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
 		/// <param name="Index">ref optional object Index</param>
 		/// <param name="Key">ref optional object Key</param>
 		/// <param name="Text">ref optional object Text</param>
 		/// <param name="Icon">ref optional object Icon</param>
 		/// <param name="SmallIcon">ref optional object SmallIcon</param>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem Add(ref object index, ref object key, ref object text, ref object icon, ref object smallIcon)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
@@ -128,9 +128,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem Add()
 		{
 			object[] paramsArray = null;
@@ -140,9 +140,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -150,10 +150,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0 
+		/// SupportByLibrary 6 
 		/// </summary>
 		/// <param name="Index">ref object Index</param>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public void Remove(ref object index)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -166,7 +166,7 @@ namespace NetOffice.MSComctlLibApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("WCC6.0")]
+        [SupportByLibrary("MSComctlLib", 6)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

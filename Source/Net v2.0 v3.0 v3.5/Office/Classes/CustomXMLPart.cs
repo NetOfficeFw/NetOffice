@@ -17,9 +17,9 @@ namespace NetOffice.OfficeApi
 	#endregion
 
 	///<summary>
-	/// CoClass CustomXMLPart SupportByLibrary OF12 OF14 
+	/// CoClass CustomXMLPart SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CustomXMLPart : _CustomXMLPart, IEventBinding 
 	{
@@ -98,14 +98,14 @@ namespace NetOffice.OfficeApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14
+		/// SupportByLibrary Office, 12 14
 		/// </summary>
 		private event CustomXMLPart_NodeAfterInsertEventHandler _NodeAfterInsertEvent;
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14
+		/// SupportByLibrary Office 12 14
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public event CustomXMLPart_NodeAfterInsertEventHandler NodeAfterInsertEvent
 		{
 			add
@@ -120,14 +120,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14
+		/// SupportByLibrary Office, 12 14
 		/// </summary>
 		private event CustomXMLPart_NodeAfterDeleteEventHandler _NodeAfterDeleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14
+		/// SupportByLibrary Office 12 14
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public event CustomXMLPart_NodeAfterDeleteEventHandler NodeAfterDeleteEvent
 		{
 			add
@@ -142,14 +142,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14
+		/// SupportByLibrary Office, 12 14
 		/// </summary>
 		private event CustomXMLPart_NodeAfterReplaceEventHandler _NodeAfterReplaceEvent;
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14
+		/// SupportByLibrary Office 12 14
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public event CustomXMLPart_NodeAfterReplaceEventHandler NodeAfterReplaceEvent
 		{
 			add

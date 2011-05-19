@@ -10,11 +10,11 @@ using LateBindingApi.Core;
     
     Contains the following Type Libraries:
 	Name - Description - SupportByLibrary
-	Excel - Microsoft Excel 9.0 Object Library - XL09
-	Excel - Microsoft Excel 10.0 Object Library - XL10
-	Excel - Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c - XL11
-	Excel - Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - XL12
-	Excel - Microsoft Excel 14.0 Object Library - XL14
+	Excel - Microsoft Excel 9.0 Object Library - 9
+	Excel - Microsoft Excel 10.0 Object Library - 10
+	Excel - Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c - 11
+	Excel - Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 12
+	Excel - Microsoft Excel 14.0 Object Library - 14
 
 */
 

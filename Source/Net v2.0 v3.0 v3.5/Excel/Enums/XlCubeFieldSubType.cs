@@ -4,70 +4,70 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL12 XL14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("XL12","XL14")]
+	[SupportByLibrary("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlCubeFieldSubType
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlCubeHierarchy = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlCubeMeasure = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlCubeSet = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlCubeAttribute = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlCubeCalculatedMeasure = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlCubeKPIValue = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlCubeKPIGoal = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlCubeKPIStatus = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlCubeKPITrend = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlCubeKPIWeight = 10
 	}
 }

@@ -4,70 +4,70 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF12 OF14 
+	 /// SupportByLibrary 12,14,
 	 /// </summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoTextureAlignment
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoTextureAlignmentMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoTextureTopLeft = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoTextureTop = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoTextureTopRight = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoTextureLeft = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoTextureCenter = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoTextureRight = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoTextureBottomLeft = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoTextureBottom = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoTextureBottomRight = 8
 	}
 }

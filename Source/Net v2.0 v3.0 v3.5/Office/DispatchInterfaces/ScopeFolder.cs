@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ScopeFolder SupportByLibrary OF10 OF11 OF12 OF14 
+	/// DispatchInterface ScopeFolder SupportByLibrary "Office", 10,11,12,14
 	///</summary>
-	[SupportByLibrary("OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ScopeFolder : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public string Name
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public string Path
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public NetOffice.OfficeApi.ScopeFolders ScopeFolders
 		{
 			get
@@ -96,9 +96,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		public void AddToSearchFolders()
 		{
 			object[] paramsArray = null;

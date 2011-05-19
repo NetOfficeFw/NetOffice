@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ICustomXMLPartEvents SupportByLibrary OF12 OF14 
+	/// DispatchInterface ICustomXMLPartEvents SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ICustomXMLPartEvents : COMObject
 	{
@@ -53,11 +53,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="NewNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>
 		/// <param name="InUndoRedo">bool InUndoRedo</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void NodeAfterInsert(NetOffice.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newNode, inUndoRedo);
@@ -65,13 +65,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="OldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
 		/// <param name="OldParentNode">NetOffice.OfficeApi.CustomXMLNode OldParentNode</param>
 		/// <param name="OldNextSibling">NetOffice.OfficeApi.CustomXMLNode OldNextSibling</param>
 		/// <param name="InUndoRedo">bool InUndoRedo</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void NodeAfterDelete(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode oldParentNode, NetOffice.OfficeApi.CustomXMLNode oldNextSibling, bool inUndoRedo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, oldParentNode, oldNextSibling, inUndoRedo);
@@ -79,12 +79,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="OldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
 		/// <param name="NewNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>
 		/// <param name="InUndoRedo">bool InUndoRedo</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void NodeAfterReplace(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, newNode, inUndoRedo);

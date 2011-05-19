@@ -16,9 +16,9 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass QueryTable SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	/// CoClass QueryTable SupportByLibrary "Excel", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class QueryTable : _QueryTable, IEventBinding 
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event QueryTable_BeforeRefreshEventHandler _BeforeRefreshEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event QueryTable_BeforeRefreshEventHandler BeforeRefreshEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event QueryTable_AfterRefreshEventHandler _AfterRefreshEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event QueryTable_AfterRefreshEventHandler AfterRefreshEvent
 		{
 			add

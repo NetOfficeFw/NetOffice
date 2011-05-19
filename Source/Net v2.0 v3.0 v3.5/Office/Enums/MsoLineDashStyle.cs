@@ -4,88 +4,88 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoLineDashStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLineDashStyleMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLineSolid = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLineSquareDot = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLineRoundDot = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLineDash = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLineDashDot = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLineDashDotDot = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLineLongDash = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoLineLongDashDot = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoLineLongDashDotDot = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoLineSysDash = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoLineSysDot = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoLineSysDashDot = 12
 	}
 }

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface DocumentLibraryVersion SupportByLibrary OF11 OF12 OF14 
+	/// DispatchInterface DocumentLibraryVersion SupportByLibrary "Office", 11,12,14
 	///</summary>
-	[SupportByLibrary("OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DocumentLibraryVersion : _IMsoDispObj
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public object Modified
 		{
 			get
@@ -72,9 +72,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public Int32 Index
 		{
 			get
@@ -86,9 +86,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -101,9 +101,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public string ModifiedBy
 		{
 			get
@@ -115,9 +115,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public string Comments
 		{
 			get
@@ -133,9 +133,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -143,9 +143,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public COMObject Open()
 		{
 			object[] paramsArray = null;
@@ -155,9 +155,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF11 OF12 OF14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		public COMObject Restore()
 		{
 			object[] paramsArray = null;

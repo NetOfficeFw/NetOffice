@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlTickLabelOrientation
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlTickLabelOrientationAutomatic = -4105,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlTickLabelOrientationDownward = -4170,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlTickLabelOrientationHorizontal = -4128,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlTickLabelOrientationUpward = -4171,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlTickLabelOrientationVertical = -4166
 	}
 }

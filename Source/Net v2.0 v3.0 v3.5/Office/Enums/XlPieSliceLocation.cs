@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("OF14")]
+	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlPieSliceLocation
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		xlHorizontalCoordinate = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		xlVerticalCoordinate = 2
 	}
 }

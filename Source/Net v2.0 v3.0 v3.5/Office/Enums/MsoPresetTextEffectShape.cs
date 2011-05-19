@@ -4,256 +4,256 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoPresetTextEffectShape
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapePlainText = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeStop = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeTriangleUp = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeTriangleDown = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeChevronUp = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeChevronDown = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeRingInside = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeRingOutside = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeArchUpCurve = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeArchDownCurve = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeCircleCurve = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeButtonCurve = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeArchUpPour = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeArchDownPour = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeCirclePour = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeButtonPour = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeCurveUp = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeCurveDown = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeCanUp = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeCanDown = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeWave1 = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeWave2 = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeDoubleWave1 = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeDoubleWave2 = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeInflate = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeDeflate = 26,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeInflateBottom = 27,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeDeflateBottom = 28,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeInflateTop = 29,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeDeflateTop = 30,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeDeflateInflate = 31,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeDeflateInflateDeflate = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeFadeRight = 33,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeFadeLeft = 34,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeFadeUp = 35,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeFadeDown = 36,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeSlantUp = 37,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeSlantDown = 38,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeCascadeUp = 39,
 
 		 /// <summary>
-		 /// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		msoTextEffectShapeCascadeDown = 40
 	}
 }

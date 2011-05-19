@@ -4,70 +4,70 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF11 OF12 OF14 
+	 /// SupportByLibrary 11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoPermission
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoPermissionView = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoPermissionRead = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoPermissionEdit = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoPermissionSave = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoPermissionExtract = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoPermissionChange = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoPermissionPrint = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoPermissionObjModel = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoPermissionFullControl = 64,
 
 		 /// <summary>
-		 /// SupportByLibrary OF12 OF14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		msoPermissionAllCommon = 127
 	}
 }

@@ -14,9 +14,9 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass ButtonMenu SupportByLibrary WCC6.0 
+	/// CoClass ButtonMenu SupportByLibrary "MSComctlLib", 6
 	///</summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ButtonMenu : IButtonMenu, IEventBinding 
 	{

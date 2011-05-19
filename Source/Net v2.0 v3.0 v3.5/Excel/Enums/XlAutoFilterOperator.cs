@@ -4,94 +4,94 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	 /// SupportByLibrary 9,10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlAutoFilterOperator
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlAnd = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlBottom10Items = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlBottom10Percent = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlOr = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlTop10Items = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 9,10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		xlTop10Percent = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterValues = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterCellColor = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterFontColor = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterIcon = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterDynamic = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterNoFill = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterAutomaticFontColor = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary XL12 XL14 
+		 /// SupportByLibrary 12,14,
 		 /// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		xlFilterNoIcon = 14
 	}
 }

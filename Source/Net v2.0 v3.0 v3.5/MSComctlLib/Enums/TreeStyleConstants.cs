@@ -4,58 +4,58 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WCC6.0 
+	 /// SupportByLibrary 6,
 	 /// </summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum TreeStyleConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwTextOnly = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwPictureText = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwPlusMinusText = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwPlusPictureText = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwTreelinesText = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwTreelinesPictureText = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwTreelinesPlusMinusText = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwTreelinesPlusMinusPictureText = 7
 	}
 }

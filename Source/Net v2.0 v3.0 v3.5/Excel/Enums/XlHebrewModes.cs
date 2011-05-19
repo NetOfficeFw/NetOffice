@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL10 XL11 XL12 XL14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlHebrewModes
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlHebrewFullScript = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlHebrewPartialScript = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlHebrewMixedScript = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlHebrewMixedAuthorizedScript = 3
 	}
 }

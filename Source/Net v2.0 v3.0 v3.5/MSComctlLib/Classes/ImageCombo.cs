@@ -26,9 +26,9 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass ImageCombo SupportByLibrary WCC6.0 
+	/// CoClass ImageCombo SupportByLibrary "MSComctlLib", 6
 	///</summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ImageCombo : IImageCombo, IEventBinding 
 	{
@@ -107,14 +107,14 @@ namespace NetOffice.MSComctlLibApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_ChangeEventHandler ChangeEvent
 		{
 			add
@@ -129,14 +129,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_DropdownEventHandler _DropdownEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_DropdownEventHandler DropdownEvent
 		{
 			add
@@ -151,14 +151,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_ClickEventHandler ClickEvent
 		{
 			add
@@ -173,14 +173,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -195,14 +195,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -217,14 +217,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -239,14 +239,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_OLEStartDragEventHandler _OLEStartDragEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_OLEStartDragEventHandler OLEStartDragEvent
 		{
 			add
@@ -261,14 +261,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_OLEGiveFeedbackEventHandler _OLEGiveFeedbackEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_OLEGiveFeedbackEventHandler OLEGiveFeedbackEvent
 		{
 			add
@@ -283,14 +283,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_OLESetDataEventHandler _OLESetDataEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_OLESetDataEventHandler OLESetDataEvent
 		{
 			add
@@ -305,14 +305,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_OLECompleteDragEventHandler _OLECompleteDragEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_OLECompleteDragEventHandler OLECompleteDragEvent
 		{
 			add
@@ -327,14 +327,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_OLEDragOverEventHandler _OLEDragOverEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_OLEDragOverEventHandler OLEDragOverEvent
 		{
 			add
@@ -349,14 +349,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event ImageCombo_OLEDragDropEventHandler _OLEDragDropEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event ImageCombo_OLEDragDropEventHandler OLEDragDropEvent
 		{
 			add

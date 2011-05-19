@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WCC6.0 
+	 /// SupportByLibrary 6,
 	 /// </summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PanelBevelConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		sbrNoBevel = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		sbrInset = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		sbrRaised = 2
 	}
 }

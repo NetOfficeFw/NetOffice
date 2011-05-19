@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WCC6.0 
+	 /// SupportByLibrary 6,
 	 /// </summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum TreeRelationshipConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwFirst = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwLast = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwNext = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwPrevious = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tvwChild = 4
 	}
 }

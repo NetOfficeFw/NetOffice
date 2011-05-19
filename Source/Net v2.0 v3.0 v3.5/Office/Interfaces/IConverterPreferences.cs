@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface IConverterPreferences SupportByLibrary OF14 
+	/// Interface IConverterPreferences SupportByLibrary "Office", 14
 	///</summary>
-	[SupportByLibrary("OF14")]
+	[SupportByLibrary("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterPreferences : COMObject
 	{
@@ -52,10 +52,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="pfMacroEnabled">ref Int32 pfMacroEnabled</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Int32 HrGetMacroEnabled(ref Int32 pfMacroEnabled)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -66,10 +66,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="pFormat">ref Int32 pFormat</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Int32 HrCheckFormat(ref Int32 pFormat)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -80,10 +80,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="pfLossySave">ref Int32 pfLossySave</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public Int32 HrGetLossySave(ref Int32 pfLossySave)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);

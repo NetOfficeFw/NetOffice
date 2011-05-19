@@ -28,9 +28,9 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass Worksheet SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	/// CoClass Worksheet SupportByLibrary "Excel", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Worksheet : _Worksheet, IEventBinding 
 	{
@@ -109,14 +109,14 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Worksheet_SelectionChangeEventHandler _SelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Worksheet_SelectionChangeEventHandler SelectionChangeEvent
 		{
 			add
@@ -131,14 +131,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Worksheet_BeforeDoubleClickEventHandler _BeforeDoubleClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Worksheet_BeforeDoubleClickEventHandler BeforeDoubleClickEvent
 		{
 			add
@@ -153,14 +153,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Worksheet_BeforeRightClickEventHandler _BeforeRightClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Worksheet_BeforeRightClickEventHandler BeforeRightClickEvent
 		{
 			add
@@ -175,14 +175,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Worksheet_ActivateEventHandler _ActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Worksheet_ActivateEventHandler ActivateEvent
 		{
 			add
@@ -197,14 +197,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Worksheet_DeactivateEventHandler _DeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Worksheet_DeactivateEventHandler DeactivateEvent
 		{
 			add
@@ -219,14 +219,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Worksheet_CalculateEventHandler _CalculateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Worksheet_CalculateEventHandler CalculateEvent
 		{
 			add
@@ -241,14 +241,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Worksheet_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Worksheet_ChangeEventHandler ChangeEvent
 		{
 			add
@@ -263,14 +263,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Worksheet_FollowHyperlinkEventHandler _FollowHyperlinkEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Worksheet_FollowHyperlinkEventHandler FollowHyperlinkEvent
 		{
 			add
@@ -285,14 +285,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 10 11 12 14
 		/// </summary>
 		private event Worksheet_PivotTableUpdateEventHandler _PivotTableUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public event Worksheet_PivotTableUpdateEventHandler PivotTableUpdateEvent
 		{
 			add
@@ -307,14 +307,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Worksheet_PivotTableAfterValueChangeEventHandler _PivotTableAfterValueChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Worksheet_PivotTableAfterValueChangeEventHandler PivotTableAfterValueChangeEvent
 		{
 			add
@@ -329,14 +329,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Worksheet_PivotTableBeforeAllocateChangesEventHandler _PivotTableBeforeAllocateChangesEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Worksheet_PivotTableBeforeAllocateChangesEventHandler PivotTableBeforeAllocateChangesEvent
 		{
 			add
@@ -351,14 +351,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Worksheet_PivotTableBeforeCommitChangesEventHandler _PivotTableBeforeCommitChangesEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Worksheet_PivotTableBeforeCommitChangesEventHandler PivotTableBeforeCommitChangesEvent
 		{
 			add
@@ -373,14 +373,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Worksheet_PivotTableBeforeDiscardChangesEventHandler _PivotTableBeforeDiscardChangesEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Worksheet_PivotTableBeforeDiscardChangesEventHandler PivotTableBeforeDiscardChangesEvent
 		{
 			add
@@ -395,14 +395,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Worksheet_PivotTableChangeSyncEventHandler _PivotTableChangeSyncEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Worksheet_PivotTableChangeSyncEventHandler PivotTableChangeSyncEvent
 		{
 			add

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface _Parameter SupportByLibrary ADO2.1 ADO2.5 
+	/// DispatchInterface _Parameter SupportByLibrary "ADODB", 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Parameter : _ADO
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string Name
 		{
 			get
@@ -68,9 +68,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public object Value
 		{
 			get
@@ -96,9 +96,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.DataTypeEnum Type
 		{
 			get
@@ -115,9 +115,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction
 		{
 			get
@@ -134,9 +134,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public byte Precision
 		{
 			get
@@ -153,9 +153,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public byte NumericScale
 		{
 			get
@@ -172,9 +172,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 Size
 		{
 			get
@@ -191,9 +191,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 Attributes
 		{
 			get
@@ -214,10 +214,10 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
 		/// <param name="Val">object Val</param>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public void AppendChunk(object val)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(val);

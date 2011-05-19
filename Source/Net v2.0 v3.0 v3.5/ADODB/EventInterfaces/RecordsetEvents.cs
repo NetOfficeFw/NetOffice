@@ -10,51 +10,51 @@ namespace NetOffice.ADODBApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[ComImport, Guid("00000266-0000-0010-8000-00AA006D2EA4"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface RecordsetEvents
 	{
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
 		void WillChangeField([In] object cFields, [In, MarshalAs(UnmanagedType.IDispatch)] object fields, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10)]
 		void FieldChangeComplete([In] object cFields, [In, MarshalAs(UnmanagedType.IDispatch)] object fields, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(11)]
 		void WillChangeRecord([In] object adReason, [In] object cRecords, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
 		void RecordChangeComplete([In] object adReason, [In] object cRecords, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
 		void WillChangeRecordset([In] object adReason, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(14)]
 		void RecordsetChangeComplete([In] object adReason, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(15)]
 		void WillMove([In] object adReason, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
 		void MoveComplete([In] object adReason, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
 		void EndOfRecordset([In] [Out] ref object fMoreData, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
 		void FetchProgress([In] object progress, [In] object maxProgress, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(19)]
 		void FetchComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 	}

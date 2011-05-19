@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF10 OF11 OF12 OF14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoAlertDefaultType
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoAlertDefaultFirst = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoAlertDefaultSecond = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoAlertDefaultThird = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoAlertDefaultFourth = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoAlertDefaultFifth = 4
 	}
 }

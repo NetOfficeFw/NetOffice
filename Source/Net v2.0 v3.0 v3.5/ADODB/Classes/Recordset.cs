@@ -25,9 +25,9 @@ namespace NetOffice.ADODBApi
 	#endregion
 
 	///<summary>
-	/// CoClass Recordset SupportByLibrary ADO2.1 ADO2.5 
+	/// CoClass Recordset SupportByLibrary "ADODB", 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Recordset : _Recordset, IEventBinding 
 	{
@@ -106,14 +106,14 @@ namespace NetOffice.ADODBApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Recordset_WillChangeFieldEventHandler _WillChangeFieldEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Recordset_WillChangeFieldEventHandler WillChangeFieldEvent
 		{
 			add
@@ -128,14 +128,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Recordset_FieldChangeCompleteEventHandler _FieldChangeCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Recordset_FieldChangeCompleteEventHandler FieldChangeCompleteEvent
 		{
 			add
@@ -150,14 +150,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Recordset_WillChangeRecordEventHandler _WillChangeRecordEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Recordset_WillChangeRecordEventHandler WillChangeRecordEvent
 		{
 			add
@@ -172,14 +172,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Recordset_RecordChangeCompleteEventHandler _RecordChangeCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Recordset_RecordChangeCompleteEventHandler RecordChangeCompleteEvent
 		{
 			add
@@ -194,14 +194,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Recordset_WillChangeRecordsetEventHandler _WillChangeRecordsetEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Recordset_WillChangeRecordsetEventHandler WillChangeRecordsetEvent
 		{
 			add
@@ -216,14 +216,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Recordset_RecordsetChangeCompleteEventHandler _RecordsetChangeCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Recordset_RecordsetChangeCompleteEventHandler RecordsetChangeCompleteEvent
 		{
 			add
@@ -238,14 +238,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Recordset_WillMoveEventHandler _WillMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Recordset_WillMoveEventHandler WillMoveEvent
 		{
 			add
@@ -260,14 +260,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Recordset_MoveCompleteEventHandler _MoveCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Recordset_MoveCompleteEventHandler MoveCompleteEvent
 		{
 			add
@@ -282,14 +282,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Recordset_EndOfRecordsetEventHandler _EndOfRecordsetEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Recordset_EndOfRecordsetEventHandler EndOfRecordsetEvent
 		{
 			add
@@ -304,14 +304,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Recordset_FetchProgressEventHandler _FetchProgressEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Recordset_FetchProgressEventHandler FetchProgressEvent
 		{
 			add
@@ -326,14 +326,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Recordset_FetchCompleteEventHandler _FetchCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Recordset_FetchCompleteEventHandler FetchCompleteEvent
 		{
 			add

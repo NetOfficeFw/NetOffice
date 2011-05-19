@@ -16,9 +16,9 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass OLEObject SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	/// CoClass OLEObject SupportByLibrary "Excel", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OLEObject : _OLEObject, IEventBinding 
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event OLEObject_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event OLEObject_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event OLEObject_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event OLEObject_LostFocusEventHandler LostFocusEvent
 		{
 			add

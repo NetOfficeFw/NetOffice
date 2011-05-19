@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF11 OF12 OF14 
+	 /// SupportByLibrary 11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoSharedWorkspaceTaskStatus
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoSharedWorkspaceTaskStatusNotStarted = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoSharedWorkspaceTaskStatusInProgress = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoSharedWorkspaceTaskStatusCompleted = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoSharedWorkspaceTaskStatusDeferred = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OF11 OF12 OF14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 11,12,14)]
 		msoSharedWorkspaceTaskStatusWaiting = 5
 	}
 }

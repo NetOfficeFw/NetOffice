@@ -4,46 +4,46 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADO2.1 ADO2.5 
+	 /// SupportByLibrary 2.1,2.5,
 	 /// </summary>
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum FilterGroupEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adFilterNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adFilterPendingRecords = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adFilterAffectedRecords = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adFilterFetchedRecords = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adFilterPredicate = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adFilterConflictingRecords = 5
 	}
 }

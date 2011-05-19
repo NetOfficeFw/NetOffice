@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("XL14")]
+	[SupportByLibrary("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlProtectedViewCloseReason
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		xlProtectedViewCloseNormal = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary XL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		xlProtectedViewCloseEdit = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		xlProtectedViewCloseForced = 2
 	}
 }

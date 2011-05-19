@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface Property SupportByLibrary ADO2.1 ADO2.5 
+	/// DispatchInterface Property SupportByLibrary "ADODB", 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Property : COMObject
 	{
@@ -49,9 +49,9 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public object Value
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string Name
 		{
 			get
@@ -91,9 +91,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.DataTypeEnum Type
 		{
 			get
@@ -105,9 +105,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5 
+		/// SupportByLibrary 2.1 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 Attributes
 		{
 			get

@@ -10,11 +10,11 @@ using LateBindingApi.Core;
     
     Contains the following Type Libraries:
 	Name - Description - SupportByLibrary
-	Office - Microsoft Office 9.0 Object Library - OF09
-	Office - Microsoft Office 10.0 Object Library - OF10
-	Office - Microsoft Office 11.0 Object Library - OF11
-	Office - Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - OF12
-	Office - Microsoft Office 14.0 Object Library - OF14
+	Office - Microsoft Office 9.0 Object Library - 9
+	Office - Microsoft Office 10.0 Object Library - 10
+	Office - Microsoft Office 11.0 Object Library - 11
+	Office - Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 12
+	Office - Microsoft Office 14.0 Object Library - 14
 
 */
 
@@ -35,7 +35,7 @@ using LateBindingApi.Core;
 /*
 Alias Table
  
-[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+[SupportByLibrary("Office", 9,10,11,12,14)]
 MsoRGBType as Int32
 
 */

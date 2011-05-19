@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF10 OF11 OF12 OF14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoFileDialogType
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoFileDialogOpen = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoFileDialogSaveAs = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoFileDialogFilePicker = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoFileDialogFolderPicker = 4
 	}
 }

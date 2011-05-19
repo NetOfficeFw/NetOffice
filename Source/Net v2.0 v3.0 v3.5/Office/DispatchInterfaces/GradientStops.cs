@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface GradientStops SupportByLibrary OF12 OF14 
+	/// DispatchInterface GradientStops SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GradientStops : _IMsoDispObj ,IEnumerable
 	{
@@ -50,10 +50,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.GradientStop this[Int32 index]
 		{
@@ -67,9 +67,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -85,10 +85,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void Delete(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -96,13 +96,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="RGB">Int32 RGB</param>
 		/// <param name="Position">Single Position</param>
 		/// <param name="Transparency">Single Transparency</param>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void Insert(Int32 rGB, Single position, Single transparency, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency, index);
@@ -110,14 +110,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="RGB">Int32 RGB</param>
 		/// <param name="Position">Single Position</param>
 		/// <param name="Transparency">Single Transparency</param>
 		/// <param name="Index">Int32 Index</param>
 		/// <param name="Brightness">Single Brightness</param>
-		[SupportByLibrary("OF14")]
+		[SupportByLibrary("Office", 14)]
 		public void Insert2(Int32 rGB, Single position, Single transparency, Int32 index, Single brightness)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency, index, brightness);
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("OF12","OF14")]
+        [SupportByLibrary("Office", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

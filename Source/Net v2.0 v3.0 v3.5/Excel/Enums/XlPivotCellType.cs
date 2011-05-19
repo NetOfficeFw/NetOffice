@@ -4,70 +4,70 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL10 XL11 XL12 XL14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlPivotCellType
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlPivotCellValue = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlPivotCellPivotItem = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlPivotCellSubtotal = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlPivotCellGrandTotal = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlPivotCellDataField = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlPivotCellPivotField = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlPivotCellPageFieldItem = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlPivotCellCustomSubtotal = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlPivotCellDataPivotField = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary XL10 XL11 XL12 XL14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		xlPivotCellBlankCell = 9
 	}
 }

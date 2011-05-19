@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OF10 OF11 OF12 OF14 
+	 /// SupportByLibrary 10,11,12,14,
 	 /// </summary>
-	[SupportByLibrary("OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoDiagramType
 	{
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramOrgChart = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramCycle = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramRadial = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramPyramid = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramVenn = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary OF10 OF11 OF12 OF14 
+		 /// SupportByLibrary 10,11,12,14,
 		 /// </summary>
-		[SupportByLibrary("OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 10,11,12,14)]
 		msoDiagramTarget = 6
 	}
 }

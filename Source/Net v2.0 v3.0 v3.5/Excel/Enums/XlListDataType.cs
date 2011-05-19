@@ -4,88 +4,88 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL11 XL12 XL14 
+	 /// SupportByLibrary 11,12,14,
 	 /// </summary>
-	[SupportByLibrary("XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlListDataType
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeText = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeMultiLineText = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeNumber = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeCurrency = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeDateTime = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeChoice = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeChoiceMulti = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeListLookup = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeCheckbox = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeHyperLink = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeCounter = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListDataTypeMultiLineRichText = 12
 	}
 }

@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADO2.5 
+	 /// SupportByLibrary 2.5,
 	 /// </summary>
-	[SupportByLibrary("ADO2.5")]
+	[SupportByLibrary("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MoveRecordOptionsEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adMoveUnspecified = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adMoveOverWrite = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adMoveDontUpdateLinks = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adMoveAllowEmulation = 4
 	}
 }

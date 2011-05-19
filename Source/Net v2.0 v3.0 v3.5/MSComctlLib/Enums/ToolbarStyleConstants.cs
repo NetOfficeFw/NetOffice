@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary WCC6.0 
+	 /// SupportByLibrary 6,
 	 /// </summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ToolbarStyleConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tbrStandard = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary WCC6.0 
+		 /// SupportByLibrary 6,
 		 /// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		tbrFlat = 1
 	}
 }

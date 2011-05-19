@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADO2.5 
+	 /// SupportByLibrary 2.5,
 	 /// </summary>
-	[SupportByLibrary("ADO2.5")]
+	[SupportByLibrary("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum CopyRecordOptionsEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adCopyUnspecified = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adCopyOverWrite = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adCopyAllowEmulation = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adCopyNonRecursive = 2
 	}
 }

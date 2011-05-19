@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface IAssistance SupportByLibrary OF12 OF14 
+	/// DispatchInterface IAssistance SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IAssistance : COMObject
 	{
@@ -53,11 +53,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="HelpId">string HelpId</param>
 		/// <param name="Scope">string Scope</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void ShowHelp(string helpId, string scope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId, scope);
@@ -65,11 +65,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Query">string Query</param>
 		/// <param name="Scope">string Scope</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void SearchHelp(string query, string scope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(query, scope);
@@ -77,10 +77,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="HelpId">string HelpId</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void SetDefaultContext(string helpId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId);
@@ -88,10 +88,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="HelpId">string HelpId</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void ClearDefaultContext(string helpId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId);

@@ -4,382 +4,382 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADO2.1 ADO2.5 
+	 /// SupportByLibrary 2.1,2.5,
 	 /// </summary>
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ErrorValueEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrInvalidArgument = 3001,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrNoCurrentRecord = 3021,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrIllegalOperation = 3219,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrInTransaction = 3246,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrFeatureNotAvailable = 3251,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrItemNotFound = 3265,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrObjectInCollection = 3367,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrObjectNotSet = 3420,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrDataConversion = 3421,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrObjectClosed = 3704,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrObjectOpen = 3705,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrProviderNotFound = 3706,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrBoundToCommand = 3707,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrInvalidParamInfo = 3708,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrInvalidConnection = 3709,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrNotReentrant = 3710,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrStillExecuting = 3711,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrOperationCancelled = 3712,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrStillConnecting = 3713,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrNotExecuting = 3715,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adErrUnsafeOperation = 3716,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrProviderFailed = 3000,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrOpeningFile = 3002,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrReadFile = 3003,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrWriteFile = 3004,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrCantChangeProvider = 3220,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrInvalidTransaction = 3714,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adwrnSecurityDialog = 3717,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adwrnSecurityDialogHeader = 3718,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrIntegrityViolation = 3719,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrPermissionDenied = 3720,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrDataOverflow = 3721,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrSchemaViolation = 3722,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrSignMismatch = 3723,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrCantConvertvalue = 3724,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrCantCreate = 3725,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrColumnNotOnThisRow = 3726,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrURLDoesNotExist = 3727,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrTreePermissionDenied = 3728,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrInvalidURL = 3729,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrResourceLocked = 3730,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrResourceExists = 3731,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrCannotComplete = 3732,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrVolumeNotFound = 3733,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrOutOfSpace = 3734,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrResourceOutOfScope = 3735,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrUnavailable = 3736,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrURLNamedRowDoesNotExist = 3737,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrDelResOutOfScope = 3738,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrPropInvalidColumn = 3739,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrPropInvalidOption = 3740,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrPropInvalidValue = 3741,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrPropConflicting = 3742,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrPropNotAllSettable = 3743,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrPropNotSet = 3744,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrPropNotSettable = 3745,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrPropNotSupported = 3746,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrCatalogNotSet = 3747,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrCantChangeConnection = 3748,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrFieldsUpdateFailed = 3749,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrDenyNotSupported = 3750,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adErrDenyTypeNotSupported = 3751
 	}
 }

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface EncryptionProvider SupportByLibrary OF12 OF14 
+	/// DispatchInterface EncryptionProvider SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EncryptionProvider : COMObject
 	{
@@ -53,10 +53,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="encprovdet">NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public object GetProviderDetail(NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(encprovdet);
@@ -74,10 +74,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public Int32 NewSession(object parentWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow);
@@ -86,12 +86,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="EncryptionData">object EncryptionData</param>
 		/// <param name="PermissionsMask">ref UIntPtr PermissionsMask</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public Int32 Authenticate(object parentWindow, object encryptionData, ref UIntPtr permissionsMask)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
@@ -102,10 +102,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public Int32 CloneSession(Int32 sessionHandle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle);
@@ -114,10 +114,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void EndSession(Int32 sessionHandle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle);
@@ -125,11 +125,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		/// <param name="EncryptionData">object EncryptionData</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public Int32 Save(Int32 sessionHandle, object encryptionData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, encryptionData);
@@ -138,13 +138,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		/// <param name="StreamName">string StreamName</param>
 		/// <param name="UnencryptedStream">object UnencryptedStream</param>
 		/// <param name="EncryptedStream">object EncryptedStream</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void EncryptStream(Int32 sessionHandle, string streamName, object unencryptedStream, object encryptedStream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, streamName, unencryptedStream, encryptedStream);
@@ -152,13 +152,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		/// <param name="StreamName">string StreamName</param>
 		/// <param name="EncryptedStream">object EncryptedStream</param>
 		/// <param name="UnencryptedStream">object UnencryptedStream</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void DecryptStream(Int32 sessionHandle, string streamName, object encryptedStream, object unencryptedStream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, streamName, encryptedStream, unencryptedStream);
@@ -166,13 +166,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="ReadOnly">bool ReadOnly</param>
 		/// <param name="Remove">ref bool Remove</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void ShowSettings(Int32 sessionHandle, object parentWindow, bool readOnly, ref bool remove)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);

@@ -4,22 +4,22 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("XL14")]
+	[SupportByLibrary("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlAllocation
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		xlManualAllocation = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		xlAutomaticAllocation = 2
 	}
 }

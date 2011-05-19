@@ -27,9 +27,9 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass Chart SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	/// CoClass Chart SupportByLibrary "Excel", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Chart : _Chart, IEventBinding 
 	{
@@ -108,14 +108,14 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_ActivateEventHandler _ActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_ActivateEventHandler ActivateEvent
 		{
 			add
@@ -130,14 +130,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_DeactivateEventHandler _DeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_DeactivateEventHandler DeactivateEvent
 		{
 			add
@@ -152,14 +152,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_ResizeEventHandler _ResizeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_ResizeEventHandler ResizeEvent
 		{
 			add
@@ -174,14 +174,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -196,14 +196,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -218,14 +218,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -240,14 +240,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_BeforeRightClickEventHandler _BeforeRightClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_BeforeRightClickEventHandler BeforeRightClickEvent
 		{
 			add
@@ -262,14 +262,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_DragPlotEventHandler _DragPlotEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_DragPlotEventHandler DragPlotEvent
 		{
 			add
@@ -284,14 +284,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_DragOverEventHandler _DragOverEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_DragOverEventHandler DragOverEvent
 		{
 			add
@@ -306,14 +306,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_BeforeDoubleClickEventHandler _BeforeDoubleClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_BeforeDoubleClickEventHandler BeforeDoubleClickEvent
 		{
 			add
@@ -328,14 +328,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_SelectEventHandler _SelectEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_SelectEventHandler SelectEvent
 		{
 			add
@@ -350,14 +350,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_SeriesChangeEventHandler _SeriesChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_SeriesChangeEventHandler SeriesChangeEvent
 		{
 			add
@@ -372,14 +372,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Chart_CalculateEventHandler _CalculateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Chart_CalculateEventHandler CalculateEvent
 		{
 			add

@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADO2.1 ADO2.5 
+	 /// SupportByLibrary 2.1,2.5,
 	 /// </summary>
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AffectEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adAffectCurrent = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adAffectGroup = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adAffectAll = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adAffectAllChapters = 4
 	}
 }

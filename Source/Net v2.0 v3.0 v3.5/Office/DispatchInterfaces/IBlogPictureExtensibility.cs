@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface IBlogPictureExtensibility SupportByLibrary OF12 OF14 
+	/// DispatchInterface IBlogPictureExtensibility SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IBlogPictureExtensibility : COMObject
 	{
@@ -53,11 +53,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="BlogPictureProvider">ref string BlogPictureProvider</param>
 		/// <param name="FriendlyName">ref string FriendlyName</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void BlogPictureProviderProperties(ref string blogPictureProvider, ref string friendlyName)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
@@ -68,13 +68,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="BlogProvider">string BlogProvider</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
 		/// <param name="Document">object Document</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void CreatePictureAccount(string account, string blogProvider, Int32 parentWindow, object document)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(account, blogProvider, parentWindow, document);
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
@@ -90,7 +90,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Image">object Image</param>
 		/// <param name="PictureURI">ref string PictureURI</param>
 		/// <param name="ImageType">Int32 ImageType</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void PublishPicture(string account, Int32 parentWindow, object document, object image, ref string pictureURI, Int32 imageType)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false);

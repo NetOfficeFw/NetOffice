@@ -15,9 +15,9 @@ namespace NetOffice.OfficeApi
 	#endregion
 
 	///<summary>
-	/// CoClass CommandBarComboBox SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+	/// CoClass CommandBarComboBox SupportByLibrary "Office", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CommandBarComboBox : _CommandBarComboBox, IEventBinding 
 	{
@@ -96,14 +96,14 @@ namespace NetOffice.OfficeApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14
+		/// SupportByLibrary Office, 9 10 11 12 14
 		/// </summary>
 		private event CommandBarComboBox_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14
+		/// SupportByLibrary Office 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public event CommandBarComboBox_ChangeEventHandler ChangeEvent
 		{
 			add

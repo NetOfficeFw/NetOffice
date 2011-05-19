@@ -14,9 +14,9 @@ namespace NetOffice.ADODBApi
 	#endregion
 
 	///<summary>
-	/// CoClass Command SupportByLibrary ADO2.1 ADO2.5 
+	/// CoClass Command SupportByLibrary "ADODB", 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Command : _Command, IEventBinding 
 	{

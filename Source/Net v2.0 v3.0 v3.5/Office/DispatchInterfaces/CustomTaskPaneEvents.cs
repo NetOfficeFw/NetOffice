@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface CustomTaskPaneEvents SupportByLibrary OF12 OF14 
+	/// DispatchInterface CustomTaskPaneEvents SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomTaskPaneEvents : COMObject
 	{
@@ -53,10 +53,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="CustomTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customTaskPaneInst);
@@ -64,10 +64,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="CustomTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void DockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customTaskPaneInst);

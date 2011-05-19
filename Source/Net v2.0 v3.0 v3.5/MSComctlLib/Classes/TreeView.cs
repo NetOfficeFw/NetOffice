@@ -34,9 +34,9 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass TreeView SupportByLibrary WCC6.0 
+	/// CoClass TreeView SupportByLibrary "MSComctlLib", 6
 	///</summary>
-	[SupportByLibrary("WCC6.0")]
+	[SupportByLibrary("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TreeView : ITreeView, IEventBinding 
 	{
@@ -115,14 +115,14 @@ namespace NetOffice.MSComctlLibApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_BeforeLabelEditEventHandler _BeforeLabelEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_BeforeLabelEditEventHandler BeforeLabelEditEvent
 		{
 			add
@@ -137,14 +137,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_AfterLabelEditEventHandler _AfterLabelEditEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_AfterLabelEditEventHandler AfterLabelEditEvent
 		{
 			add
@@ -159,14 +159,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_CollapseEventHandler _CollapseEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_CollapseEventHandler CollapseEvent
 		{
 			add
@@ -181,14 +181,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_ExpandEventHandler _ExpandEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_ExpandEventHandler ExpandEvent
 		{
 			add
@@ -203,14 +203,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_NodeClickEventHandler _NodeClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_NodeClickEventHandler NodeClickEvent
 		{
 			add
@@ -225,14 +225,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -247,14 +247,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -269,14 +269,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -291,14 +291,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -313,14 +313,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -335,14 +335,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -357,14 +357,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_ClickEventHandler ClickEvent
 		{
 			add
@@ -379,14 +379,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -401,14 +401,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_NodeCheckEventHandler _NodeCheckEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_NodeCheckEventHandler NodeCheckEvent
 		{
 			add
@@ -423,14 +423,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_OLEStartDragEventHandler _OLEStartDragEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_OLEStartDragEventHandler OLEStartDragEvent
 		{
 			add
@@ -445,14 +445,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_OLEGiveFeedbackEventHandler _OLEGiveFeedbackEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_OLEGiveFeedbackEventHandler OLEGiveFeedbackEvent
 		{
 			add
@@ -467,14 +467,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_OLESetDataEventHandler _OLESetDataEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_OLESetDataEventHandler OLESetDataEvent
 		{
 			add
@@ -489,14 +489,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_OLECompleteDragEventHandler _OLECompleteDragEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_OLECompleteDragEventHandler OLECompleteDragEvent
 		{
 			add
@@ -511,14 +511,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_OLEDragOverEventHandler _OLEDragOverEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_OLEDragOverEventHandler OLEDragOverEvent
 		{
 			add
@@ -533,14 +533,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib, 6
 		/// </summary>
 		private event TreeView_OLEDragDropEventHandler _OLEDragDropEvent;
 
 		/// <summary>
-		/// SupportByLibrary WCC6.0
+		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("WCC6.0")]
+		[SupportByLibrary("MSComctlLib", 6)]
 		public event TreeView_OLEDragDropEventHandler OLEDragDropEvent
 		{
 			add

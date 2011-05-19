@@ -4,40 +4,40 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADO2.5 
+	 /// SupportByLibrary 2.5,
 	 /// </summary>
-	[SupportByLibrary("ADO2.5")]
+	[SupportByLibrary("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum RecordOpenOptionsEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adOpenRecordUnspecified = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adOpenSource = 8388608,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adOpenAsync = 4096,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adDelayFetchStream = 16384,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adDelayFetchFields = 32768
 	}
 }

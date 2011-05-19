@@ -4,28 +4,28 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL14 
+	 /// SupportByLibrary 14,
 	 /// </summary>
-	[SupportByLibrary("XL14")]
+	[SupportByLibrary("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlCellChangedState
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		xlCellNotChanged = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		xlCellChanged = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XL14 
+		 /// SupportByLibrary 14,
 		 /// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		xlCellChangeApplied = 3
 	}
 }

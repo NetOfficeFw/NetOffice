@@ -14,9 +14,9 @@ namespace NetOffice.ADODBApi
 	#endregion
 
 	///<summary>
-	/// CoClass Parameter SupportByLibrary ADO2.1 ADO2.5 
+	/// CoClass Parameter SupportByLibrary "ADODB", 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Parameter : _Parameter, IEventBinding 
 	{

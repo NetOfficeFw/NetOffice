@@ -50,9 +50,9 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass Workbook SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	/// CoClass Workbook SupportByLibrary "Excel", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Workbook : _Workbook, IEventBinding 
 	{
@@ -131,14 +131,14 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_OpenEventHandler OpenEvent
 		{
 			add
@@ -153,14 +153,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_ActivateEventHandler _ActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_ActivateEventHandler ActivateEvent
 		{
 			add
@@ -175,14 +175,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_DeactivateEventHandler _DeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_DeactivateEventHandler DeactivateEvent
 		{
 			add
@@ -197,14 +197,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_BeforeCloseEventHandler _BeforeCloseEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_BeforeCloseEventHandler BeforeCloseEvent
 		{
 			add
@@ -219,14 +219,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_BeforeSaveEventHandler _BeforeSaveEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_BeforeSaveEventHandler BeforeSaveEvent
 		{
 			add
@@ -241,14 +241,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_BeforePrintEventHandler _BeforePrintEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_BeforePrintEventHandler BeforePrintEvent
 		{
 			add
@@ -263,14 +263,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_NewSheetEventHandler _NewSheetEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_NewSheetEventHandler NewSheetEvent
 		{
 			add
@@ -285,14 +285,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_AddinInstallEventHandler _AddinInstallEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_AddinInstallEventHandler AddinInstallEvent
 		{
 			add
@@ -307,14 +307,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_AddinUninstallEventHandler _AddinUninstallEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_AddinUninstallEventHandler AddinUninstallEvent
 		{
 			add
@@ -329,14 +329,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_WindowResizeEventHandler _WindowResizeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_WindowResizeEventHandler WindowResizeEvent
 		{
 			add
@@ -351,14 +351,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_WindowActivateEventHandler _WindowActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_WindowActivateEventHandler WindowActivateEvent
 		{
 			add
@@ -373,14 +373,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_WindowDeactivateEventHandler _WindowDeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_WindowDeactivateEventHandler WindowDeactivateEvent
 		{
 			add
@@ -395,14 +395,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_SheetSelectionChangeEventHandler _SheetSelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_SheetSelectionChangeEventHandler SheetSelectionChangeEvent
 		{
 			add
@@ -417,14 +417,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_SheetBeforeDoubleClickEventHandler _SheetBeforeDoubleClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_SheetBeforeDoubleClickEventHandler SheetBeforeDoubleClickEvent
 		{
 			add
@@ -439,14 +439,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_SheetBeforeRightClickEventHandler _SheetBeforeRightClickEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_SheetBeforeRightClickEventHandler SheetBeforeRightClickEvent
 		{
 			add
@@ -461,14 +461,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_SheetActivateEventHandler _SheetActivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_SheetActivateEventHandler SheetActivateEvent
 		{
 			add
@@ -483,14 +483,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_SheetDeactivateEventHandler _SheetDeactivateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_SheetDeactivateEventHandler SheetDeactivateEvent
 		{
 			add
@@ -505,14 +505,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_SheetCalculateEventHandler _SheetCalculateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_SheetCalculateEventHandler SheetCalculateEvent
 		{
 			add
@@ -527,14 +527,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_SheetChangeEventHandler _SheetChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_SheetChangeEventHandler SheetChangeEvent
 		{
 			add
@@ -549,14 +549,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 9 10 11 12 14
 		/// </summary>
 		private event Workbook_SheetFollowHyperlinkEventHandler _SheetFollowHyperlinkEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 9 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public event Workbook_SheetFollowHyperlinkEventHandler SheetFollowHyperlinkEvent
 		{
 			add
@@ -571,14 +571,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 10 11 12 14
 		/// </summary>
 		private event Workbook_SheetPivotTableUpdateEventHandler _SheetPivotTableUpdateEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public event Workbook_SheetPivotTableUpdateEventHandler SheetPivotTableUpdateEvent
 		{
 			add
@@ -593,14 +593,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 10 11 12 14
 		/// </summary>
 		private event Workbook_PivotTableCloseConnectionEventHandler _PivotTableCloseConnectionEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public event Workbook_PivotTableCloseConnectionEventHandler PivotTableCloseConnectionEvent
 		{
 			add
@@ -615,14 +615,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel, 10 11 12 14
 		/// </summary>
 		private event Workbook_PivotTableOpenConnectionEventHandler _PivotTableOpenConnectionEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14
+		/// SupportByLibrary Excel 10 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public event Workbook_PivotTableOpenConnectionEventHandler PivotTableOpenConnectionEvent
 		{
 			add
@@ -637,14 +637,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14
+		/// SupportByLibrary Excel, 11 12 14
 		/// </summary>
 		private event Workbook_SyncEventHandler _SyncEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14
+		/// SupportByLibrary Excel 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public event Workbook_SyncEventHandler SyncEvent
 		{
 			add
@@ -659,14 +659,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14
+		/// SupportByLibrary Excel, 11 12 14
 		/// </summary>
 		private event Workbook_BeforeXmlImportEventHandler _BeforeXmlImportEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14
+		/// SupportByLibrary Excel 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public event Workbook_BeforeXmlImportEventHandler BeforeXmlImportEvent
 		{
 			add
@@ -681,14 +681,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14
+		/// SupportByLibrary Excel, 11 12 14
 		/// </summary>
 		private event Workbook_AfterXmlImportEventHandler _AfterXmlImportEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14
+		/// SupportByLibrary Excel 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public event Workbook_AfterXmlImportEventHandler AfterXmlImportEvent
 		{
 			add
@@ -703,14 +703,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14
+		/// SupportByLibrary Excel, 11 12 14
 		/// </summary>
 		private event Workbook_BeforeXmlExportEventHandler _BeforeXmlExportEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14
+		/// SupportByLibrary Excel 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public event Workbook_BeforeXmlExportEventHandler BeforeXmlExportEvent
 		{
 			add
@@ -725,14 +725,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14
+		/// SupportByLibrary Excel, 11 12 14
 		/// </summary>
 		private event Workbook_AfterXmlExportEventHandler _AfterXmlExportEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14
+		/// SupportByLibrary Excel 11 12 14
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public event Workbook_AfterXmlExportEventHandler AfterXmlExportEvent
 		{
 			add
@@ -747,14 +747,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14
+		/// SupportByLibrary Excel, 12 14
 		/// </summary>
 		private event Workbook_RowsetCompleteEventHandler _RowsetCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14
+		/// SupportByLibrary Excel 12 14
 		/// </summary>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public event Workbook_RowsetCompleteEventHandler RowsetCompleteEvent
 		{
 			add
@@ -769,14 +769,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Workbook_SheetPivotTableAfterValueChangeEventHandler _SheetPivotTableAfterValueChangeEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Workbook_SheetPivotTableAfterValueChangeEventHandler SheetPivotTableAfterValueChangeEvent
 		{
 			add
@@ -791,14 +791,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Workbook_SheetPivotTableBeforeAllocateChangesEventHandler _SheetPivotTableBeforeAllocateChangesEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Workbook_SheetPivotTableBeforeAllocateChangesEventHandler SheetPivotTableBeforeAllocateChangesEvent
 		{
 			add
@@ -813,14 +813,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Workbook_SheetPivotTableBeforeCommitChangesEventHandler _SheetPivotTableBeforeCommitChangesEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Workbook_SheetPivotTableBeforeCommitChangesEventHandler SheetPivotTableBeforeCommitChangesEvent
 		{
 			add
@@ -835,14 +835,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Workbook_SheetPivotTableBeforeDiscardChangesEventHandler _SheetPivotTableBeforeDiscardChangesEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Workbook_SheetPivotTableBeforeDiscardChangesEventHandler SheetPivotTableBeforeDiscardChangesEvent
 		{
 			add
@@ -857,14 +857,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Workbook_SheetPivotTableChangeSyncEventHandler _SheetPivotTableChangeSyncEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Workbook_SheetPivotTableChangeSyncEventHandler SheetPivotTableChangeSyncEvent
 		{
 			add
@@ -879,14 +879,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Workbook_AfterSaveEventHandler _AfterSaveEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Workbook_AfterSaveEventHandler AfterSaveEvent
 		{
 			add
@@ -901,14 +901,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel, 14
 		/// </summary>
 		private event Workbook_NewChartEventHandler _NewChartEvent;
 
 		/// <summary>
-		/// SupportByLibrary XL14
+		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public event Workbook_NewChartEventHandler NewChartEvent
 		{
 			add

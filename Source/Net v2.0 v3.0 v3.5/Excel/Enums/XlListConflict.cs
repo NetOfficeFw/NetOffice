@@ -4,34 +4,34 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary XL11 XL12 XL14 
+	 /// SupportByLibrary 11,12,14,
 	 /// </summary>
-	[SupportByLibrary("XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlListConflict
 	{
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListConflictDialog = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListConflictRetryAllConflicts = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListConflictDiscardAllConflicts = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary XL11 XL12 XL14 
+		 /// SupportByLibrary 11,12,14,
 		 /// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		xlListConflictError = 3
 	}
 }

@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface ListObjects SupportByLibrary XL11 XL12 XL14 
+	/// DispatchInterface ListObjects SupportByLibrary "Excel", 11,12,14
 	///</summary>
-	[SupportByLibrary("XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ListObjects : COMObject ,IEnumerable
 	{
@@ -50,9 +50,9 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -65,9 +65,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -79,9 +79,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.ListObject get__Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -107,10 +107,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.ListObject this[object index]
 		{
@@ -124,9 +124,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -142,14 +142,14 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XL11 
+		/// SupportByLibrary 11 
 		/// </summary>
 		/// <param name="SourceType">NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
 		/// <param name="Source">object Source</param>
 		/// <param name="LinkSource">object LinkSource</param>
 		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
 		/// <param name="Destination">optional object Destination</param>
-		[SupportByLibrary("XL11")]
+		[SupportByLibrary("Excel", 11)]
 		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination);
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="SourceType">NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
 		/// <param name="Source">object Source</param>
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
 		/// <param name="Destination">optional object Destination</param>
 		/// <param name="TableStyleName">optional object TableStyleName</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination, object tableStyleName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination, tableStyleName);
@@ -177,13 +177,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL11 XL12 XL14 
+		/// SupportByLibrary 11 12 14 
 		/// </summary>
 		/// <param name="SourceType">NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
 		/// <param name="Source">object Source</param>
 		/// <param name="LinkSource">object LinkSource</param>
 		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
-		[SupportByLibrary("XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders);
@@ -193,14 +193,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="SourceType">NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
 		/// <param name="Source">object Source</param>
 		/// <param name="LinkSource">object LinkSource</param>
 		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
 		/// <param name="Destination">optional object Destination</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.ListObject _Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination);
@@ -210,13 +210,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="SourceType">NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType</param>
 		/// <param name="Source">object Source</param>
 		/// <param name="LinkSource">object LinkSource</param>
 		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.ListObject _Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders);
@@ -229,7 +229,7 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("XL11","XL12","XL14")]
+        [SupportByLibrary("Excel", 11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

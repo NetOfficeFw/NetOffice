@@ -23,9 +23,9 @@ namespace NetOffice.ADODBApi
 	#endregion
 
 	///<summary>
-	/// CoClass Connection SupportByLibrary ADO2.1 ADO2.5 
+	/// CoClass Connection SupportByLibrary "ADODB", 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Connection : _Connection, IEventBinding 
 	{
@@ -104,14 +104,14 @@ namespace NetOffice.ADODBApi
 		#region Events
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Connection_InfoMessageEventHandler _InfoMessageEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Connection_InfoMessageEventHandler InfoMessageEvent
 		{
 			add
@@ -126,14 +126,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Connection_BeginTransCompleteEventHandler _BeginTransCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Connection_BeginTransCompleteEventHandler BeginTransCompleteEvent
 		{
 			add
@@ -148,14 +148,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Connection_CommitTransCompleteEventHandler _CommitTransCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Connection_CommitTransCompleteEventHandler CommitTransCompleteEvent
 		{
 			add
@@ -170,14 +170,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Connection_RollbackTransCompleteEventHandler _RollbackTransCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Connection_RollbackTransCompleteEventHandler RollbackTransCompleteEvent
 		{
 			add
@@ -192,14 +192,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Connection_WillExecuteEventHandler _WillExecuteEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Connection_WillExecuteEventHandler WillExecuteEvent
 		{
 			add
@@ -214,14 +214,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Connection_ExecuteCompleteEventHandler _ExecuteCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Connection_ExecuteCompleteEventHandler ExecuteCompleteEvent
 		{
 			add
@@ -236,14 +236,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Connection_WillConnectEventHandler _WillConnectEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Connection_WillConnectEventHandler WillConnectEvent
 		{
 			add
@@ -258,14 +258,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Connection_ConnectCompleteEventHandler _ConnectCompleteEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Connection_ConnectCompleteEventHandler ConnectCompleteEvent
 		{
 			add
@@ -280,14 +280,14 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB, 2.1 2.5
 		/// </summary>
 		private event Connection_DisconnectEventHandler _DisconnectEvent;
 
 		/// <summary>
-		/// SupportByLibrary ADO2.1 ADO2.5
+		/// SupportByLibrary ADODB 2.1 2.5
 		/// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public event Connection_DisconnectEventHandler DisconnectEvent
 		{
 			add

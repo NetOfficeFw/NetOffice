@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// Interface ADORecordConstruction SupportByLibrary ADO2.5 
+	/// Interface ADORecordConstruction SupportByLibrary "ADODB", 2.5
 	///</summary>
-	[SupportByLibrary("ADO2.5")]
+	[SupportByLibrary("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ADORecordConstruction : COMObject
 	{
@@ -48,9 +48,9 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary ADO2.5 
+		/// SupportByLibrary 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		public COMObject Row
 		{
 			get
@@ -68,9 +68,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADO2.5 
+		/// SupportByLibrary 2.5 
 		/// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		public COMObject ParentRow
 		{
 			get

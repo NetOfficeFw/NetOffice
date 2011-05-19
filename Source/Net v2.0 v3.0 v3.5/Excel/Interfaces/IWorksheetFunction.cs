@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IWorksheetFunction SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+	/// Interface IWorksheetFunction SupportByLibrary "Excel", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+	[SupportByLibrary("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IWorksheetFunction : COMObject
 	{
@@ -48,9 +48,9 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -63,9 +63,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -77,9 +77,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">optional object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -128,7 +128,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object _WSFunction(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -146,9 +146,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object _WSFunction()
 		{
 			object[] paramsArray = null;
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Count(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -207,10 +207,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Count(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -219,10 +219,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool IsNA(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -231,10 +231,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool IsError(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -243,7 +243,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -275,7 +275,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Sum(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -284,10 +284,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Sum(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -296,7 +296,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -328,7 +328,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Average(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -337,10 +337,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Average(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -349,7 +349,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -381,7 +381,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Min(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -390,10 +390,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Min(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -402,7 +402,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -434,7 +434,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Max(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -443,10 +443,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Max(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -455,7 +455,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -487,7 +487,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Npv(Double arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -496,11 +496,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Npv(Double arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -509,7 +509,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -541,7 +541,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double StDev(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -550,10 +550,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double StDev(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -562,11 +562,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Dollar(Double arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -575,10 +575,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Dollar(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -587,12 +587,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Fixed(Double arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -601,10 +601,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Fixed(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -613,9 +613,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Pi()
 		{
 			object[] paramsArray = null;
@@ -624,10 +624,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Ln(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -636,10 +636,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Log10(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -648,11 +648,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Round(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -661,12 +661,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Lookup(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -684,11 +684,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Lookup(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -706,13 +706,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Index(object arg1, Double arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -730,11 +730,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Index(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -752,11 +752,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Rept(string arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -765,7 +765,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -797,7 +797,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool And(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -806,10 +806,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool And(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -818,7 +818,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -850,7 +850,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool Or(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -859,10 +859,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool Or(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -871,12 +871,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DCount(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -885,12 +885,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DSum(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -899,12 +899,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DAverage(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -913,12 +913,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DMin(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -927,12 +927,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DMax(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -941,12 +941,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DStDev(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -955,7 +955,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -987,7 +987,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Var(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -996,10 +996,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Var(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1008,12 +1008,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DVar(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1022,11 +1022,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">string Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Text(object arg1, string arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -1035,13 +1035,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object LinEst(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -1059,10 +1059,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object LinEst(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1080,13 +1080,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Trend(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -1104,10 +1104,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Trend(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1125,13 +1125,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object LogEst(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -1149,10 +1149,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object LogEst(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1170,13 +1170,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Growth(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -1194,10 +1194,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Growth(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1215,14 +1215,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Pv(Double arg1, Double arg2, Double arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -1231,12 +1231,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Pv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1245,14 +1245,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Fv(Double arg1, Double arg2, Double arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -1261,12 +1261,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Fv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1275,14 +1275,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double NPer(Double arg1, Double arg2, Double arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -1291,12 +1291,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double NPer(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1305,14 +1305,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Pmt(Double arg1, Double arg2, Double arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -1321,12 +1321,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Pmt(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1335,7 +1335,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
@@ -1343,7 +1343,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
 		/// <param name="Arg6">optional object Arg6</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Rate(Double arg1, Double arg2, Double arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -1352,12 +1352,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Rate(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1366,12 +1366,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double MIrr(object arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1380,11 +1380,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Irr(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -1393,10 +1393,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Irr(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1405,12 +1405,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Match(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1419,11 +1419,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Match(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -1432,11 +1432,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Weekday(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -1445,10 +1445,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Weekday(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1457,12 +1457,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">string Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Search(string arg1, string arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1471,11 +1471,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">string Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Search(string arg1, string arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -1484,10 +1484,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Transpose(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1505,11 +1505,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Atan2(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -1518,10 +1518,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Asin(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1530,10 +1530,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Acos(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1542,7 +1542,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -1574,7 +1574,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -1592,11 +1592,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Choose(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -1614,13 +1614,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object HLookup(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -1638,12 +1638,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object HLookup(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1661,13 +1661,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object VLookup(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -1685,12 +1685,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object VLookup(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1708,11 +1708,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Log(Double arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -1721,10 +1721,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Log(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1733,10 +1733,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Proper(string arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1745,10 +1745,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Trim(string arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1757,13 +1757,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">string Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Replace(string arg1, Double arg2, Double arg3, string arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -1772,13 +1772,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">string Arg2</param>
 		/// <param name="Arg3">string Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Substitute(string arg1, string arg2, string arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -1787,12 +1787,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">string Arg2</param>
 		/// <param name="Arg3">string Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Substitute(string arg1, string arg2, string arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1801,12 +1801,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">string Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Find(string arg1, string arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1815,11 +1815,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">string Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Find(string arg1, string arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -1828,10 +1828,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool IsErr(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1840,10 +1840,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool IsText(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1852,10 +1852,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool IsNumber(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1864,12 +1864,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Sln(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1878,13 +1878,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Syd(Double arg1, Double arg2, Double arg3, Double arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -1893,14 +1893,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Ddb(Double arg1, Double arg2, Double arg3, Double arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -1909,13 +1909,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Ddb(Double arg1, Double arg2, Double arg3, Double arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -1924,10 +1924,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Clean(string arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1936,10 +1936,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double MDeterm(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1948,10 +1948,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object MInverse(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1969,11 +1969,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object MMult(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -1991,7 +1991,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
@@ -1999,7 +1999,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">Double Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
 		/// <param name="Arg6">optional object Arg6</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Ipmt(Double arg1, Double arg2, Double arg3, Double arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -2008,13 +2008,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Ipmt(Double arg1, Double arg2, Double arg3, Double arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -2023,7 +2023,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
@@ -2031,7 +2031,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">Double Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
 		/// <param name="Arg6">optional object Arg6</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Ppmt(Double arg1, Double arg2, Double arg3, Double arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -2040,13 +2040,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Ppmt(Double arg1, Double arg2, Double arg3, Double arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -2055,7 +2055,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -2087,7 +2087,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double CountA(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -2096,10 +2096,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double CountA(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2108,7 +2108,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -2140,7 +2140,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Product(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -2149,10 +2149,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Product(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2161,10 +2161,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Fact(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2173,12 +2173,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DProduct(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -2187,10 +2187,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool IsNonText(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2199,7 +2199,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -2231,7 +2231,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double StDevP(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -2240,10 +2240,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double StDevP(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2252,7 +2252,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -2284,7 +2284,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double VarP(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -2293,10 +2293,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double VarP(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2305,12 +2305,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DStDevP(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -2319,12 +2319,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DVarP(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -2333,10 +2333,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool IsLogical(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2345,12 +2345,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DCountA(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -2359,11 +2359,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string USDollar(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -2372,12 +2372,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">string Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double FindB(string arg1, string arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -2386,11 +2386,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">string Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double FindB(string arg1, string arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -2399,12 +2399,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">string Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double SearchB(string arg1, string arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -2413,11 +2413,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">string Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double SearchB(string arg1, string arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -2426,13 +2426,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">string Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string ReplaceB(string arg1, Double arg2, Double arg3, string arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -2441,11 +2441,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double RoundUp(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -2454,11 +2454,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double RoundDown(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -2467,12 +2467,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Rank(Double arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -2481,11 +2481,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Rank(Double arg1, NetOffice.ExcelApi.Range arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -2494,12 +2494,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Days360(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -2508,11 +2508,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Days360(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -2521,7 +2521,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
@@ -2530,7 +2530,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg5">Double Arg5</param>
 		/// <param name="Arg6">optional object Arg6</param>
 		/// <param name="Arg7">optional object Arg7</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Vdb(Double arg1, Double arg2, Double arg3, Double arg4, Double arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -2539,14 +2539,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
 		/// <param name="Arg5">Double Arg5</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Vdb(Double arg1, Double arg2, Double arg3, Double arg4, Double arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -2555,7 +2555,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -2587,7 +2587,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Median(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -2596,10 +2596,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Median(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2608,7 +2608,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -2640,7 +2640,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double SumProduct(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -2649,10 +2649,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double SumProduct(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2661,10 +2661,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Sinh(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2673,10 +2673,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Cosh(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2685,10 +2685,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Tanh(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2697,10 +2697,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Asinh(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2709,10 +2709,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Acosh(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2721,10 +2721,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Atanh(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2733,12 +2733,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object DGet(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -2756,14 +2756,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Db(Double arg1, Double arg2, Double arg3, Double arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -2772,13 +2772,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Db(Double arg1, Double arg2, Double arg3, Double arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -2787,11 +2787,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Frequency(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -2809,7 +2809,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -2841,7 +2841,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double AveDev(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -2850,10 +2850,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double AveDev(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2862,14 +2862,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double BetaDist(Double arg1, Double arg2, Double arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -2878,12 +2878,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double BetaDist(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -2892,10 +2892,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double GammaLn(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -2904,14 +2904,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double BetaInv(Double arg1, Double arg2, Double arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -2920,12 +2920,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double BetaInv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -2934,13 +2934,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double BinomDist(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -2949,11 +2949,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double ChiDist(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -2962,11 +2962,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double ChiInv(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -2975,11 +2975,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Combin(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -2988,12 +2988,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Confidence(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3002,12 +3002,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double CritBinom(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3016,10 +3016,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Even(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3028,12 +3028,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">bool Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double ExponDist(Double arg1, Double arg2, bool arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3042,12 +3042,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double FDist(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3056,12 +3056,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double FInv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3070,10 +3070,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Fisher(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3082,10 +3082,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double FisherInv(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3094,11 +3094,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Floor(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3107,13 +3107,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double GammaDist(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -3122,12 +3122,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double GammaInv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3136,11 +3136,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Ceiling(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3149,13 +3149,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double HypGeomDist(Double arg1, Double arg2, Double arg3, Double arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -3164,12 +3164,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double LogNormDist(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3178,12 +3178,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double LogInv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3192,12 +3192,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double NegBinomDist(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3206,13 +3206,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double NormDist(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -3221,10 +3221,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double NormSDist(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3233,12 +3233,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double NormInv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3247,10 +3247,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double NormSInv(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3259,12 +3259,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Standardize(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3273,10 +3273,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Odd(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3285,11 +3285,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Permut(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3298,12 +3298,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">bool Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Poisson(Double arg1, Double arg2, bool arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3312,12 +3312,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double TDist(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3326,13 +3326,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Weibull(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -3341,11 +3341,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double SumXMY2(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3354,11 +3354,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double SumX2MY2(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3367,11 +3367,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double SumX2PY2(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3380,11 +3380,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double ChiTest(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3393,11 +3393,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Correl(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3406,11 +3406,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Covar(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3419,12 +3419,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Forecast(Double arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3433,11 +3433,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double FTest(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3446,11 +3446,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Intercept(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3459,11 +3459,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Pearson(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3472,11 +3472,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double RSq(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3485,11 +3485,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double StEyx(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3498,11 +3498,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Slope(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3511,13 +3511,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double TTest(object arg1, object arg2, Double arg3, Double arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -3526,13 +3526,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Prob(object arg1, object arg2, Double arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -3541,12 +3541,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Prob(object arg1, object arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3555,7 +3555,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -3587,7 +3587,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DevSq(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -3596,10 +3596,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double DevSq(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3608,7 +3608,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -3640,7 +3640,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double GeoMean(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -3649,10 +3649,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double GeoMean(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3661,7 +3661,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -3693,7 +3693,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double HarMean(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -3702,10 +3702,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double HarMean(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3714,7 +3714,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -3746,7 +3746,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double SumSq(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -3755,10 +3755,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double SumSq(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3767,7 +3767,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -3799,7 +3799,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Kurt(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -3808,10 +3808,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Kurt(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3820,7 +3820,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -3852,7 +3852,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Skew(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -3861,10 +3861,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Skew(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -3873,12 +3873,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double ZTest(object arg1, Double arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3887,11 +3887,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double ZTest(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3900,11 +3900,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Large(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3913,11 +3913,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Small(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3926,11 +3926,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Quartile(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3939,11 +3939,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Percentile(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3952,12 +3952,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double PercentRank(object arg1, Double arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -3966,11 +3966,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double PercentRank(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -3979,7 +3979,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -4011,7 +4011,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Mode(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -4020,10 +4020,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Mode(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4032,11 +4032,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double TrimMean(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4045,11 +4045,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double TInv(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4058,11 +4058,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Power(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4071,10 +4071,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Radians(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4083,10 +4083,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Degrees(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4095,7 +4095,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4127,7 +4127,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Subtotal(Double arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -4136,11 +4136,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Subtotal(Double arg1, NetOffice.ExcelApi.Range arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4149,12 +4149,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double SumIf(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -4163,11 +4163,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double SumIf(NetOffice.ExcelApi.Range arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4176,11 +4176,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double CountIf(NetOffice.ExcelApi.Range arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4189,10 +4189,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double CountBlank(NetOffice.ExcelApi.Range arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4201,13 +4201,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double Ispmt(Double arg1, Double arg2, Double arg3, Double arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -4216,11 +4216,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Roman(Double arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4229,10 +4229,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Roman(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4241,10 +4241,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Asc(string arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4253,10 +4253,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Dbcs(string arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4265,10 +4265,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL09 XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
-		[SupportByLibrary("XL09","XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Phonetic(NetOffice.ExcelApi.Range arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4277,10 +4277,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string BahtText(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4289,10 +4289,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string ThaiDayOfWeek(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4301,10 +4301,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string ThaiDigit(string arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4313,10 +4313,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string ThaiMonthOfYear(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4325,10 +4325,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string ThaiNumSound(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4337,10 +4337,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string ThaiNumString(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4349,10 +4349,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public Double ThaiStringLength(string arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4361,10 +4361,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">string Arg1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool IsThaiDigit(string arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4373,10 +4373,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public Double RoundBahtDown(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4385,10 +4385,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public Double RoundBahtUp(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4397,10 +4397,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public Double ThaiYear(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4409,7 +4409,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -4441,7 +4441,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="topic26">optional object topic26</param>
 		/// <param name="topic27">optional object topic27</param>
 		/// <param name="topic28">optional object topic28</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18, object topic19, object topic20, object topic21, object topic22, object topic23, object topic24, object topic25, object topic26, object topic27, object topic28)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24, topic25, topic26, topic27, topic28);
@@ -4459,12 +4459,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL10 XL11 XL12 XL14 
+		/// SupportByLibrary 10 11 12 14 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
 		/// <param name="topic1">object topic1</param>
-		[SupportByLibrary("XL10","XL11","XL12","XL14")]
+		[SupportByLibrary("Excel", 10,11,12,14)]
 		public object RTD(object progID, object server, object topic1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(progID, server, topic1);
@@ -4482,11 +4482,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Hex2Bin(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4495,10 +4495,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Hex2Bin(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4507,10 +4507,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Hex2Dec(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4519,11 +4519,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Hex2Oct(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4532,10 +4532,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Hex2Oct(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4544,11 +4544,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Dec2Bin(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4557,10 +4557,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Dec2Bin(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4569,11 +4569,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Dec2Hex(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4582,10 +4582,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Dec2Hex(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4594,11 +4594,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Dec2Oct(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4607,10 +4607,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Dec2Oct(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4619,11 +4619,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Oct2Bin(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4632,10 +4632,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Oct2Bin(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4644,11 +4644,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Oct2Hex(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4657,10 +4657,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Oct2Hex(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4669,10 +4669,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Oct2Dec(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4681,10 +4681,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Bin2Dec(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4693,11 +4693,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Bin2Oct(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4706,10 +4706,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Bin2Oct(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4718,11 +4718,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Bin2Hex(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4731,10 +4731,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Bin2Hex(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4743,11 +4743,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImSub(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4756,11 +4756,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImDiv(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4769,11 +4769,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImPower(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4782,10 +4782,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImAbs(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4794,10 +4794,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImSqrt(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4806,10 +4806,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImLn(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4818,10 +4818,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImLog2(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4830,10 +4830,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImLog10(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4842,10 +4842,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImSin(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4854,10 +4854,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImCos(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4866,10 +4866,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImExp(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4878,10 +4878,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImArgument(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4890,10 +4890,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImConjugate(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4902,10 +4902,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Imaginary(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4914,10 +4914,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double ImReal(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -4926,12 +4926,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Complex(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -4940,11 +4940,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string Complex(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4953,7 +4953,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -4985,7 +4985,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImSum(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -4994,10 +4994,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImSum(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -5006,7 +5006,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -5038,7 +5038,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImProduct(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -5047,10 +5047,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public string ImProduct(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -5059,13 +5059,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double SeriesSum(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5074,10 +5074,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double FactDouble(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -5086,10 +5086,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double SqrtPi(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -5098,11 +5098,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Quotient(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5111,11 +5111,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Delta(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5124,10 +5124,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Delta(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -5136,11 +5136,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double GeStep(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5149,10 +5149,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double GeStep(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -5161,10 +5161,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public bool IsEven(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -5173,10 +5173,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public bool IsOdd(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -5185,11 +5185,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double MRound(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5198,11 +5198,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Erf(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5211,10 +5211,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Erf(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -5223,10 +5223,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double ErfC(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -5235,11 +5235,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double BesselJ(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5248,11 +5248,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double BesselK(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5261,11 +5261,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double BesselY(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5274,11 +5274,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double BesselI(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5287,12 +5287,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Xirr(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -5301,11 +5301,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Xirr(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5314,11 +5314,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Xnpv(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5327,7 +5327,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -5335,7 +5335,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">optional object Arg6</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double PriceMat(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -5344,14 +5344,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double PriceMat(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -5360,7 +5360,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -5368,7 +5368,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">optional object Arg6</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double YieldMat(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -5377,14 +5377,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double YieldMat(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -5393,14 +5393,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double IntRate(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -5409,13 +5409,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double IntRate(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5424,14 +5424,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Received(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -5440,13 +5440,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Received(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5455,14 +5455,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Disc(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -5471,13 +5471,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Disc(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5486,14 +5486,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double PriceDisc(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -5502,13 +5502,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double PriceDisc(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5517,14 +5517,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double YieldDisc(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -5533,13 +5533,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double YieldDisc(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5548,12 +5548,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double TBillEq(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -5562,11 +5562,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double TBillEq(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5575,12 +5575,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double TBillPrice(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -5589,11 +5589,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double TBillPrice(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5602,12 +5602,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double TBillYield(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -5616,11 +5616,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double TBillYield(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5629,7 +5629,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -5638,7 +5638,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
 		/// <param name="Arg7">optional object Arg7</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Price(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -5647,7 +5647,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -5655,7 +5655,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Price(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -5664,11 +5664,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double DollarDe(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5677,11 +5677,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double DollarFr(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5690,11 +5690,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Nominal(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5703,11 +5703,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Effect(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5716,7 +5716,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -5724,7 +5724,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CumPrinc(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -5733,7 +5733,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -5741,7 +5741,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CumIPmt(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -5750,11 +5750,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double EDate(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5763,11 +5763,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double EoMonth(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5776,12 +5776,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double YearFrac(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -5790,11 +5790,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double YearFrac(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -5803,13 +5803,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupDayBs(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5818,12 +5818,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupDayBs(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -5832,13 +5832,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupDays(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5847,12 +5847,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupDays(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -5861,13 +5861,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupDaysNc(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5876,12 +5876,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupDaysNc(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -5890,13 +5890,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupNcd(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5905,12 +5905,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupNcd(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -5919,13 +5919,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupNum(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5934,12 +5934,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupNum(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -5948,13 +5948,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupPcd(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -5963,12 +5963,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CoupPcd(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -5977,7 +5977,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -5985,7 +5985,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">optional object Arg6</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Duration(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -5994,14 +5994,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Duration(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -6010,7 +6010,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6018,7 +6018,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">optional object Arg6</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double MDuration(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -6027,14 +6027,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double MDuration(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -6043,7 +6043,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6053,7 +6053,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg6">object Arg6</param>
 		/// <param name="Arg7">object Arg7</param>
 		/// <param name="Arg8">optional object Arg8</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double OddLPrice(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -6062,7 +6062,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6071,7 +6071,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
 		/// <param name="Arg7">object Arg7</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double OddLPrice(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -6080,7 +6080,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6090,7 +6090,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg6">object Arg6</param>
 		/// <param name="Arg7">object Arg7</param>
 		/// <param name="Arg8">optional object Arg8</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double OddLYield(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -6099,7 +6099,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6108,7 +6108,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
 		/// <param name="Arg7">object Arg7</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double OddLYield(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -6117,7 +6117,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6128,7 +6128,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg7">object Arg7</param>
 		/// <param name="Arg8">object Arg8</param>
 		/// <param name="Arg9">optional object Arg9</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double OddFPrice(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
@@ -6137,7 +6137,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6147,7 +6147,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg6">object Arg6</param>
 		/// <param name="Arg7">object Arg7</param>
 		/// <param name="Arg8">object Arg8</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double OddFPrice(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -6156,7 +6156,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6167,7 +6167,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg7">object Arg7</param>
 		/// <param name="Arg8">object Arg8</param>
 		/// <param name="Arg9">optional object Arg9</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double OddFYield(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
@@ -6176,7 +6176,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6186,7 +6186,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg6">object Arg6</param>
 		/// <param name="Arg7">object Arg7</param>
 		/// <param name="Arg8">object Arg8</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double OddFYield(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -6195,11 +6195,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double RandBetween(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6208,11 +6208,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double WeekNum(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6221,10 +6221,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double WeekNum(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -6233,7 +6233,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6242,7 +6242,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
 		/// <param name="Arg7">optional object Arg7</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AmorDegrc(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -6251,7 +6251,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6259,7 +6259,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AmorDegrc(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -6268,7 +6268,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6277,7 +6277,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
 		/// <param name="Arg7">optional object Arg7</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AmorLinc(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -6286,7 +6286,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6294,7 +6294,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AmorLinc(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -6303,12 +6303,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Convert(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -6317,7 +6317,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6326,7 +6326,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
 		/// <param name="Arg7">optional object Arg7</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AccrInt(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -6335,7 +6335,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6343,7 +6343,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">object Arg5</param>
 		/// <param name="Arg6">object Arg6</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AccrInt(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -6352,14 +6352,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AccrIntM(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -6368,13 +6368,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
 		/// <param name="Arg4">object Arg4</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AccrIntM(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -6383,12 +6383,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double WorkDay(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -6397,11 +6397,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double WorkDay(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6410,12 +6410,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double NetworkDays(object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -6424,11 +6424,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double NetworkDays(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6437,7 +6437,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -6469,7 +6469,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Gcd(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -6478,10 +6478,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Gcd(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -6490,7 +6490,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -6522,7 +6522,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double MultiNomial(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -6531,10 +6531,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double MultiNomial(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -6543,7 +6543,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -6575,7 +6575,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Lcm(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -6584,10 +6584,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double Lcm(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -6596,11 +6596,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double FVSchedule(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6609,7 +6609,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -6640,7 +6640,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg27">optional object Arg27</param>
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
@@ -6649,12 +6649,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -6663,7 +6663,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
@@ -6695,7 +6695,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CountIfs(NetOffice.ExcelApi.Range arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -6704,11 +6704,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double CountIfs(NetOffice.ExcelApi.Range arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6717,12 +6717,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AverageIf(NetOffice.ExcelApi.Range arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -6731,11 +6731,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AverageIf(NetOffice.ExcelApi.Range arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6744,7 +6744,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -6775,7 +6775,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg27">optional object Arg27</param>
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AverageIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
@@ -6784,12 +6784,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">object Arg3</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public Double AverageIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -6798,11 +6798,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL12 XL14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL12","XL14")]
+		[SupportByLibrary("Excel", 12,14)]
 		public object IfError(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6820,7 +6820,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
@@ -6852,7 +6852,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Aggregate(Double arg1, Double arg2, NetOffice.ExcelApi.Range arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -6861,12 +6861,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">NetOffice.ExcelApi.Range Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Aggregate(Double arg1, Double arg2, NetOffice.ExcelApi.Range arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -6875,12 +6875,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Confidence_Norm(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -6889,12 +6889,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Confidence_T(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -6903,11 +6903,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double ChiSq_Test(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6916,11 +6916,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double F_Test(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6929,11 +6929,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Covariance_P(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6942,11 +6942,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Covariance_S(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -6955,12 +6955,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">bool Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Expon_Dist(Double arg1, Double arg2, bool arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -6969,13 +6969,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Gamma_Dist(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -6984,12 +6984,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Gamma_Inv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -6998,7 +6998,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -7030,7 +7030,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public object Mode_Mult(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -7048,10 +7048,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public object Mode_Mult(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -7069,7 +7069,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -7101,7 +7101,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Mode_Sngl(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -7110,10 +7110,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Mode_Sngl(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -7122,13 +7122,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Norm_Dist(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -7137,12 +7137,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Norm_Inv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7151,11 +7151,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Percentile_Exc(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7164,11 +7164,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Percentile_Inc(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7177,12 +7177,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double PercentRank_Exc(object arg1, Double arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7191,11 +7191,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double PercentRank_Exc(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7204,12 +7204,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double PercentRank_Inc(object arg1, Double arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7218,11 +7218,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double PercentRank_Inc(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7231,12 +7231,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">bool Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Poisson_Dist(Double arg1, Double arg2, bool arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7245,11 +7245,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Quartile_Exc(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7258,11 +7258,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Quartile_Inc(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7271,12 +7271,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Rank_Avg(Double arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7285,11 +7285,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Rank_Avg(Double arg1, NetOffice.ExcelApi.Range arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7298,12 +7298,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Rank_Eq(Double arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7312,11 +7312,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">NetOffice.ExcelApi.Range Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Rank_Eq(Double arg1, NetOffice.ExcelApi.Range arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7325,7 +7325,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -7357,7 +7357,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double StDev_S(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -7366,10 +7366,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double StDev_S(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -7378,7 +7378,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -7410,7 +7410,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double StDev_P(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -7419,10 +7419,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double StDev_P(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -7431,12 +7431,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">bool Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double T_Dist(Double arg1, Double arg2, bool arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7445,11 +7445,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double T_Dist_2T(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7458,11 +7458,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double T_Dist_RT(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7471,11 +7471,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double T_Inv(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7484,11 +7484,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double T_Inv_2T(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7497,7 +7497,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -7529,7 +7529,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Var_S(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -7538,10 +7538,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Var_S(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -7550,7 +7550,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -7582,7 +7582,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Var_P(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -7591,10 +7591,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Var_P(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -7603,13 +7603,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Weibull_Dist(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -7618,13 +7618,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double NetworkDays_Intl(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -7633,11 +7633,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double NetworkDays_Intl(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7646,13 +7646,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double WorkDay_Intl(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -7661,11 +7661,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double WorkDay_Intl(object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7674,11 +7674,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double ISO_Ceiling(Double arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7687,10 +7687,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double ISO_Ceiling(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -7699,11 +7699,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Dummy21(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7712,7 +7712,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
@@ -7744,7 +7744,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -7762,10 +7762,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public object Dummy19(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -7783,7 +7783,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
@@ -7791,7 +7791,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg4">bool Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
 		/// <param name="Arg6">optional object Arg6</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Beta_Dist(Double arg1, Double arg2, Double arg3, bool arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -7800,13 +7800,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Beta_Dist(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -7815,14 +7815,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		/// <param name="Arg5">optional object Arg5</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Beta_Inv(Double arg1, Double arg2, Double arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -7831,12 +7831,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Beta_Inv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7845,12 +7845,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">bool Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double ChiSq_Dist(Double arg1, Double arg2, bool arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7859,11 +7859,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double ChiSq_Dist_RT(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7872,11 +7872,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double ChiSq_Inv(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7885,11 +7885,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double ChiSq_Inv_RT(Double arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -7898,13 +7898,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double F_Dist(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -7913,12 +7913,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double F_Dist_RT(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7927,12 +7927,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double F_Inv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7941,12 +7941,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double F_Inv_RT(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -7955,14 +7955,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
 		/// <param name="Arg5">bool Arg5</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double HypGeom_Dist(Double arg1, Double arg2, Double arg3, Double arg4, bool arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -7971,13 +7971,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double LogNorm_Dist(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -7986,12 +7986,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double LogNorm_Inv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -8000,13 +8000,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double NegBinom_Dist(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -8015,11 +8015,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">bool Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Norm_S_Dist(Double arg1, bool arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -8028,10 +8028,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Norm_S_Inv(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -8040,13 +8040,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">object Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">Double Arg4</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double T_Test(object arg1, object arg2, Double arg3, Double arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -8055,12 +8055,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">optional object Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Z_Test(object arg1, Double arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -8069,11 +8069,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Z_Test(object arg1, Double arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -8082,13 +8082,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
 		/// <param name="Arg4">bool Arg4</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Binom_Dist(Double arg1, Double arg2, Double arg3, bool arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -8097,12 +8097,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">Double Arg2</param>
 		/// <param name="Arg3">Double Arg3</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Binom_Inv(Double arg1, Double arg2, Double arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -8111,10 +8111,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Erf_Precise(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -8123,10 +8123,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">object Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double ErfC_Precise(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -8135,10 +8135,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double GammaLn_Precise(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -8147,11 +8147,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Ceiling_Precise(Double arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -8160,10 +8160,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Ceiling_Precise(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -8172,11 +8172,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
 		/// <param name="Arg2">optional object Arg2</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Floor_Precise(Double arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -8185,10 +8185,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary XL14 
+		/// SupportByLibrary 14 
 		/// </summary>
 		/// <param name="Arg1">Double Arg1</param>
-		[SupportByLibrary("XL14")]
+		[SupportByLibrary("Excel", 14)]
 		public Double Floor_Precise(Double arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);

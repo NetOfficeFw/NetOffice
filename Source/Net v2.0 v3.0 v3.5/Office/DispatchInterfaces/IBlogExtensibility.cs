@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface IBlogExtensibility SupportByLibrary OF12 OF14 
+	/// DispatchInterface IBlogExtensibility SupportByLibrary "Office", 12,14
 	///</summary>
-	[SupportByLibrary("OF12","OF14")]
+	[SupportByLibrary("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IBlogExtensibility : COMObject
 	{
@@ -53,13 +53,13 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="BlogProvider">ref string BlogProvider</param>
 		/// <param name="FriendlyName">ref string FriendlyName</param>
 		/// <param name="CategorySupport">NetOffice.OfficeApi.Enums.MsoBlogCategorySupport CategorySupport</param>
 		/// <param name="Padding">ref bool Padding</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void BlogProviderProperties(ref string blogProvider, ref string friendlyName, NetOffice.OfficeApi.Enums.MsoBlogCategorySupport categorySupport, ref bool padding)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,false,true);
@@ -71,14 +71,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
 		/// <param name="Document">object Document</param>
 		/// <param name="NewAccount">bool NewAccount</param>
 		/// <param name="ShowPictureUI">ref bool ShowPictureUI</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void SetupBlogAccount(string account, Int32 parentWindow, object document, bool newAccount, ref bool showPictureUI)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="BlogNames">ref String[] BlogNames</param>
 		/// <param name="BlogIDs">ref String[] BlogIDs</param>
 		/// <param name="BlogURLs">ref String[] BlogURLs</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void GetUserBlogs(string account, Int32 parentWindow, object document, ref String[] blogNames, ref String[] blogIDs, ref String[] blogURLs)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true);
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="PostTitles">ref String[] PostTitles</param>
 		/// <param name="PostDates">ref String[] PostDates</param>
 		/// <param name="PostIDs">ref String[] PostIDs</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void GetRecentPosts(string account, Int32 parentWindow, object document, ref String[] postTitles, ref String[] postDates, ref String[] postIDs)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true);
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="PostID">string PostID</param>
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Title">ref string Title</param>
 		/// <param name="DatePosted">ref string DatePosted</param>
 		/// <param name="Categories">ref String[] Categories</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void Open(string account, string postID, Int32 parentWindow, ref string xHTML, ref string title, ref string datePosted, ref String[] categories)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true,true);
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Draft">bool Draft</param>
 		/// <param name="PostID">ref string PostID</param>
 		/// <param name="PublishMessage">ref string PublishMessage</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void PublishPost(string account, Int32 parentWindow, object document, string xHTML, string title, string dateTime, String[] categories, bool draft, ref string postID, ref string publishMessage)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,false,false,true,true);
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Categories">String[] Categories</param>
 		/// <param name="Draft">bool Draft</param>
 		/// <param name="PublishMessage">ref string PublishMessage</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void RepublishPost(string account, Int32 parentWindow, object document, string postID, string xHTML, string title, string dateTime, String[] categories, bool draft, ref string publishMessage)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,false,false,false,true);
@@ -195,13 +195,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary OF12 OF14 
+		/// SupportByLibrary 12 14 
 		/// </summary>
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
 		/// <param name="Document">object Document</param>
 		/// <param name="Categories">ref String[] Categories</param>
-		[SupportByLibrary("OF12","OF14")]
+		[SupportByLibrary("Office", 12,14)]
 		public void GetCategories(string account, Int32 parentWindow, object document, ref String[] categories)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);

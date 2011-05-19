@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADO2.1 ADO2.5 
+	 /// SupportByLibrary 2.1,2.5,
 	 /// </summary>
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum CommandTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCmdUnspecified = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCmdUnknown = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCmdText = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCmdTable = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCmdStoredProc = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCmdFile = 256,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adCmdTableDirect = 512
 	}
 }

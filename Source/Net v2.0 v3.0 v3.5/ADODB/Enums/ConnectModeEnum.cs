@@ -4,64 +4,64 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADO2.1 ADO2.5 
+	 /// SupportByLibrary 2.1,2.5,
 	 /// </summary>
-	[SupportByLibrary("ADO2.1","ADO2.5")]
+	[SupportByLibrary("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ConnectModeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adModeUnknown = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adModeRead = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adModeWrite = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adModeReadWrite = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adModeShareDenyRead = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adModeShareDenyWrite = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adModeShareExclusive = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.1 ADO2.5 
+		 /// SupportByLibrary 2.1,2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.1","ADO2.5")]
+		[SupportByLibrary("ADODB", 2.1,2.5)]
 		adModeShareDenyNone = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary ADO2.5 
+		 /// SupportByLibrary 2.5,
 		 /// </summary>
-		[SupportByLibrary("ADO2.5")]
+		[SupportByLibrary("ADODB", 2.5)]
 		adModeRecursive = 4194304
 	}
 }

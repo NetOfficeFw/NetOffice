@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ICommandBarButtonEvents SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+	/// DispatchInterface ICommandBarButtonEvents SupportByLibrary "Office", 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+	[SupportByLibrary("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ICommandBarButtonEvents : COMObject
 	{
@@ -53,11 +53,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OF09 OF10 OF11 OF12 OF14 
+		/// SupportByLibrary 9 10 11 12 14 
 		/// </summary>
 		/// <param name="Ctrl">NetOffice.OfficeApi.CommandBarButton Ctrl</param>
 		/// <param name="CancelDefault">ref bool CancelDefault</param>
-		[SupportByLibrary("OF09","OF10","OF11","OF12","OF14")]
+		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public void Click(NetOffice.OfficeApi.CommandBarButton ctrl, ref bool cancelDefault)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
