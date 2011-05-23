@@ -32,14 +32,14 @@
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageApplication = new System.Windows.Forms.TabPage();
             this.checkBoxStartAppWithWindows = new System.Windows.Forms.CheckBox();
+            this.checkBoxStartAppMinimized = new System.Windows.Forms.CheckBox();
+            this.checkBoxMinimizeToTray = new System.Windows.Forms.CheckBox();
             this.linkLabelHomepage = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxStartAppMinimized = new System.Windows.Forms.CheckBox();
-            this.checkBoxMinimizeToTray = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageApplication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,11 +85,35 @@
             this.checkBoxStartAppWithWindows.Text = "Start with Windows";
             this.checkBoxStartAppWithWindows.UseVisualStyleBackColor = true;
             // 
+            // checkBoxStartAppMinimized
+            // 
+            this.checkBoxStartAppMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBoxStartAppMinimized.AutoSize = true;
+            this.checkBoxStartAppMinimized.Location = new System.Drawing.Point(8, 322);
+            this.checkBoxStartAppMinimized.Name = "checkBoxStartAppMinimized";
+            this.checkBoxStartAppMinimized.Size = new System.Drawing.Size(150, 17);
+            this.checkBoxStartAppMinimized.TabIndex = 1;
+            this.checkBoxStartAppMinimized.Text = "Start application minimized";
+            this.checkBoxStartAppMinimized.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxMinimizeToTray
+            // 
+            this.checkBoxMinimizeToTray.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBoxMinimizeToTray.AutoSize = true;
+            this.checkBoxMinimizeToTray.Checked = true;
+            this.checkBoxMinimizeToTray.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMinimizeToTray.Location = new System.Drawing.Point(8, 276);
+            this.checkBoxMinimizeToTray.Name = "checkBoxMinimizeToTray";
+            this.checkBoxMinimizeToTray.Size = new System.Drawing.Size(102, 17);
+            this.checkBoxMinimizeToTray.TabIndex = 0;
+            this.checkBoxMinimizeToTray.Text = "Minimize to Tray";
+            this.checkBoxMinimizeToTray.UseVisualStyleBackColor = true;
+            // 
             // linkLabelHomepage
             // 
             this.linkLabelHomepage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelHomepage.AutoSize = true;
-            this.linkLabelHomepage.Location = new System.Drawing.Point(315, 13);
+            this.linkLabelHomepage.Location = new System.Drawing.Point(329, 13);
             this.linkLabelHomepage.Name = "linkLabelHomepage";
             this.linkLabelHomepage.Size = new System.Drawing.Size(148, 13);
             this.linkLabelHomepage.TabIndex = 9;
@@ -127,12 +151,22 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelTitle.Location = new System.Drawing.Point(106, 39);
+            this.labelTitle.Location = new System.Drawing.Point(106, 41);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(270, 20);
             this.labelTitle.TabIndex = 6;
             this.labelTitle.Text = "NetOffice.DeveloperUtils (BETA)";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(15, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 24);
+            this.label1.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -146,40 +180,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(15, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 24);
-            this.label1.TabIndex = 2;
-            // 
-            // checkBoxStartAppMinimized
-            // 
-            this.checkBoxStartAppMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBoxStartAppMinimized.AutoSize = true;
-            this.checkBoxStartAppMinimized.Location = new System.Drawing.Point(8, 322);
-            this.checkBoxStartAppMinimized.Name = "checkBoxStartAppMinimized";
-            this.checkBoxStartAppMinimized.Size = new System.Drawing.Size(150, 17);
-            this.checkBoxStartAppMinimized.TabIndex = 1;
-            this.checkBoxStartAppMinimized.Text = "Start application minimized";
-            this.checkBoxStartAppMinimized.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxMinimizeToTray
-            // 
-            this.checkBoxMinimizeToTray.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBoxMinimizeToTray.AutoSize = true;
-            this.checkBoxMinimizeToTray.Checked = true;
-            this.checkBoxMinimizeToTray.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxMinimizeToTray.Location = new System.Drawing.Point(8, 276);
-            this.checkBoxMinimizeToTray.Name = "checkBoxMinimizeToTray";
-            this.checkBoxMinimizeToTray.Size = new System.Drawing.Size(102, 17);
-            this.checkBoxMinimizeToTray.TabIndex = 0;
-            this.checkBoxMinimizeToTray.Text = "Minimize to Tray";
-            this.checkBoxMinimizeToTray.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

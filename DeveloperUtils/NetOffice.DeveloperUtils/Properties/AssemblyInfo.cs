@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LateBindingApi.Office.DeveloperUtils")]
+[assembly: AssemblyTitle("NetOffice.DeveloperUtils")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Ministerium für Staatssicherheit")]
-[assembly: AssemblyProduct("LateBindingApi.Office.DeveloperUtils")]
-[assembly: AssemblyCopyright("Copyright © Ministerium für Staatssicherheit 2011")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("NetOffice")]
+[assembly: AssemblyCopyright("Copyright ©  2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
