@@ -98,6 +98,12 @@
     <Compile Include="RegistryBrowser\Registry\KeeperRegistryEntry.cs" />
     <Compile Include="RegistryBrowser\Registry\KeeperRegistryKey.cs" />
     <Compile Include="RegistryBrowser\Registry\KeeperRegistryKeys.cs" />
+    <Compile Include="SupportByLibrary\SupportByLibraryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SupportByLibrary\SupportByLibraryControl.Designer.cs">
+      <DependentUpon>SupportByLibraryControl.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ProcessKiller\NotRunning.ico" />
@@ -120,6 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="RegistryBrowser\Info.txt" />
+    <EmbeddedResource Include="SupportByLibrary\SupportByLibraryControl.resx">
+      <DependentUpon>SupportByLibraryControl.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

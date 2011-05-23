@@ -11,6 +11,7 @@ using Microsoft.Win32;
 
 using NetOffice.DeveloperUtils.ProcessKiller;
 using NetOffice.DeveloperUtils.RegistryBrowser;
+using NetOffice.DeveloperUtils.SupportByLibrary;
 
 namespace NetOffice.DeveloperUtils
 {
@@ -35,6 +36,13 @@ namespace NetOffice.DeveloperUtils
         public Form1(string[] args)
         {
             InitializeComponent();
+
+            SupportByLibraryControl newControl3 = new SupportByLibraryControl(null);
+            tabControlMain.TabPages.Add(newControl3.ControlName);
+            tabControlMain.TabPages[tabControlMain.TabPages.Count - 1].Controls.Add(newControl3);
+            tabControlMain.TabPages[tabControlMain.TabPages.Count - 1].Tag = newControl3;
+            newControl3.Dock = DockStyle.Fill;
+            _controls.Add(newControl3);
 
             ProcessKillerControl newControl = new ProcessKillerControl(null);
             tabControlMain.TabPages.Add(newControl.ControlName);
@@ -221,7 +229,15 @@ namespace NetOffice.DeveloperUtils
 
         private void linkLabelHomepage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(linkLabelHomepage.Text);
+            try
+            {
+                System.Diagnostics.Process.Start(linkLabelHomepage.Text);
+            }
+            catch (Exception throwedException)
+            {
+                string message = string.Format("An error occured.{0}{0}The error message is:{0}{1}", Environment.NewLine, throwedException.Message);
+                MessageBox.Show(this, message, this.Text , MessageBoxButtons.OK, MessageBoxIcon.Error);   
+            }           
         }
 
         #endregion
