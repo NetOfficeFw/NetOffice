@@ -22,9 +22,21 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
         {
             List<string> listResult = new List<string>();
 
+            string path = "";
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                path = System.Windows.Forms.Application.StartupPath;
+                path = path.Substring(0, path.LastIndexOf("\\"));
+                path = path.Substring(0, path.LastIndexOf("\\"));
+                path = path.Substring(0, path.LastIndexOf("\\"));
+                path = Path.Combine(path, "Docu Files\\");
+            }
+            else
+                path = Path.Combine(System.Windows.Forms.Application.StartupPath, "Docu Files\\");
+
             foreach (AssemblyNameReference item in listReferences)
             {
-                string fileName = Path.Combine(System.Windows.Forms.Application.StartupPath, "Docu Files\\" + item.Name + ".xml");
+                string fileName = Path.Combine(path, item.Name + ".xml");
                 XDocument newDocFile = XDocument.Load(fileName);
                 _docuFiles.Add(newDocFile);
             }
