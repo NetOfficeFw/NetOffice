@@ -1,0 +1,4 @@
+﻿Wenn sie für eine Office Anwendung entwickeln/debuggen kennen Sie vermutlich das Problem
+das bei einem auftretenden Fehler die verwendenten COM Referenzen nicht ordnungsgemäss
+freigegeben werden. Dadurch häufen sich relativ schnell Geister Prozesse im Task-Manager.
+Process Killer soll ihnen helfen diese zu überblicken und schnell per Knopfdruck zu entfernen.
