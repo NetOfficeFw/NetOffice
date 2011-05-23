@@ -16,6 +16,8 @@ namespace NetOffice.DeveloperUtils.ProcessKiller
         private OfficeProcessKiller _processKiller;
         private InfoControl _infoBox;
 
+        private int _currentLanguage;
+
         #endregion
 
         #region Construction
@@ -184,6 +186,20 @@ namespace NetOffice.DeveloperUtils.ProcessKiller
             configNode.SelectSingleNode("Control/HotKey").Attributes[0].Value = checkBoxAppKill.Checked.ToString();
 
             configNode.SelectSingleNode("Control/HotKey").Attributes[1].Value = ((int)_processKiller.HotKey).ToString();
+        }
+
+        public void SetLanguage(int id)
+        {
+            _currentLanguage = id;
+
+            if (0 == id)
+            {
+  
+            }
+            else
+            {
+
+            }
         }
 
         public void Release()

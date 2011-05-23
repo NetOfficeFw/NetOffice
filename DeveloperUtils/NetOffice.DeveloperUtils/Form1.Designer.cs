@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageApplication = new System.Windows.Forms.TabPage();
+            this.checkBoxStartAppWithWindows = new System.Windows.Forms.CheckBox();
+            this.linkLabelHomepage = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxStartAppMinimized = new System.Windows.Forms.CheckBox();
             this.checkBoxMinimizeToTray = new System.Windows.Forms.CheckBox();
-            this.checkBoxStartAppWithWindows = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.linkLabelHomepage = new System.Windows.Forms.LinkLabel();
             this.tabControlMain.SuspendLayout();
             this.tabPageApplication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,20 +59,93 @@
             // tabPageApplication
             // 
             this.tabPageApplication.Controls.Add(this.checkBoxStartAppWithWindows);
-            this.tabPageApplication.Controls.Add(this.linkLabelHomepage);
-            this.tabPageApplication.Controls.Add(this.label2);
-            this.tabPageApplication.Controls.Add(this.comboBox1);
-            this.tabPageApplication.Controls.Add(this.labelTitle);
-            this.tabPageApplication.Controls.Add(this.pictureBox1);
-            this.tabPageApplication.Controls.Add(this.label1);
             this.tabPageApplication.Controls.Add(this.checkBoxStartAppMinimized);
             this.tabPageApplication.Controls.Add(this.checkBoxMinimizeToTray);
+            this.tabPageApplication.Controls.Add(this.linkLabelHomepage);
+            this.tabPageApplication.Controls.Add(this.label2);
+            this.tabPageApplication.Controls.Add(this.comboBoxLanguage);
+            this.tabPageApplication.Controls.Add(this.labelTitle);
+            this.tabPageApplication.Controls.Add(this.label1);
+            this.tabPageApplication.Controls.Add(this.pictureBox1);
             this.tabPageApplication.Location = new System.Drawing.Point(4, 22);
             this.tabPageApplication.Name = "tabPageApplication";
             this.tabPageApplication.Size = new System.Drawing.Size(484, 347);
             this.tabPageApplication.TabIndex = 2;
             this.tabPageApplication.Text = "Application";
             this.tabPageApplication.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxStartAppWithWindows
+            // 
+            this.checkBoxStartAppWithWindows.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBoxStartAppWithWindows.AutoSize = true;
+            this.checkBoxStartAppWithWindows.Location = new System.Drawing.Point(8, 299);
+            this.checkBoxStartAppWithWindows.Name = "checkBoxStartAppWithWindows";
+            this.checkBoxStartAppWithWindows.Size = new System.Drawing.Size(117, 17);
+            this.checkBoxStartAppWithWindows.TabIndex = 4;
+            this.checkBoxStartAppWithWindows.Text = "Start with Windows";
+            this.checkBoxStartAppWithWindows.UseVisualStyleBackColor = true;
+            // 
+            // linkLabelHomepage
+            // 
+            this.linkLabelHomepage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabelHomepage.AutoSize = true;
+            this.linkLabelHomepage.Location = new System.Drawing.Point(315, 13);
+            this.linkLabelHomepage.Name = "linkLabelHomepage";
+            this.linkLabelHomepage.Size = new System.Drawing.Size(148, 13);
+            this.linkLabelHomepage.TabIndex = 9;
+            this.linkLabelHomepage.TabStop = true;
+            this.linkLabelHomepage.Text = "http://netoffice.codeplex.com";
+            this.linkLabelHomepage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelHomepage_LinkClicked);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(364, 298);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Language";
+            // 
+            // comboBoxLanguage
+            // 
+            this.comboBoxLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLanguage.FormattingEnabled = true;
+            this.comboBoxLanguage.Items.AddRange(new object[] {
+            "English",
+            "German"});
+            this.comboBoxLanguage.Location = new System.Drawing.Point(366, 317);
+            this.comboBoxLanguage.Name = "comboBoxLanguage";
+            this.comboBoxLanguage.Size = new System.Drawing.Size(110, 21);
+            this.comboBoxLanguage.TabIndex = 7;
+            this.comboBoxLanguage.SelectedIndexChanged += new System.EventHandler(this.comboBoxLanguage_SelectedIndexChanged);
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelTitle.Location = new System.Drawing.Point(106, 39);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(270, 20);
+            this.labelTitle.TabIndex = 6;
+            this.labelTitle.Text = "NetOffice.DeveloperUtils (BETA)";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(116, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(248, 257);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -108,78 +181,6 @@
             this.checkBoxMinimizeToTray.Text = "Minimize to Tray";
             this.checkBoxMinimizeToTray.UseVisualStyleBackColor = true;
             // 
-            // checkBoxStartAppWithWindows
-            // 
-            this.checkBoxStartAppWithWindows.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBoxStartAppWithWindows.AutoSize = true;
-            this.checkBoxStartAppWithWindows.Location = new System.Drawing.Point(8, 299);
-            this.checkBoxStartAppWithWindows.Name = "checkBoxStartAppWithWindows";
-            this.checkBoxStartAppWithWindows.Size = new System.Drawing.Size(117, 17);
-            this.checkBoxStartAppWithWindows.TabIndex = 4;
-            this.checkBoxStartAppWithWindows.Text = "Start with Windows";
-            this.checkBoxStartAppWithWindows.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(116, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(248, 257);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelTitle.Location = new System.Drawing.Point(106, 39);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(270, 20);
-            this.labelTitle.TabIndex = 6;
-            this.labelTitle.Text = "NetOffice.DeveloperUtils (BETA)";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "English",
-            "German"});
-            this.comboBox1.Location = new System.Drawing.Point(366, 317);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(110, 21);
-            this.comboBox1.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(364, 298);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Language";
-            // 
-            // linkLabelHomepage
-            // 
-            this.linkLabelHomepage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabelHomepage.AutoSize = true;
-            this.linkLabelHomepage.Location = new System.Drawing.Point(315, 13);
-            this.linkLabelHomepage.Name = "linkLabelHomepage";
-            this.linkLabelHomepage.Size = new System.Drawing.Size(148, 13);
-            this.linkLabelHomepage.TabIndex = 9;
-            this.linkLabelHomepage.TabStop = true;
-            this.linkLabelHomepage.Text = "http://netoffice.codeplex.com";
-            this.linkLabelHomepage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelHomepage_LinkClicked);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,7 +211,7 @@
         private System.Windows.Forms.CheckBox checkBoxStartAppWithWindows;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxLanguage;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabelHomepage;
     }

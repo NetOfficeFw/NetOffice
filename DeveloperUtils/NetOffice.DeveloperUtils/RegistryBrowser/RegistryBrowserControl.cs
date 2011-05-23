@@ -18,6 +18,8 @@ namespace NetOffice.DeveloperUtils.RegistryBrowser
         KeeperRegistry _localMachine;
         KeeperRegistry _currentUser;
         InfoControl    _infoBox;
+       
+        private int    _currentLanguage;
 
         #endregion
 
@@ -169,6 +171,20 @@ namespace NetOffice.DeveloperUtils.RegistryBrowser
         public string ControlName
         {
             get { return "RegistryBrowser"; }
+        }
+
+        public void SetLanguage(int id)
+        {
+            _currentLanguage = id;
+
+            if (0 == id)
+            {
+
+            }
+            else
+            {
+
+            }
         }
 
         public void Activate()

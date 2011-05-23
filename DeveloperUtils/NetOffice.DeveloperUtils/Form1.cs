@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Xml;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 using NetOffice.DeveloperUtils.ProcessKiller;
 using NetOffice.DeveloperUtils.RegistryBrowser;
@@ -73,10 +74,11 @@ namespace NetOffice.DeveloperUtils
             XmlNode appNode = _configFile.SelectSingleNode("Application");
             checkBoxStartAppMinimized.Checked = Convert.ToBoolean(appNode.Attributes.Item(0).Value);
             checkBoxMinimizeToTray.Checked = Convert.ToBoolean(appNode.Attributes.Item(1).Value);
-            
+            checkBoxStartAppWithWindows.Checked = Convert.ToBoolean(appNode.Attributes.Item(2).Value);
+            comboBoxLanguage.SelectedIndex = Convert.ToInt16(appNode.Attributes.Item(3).Value);
+
             foreach (IUtilsControl item in _controls)
                 item.LoadConfiguration(_configFile.SelectSingleNode("Application/Controls/" + item.ControlName));
-            
         }
 
         private void SaveConfiguration()
@@ -84,6 +86,8 @@ namespace NetOffice.DeveloperUtils
             XmlNode appNode = _configFile.SelectSingleNode("Application");
             appNode.Attributes.Item(0).Value = checkBoxStartAppMinimized.Checked.ToString();
             appNode.Attributes.Item(1).Value = checkBoxMinimizeToTray.Checked.ToString();
+            appNode.Attributes.Item(2).Value = checkBoxStartAppWithWindows.Checked.ToString();
+            appNode.Attributes.Item(3).Value = comboBoxLanguage.SelectedIndex.ToString();
       
             foreach (IUtilsControl item in _controls)
                 item.SaveConfiguration(_configFile.SelectSingleNode("Application/Controls/" + item.ControlName));
@@ -95,6 +99,29 @@ namespace NetOffice.DeveloperUtils
         #endregion
 
         #region Methods
+
+        private void SetupAutoRunEntry()
+        {
+            string runEntryKey = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
+            string runEntryTitle = "DeveloperUtils";
+
+            if (checkBoxStartAppWithWindows.Checked)
+            {
+                RegistryKey runKey = Registry.CurrentUser.OpenSubKey(runEntryKey, true);
+                object val = runKey.GetValue(runEntryTitle);
+                if (val == null)
+                    runKey.SetValue(runEntryTitle, this.GetType().Assembly.Location);
+                runKey.Close();
+            }
+            else
+            {
+                RegistryKey runKey = Registry.CurrentUser.OpenSubKey(runEntryKey, true);
+                object val = runKey.GetValue(runEntryTitle);
+                if (val != null)
+                    runKey.DeleteValue(runEntryTitle);
+                runKey.Close();
+            }
+        }
 
         private void SetupTrayIcon(bool init)
         {
@@ -117,6 +144,25 @@ namespace NetOffice.DeveloperUtils
 
         #region Trigger
 
+        private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (0 == comboBoxLanguage.SelectedIndex)
+            {
+                checkBoxMinimizeToTray.Text = "Minimize to Tray";
+                checkBoxStartAppWithWindows.Text = "Start with Windows";
+                checkBoxStartAppMinimized.Text = "Start application minimized";
+            }
+            else
+            {
+                checkBoxMinimizeToTray.Text = "Ins Tray minimieren";
+                checkBoxStartAppWithWindows.Text = "Mit Windows starten";
+                checkBoxStartAppMinimized.Text = "Minimiert starten";
+            }
+
+            foreach (IUtilsControl item in _controls)
+                item.SetLanguage(comboBoxLanguage.SelectedIndex);
+        }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveConfiguration();
@@ -124,6 +170,7 @@ namespace NetOffice.DeveloperUtils
                 item.Release();
  
             SetupTrayIcon(false);
+            SetupAutoRunEntry();
         }
         
         void _notify_Click(object sender, EventArgs e)
@@ -161,14 +208,7 @@ namespace NetOffice.DeveloperUtils
             if(minimize)
                 this.WindowState = FormWindowState.Minimized;
         }
-        
-        private void richTextBoxDescription_LinkClicked(object sender, LinkClickedEventArgs e)
-        {
 
-        }
-
-        #endregion
-  
         private void tabControlMain_SelectedIndexChanged(object sender, EventArgs e)
         {
             TabPage currentTab = tabControlMain.TabPages[tabControlMain.SelectedIndex];
@@ -183,5 +223,7 @@ namespace NetOffice.DeveloperUtils
         {
             System.Diagnostics.Process.Start(linkLabelHomepage.Text);
         }
+
+        #endregion
     }
 }

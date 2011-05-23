@@ -17,7 +17,9 @@ namespace NetOffice.DeveloperUtils
         void LoadConfiguration(XmlNode configNode);
 
         void SaveConfiguration(XmlNode configNode);
-        
+
+        void SetLanguage(int id);
+
         /// <summary>
         /// substitute for dispose
         /// </summary>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application StartMinimized="false" MinimizeToTray="true" >
+<Application StartMinimized="false" MinimizeToTray="true" StartWithWindows="false" Language ="0" >
   <Controls>
     <ProcessKiller>      
     </ProcessKiller>
