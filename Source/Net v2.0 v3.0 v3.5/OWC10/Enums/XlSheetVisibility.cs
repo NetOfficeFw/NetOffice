@@ -13,19 +13,22 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>-1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		xlSheetVisible = -1,
+		 xlSheetVisible = -1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		xlSheetHidden = 0,
+		 xlSheetHidden = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		xlSheetVeryHidden = 2
+		 xlSheetVeryHidden = 2
 	}
 }

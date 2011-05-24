@@ -13,25 +13,29 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbPessimistic = 2,
+		 dbPessimistic = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbOptimistic = 3,
+		 dbOptimistic = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbOptimisticValue = 1,
+		 dbOptimisticValue = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbOptimisticBatch = 5
+		 dbOptimisticBatch = 5
 	}
 }

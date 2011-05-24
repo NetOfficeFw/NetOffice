@@ -13,13 +13,15 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4159</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlShiftToLeft = -4159,
+		 xlShiftToLeft = -4159,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4162</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlShiftUp = -4162
+		 xlShiftUp = -4162
 	}
 }

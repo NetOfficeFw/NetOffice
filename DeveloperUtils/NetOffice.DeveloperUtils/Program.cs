@@ -14,7 +14,17 @@ namespace NetOffice.DeveloperUtils
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(args));
+
+            if (args.Length > 0)
+            {
+                SupportByLibrary.SupportByLibraryControl control = new NetOffice.DeveloperUtils.SupportByLibrary.SupportByLibraryControl(args);
+            }
+            else
+            { 
+                Application.Run(new Form1(args));
+            }
         }
+
+
     }
 }

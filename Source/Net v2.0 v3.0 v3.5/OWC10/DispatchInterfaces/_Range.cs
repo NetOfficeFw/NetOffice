@@ -114,38 +114,30 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="RowAbsolute">ref object RowAbsolute</param>
-		/// <param name="ColumnAbsolute">ref object ColumnAbsolute</param>
+		/// <param name="RowAbsolute">object RowAbsolute</param>
+		/// <param name="ColumnAbsolute">object ColumnAbsolute</param>
 		/// <param name="ReferenceStyle">NetOffice.OWC10Api.Enums.XlReferenceStyle ReferenceStyle</param>
-		/// <param name="External">ref optional object External</param>
-		/// <param name="RelativeTo">ref optional object RelativeTo</param>
+		/// <param name="External">optional object External</param>
+		/// <param name="RelativeTo">optional object RelativeTo</param>
 		[SupportByLibrary("OWC10", 1)]
-		public string get_Address(ref object rowAbsolute, ref object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle, ref object external, ref object relativeTo)
+		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
 			object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
-			rowAbsolute = (object)paramsArray[0];
-			columnAbsolute = (object)paramsArray[1];
-			external = (object)paramsArray[3];
-			relativeTo = (object)paramsArray[4];
 			return (string)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="RowAbsolute">ref object RowAbsolute</param>
-		/// <param name="ColumnAbsolute">ref object ColumnAbsolute</param>
+		/// <param name="RowAbsolute">object RowAbsolute</param>
+		/// <param name="ColumnAbsolute">object ColumnAbsolute</param>
 		/// <param name="ReferenceStyle">NetOffice.OWC10Api.Enums.XlReferenceStyle ReferenceStyle</param>
 		[SupportByLibrary("OWC10", 1)]
-		public string get_Address(ref object rowAbsolute, ref object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle)
+		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle);
 			object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
-			rowAbsolute = (object)paramsArray[0];
-			columnAbsolute = (object)paramsArray[1];
 			return (string)returnItem;
 		}
 
@@ -1239,22 +1231,16 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="Field">ref optional object Field</param>
-		/// <param name="Criteria1">ref optional object Criteria1</param>
-		/// <param name="Operator">ref optional object Operator</param>
-		/// <param name="Criteria2">ref optional object Criteria2</param>
-		/// <param name="VisibleDropDown">ref optional object VisibleDropDown</param>
+		/// <param name="Field">optional object Field</param>
+		/// <param name="Criteria1">optional object Criteria1</param>
+		/// <param name="Operator">optional object Operator</param>
+		/// <param name="Criteria2">optional object Criteria2</param>
+		/// <param name="VisibleDropDown">optional object VisibleDropDown</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void AutoFilter(ref object field, ref object criteria1, ref object _operator, ref object criteria2, ref object visibleDropDown)
+		public void AutoFilter(object field, object criteria1, object _operator, object criteria2, object visibleDropDown)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(field, criteria1, _operator, criteria2, visibleDropDown);
-			Invoker.Method(this, "AutoFilter", paramsArray, modifiers);
-			field = (object)paramsArray[0];
-			criteria1 = (object)paramsArray[1];
-			_operator = (object)paramsArray[2];
-			criteria2 = (object)paramsArray[3];
-			visibleDropDown = (object)paramsArray[4];
+			Invoker.Method(this, "AutoFilter", paramsArray);
 		}
 
 		/// <summary>
@@ -1415,14 +1401,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="Shift">ref optional object Shift</param>
+		/// <param name="Shift">optional object Shift</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Delete(ref object shift)
+		public void Delete(object shift)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(shift);
-			Invoker.Method(this, "Delete", paramsArray, modifiers);
-			shift = (object)paramsArray[0];
+			Invoker.Method(this, "Delete", paramsArray);
 		}
 
 		/// <summary>
@@ -1459,26 +1443,19 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="What">object What</param>
-		/// <param name="After">ref object After</param>
-		/// <param name="LookIn">ref object LookIn</param>
-		/// <param name="LookAt">ref object LookAt</param>
-		/// <param name="SearchOrder">ref object SearchOrder</param>
+		/// <param name="After">object After</param>
+		/// <param name="LookIn">object LookIn</param>
+		/// <param name="LookAt">object LookAt</param>
+		/// <param name="SearchOrder">object SearchOrder</param>
 		/// <param name="SearchDirection">NetOffice.OWC10Api.Enums.XlSearchDirection SearchDirection</param>
-		/// <param name="MatchCase">ref optional object MatchCase</param>
-		/// <param name="MatchByte">ref optional object MatchByte</param>
+		/// <param name="MatchCase">optional object MatchCase</param>
+		/// <param name="MatchByte">optional object MatchByte</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api._Range Find(object what, ref object after, ref object lookIn, ref object lookAt, ref object searchOrder, NetOffice.OWC10Api.Enums.XlSearchDirection searchDirection, ref object matchCase, ref object matchByte)
+		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.OWC10Api.Enums.XlSearchDirection searchDirection, object matchCase, object matchByte)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte);
-			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
 			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
-			after = (object)paramsArray[1];
-			lookIn = (object)paramsArray[2];
-			lookAt = (object)paramsArray[3];
-			searchOrder = (object)paramsArray[4];
-			matchCase = (object)paramsArray[6];
-			matchByte = (object)paramsArray[7];
 			return newObject;
 		}
 
@@ -1486,37 +1463,30 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="What">object What</param>
-		/// <param name="After">ref object After</param>
-		/// <param name="LookIn">ref object LookIn</param>
-		/// <param name="LookAt">ref object LookAt</param>
-		/// <param name="SearchOrder">ref object SearchOrder</param>
+		/// <param name="After">object After</param>
+		/// <param name="LookIn">object LookIn</param>
+		/// <param name="LookAt">object LookAt</param>
+		/// <param name="SearchOrder">object SearchOrder</param>
 		/// <param name="SearchDirection">NetOffice.OWC10Api.Enums.XlSearchDirection SearchDirection</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api._Range Find(object what, ref object after, ref object lookIn, ref object lookAt, ref object searchOrder, NetOffice.OWC10Api.Enums.XlSearchDirection searchDirection)
+		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.OWC10Api.Enums.XlSearchDirection searchDirection)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection);
-			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
 			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
-			after = (object)paramsArray[1];
-			lookIn = (object)paramsArray[2];
-			lookAt = (object)paramsArray[3];
-			searchOrder = (object)paramsArray[4];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="After">ref optional object After</param>
+		/// <param name="After">optional object After</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api._Range FindNext(ref object after)
+		public NetOffice.OWC10Api._Range FindNext(object after)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(after);
-			object returnItem = Invoker.MethodReturn(this, "FindNext", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "FindNext", paramsArray);
 			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
-			after = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -1535,15 +1505,13 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="After">ref optional object After</param>
+		/// <param name="After">optional object After</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api._Range FindPrevious(ref object after)
+		public NetOffice.OWC10Api._Range FindPrevious(object after)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(after);
-			object returnItem = Invoker.MethodReturn(this, "FindPrevious", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "FindPrevious", paramsArray);
 			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
-			after = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -1562,14 +1530,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="Shift">ref optional object Shift</param>
+		/// <param name="Shift">optional object Shift</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Insert(ref object shift)
+		public void Insert(object shift)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(shift);
-			Invoker.Method(this, "Insert", paramsArray, modifiers);
-			shift = (object)paramsArray[0];
+			Invoker.Method(this, "Insert", paramsArray);
 		}
 
 		/// <summary>
@@ -1599,14 +1565,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="Across">ref optional object Across</param>
+		/// <param name="Across">optional object Across</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Merge(ref object across)
+		public void Merge(object across)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(across);
-			Invoker.Method(this, "Merge", paramsArray, modifiers);
-			across = (object)paramsArray[0];
+			Invoker.Method(this, "Merge", paramsArray);
 		}
 
 		/// <summary>

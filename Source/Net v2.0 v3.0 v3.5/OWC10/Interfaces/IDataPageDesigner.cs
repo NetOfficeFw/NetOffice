@@ -131,14 +131,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
-		/// <param name="ppUnknownSharedConnection">ref object ppUnknownSharedConnection</param>
+		/// <param name="ppUnknownSharedConnection">object ppUnknownSharedConnection</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetSharedConnectionObject(string wzConnectionString, ref object ppUnknownSharedConnection)
+		public Int32 GetSharedConnectionObject(string wzConnectionString, object ppUnknownSharedConnection)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wzConnectionString, ppUnknownSharedConnection);
 			object returnItem = Invoker.MethodReturn(this, "GetSharedConnectionObject", paramsArray);
-			ppUnknownSharedConnection = (object)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
@@ -158,14 +156,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
-		/// <param name="pfSecure">ref Int32 pfSecure</param>
+		/// <param name="pfSecure">Int32 pfSecure</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 IsDatabaseSecure(string wzConnectionString, ref Int32 pfSecure)
+		public Int32 IsDatabaseSecure(string wzConnectionString, Int32 pfSecure)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wzConnectionString, pfSecure);
 			object returnItem = Invoker.MethodReturn(this, "IsDatabaseSecure", paramsArray);
-			pfSecure = (Int32)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
@@ -185,42 +181,36 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
-		/// <param name="ppUnknownSharedDBNS">ref object ppUnknownSharedDBNS</param>
+		/// <param name="ppUnknownSharedDBNS">object ppUnknownSharedDBNS</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetSharedDBNS(string wzConnectionString, ref object ppUnknownSharedDBNS)
+		public Int32 GetSharedDBNS(string wzConnectionString, object ppUnknownSharedDBNS)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wzConnectionString, ppUnknownSharedDBNS);
 			object returnItem = Invoker.MethodReturn(this, "GetSharedDBNS", paramsArray);
-			ppUnknownSharedDBNS = (object)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="ppbstrFileName">ref string ppbstrFileName</param>
+		/// <param name="ppbstrFileName">string ppbstrFileName</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetDatapagePath(ref string ppbstrFileName)
+		public Int32 GetDatapagePath(string ppbstrFileName)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(ppbstrFileName);
 			object returnItem = Invoker.MethodReturn(this, "GetDatapagePath", paramsArray);
-			ppbstrFileName = (string)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="pfDesignMode">ref Int32 pfDesignMode</param>
+		/// <param name="pfDesignMode">Int32 pfDesignMode</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 IsDesignMode(ref Int32 pfDesignMode)
+		public Int32 IsDesignMode(Int32 pfDesignMode)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pfDesignMode);
 			object returnItem = Invoker.MethodReturn(this, "IsDesignMode", paramsArray);
-			pfDesignMode = (Int32)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
@@ -241,28 +231,24 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="ppbstrInstId">ref string ppbstrInstId</param>
+		/// <param name="ppbstrInstId">string ppbstrInstId</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetFieldListInstanceId(ref string ppbstrInstId)
+		public Int32 GetFieldListInstanceId(string ppbstrInstId)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(ppbstrInstId);
 			object returnItem = Invoker.MethodReturn(this, "GetFieldListInstanceId", paramsArray);
-			ppbstrInstId = (string)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="pioum">ref NetOffice.OWC10Api.IOleUndoManager pioum</param>
+		/// <param name="pioum">NetOffice.OWC10Api.IOleUndoManager pioum</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetUndoManager(ref NetOffice.OWC10Api.IOleUndoManager pioum)
+		public Int32 GetUndoManager(NetOffice.OWC10Api.IOleUndoManager pioum)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pioum);
 			object returnItem = Invoker.MethodReturn(this, "GetUndoManager", paramsArray);
-			pioum = (NetOffice.OWC10Api.IOleUndoManager)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
@@ -274,16 +260,13 @@ namespace NetOffice.OWC10Api
 		/// <param name="bstrDropRowsource">string bstrDropRowsource</param>
 		/// <param name="varRowsources">object varRowsources</param>
 		/// <param name="varRelationships">object varRelationships</param>
-		/// <param name="ppprs">ref NetOffice.OWC10Api.PageRowsource ppprs</param>
-		/// <param name="ppsr">ref NetOffice.OWC10Api.SchemaRelationship ppsr</param>
+		/// <param name="ppprs">NetOffice.OWC10Api.PageRowsource ppprs</param>
+		/// <param name="ppsr">NetOffice.OWC10Api.SchemaRelationship ppsr</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 DoRelWiz(NetOffice.OWC10Api.IDataSourceControl pDSC, string bstrRecordSetDef, string bstrDropRowsource, object varRowsources, object varRelationships, ref NetOffice.OWC10Api.PageRowsource ppprs, ref NetOffice.OWC10Api.SchemaRelationship ppsr)
+		public Int32 DoRelWiz(NetOffice.OWC10Api.IDataSourceControl pDSC, string bstrRecordSetDef, string bstrDropRowsource, object varRowsources, object varRelationships, NetOffice.OWC10Api.PageRowsource ppprs, NetOffice.OWC10Api.SchemaRelationship ppsr)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pDSC, bstrRecordSetDef, bstrDropRowsource, varRowsources, varRelationships, ppprs, ppsr);
 			object returnItem = Invoker.MethodReturn(this, "DoRelWiz", paramsArray);
-			ppprs = (NetOffice.OWC10Api.PageRowsource)paramsArray[5];
-			ppsr = (NetOffice.OWC10Api.SchemaRelationship)paramsArray[6];
 			return (Int32)returnItem;
 		}
 

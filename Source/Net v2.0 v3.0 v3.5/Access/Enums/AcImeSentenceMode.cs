@@ -13,25 +13,29 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acImeSentenceModePhrasePredict = 0,
+		 acImeSentenceModePhrasePredict = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acImeSentenceModePluralClause = 1,
+		 acImeSentenceModePluralClause = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acImeSentenceModeConversation = 2,
+		 acImeSentenceModeConversation = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acImeSentenceModeNone = 3
+		 acImeSentenceModeNone = 3
 	}
 }

@@ -13,13 +13,15 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdMailFormatPlainText = 0,
+		 wdMailFormatPlainText = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdMailFormatHTML = 1
+		 wdMailFormatHTML = 1
 	}
 }

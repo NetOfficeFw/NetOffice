@@ -13,13 +13,15 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoButtonWrapText = 4,
+		 msoButtonWrapText = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoButtonTextBelow = 8
+		 msoButtonTextBelow = 8
 	}
 }

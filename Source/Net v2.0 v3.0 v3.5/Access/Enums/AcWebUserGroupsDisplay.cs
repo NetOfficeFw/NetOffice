@@ -13,13 +13,15 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 14)]
-		acWebUserGroupID = 0,
+		 acWebUserGroupID = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 14)]
-		acWebUserGroupName = 1
+		 acWebUserGroupName = 1
 	}
 }

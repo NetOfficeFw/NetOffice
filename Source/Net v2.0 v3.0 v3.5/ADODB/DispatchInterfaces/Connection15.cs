@@ -280,16 +280,14 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="CommandText">string CommandText</param>
-		/// <param name="RecordsAffected">ref object RecordsAffected</param>
+		/// <param name="RecordsAffected">object RecordsAffected</param>
 		/// <param name="Options">Int32 Options</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Recordset Execute(string commandText, ref object recordsAffected, Int32 options)
+		public NetOffice.ADODBApi._Recordset Execute(string commandText, object recordsAffected, Int32 options)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(commandText, recordsAffected, options);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
 			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
-			recordsAffected = (object)paramsArray[1];
 			return newObject;
 		}
 

@@ -13,13 +13,15 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 14)]
-		xlColumns = 2,
+		 xlColumns = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 14)]
-		xlRows = 1
+		 xlRows = 1
 	}
 }

@@ -132,14 +132,12 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 BeforeRightClick(ref bool cancel)
+		public Int32 BeforeRightClick(bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(cancel);
 			object returnItem = Invoker.MethodReturn(this, "BeforeRightClick", paramsArray);
-			cancel = (bool)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
@@ -171,14 +169,12 @@ namespace NetOffice.ExcelApi
 		/// <param name="ElementID">Int32 ElementID</param>
 		/// <param name="Arg1">Int32 Arg1</param>
 		/// <param name="Arg2">Int32 Arg2</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 BeforeDoubleClick(Int32 elementID, Int32 arg1, Int32 arg2, ref bool cancel)
+		public Int32 BeforeDoubleClick(Int32 elementID, Int32 arg1, Int32 arg2, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(elementID, arg1, arg2, cancel);
 			object returnItem = Invoker.MethodReturn(this, "BeforeDoubleClick", paramsArray);
-			cancel = (bool)paramsArray[3];
 			return (Int32)returnItem;
 		}
 

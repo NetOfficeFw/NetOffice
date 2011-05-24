@@ -13,19 +13,22 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlNormalView = 1,
+		 xlNormalView = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlPageBreakPreview = 2,
+		 xlPageBreakPreview = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlPageLayoutView = 3
+		 xlPageLayoutView = 3
 	}
 }

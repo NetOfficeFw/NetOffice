@@ -133,15 +133,13 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Namespace">string Namespace</param>
-		/// <param name="Range">ref optional object Range</param>
+		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public NetOffice.WordApi.XMLNode Add(string name, string _namespace, ref object range)
+		public NetOffice.WordApi.XMLNode Add(string name, string _namespace, object range)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, _namespace, range);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLNode;
-			range = (object)paramsArray[2];
 			return newObject;
 		}
 

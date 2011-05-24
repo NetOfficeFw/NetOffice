@@ -13,13 +13,15 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 14)]
-		xlEqualAllocation = 1,
+		 xlEqualAllocation = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 14)]
-		xlWeightedAllocation = 2
+		 xlWeightedAllocation = 2
 	}
 }

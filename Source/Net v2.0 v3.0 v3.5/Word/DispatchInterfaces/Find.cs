@@ -724,34 +724,22 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="FindText">ref optional object FindText</param>
-		/// <param name="MatchCase">ref optional object MatchCase</param>
-		/// <param name="MatchWholeWord">ref optional object MatchWholeWord</param>
-		/// <param name="MatchWildcards">ref optional object MatchWildcards</param>
-		/// <param name="MatchSoundsLike">ref optional object MatchSoundsLike</param>
-		/// <param name="MatchAllWordForms">ref optional object MatchAllWordForms</param>
-		/// <param name="Forward">ref optional object Forward</param>
-		/// <param name="Wrap">ref optional object Wrap</param>
-		/// <param name="Format">ref optional object Format</param>
-		/// <param name="ReplaceWith">ref optional object ReplaceWith</param>
-		/// <param name="Replace">ref optional object Replace</param>
+		/// <param name="FindText">optional object FindText</param>
+		/// <param name="MatchCase">optional object MatchCase</param>
+		/// <param name="MatchWholeWord">optional object MatchWholeWord</param>
+		/// <param name="MatchWildcards">optional object MatchWildcards</param>
+		/// <param name="MatchSoundsLike">optional object MatchSoundsLike</param>
+		/// <param name="MatchAllWordForms">optional object MatchAllWordForms</param>
+		/// <param name="Forward">optional object Forward</param>
+		/// <param name="Wrap">optional object Wrap</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ReplaceWith">optional object ReplaceWith</param>
+		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool ExecuteOld(ref object findText, ref object matchCase, ref object matchWholeWord, ref object matchWildcards, ref object matchSoundsLike, ref object matchAllWordForms, ref object forward, ref object wrap, ref object format, ref object replaceWith, ref object replace)
+		public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			findText = (object)paramsArray[0];
-			matchCase = (object)paramsArray[1];
-			matchWholeWord = (object)paramsArray[2];
-			matchWildcards = (object)paramsArray[3];
-			matchSoundsLike = (object)paramsArray[4];
-			matchAllWordForms = (object)paramsArray[5];
-			forward = (object)paramsArray[6];
-			wrap = (object)paramsArray[7];
-			format = (object)paramsArray[8];
-			replaceWith = (object)paramsArray[9];
-			replace = (object)paramsArray[10];
 			return (bool)returnItem;
 		}
 
@@ -799,42 +787,26 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="FindText">ref optional object FindText</param>
-		/// <param name="MatchCase">ref optional object MatchCase</param>
-		/// <param name="MatchWholeWord">ref optional object MatchWholeWord</param>
-		/// <param name="MatchWildcards">ref optional object MatchWildcards</param>
-		/// <param name="MatchSoundsLike">ref optional object MatchSoundsLike</param>
-		/// <param name="MatchAllWordForms">ref optional object MatchAllWordForms</param>
-		/// <param name="Forward">ref optional object Forward</param>
-		/// <param name="Wrap">ref optional object Wrap</param>
-		/// <param name="Format">ref optional object Format</param>
-		/// <param name="ReplaceWith">ref optional object ReplaceWith</param>
-		/// <param name="Replace">ref optional object Replace</param>
-		/// <param name="MatchKashida">ref optional object MatchKashida</param>
-		/// <param name="MatchDiacritics">ref optional object MatchDiacritics</param>
-		/// <param name="MatchAlefHamza">ref optional object MatchAlefHamza</param>
-		/// <param name="MatchControl">ref optional object MatchControl</param>
+		/// <param name="FindText">optional object FindText</param>
+		/// <param name="MatchCase">optional object MatchCase</param>
+		/// <param name="MatchWholeWord">optional object MatchWholeWord</param>
+		/// <param name="MatchWildcards">optional object MatchWildcards</param>
+		/// <param name="MatchSoundsLike">optional object MatchSoundsLike</param>
+		/// <param name="MatchAllWordForms">optional object MatchAllWordForms</param>
+		/// <param name="Forward">optional object Forward</param>
+		/// <param name="Wrap">optional object Wrap</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ReplaceWith">optional object ReplaceWith</param>
+		/// <param name="Replace">optional object Replace</param>
+		/// <param name="MatchKashida">optional object MatchKashida</param>
+		/// <param name="MatchDiacritics">optional object MatchDiacritics</param>
+		/// <param name="MatchAlefHamza">optional object MatchAlefHamza</param>
+		/// <param name="MatchControl">optional object MatchControl</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool Execute(ref object findText, ref object matchCase, ref object matchWholeWord, ref object matchWildcards, ref object matchSoundsLike, ref object matchAllWordForms, ref object forward, ref object wrap, ref object format, ref object replaceWith, ref object replace, ref object matchKashida, ref object matchDiacritics, ref object matchAlefHamza, ref object matchControl)
+		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			findText = (object)paramsArray[0];
-			matchCase = (object)paramsArray[1];
-			matchWholeWord = (object)paramsArray[2];
-			matchWildcards = (object)paramsArray[3];
-			matchSoundsLike = (object)paramsArray[4];
-			matchAllWordForms = (object)paramsArray[5];
-			forward = (object)paramsArray[6];
-			wrap = (object)paramsArray[7];
-			format = (object)paramsArray[8];
-			replaceWith = (object)paramsArray[9];
-			replace = (object)paramsArray[10];
-			matchKashida = (object)paramsArray[11];
-			matchDiacritics = (object)paramsArray[12];
-			matchAlefHamza = (object)paramsArray[13];
-			matchControl = (object)paramsArray[14];
 			return (bool)returnItem;
 		}
 
@@ -852,66 +824,43 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
-		/// <param name="FindText">ref object FindText</param>
-		/// <param name="HighlightColor">ref optional object HighlightColor</param>
-		/// <param name="TextColor">ref optional object TextColor</param>
-		/// <param name="MatchCase">ref optional object MatchCase</param>
-		/// <param name="MatchWholeWord">ref optional object MatchWholeWord</param>
-		/// <param name="MatchPrefix">ref optional object MatchPrefix</param>
-		/// <param name="MatchSuffix">ref optional object MatchSuffix</param>
-		/// <param name="MatchPhrase">ref optional object MatchPhrase</param>
-		/// <param name="MatchWildcards">ref optional object MatchWildcards</param>
-		/// <param name="MatchSoundsLike">ref optional object MatchSoundsLike</param>
-		/// <param name="MatchAllWordForms">ref optional object MatchAllWordForms</param>
-		/// <param name="MatchByte">ref optional object MatchByte</param>
-		/// <param name="MatchFuzzy">ref optional object MatchFuzzy</param>
-		/// <param name="MatchKashida">ref optional object MatchKashida</param>
-		/// <param name="MatchDiacritics">ref optional object MatchDiacritics</param>
-		/// <param name="MatchAlefHamza">ref optional object MatchAlefHamza</param>
-		/// <param name="MatchControl">ref optional object MatchControl</param>
-		/// <param name="IgnoreSpace">ref optional object IgnoreSpace</param>
-		/// <param name="IgnorePunct">ref optional object IgnorePunct</param>
-		/// <param name="HanjaPhoneticHangul">ref optional object HanjaPhoneticHangul</param>
+		/// <param name="FindText">object FindText</param>
+		/// <param name="HighlightColor">optional object HighlightColor</param>
+		/// <param name="TextColor">optional object TextColor</param>
+		/// <param name="MatchCase">optional object MatchCase</param>
+		/// <param name="MatchWholeWord">optional object MatchWholeWord</param>
+		/// <param name="MatchPrefix">optional object MatchPrefix</param>
+		/// <param name="MatchSuffix">optional object MatchSuffix</param>
+		/// <param name="MatchPhrase">optional object MatchPhrase</param>
+		/// <param name="MatchWildcards">optional object MatchWildcards</param>
+		/// <param name="MatchSoundsLike">optional object MatchSoundsLike</param>
+		/// <param name="MatchAllWordForms">optional object MatchAllWordForms</param>
+		/// <param name="MatchByte">optional object MatchByte</param>
+		/// <param name="MatchFuzzy">optional object MatchFuzzy</param>
+		/// <param name="MatchKashida">optional object MatchKashida</param>
+		/// <param name="MatchDiacritics">optional object MatchDiacritics</param>
+		/// <param name="MatchAlefHamza">optional object MatchAlefHamza</param>
+		/// <param name="MatchControl">optional object MatchControl</param>
+		/// <param name="IgnoreSpace">optional object IgnoreSpace</param>
+		/// <param name="IgnorePunct">optional object IgnorePunct</param>
+		/// <param name="HanjaPhoneticHangul">optional object HanjaPhoneticHangul</param>
 		[SupportByLibrary("Word", 12,14)]
-		public bool HitHighlight(ref object findText, ref object highlightColor, ref object textColor, ref object matchCase, ref object matchWholeWord, ref object matchPrefix, ref object matchSuffix, ref object matchPhrase, ref object matchWildcards, ref object matchSoundsLike, ref object matchAllWordForms, ref object matchByte, ref object matchFuzzy, ref object matchKashida, ref object matchDiacritics, ref object matchAlefHamza, ref object matchControl, ref object ignoreSpace, ref object ignorePunct, ref object hanjaPhoneticHangul)
+		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object ignoreSpace, object ignorePunct, object hanjaPhoneticHangul)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl, ignoreSpace, ignorePunct, hanjaPhoneticHangul);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			findText = (object)paramsArray[0];
-			highlightColor = (object)paramsArray[1];
-			textColor = (object)paramsArray[2];
-			matchCase = (object)paramsArray[3];
-			matchWholeWord = (object)paramsArray[4];
-			matchPrefix = (object)paramsArray[5];
-			matchSuffix = (object)paramsArray[6];
-			matchPhrase = (object)paramsArray[7];
-			matchWildcards = (object)paramsArray[8];
-			matchSoundsLike = (object)paramsArray[9];
-			matchAllWordForms = (object)paramsArray[10];
-			matchByte = (object)paramsArray[11];
-			matchFuzzy = (object)paramsArray[12];
-			matchKashida = (object)paramsArray[13];
-			matchDiacritics = (object)paramsArray[14];
-			matchAlefHamza = (object)paramsArray[15];
-			matchControl = (object)paramsArray[16];
-			ignoreSpace = (object)paramsArray[17];
-			ignorePunct = (object)paramsArray[18];
-			hanjaPhoneticHangul = (object)paramsArray[19];
 			return (bool)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
-		/// <param name="FindText">ref object FindText</param>
+		/// <param name="FindText">object FindText</param>
 		[SupportByLibrary("Word", 12,14)]
-		public bool HitHighlight(ref object findText)
+		public bool HitHighlight(object findText)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(findText);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			findText = (object)paramsArray[0];
 			return (bool)returnItem;
 		}
 
@@ -929,52 +878,31 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
-		/// <param name="FindText">ref optional object FindText</param>
-		/// <param name="MatchCase">ref optional object MatchCase</param>
-		/// <param name="MatchWholeWord">ref optional object MatchWholeWord</param>
-		/// <param name="MatchWildcards">ref optional object MatchWildcards</param>
-		/// <param name="MatchSoundsLike">ref optional object MatchSoundsLike</param>
-		/// <param name="MatchAllWordForms">ref optional object MatchAllWordForms</param>
-		/// <param name="Forward">ref optional object Forward</param>
-		/// <param name="Wrap">ref optional object Wrap</param>
-		/// <param name="Format">ref optional object Format</param>
-		/// <param name="ReplaceWith">ref optional object ReplaceWith</param>
-		/// <param name="Replace">ref optional object Replace</param>
-		/// <param name="MatchKashida">ref optional object MatchKashida</param>
-		/// <param name="MatchDiacritics">ref optional object MatchDiacritics</param>
-		/// <param name="MatchAlefHamza">ref optional object MatchAlefHamza</param>
-		/// <param name="MatchControl">ref optional object MatchControl</param>
-		/// <param name="MatchPrefix">ref optional object MatchPrefix</param>
-		/// <param name="MatchSuffix">ref optional object MatchSuffix</param>
-		/// <param name="MatchPhrase">ref optional object MatchPhrase</param>
-		/// <param name="IgnoreSpace">ref optional object IgnoreSpace</param>
-		/// <param name="IgnorePunct">ref optional object IgnorePunct</param>
+		/// <param name="FindText">optional object FindText</param>
+		/// <param name="MatchCase">optional object MatchCase</param>
+		/// <param name="MatchWholeWord">optional object MatchWholeWord</param>
+		/// <param name="MatchWildcards">optional object MatchWildcards</param>
+		/// <param name="MatchSoundsLike">optional object MatchSoundsLike</param>
+		/// <param name="MatchAllWordForms">optional object MatchAllWordForms</param>
+		/// <param name="Forward">optional object Forward</param>
+		/// <param name="Wrap">optional object Wrap</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ReplaceWith">optional object ReplaceWith</param>
+		/// <param name="Replace">optional object Replace</param>
+		/// <param name="MatchKashida">optional object MatchKashida</param>
+		/// <param name="MatchDiacritics">optional object MatchDiacritics</param>
+		/// <param name="MatchAlefHamza">optional object MatchAlefHamza</param>
+		/// <param name="MatchControl">optional object MatchControl</param>
+		/// <param name="MatchPrefix">optional object MatchPrefix</param>
+		/// <param name="MatchSuffix">optional object MatchSuffix</param>
+		/// <param name="MatchPhrase">optional object MatchPhrase</param>
+		/// <param name="IgnoreSpace">optional object IgnoreSpace</param>
+		/// <param name="IgnorePunct">optional object IgnorePunct</param>
 		[SupportByLibrary("Word", 12,14)]
-		public bool Execute2007(ref object findText, ref object matchCase, ref object matchWholeWord, ref object matchWildcards, ref object matchSoundsLike, ref object matchAllWordForms, ref object forward, ref object wrap, ref object format, ref object replaceWith, ref object replace, ref object matchKashida, ref object matchDiacritics, ref object matchAlefHamza, ref object matchControl, ref object matchPrefix, ref object matchSuffix, ref object matchPhrase, ref object ignoreSpace, ref object ignorePunct)
+		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix, object matchSuffix, object matchPhrase, object ignoreSpace, object ignorePunct)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix, matchPhrase, ignoreSpace, ignorePunct);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			findText = (object)paramsArray[0];
-			matchCase = (object)paramsArray[1];
-			matchWholeWord = (object)paramsArray[2];
-			matchWildcards = (object)paramsArray[3];
-			matchSoundsLike = (object)paramsArray[4];
-			matchAllWordForms = (object)paramsArray[5];
-			forward = (object)paramsArray[6];
-			wrap = (object)paramsArray[7];
-			format = (object)paramsArray[8];
-			replaceWith = (object)paramsArray[9];
-			replace = (object)paramsArray[10];
-			matchKashida = (object)paramsArray[11];
-			matchDiacritics = (object)paramsArray[12];
-			matchAlefHamza = (object)paramsArray[13];
-			matchControl = (object)paramsArray[14];
-			matchPrefix = (object)paramsArray[15];
-			matchSuffix = (object)paramsArray[16];
-			matchPhrase = (object)paramsArray[17];
-			ignoreSpace = (object)paramsArray[18];
-			ignorePunct = (object)paramsArray[19];
 			return (bool)returnItem;
 		}
 

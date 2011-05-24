@@ -13,13 +13,15 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 14)]
-		acBrowseToForm = 2,
+		 acBrowseToForm = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Access", 14)]
-		acBrowseToReport = 3
+		 acBrowseToReport = 3
 	}
 }

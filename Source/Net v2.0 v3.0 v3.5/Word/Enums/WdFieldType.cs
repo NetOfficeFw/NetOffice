@@ -13,565 +13,659 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-1</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldEmpty = -1,
+		 wdFieldEmpty = -1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldRef = 3,
+		 wdFieldRef = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldIndexEntry = 4,
+		 wdFieldIndexEntry = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldFootnoteRef = 5,
+		 wdFieldFootnoteRef = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldSet = 6,
+		 wdFieldSet = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldIf = 7,
+		 wdFieldIf = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldIndex = 8,
+		 wdFieldIndex = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldTOCEntry = 9,
+		 wdFieldTOCEntry = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldStyleRef = 10,
+		 wdFieldStyleRef = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldRefDoc = 11,
+		 wdFieldRefDoc = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldSequence = 12,
+		 wdFieldSequence = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldTOC = 13,
+		 wdFieldTOC = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldInfo = 14,
+		 wdFieldInfo = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldTitle = 15,
+		 wdFieldTitle = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldSubject = 16,
+		 wdFieldSubject = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldAuthor = 17,
+		 wdFieldAuthor = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldKeyWord = 18,
+		 wdFieldKeyWord = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>19</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldComments = 19,
+		 wdFieldComments = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>20</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldLastSavedBy = 20,
+		 wdFieldLastSavedBy = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>21</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldCreateDate = 21,
+		 wdFieldCreateDate = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>22</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldSaveDate = 22,
+		 wdFieldSaveDate = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>23</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldPrintDate = 23,
+		 wdFieldPrintDate = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>24</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldRevisionNum = 24,
+		 wdFieldRevisionNum = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>25</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldEditTime = 25,
+		 wdFieldEditTime = 25,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>26</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldNumPages = 26,
+		 wdFieldNumPages = 26,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>27</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldNumWords = 27,
+		 wdFieldNumWords = 27,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>28</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldNumChars = 28,
+		 wdFieldNumChars = 28,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>29</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldFileName = 29,
+		 wdFieldFileName = 29,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>30</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldTemplate = 30,
+		 wdFieldTemplate = 30,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>31</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldDate = 31,
+		 wdFieldDate = 31,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldTime = 32,
+		 wdFieldTime = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>33</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldPage = 33,
+		 wdFieldPage = 33,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>34</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldExpression = 34,
+		 wdFieldExpression = 34,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>35</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldQuote = 35,
+		 wdFieldQuote = 35,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>36</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldInclude = 36,
+		 wdFieldInclude = 36,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>37</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldPageRef = 37,
+		 wdFieldPageRef = 37,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>38</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldAsk = 38,
+		 wdFieldAsk = 38,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>39</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldFillIn = 39,
+		 wdFieldFillIn = 39,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>40</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldData = 40,
+		 wdFieldData = 40,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>41</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldNext = 41,
+		 wdFieldNext = 41,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>42</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldNextIf = 42,
+		 wdFieldNextIf = 42,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>43</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldSkipIf = 43,
+		 wdFieldSkipIf = 43,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>44</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldMergeRec = 44,
+		 wdFieldMergeRec = 44,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>45</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldDDE = 45,
+		 wdFieldDDE = 45,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>46</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldDDEAuto = 46,
+		 wdFieldDDEAuto = 46,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>47</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldGlossary = 47,
+		 wdFieldGlossary = 47,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>48</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldPrint = 48,
+		 wdFieldPrint = 48,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>49</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldFormula = 49,
+		 wdFieldFormula = 49,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>50</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldGoToButton = 50,
+		 wdFieldGoToButton = 50,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>51</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldMacroButton = 51,
+		 wdFieldMacroButton = 51,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>52</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldAutoNumOutline = 52,
+		 wdFieldAutoNumOutline = 52,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>53</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldAutoNumLegal = 53,
+		 wdFieldAutoNumLegal = 53,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>54</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldAutoNum = 54,
+		 wdFieldAutoNum = 54,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>55</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldImport = 55,
+		 wdFieldImport = 55,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>56</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldLink = 56,
+		 wdFieldLink = 56,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>57</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldSymbol = 57,
+		 wdFieldSymbol = 57,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>58</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldEmbed = 58,
+		 wdFieldEmbed = 58,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>59</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldMergeField = 59,
+		 wdFieldMergeField = 59,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>60</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldUserName = 60,
+		 wdFieldUserName = 60,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>61</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldUserInitials = 61,
+		 wdFieldUserInitials = 61,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>62</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldUserAddress = 62,
+		 wdFieldUserAddress = 62,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>63</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldBarCode = 63,
+		 wdFieldBarCode = 63,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>64</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldDocVariable = 64,
+		 wdFieldDocVariable = 64,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>65</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldSection = 65,
+		 wdFieldSection = 65,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>66</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldSectionPages = 66,
+		 wdFieldSectionPages = 66,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>67</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldIncludePicture = 67,
+		 wdFieldIncludePicture = 67,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>68</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldIncludeText = 68,
+		 wdFieldIncludeText = 68,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>69</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldFileSize = 69,
+		 wdFieldFileSize = 69,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>70</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldFormTextInput = 70,
+		 wdFieldFormTextInput = 70,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>71</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldFormCheckBox = 71,
+		 wdFieldFormCheckBox = 71,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>72</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldNoteRef = 72,
+		 wdFieldNoteRef = 72,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>73</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldTOA = 73,
+		 wdFieldTOA = 73,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>74</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldTOAEntry = 74,
+		 wdFieldTOAEntry = 74,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>75</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldMergeSeq = 75,
+		 wdFieldMergeSeq = 75,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>77</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldPrivate = 77,
+		 wdFieldPrivate = 77,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>78</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldDatabase = 78,
+		 wdFieldDatabase = 78,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>79</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldAutoText = 79,
+		 wdFieldAutoText = 79,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>80</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldCompare = 80,
+		 wdFieldCompare = 80,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>81</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldAddin = 81,
+		 wdFieldAddin = 81,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>82</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldSubscriber = 82,
+		 wdFieldSubscriber = 82,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>83</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldFormDropDown = 83,
+		 wdFieldFormDropDown = 83,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>84</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldAdvance = 84,
+		 wdFieldAdvance = 84,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>85</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldDocProperty = 85,
+		 wdFieldDocProperty = 85,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>87</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldOCX = 87,
+		 wdFieldOCX = 87,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>88</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldHyperlink = 88,
+		 wdFieldHyperlink = 88,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>89</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldAutoTextList = 89,
+		 wdFieldAutoTextList = 89,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>90</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldListNum = 90,
+		 wdFieldListNum = 90,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>91</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFieldHTMLActiveX = 91,
+		 wdFieldHTMLActiveX = 91,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>92</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdFieldBidiOutline = 92,
+		 wdFieldBidiOutline = 92,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>93</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdFieldAddressBlock = 93,
+		 wdFieldAddressBlock = 93,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>94</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdFieldGreetingLine = 94,
+		 wdFieldGreetingLine = 94,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>95</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdFieldShape = 95,
+		 wdFieldShape = 95,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>96</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdFieldCitation = 96,
+		 wdFieldCitation = 96,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>97</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdFieldBibliography = 97
+		 wdFieldBibliography = 97
 	}
 }

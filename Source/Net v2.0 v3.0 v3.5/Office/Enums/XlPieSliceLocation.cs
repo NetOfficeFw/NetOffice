@@ -13,13 +13,15 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 14)]
-		xlHorizontalCoordinate = 1,
+		 xlHorizontalCoordinate = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 14)]
-		xlVerticalCoordinate = 2
+		 xlVerticalCoordinate = 2
 	}
 }

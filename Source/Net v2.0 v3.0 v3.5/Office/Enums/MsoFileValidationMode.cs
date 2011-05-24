@@ -13,13 +13,15 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 14)]
-		msoFileValidationDefault = 0,
+		 msoFileValidationDefault = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 14)]
-		msoFileValidationSkip = 1
+		 msoFileValidationSkip = 1
 	}
 }

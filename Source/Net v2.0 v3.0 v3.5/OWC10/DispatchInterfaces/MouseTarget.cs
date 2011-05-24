@@ -57,14 +57,12 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="Cursor">ref Int32 Cursor</param>
+		/// <param name="Cursor">Int32 Cursor</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void MouseEnter(Int32 x, Int32 y, ref Int32 cursor)
+		public void MouseEnter(Int32 x, Int32 y, Int32 cursor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, cursor);
-			Invoker.Method(this, "MouseEnter", paramsArray, modifiers);
-			cursor = (Int32)paramsArray[2];
+			Invoker.Method(this, "MouseEnter", paramsArray);
 		}
 
 		/// <summary>
@@ -72,14 +70,12 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="Cursor">ref Int32 Cursor</param>
+		/// <param name="Cursor">Int32 Cursor</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void MouseOver(Int32 x, Int32 y, ref Int32 cursor)
+		public void MouseOver(Int32 x, Int32 y, Int32 cursor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, cursor);
-			Invoker.Method(this, "MouseOver", paramsArray, modifiers);
-			cursor = (Int32)paramsArray[2];
+			Invoker.Method(this, "MouseOver", paramsArray);
 		}
 
 		/// <summary>

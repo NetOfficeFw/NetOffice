@@ -284,23 +284,18 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="Target">string Target</param>
-		/// <param name="StartLine">ref Int32 StartLine</param>
-		/// <param name="StartColumn">ref Int32 StartColumn</param>
-		/// <param name="EndLine">ref Int32 EndLine</param>
-		/// <param name="EndColumn">ref Int32 EndColumn</param>
+		/// <param name="StartLine">Int32 StartLine</param>
+		/// <param name="StartColumn">Int32 StartColumn</param>
+		/// <param name="EndLine">Int32 EndLine</param>
+		/// <param name="EndColumn">Int32 EndColumn</param>
 		/// <param name="WholeWord">bool WholeWord</param>
 		/// <param name="MatchCase">bool MatchCase</param>
 		/// <param name="PatternSearch">bool PatternSearch</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		public bool Find(string target, ref Int32 startLine, ref Int32 startColumn, ref Int32 endLine, ref Int32 endColumn, bool wholeWord, bool matchCase, bool patternSearch)
+		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, bool wholeWord, bool matchCase, bool patternSearch)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,false,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase, patternSearch);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			startLine = (Int32)paramsArray[1];
-			startColumn = (Int32)paramsArray[2];
-			endLine = (Int32)paramsArray[3];
-			endColumn = (Int32)paramsArray[4];
 			return (bool)returnItem;
 		}
 

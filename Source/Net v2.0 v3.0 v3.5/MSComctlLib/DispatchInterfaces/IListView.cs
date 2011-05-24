@@ -788,19 +788,15 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="sz">string sz</param>
-		/// <param name="Where">ref optional object Where</param>
-		/// <param name="Index">ref optional object Index</param>
-		/// <param name="fPartial">ref optional object fPartial</param>
+		/// <param name="Where">optional object Where</param>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="fPartial">optional object fPartial</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz, ref object where, ref object index, ref object fPartial)
+		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where, object index, object fPartial)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sz, where, index, fPartial);
-			object returnItem = Invoker.MethodReturn(this, "FindItem", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "FindItem", paramsArray);
 			NetOffice.MSComctlLibApi.IListItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IListItem;
-			where = (object)paramsArray[1];
-			index = (object)paramsArray[2];
-			fPartial = (object)paramsArray[3];
 			return newObject;
 		}
 

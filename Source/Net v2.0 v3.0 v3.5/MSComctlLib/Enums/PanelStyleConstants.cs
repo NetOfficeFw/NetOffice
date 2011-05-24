@@ -13,49 +13,57 @@ namespace NetOffice.MSComctlLibApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		sbrText = 0,
+		 sbrText = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		sbrCaps = 1,
+		 sbrCaps = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		sbrNum = 2,
+		 sbrNum = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		sbrIns = 3,
+		 sbrIns = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		sbrScrl = 4,
+		 sbrScrl = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		sbrTime = 5,
+		 sbrTime = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		sbrDate = 6,
+		 sbrDate = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		sbrKana = 7
+		 sbrKana = 7
 	}
 }

@@ -58,15 +58,13 @@ namespace NetOffice.OWC10Api
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="KeyState">Int32 KeyState</param>
-		/// <param name="Effect">ref Int32 Effect</param>
+		/// <param name="Effect">Int32 Effect</param>
 		/// <param name="Object">object Object</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void DragEnter(Int32 x, Int32 y, Int32 keyState, ref Int32 effect, object _object)
+		public void DragEnter(Int32 x, Int32 y, Int32 keyState, Int32 effect, object _object)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect, _object);
-			Invoker.Method(this, "DragEnter", paramsArray, modifiers);
-			effect = (Int32)paramsArray[3];
+			Invoker.Method(this, "DragEnter", paramsArray);
 		}
 
 		/// <summary>
@@ -75,14 +73,12 @@ namespace NetOffice.OWC10Api
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="KeyState">Int32 KeyState</param>
-		/// <param name="Effect">ref Int32 Effect</param>
+		/// <param name="Effect">Int32 Effect</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void DragOver(Int32 x, Int32 y, Int32 keyState, ref Int32 effect)
+		public void DragOver(Int32 x, Int32 y, Int32 keyState, Int32 effect)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect);
-			Invoker.Method(this, "DragOver", paramsArray, modifiers);
-			effect = (Int32)paramsArray[3];
+			Invoker.Method(this, "DragOver", paramsArray);
 		}
 
 		/// <summary>
@@ -101,14 +97,12 @@ namespace NetOffice.OWC10Api
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="KeyState">Int32 KeyState</param>
-		/// <param name="Effect">ref Int32 Effect</param>
+		/// <param name="Effect">Int32 Effect</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Drop(Int32 x, Int32 y, Int32 keyState, ref Int32 effect)
+		public void Drop(Int32 x, Int32 y, Int32 keyState, Int32 effect)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect);
-			Invoker.Method(this, "Drop", paramsArray, modifiers);
-			effect = (Int32)paramsArray[3];
+			Invoker.Method(this, "Drop", paramsArray);
 		}
 
 		#endregion

@@ -84,16 +84,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
-		/// <param name="rgvar">ref object rgvar</param>
-		/// <param name="pcEltFetched">ref Int32 pcEltFetched</param>
+		/// <param name="rgvar">object rgvar</param>
+		/// <param name="pcEltFetched">Int32 pcEltFetched</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Next(Int32 cElt, ref object rgvar, ref Int32 pcEltFetched)
+		public void Next(Int32 cElt, object rgvar, Int32 pcEltFetched)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt, rgvar, pcEltFetched);
-			Invoker.Method(this, "Next", paramsArray, modifiers);
-			rgvar = (object)paramsArray[1];
-			pcEltFetched = (Int32)paramsArray[2];
+			Invoker.Method(this, "Next", paramsArray);
 		}
 
 		/// <summary>
@@ -120,14 +117,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="ppEnum">ref NetOffice.OWC10Api.IXRangeEnum ppEnum</param>
+		/// <param name="ppEnum">NetOffice.OWC10Api.IXRangeEnum ppEnum</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Clone(ref NetOffice.OWC10Api.IXRangeEnum ppEnum)
+		public void Clone(NetOffice.OWC10Api.IXRangeEnum ppEnum)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
-			Invoker.Method(this, "Clone", paramsArray, modifiers);
-			ppEnum = (NetOffice.OWC10Api.IXRangeEnum)paramsArray[0];
+			Invoker.Method(this, "Clone", paramsArray);
 		}
 
 		/// <summary>
@@ -144,17 +139,14 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="Out">ref object Out</param>
-		/// <param name="In">ref object In</param>
+		/// <param name="Out">object Out</param>
+		/// <param name="In">object In</param>
 		/// <param name="vt">Int16 vt</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void ChangeType(ref object _out, ref object _in, Int16 vt)
+		public void ChangeType(object _out, object _in, Int16 vt)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(_out, _in, vt);
-			Invoker.Method(this, "ChangeType", paramsArray, modifiers);
-			_out = (object)paramsArray[0];
-			_in = (object)paramsArray[1];
+			Invoker.Method(this, "ChangeType", paramsArray);
 		}
 
 		/// <summary>
@@ -162,20 +154,16 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		/// <param name="iStart">Int32 iStart</param>
-		/// <param name="rvarDest">ref object rvarDest</param>
-		/// <param name="pcFetched">ref Int32 pcFetched</param>
+		/// <param name="rvarDest">object rvarDest</param>
+		/// <param name="pcFetched">Int32 pcFetched</param>
 		/// <param name="vtCoerceTo">Int16 vtCoerceTo</param>
 		/// <param name="vtbCoerceFrom">Int32 vtbCoerceFrom</param>
-		/// <param name="Fill">ref object Fill</param>
+		/// <param name="Fill">object Fill</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void GetElements(Int32 cElt, Int32 iStart, ref object rvarDest, ref Int32 pcFetched, Int16 vtCoerceTo, Int32 vtbCoerceFrom, ref object fill)
+		public void GetElements(Int32 cElt, Int32 iStart, object rvarDest, Int32 pcFetched, Int16 vtCoerceTo, Int32 vtbCoerceFrom, object fill)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt, iStart, rvarDest, pcFetched, vtCoerceTo, vtbCoerceFrom, fill);
-			Invoker.Method(this, "GetElements", paramsArray, modifiers);
-			rvarDest = (object)paramsArray[2];
-			pcFetched = (Int32)paramsArray[3];
-			fill = (object)paramsArray[6];
+			Invoker.Method(this, "GetElements", paramsArray);
 		}
 
 		#endregion

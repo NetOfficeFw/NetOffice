@@ -99,28 +99,24 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
-		/// <param name="Results">ref string Results</param>
+		/// <param name="Results">string Results</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void Inspect(NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, ref string results)
+		public void Inspect(NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, string results)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(status, results);
-			Invoker.Method(this, "Inspect", paramsArray, modifiers);
-			results = (string)paramsArray[1];
+			Invoker.Method(this, "Inspect", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
-		/// <param name="Results">ref string Results</param>
+		/// <param name="Results">string Results</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void Fix(NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, ref string results)
+		public void Fix(NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, string results)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(status, results);
-			Invoker.Method(this, "Fix", paramsArray, modifiers);
-			results = (string)paramsArray[1];
+			Invoker.Method(this, "Fix", paramsArray);
 		}
 
 		#endregion

@@ -773,16 +773,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="SaveChanges">ref optional object SaveChanges</param>
-		/// <param name="RouteDocument">ref optional object RouteDocument</param>
+		/// <param name="SaveChanges">optional object SaveChanges</param>
+		/// <param name="RouteDocument">optional object RouteDocument</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Close(ref object saveChanges, ref object routeDocument)
+		public void Close(object saveChanges, object routeDocument)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, routeDocument);
-			Invoker.Method(this, "Close", paramsArray, modifiers);
-			saveChanges = (object)paramsArray[0];
-			routeDocument = (object)paramsArray[1];
+			Invoker.Method(this, "Close", paramsArray);
 		}
 
 		/// <summary>
@@ -798,20 +795,15 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Down">ref optional object Down</param>
-		/// <param name="Up">ref optional object Up</param>
-		/// <param name="ToRight">ref optional object ToRight</param>
-		/// <param name="ToLeft">ref optional object ToLeft</param>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		/// <param name="ToRight">optional object ToRight</param>
+		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void LargeScroll(ref object down, ref object up, ref object toRight, ref object toLeft)
+		public void LargeScroll(object down, object up, object toRight, object toLeft)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
-			Invoker.Method(this, "LargeScroll", paramsArray, modifiers);
-			down = (object)paramsArray[0];
-			up = (object)paramsArray[1];
-			toRight = (object)paramsArray[2];
-			toLeft = (object)paramsArray[3];
+			Invoker.Method(this, "LargeScroll", paramsArray);
 		}
 
 		/// <summary>
@@ -827,20 +819,15 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Down">ref optional object Down</param>
-		/// <param name="Up">ref optional object Up</param>
-		/// <param name="ToRight">ref optional object ToRight</param>
-		/// <param name="ToLeft">ref optional object ToLeft</param>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		/// <param name="ToRight">optional object ToRight</param>
+		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void SmallScroll(ref object down, ref object up, ref object toRight, ref object toLeft)
+		public void SmallScroll(object down, object up, object toRight, object toLeft)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
-			Invoker.Method(this, "SmallScroll", paramsArray, modifiers);
-			down = (object)paramsArray[0];
-			up = (object)paramsArray[1];
-			toRight = (object)paramsArray[2];
-			toLeft = (object)paramsArray[3];
+			Invoker.Method(this, "SmallScroll", paramsArray);
 		}
 
 		/// <summary>
@@ -868,40 +855,25 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Background">ref optional object Background</param>
-		/// <param name="Append">ref optional object Append</param>
-		/// <param name="Range">ref optional object Range</param>
-		/// <param name="OutputFileName">ref optional object OutputFileName</param>
-		/// <param name="From">ref optional object From</param>
-		/// <param name="To">ref optional object To</param>
-		/// <param name="Item">ref optional object Item</param>
-		/// <param name="Copies">ref optional object Copies</param>
-		/// <param name="Pages">ref optional object Pages</param>
-		/// <param name="PageType">ref optional object PageType</param>
-		/// <param name="PrintToFile">ref optional object PrintToFile</param>
-		/// <param name="Collate">ref optional object Collate</param>
-		/// <param name="ActivePrinterMacGX">ref optional object ActivePrinterMacGX</param>
-		/// <param name="ManualDuplexPrint">ref optional object ManualDuplexPrint</param>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PrintOutOld(ref object background, ref object append, ref object range, ref object outputFileName, ref object from, ref object to, ref object item, ref object copies, ref object pages, ref object pageType, ref object printToFile, ref object collate, ref object activePrinterMacGX, ref object manualDuplexPrint)
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint);
-			Invoker.Method(this, "PrintOutOld", paramsArray, modifiers);
-			background = (object)paramsArray[0];
-			append = (object)paramsArray[1];
-			range = (object)paramsArray[2];
-			outputFileName = (object)paramsArray[3];
-			from = (object)paramsArray[4];
-			to = (object)paramsArray[5];
-			item = (object)paramsArray[6];
-			copies = (object)paramsArray[7];
-			pages = (object)paramsArray[8];
-			pageType = (object)paramsArray[9];
-			printToFile = (object)paramsArray[10];
-			collate = (object)paramsArray[11];
-			activePrinterMacGX = (object)paramsArray[12];
-			manualDuplexPrint = (object)paramsArray[13];
+			Invoker.Method(this, "PrintOutOld", paramsArray);
 		}
 
 		/// <summary>
@@ -917,16 +889,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Down">ref optional object Down</param>
-		/// <param name="Up">ref optional object Up</param>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PageScroll(ref object down, ref object up)
+		public void PageScroll(object down, object up)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
-			Invoker.Method(this, "PageScroll", paramsArray, modifiers);
-			down = (object)paramsArray[0];
-			up = (object)paramsArray[1];
+			Invoker.Method(this, "PageScroll", paramsArray);
 		}
 
 		/// <summary>
@@ -967,14 +936,12 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="obj">object obj</param>
-		/// <param name="Start">ref optional object Start</param>
+		/// <param name="Start">optional object Start</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ScrollIntoView(object obj, ref object start)
+		public void ScrollIntoView(object obj, object start)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(obj, start);
-			Invoker.Method(this, "ScrollIntoView", paramsArray, modifiers);
-			start = (object)paramsArray[1];
+			Invoker.Method(this, "ScrollIntoView", paramsArray);
 		}
 
 		/// <summary>
@@ -991,68 +958,44 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ScreenPixelsLeft">ref Int32 ScreenPixelsLeft</param>
-		/// <param name="ScreenPixelsTop">ref Int32 ScreenPixelsTop</param>
-		/// <param name="ScreenPixelsWidth">ref Int32 ScreenPixelsWidth</param>
-		/// <param name="ScreenPixelsHeight">ref Int32 ScreenPixelsHeight</param>
+		/// <param name="ScreenPixelsLeft">Int32 ScreenPixelsLeft</param>
+		/// <param name="ScreenPixelsTop">Int32 ScreenPixelsTop</param>
+		/// <param name="ScreenPixelsWidth">Int32 ScreenPixelsWidth</param>
+		/// <param name="ScreenPixelsHeight">Int32 ScreenPixelsHeight</param>
 		/// <param name="obj">object obj</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void GetPoint(ref Int32 screenPixelsLeft, ref Int32 screenPixelsTop, ref Int32 screenPixelsWidth, ref Int32 screenPixelsHeight, object obj)
+		public void GetPoint(Int32 screenPixelsLeft, Int32 screenPixelsTop, Int32 screenPixelsWidth, Int32 screenPixelsHeight, object obj)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(screenPixelsLeft, screenPixelsTop, screenPixelsWidth, screenPixelsHeight, obj);
-			Invoker.Method(this, "GetPoint", paramsArray, modifiers);
-			screenPixelsLeft = (Int32)paramsArray[0];
-			screenPixelsTop = (Int32)paramsArray[1];
-			screenPixelsWidth = (Int32)paramsArray[2];
-			screenPixelsHeight = (Int32)paramsArray[3];
+			Invoker.Method(this, "GetPoint", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Background">ref optional object Background</param>
-		/// <param name="Append">ref optional object Append</param>
-		/// <param name="Range">ref optional object Range</param>
-		/// <param name="OutputFileName">ref optional object OutputFileName</param>
-		/// <param name="From">ref optional object From</param>
-		/// <param name="To">ref optional object To</param>
-		/// <param name="Item">ref optional object Item</param>
-		/// <param name="Copies">ref optional object Copies</param>
-		/// <param name="Pages">ref optional object Pages</param>
-		/// <param name="PageType">ref optional object PageType</param>
-		/// <param name="PrintToFile">ref optional object PrintToFile</param>
-		/// <param name="Collate">ref optional object Collate</param>
-		/// <param name="ActivePrinterMacGX">ref optional object ActivePrinterMacGX</param>
-		/// <param name="ManualDuplexPrint">ref optional object ManualDuplexPrint</param>
-		/// <param name="PrintZoomColumn">ref optional object PrintZoomColumn</param>
-		/// <param name="PrintZoomRow">ref optional object PrintZoomRow</param>
-		/// <param name="PrintZoomPaperWidth">ref optional object PrintZoomPaperWidth</param>
-		/// <param name="PrintZoomPaperHeight">ref optional object PrintZoomPaperHeight</param>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		/// <param name="PrintZoomColumn">optional object PrintZoomColumn</param>
+		/// <param name="PrintZoomRow">optional object PrintZoomRow</param>
+		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
+		/// <param name="PrintZoomPaperHeight">optional object PrintZoomPaperHeight</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PrintOut(ref object background, ref object append, ref object range, ref object outputFileName, ref object from, ref object to, ref object item, ref object copies, ref object pages, ref object pageType, ref object printToFile, ref object collate, ref object activePrinterMacGX, ref object manualDuplexPrint, ref object printZoomColumn, ref object printZoomRow, ref object printZoomPaperWidth, ref object printZoomPaperHeight)
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
-			Invoker.Method(this, "PrintOut", paramsArray, modifiers);
-			background = (object)paramsArray[0];
-			append = (object)paramsArray[1];
-			range = (object)paramsArray[2];
-			outputFileName = (object)paramsArray[3];
-			from = (object)paramsArray[4];
-			to = (object)paramsArray[5];
-			item = (object)paramsArray[6];
-			copies = (object)paramsArray[7];
-			pages = (object)paramsArray[8];
-			pageType = (object)paramsArray[9];
-			printToFile = (object)paramsArray[10];
-			collate = (object)paramsArray[11];
-			activePrinterMacGX = (object)paramsArray[12];
-			manualDuplexPrint = (object)paramsArray[13];
-			printZoomColumn = (object)paramsArray[14];
-			printZoomRow = (object)paramsArray[15];
-			printZoomPaperWidth = (object)paramsArray[16];
-			printZoomPaperHeight = (object)paramsArray[17];
+			Invoker.Method(this, "PrintOut", paramsArray);
 		}
 
 		/// <summary>
@@ -1068,48 +1011,29 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Background">ref optional object Background</param>
-		/// <param name="Append">ref optional object Append</param>
-		/// <param name="Range">ref optional object Range</param>
-		/// <param name="OutputFileName">ref optional object OutputFileName</param>
-		/// <param name="From">ref optional object From</param>
-		/// <param name="To">ref optional object To</param>
-		/// <param name="Item">ref optional object Item</param>
-		/// <param name="Copies">ref optional object Copies</param>
-		/// <param name="Pages">ref optional object Pages</param>
-		/// <param name="PageType">ref optional object PageType</param>
-		/// <param name="PrintToFile">ref optional object PrintToFile</param>
-		/// <param name="Collate">ref optional object Collate</param>
-		/// <param name="ActivePrinterMacGX">ref optional object ActivePrinterMacGX</param>
-		/// <param name="ManualDuplexPrint">ref optional object ManualDuplexPrint</param>
-		/// <param name="PrintZoomColumn">ref optional object PrintZoomColumn</param>
-		/// <param name="PrintZoomRow">ref optional object PrintZoomRow</param>
-		/// <param name="PrintZoomPaperWidth">ref optional object PrintZoomPaperWidth</param>
-		/// <param name="PrintZoomPaperHeight">ref optional object PrintZoomPaperHeight</param>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		/// <param name="PrintZoomColumn">optional object PrintZoomColumn</param>
+		/// <param name="PrintZoomRow">optional object PrintZoomRow</param>
+		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
+		/// <param name="PrintZoomPaperHeight">optional object PrintZoomPaperHeight</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void PrintOut2000(ref object background, ref object append, ref object range, ref object outputFileName, ref object from, ref object to, ref object item, ref object copies, ref object pages, ref object pageType, ref object printToFile, ref object collate, ref object activePrinterMacGX, ref object manualDuplexPrint, ref object printZoomColumn, ref object printZoomRow, ref object printZoomPaperWidth, ref object printZoomPaperHeight)
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
-			Invoker.Method(this, "PrintOut2000", paramsArray, modifiers);
-			background = (object)paramsArray[0];
-			append = (object)paramsArray[1];
-			range = (object)paramsArray[2];
-			outputFileName = (object)paramsArray[3];
-			from = (object)paramsArray[4];
-			to = (object)paramsArray[5];
-			item = (object)paramsArray[6];
-			copies = (object)paramsArray[7];
-			pages = (object)paramsArray[8];
-			pageType = (object)paramsArray[9];
-			printToFile = (object)paramsArray[10];
-			collate = (object)paramsArray[11];
-			activePrinterMacGX = (object)paramsArray[12];
-			manualDuplexPrint = (object)paramsArray[13];
-			printZoomColumn = (object)paramsArray[14];
-			printZoomRow = (object)paramsArray[15];
-			printZoomPaperWidth = (object)paramsArray[16];
-			printZoomPaperHeight = (object)paramsArray[17];
+			Invoker.Method(this, "PrintOut2000", paramsArray);
 		}
 
 		/// <summary>

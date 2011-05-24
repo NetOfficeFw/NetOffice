@@ -13,19 +13,22 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdOMathHorizAlignCenter = 0,
+		 wdOMathHorizAlignCenter = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdOMathHorizAlignLeft = 1,
+		 wdOMathHorizAlignLeft = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdOMathHorizAlignRight = 2
+		 wdOMathHorizAlignRight = 2
 	}
 }

@@ -142,18 +142,14 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
-		/// <param name="x">ref optional object x</param>
-		/// <param name="y">ref optional object y</param>
-		/// <param name="Style">ref optional object Style</param>
+		/// <param name="x">optional object x</param>
+		/// <param name="y">optional object y</param>
+		/// <param name="Style">optional object Style</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void Draw(Int32 hDC, ref object x, ref object y, ref object style)
+		public void Draw(Int32 hDC, object x, object y, object style)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, x, y, style);
-			Invoker.Method(this, "Draw", paramsArray, modifiers);
-			x = (object)paramsArray[1];
-			y = (object)paramsArray[2];
-			style = (object)paramsArray[3];
+			Invoker.Method(this, "Draw", paramsArray);
 		}
 
 		/// <summary>

@@ -534,28 +534,19 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
-		/// <param name="X1">ref Single X1</param>
-		/// <param name="Y1">ref Single Y1</param>
-		/// <param name="X2">ref Single X2</param>
-		/// <param name="Y2">ref Single Y2</param>
-		/// <param name="X3">ref Single X3</param>
-		/// <param name="Y3">ref Single Y3</param>
-		/// <param name="x4">ref Single x4</param>
-		/// <param name="y4">ref Single y4</param>
+		/// <param name="X1">Single X1</param>
+		/// <param name="Y1">Single Y1</param>
+		/// <param name="X2">Single X2</param>
+		/// <param name="Y2">Single Y2</param>
+		/// <param name="X3">Single X3</param>
+		/// <param name="Y3">Single Y3</param>
+		/// <param name="x4">Single x4</param>
+		/// <param name="y4">Single y4</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void RotatedBounds(ref Single x1, ref Single y1, ref Single x2, ref Single y2, ref Single x3, ref Single y3, ref Single x4, ref Single y4)
+		public void RotatedBounds(Single x1, Single y1, Single x2, Single y2, Single x3, Single y3, Single x4, Single y4)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(x1, y1, x2, y2, x3, y3, x4, y4);
-			Invoker.Method(this, "RotatedBounds", paramsArray, modifiers);
-			x1 = (Single)paramsArray[0];
-			y1 = (Single)paramsArray[1];
-			x2 = (Single)paramsArray[2];
-			y2 = (Single)paramsArray[3];
-			x3 = (Single)paramsArray[4];
-			y3 = (Single)paramsArray[5];
-			x4 = (Single)paramsArray[6];
-			y4 = (Single)paramsArray[7];
+			Invoker.Method(this, "RotatedBounds", paramsArray);
 		}
 
 		/// <summary>

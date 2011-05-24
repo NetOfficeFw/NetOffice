@@ -69,14 +69,12 @@ namespace NetOffice.OfficeApi
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
 		/// <param name="uType">UIntPtr uType</param>
-		/// <param name="pidResult">ref Int32 pidResult</param>
+		/// <param name="pidResult">Int32 pidResult</param>
 		[SupportByLibrary("Office", 14)]
-		public Int32 HrMessageBox(string bstrText, string bstrCaption, UIntPtr uType, ref Int32 pidResult)
+		public Int32 HrMessageBox(string bstrText, string bstrCaption, UIntPtr uType, Int32 pidResult)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, uType, pidResult);
 			object returnItem = Invoker.MethodReturn(this, "HrMessageBox", paramsArray);
-			pidResult = (Int32)paramsArray[3];
 			return (Int32)returnItem;
 		}
 
@@ -85,15 +83,13 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
-		/// <param name="pbstrInput">ref string pbstrInput</param>
+		/// <param name="pbstrInput">string pbstrInput</param>
 		/// <param name="fPassword">Int32 fPassword</param>
 		[SupportByLibrary("Office", 14)]
-		public Int32 HrInputBox(string bstrText, string bstrCaption, ref string pbstrInput, Int32 fPassword)
+		public Int32 HrInputBox(string bstrText, string bstrCaption, string pbstrInput, Int32 fPassword)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, pbstrInput, fPassword);
 			object returnItem = Invoker.MethodReturn(this, "HrInputBox", paramsArray);
-			pbstrInput = (string)paramsArray[2];
 			return (Int32)returnItem;
 		}
 

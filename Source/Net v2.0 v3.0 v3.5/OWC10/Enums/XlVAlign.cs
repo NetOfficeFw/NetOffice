@@ -13,19 +13,22 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>-4107</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		xlVAlignBottom = -4107,
+		 xlVAlignBottom = -4107,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>-4108</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		xlVAlignCenter = -4108,
+		 xlVAlignCenter = -4108,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>-4160</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		xlVAlignTop = -4160
+		 xlVAlignTop = -4160
 	}
 }

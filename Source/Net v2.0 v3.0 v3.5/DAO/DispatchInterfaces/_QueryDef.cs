@@ -458,14 +458,12 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="pQdef">NetOffice.DAOApi.QueryDef pQdef</param>
-		/// <param name="lps">ref Int16 lps</param>
+		/// <param name="lps">Int16 lps</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void Compare(NetOffice.DAOApi.QueryDef pQdef, ref Int16 lps)
+		public void Compare(NetOffice.DAOApi.QueryDef pQdef, Int16 lps)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pQdef, lps);
-			Invoker.Method(this, "Compare", paramsArray, modifiers);
-			lps = (Int16)paramsArray[1];
+			Invoker.Method(this, "Compare", paramsArray);
 		}
 
 		/// <summary>

@@ -13,43 +13,50 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acExportTable = 0,
+		 acExportTable = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acExportQuery = 1,
+		 acExportQuery = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acExportForm = 2,
+		 acExportForm = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acExportReport = 3,
+		 acExportReport = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acExportServerView = 7,
+		 acExportServerView = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acExportStoredProcedure = 9,
+		 acExportStoredProcedure = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acExportFunction = 10
+		 acExportFunction = 10
 	}
 }

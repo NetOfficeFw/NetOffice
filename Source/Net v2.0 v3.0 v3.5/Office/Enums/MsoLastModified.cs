@@ -13,43 +13,50 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLastModifiedYesterday = 1,
+		 msoLastModifiedYesterday = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLastModifiedToday = 2,
+		 msoLastModifiedToday = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLastModifiedLastWeek = 3,
+		 msoLastModifiedLastWeek = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLastModifiedThisWeek = 4,
+		 msoLastModifiedThisWeek = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLastModifiedLastMonth = 5,
+		 msoLastModifiedLastMonth = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLastModifiedThisMonth = 6,
+		 msoLastModifiedThisMonth = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLastModifiedAnyTime = 7
+		 msoLastModifiedAnyTime = 7
 	}
 }

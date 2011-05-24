@@ -13,19 +13,22 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 14)]
-		acAutomatic = 0,
+		 acAutomatic = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 14)]
-		acNumber = 1,
+		 acNumber = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 14)]
-		acPercent = 2
+		 acPercent = 2
 	}
 }

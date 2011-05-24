@@ -13,25 +13,29 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Word", 14)]
-		xlTickMarkCross = 4,
+		 xlTickMarkCross = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 14)]
-		xlTickMarkInside = 2,
+		 xlTickMarkInside = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>-4142</remarks>
 		[SupportByLibrary("Word", 14)]
-		xlTickMarkNone = -4142,
+		 xlTickMarkNone = -4142,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Word", 14)]
-		xlTickMarkOutside = 3
+		 xlTickMarkOutside = 3
 	}
 }

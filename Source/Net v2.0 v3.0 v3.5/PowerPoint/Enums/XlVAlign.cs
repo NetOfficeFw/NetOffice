@@ -13,31 +13,36 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4107</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlVAlignBottom = -4107,
+		 xlVAlignBottom = -4107,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4108</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlVAlignCenter = -4108,
+		 xlVAlignCenter = -4108,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4117</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlVAlignDistributed = -4117,
+		 xlVAlignDistributed = -4117,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4130</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlVAlignJustify = -4130,
+		 xlVAlignJustify = -4130,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4160</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlVAlignTop = -4160
+		 xlVAlignTop = -4160
 	}
 }

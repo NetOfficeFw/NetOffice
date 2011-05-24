@@ -71,15 +71,13 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IColumnHeader get_ControlDefault(ref object index)
+		public NetOffice.MSComctlLibApi.IColumnHeader get_ControlDefault(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
 			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			index = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -107,23 +105,17 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref optional object Index</param>
-		/// <param name="Key">ref optional object Key</param>
-		/// <param name="Text">ref optional object Text</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="Alignment">ref optional object Alignment</param>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="Key">optional object Key</param>
+		/// <param name="Text">optional object Text</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="Alignment">optional object Alignment</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(ref object index, ref object key, ref object text, ref object width, ref object alignment)
+		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text, object width, object alignment)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment);
-			object returnItem = Invoker.MethodReturn(this, "Add_PreVB98", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add_PreVB98", paramsArray);
 			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			index = (object)paramsArray[0];
-			key = (object)paramsArray[1];
-			text = (object)paramsArray[2];
-			width = (object)paramsArray[3];
-			alignment = (object)paramsArray[4];
 			return newObject;
 		}
 
@@ -152,38 +144,29 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void Remove(ref object index)
+		public void Remove(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Remove", paramsArray, modifiers);
-			index = (object)paramsArray[0];
+			Invoker.Method(this, "Remove", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref optional object Index</param>
-		/// <param name="Key">ref optional object Key</param>
-		/// <param name="Text">ref optional object Text</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="Alignment">ref optional object Alignment</param>
-		/// <param name="Icon">ref optional object Icon</param>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="Key">optional object Key</param>
+		/// <param name="Text">optional object Text</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="Alignment">optional object Alignment</param>
+		/// <param name="Icon">optional object Icon</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IColumnHeader Add(ref object index, ref object key, ref object text, ref object width, ref object alignment, ref object icon)
+		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width, object alignment, object icon)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment, icon);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			index = (object)paramsArray[0];
-			key = (object)paramsArray[1];
-			text = (object)paramsArray[2];
-			width = (object)paramsArray[3];
-			alignment = (object)paramsArray[4];
-			icon = (object)paramsArray[5];
 			return newObject;
 		}
 

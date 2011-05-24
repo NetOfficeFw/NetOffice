@@ -13,19 +13,22 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olRuleExecuteAllMessages = 0,
+		 olRuleExecuteAllMessages = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olRuleExecuteReadMessages = 1,
+		 olRuleExecuteReadMessages = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olRuleExecuteUnreadMessages = 2
+		 olRuleExecuteUnreadMessages = 2
 	}
 }

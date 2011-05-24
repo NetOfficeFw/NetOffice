@@ -13,13 +13,15 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoDistributeHorizontally = 0,
+		 msoDistributeHorizontally = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoDistributeVertically = 1
+		 msoDistributeVertically = 1
 	}
 }

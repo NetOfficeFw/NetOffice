@@ -13,13 +13,15 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoSegmentLine = 0,
+		 msoSegmentLine = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoSegmentCurve = 1
+		 msoSegmentCurve = 1
 	}
 }

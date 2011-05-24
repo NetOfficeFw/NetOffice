@@ -13,37 +13,43 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-1</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoAlertCancelDefault = -1,
+		 msoAlertCancelDefault = -1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoAlertCancelFirst = 0,
+		 msoAlertCancelFirst = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoAlertCancelSecond = 1,
+		 msoAlertCancelSecond = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoAlertCancelThird = 2,
+		 msoAlertCancelThird = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoAlertCancelFourth = 3,
+		 msoAlertCancelFourth = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoAlertCancelFifth = 4
+		 msoAlertCancelFifth = 4
 	}
 }

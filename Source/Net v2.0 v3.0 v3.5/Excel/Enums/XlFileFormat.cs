@@ -13,325 +13,379 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlAddIn = 18,
+		 xlAddIn = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlCSV = 6,
+		 xlCSV = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>22</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlCSVMac = 22,
+		 xlCSVMac = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>24</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlCSVMSDOS = 24,
+		 xlCSVMSDOS = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>23</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlCSVWindows = 23,
+		 xlCSVWindows = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlDBF2 = 7,
+		 xlDBF2 = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlDBF3 = 8,
+		 xlDBF3 = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlDBF4 = 11,
+		 xlDBF4 = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlDIF = 9,
+		 xlDIF = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlExcel2 = 16,
+		 xlExcel2 = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>27</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlExcel2FarEast = 27,
+		 xlExcel2FarEast = 27,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>29</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlExcel3 = 29,
+		 xlExcel3 = 29,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>33</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlExcel4 = 33,
+		 xlExcel4 = 33,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>39</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlExcel5 = 39,
+		 xlExcel5 = 39,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>39</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlExcel7 = 39,
+		 xlExcel7 = 39,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>43</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlExcel9795 = 43,
+		 xlExcel9795 = 43,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>35</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlExcel4Workbook = 35,
+		 xlExcel4Workbook = 35,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>26</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIntlAddIn = 26,
+		 xlIntlAddIn = 26,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>25</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIntlMacro = 25,
+		 xlIntlMacro = 25,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4143</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWorkbookNormal = -4143,
+		 xlWorkbookNormal = -4143,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlSYLK = 2,
+		 xlSYLK = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlTemplate = 17,
+		 xlTemplate = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4158</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlCurrentPlatformText = -4158,
+		 xlCurrentPlatformText = -4158,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>19</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlTextMac = 19,
+		 xlTextMac = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>21</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlTextMSDOS = 21,
+		 xlTextMSDOS = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>36</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlTextPrinter = 36,
+		 xlTextPrinter = 36,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>20</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlTextWindows = 20,
+		 xlTextWindows = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWJ2WD1 = 14,
+		 xlWJ2WD1 = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWK1 = 5,
+		 xlWK1 = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>31</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWK1ALL = 31,
+		 xlWK1ALL = 31,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>30</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWK1FMT = 30,
+		 xlWK1FMT = 30,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWK3 = 15,
+		 xlWK3 = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>38</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWK4 = 38,
+		 xlWK4 = 38,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWK3FM3 = 32,
+		 xlWK3FM3 = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWKS = 4,
+		 xlWKS = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>28</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWorks2FarEast = 28,
+		 xlWorks2FarEast = 28,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>34</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWQ1 = 34,
+		 xlWQ1 = 34,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>40</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWJ3 = 40,
+		 xlWJ3 = 40,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>41</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlWJ3FJ3 = 41,
+		 xlWJ3FJ3 = 41,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>42</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlUnicodeText = 42,
+		 xlUnicodeText = 42,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>44</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlHtml = 44,
+		 xlHtml = 44,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>45</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlWebArchive = 45,
+		 xlWebArchive = 45,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>46</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlXMLSpreadsheet = 46,
+		 xlXMLSpreadsheet = 46,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>50</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlExcel12 = 50,
+		 xlExcel12 = 50,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>51</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlOpenXMLWorkbook = 51,
+		 xlOpenXMLWorkbook = 51,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>52</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlOpenXMLWorkbookMacroEnabled = 52,
+		 xlOpenXMLWorkbookMacroEnabled = 52,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>53</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlOpenXMLTemplateMacroEnabled = 53,
+		 xlOpenXMLTemplateMacroEnabled = 53,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlTemplate8 = 17,
+		 xlTemplate8 = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>54</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlOpenXMLTemplate = 54,
+		 xlOpenXMLTemplate = 54,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlAddIn8 = 18,
+		 xlAddIn8 = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>55</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlOpenXMLAddIn = 55,
+		 xlOpenXMLAddIn = 55,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>56</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlExcel8 = 56,
+		 xlExcel8 = 56,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>51</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlWorkbookDefault = 51,
+		 xlWorkbookDefault = 51,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
+		/// <remarks>60</remarks>
 		[SupportByLibrary("Excel", 14)]
-		xlOpenDocumentSpreadsheet = 60
+		 xlOpenDocumentSpreadsheet = 60
 	}
 }

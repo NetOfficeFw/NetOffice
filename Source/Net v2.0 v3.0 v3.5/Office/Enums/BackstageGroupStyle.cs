@@ -13,19 +13,22 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 14)]
-		BackstageGroupStyleNormal = 0,
+		 BackstageGroupStyleNormal = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 14)]
-		BackstageGroupStyleWarning = 1,
+		 BackstageGroupStyleWarning = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 14)]
-		BackstageGroupStyleError = 2
+		 BackstageGroupStyleError = 2
 	}
 }

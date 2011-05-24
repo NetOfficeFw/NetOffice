@@ -13,31 +13,36 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-4119</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlUnderlineStyleDouble = -4119,
+		 xlUnderlineStyleDouble = -4119,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlUnderlineStyleDoubleAccounting = 5,
+		 xlUnderlineStyleDoubleAccounting = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-4142</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlUnderlineStyleNone = -4142,
+		 xlUnderlineStyleNone = -4142,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlUnderlineStyleSingle = 2,
+		 xlUnderlineStyleSingle = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlUnderlineStyleSingleAccounting = 4
+		 xlUnderlineStyleSingleAccounting = 4
 	}
 }

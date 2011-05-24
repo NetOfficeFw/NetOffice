@@ -1265,14 +1265,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Replace">ref optional object Replace</param>
+		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Select(ref object replace)
+		public void Select(object replace)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
-			Invoker.Method(this, "Select", paramsArray, modifiers);
-			replace = (object)paramsArray[0];
+			Invoker.Method(this, "Select", paramsArray);
 		}
 
 		/// <summary>

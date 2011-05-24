@@ -71,15 +71,13 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IListSubItem get_ControlDefault(ref object index)
+		public NetOffice.MSComctlLibApi.IListSubItem get_ControlDefault(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
 			NetOffice.MSComctlLibApi.IListSubItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
-			index = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -107,23 +105,17 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref optional object Index</param>
-		/// <param name="Key">ref optional object Key</param>
-		/// <param name="Text">ref optional object Text</param>
-		/// <param name="ReportIcon">ref optional object ReportIcon</param>
-		/// <param name="ToolTipText">ref optional object ToolTipText</param>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="Key">optional object Key</param>
+		/// <param name="Text">optional object Text</param>
+		/// <param name="ReportIcon">optional object ReportIcon</param>
+		/// <param name="ToolTipText">optional object ToolTipText</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IListSubItem Add(ref object index, ref object key, ref object text, ref object reportIcon, ref object toolTipText)
+		public NetOffice.MSComctlLibApi.IListSubItem Add(object index, object key, object text, object reportIcon, object toolTipText)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, reportIcon, toolTipText);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.MSComctlLibApi.IListSubItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
-			index = (object)paramsArray[0];
-			key = (object)paramsArray[1];
-			text = (object)paramsArray[2];
-			reportIcon = (object)paramsArray[3];
-			toolTipText = (object)paramsArray[4];
 			return newObject;
 		}
 
@@ -152,14 +144,12 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void Remove(ref object index)
+		public void Remove(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Remove", paramsArray, modifiers);
-			index = (object)paramsArray[0];
+			Invoker.Method(this, "Remove", paramsArray);
 		}
 
 		#endregion

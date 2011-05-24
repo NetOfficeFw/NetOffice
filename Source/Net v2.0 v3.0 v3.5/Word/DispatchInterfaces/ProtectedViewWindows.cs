@@ -131,38 +131,30 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		/// <param name="FileName">ref object FileName</param>
-		/// <param name="AddToRecentFiles">ref optional object AddToRecentFiles</param>
-		/// <param name="PasswordDocument">ref optional object PasswordDocument</param>
-		/// <param name="Visible">ref optional object Visible</param>
-		/// <param name="OpenAndRepair">ref optional object OpenAndRepair</param>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
 		[SupportByLibrary("Word", 14)]
-		public NetOffice.WordApi.ProtectedViewWindow Open(ref object fileName, ref object addToRecentFiles, ref object passwordDocument, ref object visible, ref object openAndRepair)
+		public NetOffice.WordApi.ProtectedViewWindow Open(object fileName, object addToRecentFiles, object passwordDocument, object visible, object openAndRepair)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, addToRecentFiles, passwordDocument, visible, openAndRepair);
-			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
 			NetOffice.WordApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ProtectedViewWindow;
-			fileName = (object)paramsArray[0];
-			addToRecentFiles = (object)paramsArray[1];
-			passwordDocument = (object)paramsArray[2];
-			visible = (object)paramsArray[3];
-			openAndRepair = (object)paramsArray[4];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		/// <param name="FileName">ref object FileName</param>
+		/// <param name="FileName">object FileName</param>
 		[SupportByLibrary("Word", 14)]
-		public NetOffice.WordApi.ProtectedViewWindow Open(ref object fileName)
+		public NetOffice.WordApi.ProtectedViewWindow Open(object fileName)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
 			NetOffice.WordApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ProtectedViewWindow;
-			fileName = (object)paramsArray[0];
 			return newObject;
 		}
 

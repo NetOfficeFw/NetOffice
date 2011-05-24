@@ -13,19 +13,22 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssExportAsAppropriate = 0,
+		 ssExportAsAppropriate = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssExportXMLSpreadsheet = 1,
+		 ssExportXMLSpreadsheet = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssExportHTML = 2
+		 ssExportHTML = 2
 	}
 }

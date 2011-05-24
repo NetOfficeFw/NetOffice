@@ -13,31 +13,36 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4114</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlErrorBarTypeCustom = -4114,
+		 xlErrorBarTypeCustom = -4114,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlErrorBarTypeFixedValue = 1,
+		 xlErrorBarTypeFixedValue = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlErrorBarTypePercent = 2,
+		 xlErrorBarTypePercent = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4155</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlErrorBarTypeStDev = -4155,
+		 xlErrorBarTypeStDev = -4155,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlErrorBarTypeStError = 4
+		 xlErrorBarTypeStError = 4
 	}
 }

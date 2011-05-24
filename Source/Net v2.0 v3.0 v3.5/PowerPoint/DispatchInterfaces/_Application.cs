@@ -979,24 +979,21 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="MacroName">string MacroName</param>
-		/// <param name="safeArrayOfParams">ref optional object[] safeArrayOfParams</param>
+		/// <param name="safeArrayOfParams">optional object[] safeArrayOfParams</param>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public object Run(string macroName, ref object[] safeArrayOfParams)
+		public object Run(string macroName, object[] safeArrayOfParams)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(macroName, (object)safeArrayOfParams);
-			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
 			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				safeArrayOfParams = (object[])paramsArray[1];
-			return newObject;
+				return newObject;
 			}
 			else
 			{
-				safeArrayOfParams = (object[])paramsArray[1];
-			return  returnItem;
+				return  returnItem;
 			}
 		}
 
@@ -1119,14 +1116,12 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 12, 14
 		/// </summary>
-		/// <param name="SlideUrls">ref object SlideUrls</param>
+		/// <param name="SlideUrls">object SlideUrls</param>
 		[SupportByLibrary("PowerPoint", 12,14)]
-		public void LaunchSendToPPTDialog(ref object slideUrls)
+		public void LaunchSendToPPTDialog(object slideUrls)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(slideUrls);
-			Invoker.Method(this, "LaunchSendToPPTDialog", paramsArray, modifiers);
-			slideUrls = (object)paramsArray[0];
+			Invoker.Method(this, "LaunchSendToPPTDialog", paramsArray);
 		}
 
 		/// <summary>

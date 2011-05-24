@@ -13,25 +13,29 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-1</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlMissingItemsDefault = -1,
+		 xlMissingItemsDefault = -1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlMissingItemsNone = 0,
+		 xlMissingItemsNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>32500</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlMissingItemsMax = 32500,
+		 xlMissingItemsMax = 32500,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>1048576</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlMissingItemsMax2 = 1048576
+		 xlMissingItemsMax2 = 1048576
 	}
 }

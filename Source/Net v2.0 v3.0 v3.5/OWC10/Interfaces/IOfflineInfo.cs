@@ -68,14 +68,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
-		/// <param name="pwzServerFilter">ref string pwzServerFilter</param>
+		/// <param name="pwzServerFilter">string pwzServerFilter</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetServerFilter(string pwzUrl, ref string pwzServerFilter)
+		public Int32 GetServerFilter(string pwzUrl, string pwzServerFilter)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pwzServerFilter);
 			object returnItem = Invoker.MethodReturn(this, "GetServerFilter", paramsArray);
-			pwzServerFilter = (string)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
@@ -83,28 +81,24 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
-		/// <param name="pfSubscribed">ref Int32 pfSubscribed</param>
+		/// <param name="pfSubscribed">Int32 pfSubscribed</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetIsPageSubscribed(string pwzUrl, ref Int32 pfSubscribed)
+		public Int32 GetIsPageSubscribed(string pwzUrl, Int32 pfSubscribed)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pfSubscribed);
 			object returnItem = Invoker.MethodReturn(this, "GetIsPageSubscribed", paramsArray);
-			pfSubscribed = (Int32)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="pbstrPath">ref string pbstrPath</param>
+		/// <param name="pbstrPath">string pbstrPath</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetOfflineXMLFileLocation(ref string pbstrPath)
+		public Int32 GetOfflineXMLFileLocation(string pbstrPath)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstrPath);
 			object returnItem = Invoker.MethodReturn(this, "GetOfflineXMLFileLocation", paramsArray);
-			pbstrPath = (string)paramsArray[0];
 			return (Int32)returnItem;
 		}
 

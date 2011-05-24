@@ -577,115 +577,67 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9
 		/// </summary>
-		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
-		/// <param name="Address">ref optional object Address</param>
-		/// <param name="AutoText">ref optional object AutoText</param>
-		/// <param name="OmitReturnAddress">ref optional object OmitReturnAddress</param>
-		/// <param name="ReturnAddress">ref optional object ReturnAddress</param>
-		/// <param name="ReturnAutoText">ref optional object ReturnAutoText</param>
-		/// <param name="PrintBarCode">ref optional object PrintBarCode</param>
-		/// <param name="PrintFIMA">ref optional object PrintFIMA</param>
-		/// <param name="Size">ref optional object Size</param>
-		/// <param name="Height">ref optional object Height</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="FeedSource">ref optional object FeedSource</param>
-		/// <param name="AddressFromLeft">ref optional object AddressFromLeft</param>
-		/// <param name="AddressFromTop">ref optional object AddressFromTop</param>
-		/// <param name="ReturnAddressFromLeft">ref optional object ReturnAddressFromLeft</param>
-		/// <param name="ReturnAddressFromTop">ref optional object ReturnAddressFromTop</param>
-		/// <param name="DefaultFaceUp">ref optional object DefaultFaceUp</param>
-		/// <param name="DefaultOrientation">ref optional object DefaultOrientation</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
 		[SupportByLibrary("Word", 9)]
-		public void Insert(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation)
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
-			Invoker.Method(this, "Insert", paramsArray, modifiers);
-			extractAddress = (object)paramsArray[0];
-			address = (object)paramsArray[1];
-			autoText = (object)paramsArray[2];
-			omitReturnAddress = (object)paramsArray[3];
-			returnAddress = (object)paramsArray[4];
-			returnAutoText = (object)paramsArray[5];
-			printBarCode = (object)paramsArray[6];
-			printFIMA = (object)paramsArray[7];
-			size = (object)paramsArray[8];
-			height = (object)paramsArray[9];
-			width = (object)paramsArray[10];
-			feedSource = (object)paramsArray[11];
-			addressFromLeft = (object)paramsArray[12];
-			addressFromTop = (object)paramsArray[13];
-			returnAddressFromLeft = (object)paramsArray[14];
-			returnAddressFromTop = (object)paramsArray[15];
-			defaultFaceUp = (object)paramsArray[16];
-			defaultOrientation = (object)paramsArray[17];
+			Invoker.Method(this, "Insert", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
-		/// <param name="Address">ref optional object Address</param>
-		/// <param name="AutoText">ref optional object AutoText</param>
-		/// <param name="OmitReturnAddress">ref optional object OmitReturnAddress</param>
-		/// <param name="ReturnAddress">ref optional object ReturnAddress</param>
-		/// <param name="ReturnAutoText">ref optional object ReturnAutoText</param>
-		/// <param name="PrintBarCode">ref optional object PrintBarCode</param>
-		/// <param name="PrintFIMA">ref optional object PrintFIMA</param>
-		/// <param name="Size">ref optional object Size</param>
-		/// <param name="Height">ref optional object Height</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="FeedSource">ref optional object FeedSource</param>
-		/// <param name="AddressFromLeft">ref optional object AddressFromLeft</param>
-		/// <param name="AddressFromTop">ref optional object AddressFromTop</param>
-		/// <param name="ReturnAddressFromLeft">ref optional object ReturnAddressFromLeft</param>
-		/// <param name="ReturnAddressFromTop">ref optional object ReturnAddressFromTop</param>
-		/// <param name="DefaultFaceUp">ref optional object DefaultFaceUp</param>
-		/// <param name="DefaultOrientation">ref optional object DefaultOrientation</param>
-		/// <param name="PrintEPostage">ref optional object PrintEPostage</param>
-		/// <param name="Vertical">ref optional object Vertical</param>
-		/// <param name="RecipientNamefromLeft">ref optional object RecipientNamefromLeft</param>
-		/// <param name="RecipientNamefromTop">ref optional object RecipientNamefromTop</param>
-		/// <param name="RecipientPostalfromLeft">ref optional object RecipientPostalfromLeft</param>
-		/// <param name="RecipientPostalfromTop">ref optional object RecipientPostalfromTop</param>
-		/// <param name="SenderNamefromLeft">ref optional object SenderNamefromLeft</param>
-		/// <param name="SenderNamefromTop">ref optional object SenderNamefromTop</param>
-		/// <param name="SenderPostalfromLeft">ref optional object SenderPostalfromLeft</param>
-		/// <param name="SenderPostalfromTop">ref optional object SenderPostalfromTop</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		/// <param name="RecipientPostalfromTop">optional object RecipientPostalfromTop</param>
+		/// <param name="SenderNamefromLeft">optional object SenderNamefromLeft</param>
+		/// <param name="SenderNamefromTop">optional object SenderNamefromTop</param>
+		/// <param name="SenderPostalfromLeft">optional object SenderPostalfromLeft</param>
+		/// <param name="SenderPostalfromTop">optional object SenderPostalfromTop</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void Insert(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation, ref object printEPostage, ref object vertical, ref object recipientNamefromLeft, ref object recipientNamefromTop, ref object recipientPostalfromLeft, ref object recipientPostalfromTop, ref object senderNamefromLeft, ref object senderNamefromTop, ref object senderPostalfromLeft, ref object senderPostalfromTop)
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft, object senderPostalfromTop)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft, senderNamefromTop, senderPostalfromLeft, senderPostalfromTop);
-			Invoker.Method(this, "Insert", paramsArray, modifiers);
-			extractAddress = (object)paramsArray[0];
-			address = (object)paramsArray[1];
-			autoText = (object)paramsArray[2];
-			omitReturnAddress = (object)paramsArray[3];
-			returnAddress = (object)paramsArray[4];
-			returnAutoText = (object)paramsArray[5];
-			printBarCode = (object)paramsArray[6];
-			printFIMA = (object)paramsArray[7];
-			size = (object)paramsArray[8];
-			height = (object)paramsArray[9];
-			width = (object)paramsArray[10];
-			feedSource = (object)paramsArray[11];
-			addressFromLeft = (object)paramsArray[12];
-			addressFromTop = (object)paramsArray[13];
-			returnAddressFromLeft = (object)paramsArray[14];
-			returnAddressFromTop = (object)paramsArray[15];
-			defaultFaceUp = (object)paramsArray[16];
-			defaultOrientation = (object)paramsArray[17];
-			printEPostage = (object)paramsArray[18];
-			vertical = (object)paramsArray[19];
-			recipientNamefromLeft = (object)paramsArray[20];
-			recipientNamefromTop = (object)paramsArray[21];
-			recipientPostalfromLeft = (object)paramsArray[22];
-			recipientPostalfromTop = (object)paramsArray[23];
-			senderNamefromLeft = (object)paramsArray[24];
-			senderNamefromTop = (object)paramsArray[25];
-			senderPostalfromLeft = (object)paramsArray[26];
-			senderPostalfromTop = (object)paramsArray[27];
+			Invoker.Method(this, "Insert", paramsArray);
 		}
 
 		/// <summary>
@@ -701,115 +653,67 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9
 		/// </summary>
-		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
-		/// <param name="Address">ref optional object Address</param>
-		/// <param name="AutoText">ref optional object AutoText</param>
-		/// <param name="OmitReturnAddress">ref optional object OmitReturnAddress</param>
-		/// <param name="ReturnAddress">ref optional object ReturnAddress</param>
-		/// <param name="ReturnAutoText">ref optional object ReturnAutoText</param>
-		/// <param name="PrintBarCode">ref optional object PrintBarCode</param>
-		/// <param name="PrintFIMA">ref optional object PrintFIMA</param>
-		/// <param name="Size">ref optional object Size</param>
-		/// <param name="Height">ref optional object Height</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="FeedSource">ref optional object FeedSource</param>
-		/// <param name="AddressFromLeft">ref optional object AddressFromLeft</param>
-		/// <param name="AddressFromTop">ref optional object AddressFromTop</param>
-		/// <param name="ReturnAddressFromLeft">ref optional object ReturnAddressFromLeft</param>
-		/// <param name="ReturnAddressFromTop">ref optional object ReturnAddressFromTop</param>
-		/// <param name="DefaultFaceUp">ref optional object DefaultFaceUp</param>
-		/// <param name="DefaultOrientation">ref optional object DefaultOrientation</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
 		[SupportByLibrary("Word", 9)]
-		public void PrintOut(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation)
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
-			Invoker.Method(this, "PrintOut", paramsArray, modifiers);
-			extractAddress = (object)paramsArray[0];
-			address = (object)paramsArray[1];
-			autoText = (object)paramsArray[2];
-			omitReturnAddress = (object)paramsArray[3];
-			returnAddress = (object)paramsArray[4];
-			returnAutoText = (object)paramsArray[5];
-			printBarCode = (object)paramsArray[6];
-			printFIMA = (object)paramsArray[7];
-			size = (object)paramsArray[8];
-			height = (object)paramsArray[9];
-			width = (object)paramsArray[10];
-			feedSource = (object)paramsArray[11];
-			addressFromLeft = (object)paramsArray[12];
-			addressFromTop = (object)paramsArray[13];
-			returnAddressFromLeft = (object)paramsArray[14];
-			returnAddressFromTop = (object)paramsArray[15];
-			defaultFaceUp = (object)paramsArray[16];
-			defaultOrientation = (object)paramsArray[17];
+			Invoker.Method(this, "PrintOut", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
-		/// <param name="Address">ref optional object Address</param>
-		/// <param name="AutoText">ref optional object AutoText</param>
-		/// <param name="OmitReturnAddress">ref optional object OmitReturnAddress</param>
-		/// <param name="ReturnAddress">ref optional object ReturnAddress</param>
-		/// <param name="ReturnAutoText">ref optional object ReturnAutoText</param>
-		/// <param name="PrintBarCode">ref optional object PrintBarCode</param>
-		/// <param name="PrintFIMA">ref optional object PrintFIMA</param>
-		/// <param name="Size">ref optional object Size</param>
-		/// <param name="Height">ref optional object Height</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="FeedSource">ref optional object FeedSource</param>
-		/// <param name="AddressFromLeft">ref optional object AddressFromLeft</param>
-		/// <param name="AddressFromTop">ref optional object AddressFromTop</param>
-		/// <param name="ReturnAddressFromLeft">ref optional object ReturnAddressFromLeft</param>
-		/// <param name="ReturnAddressFromTop">ref optional object ReturnAddressFromTop</param>
-		/// <param name="DefaultFaceUp">ref optional object DefaultFaceUp</param>
-		/// <param name="DefaultOrientation">ref optional object DefaultOrientation</param>
-		/// <param name="PrintEPostage">ref optional object PrintEPostage</param>
-		/// <param name="Vertical">ref optional object Vertical</param>
-		/// <param name="RecipientNamefromLeft">ref optional object RecipientNamefromLeft</param>
-		/// <param name="RecipientNamefromTop">ref optional object RecipientNamefromTop</param>
-		/// <param name="RecipientPostalfromLeft">ref optional object RecipientPostalfromLeft</param>
-		/// <param name="RecipientPostalfromTop">ref optional object RecipientPostalfromTop</param>
-		/// <param name="SenderNamefromLeft">ref optional object SenderNamefromLeft</param>
-		/// <param name="SenderNamefromTop">ref optional object SenderNamefromTop</param>
-		/// <param name="SenderPostalfromLeft">ref optional object SenderPostalfromLeft</param>
-		/// <param name="SenderPostalfromTop">ref optional object SenderPostalfromTop</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		/// <param name="RecipientPostalfromTop">optional object RecipientPostalfromTop</param>
+		/// <param name="SenderNamefromLeft">optional object SenderNamefromLeft</param>
+		/// <param name="SenderNamefromTop">optional object SenderNamefromTop</param>
+		/// <param name="SenderPostalfromLeft">optional object SenderPostalfromLeft</param>
+		/// <param name="SenderPostalfromTop">optional object SenderPostalfromTop</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void PrintOut(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation, ref object printEPostage, ref object vertical, ref object recipientNamefromLeft, ref object recipientNamefromTop, ref object recipientPostalfromLeft, ref object recipientPostalfromTop, ref object senderNamefromLeft, ref object senderNamefromTop, ref object senderPostalfromLeft, ref object senderPostalfromTop)
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft, object senderPostalfromTop)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft, senderNamefromTop, senderPostalfromLeft, senderPostalfromTop);
-			Invoker.Method(this, "PrintOut", paramsArray, modifiers);
-			extractAddress = (object)paramsArray[0];
-			address = (object)paramsArray[1];
-			autoText = (object)paramsArray[2];
-			omitReturnAddress = (object)paramsArray[3];
-			returnAddress = (object)paramsArray[4];
-			returnAutoText = (object)paramsArray[5];
-			printBarCode = (object)paramsArray[6];
-			printFIMA = (object)paramsArray[7];
-			size = (object)paramsArray[8];
-			height = (object)paramsArray[9];
-			width = (object)paramsArray[10];
-			feedSource = (object)paramsArray[11];
-			addressFromLeft = (object)paramsArray[12];
-			addressFromTop = (object)paramsArray[13];
-			returnAddressFromLeft = (object)paramsArray[14];
-			returnAddressFromTop = (object)paramsArray[15];
-			defaultFaceUp = (object)paramsArray[16];
-			defaultOrientation = (object)paramsArray[17];
-			printEPostage = (object)paramsArray[18];
-			vertical = (object)paramsArray[19];
-			recipientNamefromLeft = (object)paramsArray[20];
-			recipientNamefromTop = (object)paramsArray[21];
-			recipientPostalfromLeft = (object)paramsArray[22];
-			recipientPostalfromTop = (object)paramsArray[23];
-			senderNamefromLeft = (object)paramsArray[24];
-			senderNamefromTop = (object)paramsArray[25];
-			senderPostalfromLeft = (object)paramsArray[26];
-			senderPostalfromTop = (object)paramsArray[27];
+			Invoker.Method(this, "PrintOut", paramsArray);
 		}
 
 		/// <summary>
@@ -835,48 +739,29 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
-		/// <param name="Address">ref optional object Address</param>
-		/// <param name="AutoText">ref optional object AutoText</param>
-		/// <param name="OmitReturnAddress">ref optional object OmitReturnAddress</param>
-		/// <param name="ReturnAddress">ref optional object ReturnAddress</param>
-		/// <param name="ReturnAutoText">ref optional object ReturnAutoText</param>
-		/// <param name="PrintBarCode">ref optional object PrintBarCode</param>
-		/// <param name="PrintFIMA">ref optional object PrintFIMA</param>
-		/// <param name="Size">ref optional object Size</param>
-		/// <param name="Height">ref optional object Height</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="FeedSource">ref optional object FeedSource</param>
-		/// <param name="AddressFromLeft">ref optional object AddressFromLeft</param>
-		/// <param name="AddressFromTop">ref optional object AddressFromTop</param>
-		/// <param name="ReturnAddressFromLeft">ref optional object ReturnAddressFromLeft</param>
-		/// <param name="ReturnAddressFromTop">ref optional object ReturnAddressFromTop</param>
-		/// <param name="DefaultFaceUp">ref optional object DefaultFaceUp</param>
-		/// <param name="DefaultOrientation">ref optional object DefaultOrientation</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void Insert2000(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation)
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
-			Invoker.Method(this, "Insert2000", paramsArray, modifiers);
-			extractAddress = (object)paramsArray[0];
-			address = (object)paramsArray[1];
-			autoText = (object)paramsArray[2];
-			omitReturnAddress = (object)paramsArray[3];
-			returnAddress = (object)paramsArray[4];
-			returnAutoText = (object)paramsArray[5];
-			printBarCode = (object)paramsArray[6];
-			printFIMA = (object)paramsArray[7];
-			size = (object)paramsArray[8];
-			height = (object)paramsArray[9];
-			width = (object)paramsArray[10];
-			feedSource = (object)paramsArray[11];
-			addressFromLeft = (object)paramsArray[12];
-			addressFromTop = (object)paramsArray[13];
-			returnAddressFromLeft = (object)paramsArray[14];
-			returnAddressFromTop = (object)paramsArray[15];
-			defaultFaceUp = (object)paramsArray[16];
-			defaultOrientation = (object)paramsArray[17];
+			Invoker.Method(this, "Insert2000", paramsArray);
 		}
 
 		/// <summary>
@@ -892,48 +777,29 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ExtractAddress">ref optional object ExtractAddress</param>
-		/// <param name="Address">ref optional object Address</param>
-		/// <param name="AutoText">ref optional object AutoText</param>
-		/// <param name="OmitReturnAddress">ref optional object OmitReturnAddress</param>
-		/// <param name="ReturnAddress">ref optional object ReturnAddress</param>
-		/// <param name="ReturnAutoText">ref optional object ReturnAutoText</param>
-		/// <param name="PrintBarCode">ref optional object PrintBarCode</param>
-		/// <param name="PrintFIMA">ref optional object PrintFIMA</param>
-		/// <param name="Size">ref optional object Size</param>
-		/// <param name="Height">ref optional object Height</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="FeedSource">ref optional object FeedSource</param>
-		/// <param name="AddressFromLeft">ref optional object AddressFromLeft</param>
-		/// <param name="AddressFromTop">ref optional object AddressFromTop</param>
-		/// <param name="ReturnAddressFromLeft">ref optional object ReturnAddressFromLeft</param>
-		/// <param name="ReturnAddressFromTop">ref optional object ReturnAddressFromTop</param>
-		/// <param name="DefaultFaceUp">ref optional object DefaultFaceUp</param>
-		/// <param name="DefaultOrientation">ref optional object DefaultOrientation</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void PrintOut2000(ref object extractAddress, ref object address, ref object autoText, ref object omitReturnAddress, ref object returnAddress, ref object returnAutoText, ref object printBarCode, ref object printFIMA, ref object size, ref object height, ref object width, ref object feedSource, ref object addressFromLeft, ref object addressFromTop, ref object returnAddressFromLeft, ref object returnAddressFromTop, ref object defaultFaceUp, ref object defaultOrientation)
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
-			Invoker.Method(this, "PrintOut2000", paramsArray, modifiers);
-			extractAddress = (object)paramsArray[0];
-			address = (object)paramsArray[1];
-			autoText = (object)paramsArray[2];
-			omitReturnAddress = (object)paramsArray[3];
-			returnAddress = (object)paramsArray[4];
-			returnAutoText = (object)paramsArray[5];
-			printBarCode = (object)paramsArray[6];
-			printFIMA = (object)paramsArray[7];
-			size = (object)paramsArray[8];
-			height = (object)paramsArray[9];
-			width = (object)paramsArray[10];
-			feedSource = (object)paramsArray[11];
-			addressFromLeft = (object)paramsArray[12];
-			addressFromTop = (object)paramsArray[13];
-			returnAddressFromLeft = (object)paramsArray[14];
-			returnAddressFromTop = (object)paramsArray[15];
-			defaultFaceUp = (object)paramsArray[16];
-			defaultOrientation = (object)paramsArray[17];
+			Invoker.Method(this, "PrintOut2000", paramsArray);
 		}
 
 		/// <summary>

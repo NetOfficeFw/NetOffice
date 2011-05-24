@@ -13,43 +13,50 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlLabelOnly = 1,
+		 xlLabelOnly = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlDataAndLabel = 0,
+		 xlDataAndLabel = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlDataOnly = 2,
+		 xlDataOnly = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlOrigin = 3,
+		 xlOrigin = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlButton = 15,
+		 xlButton = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlBlanks = 4,
+		 xlBlanks = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>256</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlFirstRow = 256
+		 xlFirstRow = 256
 	}
 }

@@ -67,14 +67,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="navbtn">Int32 navbtn</param>
-		/// <param name="Cancel">ref Int32 Cancel</param>
+		/// <param name="Cancel">Int32 Cancel</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 BeforeButtonClick(Int32 navbtn, ref Int32 cancel)
+		public Int32 BeforeButtonClick(Int32 navbtn, Int32 cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(navbtn, cancel);
 			object returnItem = Invoker.MethodReturn(this, "BeforeButtonClick", paramsArray);
-			cancel = (Int32)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
@@ -93,14 +91,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="DisplayText">ref string DisplayText</param>
+		/// <param name="DisplayText">string DisplayText</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetDisplayText(ref string displayText)
+		public Int32 GetDisplayText(string displayText)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(displayText);
 			object returnItem = Invoker.MethodReturn(this, "GetDisplayText", paramsArray);
-			displayText = (string)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
@@ -140,14 +136,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="FontName">ref string FontName</param>
+		/// <param name="FontName">string FontName</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetFontName(ref string fontName)
+		public Int32 GetFontName(string fontName)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName);
 			object returnItem = Invoker.MethodReturn(this, "GetFontName", paramsArray);
-			fontName = (string)paramsArray[0];
 			return (Int32)returnItem;
 		}
 

@@ -13,25 +13,29 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoSearchInMyComputer = 0,
+		 msoSearchInMyComputer = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoSearchInOutlook = 1,
+		 msoSearchInOutlook = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoSearchInMyNetworkPlaces = 2,
+		 msoSearchInMyNetworkPlaces = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoSearchInCustom = 3
+		 msoSearchInCustom = 3
 	}
 }

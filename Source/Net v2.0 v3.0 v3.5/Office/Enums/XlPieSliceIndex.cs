@@ -13,55 +13,64 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 14)]
-		xlOuterCounterClockwisePoint = 1,
+		 xlOuterCounterClockwisePoint = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 14)]
-		xlOuterCenterPoint = 2,
+		 xlOuterCenterPoint = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 14)]
-		xlOuterClockwisePoint = 3,
+		 xlOuterClockwisePoint = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 14)]
-		xlMidClockwiseRadiusPoint = 4,
+		 xlMidClockwiseRadiusPoint = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 14)]
-		xlCenterPoint = 5,
+		 xlCenterPoint = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Office", 14)]
-		xlMidCounterClockwiseRadiusPoint = 6,
+		 xlMidCounterClockwiseRadiusPoint = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Office", 14)]
-		xlInnerClockwisePoint = 7,
+		 xlInnerClockwisePoint = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Office", 14)]
-		xlInnerCenterPoint = 8,
+		 xlInnerCenterPoint = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Office", 14)]
-		xlInnerCounterClockwisePoint = 9
+		 xlInnerCounterClockwisePoint = 9
 	}
 }

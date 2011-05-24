@@ -13,115 +13,134 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeNone = 0,
+		 msoAnimFilterEffectTypeNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeBarn = 1,
+		 msoAnimFilterEffectTypeBarn = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeBlinds = 2,
+		 msoAnimFilterEffectTypeBlinds = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeBox = 3,
+		 msoAnimFilterEffectTypeBox = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeCheckerboard = 4,
+		 msoAnimFilterEffectTypeCheckerboard = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeCircle = 5,
+		 msoAnimFilterEffectTypeCircle = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeDiamond = 6,
+		 msoAnimFilterEffectTypeDiamond = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeDissolve = 7,
+		 msoAnimFilterEffectTypeDissolve = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeFade = 8,
+		 msoAnimFilterEffectTypeFade = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeImage = 9,
+		 msoAnimFilterEffectTypeImage = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypePixelate = 10,
+		 msoAnimFilterEffectTypePixelate = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypePlus = 11,
+		 msoAnimFilterEffectTypePlus = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeRandomBar = 12,
+		 msoAnimFilterEffectTypeRandomBar = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeSlide = 13,
+		 msoAnimFilterEffectTypeSlide = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeStretch = 14,
+		 msoAnimFilterEffectTypeStretch = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeStrips = 15,
+		 msoAnimFilterEffectTypeStrips = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeWedge = 16,
+		 msoAnimFilterEffectTypeWedge = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeWheel = 17,
+		 msoAnimFilterEffectTypeWheel = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		msoAnimFilterEffectTypeWipe = 18
+		 msoAnimFilterEffectTypeWipe = 18
 	}
 }

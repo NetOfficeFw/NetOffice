@@ -13,37 +13,43 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLineStyleMixed = -2,
+		 msoLineStyleMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLineSingle = 1,
+		 msoLineSingle = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLineThinThin = 2,
+		 msoLineThinThin = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLineThinThick = 3,
+		 msoLineThinThick = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLineThickThin = 4,
+		 msoLineThickThin = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLineThickBetweenThin = 5
+		 msoLineThickBetweenThin = 5
 	}
 }

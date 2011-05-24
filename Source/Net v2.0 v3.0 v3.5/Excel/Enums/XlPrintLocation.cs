@@ -13,19 +13,22 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlPrintSheetEnd = 1,
+		 xlPrintSheetEnd = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlPrintInPlace = 16,
+		 xlPrintInPlace = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4142</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlPrintNoComments = -4142
+		 xlPrintNoComments = -4142
 	}
 }

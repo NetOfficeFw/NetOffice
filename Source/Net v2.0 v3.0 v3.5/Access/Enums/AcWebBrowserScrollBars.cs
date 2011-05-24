@@ -13,19 +13,22 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 14)]
-		acScrollAuto = 0,
+		 acScrollAuto = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 14)]
-		acScrollYes = 1,
+		 acScrollYes = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 14)]
-		acScrollNo = 2
+		 acScrollNo = 2
 	}
 }

@@ -13,19 +13,22 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dscDefault = 0,
+		 dscDefault = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dscGrid = 1,
+		 dscGrid = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dscFields = 2
+		 dscFields = 2
 	}
 }

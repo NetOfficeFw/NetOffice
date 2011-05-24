@@ -13,25 +13,29 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSeparateByParagraphs = 0,
+		 wdSeparateByParagraphs = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSeparateByTabs = 1,
+		 wdSeparateByTabs = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSeparateByCommas = 2,
+		 wdSeparateByCommas = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSeparateByDefaultListSeparator = 3
+		 wdSeparateByDefaultListSeparator = 3
 	}
 }

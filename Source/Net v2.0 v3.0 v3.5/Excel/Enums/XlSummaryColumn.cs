@@ -13,13 +13,15 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4131</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlSummaryOnLeft = -4131,
+		 xlSummaryOnLeft = -4131,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4152</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlSummaryOnRight = -4152
+		 xlSummaryOnRight = -4152
 	}
 }

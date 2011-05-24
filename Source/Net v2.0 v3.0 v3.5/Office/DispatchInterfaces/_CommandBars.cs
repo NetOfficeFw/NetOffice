@@ -205,14 +205,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ids">Int32 ids</param>
-		/// <param name="pbstrName">ref string pbstrName</param>
+		/// <param name="pbstrName">string pbstrName</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public Int32 get_IdsString(Int32 ids, ref string pbstrName)
+		public Int32 get_IdsString(Int32 ids, string pbstrName)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(ids, pbstrName);
 			object returnItem = Invoker.PropertyGet(this, "IdsString", paramsArray);
-			pbstrName = (string)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
@@ -220,14 +218,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="tmc">Int32 tmc</param>
-		/// <param name="pbstrName">ref string pbstrName</param>
+		/// <param name="pbstrName">string pbstrName</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public Int32 get_TmcGetName(Int32 tmc, ref string pbstrName)
+		public Int32 get_TmcGetName(Int32 tmc, string pbstrName)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(tmc, pbstrName);
 			object returnItem = Invoker.PropertyGet(this, "TmcGetName", paramsArray);
-			pbstrName = (string)paramsArray[1];
 			return (Int32)returnItem;
 		}
 

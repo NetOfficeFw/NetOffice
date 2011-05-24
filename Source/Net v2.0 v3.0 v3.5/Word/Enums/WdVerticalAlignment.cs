@@ -13,25 +13,29 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdAlignVerticalTop = 0,
+		 wdAlignVerticalTop = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdAlignVerticalCenter = 1,
+		 wdAlignVerticalCenter = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdAlignVerticalJustify = 2,
+		 wdAlignVerticalJustify = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdAlignVerticalBottom = 3
+		 wdAlignVerticalBottom = 3
 	}
 }

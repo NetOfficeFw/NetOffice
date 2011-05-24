@@ -313,19 +313,15 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		/// <param name="PasswordTemplate">ref optional object PasswordTemplate</param>
-		/// <param name="WritePasswordDocument">ref optional object WritePasswordDocument</param>
-		/// <param name="WritePasswordTemplate">ref optional object WritePasswordTemplate</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
 		[SupportByLibrary("Word", 14)]
-		public NetOffice.WordApi.Document Edit(ref object passwordTemplate, ref object writePasswordDocument, ref object writePasswordTemplate)
+		public NetOffice.WordApi.Document Edit(object passwordTemplate, object writePasswordDocument, object writePasswordTemplate)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(passwordTemplate, writePasswordDocument, writePasswordTemplate);
-			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray);
 			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
-			passwordTemplate = (object)paramsArray[0];
-			writePasswordDocument = (object)paramsArray[1];
-			writePasswordTemplate = (object)paramsArray[2];
 			return newObject;
 		}
 

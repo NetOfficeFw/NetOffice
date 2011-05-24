@@ -13,49 +13,57 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olTrackingNone = 0,
+		 olTrackingNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olTrackingDelivered = 1,
+		 olTrackingDelivered = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olTrackingNotDelivered = 2,
+		 olTrackingNotDelivered = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olTrackingNotRead = 3,
+		 olTrackingNotRead = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olTrackingRecallFailure = 4,
+		 olTrackingRecallFailure = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olTrackingRecallSuccess = 5,
+		 olTrackingRecallSuccess = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olTrackingRead = 6,
+		 olTrackingRead = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olTrackingReplied = 7
+		 olTrackingReplied = 7
 	}
 }

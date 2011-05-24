@@ -13,19 +13,22 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoViewFileInfo = 1,
+		 msoViewFileInfo = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoViewPreview = 2,
+		 msoViewPreview = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoViewSummaryInfo = 3
+		 msoViewSummaryInfo = 3
 	}
 }

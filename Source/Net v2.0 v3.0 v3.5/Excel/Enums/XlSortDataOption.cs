@@ -13,13 +13,15 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlSortNormal = 0,
+		 xlSortNormal = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlSortTextAsNumbers = 1
+		 xlSortTextAsNumbers = 1
 	}
 }

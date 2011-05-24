@@ -71,29 +71,25 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IButton get_ControlDefault(ref object index)
+		public NetOffice.MSComctlLibApi.IButton get_ControlDefault(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
 			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
-			index = (object)paramsArray[0];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void set_ControlDefault(ref object index, NetOffice.MSComctlLibApi.IButton value)
+		public void set_ControlDefault(object index, NetOffice.MSComctlLibApi.IButton value)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "ControlDefault", paramsArray, value, modifiers);
-			index = (object)paramsArray[0];
+			Invoker.PropertySet(this, "ControlDefault", paramsArray, value);
 		}
 
 		/// <summary>
@@ -120,14 +116,12 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void Remove(ref object index)
+		public void Remove(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Remove", paramsArray, modifiers);
-			index = (object)paramsArray[0];
+			Invoker.Method(this, "Remove", paramsArray);
 		}
 
 		/// <summary>
@@ -143,23 +137,17 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref optional object Index</param>
-		/// <param name="Key">ref optional object Key</param>
-		/// <param name="Caption">ref optional object Caption</param>
-		/// <param name="Style">ref optional object Style</param>
-		/// <param name="Image">ref optional object Image</param>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="Key">optional object Key</param>
+		/// <param name="Caption">optional object Caption</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="Image">optional object Image</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IButton Add(ref object index, ref object key, ref object caption, ref object style, ref object image)
+		public NetOffice.MSComctlLibApi.IButton Add(object index, object key, object caption, object style, object image)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, caption, style, image);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IButton;
-			index = (object)paramsArray[0];
-			key = (object)paramsArray[1];
-			caption = (object)paramsArray[2];
-			style = (object)paramsArray[3];
-			image = (object)paramsArray[4];
 			return newObject;
 		}
 

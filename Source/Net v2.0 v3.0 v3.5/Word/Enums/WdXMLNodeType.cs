@@ -13,13 +13,15 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 11,12,14)]
-		wdXMLNodeElement = 1,
+		 wdXMLNodeElement = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 11,12,14)]
-		wdXMLNodeAttribute = 2
+		 wdXMLNodeAttribute = 2
 	}
 }

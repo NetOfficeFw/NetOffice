@@ -363,16 +363,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Path">string Path</param>
-		/// <param name="Drive">ref optional object Drive</param>
-		/// <param name="Password">ref optional object Password</param>
+		/// <param name="Drive">optional object Drive</param>
+		/// <param name="Password">optional object Password</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Connect(string path, ref object drive, ref object password)
+		public void Connect(string path, object drive, object password)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(path, drive, password);
-			Invoker.Method(this, "Connect", paramsArray, modifiers);
-			drive = (object)paramsArray[1];
-			password = (object)paramsArray[2];
+			Invoker.Method(this, "Connect", paramsArray);
 		}
 
 		/// <summary>

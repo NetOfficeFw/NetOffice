@@ -152,15 +152,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Level">ref optional object Level</param>
+		/// <param name="Level">optional object Level</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.ListTemplate Convert(ref object level)
+		public NetOffice.WordApi.ListTemplate Convert(object level)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(level);
-			object returnItem = Invoker.MethodReturn(this, "Convert", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Convert", paramsArray);
 			NetOffice.WordApi.ListTemplate newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ListTemplate;
-			level = (object)paramsArray[0];
 			return newObject;
 		}
 

@@ -474,15 +474,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Word">string Word</param>
-		/// <param name="LanguageID">ref optional object LanguageID</param>
+		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.SynonymInfo get_SynonymInfo(string word, ref object languageID)
+		public NetOffice.WordApi.SynonymInfo get_SynonymInfo(string word, object languageID)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(word, languageID);
-			object returnItem = Invoker.PropertyGet(this, "SynonymInfo", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "SynonymInfo", paramsArray);
 			NetOffice.WordApi.SynonymInfo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.SynonymInfo;
-			languageID = (object)paramsArray[1];
 			return newObject;
 		}
 
@@ -603,15 +601,13 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="KeyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="Command">string Command</param>
-		/// <param name="CommandParameter">ref optional object CommandParameter</param>
+		/// <param name="CommandParameter">optional object CommandParameter</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.KeysBoundTo get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, ref object commandParameter)
+		public NetOffice.WordApi.KeysBoundTo get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, object commandParameter)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCategory, command, commandParameter);
-			object returnItem = Invoker.PropertyGet(this, "KeysBoundTo", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "KeysBoundTo", paramsArray);
 			NetOffice.WordApi.KeysBoundTo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.KeysBoundTo;
-			commandParameter = (object)paramsArray[2];
 			return newObject;
 		}
 
@@ -633,15 +629,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="KeyCode">Int32 KeyCode</param>
-		/// <param name="KeyCode2">ref optional object KeyCode2</param>
+		/// <param name="KeyCode2">optional object KeyCode2</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.KeyBinding get_FindKey(Int32 keyCode, ref object keyCode2)
+		public NetOffice.WordApi.KeyBinding get_FindKey(Int32 keyCode, object keyCode2)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
-			object returnItem = Invoker.PropertyGet(this, "FindKey", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "FindKey", paramsArray);
 			NetOffice.WordApi.KeyBinding newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.KeyBinding;
-			keyCode2 = (object)paramsArray[1];
 			return newObject;
 		}
 
@@ -849,14 +843,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Times">ref optional object Times</param>
+		/// <param name="Times">optional object Times</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool Repeat(ref object times)
+		public bool Repeat(object times)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(times);
 			object returnItem = Invoker.MethodReturn(this, "Repeat", paramsArray);
-			times = (object)paramsArray[0];
 			return (bool)returnItem;
 		}
 
@@ -947,18 +939,14 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
-		/// <param name="Arg2">ref optional object Arg2</param>
-		/// <param name="Arg3">ref optional object Arg3</param>
-		/// <param name="Arg4">ref optional object Arg4</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, ref object arg2, ref object arg3, ref object arg4)
+		public Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, object arg2, object arg3, object arg4)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "BuildKeyCode", paramsArray);
-			arg2 = (object)paramsArray[1];
-			arg3 = (object)paramsArray[2];
-			arg4 = (object)paramsArray[3];
 			return (Int32)returnItem;
 		}
 
@@ -978,14 +966,12 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="KeyCode">Int32 KeyCode</param>
-		/// <param name="KeyCode2">ref optional object KeyCode2</param>
+		/// <param name="KeyCode2">optional object KeyCode2</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public string KeyString(Int32 keyCode, ref object keyCode2)
+		public string KeyString(Int32 keyCode, object keyCode2)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
 			object returnItem = Invoker.MethodReturn(this, "KeyString", paramsArray);
-			keyCode2 = (object)paramsArray[1];
 			return (string)returnItem;
 		}
 
@@ -1005,36 +991,23 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Word">string Word</param>
-		/// <param name="CustomDictionary">ref optional object CustomDictionary</param>
-		/// <param name="IgnoreUppercase">ref optional object IgnoreUppercase</param>
-		/// <param name="MainDictionary">ref optional object MainDictionary</param>
-		/// <param name="CustomDictionary2">ref optional object CustomDictionary2</param>
-		/// <param name="CustomDictionary3">ref optional object CustomDictionary3</param>
-		/// <param name="CustomDictionary4">ref optional object CustomDictionary4</param>
-		/// <param name="CustomDictionary5">ref optional object CustomDictionary5</param>
-		/// <param name="CustomDictionary6">ref optional object CustomDictionary6</param>
-		/// <param name="CustomDictionary7">ref optional object CustomDictionary7</param>
-		/// <param name="CustomDictionary8">ref optional object CustomDictionary8</param>
-		/// <param name="CustomDictionary9">ref optional object CustomDictionary9</param>
-		/// <param name="CustomDictionary10">ref optional object CustomDictionary10</param>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		/// <param name="CustomDictionary7">optional object CustomDictionary7</param>
+		/// <param name="CustomDictionary8">optional object CustomDictionary8</param>
+		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
+		/// <param name="CustomDictionary10">optional object CustomDictionary10</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool CheckSpelling(string word, ref object customDictionary, ref object ignoreUppercase, ref object mainDictionary, ref object customDictionary2, ref object customDictionary3, ref object customDictionary4, ref object customDictionary5, ref object customDictionary6, ref object customDictionary7, ref object customDictionary8, ref object customDictionary9, ref object customDictionary10)
+		public bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
 			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
-			customDictionary = (object)paramsArray[1];
-			ignoreUppercase = (object)paramsArray[2];
-			mainDictionary = (object)paramsArray[3];
-			customDictionary2 = (object)paramsArray[4];
-			customDictionary3 = (object)paramsArray[5];
-			customDictionary4 = (object)paramsArray[6];
-			customDictionary5 = (object)paramsArray[7];
-			customDictionary6 = (object)paramsArray[8];
-			customDictionary7 = (object)paramsArray[9];
-			customDictionary8 = (object)paramsArray[10];
-			customDictionary9 = (object)paramsArray[11];
-			customDictionary10 = (object)paramsArray[12];
 			return (bool)returnItem;
 		}
 
@@ -1054,39 +1027,25 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Word">string Word</param>
-		/// <param name="CustomDictionary">ref optional object CustomDictionary</param>
-		/// <param name="IgnoreUppercase">ref optional object IgnoreUppercase</param>
-		/// <param name="MainDictionary">ref optional object MainDictionary</param>
-		/// <param name="SuggestionMode">ref optional object SuggestionMode</param>
-		/// <param name="CustomDictionary2">ref optional object CustomDictionary2</param>
-		/// <param name="CustomDictionary3">ref optional object CustomDictionary3</param>
-		/// <param name="CustomDictionary4">ref optional object CustomDictionary4</param>
-		/// <param name="CustomDictionary5">ref optional object CustomDictionary5</param>
-		/// <param name="CustomDictionary6">ref optional object CustomDictionary6</param>
-		/// <param name="CustomDictionary7">ref optional object CustomDictionary7</param>
-		/// <param name="CustomDictionary8">ref optional object CustomDictionary8</param>
-		/// <param name="CustomDictionary9">ref optional object CustomDictionary9</param>
-		/// <param name="CustomDictionary10">ref optional object CustomDictionary10</param>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="SuggestionMode">optional object SuggestionMode</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		/// <param name="CustomDictionary7">optional object CustomDictionary7</param>
+		/// <param name="CustomDictionary8">optional object CustomDictionary8</param>
+		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
+		/// <param name="CustomDictionary10">optional object CustomDictionary10</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, ref object customDictionary, ref object ignoreUppercase, ref object mainDictionary, ref object suggestionMode, ref object customDictionary2, ref object customDictionary3, ref object customDictionary4, ref object customDictionary5, ref object customDictionary6, ref object customDictionary7, ref object customDictionary8, ref object customDictionary9, ref object customDictionary10)
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
 			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.SpellingSuggestions;
-			customDictionary = (object)paramsArray[1];
-			ignoreUppercase = (object)paramsArray[2];
-			mainDictionary = (object)paramsArray[3];
-			suggestionMode = (object)paramsArray[4];
-			customDictionary2 = (object)paramsArray[5];
-			customDictionary3 = (object)paramsArray[6];
-			customDictionary4 = (object)paramsArray[7];
-			customDictionary5 = (object)paramsArray[8];
-			customDictionary6 = (object)paramsArray[9];
-			customDictionary7 = (object)paramsArray[10];
-			customDictionary8 = (object)paramsArray[11];
-			customDictionary9 = (object)paramsArray[12];
-			customDictionary10 = (object)paramsArray[13];
 			return newObject;
 		}
 
@@ -1106,14 +1065,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="HelpType">ref object HelpType</param>
+		/// <param name="HelpType">object HelpType</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Help(ref object helpType)
+		public void Help(object helpType)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(helpType);
-			Invoker.Method(this, "Help", paramsArray, modifiers);
-			helpType = (object)paramsArray[0];
+			Invoker.Method(this, "Help", paramsArray);
 		}
 
 		/// <summary>
@@ -1275,14 +1232,12 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Points">Single Points</param>
-		/// <param name="fVertical">ref optional object fVertical</param>
+		/// <param name="fVertical">optional object fVertical</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Single PointsToPixels(Single points, ref object fVertical)
+		public Single PointsToPixels(Single points, object fVertical)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(points, fVertical);
 			object returnItem = Invoker.MethodReturn(this, "PointsToPixels", paramsArray);
-			fVertical = (object)paramsArray[1];
 			return (Single)returnItem;
 		}
 
@@ -1302,14 +1257,12 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Pixels">Single Pixels</param>
-		/// <param name="fVertical">ref optional object fVertical</param>
+		/// <param name="fVertical">optional object fVertical</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Single PixelsToPoints(Single pixels, ref object fVertical)
+		public Single PixelsToPoints(Single pixels, object fVertical)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pixels, fVertical);
 			object returnItem = Invoker.MethodReturn(this, "PixelsToPoints", paramsArray);
-			fVertical = (object)paramsArray[1];
 			return (Single)returnItem;
 		}
 

@@ -13,49 +13,57 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-4108</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlHAlignCenter = -4108,
+		 xlHAlignCenter = -4108,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlHAlignCenterAcrossSelection = 7,
+		 xlHAlignCenterAcrossSelection = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-4117</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlHAlignDistributed = -4117,
+		 xlHAlignDistributed = -4117,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlHAlignFill = 5,
+		 xlHAlignFill = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlHAlignGeneral = 1,
+		 xlHAlignGeneral = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-4130</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlHAlignJustify = -4130,
+		 xlHAlignJustify = -4130,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-4131</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlHAlignLeft = -4131,
+		 xlHAlignLeft = -4131,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-4152</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlHAlignRight = -4152
+		 xlHAlignRight = -4152
 	}
 }

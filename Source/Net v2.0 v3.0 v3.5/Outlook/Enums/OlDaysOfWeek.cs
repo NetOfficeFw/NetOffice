@@ -13,43 +13,50 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olSunday = 1,
+		 olSunday = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olMonday = 2,
+		 olMonday = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olTuesday = 4,
+		 olTuesday = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olWednesday = 8,
+		 olWednesday = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olThursday = 16,
+		 olThursday = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olFriday = 32,
+		 olFriday = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>64</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olSaturday = 64
+		 olSaturday = 64
 	}
 }

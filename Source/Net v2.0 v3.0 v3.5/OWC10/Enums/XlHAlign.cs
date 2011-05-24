@@ -13,31 +13,36 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		xlHAlignGeneral = 1,
+		 xlHAlignGeneral = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>-4131</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		xlHAlignLeft = -4131,
+		 xlHAlignLeft = -4131,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>-4108</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		xlHAlignCenter = -4108,
+		 xlHAlignCenter = -4108,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>-4152</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		xlHAlignRight = -4152,
+		 xlHAlignRight = -4152,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		xlHAlignFill = 5
+		 xlHAlignFill = 5
 	}
 }

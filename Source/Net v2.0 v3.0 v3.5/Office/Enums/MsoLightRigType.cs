@@ -13,169 +13,197 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigMixed = -2,
+		 msoLightRigMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyFlat1 = 1,
+		 msoLightRigLegacyFlat1 = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyFlat2 = 2,
+		 msoLightRigLegacyFlat2 = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyFlat3 = 3,
+		 msoLightRigLegacyFlat3 = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyFlat4 = 4,
+		 msoLightRigLegacyFlat4 = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyNormal1 = 5,
+		 msoLightRigLegacyNormal1 = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyNormal2 = 6,
+		 msoLightRigLegacyNormal2 = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyNormal3 = 7,
+		 msoLightRigLegacyNormal3 = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyNormal4 = 8,
+		 msoLightRigLegacyNormal4 = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyHarsh1 = 9,
+		 msoLightRigLegacyHarsh1 = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyHarsh2 = 10,
+		 msoLightRigLegacyHarsh2 = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyHarsh3 = 11,
+		 msoLightRigLegacyHarsh3 = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigLegacyHarsh4 = 12,
+		 msoLightRigLegacyHarsh4 = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigThreePoint = 13,
+		 msoLightRigThreePoint = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigBalanced = 14,
+		 msoLightRigBalanced = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigSoft = 15,
+		 msoLightRigSoft = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigHarsh = 16,
+		 msoLightRigHarsh = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigFlood = 17,
+		 msoLightRigFlood = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigContrasting = 18,
+		 msoLightRigContrasting = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>19</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigMorning = 19,
+		 msoLightRigMorning = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>20</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigSunrise = 20,
+		 msoLightRigSunrise = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>21</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigSunset = 21,
+		 msoLightRigSunset = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>22</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigChilly = 22,
+		 msoLightRigChilly = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>23</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigFreezing = 23,
+		 msoLightRigFreezing = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>24</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigFlat = 24,
+		 msoLightRigFlat = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>25</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigTwoPoint = 25,
+		 msoLightRigTwoPoint = 25,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>26</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigGlow = 26,
+		 msoLightRigGlow = 26,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>27</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLightRigBrightRoom = 27
+		 msoLightRigBrightRoom = 27
 	}
 }

@@ -13,19 +13,22 @@ namespace NetOffice.VBIDEApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_ws_Normal = 0,
+		 vbext_ws_Normal = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_ws_Minimize = 1,
+		 vbext_ws_Minimize = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_ws_Maximize = 2
+		 vbext_ws_Maximize = 2
 	}
 }

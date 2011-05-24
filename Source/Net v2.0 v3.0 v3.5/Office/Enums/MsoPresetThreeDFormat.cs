@@ -13,127 +13,148 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoPresetThreeDFormatMixed = -2,
+		 msoPresetThreeDFormatMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD1 = 1,
+		 msoThreeD1 = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD2 = 2,
+		 msoThreeD2 = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD3 = 3,
+		 msoThreeD3 = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD4 = 4,
+		 msoThreeD4 = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD5 = 5,
+		 msoThreeD5 = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD6 = 6,
+		 msoThreeD6 = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD7 = 7,
+		 msoThreeD7 = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD8 = 8,
+		 msoThreeD8 = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD9 = 9,
+		 msoThreeD9 = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD10 = 10,
+		 msoThreeD10 = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD11 = 11,
+		 msoThreeD11 = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD12 = 12,
+		 msoThreeD12 = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD13 = 13,
+		 msoThreeD13 = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD14 = 14,
+		 msoThreeD14 = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD15 = 15,
+		 msoThreeD15 = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD16 = 16,
+		 msoThreeD16 = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD17 = 17,
+		 msoThreeD17 = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD18 = 18,
+		 msoThreeD18 = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>19</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD19 = 19,
+		 msoThreeD19 = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>20</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoThreeD20 = 20
+		 msoThreeD20 = 20
 	}
 }

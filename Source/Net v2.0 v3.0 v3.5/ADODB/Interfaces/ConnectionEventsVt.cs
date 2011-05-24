@@ -111,22 +111,19 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
-		/// <param name="Source">ref string Source</param>
+		/// <param name="Source">string Source</param>
 		/// <param name="CursorType">NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType</param>
 		/// <param name="LockType">NetOffice.ADODBApi.Enums.LockTypeEnum LockType</param>
-		/// <param name="Options">ref Int32 Options</param>
+		/// <param name="Options">Int32 Options</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pCommand">NetOffice.ADODBApi._Command pCommand</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public Int32 WillExecute(ref string source, NetOffice.ADODBApi.Enums.CursorTypeEnum cursorType, NetOffice.ADODBApi.Enums.LockTypeEnum lockType, ref Int32 options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection)
+		public Int32 WillExecute(string source, NetOffice.ADODBApi.Enums.CursorTypeEnum cursorType, NetOffice.ADODBApi.Enums.LockTypeEnum lockType, Int32 options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false,false,true,false,false,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(source, cursorType, lockType, options, adStatus, pCommand, pRecordset, pConnection);
 			object returnItem = Invoker.MethodReturn(this, "WillExecute", paramsArray);
-			source = (string)paramsArray[0];
-			options = (Int32)paramsArray[3];
 			return (Int32)returnItem;
 		}
 
@@ -150,22 +147,17 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
-		/// <param name="ConnectionString">ref string ConnectionString</param>
-		/// <param name="UserID">ref string UserID</param>
-		/// <param name="Password">ref string Password</param>
-		/// <param name="Options">ref Int32 Options</param>
+		/// <param name="ConnectionString">string ConnectionString</param>
+		/// <param name="UserID">string UserID</param>
+		/// <param name="Password">string Password</param>
+		/// <param name="Options">Int32 Options</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public Int32 WillConnect(ref string connectionString, ref string userID, ref string password, ref Int32 options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
+		public Int32 WillConnect(string connectionString, string userID, string password, Int32 options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(connectionString, userID, password, options, adStatus, pConnection);
 			object returnItem = Invoker.MethodReturn(this, "WillConnect", paramsArray);
-			connectionString = (string)paramsArray[0];
-			userID = (string)paramsArray[1];
-			password = (string)paramsArray[2];
-			options = (Int32)paramsArray[3];
 			return (Int32)returnItem;
 		}
 

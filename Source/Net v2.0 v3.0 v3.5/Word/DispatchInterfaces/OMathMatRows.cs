@@ -131,15 +131,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
-		/// <param name="BeforeRow">ref optional object BeforeRow</param>
+		/// <param name="BeforeRow">optional object BeforeRow</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.OMathMatRow Add(ref object beforeRow)
+		public NetOffice.WordApi.OMathMatRow Add(object beforeRow)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeRow);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.OMathMatRow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.OMathMatRow;
-			beforeRow = (object)paramsArray[0];
 			return newObject;
 		}
 

@@ -81,14 +81,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 SheetBeforeDoubleClick(object sh, NetOffice.ExcelApi.Range target, ref bool cancel)
+		public Int32 SheetBeforeDoubleClick(object sh, NetOffice.ExcelApi.Range target, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target, cancel);
 			object returnItem = Invoker.MethodReturn(this, "SheetBeforeDoubleClick", paramsArray);
-			cancel = (bool)paramsArray[2];
 			return (Int32)returnItem;
 		}
 
@@ -97,14 +95,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 SheetBeforeRightClick(object sh, NetOffice.ExcelApi.Range target, ref bool cancel)
+		public Int32 SheetBeforeRightClick(object sh, NetOffice.ExcelApi.Range target, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target, cancel);
 			object returnItem = Invoker.MethodReturn(this, "SheetBeforeRightClick", paramsArray);
-			cancel = (bool)paramsArray[2];
 			return (Int32)returnItem;
 		}
 
@@ -197,14 +193,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 WorkbookBeforeClose(NetOffice.ExcelApi.Workbook wb, ref bool cancel)
+		public Int32 WorkbookBeforeClose(NetOffice.ExcelApi.Workbook wb, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, cancel);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookBeforeClose", paramsArray);
-			cancel = (bool)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
@@ -213,14 +207,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="SaveAsUI">bool SaveAsUI</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 WorkbookBeforeSave(NetOffice.ExcelApi.Workbook wb, bool saveAsUI, ref bool cancel)
+		public Int32 WorkbookBeforeSave(NetOffice.ExcelApi.Workbook wb, bool saveAsUI, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, saveAsUI, cancel);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookBeforeSave", paramsArray);
-			cancel = (bool)paramsArray[2];
 			return (Int32)returnItem;
 		}
 
@@ -228,14 +220,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 WorkbookBeforePrint(NetOffice.ExcelApi.Workbook wb, ref bool cancel)
+		public Int32 WorkbookBeforePrint(NetOffice.ExcelApi.Workbook wb, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, cancel);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookBeforePrint", paramsArray);
-			cancel = (bool)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
@@ -387,14 +377,12 @@ namespace NetOffice.ExcelApi
 		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="Url">string Url</param>
 		/// <param name="IsRefresh">bool IsRefresh</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public Int32 WorkbookBeforeXmlImport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, bool isRefresh, ref bool cancel)
+		public Int32 WorkbookBeforeXmlImport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, bool isRefresh, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, url, isRefresh, cancel);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookBeforeXmlImport", paramsArray);
-			cancel = (bool)paramsArray[4];
 			return (Int32)returnItem;
 		}
 
@@ -419,14 +407,12 @@ namespace NetOffice.ExcelApi
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="Url">string Url</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public Int32 WorkbookBeforeXmlExport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, ref bool cancel)
+		public Int32 WorkbookBeforeXmlExport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, url, cancel);
 			object returnItem = Invoker.MethodReturn(this, "WorkbookBeforeXmlExport", paramsArray);
-			cancel = (bool)paramsArray[3];
 			return (Int32)returnItem;
 		}
 
@@ -492,14 +478,12 @@ namespace NetOffice.ExcelApi
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="ValueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="ValueChangeEnd">Int32 ValueChangeEnd</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 14)]
-		public Int32 SheetPivotTableBeforeAllocateChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel)
+		public Int32 SheetPivotTableBeforeAllocateChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
 			object returnItem = Invoker.MethodReturn(this, "SheetPivotTableBeforeAllocateChanges", paramsArray);
-			cancel = (bool)paramsArray[4];
 			return (Int32)returnItem;
 		}
 
@@ -510,14 +494,12 @@ namespace NetOffice.ExcelApi
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="ValueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="ValueChangeEnd">Int32 ValueChangeEnd</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 14)]
-		public Int32 SheetPivotTableBeforeCommitChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel)
+		public Int32 SheetPivotTableBeforeCommitChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
 			object returnItem = Invoker.MethodReturn(this, "SheetPivotTableBeforeCommitChanges", paramsArray);
-			cancel = (bool)paramsArray[4];
 			return (Int32)returnItem;
 		}
 
@@ -552,14 +534,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 14)]
-		public Int32 ProtectedViewWindowBeforeEdit(NetOffice.ExcelApi.ProtectedViewWindow pvw, ref bool cancel)
+		public Int32 ProtectedViewWindowBeforeEdit(NetOffice.ExcelApi.ProtectedViewWindow pvw, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw, cancel);
 			object returnItem = Invoker.MethodReturn(this, "ProtectedViewWindowBeforeEdit", paramsArray);
-			cancel = (bool)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
@@ -568,14 +548,12 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		/// <param name="Reason">NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason Reason</param>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 14)]
-		public Int32 ProtectedViewWindowBeforeClose(NetOffice.ExcelApi.ProtectedViewWindow pvw, NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason reason, ref bool cancel)
+		public Int32 ProtectedViewWindowBeforeClose(NetOffice.ExcelApi.ProtectedViewWindow pvw, NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason reason, bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw, reason, cancel);
 			object returnItem = Invoker.MethodReturn(this, "ProtectedViewWindowBeforeClose", paramsArray);
-			cancel = (bool)paramsArray[2];
 			return (Int32)returnItem;
 		}
 

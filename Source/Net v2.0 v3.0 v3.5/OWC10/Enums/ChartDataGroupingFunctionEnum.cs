@@ -13,25 +13,29 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chDataGroupingFunctionMinimum = 0,
+		 chDataGroupingFunctionMinimum = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chDataGroupingFunctionMaximum = 1,
+		 chDataGroupingFunctionMaximum = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chDataGroupingFunctionSum = 2,
+		 chDataGroupingFunctionSum = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chDataGroupingFunctionAverage = 3
+		 chDataGroupingFunctionAverage = 3
 	}
 }

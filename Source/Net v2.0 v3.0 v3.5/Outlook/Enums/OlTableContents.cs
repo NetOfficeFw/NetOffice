@@ -13,13 +13,15 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olUserItems = 0,
+		 olUserItems = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olHiddenItems = 1
+		 olHiddenItems = 1
 	}
 }

@@ -13,13 +13,15 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-4168</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlChartX = -4168,
+		 xlChartX = -4168,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlChartY = 1
+		 xlChartY = 1
 	}
 }

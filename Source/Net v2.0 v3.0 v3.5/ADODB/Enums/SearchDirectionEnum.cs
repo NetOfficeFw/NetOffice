@@ -13,13 +13,15 @@ namespace NetOffice.ADODBApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adSearchForward = 1,
+		 adSearchForward = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>-1</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adSearchBackward = -1
+		 adSearchBackward = -1
 	}
 }

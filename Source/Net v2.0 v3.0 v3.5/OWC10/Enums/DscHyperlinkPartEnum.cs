@@ -13,37 +13,43 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dschlDisplayedValue = 0,
+		 dschlDisplayedValue = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dschlDisplayText = 1,
+		 dschlDisplayText = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dschlAddress = 2,
+		 dschlAddress = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dschlSubAddress = 3,
+		 dschlSubAddress = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dschlScreenTip = 4,
+		 dschlScreenTip = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dschlFullAddress = 5
+		 dschlFullAddress = 5
 	}
 }

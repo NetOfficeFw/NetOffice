@@ -13,13 +13,15 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdDateLanguageBidi = 10,
+		 wdDateLanguageBidi = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1033</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdDateLanguageLatin = 1033
+		 wdDateLanguageLatin = 1033
 	}
 }

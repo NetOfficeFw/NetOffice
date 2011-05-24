@@ -69,13 +69,23 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                     }
 
                     string[] warnings = new string[0];
-                    if (!MethodBodyPassed(itemProperty, libName, libs, settings, ref warnings))
+                    if (!MethodBodyPassed(itemClass, itemProperty, settings, ref warnings))
+                    {
+                        foreach (string item in warnings)
+                            listResult.Add(item);
+                    }
+
+                }
+
+                foreach (XElement itemMethod in itemClass.Element("Methods").Elements("Method"))
+                {
+                    string[] warnings = new string[0];
+                    if (!MethodBodyPassed(itemClass, itemMethod, settings, ref warnings))
                     {
 
                         foreach (string item in warnings)
                             listResult.Add(item);
                     }
-
                 }
             }
 
@@ -83,9 +93,15 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
             foreach (string item in listResult)
                 result += item + Environment.NewLine;
 
-            if(0==listResult.Count)
-                result += "Assembly works fine with all specified versions." + Environment.NewLine;
+            if (0 == listResult.Count)
+            { 
+                if(0==listReferences.Count)
+                    result += "Assembly doesnt use NetOffice." + Environment.NewLine;
+                else
+                    result += "Assembly works fine with all specified versions." + Environment.NewLine;
 
+            }
+                
             return result;
         }
 
@@ -187,11 +203,75 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                     break;
             }
 
-            return false;
+            return true;
         }
 
-        private static bool MethodBodyPassed(XElement itemProperty, string name, string[] libs, AssemblyAnalyzerSettings settings, ref string[] warnings)
+        private static bool IsEnum(string type)
         {
+            string[] splitArray = type.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+            if (splitArray[splitArray.Length - 2] == "Enums")
+                return true;
+            else
+                return false;
+        }
+
+        private static bool MethodBodyPassed(XElement itemClass, XElement itemMethod, AssemblyAnalyzerSettings settings, ref string[] warnings)
+        {
+            List<string> listWarnings = new List<string>();
+
+            foreach (XElement itemEntity in itemMethod.Elements())
+            {
+                switch (itemEntity.Name.LocalName)
+                {
+                    case "ReturnValue":
+                    {
+                        string libName = "";
+                        string[] libs = GetSupportByLibrary(itemEntity, ref libName);
+                        if (!FieldPassed(libName, libs, settings))
+                        {
+                            string warning = string.Format("class {0}: Entity ReturnValue {4} {1}; SupportByLibrary {3}, {2}",
+                                                            itemClass.Attribute("Name").Value,
+                                                            itemMethod.Attribute("Name").Value,
+                                                            ToString(libs), libName, itemEntity.Attribute("Type").Value);
+                            
+                            listWarnings.Add(warning);                          
+                        }
+                        break;
+                    }
+                    case "Var":
+                    {
+                        string libName = "";
+                        string[] libs = GetSupportByLibrary(itemEntity, ref libName);
+                        if (!FieldPassed(libName, libs, settings))
+                        {
+                            string warning = string.Format("class {0}: Entity Local Variable {4} {1}; SupportByLibrary {3}, {2}",
+                                                            itemClass.Attribute("Name").Value,
+                                                            itemMethod.Attribute("Name").Value,
+                                                            ToString(libs), libName, itemEntity.Attribute("Type").Value);
+
+                            listWarnings.Add(warning);
+                        }
+
+                        string type = itemEntity.Attribute("Type").Value;
+                        foreach (XElement itemSet in itemEntity.Elements("Set"))
+                        {
+                            string setValue = itemSet.Attribute("Value").Value;
+                            if (IsEnum(type))
+                            { 
+                            }
+                        }
+
+                        break;
+                    }
+                    case "FieldSet":
+                        break;
+
+                    case "Call":
+                        break;
+
+                }
+            }
+
             return false;
         }
     }

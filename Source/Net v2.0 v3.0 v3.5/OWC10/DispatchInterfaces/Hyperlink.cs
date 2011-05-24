@@ -147,22 +147,16 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="NewWindow">ref optional object NewWindow</param>
-		/// <param name="AddHistory">ref optional object AddHistory</param>
-		/// <param name="ExtraInfo">ref optional object ExtraInfo</param>
-		/// <param name="Method">ref optional object Method</param>
-		/// <param name="HeaderInfo">ref optional object HeaderInfo</param>
+		/// <param name="NewWindow">optional object NewWindow</param>
+		/// <param name="AddHistory">optional object AddHistory</param>
+		/// <param name="ExtraInfo">optional object ExtraInfo</param>
+		/// <param name="Method">optional object Method</param>
+		/// <param name="HeaderInfo">optional object HeaderInfo</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Follow(ref object newWindow, ref object addHistory, ref object extraInfo, ref object method, ref object headerInfo)
+		public void Follow(object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method, headerInfo);
-			Invoker.Method(this, "Follow", paramsArray, modifiers);
-			newWindow = (object)paramsArray[0];
-			addHistory = (object)paramsArray[1];
-			extraInfo = (object)paramsArray[2];
-			method = (object)paramsArray[3];
-			headerInfo = (object)paramsArray[4];
+			Invoker.Method(this, "Follow", paramsArray);
 		}
 
 		/// <summary>

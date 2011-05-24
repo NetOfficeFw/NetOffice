@@ -13,25 +13,29 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCTPDockPositionRestrictNone = 0,
+		 msoCTPDockPositionRestrictNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCTPDockPositionRestrictNoChange = 1,
+		 msoCTPDockPositionRestrictNoChange = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCTPDockPositionRestrictNoHorizontal = 2,
+		 msoCTPDockPositionRestrictNoHorizontal = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCTPDockPositionRestrictNoVertical = 3
+		 msoCTPDockPositionRestrictNoVertical = 3
 	}
 }

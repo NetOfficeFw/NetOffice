@@ -13,43 +13,50 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCustomXMLNodeElement = 1,
+		 msoCustomXMLNodeElement = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCustomXMLNodeAttribute = 2,
+		 msoCustomXMLNodeAttribute = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCustomXMLNodeText = 3,
+		 msoCustomXMLNodeText = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCustomXMLNodeCData = 4,
+		 msoCustomXMLNodeCData = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCustomXMLNodeProcessingInstruction = 7,
+		 msoCustomXMLNodeProcessingInstruction = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCustomXMLNodeComment = 8,
+		 msoCustomXMLNodeComment = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCustomXMLNodeDocument = 9
+		 msoCustomXMLNodeDocument = 9
 	}
 }

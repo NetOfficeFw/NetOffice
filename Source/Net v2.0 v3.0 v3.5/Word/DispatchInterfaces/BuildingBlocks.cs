@@ -132,16 +132,14 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		/// <param name="Description">ref object Description</param>
+		/// <param name="Description">object Description</param>
 		/// <param name="InsertOptions">NetOffice.WordApi.Enums.WdDocPartInsertOptions InsertOptions</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.BuildingBlock Add(string name, NetOffice.WordApi.Range range, ref object description, NetOffice.WordApi.Enums.WdDocPartInsertOptions insertOptions)
+		public NetOffice.WordApi.BuildingBlock Add(string name, NetOffice.WordApi.Range range, object description, NetOffice.WordApi.Enums.WdDocPartInsertOptions insertOptions)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, range, description, insertOptions);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.BuildingBlock newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.BuildingBlock;
-			description = (object)paramsArray[2];
 			return newObject;
 		}
 

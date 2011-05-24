@@ -13,31 +13,36 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olOutlookBar = 1,
+		 olOutlookBar = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olFolderList = 2,
+		 olFolderList = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olPreview = 3,
+		 olPreview = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olNavigationPane = 4,
+		 olNavigationPane = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olToDoBar = 5
+		 olToDoBar = 5
 	}
 }

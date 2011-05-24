@@ -628,16 +628,13 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="Destination">ref optional object Destination</param>
-		/// <param name="Link">ref optional object Link</param>
+		/// <param name="Destination">optional object Destination</param>
+		/// <param name="Link">optional object Link</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Paste(ref object destination, ref object link)
+		public void Paste(object destination, object link)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, link);
-			Invoker.Method(this, "Paste", paramsArray, modifiers);
-			destination = (object)paramsArray[0];
-			link = (object)paramsArray[1];
+			Invoker.Method(this, "Paste", paramsArray);
 		}
 
 		/// <summary>
@@ -653,44 +650,27 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="Password">ref optional object Password</param>
-		/// <param name="DrawingObjects">ref optional object DrawingObjects</param>
-		/// <param name="Contents">ref optional object Contents</param>
-		/// <param name="Scenarios">ref optional object Scenarios</param>
-		/// <param name="UserInterfaceOnly">ref optional object UserInterfaceOnly</param>
-		/// <param name="AllowFormattingCells">ref optional object AllowFormattingCells</param>
-		/// <param name="AllowFormattingColumns">ref optional object AllowFormattingColumns</param>
-		/// <param name="AllowFormattingRows">ref optional object AllowFormattingRows</param>
-		/// <param name="AllowInsertingColumns">ref optional object AllowInsertingColumns</param>
-		/// <param name="AllowInsertingRows">ref optional object AllowInsertingRows</param>
-		/// <param name="AllowInsertingHyperlinks">ref optional object AllowInsertingHyperlinks</param>
-		/// <param name="AllowDeletingColumns">ref optional object AllowDeletingColumns</param>
-		/// <param name="AllowDeletingRows">ref optional object AllowDeletingRows</param>
-		/// <param name="AllowSorting">ref optional object AllowSorting</param>
-		/// <param name="AllowFiltering">ref optional object AllowFiltering</param>
-		/// <param name="AllowUsingPivotTableReports">ref optional object AllowUsingPivotTableReports</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		/// <param name="AllowFormattingCells">optional object AllowFormattingCells</param>
+		/// <param name="AllowFormattingColumns">optional object AllowFormattingColumns</param>
+		/// <param name="AllowFormattingRows">optional object AllowFormattingRows</param>
+		/// <param name="AllowInsertingColumns">optional object AllowInsertingColumns</param>
+		/// <param name="AllowInsertingRows">optional object AllowInsertingRows</param>
+		/// <param name="AllowInsertingHyperlinks">optional object AllowInsertingHyperlinks</param>
+		/// <param name="AllowDeletingColumns">optional object AllowDeletingColumns</param>
+		/// <param name="AllowDeletingRows">optional object AllowDeletingRows</param>
+		/// <param name="AllowSorting">optional object AllowSorting</param>
+		/// <param name="AllowFiltering">optional object AllowFiltering</param>
+		/// <param name="AllowUsingPivotTableReports">optional object AllowUsingPivotTableReports</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Protect(ref object password, ref object drawingObjects, ref object contents, ref object scenarios, ref object userInterfaceOnly, ref object allowFormattingCells, ref object allowFormattingColumns, ref object allowFormattingRows, ref object allowInsertingColumns, ref object allowInsertingRows, ref object allowInsertingHyperlinks, ref object allowDeletingColumns, ref object allowDeletingRows, ref object allowSorting, ref object allowFiltering, ref object allowUsingPivotTableReports)
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns, object allowFormattingRows, object allowInsertingColumns, object allowInsertingRows, object allowInsertingHyperlinks, object allowDeletingColumns, object allowDeletingRows, object allowSorting, object allowFiltering, object allowUsingPivotTableReports)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns, allowFormattingRows, allowInsertingColumns, allowInsertingRows, allowInsertingHyperlinks, allowDeletingColumns, allowDeletingRows, allowSorting, allowFiltering, allowUsingPivotTableReports);
-			Invoker.Method(this, "Protect", paramsArray, modifiers);
-			password = (object)paramsArray[0];
-			drawingObjects = (object)paramsArray[1];
-			contents = (object)paramsArray[2];
-			scenarios = (object)paramsArray[3];
-			userInterfaceOnly = (object)paramsArray[4];
-			allowFormattingCells = (object)paramsArray[5];
-			allowFormattingColumns = (object)paramsArray[6];
-			allowFormattingRows = (object)paramsArray[7];
-			allowInsertingColumns = (object)paramsArray[8];
-			allowInsertingRows = (object)paramsArray[9];
-			allowInsertingHyperlinks = (object)paramsArray[10];
-			allowDeletingColumns = (object)paramsArray[11];
-			allowDeletingRows = (object)paramsArray[12];
-			allowSorting = (object)paramsArray[13];
-			allowFiltering = (object)paramsArray[14];
-			allowUsingPivotTableReports = (object)paramsArray[15];
+			Invoker.Method(this, "Protect", paramsArray);
 		}
 
 		/// <summary>
@@ -716,14 +696,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="Replace">ref optional object Replace</param>
+		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Select(ref object replace)
+		public void Select(object replace)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
-			Invoker.Method(this, "Select", paramsArray, modifiers);
-			replace = (object)paramsArray[0];
+			Invoker.Method(this, "Select", paramsArray);
 		}
 
 		/// <summary>
@@ -749,14 +727,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="Password">ref optional object Password</param>
+		/// <param name="Password">optional object Password</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Unprotect(ref object password)
+		public void Unprotect(object password)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(password);
-			Invoker.Method(this, "Unprotect", paramsArray, modifiers);
-			password = (object)paramsArray[0];
+			Invoker.Method(this, "Unprotect", paramsArray);
 		}
 
 		/// <summary>

@@ -13,25 +13,29 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olOriginator = 0,
+		 olOriginator = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olTo = 1,
+		 olTo = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olCC = 2,
+		 olCC = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olBCC = 3
+		 olBCC = 3
 	}
 }

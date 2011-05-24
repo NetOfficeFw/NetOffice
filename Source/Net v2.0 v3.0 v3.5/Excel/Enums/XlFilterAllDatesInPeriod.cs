@@ -13,37 +13,43 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlFilterAllDatesInPeriodYear = 0,
+		 xlFilterAllDatesInPeriodYear = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlFilterAllDatesInPeriodMonth = 1,
+		 xlFilterAllDatesInPeriodMonth = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlFilterAllDatesInPeriodDay = 2,
+		 xlFilterAllDatesInPeriodDay = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlFilterAllDatesInPeriodHour = 3,
+		 xlFilterAllDatesInPeriodHour = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlFilterAllDatesInPeriodMinute = 4,
+		 xlFilterAllDatesInPeriodMinute = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlFilterAllDatesInPeriodSecond = 5
+		 xlFilterAllDatesInPeriodSecond = 5
 	}
 }

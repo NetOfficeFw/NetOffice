@@ -13,25 +13,29 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 14)]
-		acWebUserID = 0,
+		 acWebUserID = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 14)]
-		acWebUserName = 1,
+		 acWebUserName = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 14)]
-		acWebUserLoginName = 2,
+		 acWebUserLoginName = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Access", 14)]
-		acWebUserEmail = 3
+		 acWebUserEmail = 3
 	}
 }

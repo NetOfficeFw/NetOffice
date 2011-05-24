@@ -55,19 +55,15 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
-		/// <param name="BlogProvider">ref string BlogProvider</param>
-		/// <param name="FriendlyName">ref string FriendlyName</param>
+		/// <param name="BlogProvider">string BlogProvider</param>
+		/// <param name="FriendlyName">string FriendlyName</param>
 		/// <param name="CategorySupport">NetOffice.OfficeApi.Enums.MsoBlogCategorySupport CategorySupport</param>
-		/// <param name="Padding">ref bool Padding</param>
+		/// <param name="Padding">bool Padding</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void BlogProviderProperties(ref string blogProvider, ref string friendlyName, NetOffice.OfficeApi.Enums.MsoBlogCategorySupport categorySupport, ref bool padding)
+		public void BlogProviderProperties(string blogProvider, string friendlyName, NetOffice.OfficeApi.Enums.MsoBlogCategorySupport categorySupport, bool padding)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(blogProvider, friendlyName, categorySupport, padding);
-			Invoker.Method(this, "BlogProviderProperties", paramsArray, modifiers);
-			blogProvider = (string)paramsArray[0];
-			friendlyName = (string)paramsArray[1];
-			padding = (bool)paramsArray[3];
+			Invoker.Method(this, "BlogProviderProperties", paramsArray);
 		}
 
 		/// <summary>
@@ -77,14 +73,12 @@ namespace NetOffice.OfficeApi
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
 		/// <param name="Document">object Document</param>
 		/// <param name="NewAccount">bool NewAccount</param>
-		/// <param name="ShowPictureUI">ref bool ShowPictureUI</param>
+		/// <param name="ShowPictureUI">bool ShowPictureUI</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void SetupBlogAccount(string account, Int32 parentWindow, object document, bool newAccount, ref bool showPictureUI)
+		public void SetupBlogAccount(string account, Int32 parentWindow, object document, bool newAccount, bool showPictureUI)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, newAccount, showPictureUI);
-			Invoker.Method(this, "SetupBlogAccount", paramsArray, modifiers);
-			showPictureUI = (bool)paramsArray[4];
+			Invoker.Method(this, "SetupBlogAccount", paramsArray);
 		}
 
 		/// <summary>
@@ -93,18 +87,14 @@ namespace NetOffice.OfficeApi
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
 		/// <param name="Document">object Document</param>
-		/// <param name="BlogNames">ref String[] BlogNames</param>
-		/// <param name="BlogIDs">ref String[] BlogIDs</param>
-		/// <param name="BlogURLs">ref String[] BlogURLs</param>
+		/// <param name="BlogNames">String[] BlogNames</param>
+		/// <param name="BlogIDs">String[] BlogIDs</param>
+		/// <param name="BlogURLs">String[] BlogURLs</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void GetUserBlogs(string account, Int32 parentWindow, object document, ref String[] blogNames, ref String[] blogIDs, ref String[] blogURLs)
+		public void GetUserBlogs(string account, Int32 parentWindow, object document, String[] blogNames, String[] blogIDs, String[] blogURLs)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, (object)blogNames, (object)blogIDs, (object)blogURLs);
-			Invoker.Method(this, "GetUserBlogs", paramsArray, modifiers);
-			blogNames = (String[])paramsArray[3];
-			blogIDs = (String[])paramsArray[4];
-			blogURLs = (String[])paramsArray[5];
+			Invoker.Method(this, "GetUserBlogs", paramsArray);
 		}
 
 		/// <summary>
@@ -113,18 +103,14 @@ namespace NetOffice.OfficeApi
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
 		/// <param name="Document">object Document</param>
-		/// <param name="PostTitles">ref String[] PostTitles</param>
-		/// <param name="PostDates">ref String[] PostDates</param>
-		/// <param name="PostIDs">ref String[] PostIDs</param>
+		/// <param name="PostTitles">String[] PostTitles</param>
+		/// <param name="PostDates">String[] PostDates</param>
+		/// <param name="PostIDs">String[] PostIDs</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void GetRecentPosts(string account, Int32 parentWindow, object document, ref String[] postTitles, ref String[] postDates, ref String[] postIDs)
+		public void GetRecentPosts(string account, Int32 parentWindow, object document, String[] postTitles, String[] postDates, String[] postIDs)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, (object)postTitles, (object)postDates, (object)postIDs);
-			Invoker.Method(this, "GetRecentPosts", paramsArray, modifiers);
-			postTitles = (String[])paramsArray[3];
-			postDates = (String[])paramsArray[4];
-			postIDs = (String[])paramsArray[5];
+			Invoker.Method(this, "GetRecentPosts", paramsArray);
 		}
 
 		/// <summary>
@@ -133,20 +119,15 @@ namespace NetOffice.OfficeApi
 		/// <param name="Account">string Account</param>
 		/// <param name="PostID">string PostID</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
-		/// <param name="xHTML">ref string xHTML</param>
-		/// <param name="Title">ref string Title</param>
-		/// <param name="DatePosted">ref string DatePosted</param>
-		/// <param name="Categories">ref String[] Categories</param>
+		/// <param name="xHTML">string xHTML</param>
+		/// <param name="Title">string Title</param>
+		/// <param name="DatePosted">string DatePosted</param>
+		/// <param name="Categories">String[] Categories</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void Open(string account, string postID, Int32 parentWindow, ref string xHTML, ref string title, ref string datePosted, ref String[] categories)
+		public void Open(string account, string postID, Int32 parentWindow, string xHTML, string title, string datePosted, String[] categories)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(account, postID, parentWindow, xHTML, title, datePosted, (object)categories);
-			Invoker.Method(this, "Open", paramsArray, modifiers);
-			xHTML = (string)paramsArray[3];
-			title = (string)paramsArray[4];
-			datePosted = (string)paramsArray[5];
-			categories = (String[])paramsArray[6];
+			Invoker.Method(this, "Open", paramsArray);
 		}
 
 		/// <summary>
@@ -160,16 +141,13 @@ namespace NetOffice.OfficeApi
 		/// <param name="DateTime">string DateTime</param>
 		/// <param name="Categories">String[] Categories</param>
 		/// <param name="Draft">bool Draft</param>
-		/// <param name="PostID">ref string PostID</param>
-		/// <param name="PublishMessage">ref string PublishMessage</param>
+		/// <param name="PostID">string PostID</param>
+		/// <param name="PublishMessage">string PublishMessage</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void PublishPost(string account, Int32 parentWindow, object document, string xHTML, string title, string dateTime, String[] categories, bool draft, ref string postID, ref string publishMessage)
+		public void PublishPost(string account, Int32 parentWindow, object document, string xHTML, string title, string dateTime, String[] categories, bool draft, string postID, string publishMessage)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,false,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, xHTML, title, dateTime, (object)categories, draft, postID, publishMessage);
-			Invoker.Method(this, "PublishPost", paramsArray, modifiers);
-			postID = (string)paramsArray[8];
-			publishMessage = (string)paramsArray[9];
+			Invoker.Method(this, "PublishPost", paramsArray);
 		}
 
 		/// <summary>
@@ -184,14 +162,12 @@ namespace NetOffice.OfficeApi
 		/// <param name="DateTime">string DateTime</param>
 		/// <param name="Categories">String[] Categories</param>
 		/// <param name="Draft">bool Draft</param>
-		/// <param name="PublishMessage">ref string PublishMessage</param>
+		/// <param name="PublishMessage">string PublishMessage</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void RepublishPost(string account, Int32 parentWindow, object document, string postID, string xHTML, string title, string dateTime, String[] categories, bool draft, ref string publishMessage)
+		public void RepublishPost(string account, Int32 parentWindow, object document, string postID, string xHTML, string title, string dateTime, String[] categories, bool draft, string publishMessage)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, postID, xHTML, title, dateTime, (object)categories, draft, publishMessage);
-			Invoker.Method(this, "RepublishPost", paramsArray, modifiers);
-			publishMessage = (string)paramsArray[9];
+			Invoker.Method(this, "RepublishPost", paramsArray);
 		}
 
 		/// <summary>
@@ -200,14 +176,12 @@ namespace NetOffice.OfficeApi
 		/// <param name="Account">string Account</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
 		/// <param name="Document">object Document</param>
-		/// <param name="Categories">ref String[] Categories</param>
+		/// <param name="Categories">String[] Categories</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void GetCategories(string account, Int32 parentWindow, object document, ref String[] categories)
+		public void GetCategories(string account, Int32 parentWindow, object document, String[] categories)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, (object)categories);
-			Invoker.Method(this, "GetCategories", paramsArray, modifiers);
-			categories = (String[])paramsArray[3];
+			Invoker.Method(this, "GetCategories", paramsArray);
 		}
 
 		#endregion

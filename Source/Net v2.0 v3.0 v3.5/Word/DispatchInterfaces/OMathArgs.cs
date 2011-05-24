@@ -130,15 +130,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
-		/// <param name="BeforeArg">ref optional object BeforeArg</param>
+		/// <param name="BeforeArg">optional object BeforeArg</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.OMath Add(ref object beforeArg)
+		public NetOffice.WordApi.OMath Add(object beforeArg)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeArg);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.OMath newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.OMath;
-			beforeArg = (object)paramsArray[0];
 			return newObject;
 		}
 

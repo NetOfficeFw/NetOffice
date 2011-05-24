@@ -151,15 +151,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		/// <param name="Text">ref optional object Text</param>
+		/// <param name="Text">optional object Text</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Comment Add(NetOffice.WordApi.Range range, ref object text)
+		public NetOffice.WordApi.Comment Add(NetOffice.WordApi.Range range, object text)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, text);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Comment newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Comment;
-			text = (object)paramsArray[1];
 			return newObject;
 		}
 

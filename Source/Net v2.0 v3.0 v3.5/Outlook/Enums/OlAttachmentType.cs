@@ -13,25 +13,29 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olByValue = 1,
+		 olByValue = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olByReference = 4,
+		 olByReference = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olEmbeddeditem = 5,
+		 olEmbeddeditem = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		olOLE = 6
+		 olOLE = 6
 	}
 }

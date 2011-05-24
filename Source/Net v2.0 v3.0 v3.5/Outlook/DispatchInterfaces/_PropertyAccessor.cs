@@ -258,24 +258,21 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
-		/// <param name="SchemaNames">ref object SchemaNames</param>
+		/// <param name="SchemaNames">object SchemaNames</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public object DeleteProperties(ref object schemaNames)
+		public object DeleteProperties(object schemaNames)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaNames);
-			object returnItem = Invoker.MethodReturn(this, "DeleteProperties", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "DeleteProperties", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
 			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				schemaNames = (object)paramsArray[0];
-			return newObject;
+				return newObject;
 			}
 			else
 			{
-				schemaNames = (object)paramsArray[0];
-			return  returnItem;
+				return  returnItem;
 			}
 		}
 

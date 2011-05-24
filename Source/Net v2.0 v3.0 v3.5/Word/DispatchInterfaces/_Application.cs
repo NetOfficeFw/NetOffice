@@ -784,15 +784,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Word">string Word</param>
-		/// <param name="LanguageID">ref optional object LanguageID</param>
+		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.SynonymInfo get_SynonymInfo(string word, ref object languageID)
+		public NetOffice.WordApi.SynonymInfo get_SynonymInfo(string word, object languageID)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(word, languageID);
-			object returnItem = Invoker.PropertyGet(this, "SynonymInfo", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "SynonymInfo", paramsArray);
 			NetOffice.WordApi.SynonymInfo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.SynonymInfo;
-			languageID = (object)paramsArray[1];
 			return newObject;
 		}
 
@@ -932,15 +930,13 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="KeyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="Command">string Command</param>
-		/// <param name="CommandParameter">ref optional object CommandParameter</param>
+		/// <param name="CommandParameter">optional object CommandParameter</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.KeysBoundTo get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, ref object commandParameter)
+		public NetOffice.WordApi.KeysBoundTo get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, object commandParameter)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCategory, command, commandParameter);
-			object returnItem = Invoker.PropertyGet(this, "KeysBoundTo", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "KeysBoundTo", paramsArray);
 			NetOffice.WordApi.KeysBoundTo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.KeysBoundTo;
-			commandParameter = (object)paramsArray[2];
 			return newObject;
 		}
 
@@ -962,15 +958,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="KeyCode">Int32 KeyCode</param>
-		/// <param name="KeyCode2">ref optional object KeyCode2</param>
+		/// <param name="KeyCode2">optional object KeyCode2</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.KeyBinding get_FindKey(Int32 keyCode, ref object keyCode2)
+		public NetOffice.WordApi.KeyBinding get_FindKey(Int32 keyCode, object keyCode2)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
-			object returnItem = Invoker.PropertyGet(this, "FindKey", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "FindKey", paramsArray);
 			NetOffice.WordApi.KeyBinding newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.KeyBinding;
-			keyCode2 = (object)paramsArray[1];
 			return newObject;
 		}
 
@@ -2155,18 +2149,14 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="SaveChanges">ref optional object SaveChanges</param>
-		/// <param name="OriginalFormat">ref optional object OriginalFormat</param>
-		/// <param name="RouteDocument">ref optional object RouteDocument</param>
+		/// <param name="SaveChanges">optional object SaveChanges</param>
+		/// <param name="OriginalFormat">optional object OriginalFormat</param>
+		/// <param name="RouteDocument">optional object RouteDocument</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Quit(ref object saveChanges, ref object originalFormat, ref object routeDocument)
+		public void Quit(object saveChanges, object originalFormat, object routeDocument)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, originalFormat, routeDocument);
-			Invoker.Method(this, "Quit", paramsArray, modifiers);
-			saveChanges = (object)paramsArray[0];
-			originalFormat = (object)paramsArray[1];
-			routeDocument = (object)paramsArray[2];
+			Invoker.Method(this, "Quit", paramsArray);
 		}
 
 		/// <summary>
@@ -2192,42 +2182,26 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Background">ref optional object Background</param>
-		/// <param name="Append">ref optional object Append</param>
-		/// <param name="Range">ref optional object Range</param>
-		/// <param name="OutputFileName">ref optional object OutputFileName</param>
-		/// <param name="From">ref optional object From</param>
-		/// <param name="To">ref optional object To</param>
-		/// <param name="Item">ref optional object Item</param>
-		/// <param name="Copies">ref optional object Copies</param>
-		/// <param name="Pages">ref optional object Pages</param>
-		/// <param name="PageType">ref optional object PageType</param>
-		/// <param name="PrintToFile">ref optional object PrintToFile</param>
-		/// <param name="Collate">ref optional object Collate</param>
-		/// <param name="FileName">ref optional object FileName</param>
-		/// <param name="ActivePrinterMacGX">ref optional object ActivePrinterMacGX</param>
-		/// <param name="ManualDuplexPrint">ref optional object ManualDuplexPrint</param>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="FileName">optional object FileName</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PrintOutOld(ref object background, ref object append, ref object range, ref object outputFileName, ref object from, ref object to, ref object item, ref object copies, ref object pages, ref object pageType, ref object printToFile, ref object collate, ref object fileName, ref object activePrinterMacGX, ref object manualDuplexPrint)
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object fileName, object activePrinterMacGX, object manualDuplexPrint)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, fileName, activePrinterMacGX, manualDuplexPrint);
-			Invoker.Method(this, "PrintOutOld", paramsArray, modifiers);
-			background = (object)paramsArray[0];
-			append = (object)paramsArray[1];
-			range = (object)paramsArray[2];
-			outputFileName = (object)paramsArray[3];
-			from = (object)paramsArray[4];
-			to = (object)paramsArray[5];
-			item = (object)paramsArray[6];
-			copies = (object)paramsArray[7];
-			pages = (object)paramsArray[8];
-			pageType = (object)paramsArray[9];
-			printToFile = (object)paramsArray[10];
-			collate = (object)paramsArray[11];
-			fileName = (object)paramsArray[12];
-			activePrinterMacGX = (object)paramsArray[13];
-			manualDuplexPrint = (object)paramsArray[14];
+			Invoker.Method(this, "PrintOutOld", paramsArray);
 		}
 
 		/// <summary>
@@ -2266,14 +2240,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Times">ref optional object Times</param>
+		/// <param name="Times">optional object Times</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool Repeat(ref object times)
+		public bool Repeat(object times)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(times);
 			object returnItem = Invoker.MethodReturn(this, "Repeat", paramsArray);
-			times = (object)paramsArray[0];
 			return (bool)returnItem;
 		}
 
@@ -2364,18 +2336,14 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
-		/// <param name="Arg2">ref optional object Arg2</param>
-		/// <param name="Arg3">ref optional object Arg3</param>
-		/// <param name="Arg4">ref optional object Arg4</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, ref object arg2, ref object arg3, ref object arg4)
+		public Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, object arg2, object arg3, object arg4)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "BuildKeyCode", paramsArray);
-			arg2 = (object)paramsArray[1];
-			arg3 = (object)paramsArray[2];
-			arg4 = (object)paramsArray[3];
 			return (Int32)returnItem;
 		}
 
@@ -2395,14 +2363,12 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="KeyCode">Int32 KeyCode</param>
-		/// <param name="KeyCode2">ref optional object KeyCode2</param>
+		/// <param name="KeyCode2">optional object KeyCode2</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public string KeyString(Int32 keyCode, ref object keyCode2)
+		public string KeyString(Int32 keyCode, object keyCode2)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
 			object returnItem = Invoker.MethodReturn(this, "KeyString", paramsArray);
-			keyCode2 = (object)paramsArray[1];
 			return (string)returnItem;
 		}
 
@@ -2462,43 +2428,31 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="TagID">ref String[] TagID</param>
-		/// <param name="Value">ref String[] Value</param>
+		/// <param name="TagID">String[] TagID</param>
+		/// <param name="Value">String[] Value</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void AddAddress(ref String[] tagID, ref String[] value)
+		public void AddAddress(String[] tagID, String[] value)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray((object)tagID, (object)value);
-			Invoker.Method(this, "AddAddress", paramsArray, modifiers);
-			tagID = (String[])paramsArray[0];
-			value = (String[])paramsArray[1];
+			Invoker.Method(this, "AddAddress", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Name">ref optional object Name</param>
-		/// <param name="AddressProperties">ref optional object AddressProperties</param>
-		/// <param name="UseAutoText">ref optional object UseAutoText</param>
-		/// <param name="DisplaySelectDialog">ref optional object DisplaySelectDialog</param>
-		/// <param name="SelectDialog">ref optional object SelectDialog</param>
-		/// <param name="CheckNamesDialog">ref optional object CheckNamesDialog</param>
-		/// <param name="RecentAddressesChoice">ref optional object RecentAddressesChoice</param>
-		/// <param name="UpdateRecentAddresses">ref optional object UpdateRecentAddresses</param>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="AddressProperties">optional object AddressProperties</param>
+		/// <param name="UseAutoText">optional object UseAutoText</param>
+		/// <param name="DisplaySelectDialog">optional object DisplaySelectDialog</param>
+		/// <param name="SelectDialog">optional object SelectDialog</param>
+		/// <param name="CheckNamesDialog">optional object CheckNamesDialog</param>
+		/// <param name="RecentAddressesChoice">optional object RecentAddressesChoice</param>
+		/// <param name="UpdateRecentAddresses">optional object UpdateRecentAddresses</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public string GetAddress(ref object name, ref object addressProperties, ref object useAutoText, ref object displaySelectDialog, ref object selectDialog, ref object checkNamesDialog, ref object recentAddressesChoice, ref object updateRecentAddresses)
+		public string GetAddress(object name, object addressProperties, object useAutoText, object displaySelectDialog, object selectDialog, object checkNamesDialog, object recentAddressesChoice, object updateRecentAddresses)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, addressProperties, useAutoText, displaySelectDialog, selectDialog, checkNamesDialog, recentAddressesChoice, updateRecentAddresses);
 			object returnItem = Invoker.MethodReturn(this, "GetAddress", paramsArray);
-			name = (object)paramsArray[0];
-			addressProperties = (object)paramsArray[1];
-			useAutoText = (object)paramsArray[2];
-			displaySelectDialog = (object)paramsArray[3];
-			selectDialog = (object)paramsArray[4];
-			checkNamesDialog = (object)paramsArray[5];
-			recentAddressesChoice = (object)paramsArray[6];
-			updateRecentAddresses = (object)paramsArray[7];
 			return (string)returnItem;
 		}
 
@@ -2529,36 +2483,23 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Word">string Word</param>
-		/// <param name="CustomDictionary">ref optional object CustomDictionary</param>
-		/// <param name="IgnoreUppercase">ref optional object IgnoreUppercase</param>
-		/// <param name="MainDictionary">ref optional object MainDictionary</param>
-		/// <param name="CustomDictionary2">ref optional object CustomDictionary2</param>
-		/// <param name="CustomDictionary3">ref optional object CustomDictionary3</param>
-		/// <param name="CustomDictionary4">ref optional object CustomDictionary4</param>
-		/// <param name="CustomDictionary5">ref optional object CustomDictionary5</param>
-		/// <param name="CustomDictionary6">ref optional object CustomDictionary6</param>
-		/// <param name="CustomDictionary7">ref optional object CustomDictionary7</param>
-		/// <param name="CustomDictionary8">ref optional object CustomDictionary8</param>
-		/// <param name="CustomDictionary9">ref optional object CustomDictionary9</param>
-		/// <param name="CustomDictionary10">ref optional object CustomDictionary10</param>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		/// <param name="CustomDictionary7">optional object CustomDictionary7</param>
+		/// <param name="CustomDictionary8">optional object CustomDictionary8</param>
+		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
+		/// <param name="CustomDictionary10">optional object CustomDictionary10</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool CheckSpelling(string word, ref object customDictionary, ref object ignoreUppercase, ref object mainDictionary, ref object customDictionary2, ref object customDictionary3, ref object customDictionary4, ref object customDictionary5, ref object customDictionary6, ref object customDictionary7, ref object customDictionary8, ref object customDictionary9, ref object customDictionary10)
+		public bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
 			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
-			customDictionary = (object)paramsArray[1];
-			ignoreUppercase = (object)paramsArray[2];
-			mainDictionary = (object)paramsArray[3];
-			customDictionary2 = (object)paramsArray[4];
-			customDictionary3 = (object)paramsArray[5];
-			customDictionary4 = (object)paramsArray[6];
-			customDictionary5 = (object)paramsArray[7];
-			customDictionary6 = (object)paramsArray[8];
-			customDictionary7 = (object)paramsArray[9];
-			customDictionary8 = (object)paramsArray[10];
-			customDictionary9 = (object)paramsArray[11];
-			customDictionary10 = (object)paramsArray[12];
 			return (bool)returnItem;
 		}
 
@@ -2588,39 +2529,25 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Word">string Word</param>
-		/// <param name="CustomDictionary">ref optional object CustomDictionary</param>
-		/// <param name="IgnoreUppercase">ref optional object IgnoreUppercase</param>
-		/// <param name="MainDictionary">ref optional object MainDictionary</param>
-		/// <param name="SuggestionMode">ref optional object SuggestionMode</param>
-		/// <param name="CustomDictionary2">ref optional object CustomDictionary2</param>
-		/// <param name="CustomDictionary3">ref optional object CustomDictionary3</param>
-		/// <param name="CustomDictionary4">ref optional object CustomDictionary4</param>
-		/// <param name="CustomDictionary5">ref optional object CustomDictionary5</param>
-		/// <param name="CustomDictionary6">ref optional object CustomDictionary6</param>
-		/// <param name="CustomDictionary7">ref optional object CustomDictionary7</param>
-		/// <param name="CustomDictionary8">ref optional object CustomDictionary8</param>
-		/// <param name="CustomDictionary9">ref optional object CustomDictionary9</param>
-		/// <param name="CustomDictionary10">ref optional object CustomDictionary10</param>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="SuggestionMode">optional object SuggestionMode</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		/// <param name="CustomDictionary7">optional object CustomDictionary7</param>
+		/// <param name="CustomDictionary8">optional object CustomDictionary8</param>
+		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
+		/// <param name="CustomDictionary10">optional object CustomDictionary10</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, ref object customDictionary, ref object ignoreUppercase, ref object mainDictionary, ref object suggestionMode, ref object customDictionary2, ref object customDictionary3, ref object customDictionary4, ref object customDictionary5, ref object customDictionary6, ref object customDictionary7, ref object customDictionary8, ref object customDictionary9, ref object customDictionary10)
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
 			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.SpellingSuggestions;
-			customDictionary = (object)paramsArray[1];
-			ignoreUppercase = (object)paramsArray[2];
-			mainDictionary = (object)paramsArray[3];
-			suggestionMode = (object)paramsArray[4];
-			customDictionary2 = (object)paramsArray[5];
-			customDictionary3 = (object)paramsArray[6];
-			customDictionary4 = (object)paramsArray[7];
-			customDictionary5 = (object)paramsArray[8];
-			customDictionary6 = (object)paramsArray[9];
-			customDictionary7 = (object)paramsArray[10];
-			customDictionary8 = (object)paramsArray[11];
-			customDictionary9 = (object)paramsArray[12];
-			customDictionary10 = (object)paramsArray[13];
 			return newObject;
 		}
 
@@ -2650,14 +2577,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="HelpType">ref object HelpType</param>
+		/// <param name="HelpType">object HelpType</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Help(ref object helpType)
+		public void Help(object helpType)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(helpType);
-			Invoker.Method(this, "Help", paramsArray, modifiers);
-			helpType = (object)paramsArray[0];
+			Invoker.Method(this, "Help", paramsArray);
 		}
 
 		/// <summary>
@@ -2726,31 +2651,26 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="When">ref object When</param>
+		/// <param name="When">object When</param>
 		/// <param name="Name">string Name</param>
-		/// <param name="Tolerance">ref optional object Tolerance</param>
+		/// <param name="Tolerance">optional object Tolerance</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void OnTime(ref object when, string name, ref object tolerance)
+		public void OnTime(object when, string name, object tolerance)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(when, name, tolerance);
-			Invoker.Method(this, "OnTime", paramsArray, modifiers);
-			when = (object)paramsArray[0];
-			tolerance = (object)paramsArray[2];
+			Invoker.Method(this, "OnTime", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="When">ref object When</param>
+		/// <param name="When">object When</param>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void OnTime(ref object when, string name)
+		public void OnTime(object when, string name)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(when, name);
-			Invoker.Method(this, "OnTime", paramsArray, modifiers);
-			when = (object)paramsArray[0];
+			Invoker.Method(this, "OnTime", paramsArray);
 		}
 
 		/// <summary>
@@ -2769,18 +2689,14 @@ namespace NetOffice.WordApi
 		/// <param name="Zone">string Zone</param>
 		/// <param name="Server">string Server</param>
 		/// <param name="Volume">string Volume</param>
-		/// <param name="User">ref optional object User</param>
-		/// <param name="UserPassword">ref optional object UserPassword</param>
-		/// <param name="VolumePassword">ref optional object VolumePassword</param>
+		/// <param name="User">optional object User</param>
+		/// <param name="UserPassword">optional object UserPassword</param>
+		/// <param name="VolumePassword">optional object VolumePassword</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int16 MountVolume(string zone, string server, string volume, ref object user, ref object userPassword, ref object volumePassword)
+		public Int16 MountVolume(string zone, string server, string volume, object user, object userPassword, object volumePassword)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(zone, server, volume, user, userPassword, volumePassword);
 			object returnItem = Invoker.MethodReturn(this, "MountVolume", paramsArray);
-			user = (object)paramsArray[3];
-			userPassword = (object)paramsArray[4];
-			volumePassword = (object)paramsArray[5];
 			return (Int16)returnItem;
 		}
 
@@ -3010,14 +2926,12 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Points">Single Points</param>
-		/// <param name="fVertical">ref optional object fVertical</param>
+		/// <param name="fVertical">optional object fVertical</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Single PointsToPixels(Single points, ref object fVertical)
+		public Single PointsToPixels(Single points, object fVertical)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(points, fVertical);
 			object returnItem = Invoker.MethodReturn(this, "PointsToPixels", paramsArray);
-			fVertical = (object)paramsArray[1];
 			return (Single)returnItem;
 		}
 
@@ -3037,14 +2951,12 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Pixels">Single Pixels</param>
-		/// <param name="fVertical">ref optional object fVertical</param>
+		/// <param name="fVertical">optional object fVertical</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Single PixelsToPoints(Single pixels, ref object fVertical)
+		public Single PixelsToPoints(Single pixels, object fVertical)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pixels, fVertical);
 			object returnItem = Invoker.MethodReturn(this, "PixelsToPoints", paramsArray);
-			fVertical = (object)paramsArray[1];
 			return (Single)returnItem;
 		}
 
@@ -3128,18 +3040,14 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Range">ref object Range</param>
-		/// <param name="cid">ref object cid</param>
-		/// <param name="piCSE">ref object piCSE</param>
+		/// <param name="Range">object Range</param>
+		/// <param name="cid">object cid</param>
+		/// <param name="piCSE">object piCSE</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void DiscussionSupport(ref object range, ref object cid, ref object piCSE)
+		public void DiscussionSupport(object range, object cid, object piCSE)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, cid, piCSE);
-			Invoker.Method(this, "DiscussionSupport", paramsArray, modifiers);
-			range = (object)paramsArray[0];
-			cid = (object)paramsArray[1];
-			piCSE = (object)paramsArray[2];
+			Invoker.Method(this, "DiscussionSupport", paramsArray);
 		}
 
 		/// <summary>
@@ -3169,50 +3077,30 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Background">ref optional object Background</param>
-		/// <param name="Append">ref optional object Append</param>
-		/// <param name="Range">ref optional object Range</param>
-		/// <param name="OutputFileName">ref optional object OutputFileName</param>
-		/// <param name="From">ref optional object From</param>
-		/// <param name="To">ref optional object To</param>
-		/// <param name="Item">ref optional object Item</param>
-		/// <param name="Copies">ref optional object Copies</param>
-		/// <param name="Pages">ref optional object Pages</param>
-		/// <param name="PageType">ref optional object PageType</param>
-		/// <param name="PrintToFile">ref optional object PrintToFile</param>
-		/// <param name="Collate">ref optional object Collate</param>
-		/// <param name="FileName">ref optional object FileName</param>
-		/// <param name="ActivePrinterMacGX">ref optional object ActivePrinterMacGX</param>
-		/// <param name="ManualDuplexPrint">ref optional object ManualDuplexPrint</param>
-		/// <param name="PrintZoomColumn">ref optional object PrintZoomColumn</param>
-		/// <param name="PrintZoomRow">ref optional object PrintZoomRow</param>
-		/// <param name="PrintZoomPaperWidth">ref optional object PrintZoomPaperWidth</param>
-		/// <param name="PrintZoomPaperHeight">ref optional object PrintZoomPaperHeight</param>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="FileName">optional object FileName</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		/// <param name="PrintZoomColumn">optional object PrintZoomColumn</param>
+		/// <param name="PrintZoomRow">optional object PrintZoomRow</param>
+		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
+		/// <param name="PrintZoomPaperHeight">optional object PrintZoomPaperHeight</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PrintOut(ref object background, ref object append, ref object range, ref object outputFileName, ref object from, ref object to, ref object item, ref object copies, ref object pages, ref object pageType, ref object printToFile, ref object collate, ref object fileName, ref object activePrinterMacGX, ref object manualDuplexPrint, ref object printZoomColumn, ref object printZoomRow, ref object printZoomPaperWidth, ref object printZoomPaperHeight)
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object fileName, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, fileName, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
-			Invoker.Method(this, "PrintOut", paramsArray, modifiers);
-			background = (object)paramsArray[0];
-			append = (object)paramsArray[1];
-			range = (object)paramsArray[2];
-			outputFileName = (object)paramsArray[3];
-			from = (object)paramsArray[4];
-			to = (object)paramsArray[5];
-			item = (object)paramsArray[6];
-			copies = (object)paramsArray[7];
-			pages = (object)paramsArray[8];
-			pageType = (object)paramsArray[9];
-			printToFile = (object)paramsArray[10];
-			collate = (object)paramsArray[11];
-			fileName = (object)paramsArray[12];
-			activePrinterMacGX = (object)paramsArray[13];
-			manualDuplexPrint = (object)paramsArray[14];
-			printZoomColumn = (object)paramsArray[15];
-			printZoomRow = (object)paramsArray[16];
-			printZoomPaperWidth = (object)paramsArray[17];
-			printZoomPaperHeight = (object)paramsArray[18];
+			Invoker.Method(this, "PrintOut", paramsArray);
 		}
 
 		/// <summary>
@@ -3229,111 +3117,50 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="MacroName">string MacroName</param>
-		/// <param name="varg1">ref optional object varg1</param>
-		/// <param name="varg2">ref optional object varg2</param>
-		/// <param name="varg3">ref optional object varg3</param>
-		/// <param name="varg4">ref optional object varg4</param>
-		/// <param name="varg5">ref optional object varg5</param>
-		/// <param name="varg6">ref optional object varg6</param>
-		/// <param name="varg7">ref optional object varg7</param>
-		/// <param name="varg8">ref optional object varg8</param>
-		/// <param name="varg9">ref optional object varg9</param>
-		/// <param name="varg10">ref optional object varg10</param>
-		/// <param name="varg11">ref optional object varg11</param>
-		/// <param name="varg12">ref optional object varg12</param>
-		/// <param name="varg13">ref optional object varg13</param>
-		/// <param name="varg14">ref optional object varg14</param>
-		/// <param name="varg15">ref optional object varg15</param>
-		/// <param name="varg16">ref optional object varg16</param>
-		/// <param name="varg17">ref optional object varg17</param>
-		/// <param name="varg18">ref optional object varg18</param>
-		/// <param name="varg19">ref optional object varg19</param>
-		/// <param name="varg20">ref optional object varg20</param>
-		/// <param name="varg21">ref optional object varg21</param>
-		/// <param name="varg22">ref optional object varg22</param>
-		/// <param name="varg23">ref optional object varg23</param>
-		/// <param name="varg24">ref optional object varg24</param>
-		/// <param name="varg25">ref optional object varg25</param>
-		/// <param name="varg26">ref optional object varg26</param>
-		/// <param name="varg27">ref optional object varg27</param>
-		/// <param name="varg28">ref optional object varg28</param>
-		/// <param name="varg29">ref optional object varg29</param>
-		/// <param name="varg30">ref optional object varg30</param>
+		/// <param name="varg1">optional object varg1</param>
+		/// <param name="varg2">optional object varg2</param>
+		/// <param name="varg3">optional object varg3</param>
+		/// <param name="varg4">optional object varg4</param>
+		/// <param name="varg5">optional object varg5</param>
+		/// <param name="varg6">optional object varg6</param>
+		/// <param name="varg7">optional object varg7</param>
+		/// <param name="varg8">optional object varg8</param>
+		/// <param name="varg9">optional object varg9</param>
+		/// <param name="varg10">optional object varg10</param>
+		/// <param name="varg11">optional object varg11</param>
+		/// <param name="varg12">optional object varg12</param>
+		/// <param name="varg13">optional object varg13</param>
+		/// <param name="varg14">optional object varg14</param>
+		/// <param name="varg15">optional object varg15</param>
+		/// <param name="varg16">optional object varg16</param>
+		/// <param name="varg17">optional object varg17</param>
+		/// <param name="varg18">optional object varg18</param>
+		/// <param name="varg19">optional object varg19</param>
+		/// <param name="varg20">optional object varg20</param>
+		/// <param name="varg21">optional object varg21</param>
+		/// <param name="varg22">optional object varg22</param>
+		/// <param name="varg23">optional object varg23</param>
+		/// <param name="varg24">optional object varg24</param>
+		/// <param name="varg25">optional object varg25</param>
+		/// <param name="varg26">optional object varg26</param>
+		/// <param name="varg27">optional object varg27</param>
+		/// <param name="varg28">optional object varg28</param>
+		/// <param name="varg29">optional object varg29</param>
+		/// <param name="varg30">optional object varg30</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public object Run(string macroName, ref object varg1, ref object varg2, ref object varg3, ref object varg4, ref object varg5, ref object varg6, ref object varg7, ref object varg8, ref object varg9, ref object varg10, ref object varg11, ref object varg12, ref object varg13, ref object varg14, ref object varg15, ref object varg16, ref object varg17, ref object varg18, ref object varg19, ref object varg20, ref object varg21, ref object varg22, ref object varg23, ref object varg24, ref object varg25, ref object varg26, ref object varg27, ref object varg28, ref object varg29, ref object varg30)
+		public object Run(string macroName, object varg1, object varg2, object varg3, object varg4, object varg5, object varg6, object varg7, object varg8, object varg9, object varg10, object varg11, object varg12, object varg13, object varg14, object varg15, object varg16, object varg17, object varg18, object varg19, object varg20, object varg21, object varg22, object varg23, object varg24, object varg25, object varg26, object varg27, object varg28, object varg29, object varg30)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(macroName, varg1, varg2, varg3, varg4, varg5, varg6, varg7, varg8, varg9, varg10, varg11, varg12, varg13, varg14, varg15, varg16, varg17, varg18, varg19, varg20, varg21, varg22, varg23, varg24, varg25, varg26, varg27, varg28, varg29, varg30);
-			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
 			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				varg1 = (object)paramsArray[1];
-			varg2 = (object)paramsArray[2];
-			varg3 = (object)paramsArray[3];
-			varg4 = (object)paramsArray[4];
-			varg5 = (object)paramsArray[5];
-			varg6 = (object)paramsArray[6];
-			varg7 = (object)paramsArray[7];
-			varg8 = (object)paramsArray[8];
-			varg9 = (object)paramsArray[9];
-			varg10 = (object)paramsArray[10];
-			varg11 = (object)paramsArray[11];
-			varg12 = (object)paramsArray[12];
-			varg13 = (object)paramsArray[13];
-			varg14 = (object)paramsArray[14];
-			varg15 = (object)paramsArray[15];
-			varg16 = (object)paramsArray[16];
-			varg17 = (object)paramsArray[17];
-			varg18 = (object)paramsArray[18];
-			varg19 = (object)paramsArray[19];
-			varg20 = (object)paramsArray[20];
-			varg21 = (object)paramsArray[21];
-			varg22 = (object)paramsArray[22];
-			varg23 = (object)paramsArray[23];
-			varg24 = (object)paramsArray[24];
-			varg25 = (object)paramsArray[25];
-			varg26 = (object)paramsArray[26];
-			varg27 = (object)paramsArray[27];
-			varg28 = (object)paramsArray[28];
-			varg29 = (object)paramsArray[29];
-			varg30 = (object)paramsArray[30];
-			return newObject;
+				return newObject;
 			}
 			else
 			{
-				varg1 = (object)paramsArray[1];
-			varg2 = (object)paramsArray[2];
-			varg3 = (object)paramsArray[3];
-			varg4 = (object)paramsArray[4];
-			varg5 = (object)paramsArray[5];
-			varg6 = (object)paramsArray[6];
-			varg7 = (object)paramsArray[7];
-			varg8 = (object)paramsArray[8];
-			varg9 = (object)paramsArray[9];
-			varg10 = (object)paramsArray[10];
-			varg11 = (object)paramsArray[11];
-			varg12 = (object)paramsArray[12];
-			varg13 = (object)paramsArray[13];
-			varg14 = (object)paramsArray[14];
-			varg15 = (object)paramsArray[15];
-			varg16 = (object)paramsArray[16];
-			varg17 = (object)paramsArray[17];
-			varg18 = (object)paramsArray[18];
-			varg19 = (object)paramsArray[19];
-			varg20 = (object)paramsArray[20];
-			varg21 = (object)paramsArray[21];
-			varg22 = (object)paramsArray[22];
-			varg23 = (object)paramsArray[23];
-			varg24 = (object)paramsArray[24];
-			varg25 = (object)paramsArray[25];
-			varg26 = (object)paramsArray[26];
-			varg27 = (object)paramsArray[27];
-			varg28 = (object)paramsArray[28];
-			varg29 = (object)paramsArray[29];
-			varg30 = (object)paramsArray[30];
-			return  returnItem;
+				return  returnItem;
 			}
 		}
 
@@ -3361,50 +3188,30 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Background">ref optional object Background</param>
-		/// <param name="Append">ref optional object Append</param>
-		/// <param name="Range">ref optional object Range</param>
-		/// <param name="OutputFileName">ref optional object OutputFileName</param>
-		/// <param name="From">ref optional object From</param>
-		/// <param name="To">ref optional object To</param>
-		/// <param name="Item">ref optional object Item</param>
-		/// <param name="Copies">ref optional object Copies</param>
-		/// <param name="Pages">ref optional object Pages</param>
-		/// <param name="PageType">ref optional object PageType</param>
-		/// <param name="PrintToFile">ref optional object PrintToFile</param>
-		/// <param name="Collate">ref optional object Collate</param>
-		/// <param name="FileName">ref optional object FileName</param>
-		/// <param name="ActivePrinterMacGX">ref optional object ActivePrinterMacGX</param>
-		/// <param name="ManualDuplexPrint">ref optional object ManualDuplexPrint</param>
-		/// <param name="PrintZoomColumn">ref optional object PrintZoomColumn</param>
-		/// <param name="PrintZoomRow">ref optional object PrintZoomRow</param>
-		/// <param name="PrintZoomPaperWidth">ref optional object PrintZoomPaperWidth</param>
-		/// <param name="PrintZoomPaperHeight">ref optional object PrintZoomPaperHeight</param>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="FileName">optional object FileName</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		/// <param name="PrintZoomColumn">optional object PrintZoomColumn</param>
+		/// <param name="PrintZoomRow">optional object PrintZoomRow</param>
+		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
+		/// <param name="PrintZoomPaperHeight">optional object PrintZoomPaperHeight</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void PrintOut2000(ref object background, ref object append, ref object range, ref object outputFileName, ref object from, ref object to, ref object item, ref object copies, ref object pages, ref object pageType, ref object printToFile, ref object collate, ref object fileName, ref object activePrinterMacGX, ref object manualDuplexPrint, ref object printZoomColumn, ref object printZoomRow, ref object printZoomPaperWidth, ref object printZoomPaperHeight)
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object fileName, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, fileName, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
-			Invoker.Method(this, "PrintOut2000", paramsArray, modifiers);
-			background = (object)paramsArray[0];
-			append = (object)paramsArray[1];
-			range = (object)paramsArray[2];
-			outputFileName = (object)paramsArray[3];
-			from = (object)paramsArray[4];
-			to = (object)paramsArray[5];
-			item = (object)paramsArray[6];
-			copies = (object)paramsArray[7];
-			pages = (object)paramsArray[8];
-			pageType = (object)paramsArray[9];
-			printToFile = (object)paramsArray[10];
-			collate = (object)paramsArray[11];
-			fileName = (object)paramsArray[12];
-			activePrinterMacGX = (object)paramsArray[13];
-			manualDuplexPrint = (object)paramsArray[14];
-			printZoomColumn = (object)paramsArray[15];
-			printZoomRow = (object)paramsArray[16];
-			printZoomPaperWidth = (object)paramsArray[17];
-			printZoomPaperHeight = (object)paramsArray[18];
+			Invoker.Method(this, "PrintOut2000", paramsArray);
 		}
 
 		/// <summary>

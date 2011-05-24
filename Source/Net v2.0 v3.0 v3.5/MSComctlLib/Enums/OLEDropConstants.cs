@@ -13,13 +13,15 @@ namespace NetOffice.MSComctlLibApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		ccOLEDropNone = 0,
+		 ccOLEDropNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		ccOLEDropManual = 1
+		 ccOLEDropManual = 1
 	}
 }

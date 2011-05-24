@@ -3410,16 +3410,14 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
 		/// <param name="Url">string Url</param>
-		/// <param name="ImportMap">ref NetOffice.ExcelApi.XmlMap ImportMap</param>
+		/// <param name="ImportMap">NetOffice.ExcelApi.XmlMap ImportMap</param>
 		/// <param name="Overwrite">optional object Overwrite</param>
 		/// <param name="Destination">optional object Destination</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImport(string url, ref NetOffice.ExcelApi.XmlMap importMap, object overwrite, object destination)
+		public NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImport(string url, NetOffice.ExcelApi.XmlMap importMap, object overwrite, object destination)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(url, importMap, overwrite, destination);
 			object returnItem = Invoker.MethodReturn(this, "XmlImport", paramsArray);
-			importMap = (NetOffice.ExcelApi.XmlMap)paramsArray[1];
 			return (NetOffice.ExcelApi.Enums.XlXmlImportResult)returnItem;
 		}
 
@@ -3427,14 +3425,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
 		/// <param name="Url">string Url</param>
-		/// <param name="ImportMap">ref NetOffice.ExcelApi.XmlMap ImportMap</param>
+		/// <param name="ImportMap">NetOffice.ExcelApi.XmlMap ImportMap</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImport(string url, ref NetOffice.ExcelApi.XmlMap importMap)
+		public NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImport(string url, NetOffice.ExcelApi.XmlMap importMap)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(url, importMap);
 			object returnItem = Invoker.MethodReturn(this, "XmlImport", paramsArray);
-			importMap = (NetOffice.ExcelApi.XmlMap)paramsArray[1];
 			return (NetOffice.ExcelApi.Enums.XlXmlImportResult)returnItem;
 		}
 
@@ -3442,16 +3438,14 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
 		/// <param name="Data">string Data</param>
-		/// <param name="ImportMap">ref NetOffice.ExcelApi.XmlMap ImportMap</param>
+		/// <param name="ImportMap">NetOffice.ExcelApi.XmlMap ImportMap</param>
 		/// <param name="Overwrite">optional object Overwrite</param>
 		/// <param name="Destination">optional object Destination</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImportXml(string data, ref NetOffice.ExcelApi.XmlMap importMap, object overwrite, object destination)
+		public NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImportXml(string data, NetOffice.ExcelApi.XmlMap importMap, object overwrite, object destination)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(data, importMap, overwrite, destination);
 			object returnItem = Invoker.MethodReturn(this, "XmlImportXml", paramsArray);
-			importMap = (NetOffice.ExcelApi.XmlMap)paramsArray[1];
 			return (NetOffice.ExcelApi.Enums.XlXmlImportResult)returnItem;
 		}
 
@@ -3459,14 +3453,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
 		/// <param name="Data">string Data</param>
-		/// <param name="ImportMap">ref NetOffice.ExcelApi.XmlMap ImportMap</param>
+		/// <param name="ImportMap">NetOffice.ExcelApi.XmlMap ImportMap</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImportXml(string data, ref NetOffice.ExcelApi.XmlMap importMap)
+		public NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImportXml(string data, NetOffice.ExcelApi.XmlMap importMap)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(data, importMap);
 			object returnItem = Invoker.MethodReturn(this, "XmlImportXml", paramsArray);
-			importMap = (NetOffice.ExcelApi.XmlMap)paramsArray[1];
 			return (NetOffice.ExcelApi.Enums.XlXmlImportResult)returnItem;
 		}
 

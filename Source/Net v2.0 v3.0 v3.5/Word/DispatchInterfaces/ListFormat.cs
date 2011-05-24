@@ -245,14 +245,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="NumberType">ref optional object NumberType</param>
+		/// <param name="NumberType">optional object NumberType</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void RemoveNumbers(ref object numberType)
+		public void RemoveNumbers(object numberType)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(numberType);
-			Invoker.Method(this, "RemoveNumbers", paramsArray, modifiers);
-			numberType = (object)paramsArray[0];
+			Invoker.Method(this, "RemoveNumbers", paramsArray);
 		}
 
 		/// <summary>
@@ -268,14 +266,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="NumberType">ref optional object NumberType</param>
+		/// <param name="NumberType">optional object NumberType</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ConvertNumbersToText(ref object numberType)
+		public void ConvertNumbersToText(object numberType)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(numberType);
-			Invoker.Method(this, "ConvertNumbersToText", paramsArray, modifiers);
-			numberType = (object)paramsArray[0];
+			Invoker.Method(this, "ConvertNumbersToText", paramsArray);
 		}
 
 		/// <summary>
@@ -291,16 +287,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="NumberType">ref optional object NumberType</param>
-		/// <param name="Level">ref optional object Level</param>
+		/// <param name="NumberType">optional object NumberType</param>
+		/// <param name="Level">optional object Level</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 CountNumberedItems(ref object numberType, ref object level)
+		public Int32 CountNumberedItems(object numberType, object level)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(numberType, level);
 			object returnItem = Invoker.MethodReturn(this, "CountNumberedItems", paramsArray);
-			numberType = (object)paramsArray[0];
-			level = (object)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
@@ -349,16 +342,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ListTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="ContinuePreviousList">ref optional object ContinuePreviousList</param>
-		/// <param name="ApplyTo">ref optional object ApplyTo</param>
+		/// <param name="ContinuePreviousList">optional object ContinuePreviousList</param>
+		/// <param name="ApplyTo">optional object ApplyTo</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ApplyListTemplateOld(NetOffice.WordApi.ListTemplate listTemplate, ref object continuePreviousList, ref object applyTo)
+		public void ApplyListTemplateOld(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object applyTo)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList, applyTo);
-			Invoker.Method(this, "ApplyListTemplateOld", paramsArray, modifiers);
-			continuePreviousList = (object)paramsArray[1];
-			applyTo = (object)paramsArray[2];
+			Invoker.Method(this, "ApplyListTemplateOld", paramsArray);
 		}
 
 		/// <summary>
@@ -395,14 +385,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="DefaultListBehavior">ref optional object DefaultListBehavior</param>
+		/// <param name="DefaultListBehavior">optional object DefaultListBehavior</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ApplyBulletDefault(ref object defaultListBehavior)
+		public void ApplyBulletDefault(object defaultListBehavior)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultListBehavior);
-			Invoker.Method(this, "ApplyBulletDefault", paramsArray, modifiers);
-			defaultListBehavior = (object)paramsArray[0];
+			Invoker.Method(this, "ApplyBulletDefault", paramsArray);
 		}
 
 		/// <summary>
@@ -418,14 +406,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="DefaultListBehavior">ref optional object DefaultListBehavior</param>
+		/// <param name="DefaultListBehavior">optional object DefaultListBehavior</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ApplyNumberDefault(ref object defaultListBehavior)
+		public void ApplyNumberDefault(object defaultListBehavior)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultListBehavior);
-			Invoker.Method(this, "ApplyNumberDefault", paramsArray, modifiers);
-			defaultListBehavior = (object)paramsArray[0];
+			Invoker.Method(this, "ApplyNumberDefault", paramsArray);
 		}
 
 		/// <summary>
@@ -441,14 +427,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="DefaultListBehavior">ref optional object DefaultListBehavior</param>
+		/// <param name="DefaultListBehavior">optional object DefaultListBehavior</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ApplyOutlineNumberDefault(ref object defaultListBehavior)
+		public void ApplyOutlineNumberDefault(object defaultListBehavior)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultListBehavior);
-			Invoker.Method(this, "ApplyOutlineNumberDefault", paramsArray, modifiers);
-			defaultListBehavior = (object)paramsArray[0];
+			Invoker.Method(this, "ApplyOutlineNumberDefault", paramsArray);
 		}
 
 		/// <summary>
@@ -465,18 +449,14 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ListTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="ContinuePreviousList">ref optional object ContinuePreviousList</param>
-		/// <param name="ApplyTo">ref optional object ApplyTo</param>
-		/// <param name="DefaultListBehavior">ref optional object DefaultListBehavior</param>
+		/// <param name="ContinuePreviousList">optional object ContinuePreviousList</param>
+		/// <param name="ApplyTo">optional object ApplyTo</param>
+		/// <param name="DefaultListBehavior">optional object DefaultListBehavior</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ApplyListTemplate(NetOffice.WordApi.ListTemplate listTemplate, ref object continuePreviousList, ref object applyTo, ref object defaultListBehavior)
+		public void ApplyListTemplate(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object applyTo, object defaultListBehavior)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList, applyTo, defaultListBehavior);
-			Invoker.Method(this, "ApplyListTemplate", paramsArray, modifiers);
-			continuePreviousList = (object)paramsArray[1];
-			applyTo = (object)paramsArray[2];
-			defaultListBehavior = (object)paramsArray[3];
+			Invoker.Method(this, "ApplyListTemplate", paramsArray);
 		}
 
 		/// <summary>
@@ -494,20 +474,15 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		/// <param name="ListTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="ContinuePreviousList">ref optional object ContinuePreviousList</param>
-		/// <param name="ApplyTo">ref optional object ApplyTo</param>
-		/// <param name="DefaultListBehavior">ref optional object DefaultListBehavior</param>
-		/// <param name="ApplyLevel">ref optional object ApplyLevel</param>
+		/// <param name="ContinuePreviousList">optional object ContinuePreviousList</param>
+		/// <param name="ApplyTo">optional object ApplyTo</param>
+		/// <param name="DefaultListBehavior">optional object DefaultListBehavior</param>
+		/// <param name="ApplyLevel">optional object ApplyLevel</param>
 		[SupportByLibrary("Word", 12,14)]
-		public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate, ref object continuePreviousList, ref object applyTo, ref object defaultListBehavior, ref object applyLevel)
+		public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object applyTo, object defaultListBehavior, object applyLevel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList, applyTo, defaultListBehavior, applyLevel);
-			Invoker.Method(this, "ApplyListTemplateWithLevel", paramsArray, modifiers);
-			continuePreviousList = (object)paramsArray[1];
-			applyTo = (object)paramsArray[2];
-			defaultListBehavior = (object)paramsArray[3];
-			applyLevel = (object)paramsArray[4];
+			Invoker.Method(this, "ApplyListTemplateWithLevel", paramsArray);
 		}
 
 		/// <summary>

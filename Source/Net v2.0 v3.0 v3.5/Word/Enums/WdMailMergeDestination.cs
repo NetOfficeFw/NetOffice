@@ -13,25 +13,29 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSendToNewDocument = 0,
+		 wdSendToNewDocument = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSendToPrinter = 1,
+		 wdSendToPrinter = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSendToEmail = 2,
+		 wdSendToEmail = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSendToFax = 3
+		 wdSendToFax = 3
 	}
 }

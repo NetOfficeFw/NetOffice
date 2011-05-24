@@ -160,14 +160,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="TimeOut">ref optional object TimeOut</param>
+		/// <param name="TimeOut">optional object TimeOut</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 Show(ref object timeOut)
+		public Int32 Show(object timeOut)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(timeOut);
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			timeOut = (object)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
@@ -185,14 +183,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="TimeOut">ref optional object TimeOut</param>
+		/// <param name="TimeOut">optional object TimeOut</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 Display(ref object timeOut)
+		public Int32 Display(object timeOut)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(timeOut);
 			object returnItem = Invoker.MethodReturn(this, "Display", paramsArray);
-			timeOut = (object)paramsArray[0];
 			return (Int32)returnItem;
 		}
 

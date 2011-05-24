@@ -13,13 +13,15 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4105</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlChartElementPositionAutomatic = -4105,
+		 xlChartElementPositionAutomatic = -4105,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4114</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlChartElementPositionCustom = -4114
+		 xlChartElementPositionCustom = -4114
 	}
 }

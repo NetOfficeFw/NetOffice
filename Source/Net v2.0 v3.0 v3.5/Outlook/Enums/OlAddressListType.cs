@@ -13,31 +13,36 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olExchangeGlobalAddressList = 0,
+		 olExchangeGlobalAddressList = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olExchangeContainer = 1,
+		 olExchangeContainer = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olOutlookAddressList = 2,
+		 olOutlookAddressList = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olOutlookLdapAddressList = 3,
+		 olOutlookLdapAddressList = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olCustomAddressList = 4
+		 olCustomAddressList = 4
 	}
 }

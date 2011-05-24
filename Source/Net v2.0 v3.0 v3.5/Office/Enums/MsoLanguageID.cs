@@ -13,1333 +13,1555 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDMixed = -2,
+		 msoLanguageIDMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDNone = 0,
+		 msoLanguageIDNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1024</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDNoProofing = 1024,
+		 msoLanguageIDNoProofing = 1024,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1078</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDAfrikaans = 1078,
+		 msoLanguageIDAfrikaans = 1078,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1052</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDAlbanian = 1052,
+		 msoLanguageIDAlbanian = 1052,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5121</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicAlgeria = 5121,
+		 msoLanguageIDArabicAlgeria = 5121,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15361</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicBahrain = 15361,
+		 msoLanguageIDArabicBahrain = 15361,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3073</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicEgypt = 3073,
+		 msoLanguageIDArabicEgypt = 3073,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2049</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicIraq = 2049,
+		 msoLanguageIDArabicIraq = 2049,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11265</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicJordan = 11265,
+		 msoLanguageIDArabicJordan = 11265,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13313</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicKuwait = 13313,
+		 msoLanguageIDArabicKuwait = 13313,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12289</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicLebanon = 12289,
+		 msoLanguageIDArabicLebanon = 12289,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4097</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicLibya = 4097,
+		 msoLanguageIDArabicLibya = 4097,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6145</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicMorocco = 6145,
+		 msoLanguageIDArabicMorocco = 6145,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8193</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicOman = 8193,
+		 msoLanguageIDArabicOman = 8193,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16385</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicQatar = 16385,
+		 msoLanguageIDArabicQatar = 16385,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1025</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabic = 1025,
+		 msoLanguageIDArabic = 1025,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10241</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicSyria = 10241,
+		 msoLanguageIDArabicSyria = 10241,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7169</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicTunisia = 7169,
+		 msoLanguageIDArabicTunisia = 7169,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14337</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicUAE = 14337,
+		 msoLanguageIDArabicUAE = 14337,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9217</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArabicYemen = 9217,
+		 msoLanguageIDArabicYemen = 9217,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1067</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDArmenian = 1067,
+		 msoLanguageIDArmenian = 1067,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1101</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDAssamese = 1101,
+		 msoLanguageIDAssamese = 1101,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2092</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDAzeriCyrillic = 2092,
+		 msoLanguageIDAzeriCyrillic = 2092,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1068</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDAzeriLatin = 1068,
+		 msoLanguageIDAzeriLatin = 1068,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1069</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDBasque = 1069,
+		 msoLanguageIDBasque = 1069,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1059</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDByelorussian = 1059,
+		 msoLanguageIDByelorussian = 1059,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1093</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDBengali = 1093,
+		 msoLanguageIDBengali = 1093,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1026</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDBulgarian = 1026,
+		 msoLanguageIDBulgarian = 1026,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1109</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDBurmese = 1109,
+		 msoLanguageIDBurmese = 1109,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1027</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDCatalan = 1027,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9)]
-		msoLanguageIDChineseHongKong = 3076,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9)]
-		msoLanguageIDChineseMacao = 5124,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSimplifiedChinese = 2052,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDChineseSingapore = 4100,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDTraditionalChinese = 1028,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDCroatian = 1050,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDCzech = 1029,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDDanish = 1030,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDBelgianDutch = 2067,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDDutch = 1043,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishAUS = 3081,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishBelize = 10249,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishCanadian = 4105,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishCaribbean = 9225,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishIreland = 6153,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishJamaica = 8201,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishNewZealand = 5129,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishPhilippines = 13321,
-
-		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
-		 /// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishSouthAfrica = 7177,
+		 msoLanguageIDCatalan = 1027,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 
 		 /// </summary>
+		/// <remarks>3076</remarks>
 		[SupportByLibrary("Office", 9)]
-		msoLanguageIDEnglishTrinidad = 11273,
+		 msoLanguageIDChineseHongKong = 3076,
 
 		 /// <summary>
+		 /// SupportByLibrary Office 9, 
+		 /// </summary>
+		/// <remarks>5124</remarks>
+		[SupportByLibrary("Office", 9)]
+		 msoLanguageIDChineseMacao = 5124,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>2052</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDSimplifiedChinese = 2052,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>4100</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDChineseSingapore = 4100,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>1028</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDTraditionalChinese = 1028,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>1050</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDCroatian = 1050,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>1029</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDCzech = 1029,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>1030</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDDanish = 1030,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>2067</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDBelgianDutch = 2067,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>1043</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDDutch = 1043,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>3081</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDEnglishAUS = 3081,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>10249</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDEnglishBelize = 10249,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>4105</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDEnglishCanadian = 4105,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>9225</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDEnglishCaribbean = 9225,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>6153</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDEnglishIreland = 6153,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>8201</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDEnglishJamaica = 8201,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>5129</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDEnglishNewZealand = 5129,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>13321</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDEnglishPhilippines = 13321,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// </summary>
+		/// <remarks>7177</remarks>
+		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 msoLanguageIDEnglishSouthAfrica = 7177,
+
+		 /// <summary>
+		 /// SupportByLibrary Office 9, 
+		 /// </summary>
+		/// <remarks>11273</remarks>
+		[SupportByLibrary("Office", 9)]
+		 msoLanguageIDEnglishTrinidad = 11273,
+
+		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2057</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishUK = 2057,
+		 msoLanguageIDEnglishUK = 2057,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1033</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishUS = 1033,
+		 msoLanguageIDEnglishUS = 1033,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12297</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEnglishZimbabwe = 12297,
+		 msoLanguageIDEnglishZimbabwe = 12297,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1061</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDEstonian = 1061,
+		 msoLanguageIDEstonian = 1061,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1080</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFaeroese = 1080,
+		 msoLanguageIDFaeroese = 1080,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1065</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFarsi = 1065,
+		 msoLanguageIDFarsi = 1065,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1035</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFinnish = 1035,
+		 msoLanguageIDFinnish = 1035,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2060</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDBelgianFrench = 2060,
+		 msoLanguageIDBelgianFrench = 2060,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11276</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrenchCameroon = 11276,
+		 msoLanguageIDFrenchCameroon = 11276,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3084</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrenchCanadian = 3084,
+		 msoLanguageIDFrenchCanadian = 3084,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12300</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrenchCotedIvoire = 12300,
+		 msoLanguageIDFrenchCotedIvoire = 12300,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1036</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrench = 1036,
+		 msoLanguageIDFrench = 1036,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5132</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrenchLuxembourg = 5132,
+		 msoLanguageIDFrenchLuxembourg = 5132,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13324</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrenchMali = 13324,
+		 msoLanguageIDFrenchMali = 13324,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6156</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrenchMonaco = 6156,
+		 msoLanguageIDFrenchMonaco = 6156,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8204</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrenchReunion = 8204,
+		 msoLanguageIDFrenchReunion = 8204,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10252</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrenchSenegal = 10252,
+		 msoLanguageIDFrenchSenegal = 10252,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4108</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSwissFrench = 4108,
+		 msoLanguageIDSwissFrench = 4108,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7180</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrenchWestIndies = 7180,
+		 msoLanguageIDFrenchWestIndies = 7180,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9228</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrenchZaire = 9228,
+		 msoLanguageIDFrenchZaire = 9228,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1122</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDFrisianNetherlands = 1122,
+		 msoLanguageIDFrisianNetherlands = 1122,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2108</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDGaelicIreland = 2108,
+		 msoLanguageIDGaelicIreland = 2108,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1084</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDGaelicScotland = 1084,
+		 msoLanguageIDGaelicScotland = 1084,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1110</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDGalician = 1110,
+		 msoLanguageIDGalician = 1110,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1079</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDGeorgian = 1079,
+		 msoLanguageIDGeorgian = 1079,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3079</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDGermanAustria = 3079,
+		 msoLanguageIDGermanAustria = 3079,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1031</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDGerman = 1031,
+		 msoLanguageIDGerman = 1031,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5127</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDGermanLiechtenstein = 5127,
+		 msoLanguageIDGermanLiechtenstein = 5127,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4103</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDGermanLuxembourg = 4103,
+		 msoLanguageIDGermanLuxembourg = 4103,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2055</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSwissGerman = 2055,
+		 msoLanguageIDSwissGerman = 2055,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1032</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDGreek = 1032,
+		 msoLanguageIDGreek = 1032,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1095</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDGujarati = 1095,
+		 msoLanguageIDGujarati = 1095,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1037</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDHebrew = 1037,
+		 msoLanguageIDHebrew = 1037,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1081</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDHindi = 1081,
+		 msoLanguageIDHindi = 1081,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1038</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDHungarian = 1038,
+		 msoLanguageIDHungarian = 1038,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1039</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDIcelandic = 1039,
+		 msoLanguageIDIcelandic = 1039,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1057</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDIndonesian = 1057,
+		 msoLanguageIDIndonesian = 1057,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1040</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDItalian = 1040,
+		 msoLanguageIDItalian = 1040,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2064</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSwissItalian = 2064,
+		 msoLanguageIDSwissItalian = 2064,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1041</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDJapanese = 1041,
+		 msoLanguageIDJapanese = 1041,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1099</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDKannada = 1099,
+		 msoLanguageIDKannada = 1099,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1120</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDKashmiri = 1120,
+		 msoLanguageIDKashmiri = 1120,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1087</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDKazakh = 1087,
+		 msoLanguageIDKazakh = 1087,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1107</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDKhmer = 1107,
+		 msoLanguageIDKhmer = 1107,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1088</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDKirghiz = 1088,
+		 msoLanguageIDKirghiz = 1088,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1111</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDKonkani = 1111,
+		 msoLanguageIDKonkani = 1111,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1042</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDKorean = 1042,
+		 msoLanguageIDKorean = 1042,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1108</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDLao = 1108,
+		 msoLanguageIDLao = 1108,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1062</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDLatvian = 1062,
+		 msoLanguageIDLatvian = 1062,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1063</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDLithuanian = 1063,
+		 msoLanguageIDLithuanian = 1063,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1071</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDMacedonian = 1071,
+		 msoLanguageIDMacedonian = 1071,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1086</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDMalaysian = 1086,
+		 msoLanguageIDMalaysian = 1086,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2110</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDMalayBruneiDarussalam = 2110,
+		 msoLanguageIDMalayBruneiDarussalam = 2110,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1100</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDMalayalam = 1100,
+		 msoLanguageIDMalayalam = 1100,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1082</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDMaltese = 1082,
+		 msoLanguageIDMaltese = 1082,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1112</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDManipuri = 1112,
+		 msoLanguageIDManipuri = 1112,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1102</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDMarathi = 1102,
+		 msoLanguageIDMarathi = 1102,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1104</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDMongolian = 1104,
+		 msoLanguageIDMongolian = 1104,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1121</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDNepali = 1121,
+		 msoLanguageIDNepali = 1121,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1044</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDNorwegianBokmol = 1044,
+		 msoLanguageIDNorwegianBokmol = 1044,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2068</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDNorwegianNynorsk = 2068,
+		 msoLanguageIDNorwegianNynorsk = 2068,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1096</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDOriya = 1096,
+		 msoLanguageIDOriya = 1096,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1045</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDPolish = 1045,
+		 msoLanguageIDPolish = 1045,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1046</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDBrazilianPortuguese = 1046,
+		 msoLanguageIDBrazilianPortuguese = 1046,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2070</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDPortuguese = 2070,
+		 msoLanguageIDPortuguese = 2070,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1094</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDPunjabi = 1094,
+		 msoLanguageIDPunjabi = 1094,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1047</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDRhaetoRomanic = 1047,
+		 msoLanguageIDRhaetoRomanic = 1047,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2072</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDRomanianMoldova = 2072,
+		 msoLanguageIDRomanianMoldova = 2072,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1048</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDRomanian = 1048,
+		 msoLanguageIDRomanian = 1048,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2073</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDRussianMoldova = 2073,
+		 msoLanguageIDRussianMoldova = 2073,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1049</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDRussian = 1049,
+		 msoLanguageIDRussian = 1049,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1083</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSamiLappish = 1083,
+		 msoLanguageIDSamiLappish = 1083,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1103</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSanskrit = 1103,
+		 msoLanguageIDSanskrit = 1103,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3098</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSerbianCyrillic = 3098,
+		 msoLanguageIDSerbianCyrillic = 3098,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2074</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSerbianLatin = 2074,
+		 msoLanguageIDSerbianLatin = 2074,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1072</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSesotho = 1072,
+		 msoLanguageIDSesotho = 1072,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1113</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSindhi = 1113,
+		 msoLanguageIDSindhi = 1113,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1051</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSlovak = 1051,
+		 msoLanguageIDSlovak = 1051,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1060</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSlovenian = 1060,
+		 msoLanguageIDSlovenian = 1060,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1070</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSorbian = 1070,
+		 msoLanguageIDSorbian = 1070,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11274</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishArgentina = 11274,
+		 msoLanguageIDSpanishArgentina = 11274,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16394</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishBolivia = 16394,
+		 msoLanguageIDSpanishBolivia = 16394,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13322</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishChile = 13322,
+		 msoLanguageIDSpanishChile = 13322,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9226</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishColombia = 9226,
+		 msoLanguageIDSpanishColombia = 9226,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5130</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishCostaRica = 5130,
+		 msoLanguageIDSpanishCostaRica = 5130,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7178</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishDominicanRepublic = 7178,
+		 msoLanguageIDSpanishDominicanRepublic = 7178,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12298</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishEcuador = 12298,
+		 msoLanguageIDSpanishEcuador = 12298,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>17418</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishElSalvador = 17418,
+		 msoLanguageIDSpanishElSalvador = 17418,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4106</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishGuatemala = 4106,
+		 msoLanguageIDSpanishGuatemala = 4106,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>18442</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishHonduras = 18442,
+		 msoLanguageIDSpanishHonduras = 18442,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2058</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDMexicanSpanish = 2058,
+		 msoLanguageIDMexicanSpanish = 2058,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>19466</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishNicaragua = 19466,
+		 msoLanguageIDSpanishNicaragua = 19466,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6154</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishPanama = 6154,
+		 msoLanguageIDSpanishPanama = 6154,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15370</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishParaguay = 15370,
+		 msoLanguageIDSpanishParaguay = 15370,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10250</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishPeru = 10250,
+		 msoLanguageIDSpanishPeru = 10250,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>20490</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishPuertoRico = 20490,
+		 msoLanguageIDSpanishPuertoRico = 20490,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3082</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishModernSort = 3082,
+		 msoLanguageIDSpanishModernSort = 3082,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1034</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanish = 1034,
+		 msoLanguageIDSpanish = 1034,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14346</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishUruguay = 14346,
+		 msoLanguageIDSpanishUruguay = 14346,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8202</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSpanishVenezuela = 8202,
+		 msoLanguageIDSpanishVenezuela = 8202,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1072</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSutu = 1072,
+		 msoLanguageIDSutu = 1072,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1089</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSwahili = 1089,
+		 msoLanguageIDSwahili = 1089,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2077</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSwedishFinland = 2077,
+		 msoLanguageIDSwedishFinland = 2077,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1053</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDSwedish = 1053,
+		 msoLanguageIDSwedish = 1053,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1064</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDTajik = 1064,
+		 msoLanguageIDTajik = 1064,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1097</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDTamil = 1097,
+		 msoLanguageIDTamil = 1097,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1092</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDTatar = 1092,
+		 msoLanguageIDTatar = 1092,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1098</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDTelugu = 1098,
+		 msoLanguageIDTelugu = 1098,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1054</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDThai = 1054,
+		 msoLanguageIDThai = 1054,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1105</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDTibetan = 1105,
+		 msoLanguageIDTibetan = 1105,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1073</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDTsonga = 1073,
+		 msoLanguageIDTsonga = 1073,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1074</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDTswana = 1074,
+		 msoLanguageIDTswana = 1074,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1055</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDTurkish = 1055,
+		 msoLanguageIDTurkish = 1055,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1090</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDTurkmen = 1090,
+		 msoLanguageIDTurkmen = 1090,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1058</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDUkrainian = 1058,
+		 msoLanguageIDUkrainian = 1058,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1056</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDUrdu = 1056,
+		 msoLanguageIDUrdu = 1056,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2115</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDUzbekCyrillic = 2115,
+		 msoLanguageIDUzbekCyrillic = 2115,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1091</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDUzbekLatin = 1091,
+		 msoLanguageIDUzbekLatin = 1091,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1075</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDVenda = 1075,
+		 msoLanguageIDVenda = 1075,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1066</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDVietnamese = 1066,
+		 msoLanguageIDVietnamese = 1066,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1106</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDWelsh = 1106,
+		 msoLanguageIDWelsh = 1106,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1076</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDXhosa = 1076,
+		 msoLanguageIDXhosa = 1076,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1077</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLanguageIDZulu = 1077,
+		 msoLanguageIDZulu = 1077,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1118</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDAmharic = 1118,
+		 msoLanguageIDAmharic = 1118,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3076</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDChineseHongKongSAR = 3076,
+		 msoLanguageIDChineseHongKongSAR = 3076,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5124</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDChineseMacaoSAR = 5124,
+		 msoLanguageIDChineseMacaoSAR = 5124,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1116</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDCherokee = 1116,
+		 msoLanguageIDCherokee = 1116,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1125</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDDivehi = 1125,
+		 msoLanguageIDDivehi = 1125,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2129</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDDzongkhaBhutan = 2129,
+		 msoLanguageIDDzongkhaBhutan = 2129,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1126</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDEdo = 1126,
+		 msoLanguageIDEdo = 1126,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14345</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDEnglishIndonesia = 14345,
+		 msoLanguageIDEnglishIndonesia = 14345,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11273</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDEnglishTrinidadTobago = 11273,
+		 msoLanguageIDEnglishTrinidadTobago = 11273,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1124</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDFilipino = 1124,
+		 msoLanguageIDFilipino = 1124,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15372</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDFrenchHaiti = 15372,
+		 msoLanguageIDFrenchHaiti = 15372,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14348</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDFrenchMorocco = 14348,
+		 msoLanguageIDFrenchMorocco = 14348,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1127</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDFulfulde = 1127,
+		 msoLanguageIDFulfulde = 1127,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1140</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDGuarani = 1140,
+		 msoLanguageIDGuarani = 1140,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1128</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDHausa = 1128,
+		 msoLanguageIDHausa = 1128,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1141</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDHawaiian = 1141,
+		 msoLanguageIDHawaiian = 1141,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1129</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDIbibio = 1129,
+		 msoLanguageIDIbibio = 1129,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1136</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDIgbo = 1136,
+		 msoLanguageIDIgbo = 1136,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1117</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDInuktitut = 1117,
+		 msoLanguageIDInuktitut = 1117,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1137</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDKanuri = 1137,
+		 msoLanguageIDKanuri = 1137,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2144</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDKashmiriDevanagari = 2144,
+		 msoLanguageIDKashmiriDevanagari = 2144,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1088</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDKyrgyz = 1088,
+		 msoLanguageIDKyrgyz = 1088,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1142</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDLatin = 1142,
+		 msoLanguageIDLatin = 1142,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1138</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDOromo = 1138,
+		 msoLanguageIDOromo = 1138,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1123</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDPashto = 1123,
+		 msoLanguageIDPashto = 1123,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2137</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDSindhiPakistan = 2137,
+		 msoLanguageIDSindhiPakistan = 2137,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1115</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDSinhalese = 1115,
+		 msoLanguageIDSinhalese = 1115,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1143</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDSomali = 1143,
+		 msoLanguageIDSomali = 1143,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1114</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDSyriac = 1114,
+		 msoLanguageIDSyriac = 1114,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1119</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDTamazight = 1119,
+		 msoLanguageIDTamazight = 1119,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2143</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDTamazightLatin = 2143,
+		 msoLanguageIDTamazightLatin = 2143,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1139</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDTigrignaEthiopic = 1139,
+		 msoLanguageIDTigrignaEthiopic = 1139,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2163</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDTigrignaEritrea = 2163,
+		 msoLanguageIDTigrignaEritrea = 2163,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1144</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDYi = 1144,
+		 msoLanguageIDYi = 1144,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1085</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDYiddish = 1085,
+		 msoLanguageIDYiddish = 1085,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1130</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoLanguageIDYoruba = 1130,
+		 msoLanguageIDYoruba = 1130,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4122</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoLanguageIDBosnian = 4122,
+		 msoLanguageIDBosnian = 4122,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1153</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoLanguageIDMaori = 1153,
+		 msoLanguageIDMaori = 1153,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1131</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoLanguageIDQuechuaBolivia = 1131,
+		 msoLanguageIDQuechuaBolivia = 1131,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2155</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoLanguageIDQuechuaEcuador = 2155,
+		 msoLanguageIDQuechuaEcuador = 2155,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3179</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoLanguageIDQuechuaPeru = 3179,
+		 msoLanguageIDQuechuaPeru = 3179,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1132</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoLanguageIDSepedi = 1132,
+		 msoLanguageIDSepedi = 1132,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>8218</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLanguageIDBosnianBosniaHerzegovinaCyrillic = 8218,
+		 msoLanguageIDBosnianBosniaHerzegovinaCyrillic = 8218,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>5146</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLanguageIDBosnianBosniaHerzegovinaLatin = 5146,
+		 msoLanguageIDBosnianBosniaHerzegovinaLatin = 5146,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>9228</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLanguageIDFrenchCongoDRC = 9228,
+		 msoLanguageIDFrenchCongoDRC = 9228,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>1071</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLanguageIDMacedonianFYROM = 1071,
+		 msoLanguageIDMacedonianFYROM = 1071,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>7194</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLanguageIDSerbianBosniaHerzegovinaCyrillic = 7194,
+		 msoLanguageIDSerbianBosniaHerzegovinaCyrillic = 7194,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>6170</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoLanguageIDSerbianBosniaHerzegovinaLatin = 6170
+		 msoLanguageIDSerbianBosniaHerzegovinaLatin = 6170
 	}
 }

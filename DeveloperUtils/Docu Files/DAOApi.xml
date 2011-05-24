@@ -874,46 +874,55 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DatabaseTypeEnum.dbEncrypt">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DatabaseTypeEnum.dbDecrypt">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DatabaseTypeEnum.dbVersion11">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DatabaseTypeEnum.dbVersion20">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DatabaseTypeEnum.dbVersion30">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>32</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DatabaseTypeEnum.dbVersion40">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>64</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DatabaseTypeEnum.dbVersion120">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>128</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DatabaseTypeEnum.dbVersion140">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>256</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.QueryDefTypeEnum">
             <summary>
@@ -924,66 +933,79 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQProcedure">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>224</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQAction">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>240</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQCrosstab">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQDelete">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>32</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQUpdate">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>48</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQAppend">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>64</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQMakeTable">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>80</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQDDL">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>96</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQSQLPassThrough">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>112</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQSetOperation">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>128</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQSPTBulk">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>144</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefTypeEnum.dbQCompound">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>160</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.User">
             <summary>
@@ -1592,11 +1614,13 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.QueryDefStateEnum.dbQUnprepare">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.IndexFields">
             <summary>
@@ -1640,11 +1664,13 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.WorkspaceTypeEnum.dbUseJet">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.SynchronizeTypeEnum">
             <summary>
@@ -1655,21 +1681,25 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SynchronizeTypeEnum.dbRepImportChanges">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SynchronizeTypeEnum.dbRepImpExpChanges">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SynchronizeTypeEnum.dbRepSyncInternet">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.DataTypeEnum">
             <summary>
@@ -1680,151 +1710,181 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbByte">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbInteger">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbLong">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbCurrency">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbSingle">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>6</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbDouble">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>7</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbDate">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbBinary">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>9</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbText">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>10</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbLongBinary">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>11</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbMemo">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>12</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbGUID">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>15</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbBigInt">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbVarBinary">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>17</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbChar">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>18</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbNumeric">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>19</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbDecimal">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>20</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbFloat">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>21</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbTime">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>22</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbTimeStamp">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>23</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbAttachment">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>101</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbComplexByte">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>102</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbComplexInteger">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>103</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbComplexLong">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>104</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbComplexSingle">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>105</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbComplexDouble">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>106</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbComplexGUID">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>107</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbComplexDecimal">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>108</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DataTypeEnum.dbComplexText">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>109</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Group">
             <summary>
@@ -2193,16 +2253,19 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.EditModeEnum.dbEditInProgress">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.EditModeEnum.dbEditAdd">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Error">
             <summary>
@@ -2545,136 +2608,163 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1024</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortArabic">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1025</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortCyrillic">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1049</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortCzech">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1029</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortDutch">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1043</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortGeneral">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1033</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortGreek">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1032</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortHebrew">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1037</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortHungarian">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1038</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortIcelandic">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1039</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortNorwdan">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1030</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortPDXIntl">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1033</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortPDXNor">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1030</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortPDXSwe">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1053</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortPolish">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1045</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortSpanish">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1034</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortSwedFin">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1053</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortTurkish">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1055</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortJapanese">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1041</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortChineseSimplified">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2052</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortChineseTraditional">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1028</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortKorean">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1042</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortThai">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1054</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortSlovenian">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1060</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortUndefined">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortJapaneseRadicalStrokeCount">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>263185</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CollatingOrderEnum.dbSortHindi">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>1081</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Databases">
             <summary>
@@ -2708,26 +2798,31 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums._DAOSuppHelp.KeepLocal">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums._DAOSuppHelp.Replicable">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums._DAOSuppHelp.ReplicableBool">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums._DAOSuppHelp.V1xNullBehavior">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.CommitTransOptionsEnum">
             <summary>
@@ -2738,6 +2833,7 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.SetOptionEnum">
             <summary>
@@ -2748,71 +2844,85 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>6</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbLockRetry">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>57</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbMaxBufferSize">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbUserCommitSync">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>58</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbImplicitCommitSync">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>59</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbExclusiveAsyncDelay">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>60</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbSharedAsyncDelay">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>61</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbMaxLocksPerFile">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>62</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbLockDelay">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>63</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbRecycleLVs">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>65</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbFlushTransactionTimeout">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>66</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbPasswordEncryptionProvider">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>80</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbPasswordEncryptionAlgorithm">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>81</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.SetOptionEnum.dbPasswordEncryptionKeyLength">
             <summary>
             SupportByLibrary DAO 12, 
             </summary>
+            <remarks>82</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.RecordsetOptionEnum">
             <summary>
@@ -2823,61 +2933,73 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetOptionEnum.dbDenyRead">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetOptionEnum.dbReadOnly">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetOptionEnum.dbAppendOnly">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetOptionEnum.dbInconsistent">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetOptionEnum.dbConsistent">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>32</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetOptionEnum.dbSQLPassThrough">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>64</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetOptionEnum.dbFailOnError">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>128</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetOptionEnum.dbForwardOnly">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>256</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetOptionEnum.dbSeeChanges">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>512</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetOptionEnum.dbRunAsync">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1024</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetOptionEnum.dbExecDirect">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2048</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.PrivDBEngine">
             <summary>
@@ -3143,11 +3265,13 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.ReplicaTypeEnum.dbRepMakePartial">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.RelationAttributeEnum">
             <summary>
@@ -3158,36 +3282,43 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RelationAttributeEnum.dbRelationDontEnforce">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RelationAttributeEnum.dbRelationInherited">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RelationAttributeEnum.dbRelationUpdateCascade">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>256</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RelationAttributeEnum.dbRelationDeleteCascade">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4096</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RelationAttributeEnum.dbRelationLeft">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>16777216</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RelationAttributeEnum.dbRelationRight">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>33554432</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.FieldAttributeEnum">
             <summary>
@@ -3198,36 +3329,43 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.FieldAttributeEnum.dbVariableField">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.FieldAttributeEnum.dbAutoIncrField">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.FieldAttributeEnum.dbUpdatableField">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>32</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.FieldAttributeEnum.dbSystemField">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>8192</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.FieldAttributeEnum.dbHyperlinkField">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>32768</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.FieldAttributeEnum.dbDescending">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Recordsets">
             <summary>
@@ -3294,86 +3432,103 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecFullAccess">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1048575</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecDelete">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>65536</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecReadSec">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>131072</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecWriteSec">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>262144</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecWriteOwner">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>524288</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecDBCreate">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecDBOpen">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecDBExclusive">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecDBAdmin">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecCreate">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecReadDef">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecWriteDef">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>65548</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecRetrieveData">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>20</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecInsertData">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>32</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecReplaceData">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>64</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.PermissionEnum.dbSecDeleteData">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>128</remarks>
         </member>
         <member name="T:DAOApi.Utils.ProjectInfo">
             <summary>
@@ -3577,11 +3732,13 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.IdleEnum.dbRefreshCache">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.TableDefAttributeEnum">
             <summary>
@@ -3592,31 +3749,37 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>65536</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.TableDefAttributeEnum.dbAttachSavePWD">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>131072</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.TableDefAttributeEnum.dbSystemObject">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>-2147483646</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.TableDefAttributeEnum.dbAttachedTable">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1073741824</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.TableDefAttributeEnum.dbAttachedODBC">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>536870912</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.TableDefAttributeEnum.dbHiddenObject">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.DAOApi._Index">
             <summary>
@@ -4040,31 +4203,37 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.UpdateCriteriaEnum.dbCriteriaModValues">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.UpdateCriteriaEnum.dbCriteriaAllCols">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.UpdateCriteriaEnum.dbCriteriaTimestamp">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.UpdateCriteriaEnum.dbCriteriaDeleteInsert">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.UpdateCriteriaEnum.dbCriteriaUpdate">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>32</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.LockTypeEnum">
             <summary>
@@ -4075,21 +4244,25 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.LockTypeEnum.dbOptimistic">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.LockTypeEnum.dbOptimisticValue">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.LockTypeEnum.dbOptimisticBatch">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.RecordsetTypeEnum">
             <summary>
@@ -4100,26 +4273,31 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetTypeEnum.dbOpenDynaset">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetTypeEnum.dbOpenSnapshot">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetTypeEnum.dbOpenForwardOnly">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordsetTypeEnum.dbOpenDynamic">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.UpdateTypeEnum">
             <summary>
@@ -4130,16 +4308,19 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.UpdateTypeEnum.dbUpdateRegular">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.UpdateTypeEnum.dbUpdateCurrentRecord">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.ParameterDirectionEnum">
             <summary>
@@ -4150,21 +4331,25 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.ParameterDirectionEnum.dbParamOutput">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.ParameterDirectionEnum.dbParamInputOutput">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.ParameterDirectionEnum.dbParamReturnValue">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.CursorDriverEnum">
             <summary>
@@ -4175,26 +4360,31 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CursorDriverEnum.dbUseODBCCursor">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CursorDriverEnum.dbUseServerCursor">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CursorDriverEnum.dbUseClientBatchCursor">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.CursorDriverEnum.dbUseNoCursor">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Index">
             <summary>
@@ -4296,26 +4486,31 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordStatusEnum.dbRecordModified">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordStatusEnum.dbRecordNew">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordStatusEnum.dbRecordDeleted">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.RecordStatusEnum.dbRecordDBDeleted">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Enums.DriverPromptEnum">
             <summary>
@@ -4326,21 +4521,25 @@
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DriverPromptEnum.dbDriverNoPrompt">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DriverPromptEnum.dbDriverComplete">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.DAOApi.Enums.DriverPromptEnum.dbDriverCompleteRequired">
             <summary>
             SupportByLibrary DAO 6, 12, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="T:NetOffice.DAOApi.Constants.LanguageConstants">
             <summary>

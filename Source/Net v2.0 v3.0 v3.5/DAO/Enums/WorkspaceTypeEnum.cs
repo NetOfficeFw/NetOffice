@@ -13,13 +13,15 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbUseODBC = 1,
+		 dbUseODBC = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbUseJet = 2
+		 dbUseJet = 2
 	}
 }

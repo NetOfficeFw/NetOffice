@@ -13,19 +13,22 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acToolbarYes = 0,
+		 acToolbarYes = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acToolbarWhereApprop = 1,
+		 acToolbarWhereApprop = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acToolbarNo = 2
+		 acToolbarNo = 2
 	}
 }

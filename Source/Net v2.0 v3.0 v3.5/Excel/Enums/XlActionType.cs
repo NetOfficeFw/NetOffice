@@ -13,25 +13,29 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlActionTypeUrl = 1,
+		 xlActionTypeUrl = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlActionTypeRowset = 16,
+		 xlActionTypeRowset = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>128</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlActionTypeReport = 128,
+		 xlActionTypeReport = 128,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>256</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlActionTypeDrillthrough = 256
+		 xlActionTypeDrillthrough = 256
 	}
 }

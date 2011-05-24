@@ -13,19 +13,22 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppFarEastLineBreakLevelNormal = 1,
+		 ppFarEastLineBreakLevelNormal = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppFarEastLineBreakLevelStrict = 2,
+		 ppFarEastLineBreakLevelStrict = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppFarEastLineBreakLevelCustom = 3
+		 ppFarEastLineBreakLevelCustom = 3
 	}
 }

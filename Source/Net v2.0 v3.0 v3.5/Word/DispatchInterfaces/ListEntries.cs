@@ -132,15 +132,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="Index">ref optional object Index</param>
+		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.ListEntry Add(string name, ref object index)
+		public NetOffice.WordApi.ListEntry Add(string name, object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, index);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.ListEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ListEntry;
-			index = (object)paramsArray[1];
 			return newObject;
 		}
 

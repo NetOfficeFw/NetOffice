@@ -13,25 +13,29 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppSelectionNone = 0,
+		 ppSelectionNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppSelectionSlides = 1,
+		 ppSelectionSlides = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppSelectionShapes = 2,
+		 ppSelectionShapes = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppSelectionText = 3
+		 ppSelectionText = 3
 	}
 }

@@ -132,15 +132,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="DotMatrix">ref optional object DotMatrix</param>
+		/// <param name="DotMatrix">optional object DotMatrix</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.CustomLabel Add(string name, ref object dotMatrix)
+		public NetOffice.WordApi.CustomLabel Add(string name, object dotMatrix)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, dotMatrix);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.CustomLabel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.CustomLabel;
-			dotMatrix = (object)paramsArray[1];
 			return newObject;
 		}
 

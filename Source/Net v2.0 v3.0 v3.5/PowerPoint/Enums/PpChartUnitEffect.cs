@@ -13,37 +13,43 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateChartMixed = -2,
+		 ppAnimateChartMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateBySeries = 1,
+		 ppAnimateBySeries = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateByCategory = 2,
+		 ppAnimateByCategory = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateBySeriesElements = 3,
+		 ppAnimateBySeriesElements = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateByCategoryElements = 4,
+		 ppAnimateByCategoryElements = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		ppAnimateChartAllAtOnce = 5
+		 ppAnimateChartAllAtOnce = 5
 	}
 }

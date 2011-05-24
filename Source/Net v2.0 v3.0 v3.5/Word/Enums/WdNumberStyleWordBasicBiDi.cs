@@ -13,49 +13,57 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>49</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdListNumberStyleBidi1 = 49,
+		 wdListNumberStyleBidi1 = 49,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>50</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdListNumberStyleBidi2 = 50,
+		 wdListNumberStyleBidi2 = 50,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>49</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdCaptionNumberStyleBidiLetter1 = 49,
+		 wdCaptionNumberStyleBidiLetter1 = 49,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>50</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdCaptionNumberStyleBidiLetter2 = 50,
+		 wdCaptionNumberStyleBidiLetter2 = 50,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>49</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdNoteNumberStyleBidiLetter1 = 49,
+		 wdNoteNumberStyleBidiLetter1 = 49,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>50</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdNoteNumberStyleBidiLetter2 = 50,
+		 wdNoteNumberStyleBidiLetter2 = 50,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>49</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdPageNumberStyleBidiLetter1 = 49,
+		 wdPageNumberStyleBidiLetter1 = 49,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>50</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdPageNumberStyleBidiLetter2 = 50
+		 wdPageNumberStyleBidiLetter2 = 50
 	}
 }

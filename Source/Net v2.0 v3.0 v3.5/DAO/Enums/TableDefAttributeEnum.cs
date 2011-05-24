@@ -13,37 +13,43 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>65536</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbAttachExclusive = 65536,
+		 dbAttachExclusive = 65536,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>131072</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbAttachSavePWD = 131072,
+		 dbAttachSavePWD = 131072,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>-2147483646</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbSystemObject = -2147483646,
+		 dbSystemObject = -2147483646,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1073741824</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbAttachedTable = 1073741824,
+		 dbAttachedTable = 1073741824,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>536870912</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbAttachedODBC = 536870912,
+		 dbAttachedODBC = 536870912,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbHiddenObject = 1
+		 dbHiddenObject = 1
 	}
 }

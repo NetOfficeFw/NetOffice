@@ -13,13 +13,15 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlThreadModeAutomatic = 0,
+		 xlThreadModeAutomatic = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlThreadModeManual = 1
+		 xlThreadModeManual = 1
 	}
 }

@@ -13,31 +13,36 @@ namespace NetOffice.ADODBApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adParamUnknown = 0,
+		 adParamUnknown = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adParamInput = 1,
+		 adParamInput = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adParamOutput = 2,
+		 adParamOutput = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adParamInputOutput = 3,
+		 adParamInputOutput = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adParamReturnValue = 4
+		 adParamReturnValue = 4
 	}
 }

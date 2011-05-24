@@ -13,25 +13,29 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olVerticalLayoutAlignTop = 0,
+		 olVerticalLayoutAlignTop = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olVerticalLayoutAlignMiddle = 1,
+		 olVerticalLayoutAlignMiddle = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olVerticalLayoutAlignBottom = 2,
+		 olVerticalLayoutAlignBottom = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olVerticalLayoutGrow = 3
+		 olVerticalLayoutGrow = 3
 	}
 }

@@ -13,13 +13,15 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 14)]
-		xlDoNotRepeatLabels = 1,
+		 xlDoNotRepeatLabels = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 14)]
-		xlRepeatLabels = 2
+		 xlRepeatLabels = 2
 	}
 }

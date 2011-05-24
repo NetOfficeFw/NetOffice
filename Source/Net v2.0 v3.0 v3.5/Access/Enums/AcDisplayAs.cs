@@ -13,19 +13,22 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acDisplayAsImageIcon = 0,
+		 acDisplayAsImageIcon = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acDisplayAsIcon = 1,
+		 acDisplayAsIcon = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acDisplayAsPaperclip = 2
+		 acDisplayAsPaperclip = 2
 	}
 }

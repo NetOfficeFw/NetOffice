@@ -13,19 +13,22 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlCategoryScale = 2,
+		 xlCategoryScale = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlTimeScale = 3,
+		 xlTimeScale = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4105</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlAutomaticScale = -4105
+		 xlAutomaticScale = -4105
 	}
 }

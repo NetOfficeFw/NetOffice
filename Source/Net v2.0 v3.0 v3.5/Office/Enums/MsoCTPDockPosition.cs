@@ -13,31 +13,36 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCTPDockPositionLeft = 0,
+		 msoCTPDockPositionLeft = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCTPDockPositionTop = 1,
+		 msoCTPDockPositionTop = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCTPDockPositionRight = 2,
+		 msoCTPDockPositionRight = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCTPDockPositionBottom = 3,
+		 msoCTPDockPositionBottom = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCTPDockPositionFloating = 4
+		 msoCTPDockPositionFloating = 4
 	}
 }

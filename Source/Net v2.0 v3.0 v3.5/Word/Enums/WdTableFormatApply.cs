@@ -13,55 +13,64 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdTableFormatApplyBorders = 1,
+		 wdTableFormatApplyBorders = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdTableFormatApplyShading = 2,
+		 wdTableFormatApplyShading = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdTableFormatApplyFont = 4,
+		 wdTableFormatApplyFont = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdTableFormatApplyColor = 8,
+		 wdTableFormatApplyColor = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdTableFormatApplyAutoFit = 16,
+		 wdTableFormatApplyAutoFit = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdTableFormatApplyHeadingRows = 32,
+		 wdTableFormatApplyHeadingRows = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>64</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdTableFormatApplyLastRow = 64,
+		 wdTableFormatApplyLastRow = 64,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>128</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdTableFormatApplyFirstColumn = 128,
+		 wdTableFormatApplyFirstColumn = 128,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>256</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdTableFormatApplyLastColumn = 256
+		 wdTableFormatApplyLastColumn = 256
 	}
 }

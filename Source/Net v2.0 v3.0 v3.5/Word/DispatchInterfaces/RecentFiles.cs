@@ -150,32 +150,27 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Document">ref object Document</param>
-		/// <param name="ReadOnly">ref optional object ReadOnly</param>
+		/// <param name="Document">object Document</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.RecentFile Add(ref object document, ref object readOnly)
+		public NetOffice.WordApi.RecentFile Add(object document, object readOnly)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(document, readOnly);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.RecentFile newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.RecentFile;
-			document = (object)paramsArray[0];
-			readOnly = (object)paramsArray[1];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Document">ref object Document</param>
+		/// <param name="Document">object Document</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.RecentFile Add(ref object document)
+		public NetOffice.WordApi.RecentFile Add(object document)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(document);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.RecentFile newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.RecentFile;
-			document = (object)paramsArray[0];
 			return newObject;
 		}
 

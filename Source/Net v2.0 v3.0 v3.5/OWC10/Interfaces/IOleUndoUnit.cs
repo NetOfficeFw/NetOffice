@@ -66,14 +66,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="pbstr">ref string pbstr</param>
+		/// <param name="pbstr">string pbstr</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetDescription(ref string pbstr)
+		public Int32 GetDescription(string pbstr)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstr);
 			object returnItem = Invoker.MethodReturn(this, "GetDescription", paramsArray);
-			pbstr = (string)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
@@ -81,14 +79,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pClsid">Guid pClsid</param>
-		/// <param name="plID">ref Int32 plID</param>
+		/// <param name="plID">Int32 plID</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetUnitType(Guid pClsid, ref Int32 plID)
+		public Int32 GetUnitType(Guid pClsid, Int32 plID)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pClsid, plID);
 			object returnItem = Invoker.MethodReturn(this, "GetUnitType", paramsArray);
-			plID = (Int32)paramsArray[1];
 			return (Int32)returnItem;
 		}
 

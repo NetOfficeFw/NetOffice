@@ -13,49 +13,57 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dscNone = 0,
+		 dscNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dscSum = 1,
+		 dscSum = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dscAvg = 2,
+		 dscAvg = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dscMin = 3,
+		 dscMin = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dscMax = 4,
+		 dscMax = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dscCount = 5,
+		 dscCount = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dscAny = 6,
+		 dscAny = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		dscStdev = 7
+		 dscStdev = 7
 	}
 }

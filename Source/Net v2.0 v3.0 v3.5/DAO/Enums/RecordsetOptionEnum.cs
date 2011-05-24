@@ -13,73 +13,85 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbDenyWrite = 1,
+		 dbDenyWrite = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbDenyRead = 2,
+		 dbDenyRead = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbReadOnly = 4,
+		 dbReadOnly = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbAppendOnly = 8,
+		 dbAppendOnly = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbInconsistent = 16,
+		 dbInconsistent = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbConsistent = 32,
+		 dbConsistent = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>64</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbSQLPassThrough = 64,
+		 dbSQLPassThrough = 64,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>128</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbFailOnError = 128,
+		 dbFailOnError = 128,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>256</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbForwardOnly = 256,
+		 dbForwardOnly = 256,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>512</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbSeeChanges = 512,
+		 dbSeeChanges = 512,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1024</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbRunAsync = 1024,
+		 dbRunAsync = 1024,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>2048</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbExecDirect = 2048
+		 dbExecDirect = 2048
 	}
 }

@@ -13,7 +13,8 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbForceOSFlush = 1
+		 dbForceOSFlush = 1
 	}
 }

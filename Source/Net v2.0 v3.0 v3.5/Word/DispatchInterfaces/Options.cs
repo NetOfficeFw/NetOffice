@@ -4639,24 +4639,17 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="CommandKeyHelp">ref optional object CommandKeyHelp</param>
-		/// <param name="DocNavigationKeys">ref optional object DocNavigationKeys</param>
-		/// <param name="MouseSimulation">ref optional object MouseSimulation</param>
-		/// <param name="DemoGuidance">ref optional object DemoGuidance</param>
-		/// <param name="DemoSpeed">ref optional object DemoSpeed</param>
-		/// <param name="HelpType">ref optional object HelpType</param>
+		/// <param name="CommandKeyHelp">optional object CommandKeyHelp</param>
+		/// <param name="DocNavigationKeys">optional object DocNavigationKeys</param>
+		/// <param name="MouseSimulation">optional object MouseSimulation</param>
+		/// <param name="DemoGuidance">optional object DemoGuidance</param>
+		/// <param name="DemoSpeed">optional object DemoSpeed</param>
+		/// <param name="HelpType">optional object HelpType</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void SetWPHelpOptions(ref object commandKeyHelp, ref object docNavigationKeys, ref object mouseSimulation, ref object demoGuidance, ref object demoSpeed, ref object helpType)
+		public void SetWPHelpOptions(object commandKeyHelp, object docNavigationKeys, object mouseSimulation, object demoGuidance, object demoSpeed, object helpType)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(commandKeyHelp, docNavigationKeys, mouseSimulation, demoGuidance, demoSpeed, helpType);
-			Invoker.Method(this, "SetWPHelpOptions", paramsArray, modifiers);
-			commandKeyHelp = (object)paramsArray[0];
-			docNavigationKeys = (object)paramsArray[1];
-			mouseSimulation = (object)paramsArray[2];
-			demoGuidance = (object)paramsArray[3];
-			demoSpeed = (object)paramsArray[4];
-			helpType = (object)paramsArray[5];
+			Invoker.Method(this, "SetWPHelpOptions", paramsArray);
 		}
 
 		/// <summary>

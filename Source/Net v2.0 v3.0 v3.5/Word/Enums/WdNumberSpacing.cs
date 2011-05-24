@@ -13,19 +13,22 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 14)]
-		wdNumberSpacingDefault = 0,
+		 wdNumberSpacingDefault = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 14)]
-		wdNumberSpacingProportional = 1,
+		 wdNumberSpacingProportional = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 14)]
-		wdNumberSpacingTabular = 2
+		 wdNumberSpacingTabular = 2
 	}
 }

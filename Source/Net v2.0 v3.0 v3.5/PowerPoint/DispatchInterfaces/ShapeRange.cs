@@ -1400,17 +1400,14 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="maxPointsInBuffer">Int32 maxPointsInBuffer</param>
-		/// <param name="pPoints">ref Single pPoints</param>
-		/// <param name="numPointsInPolygon">ref Int32 numPointsInPolygon</param>
+		/// <param name="pPoints">Single pPoints</param>
+		/// <param name="numPointsInPolygon">Int32 numPointsInPolygon</param>
 		/// <param name="IsOpen">NetOffice.OfficeApi.Enums.MsoTriState IsOpen</param>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public void GetPolygonalRepresentation(Int32 maxPointsInBuffer, ref Single pPoints, ref Int32 numPointsInPolygon, NetOffice.OfficeApi.Enums.MsoTriState isOpen)
+		public void GetPolygonalRepresentation(Int32 maxPointsInBuffer, Single pPoints, Int32 numPointsInPolygon, NetOffice.OfficeApi.Enums.MsoTriState isOpen)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(maxPointsInBuffer, pPoints, numPointsInPolygon, isOpen);
-			Invoker.Method(this, "GetPolygonalRepresentation", paramsArray, modifiers);
-			pPoints = (Single)paramsArray[1];
-			numPointsInPolygon = (Int32)paramsArray[2];
+			Invoker.Method(this, "GetPolygonalRepresentation", paramsArray);
 		}
 
 		/// <summary>

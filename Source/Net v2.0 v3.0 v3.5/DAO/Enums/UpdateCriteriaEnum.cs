@@ -13,37 +13,43 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbCriteriaKey = 1,
+		 dbCriteriaKey = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbCriteriaModValues = 2,
+		 dbCriteriaModValues = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbCriteriaAllCols = 4,
+		 dbCriteriaAllCols = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbCriteriaTimestamp = 8,
+		 dbCriteriaTimestamp = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbCriteriaDeleteInsert = 16,
+		 dbCriteriaDeleteInsert = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbCriteriaUpdate = 32
+		 dbCriteriaUpdate = 32
 	}
 }

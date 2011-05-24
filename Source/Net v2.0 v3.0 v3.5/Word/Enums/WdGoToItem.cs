@@ -13,103 +13,120 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-1</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToBookmark = -1,
+		 wdGoToBookmark = -1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToSection = 0,
+		 wdGoToSection = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToPage = 1,
+		 wdGoToPage = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToTable = 2,
+		 wdGoToTable = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToLine = 3,
+		 wdGoToLine = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToFootnote = 4,
+		 wdGoToFootnote = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToEndnote = 5,
+		 wdGoToEndnote = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToComment = 6,
+		 wdGoToComment = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToField = 7,
+		 wdGoToField = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToGraphic = 8,
+		 wdGoToGraphic = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToObject = 9,
+		 wdGoToObject = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToEquation = 10,
+		 wdGoToEquation = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToHeading = 11,
+		 wdGoToHeading = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToPercent = 12,
+		 wdGoToPercent = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToSpellingError = 13,
+		 wdGoToSpellingError = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToGrammaticalError = 14,
+		 wdGoToGrammaticalError = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdGoToProofreadingError = 15
+		 wdGoToProofreadingError = 15
 	}
 }

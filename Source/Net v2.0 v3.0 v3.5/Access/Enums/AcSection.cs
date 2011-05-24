@@ -13,55 +13,64 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acDetail = 0,
+		 acDetail = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acHeader = 1,
+		 acHeader = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acFooter = 2,
+		 acFooter = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acPageHeader = 3,
+		 acPageHeader = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acPageFooter = 4,
+		 acPageFooter = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acGroupLevel1Header = 5,
+		 acGroupLevel1Header = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acGroupLevel1Footer = 6,
+		 acGroupLevel1Footer = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acGroupLevel2Header = 7,
+		 acGroupLevel2Header = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acGroupLevel2Footer = 8
+		 acGroupLevel2Footer = 8
 	}
 }

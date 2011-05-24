@@ -13,19 +13,22 @@ namespace NetOffice.ADODBApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("ADODB", 2.5)]
-		adLF = 10,
+		 adLF = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("ADODB", 2.5)]
-		adCR = 13,
+		 adCR = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
+		/// <remarks>-1</remarks>
 		[SupportByLibrary("ADODB", 2.5)]
-		adCRLF = -1
+		 adCRLF = -1
 	}
 }

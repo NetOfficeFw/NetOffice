@@ -13,19 +13,22 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acPRDPSimplex = 1,
+		 acPRDPSimplex = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acPRDPHorizontal = 2,
+		 acPRDPHorizontal = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acPRDPVertical = 3
+		 acPRDPVertical = 3
 	}
 }

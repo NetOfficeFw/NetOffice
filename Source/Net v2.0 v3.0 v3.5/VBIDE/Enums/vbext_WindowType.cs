@@ -13,85 +13,99 @@ namespace NetOffice.VBIDEApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_CodeWindow = 0,
+		 vbext_wt_CodeWindow = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_Designer = 1,
+		 vbext_wt_Designer = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_Browser = 2,
+		 vbext_wt_Browser = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_Watch = 3,
+		 vbext_wt_Watch = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_Locals = 4,
+		 vbext_wt_Locals = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_Immediate = 5,
+		 vbext_wt_Immediate = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_ProjectWindow = 6,
+		 vbext_wt_ProjectWindow = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_PropertyWindow = 7,
+		 vbext_wt_PropertyWindow = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_Find = 8,
+		 vbext_wt_Find = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_FindReplace = 9,
+		 vbext_wt_FindReplace = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_Toolbox = 10,
+		 vbext_wt_Toolbox = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_LinkedWindowFrame = 11,
+		 vbext_wt_LinkedWindowFrame = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_MainWindow = 12,
+		 vbext_wt_MainWindow = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_wt_ToolWindow = 15
+		 vbext_wt_ToolWindow = 15
 	}
 }

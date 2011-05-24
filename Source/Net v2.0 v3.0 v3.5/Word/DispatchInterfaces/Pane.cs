@@ -381,20 +381,15 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Down">ref optional object Down</param>
-		/// <param name="Up">ref optional object Up</param>
-		/// <param name="ToRight">ref optional object ToRight</param>
-		/// <param name="ToLeft">ref optional object ToLeft</param>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		/// <param name="ToRight">optional object ToRight</param>
+		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void LargeScroll(ref object down, ref object up, ref object toRight, ref object toLeft)
+		public void LargeScroll(object down, object up, object toRight, object toLeft)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
-			Invoker.Method(this, "LargeScroll", paramsArray, modifiers);
-			down = (object)paramsArray[0];
-			up = (object)paramsArray[1];
-			toRight = (object)paramsArray[2];
-			toLeft = (object)paramsArray[3];
+			Invoker.Method(this, "LargeScroll", paramsArray);
 		}
 
 		/// <summary>
@@ -410,20 +405,15 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Down">ref optional object Down</param>
-		/// <param name="Up">ref optional object Up</param>
-		/// <param name="ToRight">ref optional object ToRight</param>
-		/// <param name="ToLeft">ref optional object ToLeft</param>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		/// <param name="ToRight">optional object ToRight</param>
+		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void SmallScroll(ref object down, ref object up, ref object toRight, ref object toLeft)
+		public void SmallScroll(object down, object up, object toRight, object toLeft)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
-			Invoker.Method(this, "SmallScroll", paramsArray, modifiers);
-			down = (object)paramsArray[0];
-			up = (object)paramsArray[1];
-			toRight = (object)paramsArray[2];
-			toLeft = (object)paramsArray[3];
+			Invoker.Method(this, "SmallScroll", paramsArray);
 		}
 
 		/// <summary>
@@ -450,16 +440,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Down">ref optional object Down</param>
-		/// <param name="Up">ref optional object Up</param>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PageScroll(ref object down, ref object up)
+		public void PageScroll(object down, object up)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
-			Invoker.Method(this, "PageScroll", paramsArray, modifiers);
-			down = (object)paramsArray[0];
-			up = (object)paramsArray[1];
+			Invoker.Method(this, "PageScroll", paramsArray);
 		}
 
 		/// <summary>

@@ -13,73 +13,85 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4106</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlAverage = -4106,
+		 xlAverage = -4106,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4112</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlCount = -4112,
+		 xlCount = -4112,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4113</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlCountNums = -4113,
+		 xlCountNums = -4113,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4136</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlMax = -4136,
+		 xlMax = -4136,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4139</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlMin = -4139,
+		 xlMin = -4139,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4149</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlProduct = -4149,
+		 xlProduct = -4149,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4155</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlStDev = -4155,
+		 xlStDev = -4155,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4156</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlStDevP = -4156,
+		 xlStDevP = -4156,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4157</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlSum = -4157,
+		 xlSum = -4157,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4164</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlVar = -4164,
+		 xlVar = -4164,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4165</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlVarP = -4165,
+		 xlVarP = -4165,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1000</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlUnknown = 1000
+		 xlUnknown = 1000
 	}
 }

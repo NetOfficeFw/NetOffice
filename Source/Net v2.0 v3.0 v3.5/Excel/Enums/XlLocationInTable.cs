@@ -13,55 +13,64 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4110</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlColumnHeader = -4110,
+		 xlColumnHeader = -4110,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlColumnItem = 5,
+		 xlColumnItem = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlDataHeader = 3,
+		 xlDataHeader = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlDataItem = 7,
+		 xlDataItem = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlPageHeader = 2,
+		 xlPageHeader = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlPageItem = 6,
+		 xlPageItem = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4153</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlRowHeader = -4153,
+		 xlRowHeader = -4153,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlRowItem = 4,
+		 xlRowItem = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlTableBody = 8
+		 xlTableBody = 8
 	}
 }

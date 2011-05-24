@@ -172,10 +172,6 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                 newMethodNode.Add(new XElement("ReturnValue", new XAttribute("Type", methodDefinition.ReturnType.FullName)));
             }
 
-            if (methodDefinition.Name.StartsWith("Form1X"))
-            {
-            }
-
             // analyze body
             Mono.Cecil.Cil.MethodBody body = methodDefinition.Body;
             if (null != body)
@@ -187,11 +183,11 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                     {
                         result = true;
 
-                        XElement newMethod = new XElement("Var",
+                        XElement newVar = new XElement("Var",
                                                 new XAttribute("Type", item.VariableType.FullName),
-                                                new XAttribute("Name", item.Name));
+                                                new XAttribute("Name", item.ToString()));
 
-                        newMethodNode.Add(newMethod);
+                        newMethodNode.Add(newVar);
                     }
                 }
 
@@ -292,11 +288,11 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                     {
                         result = true;
 
-                        XElement newMethod = new XElement("Var",
+                        XElement newVar = new XElement("Var",
                                                 new XAttribute("Type", item.VariableType.FullName),
-                                                new XAttribute("Name", item.Name));
+                                                new XAttribute("Name", item.ToString()));
 
-                        newPropertyNode.Add(newMethod);
+                        newPropertyNode.Add(newVar);
                     }
                 }
 
@@ -375,14 +371,7 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                 if (fieldResult)
                     result = fieldResult;
             }
-            /*
-            foreach (MethodDefinition constructorDefinition in typeDefinition.Constructors)
-            {
-                bool fieldResult = AnalyzeMethod(constructorDefinition, newElement);
-                if (fieldResult)
-                    result = fieldResult;
-            }
-            */
+
             foreach (MethodDefinition methodDefinition in typeDefinition.Methods)
             {
                 bool fieldResult = AnalyzeMethod(methodDefinition, newElement);
@@ -458,7 +447,7 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
             while (!prevItem.OpCode.Name.StartsWith("ldc") && !prevItem.OpCode.Name.StartsWith("ldnull")
                 && !prevItem.OpCode.Name.StartsWith("newobj") && !prevItem.OpCode.Name.StartsWith("ldfld")
                 && !prevItem.OpCode.Name.StartsWith("call") && !prevItem.OpCode.Name.StartsWith("ldstr")
-                && !prevItem.OpCode.Name.StartsWith("ldsfld"))
+                && !prevItem.OpCode.Name.StartsWith("ldsfld") && !prevItem.OpCode.Name.StartsWith("ldarg"))
 
                 prevItem = prevItem.Previous;
 
@@ -492,7 +481,7 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                 {
                     result = true;
                     XElement varNode = (from a in methodNode.Elements("Var")
-                                        where a.Attribute("Name").Value.Equals(localVariable.Name)
+                                        where a.Attribute("Name").Value.Equals(localVariable.ToString())
                                         select a).FirstOrDefault();
 
                     varNode.Add(new XElement("Set", new XAttribute("Value", opCodeValue)));

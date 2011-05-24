@@ -13,61 +13,71 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acImportDelim = 0,
+		 acImportDelim = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acImportFixed = 1,
+		 acImportFixed = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acExportDelim = 2,
+		 acExportDelim = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acExportFixed = 3,
+		 acExportFixed = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acExportMerge = 4,
+		 acExportMerge = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acLinkDelim = 5,
+		 acLinkDelim = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acLinkFixed = 6,
+		 acLinkFixed = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acImportHTML = 7,
+		 acImportHTML = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acExportHTML = 8,
+		 acExportHTML = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acLinkHTML = 9
+		 acLinkHTML = 9
 	}
 }

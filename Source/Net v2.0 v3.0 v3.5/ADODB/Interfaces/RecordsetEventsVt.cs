@@ -174,16 +174,14 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
-		/// <param name="fMoreData">ref bool fMoreData</param>
+		/// <param name="fMoreData">bool fMoreData</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public Int32 EndOfRecordset(ref bool fMoreData, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
+		public Int32 EndOfRecordset(bool fMoreData, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(fMoreData, adStatus, pRecordset);
 			object returnItem = Invoker.MethodReturn(this, "EndOfRecordset", paramsArray);
-			fMoreData = (bool)paramsArray[0];
 			return (Int32)returnItem;
 		}
 

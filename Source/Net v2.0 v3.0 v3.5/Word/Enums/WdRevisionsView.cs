@@ -13,13 +13,15 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdRevisionsViewFinal = 0,
+		 wdRevisionsViewFinal = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdRevisionsViewOriginal = 1
+		 wdRevisionsViewOriginal = 1
 	}
 }

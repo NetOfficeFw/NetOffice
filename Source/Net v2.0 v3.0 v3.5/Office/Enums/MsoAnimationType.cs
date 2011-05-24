@@ -13,211 +13,246 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationIdle = 1,
+		 msoAnimationIdle = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationGreeting = 2,
+		 msoAnimationGreeting = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationGoodbye = 3,
+		 msoAnimationGoodbye = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationBeginSpeaking = 4,
+		 msoAnimationBeginSpeaking = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationRestPose = 5,
+		 msoAnimationRestPose = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationCharacterSuccessMajor = 6,
+		 msoAnimationCharacterSuccessMajor = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationGetAttentionMajor = 11,
+		 msoAnimationGetAttentionMajor = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationGetAttentionMinor = 12,
+		 msoAnimationGetAttentionMinor = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationSearching = 13,
+		 msoAnimationSearching = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationPrinting = 18,
+		 msoAnimationPrinting = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>19</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationGestureRight = 19,
+		 msoAnimationGestureRight = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>22</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationWritingNotingSomething = 22,
+		 msoAnimationWritingNotingSomething = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>23</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationWorkingAtSomething = 23,
+		 msoAnimationWorkingAtSomething = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>24</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationThinking = 24,
+		 msoAnimationThinking = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>25</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationSendingMail = 25,
+		 msoAnimationSendingMail = 25,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>26</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationListensToComputer = 26,
+		 msoAnimationListensToComputer = 26,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>31</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationDisappear = 31,
+		 msoAnimationDisappear = 31,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationAppear = 32,
+		 msoAnimationAppear = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>100</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationGetArtsy = 100,
+		 msoAnimationGetArtsy = 100,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>101</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationGetTechy = 101,
+		 msoAnimationGetTechy = 101,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>102</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationGetWizardy = 102,
+		 msoAnimationGetWizardy = 102,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>103</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationCheckingSomething = 103,
+		 msoAnimationCheckingSomething = 103,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>104</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationLookDown = 104,
+		 msoAnimationLookDown = 104,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>105</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationLookDownLeft = 105,
+		 msoAnimationLookDownLeft = 105,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>106</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationLookDownRight = 106,
+		 msoAnimationLookDownRight = 106,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>107</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationLookLeft = 107,
+		 msoAnimationLookLeft = 107,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>108</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationLookRight = 108,
+		 msoAnimationLookRight = 108,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>109</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationLookUp = 109,
+		 msoAnimationLookUp = 109,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>110</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationLookUpLeft = 110,
+		 msoAnimationLookUpLeft = 110,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>111</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationLookUpRight = 111,
+		 msoAnimationLookUpRight = 111,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>112</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationSaving = 112,
+		 msoAnimationSaving = 112,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>113</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationGestureDown = 113,
+		 msoAnimationGestureDown = 113,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>114</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationGestureLeft = 114,
+		 msoAnimationGestureLeft = 114,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>115</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationGestureUp = 115,
+		 msoAnimationGestureUp = 115,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>116</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAnimationEmptyTrash = 116
+		 msoAnimationEmptyTrash = 116
 	}
 }

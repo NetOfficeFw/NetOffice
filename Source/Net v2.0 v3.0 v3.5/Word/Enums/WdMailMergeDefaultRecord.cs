@@ -13,13 +13,15 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdDefaultFirstRecord = 1,
+		 wdDefaultFirstRecord = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-16</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdDefaultLastRecord = -16
+		 wdDefaultLastRecord = -16
 	}
 }

@@ -13,19 +13,22 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olStoreDefault = 1,
+		 olStoreDefault = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olStoreUnicode = 2,
+		 olStoreUnicode = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olStoreANSI = 3
+		 olStoreANSI = 3
 	}
 }

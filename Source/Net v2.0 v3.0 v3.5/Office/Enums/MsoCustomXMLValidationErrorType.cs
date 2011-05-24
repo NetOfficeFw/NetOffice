@@ -13,19 +13,22 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCustomXMLValidationErrorSchemaGenerated = 0,
+		 msoCustomXMLValidationErrorSchemaGenerated = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCustomXMLValidationErrorAutomaticallyCleared = 1,
+		 msoCustomXMLValidationErrorAutomaticallyCleared = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoCustomXMLValidationErrorManual = 2
+		 msoCustomXMLValidationErrorManual = 2
 	}
 }

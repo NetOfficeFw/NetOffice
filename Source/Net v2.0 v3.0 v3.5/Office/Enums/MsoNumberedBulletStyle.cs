@@ -13,253 +13,295 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletStyleMixed = -2,
+		 msoBulletStyleMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletAlphaLCPeriod = 0,
+		 msoBulletAlphaLCPeriod = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletAlphaUCPeriod = 1,
+		 msoBulletAlphaUCPeriod = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletArabicParenRight = 2,
+		 msoBulletArabicParenRight = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletArabicPeriod = 3,
+		 msoBulletArabicPeriod = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletRomanLCParenBoth = 4,
+		 msoBulletRomanLCParenBoth = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletRomanLCParenRight = 5,
+		 msoBulletRomanLCParenRight = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletRomanLCPeriod = 6,
+		 msoBulletRomanLCPeriod = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletRomanUCPeriod = 7,
+		 msoBulletRomanUCPeriod = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletAlphaLCParenBoth = 8,
+		 msoBulletAlphaLCParenBoth = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletAlphaLCParenRight = 9,
+		 msoBulletAlphaLCParenRight = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletAlphaUCParenBoth = 10,
+		 msoBulletAlphaUCParenBoth = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletAlphaUCParenRight = 11,
+		 msoBulletAlphaUCParenRight = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletArabicParenBoth = 12,
+		 msoBulletArabicParenBoth = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletArabicPlain = 13,
+		 msoBulletArabicPlain = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletRomanUCParenBoth = 14,
+		 msoBulletRomanUCParenBoth = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletRomanUCParenRight = 15,
+		 msoBulletRomanUCParenRight = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletSimpChinPlain = 16,
+		 msoBulletSimpChinPlain = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletSimpChinPeriod = 17,
+		 msoBulletSimpChinPeriod = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletCircleNumDBPlain = 18,
+		 msoBulletCircleNumDBPlain = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>19</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletCircleNumWDWhitePlain = 19,
+		 msoBulletCircleNumWDWhitePlain = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>20</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletCircleNumWDBlackPlain = 20,
+		 msoBulletCircleNumWDBlackPlain = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>21</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletTradChinPlain = 21,
+		 msoBulletTradChinPlain = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>22</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletTradChinPeriod = 22,
+		 msoBulletTradChinPeriod = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>23</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletArabicAlphaDash = 23,
+		 msoBulletArabicAlphaDash = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>24</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletArabicAbjadDash = 24,
+		 msoBulletArabicAbjadDash = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>25</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletHebrewAlphaDash = 25,
+		 msoBulletHebrewAlphaDash = 25,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>26</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletKanjiKoreanPlain = 26,
+		 msoBulletKanjiKoreanPlain = 26,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>27</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletKanjiKoreanPeriod = 27,
+		 msoBulletKanjiKoreanPeriod = 27,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>28</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletArabicDBPlain = 28,
+		 msoBulletArabicDBPlain = 28,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>29</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletArabicDBPeriod = 29,
+		 msoBulletArabicDBPeriod = 29,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>30</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletThaiAlphaPeriod = 30,
+		 msoBulletThaiAlphaPeriod = 30,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>31</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletThaiAlphaParenRight = 31,
+		 msoBulletThaiAlphaParenRight = 31,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletThaiAlphaParenBoth = 32,
+		 msoBulletThaiAlphaParenBoth = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>33</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletThaiNumPeriod = 33,
+		 msoBulletThaiNumPeriod = 33,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>34</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletThaiNumParenRight = 34,
+		 msoBulletThaiNumParenRight = 34,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>35</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletThaiNumParenBoth = 35,
+		 msoBulletThaiNumParenBoth = 35,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>36</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletHindiAlphaPeriod = 36,
+		 msoBulletHindiAlphaPeriod = 36,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>37</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletHindiNumPeriod = 37,
+		 msoBulletHindiNumPeriod = 37,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>38</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletKanjiSimpChinDBPeriod = 38,
+		 msoBulletKanjiSimpChinDBPeriod = 38,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>39</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletHindiNumParenRight = 39,
+		 msoBulletHindiNumParenRight = 39,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>40</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoBulletHindiAlpha1Period = 40
+		 msoBulletHindiAlpha1Period = 40
 	}
 }

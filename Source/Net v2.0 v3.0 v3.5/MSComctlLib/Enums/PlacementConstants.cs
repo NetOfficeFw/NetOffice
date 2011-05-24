@@ -13,25 +13,29 @@ namespace NetOffice.MSComctlLibApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tabPlacementTop = 0,
+		 tabPlacementTop = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tabPlacementBottom = 1,
+		 tabPlacementBottom = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tabPlacementLeft = 2,
+		 tabPlacementLeft = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tabPlacementRight = 3
+		 tabPlacementRight = 3
 	}
 }

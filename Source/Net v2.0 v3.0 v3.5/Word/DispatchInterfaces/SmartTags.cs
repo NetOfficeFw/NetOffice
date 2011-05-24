@@ -132,17 +132,14 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		/// <param name="Range">ref optional object Range</param>
-		/// <param name="Properties">ref optional object Properties</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="Properties">optional object Properties</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.SmartTag Add(string name, ref object range, ref object properties)
+		public NetOffice.WordApi.SmartTag Add(string name, object range, object properties)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, range, properties);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.SmartTag newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.SmartTag;
-			range = (object)paramsArray[1];
-			properties = (object)paramsArray[2];
 			return newObject;
 		}
 

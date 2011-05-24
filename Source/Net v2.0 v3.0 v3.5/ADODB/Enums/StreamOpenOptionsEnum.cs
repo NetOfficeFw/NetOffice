@@ -13,19 +13,22 @@ namespace NetOffice.ADODBApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
+		/// <remarks>-1</remarks>
 		[SupportByLibrary("ADODB", 2.5)]
-		adOpenStreamUnspecified = -1,
+		 adOpenStreamUnspecified = -1,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("ADODB", 2.5)]
-		adOpenStreamAsync = 1,
+		 adOpenStreamAsync = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("ADODB", 2.5)]
-		adOpenStreamFromRecord = 4
+		 adOpenStreamFromRecord = 4
 	}
 }

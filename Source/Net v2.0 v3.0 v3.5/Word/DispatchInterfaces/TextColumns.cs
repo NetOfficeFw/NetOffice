@@ -226,19 +226,15 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="Spacing">ref optional object Spacing</param>
-		/// <param name="EvenlySpaced">ref optional object EvenlySpaced</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="Spacing">optional object Spacing</param>
+		/// <param name="EvenlySpaced">optional object EvenlySpaced</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.TextColumn Add(ref object width, ref object spacing, ref object evenlySpaced)
+		public NetOffice.WordApi.TextColumn Add(object width, object spacing, object evenlySpaced)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(width, spacing, evenlySpaced);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.TextColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TextColumn;
-			width = (object)paramsArray[0];
-			spacing = (object)paramsArray[1];
-			evenlySpaced = (object)paramsArray[2];
 			return newObject;
 		}
 

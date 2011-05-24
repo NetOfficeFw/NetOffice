@@ -13,55 +13,64 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olNoExchange = 0,
+		 olNoExchange = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>100</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olOffline = 100,
+		 olOffline = 100,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>200</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olCachedOffline = 200,
+		 olCachedOffline = 200,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>300</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olDisconnected = 300,
+		 olDisconnected = 300,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>400</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olCachedDisconnected = 400,
+		 olCachedDisconnected = 400,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>500</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olCachedConnectedHeaders = 500,
+		 olCachedConnectedHeaders = 500,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>600</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olCachedConnectedDrizzle = 600,
+		 olCachedConnectedDrizzle = 600,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>700</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olCachedConnectedFull = 700,
+		 olCachedConnectedFull = 700,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>800</remarks>
 		[SupportByLibrary("Outlook", 11,12,14)]
-		olOnline = 800
+		 olOnline = 800
 	}
 }

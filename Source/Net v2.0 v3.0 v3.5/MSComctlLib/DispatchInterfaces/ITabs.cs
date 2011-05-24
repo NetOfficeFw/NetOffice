@@ -71,29 +71,25 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="pvIndex">ref object pvIndex</param>
+		/// <param name="pvIndex">object pvIndex</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.ITab get_ControlDefault(ref object pvIndex)
+		public NetOffice.MSComctlLibApi.ITab get_ControlDefault(object pvIndex)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
-			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
 			NetOffice.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
-			pvIndex = (object)paramsArray[0];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="pvIndex">ref object pvIndex</param>
+		/// <param name="pvIndex">object pvIndex</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void set_ControlDefault(ref object pvIndex, NetOffice.MSComctlLibApi.ITab value)
+		public void set_ControlDefault(object pvIndex, NetOffice.MSComctlLibApi.ITab value)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
-			Invoker.PropertySet(this, "ControlDefault", paramsArray, value, modifiers);
-			pvIndex = (object)paramsArray[0];
+			Invoker.PropertySet(this, "ControlDefault", paramsArray, value);
 		}
 
 		/// <summary>
@@ -120,14 +116,12 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="pvIndex">ref object pvIndex</param>
+		/// <param name="pvIndex">object pvIndex</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void Remove(ref object pvIndex)
+		public void Remove(object pvIndex)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
-			Invoker.Method(this, "Remove", paramsArray, modifiers);
-			pvIndex = (object)paramsArray[0];
+			Invoker.Method(this, "Remove", paramsArray);
 		}
 
 		/// <summary>
@@ -143,21 +137,16 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="pvIndex">ref optional object pvIndex</param>
-		/// <param name="pvKey">ref optional object pvKey</param>
-		/// <param name="pvCaption">ref optional object pvCaption</param>
-		/// <param name="pvImage">ref optional object pvImage</param>
+		/// <param name="pvIndex">optional object pvIndex</param>
+		/// <param name="pvKey">optional object pvKey</param>
+		/// <param name="pvCaption">optional object pvCaption</param>
+		/// <param name="pvImage">optional object pvImage</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.ITab Add(ref object pvIndex, ref object pvKey, ref object pvCaption, ref object pvImage)
+		public NetOffice.MSComctlLibApi.ITab Add(object pvIndex, object pvKey, object pvCaption, object pvImage)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex, pvKey, pvCaption, pvImage);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.MSComctlLibApi.ITab newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.ITab;
-			pvIndex = (object)paramsArray[0];
-			pvKey = (object)paramsArray[1];
-			pvCaption = (object)paramsArray[2];
-			pvImage = (object)paramsArray[3];
 			return newObject;
 		}
 

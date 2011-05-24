@@ -13,25 +13,29 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoBeforeNode = 1,
+		 msoBeforeNode = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoAfterNode = 2,
+		 msoAfterNode = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoBeforeFirstSibling = 3,
+		 msoBeforeFirstSibling = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoAfterLastSibling = 4
+		 msoAfterLastSibling = 4
 	}
 }

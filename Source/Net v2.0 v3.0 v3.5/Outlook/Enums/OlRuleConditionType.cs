@@ -13,193 +13,225 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionUnknown = 0,
+		 olConditionUnknown = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionFrom = 1,
+		 olConditionFrom = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionSubject = 2,
+		 olConditionSubject = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionAccount = 3,
+		 olConditionAccount = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionOnlyToMe = 4,
+		 olConditionOnlyToMe = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionTo = 5,
+		 olConditionTo = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionImportance = 6,
+		 olConditionImportance = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionSensitivity = 7,
+		 olConditionSensitivity = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionFlaggedForAction = 8,
+		 olConditionFlaggedForAction = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionCc = 9,
+		 olConditionCc = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionToOrCc = 10,
+		 olConditionToOrCc = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionNotTo = 11,
+		 olConditionNotTo = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionSentTo = 12,
+		 olConditionSentTo = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionBody = 13,
+		 olConditionBody = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionBodyOrSubject = 14,
+		 olConditionBodyOrSubject = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionMessageHeader = 15,
+		 olConditionMessageHeader = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionRecipientAddress = 16,
+		 olConditionRecipientAddress = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionSenderAddress = 17,
+		 olConditionSenderAddress = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionCategory = 18,
+		 olConditionCategory = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>19</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionOOF = 19,
+		 olConditionOOF = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>20</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionHasAttachment = 20,
+		 olConditionHasAttachment = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>21</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionSizeRange = 21,
+		 olConditionSizeRange = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>22</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionDateRange = 22,
+		 olConditionDateRange = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>23</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionFormName = 23,
+		 olConditionFormName = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>24</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionProperty = 24,
+		 olConditionProperty = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>25</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionSenderInAddressBook = 25,
+		 olConditionSenderInAddressBook = 25,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>26</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionMeetingInviteOrUpdate = 26,
+		 olConditionMeetingInviteOrUpdate = 26,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>27</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionLocalMachineOnly = 27,
+		 olConditionLocalMachineOnly = 27,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>28</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionOtherMachine = 28,
+		 olConditionOtherMachine = 28,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>29</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionAnyCategory = 29,
+		 olConditionAnyCategory = 29,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>30</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionFromRssFeed = 30,
+		 olConditionFromRssFeed = 30,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>31</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olConditionFromAnyRssFeed = 31
+		 olConditionFromAnyRssFeed = 31
 	}
 }

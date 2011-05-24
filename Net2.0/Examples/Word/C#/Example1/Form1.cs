@@ -37,9 +37,9 @@ namespace Example1
             object missingValue = Missing.Value;
             string fileExtension = GetDefaultExtension(_wordApplication);
             object documentFile = string.Format("{0}\\Example01{1}", Environment.CurrentDirectory, fileExtension);
-            newDocument.SaveAs(ref documentFile, ref missingValue, ref missingValue, ref missingValue, ref missingValue,
-                                ref missingValue, ref missingValue, ref missingValue, ref missingValue, ref missingValue,
-                                ref missingValue, ref missingValue, ref missingValue, ref missingValue, ref missingValue, ref missingValue); 
+            newDocument.SaveAs(documentFile, missingValue, missingValue, missingValue, missingValue,
+                                 missingValue,  missingValue,  missingValue,  missingValue,  missingValue,
+                                 missingValue,  missingValue,  missingValue,  missingValue,  missingValue,  missingValue); 
 
             // close word and dispose reference
             _wordApplication.Quit();

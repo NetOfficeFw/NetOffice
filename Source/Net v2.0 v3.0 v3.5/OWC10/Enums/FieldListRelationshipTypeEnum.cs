@@ -13,43 +13,50 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		flrelNoRel = 0,
+		 flrelNoRel = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		flrelOneToMany = 1,
+		 flrelOneToMany = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		flrelManyToOne = 2,
+		 flrelManyToOne = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		flrelOneToOnePrimaryPrimary = 4,
+		 flrelOneToOnePrimaryPrimary = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		flrelOneToOnePrimaryForeign = 8,
+		 flrelOneToOnePrimaryForeign = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		flrelUniqueConstraint = 16,
+		 flrelUniqueConstraint = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		flrelUniqueIndex = 32
+		 flrelUniqueIndex = 32
 	}
 }

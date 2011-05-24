@@ -147,19 +147,15 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Name">string Name</param>
-		/// <param name="Prompt">ref optional object Prompt</param>
-		/// <param name="DefaultAskText">ref optional object DefaultAskText</param>
-		/// <param name="AskOnce">ref optional object AskOnce</param>
+		/// <param name="Prompt">optional object Prompt</param>
+		/// <param name="DefaultAskText">optional object DefaultAskText</param>
+		/// <param name="AskOnce">optional object AskOnce</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.MailMergeField AddAsk(NetOffice.WordApi.Range range, string name, ref object prompt, ref object defaultAskText, ref object askOnce)
+		public NetOffice.WordApi.MailMergeField AddAsk(NetOffice.WordApi.Range range, string name, object prompt, object defaultAskText, object askOnce)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, name, prompt, defaultAskText, askOnce);
-			object returnItem = Invoker.MethodReturn(this, "AddAsk", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddAsk", paramsArray);
 			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.MailMergeField;
-			prompt = (object)paramsArray[2];
-			defaultAskText = (object)paramsArray[3];
-			askOnce = (object)paramsArray[4];
 			return newObject;
 		}
 
@@ -181,19 +177,15 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		/// <param name="Prompt">ref optional object Prompt</param>
-		/// <param name="DefaultFillInText">ref optional object DefaultFillInText</param>
-		/// <param name="AskOnce">ref optional object AskOnce</param>
+		/// <param name="Prompt">optional object Prompt</param>
+		/// <param name="DefaultFillInText">optional object DefaultFillInText</param>
+		/// <param name="AskOnce">optional object AskOnce</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.MailMergeField AddFillIn(NetOffice.WordApi.Range range, ref object prompt, ref object defaultFillInText, ref object askOnce)
+		public NetOffice.WordApi.MailMergeField AddFillIn(NetOffice.WordApi.Range range, object prompt, object defaultFillInText, object askOnce)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, prompt, defaultFillInText, askOnce);
-			object returnItem = Invoker.MethodReturn(this, "AddFillIn", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddFillIn", paramsArray);
 			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.MailMergeField;
-			prompt = (object)paramsArray[1];
-			defaultFillInText = (object)paramsArray[2];
-			askOnce = (object)paramsArray[3];
 			return newObject;
 		}
 
@@ -216,23 +208,17 @@ namespace NetOffice.WordApi
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="MergeField">string MergeField</param>
 		/// <param name="Comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		/// <param name="CompareTo">ref optional object CompareTo</param>
-		/// <param name="TrueAutoText">ref optional object TrueAutoText</param>
-		/// <param name="TrueText">ref optional object TrueText</param>
-		/// <param name="FalseAutoText">ref optional object FalseAutoText</param>
-		/// <param name="FalseText">ref optional object FalseText</param>
+		/// <param name="CompareTo">optional object CompareTo</param>
+		/// <param name="TrueAutoText">optional object TrueAutoText</param>
+		/// <param name="TrueText">optional object TrueText</param>
+		/// <param name="FalseAutoText">optional object FalseAutoText</param>
+		/// <param name="FalseText">optional object FalseText</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.MailMergeField AddIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, ref object compareTo, ref object trueAutoText, ref object trueText, ref object falseAutoText, ref object falseText)
+		public NetOffice.WordApi.MailMergeField AddIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, object compareTo, object trueAutoText, object trueText, object falseAutoText, object falseText)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo, trueAutoText, trueText, falseAutoText, falseText);
-			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
 			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.MailMergeField;
-			compareTo = (object)paramsArray[3];
-			trueAutoText = (object)paramsArray[4];
-			trueText = (object)paramsArray[5];
-			falseAutoText = (object)paramsArray[6];
-			falseText = (object)paramsArray[7];
 			return newObject;
 		}
 
@@ -296,15 +282,13 @@ namespace NetOffice.WordApi
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="MergeField">string MergeField</param>
 		/// <param name="Comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		/// <param name="CompareTo">ref optional object CompareTo</param>
+		/// <param name="CompareTo">optional object CompareTo</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.MailMergeField AddNextIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, ref object compareTo)
+		public NetOffice.WordApi.MailMergeField AddNextIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, object compareTo)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo);
-			object returnItem = Invoker.MethodReturn(this, "AddNextIf", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddNextIf", paramsArray);
 			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.MailMergeField;
-			compareTo = (object)paramsArray[3];
 			return newObject;
 		}
 
@@ -328,17 +312,14 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Name">string Name</param>
-		/// <param name="ValueText">ref optional object ValueText</param>
-		/// <param name="ValueAutoText">ref optional object ValueAutoText</param>
+		/// <param name="ValueText">optional object ValueText</param>
+		/// <param name="ValueAutoText">optional object ValueAutoText</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.MailMergeField AddSet(NetOffice.WordApi.Range range, string name, ref object valueText, ref object valueAutoText)
+		public NetOffice.WordApi.MailMergeField AddSet(NetOffice.WordApi.Range range, string name, object valueText, object valueAutoText)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, name, valueText, valueAutoText);
-			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray);
 			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.MailMergeField;
-			valueText = (object)paramsArray[2];
-			valueAutoText = (object)paramsArray[3];
 			return newObject;
 		}
 
@@ -362,15 +343,13 @@ namespace NetOffice.WordApi
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="MergeField">string MergeField</param>
 		/// <param name="Comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		/// <param name="CompareTo">ref optional object CompareTo</param>
+		/// <param name="CompareTo">optional object CompareTo</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.MailMergeField AddSkipIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, ref object compareTo)
+		public NetOffice.WordApi.MailMergeField AddSkipIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, object compareTo)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo);
-			object returnItem = Invoker.MethodReturn(this, "AddSkipIf", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddSkipIf", paramsArray);
 			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.MailMergeField;
-			compareTo = (object)paramsArray[3];
 			return newObject;
 		}
 

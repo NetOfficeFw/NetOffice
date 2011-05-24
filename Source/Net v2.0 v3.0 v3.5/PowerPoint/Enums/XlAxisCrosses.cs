@@ -13,25 +13,29 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4105</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlAxisCrossesAutomatic = -4105,
+		 xlAxisCrossesAutomatic = -4105,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4114</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlAxisCrossesCustom = -4114,
+		 xlAxisCrossesCustom = -4114,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlAxisCrossesMaximum = 2,
+		 xlAxisCrossesMaximum = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlAxisCrossesMinimum = 4
+		 xlAxisCrossesMinimum = 4
 	}
 }

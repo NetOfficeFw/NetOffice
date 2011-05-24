@@ -13,43 +13,50 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbFixedField = 1,
+		 dbFixedField = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbVariableField = 2,
+		 dbVariableField = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbAutoIncrField = 16,
+		 dbAutoIncrField = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbUpdatableField = 32,
+		 dbUpdatableField = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>8192</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbSystemField = 8192,
+		 dbSystemField = 8192,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>32768</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbHyperlinkField = 32768,
+		 dbHyperlinkField = 32768,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbDescending = 1
+		 dbDescending = 1
 	}
 }

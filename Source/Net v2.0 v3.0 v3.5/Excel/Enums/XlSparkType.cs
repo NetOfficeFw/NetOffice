@@ -13,19 +13,22 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 14)]
-		xlSparkLine = 1,
+		 xlSparkLine = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 14)]
-		xlSparkColumn = 2,
+		 xlSparkColumn = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Excel", 14)]
-		xlSparkColumnStacked100 = 3
+		 xlSparkColumnStacked100 = 3
 	}
 }

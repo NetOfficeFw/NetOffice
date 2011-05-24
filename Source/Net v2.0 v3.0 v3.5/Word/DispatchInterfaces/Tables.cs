@@ -163,17 +163,14 @@ namespace NetOffice.WordApi
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="NumRows">Int32 NumRows</param>
 		/// <param name="NumColumns">Int32 NumColumns</param>
-		/// <param name="DefaultTableBehavior">ref optional object DefaultTableBehavior</param>
-		/// <param name="AutoFitBehavior">ref optional object AutoFitBehavior</param>
+		/// <param name="DefaultTableBehavior">optional object DefaultTableBehavior</param>
+		/// <param name="AutoFitBehavior">optional object AutoFitBehavior</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Table Add(NetOffice.WordApi.Range range, Int32 numRows, Int32 numColumns, ref object defaultTableBehavior, ref object autoFitBehavior)
+		public NetOffice.WordApi.Table Add(NetOffice.WordApi.Range range, Int32 numRows, Int32 numColumns, object defaultTableBehavior, object autoFitBehavior)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, numRows, numColumns, defaultTableBehavior, autoFitBehavior);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Table;
-			defaultTableBehavior = (object)paramsArray[3];
-			autoFitBehavior = (object)paramsArray[4];
 			return newObject;
 		}
 

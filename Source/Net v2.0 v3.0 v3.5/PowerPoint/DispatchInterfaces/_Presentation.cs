@@ -1581,14 +1581,12 @@ namespace NetOffice.PowerPointApi
 		/// <param name="Index">Int32 Index</param>
 		/// <param name="AfterSlide">bool AfterSlide</param>
 		/// <param name="sectionTitle">string sectionTitle</param>
-		/// <param name="newSectionIndex">ref Int32 newSectionIndex</param>
+		/// <param name="newSectionIndex">Int32 newSectionIndex</param>
 		[SupportByLibrary("PowerPoint", 12,14)]
-		public void NewSectionAfter(Int32 index, bool afterSlide, string sectionTitle, ref Int32 newSectionIndex)
+		public void NewSectionAfter(Int32 index, bool afterSlide, string sectionTitle, Int32 newSectionIndex)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index, afterSlide, sectionTitle, newSectionIndex);
-			Invoker.Method(this, "NewSectionAfter", paramsArray, modifiers);
-			newSectionIndex = (Int32)paramsArray[3];
+			Invoker.Method(this, "NewSectionAfter", paramsArray);
 		}
 
 		/// <summary>

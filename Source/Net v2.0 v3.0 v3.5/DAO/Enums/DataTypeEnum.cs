@@ -13,181 +13,211 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbBoolean = 1,
+		 dbBoolean = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbByte = 2,
+		 dbByte = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbInteger = 3,
+		 dbInteger = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbLong = 4,
+		 dbLong = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbCurrency = 5,
+		 dbCurrency = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbSingle = 6,
+		 dbSingle = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbDouble = 7,
+		 dbDouble = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbDate = 8,
+		 dbDate = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbBinary = 9,
+		 dbBinary = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbText = 10,
+		 dbText = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbLongBinary = 11,
+		 dbLongBinary = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbMemo = 12,
+		 dbMemo = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbGUID = 15,
+		 dbGUID = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbBigInt = 16,
+		 dbBigInt = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbVarBinary = 17,
+		 dbVarBinary = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbChar = 18,
+		 dbChar = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>19</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbNumeric = 19,
+		 dbNumeric = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>20</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbDecimal = 20,
+		 dbDecimal = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>21</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbFloat = 21,
+		 dbFloat = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>22</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbTime = 22,
+		 dbTime = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>23</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbTimeStamp = 23,
+		 dbTimeStamp = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 12, 
 		 /// </summary>
+		/// <remarks>101</remarks>
 		[SupportByLibrary("DAO", 12)]
-		dbAttachment = 101,
+		 dbAttachment = 101,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 12, 
 		 /// </summary>
+		/// <remarks>102</remarks>
 		[SupportByLibrary("DAO", 12)]
-		dbComplexByte = 102,
+		 dbComplexByte = 102,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 12, 
 		 /// </summary>
+		/// <remarks>103</remarks>
 		[SupportByLibrary("DAO", 12)]
-		dbComplexInteger = 103,
+		 dbComplexInteger = 103,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 12, 
 		 /// </summary>
+		/// <remarks>104</remarks>
 		[SupportByLibrary("DAO", 12)]
-		dbComplexLong = 104,
+		 dbComplexLong = 104,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 12, 
 		 /// </summary>
+		/// <remarks>105</remarks>
 		[SupportByLibrary("DAO", 12)]
-		dbComplexSingle = 105,
+		 dbComplexSingle = 105,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 12, 
 		 /// </summary>
+		/// <remarks>106</remarks>
 		[SupportByLibrary("DAO", 12)]
-		dbComplexDouble = 106,
+		 dbComplexDouble = 106,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 12, 
 		 /// </summary>
+		/// <remarks>107</remarks>
 		[SupportByLibrary("DAO", 12)]
-		dbComplexGUID = 107,
+		 dbComplexGUID = 107,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 12, 
 		 /// </summary>
+		/// <remarks>108</remarks>
 		[SupportByLibrary("DAO", 12)]
-		dbComplexDecimal = 108,
+		 dbComplexDecimal = 108,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 12, 
 		 /// </summary>
+		/// <remarks>109</remarks>
 		[SupportByLibrary("DAO", 12)]
-		dbComplexText = 109
+		 dbComplexText = 109
 	}
 }

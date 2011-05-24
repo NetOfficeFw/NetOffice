@@ -1457,11 +1457,13 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldEnum.adRecordURL">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>-2</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.CommandTypeEnum">
             <summary>
@@ -1472,36 +1474,43 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CommandTypeEnum.adCmdUnknown">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CommandTypeEnum.adCmdText">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CommandTypeEnum.adCmdTable">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CommandTypeEnum.adCmdStoredProc">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CommandTypeEnum.adCmdFile">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>256</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CommandTypeEnum.adCmdTableDirect">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>512</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.SearchDirectionEnum">
             <summary>
@@ -1512,11 +1521,13 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SearchDirectionEnum.adSearchBackward">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.EditModeEnum">
             <summary>
@@ -1527,21 +1538,25 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EditModeEnum.adEditInProgress">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EditModeEnum.adEditAdd">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EditModeEnum.adEditDelete">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Field15">
             <summary>
@@ -1694,31 +1709,37 @@
             <summary>
             SupportByLibrary ADODB 2.1, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CEResyncEnum.adResyncAutoIncrement">
             <summary>
             SupportByLibrary ADODB 2.1, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CEResyncEnum.adResyncConflicts">
             <summary>
             SupportByLibrary ADODB 2.1, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CEResyncEnum.adResyncUpdates">
             <summary>
             SupportByLibrary ADODB 2.1, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CEResyncEnum.adResyncInserts">
             <summary>
             SupportByLibrary ADODB 2.1, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CEResyncEnum.adResyncAll">
             <summary>
             SupportByLibrary ADODB 2.1, 
             </summary>
+            <remarks>15</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.EventReasonEnum">
             <summary>
@@ -1729,76 +1750,91 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnDelete">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnUpdate">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnUndoUpdate">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnUndoAddNew">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnUndoDelete">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>6</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnRequery">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>7</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnResynch">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnClose">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>9</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnMove">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>10</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnFirstChange">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>11</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnMoveFirst">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>12</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnMoveNext">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>13</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnMovePrevious">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>14</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventReasonEnum.adRsnMoveLast">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>15</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.ConnectionEventsVt">
             <summary>
@@ -1909,16 +1945,19 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.PositionEnum.adPosBOF">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.PositionEnum.adPosEOF">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-3</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Record">
             <summary>
@@ -2084,11 +2123,13 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.StreamTypeEnum.adTypeText">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum">
             <summary>
@@ -2099,26 +2140,31 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum.adOpenSource">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>8388608</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum.adOpenAsync">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>4096</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum.adDelayFetchStream">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>16384</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum.adDelayFetchFields">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>32768</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.ConnectPromptEnum">
             <summary>
@@ -2129,21 +2175,25 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectPromptEnum.adPromptComplete">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectPromptEnum.adPromptCompleteRequired">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectPromptEnum.adPromptNever">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.MarshalOptionsEnum">
             <summary>
@@ -2154,11 +2204,13 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.MarshalOptionsEnum.adMarshalModifiedOnly">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Connection">
             <summary>
@@ -2495,16 +2547,19 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordTypeEnum.adCollectionRecord">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordTypeEnum.adStructDoc">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.FieldStatusEnum">
             <summary>
@@ -2515,151 +2570,181 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldCantConvertValue">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldIsNull">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldTruncated">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldSignMismatch">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldDataOverflow">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>6</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldCantCreate">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>7</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldUnavailable">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldPermissionDenied">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>9</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldIntegrityViolation">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>10</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldSchemaViolation">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>11</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldBadStatus">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>12</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldDefault">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>13</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldIgnore">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>15</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldDoesNotExist">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldInvalidURL">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>17</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldResourceLocked">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>18</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldResourceExists">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>19</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldCannotComplete">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>20</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldVolumeNotFound">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>21</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldOutOfSpace">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>22</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldCannotDeleteSource">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>23</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldReadOnly">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>24</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldResourceOutOfScope">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>25</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldAlreadyExists">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>26</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldPendingInsert">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>65536</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldPendingDelete">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>131072</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldPendingChange">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>262144</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldPendingUnknown">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>524288</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldStatusEnum.adFieldPendingUnknownDelete">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>1048576</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.SeekEnum">
             <summary>
@@ -2670,31 +2755,37 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SeekEnum.adSeekLastEQ">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SeekEnum.adSeekAfterEQ">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SeekEnum.adSeekAfter">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SeekEnum.adSeekBeforeEQ">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SeekEnum.adSeekBefore">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>32</remarks>
         </member>
         <member name="T:ADODBApi.Utils.ProjectInfo">
             <summary>
@@ -2772,11 +2863,13 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_AUTORECALC_ENUM.adRecalcAlways">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.SchemaEnum">
             <summary>
@@ -2787,211 +2880,253 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaAsserts">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaCatalogs">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaCharacterSets">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaCollations">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaColumns">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaCheckConstraints">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaConstraintColumnUsage">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>6</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaConstraintTableUsage">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>7</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaKeyColumnUsage">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaReferentialContraints">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>9</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaReferentialConstraints">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>9</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaTableConstraints">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>10</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaColumnsDomainUsage">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>11</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaIndexes">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>12</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaColumnPrivileges">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>13</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaTablePrivileges">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>14</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaUsagePrivileges">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>15</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaProcedures">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaSchemata">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>17</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaSQLLanguages">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>18</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaStatistics">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>19</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaTables">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>20</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaTranslations">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>21</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaProviderTypes">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>22</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaViews">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>23</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaViewColumnUsage">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>24</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaViewTableUsage">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>25</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaProcedureParameters">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>26</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaForeignKeys">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>27</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaPrimaryKeys">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>28</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaProcedureColumns">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>29</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaDBInfoKeywords">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>30</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaDBInfoLiterals">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>31</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaCubes">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>32</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaDimensions">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>33</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaHierarchies">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>34</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaLevels">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>35</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaMeasures">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>36</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaProperties">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>37</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaMembers">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>38</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SchemaEnum.adSchemaTrustees">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>39</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.ResyncEnum">
             <summary>
@@ -3002,11 +3137,13 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ResyncEnum.adResyncAllValues">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.RecordStatusEnum">
             <summary>
@@ -3017,91 +3154,109 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecNew">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecModified">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecDeleted">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecUnmodified">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecInvalid">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecMultipleChanges">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>64</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecPendingChanges">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>128</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecCanceled">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>256</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecCantRelease">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1024</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecConcurrencyViolation">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2048</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecIntegrityViolation">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4096</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecMaxChangesExceeded">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8192</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecObjectOpen">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16384</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecOutOfMemory">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>32768</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecPermissionDenied">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>65536</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecSchemaViolation">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>131072</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordStatusEnum.adRecDBDeleted">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>262144</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.ObjectStateEnum">
             <summary>
@@ -3112,26 +3267,31 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ObjectStateEnum.adStateOpen">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ObjectStateEnum.adStateConnecting">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ObjectStateEnum.adStateExecuting">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ObjectStateEnum.adStateFetching">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Field">
             <summary>
@@ -3434,311 +3594,373 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3001</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrNoCurrentRecord">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3021</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrIllegalOperation">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3219</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrInTransaction">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3246</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrFeatureNotAvailable">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3251</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrItemNotFound">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3265</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrObjectInCollection">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3367</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrObjectNotSet">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3420</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrDataConversion">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3421</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrObjectClosed">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3704</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrObjectOpen">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3705</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrProviderNotFound">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3706</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrBoundToCommand">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3707</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrInvalidParamInfo">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3708</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrInvalidConnection">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3709</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrNotReentrant">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3710</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrStillExecuting">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3711</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrOperationCancelled">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3712</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrStillConnecting">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3713</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrNotExecuting">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3715</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrUnsafeOperation">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3716</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrProviderFailed">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3000</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrOpeningFile">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3002</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrReadFile">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3003</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrWriteFile">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3004</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrCantChangeProvider">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3220</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrInvalidTransaction">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3714</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adwrnSecurityDialog">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3717</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adwrnSecurityDialogHeader">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3718</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrIntegrityViolation">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3719</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrPermissionDenied">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3720</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrDataOverflow">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3721</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrSchemaViolation">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3722</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrSignMismatch">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3723</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrCantConvertvalue">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3724</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrCantCreate">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3725</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrColumnNotOnThisRow">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3726</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrURLDoesNotExist">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3727</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrTreePermissionDenied">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3728</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrInvalidURL">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3729</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrResourceLocked">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3730</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrResourceExists">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3731</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrCannotComplete">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3732</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrVolumeNotFound">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3733</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrOutOfSpace">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3734</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrResourceOutOfScope">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3735</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrUnavailable">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3736</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrURLNamedRowDoesNotExist">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3737</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrDelResOutOfScope">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3738</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrPropInvalidColumn">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3739</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrPropInvalidOption">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3740</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrPropInvalidValue">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3741</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrPropConflicting">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3742</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrPropNotAllSettable">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3743</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrPropNotSet">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3744</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrPropNotSettable">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3745</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrPropNotSupported">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3746</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrCatalogNotSet">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3747</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrCantChangeConnection">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3748</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrFieldsUpdateFailed">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3749</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrDenyNotSupported">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3750</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ErrorValueEnum.adErrDenyTypeNotSupported">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>3751</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.FieldAttributeEnum">
             <summary>
@@ -3749,86 +3971,103 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldMayDefer">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldUpdatable">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldUnknownUpdatable">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldFixed">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldIsNullable">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>32</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldMayBeNull">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>64</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldLong">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>128</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldRowID">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>256</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldRowVersion">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>512</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldCacheDeferred">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4096</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldNegativeScale">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16384</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldKeyColumn">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>32768</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldIsChapter">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>8192</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldIsRowURL">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>65536</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldIsDefaultStream">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>131072</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FieldAttributeEnum.adFldIsCollection">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>262144</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Errors">
             <summary>
@@ -3912,16 +4151,19 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>10</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.LineSeparatorEnum.adCR">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>13</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.LineSeparatorEnum.adCRLF">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum">
             <summary>
@@ -3932,31 +4174,37 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>8192</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum.adCreateStructDoc">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>-2147483648</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum.adCreateNonCollection">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum.adOpenIfExists">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>33554432</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum.adCreateOverwrite">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>67108864</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum.adFailIfNotExists">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.CursorTypeEnum">
             <summary>
@@ -3967,26 +4215,31 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorTypeEnum.adOpenForwardOnly">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorTypeEnum.adOpenKeyset">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorTypeEnum.adOpenDynamic">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorTypeEnum.adOpenStatic">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Fields15">
             <summary>
@@ -4020,21 +4273,25 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum.adCopyOverWrite">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum.adCopyAllowEmulation">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum.adCopyNonRecursive">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.EventStatusEnum">
             <summary>
@@ -4045,26 +4302,31 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventStatusEnum.adStatusErrorsOccurred">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventStatusEnum.adStatusCantDeny">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventStatusEnum.adStatusCancel">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.EventStatusEnum.adStatusUnwantedEvent">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.GetRowsOptionEnum">
             <summary>
@@ -4075,6 +4337,7 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.ADORecordConstruction">
             <summary>
@@ -4144,11 +4407,13 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.SaveOptionsEnum.adSaveCreateOverWrite">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.PropertyAttributesEnum">
             <summary>
@@ -4159,26 +4424,31 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.PropertyAttributesEnum.adPropRequired">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.PropertyAttributesEnum.adPropOptional">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.PropertyAttributesEnum.adPropRead">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>512</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.PropertyAttributesEnum.adPropWrite">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1024</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.ConnectModeEnum">
             <summary>
@@ -4189,46 +4459,55 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectModeEnum.adModeRead">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectModeEnum.adModeWrite">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectModeEnum.adModeReadWrite">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectModeEnum.adModeShareDenyRead">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectModeEnum.adModeShareDenyWrite">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectModeEnum.adModeShareExclusive">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>12</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectModeEnum.adModeShareDenyNone">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectModeEnum.adModeRecursive">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>4194304</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.CursorLocationEnum">
             <summary>
@@ -4239,21 +4518,25 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorLocationEnum.adUseServer">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorLocationEnum.adUseClient">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorLocationEnum.adUseClientBatch">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.ConnectOptionEnum">
             <summary>
@@ -4264,11 +4547,13 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ConnectOptionEnum.adAsyncConnect">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.CursorOptionEnum">
             <summary>
@@ -4279,66 +4564,79 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>256</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adMovePrevious">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>512</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adAddNew">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16778240</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adDelete">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16779264</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adUpdate">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16809984</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adBookmark">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8192</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adApproxPosition">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16384</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adUpdateBatch">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>65536</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adResync">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>131072</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adNotify">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>262144</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adFind">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>524288</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adSeek">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4194304</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CursorOptionEnum.adIndex">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8388608</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi._Command">
             <summary>
@@ -4460,21 +4758,25 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>131072</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.XactAttributeEnum.adXactAbortRetaining">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>262144</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.XactAttributeEnum.adXactAsyncPhaseOne">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>524288</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.XactAttributeEnum.adXactSyncPhaseOne">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1048576</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.AffectEnum">
             <summary>
@@ -4485,21 +4787,25 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.AffectEnum.adAffectGroup">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.AffectEnum.adAffectAll">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.AffectEnum.adAffectAllChapters">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.LockTypeEnum">
             <summary>
@@ -4510,26 +4816,31 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.LockTypeEnum.adLockReadOnly">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.LockTypeEnum.adLockPessimistic">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.LockTypeEnum.adLockOptimistic">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.LockTypeEnum.adLockBatchOptimistic">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.StreamReadEnum">
             <summary>
@@ -4540,11 +4851,13 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.StreamReadEnum.adReadLine">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>-2</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum">
             <summary>
@@ -4555,16 +4868,19 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum.adOpenStreamAsync">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum.adOpenStreamFromRecord">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.ADCPROP_UPDATECRITERIA_ENUM">
             <summary>
@@ -4575,21 +4891,25 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_UPDATECRITERIA_ENUM.adCriteriaAllCols">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_UPDATECRITERIA_ENUM.adCriteriaUpdCols">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_UPDATECRITERIA_ENUM.adCriteriaTimeStamp">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.BookmarkEnum">
             <summary>
@@ -4600,16 +4920,19 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.BookmarkEnum.adBookmarkFirst">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.BookmarkEnum.adBookmarkLast">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.StreamWriteEnum">
             <summary>
@@ -4620,21 +4943,25 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.StreamWriteEnum.adWriteLine">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.StreamWriteEnum.stWriteChar">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.StreamWriteEnum.stWriteLine">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Command">
             <summary>
@@ -4709,21 +5036,25 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum.adMoveOverWrite">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum.adMoveDontUpdateLinks">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum.adMoveAllowEmulation">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.ParameterDirectionEnum">
             <summary>
@@ -4734,26 +5065,31 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ParameterDirectionEnum.adParamInput">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ParameterDirectionEnum.adParamOutput">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ParameterDirectionEnum.adParamInputOutput">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ParameterDirectionEnum.adParamReturnValue">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.FilterGroupEnum">
             <summary>
@@ -4764,31 +5100,37 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FilterGroupEnum.adFilterPendingRecords">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FilterGroupEnum.adFilterAffectedRecords">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FilterGroupEnum.adFilterFetchedRecords">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FilterGroupEnum.adFilterPredicate">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.FilterGroupEnum.adFilterConflictingRecords">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Fields20">
             <summary>
@@ -4915,26 +5257,31 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_ASYNCTHREADPRIORITY_ENUM.adPriorityBelowNormal">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_ASYNCTHREADPRIORITY_ENUM.adPriorityNormal">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_ASYNCTHREADPRIORITY_ENUM.adPriorityAboveNormal">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_ASYNCTHREADPRIORITY_ENUM.adPriorityHighest">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.IsolationLevelEnum">
             <summary>
@@ -4945,46 +5292,55 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.IsolationLevelEnum.adXactChaos">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.IsolationLevelEnum.adXactReadUncommitted">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>256</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.IsolationLevelEnum.adXactBrowse">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>256</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.IsolationLevelEnum.adXactCursorStability">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4096</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.IsolationLevelEnum.adXactReadCommitted">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4096</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.IsolationLevelEnum.adXactRepeatableRead">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>65536</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.IsolationLevelEnum.adXactSerializable">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1048576</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.IsolationLevelEnum.adXactIsolated">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1048576</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.CompareEnum">
             <summary>
@@ -4995,26 +5351,31 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CompareEnum.adCompareEqual">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CompareEnum.adCompareGreaterThan">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CompareEnum.adCompareNotEqual">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.CompareEnum.adCompareNotComparable">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.DataTypeEnum">
             <summary>
@@ -5025,206 +5386,247 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adTinyInt">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adSmallInt">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adInteger">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adBigInt">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>20</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adUnsignedTinyInt">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>17</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adUnsignedSmallInt">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>18</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adUnsignedInt">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>19</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adUnsignedBigInt">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>21</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adSingle">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adDouble">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adCurrency">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>6</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adDecimal">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>14</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adNumeric">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>131</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adBoolean">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>11</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adError">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>10</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adUserDefined">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>132</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adVariant">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>12</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adIDispatch">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>9</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adIUnknown">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>13</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adGUID">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>72</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adDate">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>7</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adDBDate">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>133</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adDBTime">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>134</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adDBTimeStamp">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>135</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adBSTR">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adChar">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>129</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adVarChar">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>200</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adLongVarChar">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>201</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adWChar">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>130</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adVarWChar">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>202</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adLongVarWChar">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>203</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adBinary">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>128</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adVarBinary">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>204</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adLongVarBinary">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>205</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adChapter">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>136</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adFileTime">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>64</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adDBFileTime">
             <summary>
             SupportByLibrary ADODB 2.1, 
             </summary>
+            <remarks>137</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adPropVariant">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>138</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adVarNumeric">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>139</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.DataTypeEnum.adArray">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>8192</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.ExecuteOptionEnum">
             <summary>
@@ -5235,26 +5637,31 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>-1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ExecuteOptionEnum.adAsyncExecute">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ExecuteOptionEnum.adAsyncFetch">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>32</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ExecuteOptionEnum.adAsyncFetchNonBlocking">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>64</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ExecuteOptionEnum.adExecuteNoRecords">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>128</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Parameters">
             <summary>
@@ -5350,31 +5757,37 @@
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_UPDATERESYNC_ENUM.adResyncAutoIncrement">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_UPDATERESYNC_ENUM.adResyncConflicts">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_UPDATERESYNC_ENUM.adResyncUpdates">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_UPDATERESYNC_ENUM.adResyncInserts">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ADCPROP_UPDATERESYNC_ENUM.adResyncAll">
             <summary>
             SupportByLibrary ADODB 2.5, 
             </summary>
+            <remarks>15</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.ParameterAttributesEnum">
             <summary>
@@ -5385,16 +5798,19 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>16</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ParameterAttributesEnum.adParamNullable">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>64</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.ParameterAttributesEnum.adParamLong">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>128</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.StringFormatEnum">
             <summary>
@@ -5405,6 +5821,7 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.PersistFormatEnum">
             <summary>
@@ -5415,11 +5832,13 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.ADODBApi.Enums.PersistFormatEnum.adPersistXML">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5, 
             </summary>
+            <remarks>1</remarks>
         </member>
     </members>
 </doc>

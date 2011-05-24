@@ -365,16 +365,14 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
-		/// <param name="pvarIndex">ref optional object pvarIndex</param>
+		/// <param name="pvarIndex">optional object pvarIndex</param>
 		/// <param name="varIgallery">optional object varIgallery</param>
 		[SupportByLibrary("Office", 12,14)]
-		public COMObject get_ChartGroups(ref object pvarIndex, object varIgallery)
+		public COMObject get_ChartGroups(object pvarIndex, object varIgallery)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarIndex, varIgallery);
-			object returnItem = Invoker.PropertyGet(this, "ChartGroups", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "ChartGroups", paramsArray);
 			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
-			pvarIndex = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -1273,18 +1271,14 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="ElementID">ref Int32 ElementID</param>
-		/// <param name="Arg1">ref Int32 Arg1</param>
-		/// <param name="Arg2">ref Int32 Arg2</param>
+		/// <param name="ElementID">Int32 ElementID</param>
+		/// <param name="Arg1">Int32 Arg1</param>
+		/// <param name="Arg2">Int32 Arg2</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void GetChartElement(Int32 x, Int32 y, ref Int32 elementID, ref Int32 arg1, ref Int32 arg2)
+		public void GetChartElement(Int32 x, Int32 y, Int32 elementID, Int32 arg1, Int32 arg2)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, elementID, arg1, arg2);
-			Invoker.Method(this, "GetChartElement", paramsArray, modifiers);
-			elementID = (Int32)paramsArray[2];
-			arg1 = (Int32)paramsArray[3];
-			arg2 = (Int32)paramsArray[4];
+			Invoker.Method(this, "GetChartElement", paramsArray);
 		}
 
 		/// <summary>
@@ -1407,24 +1401,21 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="varName">object varName</param>
 		/// <param name="LocaleID">Int32 LocaleID</param>
-		/// <param name="ObjType">ref Int32 ObjType</param>
+		/// <param name="ObjType">Int32 ObjType</param>
 		[SupportByLibrary("Office", 12,14)]
-		public object Evaluate(object varName, Int32 localeID, ref Int32 objType)
+		public object Evaluate(object varName, Int32 localeID, Int32 objType)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(varName, localeID, objType);
-			object returnItem = Invoker.MethodReturn(this, "Evaluate", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Evaluate", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
 			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				objType = (Int32)paramsArray[2];
-			return newObject;
+				return newObject;
 			}
 			else
 			{
-				objType = (Int32)paramsArray[2];
-			return  returnItem;
+				return  returnItem;
 			}
 		}
 

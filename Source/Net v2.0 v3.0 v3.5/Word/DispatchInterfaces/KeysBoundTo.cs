@@ -189,15 +189,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="KeyCode">Int32 KeyCode</param>
-		/// <param name="KeyCode2">ref optional object KeyCode2</param>
+		/// <param name="KeyCode2">optional object KeyCode2</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.KeyBinding Key(Int32 keyCode, ref object keyCode2)
+		public NetOffice.WordApi.KeyBinding Key(Int32 keyCode, object keyCode2)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
-			object returnItem = Invoker.MethodReturn(this, "Key", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Key", paramsArray);
 			NetOffice.WordApi.KeyBinding newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.KeyBinding;
-			keyCode2 = (object)paramsArray[1];
 			return newObject;
 		}
 

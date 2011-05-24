@@ -132,17 +132,14 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Anchor">object Anchor</param>
-		/// <param name="Address">ref optional object Address</param>
-		/// <param name="SubAddress">ref optional object SubAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="SubAddress">optional object SubAddress</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Hyperlink _Add(object anchor, ref object address, ref object subAddress)
+		public NetOffice.WordApi.Hyperlink _Add(object anchor, object address, object subAddress)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress);
-			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
 			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Hyperlink;
-			address = (object)paramsArray[1];
-			subAddress = (object)paramsArray[2];
 			return newObject;
 		}
 
@@ -163,23 +160,17 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Anchor">object Anchor</param>
-		/// <param name="Address">ref optional object Address</param>
-		/// <param name="SubAddress">ref optional object SubAddress</param>
-		/// <param name="ScreenTip">ref optional object ScreenTip</param>
-		/// <param name="TextToDisplay">ref optional object TextToDisplay</param>
-		/// <param name="Target">ref optional object Target</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="SubAddress">optional object SubAddress</param>
+		/// <param name="ScreenTip">optional object ScreenTip</param>
+		/// <param name="TextToDisplay">optional object TextToDisplay</param>
+		/// <param name="Target">optional object Target</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Hyperlink Add(object anchor, ref object address, ref object subAddress, ref object screenTip, ref object textToDisplay, ref object target)
+		public NetOffice.WordApi.Hyperlink Add(object anchor, object address, object subAddress, object screenTip, object textToDisplay, object target)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress, screenTip, textToDisplay, target);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Hyperlink;
-			address = (object)paramsArray[1];
-			subAddress = (object)paramsArray[2];
-			screenTip = (object)paramsArray[3];
-			textToDisplay = (object)paramsArray[4];
-			target = (object)paramsArray[5];
 			return newObject;
 		}
 

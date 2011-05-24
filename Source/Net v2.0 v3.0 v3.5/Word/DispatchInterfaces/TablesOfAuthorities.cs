@@ -151,33 +151,22 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		/// <param name="Category">ref optional object Category</param>
-		/// <param name="Bookmark">ref optional object Bookmark</param>
-		/// <param name="Passim">ref optional object Passim</param>
-		/// <param name="KeepEntryFormatting">ref optional object KeepEntryFormatting</param>
-		/// <param name="Separator">ref optional object Separator</param>
-		/// <param name="IncludeSequenceName">ref optional object IncludeSequenceName</param>
-		/// <param name="EntrySeparator">ref optional object EntrySeparator</param>
-		/// <param name="PageRangeSeparator">ref optional object PageRangeSeparator</param>
-		/// <param name="IncludeCategoryHeader">ref optional object IncludeCategoryHeader</param>
-		/// <param name="PageNumberSeparator">ref optional object PageNumberSeparator</param>
+		/// <param name="Category">optional object Category</param>
+		/// <param name="Bookmark">optional object Bookmark</param>
+		/// <param name="Passim">optional object Passim</param>
+		/// <param name="KeepEntryFormatting">optional object KeepEntryFormatting</param>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="IncludeSequenceName">optional object IncludeSequenceName</param>
+		/// <param name="EntrySeparator">optional object EntrySeparator</param>
+		/// <param name="PageRangeSeparator">optional object PageRangeSeparator</param>
+		/// <param name="IncludeCategoryHeader">optional object IncludeCategoryHeader</param>
+		/// <param name="PageNumberSeparator">optional object PageNumberSeparator</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, ref object category, ref object bookmark, ref object passim, ref object keepEntryFormatting, ref object separator, ref object includeSequenceName, ref object entrySeparator, ref object pageRangeSeparator, ref object includeCategoryHeader, ref object pageNumberSeparator)
+		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName, object entrySeparator, object pageRangeSeparator, object includeCategoryHeader, object pageNumberSeparator)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader, pageNumberSeparator);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfAuthorities;
-			category = (object)paramsArray[1];
-			bookmark = (object)paramsArray[2];
-			passim = (object)paramsArray[3];
-			keepEntryFormatting = (object)paramsArray[4];
-			separator = (object)paramsArray[5];
-			includeSequenceName = (object)paramsArray[6];
-			entrySeparator = (object)paramsArray[7];
-			pageRangeSeparator = (object)paramsArray[8];
-			includeCategoryHeader = (object)paramsArray[9];
-			pageNumberSeparator = (object)paramsArray[10];
 			return newObject;
 		}
 
@@ -210,19 +199,15 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="ShortCitation">string ShortCitation</param>
-		/// <param name="LongCitation">ref optional object LongCitation</param>
-		/// <param name="LongCitationAutoText">ref optional object LongCitationAutoText</param>
-		/// <param name="Category">ref optional object Category</param>
+		/// <param name="LongCitation">optional object LongCitation</param>
+		/// <param name="LongCitationAutoText">optional object LongCitationAutoText</param>
+		/// <param name="Category">optional object Category</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, ref object longCitation, ref object longCitationAutoText, ref object category)
+		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, object longCitation, object longCitationAutoText, object category)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation, longCitation, longCitationAutoText, category);
-			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray);
 			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Field;
-			longCitation = (object)paramsArray[2];
-			longCitationAutoText = (object)paramsArray[3];
-			category = (object)paramsArray[4];
 			return newObject;
 		}
 
@@ -244,18 +229,14 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ShortCitation">string ShortCitation</param>
-		/// <param name="LongCitation">ref optional object LongCitation</param>
-		/// <param name="LongCitationAutoText">ref optional object LongCitationAutoText</param>
-		/// <param name="Category">ref optional object Category</param>
+		/// <param name="LongCitation">optional object LongCitation</param>
+		/// <param name="LongCitationAutoText">optional object LongCitationAutoText</param>
+		/// <param name="Category">optional object Category</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void MarkAllCitations(string shortCitation, ref object longCitation, ref object longCitationAutoText, ref object category)
+		public void MarkAllCitations(string shortCitation, object longCitation, object longCitationAutoText, object category)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(shortCitation, longCitation, longCitationAutoText, category);
-			Invoker.Method(this, "MarkAllCitations", paramsArray, modifiers);
-			longCitation = (object)paramsArray[1];
-			longCitationAutoText = (object)paramsArray[2];
-			category = (object)paramsArray[3];
+			Invoker.Method(this, "MarkAllCitations", paramsArray);
 		}
 
 		/// <summary>

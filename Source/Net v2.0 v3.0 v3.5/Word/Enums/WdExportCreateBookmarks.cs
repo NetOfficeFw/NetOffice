@@ -13,19 +13,22 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdExportCreateNoBookmarks = 0,
+		 wdExportCreateNoBookmarks = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdExportCreateHeadingBookmarks = 1,
+		 wdExportCreateHeadingBookmarks = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdExportCreateWordBookmarks = 2
+		 wdExportCreateWordBookmarks = 2
 	}
 }

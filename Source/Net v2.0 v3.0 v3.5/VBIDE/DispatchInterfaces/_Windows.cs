@@ -59,15 +59,13 @@ namespace NetOffice.VBIDEApi
 		/// <param name="ProgId">string ProgId</param>
 		/// <param name="Caption">string Caption</param>
 		/// <param name="GuidPosition">string GuidPosition</param>
-		/// <param name="DocObj">ref object DocObj</param>
+		/// <param name="DocObj">object DocObj</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		public NetOffice.VBIDEApi.Window CreateToolWindow(NetOffice.VBIDEApi.AddIn addInInst, string progId, string caption, string guidPosition, ref object docObj)
+		public NetOffice.VBIDEApi.Window CreateToolWindow(NetOffice.VBIDEApi.AddIn addInInst, string progId, string caption, string guidPosition, object docObj)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(addInInst, progId, caption, guidPosition, docObj);
-			object returnItem = Invoker.MethodReturn(this, "CreateToolWindow", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "CreateToolWindow", paramsArray);
 			NetOffice.VBIDEApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.Window;
-			docObj = (object)paramsArray[4];
 			return newObject;
 		}
 

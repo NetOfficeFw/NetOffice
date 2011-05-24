@@ -136,15 +136,13 @@ namespace NetOffice.WordApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height, ref object anchor)
+		public NetOffice.WordApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddCallout", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddCallout", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			anchor = (object)paramsArray[5];
 			return newObject;
 		}
 
@@ -185,32 +183,27 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="SafeArrayOfPoints">ref object SafeArrayOfPoints</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="SafeArrayOfPoints">object SafeArrayOfPoints</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddCurve(ref object safeArrayOfPoints, ref object anchor)
+		public NetOffice.WordApi.Shape AddCurve(object safeArrayOfPoints, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddCurve", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddCurve", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			safeArrayOfPoints = (object)paramsArray[0];
-			anchor = (object)paramsArray[1];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="SafeArrayOfPoints">ref object SafeArrayOfPoints</param>
+		/// <param name="SafeArrayOfPoints">object SafeArrayOfPoints</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddCurve(ref object safeArrayOfPoints)
+		public NetOffice.WordApi.Shape AddCurve(object safeArrayOfPoints)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints);
-			object returnItem = Invoker.MethodReturn(this, "AddCurve", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddCurve", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			safeArrayOfPoints = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -222,15 +215,13 @@ namespace NetOffice.WordApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height, ref object anchor)
+		public NetOffice.WordApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(orientation, left, top, width, height, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddLabel", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddLabel", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			anchor = (object)paramsArray[5];
 			return newObject;
 		}
 
@@ -258,15 +249,13 @@ namespace NetOffice.WordApi
 		/// <param name="BeginY">Single BeginY</param>
 		/// <param name="EndX">Single EndX</param>
 		/// <param name="EndY">Single EndY</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY, ref object anchor)
+		public NetOffice.WordApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(beginX, beginY, endX, endY, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddLine", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddLine", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			anchor = (object)paramsArray[4];
 			return newObject;
 		}
 
@@ -290,27 +279,19 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		/// <param name="LinkToFile">ref optional object LinkToFile</param>
-		/// <param name="SaveWithDocument">ref optional object SaveWithDocument</param>
-		/// <param name="Left">ref optional object Left</param>
-		/// <param name="Top">ref optional object Top</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="Height">ref optional object Height</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="LinkToFile">optional object LinkToFile</param>
+		/// <param name="SaveWithDocument">optional object SaveWithDocument</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddPicture(string fileName, ref object linkToFile, ref object saveWithDocument, ref object left, ref object top, ref object width, ref object height, ref object anchor)
+		public NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left, object top, object width, object height, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top, width, height, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			linkToFile = (object)paramsArray[1];
-			saveWithDocument = (object)paramsArray[2];
-			left = (object)paramsArray[3];
-			top = (object)paramsArray[4];
-			width = (object)paramsArray[5];
-			height = (object)paramsArray[6];
-			anchor = (object)paramsArray[7];
 			return newObject;
 		}
 
@@ -330,32 +311,27 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="SafeArrayOfPoints">ref object SafeArrayOfPoints</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="SafeArrayOfPoints">object SafeArrayOfPoints</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddPolyline(ref object safeArrayOfPoints, ref object anchor)
+		public NetOffice.WordApi.Shape AddPolyline(object safeArrayOfPoints, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddPolyline", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddPolyline", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			safeArrayOfPoints = (object)paramsArray[0];
-			anchor = (object)paramsArray[1];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="SafeArrayOfPoints">ref object SafeArrayOfPoints</param>
+		/// <param name="SafeArrayOfPoints">object SafeArrayOfPoints</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddPolyline(ref object safeArrayOfPoints)
+		public NetOffice.WordApi.Shape AddPolyline(object safeArrayOfPoints)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints);
-			object returnItem = Invoker.MethodReturn(this, "AddPolyline", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddPolyline", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			safeArrayOfPoints = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -367,15 +343,13 @@ namespace NetOffice.WordApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddShape(Int32 type, Single left, Single top, Single width, Single height, ref object anchor)
+		public NetOffice.WordApi.Shape AddShape(Int32 type, Single left, Single top, Single width, Single height, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddShape", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddShape", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			anchor = (object)paramsArray[5];
 			return newObject;
 		}
 
@@ -407,15 +381,13 @@ namespace NetOffice.WordApi
 		/// <param name="FontItalic">NetOffice.OfficeApi.Enums.MsoTriState FontItalic</param>
 		/// <param name="Left">Single Left</param>
 		/// <param name="Top">Single Top</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top, ref object anchor)
+		public NetOffice.WordApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddTextEffect", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddTextEffect", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			anchor = (object)paramsArray[8];
 			return newObject;
 		}
 
@@ -447,15 +419,13 @@ namespace NetOffice.WordApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height, ref object anchor)
+		public NetOffice.WordApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(orientation, left, top, width, height, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddTextbox", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddTextbox", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			anchor = (object)paramsArray[5];
 			return newObject;
 		}
 
@@ -494,15 +464,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.ShapeRange Range(ref object index)
+		public NetOffice.WordApi.ShapeRange Range(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Range", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Range", paramsArray);
 			NetOffice.WordApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ShapeRange;
-			index = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -519,37 +487,24 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ClassType">ref optional object ClassType</param>
-		/// <param name="FileName">ref optional object FileName</param>
-		/// <param name="LinkToFile">ref optional object LinkToFile</param>
-		/// <param name="DisplayAsIcon">ref optional object DisplayAsIcon</param>
-		/// <param name="IconFileName">ref optional object IconFileName</param>
-		/// <param name="IconIndex">ref optional object IconIndex</param>
-		/// <param name="IconLabel">ref optional object IconLabel</param>
-		/// <param name="Left">ref optional object Left</param>
-		/// <param name="Top">ref optional object Top</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="Height">ref optional object Height</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="FileName">optional object FileName</param>
+		/// <param name="LinkToFile">optional object LinkToFile</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		/// <param name="IconFileName">optional object IconFileName</param>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		/// <param name="IconLabel">optional object IconLabel</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddOLEObject(ref object classType, ref object fileName, ref object linkToFile, ref object displayAsIcon, ref object iconFileName, ref object iconIndex, ref object iconLabel, ref object left, ref object top, ref object width, ref object height, ref object anchor)
+		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width, height, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			classType = (object)paramsArray[0];
-			fileName = (object)paramsArray[1];
-			linkToFile = (object)paramsArray[2];
-			displayAsIcon = (object)paramsArray[3];
-			iconFileName = (object)paramsArray[4];
-			iconIndex = (object)paramsArray[5];
-			iconLabel = (object)paramsArray[6];
-			left = (object)paramsArray[7];
-			top = (object)paramsArray[8];
-			width = (object)paramsArray[9];
-			height = (object)paramsArray[10];
-			anchor = (object)paramsArray[11];
 			return newObject;
 		}
 
@@ -568,25 +523,18 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ClassType">ref optional object ClassType</param>
-		/// <param name="Left">ref optional object Left</param>
-		/// <param name="Top">ref optional object Top</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="Height">ref optional object Height</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape AddOLEControl(ref object classType, ref object left, ref object top, ref object width, ref object height, ref object anchor)
+		public NetOffice.WordApi.Shape AddOLEControl(object classType, object left, object top, object width, object height, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, left, top, width, height, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddOLEControl", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddOLEControl", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			classType = (object)paramsArray[0];
-			left = (object)paramsArray[1];
-			top = (object)paramsArray[2];
-			width = (object)paramsArray[3];
-			height = (object)paramsArray[4];
-			anchor = (object)paramsArray[5];
 			return newObject;
 		}
 
@@ -610,15 +558,13 @@ namespace NetOffice.WordApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height, ref object anchor)
+		public NetOffice.WordApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddDiagram", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddDiagram", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			anchor = (object)paramsArray[5];
 			return newObject;
 		}
 
@@ -646,15 +592,13 @@ namespace NetOffice.WordApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.Shape AddCanvas(Single left, Single top, Single width, Single height, ref object anchor)
+		public NetOffice.WordApi.Shape AddCanvas(Single left, Single top, Single width, Single height, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddCanvas", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddCanvas", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			anchor = (object)paramsArray[4];
 			return newObject;
 		}
 
@@ -678,23 +622,17 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.XlChartType Type</param>
-		/// <param name="Left">ref optional object Left</param>
-		/// <param name="Top">ref optional object Top</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="Height">ref optional object Height</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.Shape AddChart(NetOffice.OfficeApi.Enums.XlChartType type, ref object left, ref object top, ref object width, ref object height, ref object anchor)
+		public NetOffice.WordApi.Shape AddChart(NetOffice.OfficeApi.Enums.XlChartType type, object left, object top, object width, object height, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			left = (object)paramsArray[1];
-			top = (object)paramsArray[2];
-			width = (object)paramsArray[3];
-			height = (object)paramsArray[4];
-			anchor = (object)paramsArray[5];
 			return newObject;
 		}
 
@@ -715,23 +653,17 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
-		/// <param name="Left">ref optional object Left</param>
-		/// <param name="Top">ref optional object Top</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="Height">ref optional object Height</param>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 14)]
-		public NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, ref object left, ref object top, ref object width, ref object height, ref object anchor)
+		public NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height, object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, left, top, width, height, anchor);
-			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			left = (object)paramsArray[1];
-			top = (object)paramsArray[2];
-			width = (object)paramsArray[3];
-			height = (object)paramsArray[4];
-			anchor = (object)paramsArray[5];
 			return newObject;
 		}
 

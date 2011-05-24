@@ -13,19 +13,22 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlNoIndicator = 0,
+		 xlNoIndicator = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-1</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlCommentIndicatorOnly = -1,
+		 xlCommentIndicatorOnly = -1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlCommentAndIndicator = 1
+		 xlCommentAndIndicator = 1
 	}
 }

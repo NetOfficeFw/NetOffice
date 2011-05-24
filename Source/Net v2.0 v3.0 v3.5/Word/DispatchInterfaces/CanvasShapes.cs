@@ -165,15 +165,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="SafeArrayOfPoints">ref object SafeArrayOfPoints</param>
+		/// <param name="SafeArrayOfPoints">object SafeArrayOfPoints</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.Shape AddCurve(ref object safeArrayOfPoints)
+		public NetOffice.WordApi.Shape AddCurve(object safeArrayOfPoints)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints);
-			object returnItem = Invoker.MethodReturn(this, "AddCurve", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddCurve", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			safeArrayOfPoints = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -214,25 +212,18 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		/// <param name="LinkToFile">ref optional object LinkToFile</param>
-		/// <param name="SaveWithDocument">ref optional object SaveWithDocument</param>
-		/// <param name="Left">ref optional object Left</param>
-		/// <param name="Top">ref optional object Top</param>
-		/// <param name="Width">ref optional object Width</param>
-		/// <param name="Height">ref optional object Height</param>
+		/// <param name="LinkToFile">optional object LinkToFile</param>
+		/// <param name="SaveWithDocument">optional object SaveWithDocument</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="Height">optional object Height</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.Shape AddPicture(string fileName, ref object linkToFile, ref object saveWithDocument, ref object left, ref object top, ref object width, ref object height)
+		public NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left, object top, object width, object height)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			linkToFile = (object)paramsArray[1];
-			saveWithDocument = (object)paramsArray[2];
-			left = (object)paramsArray[3];
-			top = (object)paramsArray[4];
-			width = (object)paramsArray[5];
-			height = (object)paramsArray[6];
 			return newObject;
 		}
 
@@ -252,15 +243,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="SafeArrayOfPoints">ref object SafeArrayOfPoints</param>
+		/// <param name="SafeArrayOfPoints">object SafeArrayOfPoints</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.Shape AddPolyline(ref object safeArrayOfPoints)
+		public NetOffice.WordApi.Shape AddPolyline(object safeArrayOfPoints)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints);
-			object returnItem = Invoker.MethodReturn(this, "AddPolyline", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddPolyline", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			safeArrayOfPoints = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -336,15 +325,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.ShapeRange Range(ref object index)
+		public NetOffice.WordApi.ShapeRange Range(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Range", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Range", paramsArray);
 			NetOffice.WordApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ShapeRange;
-			index = (object)paramsArray[0];
 			return newObject;
 		}
 

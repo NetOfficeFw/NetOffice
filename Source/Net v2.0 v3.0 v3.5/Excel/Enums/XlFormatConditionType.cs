@@ -13,85 +13,99 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlCellValue = 1,
+		 xlCellValue = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlExpression = 2,
+		 xlExpression = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlColorScale = 3,
+		 xlColorScale = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlDatabar = 4,
+		 xlDatabar = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlTop10 = 5,
+		 xlTop10 = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlIconSets = 6,
+		 xlIconSets = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlUniqueValues = 8,
+		 xlUniqueValues = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlTextString = 9,
+		 xlTextString = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlBlanksCondition = 10,
+		 xlBlanksCondition = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlTimePeriod = 11,
+		 xlTimePeriod = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlAboveAverageCondition = 12,
+		 xlAboveAverageCondition = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlNoBlanksCondition = 13,
+		 xlNoBlanksCondition = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlErrorsCondition = 16,
+		 xlErrorsCondition = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlNoErrorsCondition = 17
+		 xlNoErrorsCondition = 17
 	}
 }

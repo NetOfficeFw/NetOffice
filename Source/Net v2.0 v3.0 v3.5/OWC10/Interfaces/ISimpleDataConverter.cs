@@ -57,14 +57,12 @@ namespace NetOffice.OWC10Api
 		/// <param name="varSrc">object varSrc</param>
 		/// <param name="vtDest">Int32 vtDest</param>
 		/// <param name="pUnknownElement">object pUnknownElement</param>
-		/// <param name="pvarDest">ref object pvarDest</param>
+		/// <param name="pvarDest">object pvarDest</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 ConvertData(object varSrc, Int32 vtDest, object pUnknownElement, ref object pvarDest)
+		public Int32 ConvertData(object varSrc, Int32 vtDest, object pUnknownElement, object pvarDest)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(varSrc, vtDest, pUnknownElement, pvarDest);
 			object returnItem = Invoker.MethodReturn(this, "ConvertData", paramsArray);
-			pvarDest = (object)paramsArray[3];
 			return (Int32)returnItem;
 		}
 

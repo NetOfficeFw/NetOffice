@@ -13,19 +13,22 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppDialogStyleMixed = -2,
+		 ppDialogStyleMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppDialogStandard = 1,
+		 ppDialogStandard = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppDialogTabbed = 2
+		 ppDialogTabbed = 2
 	}
 }

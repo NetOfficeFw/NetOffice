@@ -86,33 +86,27 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 12, 14
 		/// </summary>
 		/// <param name="ServiceID">string ServiceID</param>
-		/// <param name="QueryString">ref object QueryString</param>
-		/// <param name="QueryLanguage">ref object QueryLanguage</param>
+		/// <param name="QueryString">object QueryString</param>
+		/// <param name="QueryLanguage">object QueryLanguage</param>
 		/// <param name="UseSelection">bool UseSelection</param>
 		/// <param name="LaunchQuery">bool LaunchQuery</param>
 		[SupportByLibrary("PowerPoint", 12,14)]
-		public void Query(string serviceID, ref object queryString, ref object queryLanguage, bool useSelection, bool launchQuery)
+		public void Query(string serviceID, object queryString, object queryLanguage, bool useSelection, bool launchQuery)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection, launchQuery);
-			Invoker.Method(this, "Query", paramsArray, modifiers);
-			queryString = (object)paramsArray[1];
-			queryLanguage = (object)paramsArray[2];
+			Invoker.Method(this, "Query", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 12, 14
 		/// </summary>
-		/// <param name="Language1">ref object Language1</param>
-		/// <param name="Language2">ref object Language2</param>
+		/// <param name="Language1">object Language1</param>
+		/// <param name="Language2">object Language2</param>
 		[SupportByLibrary("PowerPoint", 12,14)]
-		public void SetLanguagePair(ref object language1, ref object language2)
+		public void SetLanguagePair(object language1, object language2)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(language1, language2);
-			Invoker.Method(this, "SetLanguagePair", paramsArray, modifiers);
-			language1 = (object)paramsArray[0];
-			language2 = (object)paramsArray[1];
+			Invoker.Method(this, "SetLanguagePair", paramsArray);
 		}
 
 		/// <summary>

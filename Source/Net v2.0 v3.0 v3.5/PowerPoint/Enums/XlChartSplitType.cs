@@ -13,25 +13,29 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlSplitByPosition = 1,
+		 xlSplitByPosition = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlSplitByPercentValue = 3,
+		 xlSplitByPercentValue = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlSplitByCustomSplit = 4,
+		 xlSplitByCustomSplit = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlSplitByValue = 2
+		 xlSplitByValue = 2
 	}
 }

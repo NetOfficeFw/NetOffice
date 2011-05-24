@@ -13,49 +13,57 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSyncEventDownloadInitiated = 0,
+		 msoSyncEventDownloadInitiated = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSyncEventDownloadSucceeded = 1,
+		 msoSyncEventDownloadSucceeded = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSyncEventDownloadFailed = 2,
+		 msoSyncEventDownloadFailed = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSyncEventUploadInitiated = 3,
+		 msoSyncEventUploadInitiated = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSyncEventUploadSucceeded = 4,
+		 msoSyncEventUploadSucceeded = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSyncEventUploadFailed = 5,
+		 msoSyncEventUploadFailed = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSyncEventDownloadNoChange = 6,
+		 msoSyncEventDownloadNoChange = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSyncEventOffline = 7
+		 msoSyncEventOffline = 7
 	}
 }

@@ -13,13 +13,15 @@ namespace NetOffice.MSComctlLibApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		lvwWhole = 0,
+		 lvwWhole = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		lvwPartial = 1
+		 lvwPartial = 1
 	}
 }

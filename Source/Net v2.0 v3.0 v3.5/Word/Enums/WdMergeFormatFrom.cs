@@ -13,19 +13,22 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdMergeFormatFromOriginal = 0,
+		 wdMergeFormatFromOriginal = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdMergeFormatFromRevised = 1,
+		 wdMergeFormatFromRevised = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdMergeFormatFromPrompt = 2
+		 wdMergeFormatFromPrompt = 2
 	}
 }

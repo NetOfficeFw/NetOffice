@@ -314,16 +314,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="ErrorBarDirection">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum ErrorBarDirection</param>
-		/// <param name="DataSourceIndex">ref object DataSourceIndex</param>
-		/// <param name="DataReference">ref object DataReference</param>
+		/// <param name="DataSourceIndex">object DataSourceIndex</param>
+		/// <param name="DataReference">object DataReference</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void GetData(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum errorBarDirection, ref object dataSourceIndex, ref object dataReference)
+		public void GetData(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum errorBarDirection, object dataSourceIndex, object dataReference)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(errorBarDirection, dataSourceIndex, dataReference);
-			Invoker.Method(this, "GetData", paramsArray, modifiers);
-			dataSourceIndex = (object)paramsArray[1];
-			dataReference = (object)paramsArray[2];
+			Invoker.Method(this, "GetData", paramsArray);
 		}
 
 		/// <summary>

@@ -55,14 +55,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="vardisp">ref object vardisp</param>
+		/// <param name="vardisp">object vardisp</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void GrantAddinHost(ref object vardisp)
+		public void GrantAddinHost(object vardisp)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(vardisp);
-			Invoker.Method(this, "GrantAddinHost", paramsArray, modifiers);
-			vardisp = (object)paramsArray[0];
+			Invoker.Method(this, "GrantAddinHost", paramsArray);
 		}
 
 		/// <summary>
@@ -79,14 +77,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		/// <param name="SemiCalced">ref bool SemiCalced</param>
+		/// <param name="SemiCalced">bool SemiCalced</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void IsSemiCalced(Int32 dispid, ref bool semiCalced)
+		public void IsSemiCalced(Int32 dispid, bool semiCalced)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid, semiCalced);
-			Invoker.Method(this, "IsSemiCalced", paramsArray, modifiers);
-			semiCalced = (bool)paramsArray[1];
+			Invoker.Method(this, "IsSemiCalced", paramsArray);
 		}
 
 		#endregion

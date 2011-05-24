@@ -13,49 +13,57 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoBarNoProtection = 0,
+		 msoBarNoProtection = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoBarNoCustomize = 1,
+		 msoBarNoCustomize = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoBarNoResize = 2,
+		 msoBarNoResize = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoBarNoMove = 4,
+		 msoBarNoMove = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoBarNoChangeVisible = 8,
+		 msoBarNoChangeVisible = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoBarNoChangeDock = 16,
+		 msoBarNoChangeDock = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoBarNoVerticalDock = 32,
+		 msoBarNoVerticalDock = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>64</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoBarNoHorizontalDock = 64
+		 msoBarNoHorizontalDock = 64
 	}
 }

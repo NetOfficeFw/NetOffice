@@ -13,157 +13,183 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoShapeTypeMixed = -2,
+		 msoShapeTypeMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoAutoShape = 1,
+		 msoAutoShape = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoCallout = 2,
+		 msoCallout = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoChart = 3,
+		 msoChart = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoComment = 4,
+		 msoComment = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoFreeform = 5,
+		 msoFreeform = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoGroup = 6,
+		 msoGroup = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoEmbeddedOLEObject = 7,
+		 msoEmbeddedOLEObject = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoFormControl = 8,
+		 msoFormControl = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLine = 9,
+		 msoLine = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLinkedOLEObject = 10,
+		 msoLinkedOLEObject = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoLinkedPicture = 11,
+		 msoLinkedPicture = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoOLEControlObject = 12,
+		 msoOLEControlObject = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoPicture = 13,
+		 msoPicture = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoPlaceholder = 14,
+		 msoPlaceholder = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoTextEffect = 15,
+		 msoTextEffect = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoMedia = 16,
+		 msoMedia = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoTextBox = 17,
+		 msoTextBox = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoScriptAnchor = 18,
+		 msoScriptAnchor = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>19</remarks>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		msoTable = 19,
+		 msoTable = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>20</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoCanvas = 20,
+		 msoCanvas = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>21</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoDiagram = 21,
+		 msoDiagram = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>22</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoInk = 22,
+		 msoInk = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>23</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoInkComment = 23,
+		 msoInkComment = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>24</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		msoSmartArt = 24,
+		 msoSmartArt = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>25</remarks>
 		[SupportByLibrary("Office", 14)]
-		msoSlicer = 25
+		 msoSlicer = 25
 	}
 }

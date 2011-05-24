@@ -13,25 +13,29 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoMoveRowFirst = -4,
+		 msoMoveRowFirst = -4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-3</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoMoveRowPrev = -3,
+		 msoMoveRowPrev = -3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoMoveRowNext = -2,
+		 msoMoveRowNext = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-1</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoMoveRowNbr = -1
+		 msoMoveRowNbr = -1
 	}
 }

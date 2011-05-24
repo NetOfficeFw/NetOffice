@@ -300,14 +300,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="VerbIndex">ref optional object VerbIndex</param>
+		/// <param name="VerbIndex">optional object VerbIndex</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void DoVerb(ref object verbIndex)
+		public void DoVerb(object verbIndex)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(verbIndex);
-			Invoker.Method(this, "DoVerb", paramsArray, modifiers);
-			verbIndex = (object)paramsArray[0];
+			Invoker.Method(this, "DoVerb", paramsArray);
 		}
 
 		/// <summary>
@@ -323,22 +321,16 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ClassType">ref optional object ClassType</param>
-		/// <param name="DisplayAsIcon">ref optional object DisplayAsIcon</param>
-		/// <param name="IconFileName">ref optional object IconFileName</param>
-		/// <param name="IconIndex">ref optional object IconIndex</param>
-		/// <param name="IconLabel">ref optional object IconLabel</param>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		/// <param name="IconFileName">optional object IconFileName</param>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		/// <param name="IconLabel">optional object IconLabel</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ConvertTo(ref object classType, ref object displayAsIcon, ref object iconFileName, ref object iconIndex, ref object iconLabel)
+		public void ConvertTo(object classType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, displayAsIcon, iconFileName, iconIndex, iconLabel);
-			Invoker.Method(this, "ConvertTo", paramsArray, modifiers);
-			classType = (object)paramsArray[0];
-			displayAsIcon = (object)paramsArray[1];
-			iconFileName = (object)paramsArray[2];
-			iconIndex = (object)paramsArray[3];
-			iconLabel = (object)paramsArray[4];
+			Invoker.Method(this, "ConvertTo", paramsArray);
 		}
 
 		/// <summary>

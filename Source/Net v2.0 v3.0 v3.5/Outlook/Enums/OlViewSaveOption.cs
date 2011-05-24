@@ -13,19 +13,22 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
-		olViewSaveOptionThisFolderEveryone = 0,
+		 olViewSaveOptionThisFolderEveryone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
-		olViewSaveOptionThisFolderOnlyMe = 1,
+		 olViewSaveOptionThisFolderOnlyMe = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
-		olViewSaveOptionAllFoldersOfType = 2
+		 olViewSaveOptionAllFoldersOfType = 2
 	}
 }

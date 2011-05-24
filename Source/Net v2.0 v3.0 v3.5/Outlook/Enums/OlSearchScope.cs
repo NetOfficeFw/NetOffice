@@ -13,25 +13,29 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olSearchScopeCurrentFolder = 0,
+		 olSearchScopeCurrentFolder = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Outlook", 12,14)]
-		olSearchScopeAllFolders = 1,
+		 olSearchScopeAllFolders = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Outlook", 14)]
-		olSearchScopeAllOutlookItems = 2,
+		 olSearchScopeAllOutlookItems = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Outlook", 14)]
-		olSearchScopeSubfolders = 3
+		 olSearchScopeSubfolders = 3
 	}
 }

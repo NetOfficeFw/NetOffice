@@ -133,17 +133,14 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Type">NetOffice.WordApi.Enums.WdOMathFunctionType Type</param>
-		/// <param name="NumArgs">ref optional object NumArgs</param>
-		/// <param name="NumCols">ref optional object NumCols</param>
+		/// <param name="NumArgs">optional object NumArgs</param>
+		/// <param name="NumCols">optional object NumCols</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.OMathFunction Add(NetOffice.WordApi.Range range, NetOffice.WordApi.Enums.WdOMathFunctionType type, ref object numArgs, ref object numCols)
+		public NetOffice.WordApi.OMathFunction Add(NetOffice.WordApi.Range range, NetOffice.WordApi.Enums.WdOMathFunctionType type, object numArgs, object numCols)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, type, numArgs, numCols);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.OMathFunction newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.OMathFunction;
-			numArgs = (object)paramsArray[2];
-			numCols = (object)paramsArray[3];
 			return newObject;
 		}
 

@@ -13,49 +13,57 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdRevisedPropertiesMarkNone = 0,
+		 wdRevisedPropertiesMarkNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdRevisedPropertiesMarkBold = 1,
+		 wdRevisedPropertiesMarkBold = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdRevisedPropertiesMarkItalic = 2,
+		 wdRevisedPropertiesMarkItalic = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdRevisedPropertiesMarkUnderline = 3,
+		 wdRevisedPropertiesMarkUnderline = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdRevisedPropertiesMarkDoubleUnderline = 4,
+		 wdRevisedPropertiesMarkDoubleUnderline = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdRevisedPropertiesMarkColorOnly = 5,
+		 wdRevisedPropertiesMarkColorOnly = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdRevisedPropertiesMarkStrikeThrough = 6,
+		 wdRevisedPropertiesMarkStrikeThrough = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdRevisedPropertiesMarkDoubleStrikeThrough = 7
+		 wdRevisedPropertiesMarkDoubleStrikeThrough = 7
 	}
 }

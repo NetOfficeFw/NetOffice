@@ -1093,26 +1093,31 @@
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_ComponentType.vbext_ct_ClassModule">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_ComponentType.vbext_ct_MSForm">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_ComponentType.vbext_ct_ActiveXDesigner">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>11</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_ComponentType.vbext_ct_Document">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>100</remarks>
         </member>
         <member name="T:VBIDEApi.Utils.ProjectInfo">
             <summary>
@@ -1360,11 +1365,13 @@
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>100</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_ProjectType.vbext_pt_StandAlone">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>101</remarks>
         </member>
         <member name="T:NetOffice.VBIDEApi.CodePanes">
             <summary>
@@ -1515,16 +1522,19 @@
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowState.vbext_ws_Minimize">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowState.vbext_ws_Maximize">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.VBIDEApi.CodeModule">
             <summary>
@@ -1835,21 +1845,25 @@
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_ProcKind.vbext_pk_Let">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_ProcKind.vbext_pk_Set">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_ProcKind.vbext_pk_Get">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="T:NetOffice.VBIDEApi.Enums.vbext_WindowType">
             <summary>
@@ -1860,71 +1874,85 @@
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_Designer">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_Browser">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_Watch">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_Locals">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_Immediate">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_ProjectWindow">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>6</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_PropertyWindow">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>7</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_Find">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_FindReplace">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>9</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_Toolbox">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>10</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_LinkedWindowFrame">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>11</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_MainWindow">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>12</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_WindowType.vbext_wt_ToolWindow">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>15</remarks>
         </member>
         <member name="T:NetOffice.VBIDEApi.References">
             <summary>
@@ -2074,11 +2102,13 @@
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_RefKind.vbext_rk_Project">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.VBIDEApi.ReferencesEvents">
             <summary>
@@ -2209,16 +2239,19 @@
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_VBAMode.vbext_vm_Break">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_VBAMode.vbext_vm_Design">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.VBIDEApi.Enums.vbext_ProjectProtection">
             <summary>
@@ -2229,11 +2262,13 @@
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_ProjectProtection.vbext_pp_locked">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.VBIDEApi.Addins">
             <summary>
@@ -2373,11 +2408,13 @@
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbext_CodePaneview.vbext_cv_FullModuleView">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.VBIDEApi.Enums.vbextFileTypes">
             <summary>
@@ -2388,66 +2425,79 @@
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypeModule">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypeClass">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypeProject">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypeExe">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypeFrx">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypeRes">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>6</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypeUserControl">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>7</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypePropertyPage">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypeDocObject">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>9</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypeBinary">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>10</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypeGroupProject">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>11</remarks>
         </member>
         <member name="F:NetOffice.VBIDEApi.Enums.vbextFileTypes.vbextFileTypeDesigners">
             <summary>
             SupportByLibrary VBIDE 5.3, 12, 
             </summary>
+            <remarks>12</remarks>
         </member>
     </members>
 </doc>

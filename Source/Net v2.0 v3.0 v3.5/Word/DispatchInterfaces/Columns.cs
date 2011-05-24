@@ -267,15 +267,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="BeforeColumn">ref optional object BeforeColumn</param>
+		/// <param name="BeforeColumn">optional object BeforeColumn</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Column Add(ref object beforeColumn)
+		public NetOffice.WordApi.Column Add(object beforeColumn)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeColumn);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Column newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Column;
-			beforeColumn = (object)paramsArray[0];
 			return newObject;
 		}
 

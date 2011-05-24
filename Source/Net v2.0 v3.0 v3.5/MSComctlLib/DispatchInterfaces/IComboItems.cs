@@ -52,29 +52,25 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IComboItem get__CollectionDefault(ref object index)
+		public NetOffice.MSComctlLibApi.IComboItem get__CollectionDefault(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "_CollectionDefault", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "_CollectionDefault", paramsArray);
 			NetOffice.MSComctlLibApi.IComboItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
-			index = (object)paramsArray[0];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void set__CollectionDefault(ref object index, NetOffice.MSComctlLibApi.IComboItem value)
+		public void set__CollectionDefault(object index, NetOffice.MSComctlLibApi.IComboItem value)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "_CollectionDefault", paramsArray, value, modifiers);
-			index = (object)paramsArray[0];
+			Invoker.PropertySet(this, "_CollectionDefault", paramsArray, value);
 		}
 
 		/// <summary>
@@ -120,25 +116,18 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref optional object Index</param>
-		/// <param name="Key">ref optional object Key</param>
-		/// <param name="Text">ref optional object Text</param>
-		/// <param name="Image">ref optional object Image</param>
-		/// <param name="SelImage">ref optional object SelImage</param>
-		/// <param name="Indentation">ref optional object Indentation</param>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="Key">optional object Key</param>
+		/// <param name="Text">optional object Text</param>
+		/// <param name="Image">optional object Image</param>
+		/// <param name="SelImage">optional object SelImage</param>
+		/// <param name="Indentation">optional object Indentation</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IComboItem Add(ref object index, ref object key, ref object text, ref object image, ref object selImage, ref object indentation)
+		public NetOffice.MSComctlLibApi.IComboItem Add(object index, object key, object text, object image, object selImage, object indentation)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, image, selImage, indentation);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.MSComctlLibApi.IComboItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IComboItem;
-			index = (object)paramsArray[0];
-			key = (object)paramsArray[1];
-			text = (object)paramsArray[2];
-			image = (object)paramsArray[3];
-			selImage = (object)paramsArray[4];
-			indentation = (object)paramsArray[5];
 			return newObject;
 		}
 
@@ -167,14 +156,12 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void Remove(ref object index)
+		public void Remove(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Remove", paramsArray, modifiers);
-			index = (object)paramsArray[0];
+			Invoker.Method(this, "Remove", paramsArray);
 		}
 
 		#endregion

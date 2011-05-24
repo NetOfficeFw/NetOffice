@@ -13,13 +13,15 @@ namespace NetOffice.VBIDEApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>100</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_pt_HostProject = 100,
+		 vbext_pt_HostProject = 100,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>101</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_pt_StandAlone = 101
+		 vbext_pt_StandAlone = 101
 	}
 }

@@ -13,19 +13,22 @@ namespace NetOffice.MSComctlLibApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		sbrLeft = 0,
+		 sbrLeft = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		sbrCenter = 1,
+		 sbrCenter = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		sbrRight = 2
+		 sbrRight = 2
 	}
 }

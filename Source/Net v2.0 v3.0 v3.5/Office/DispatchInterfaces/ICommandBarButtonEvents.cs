@@ -56,14 +56,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Ctrl">NetOffice.OfficeApi.CommandBarButton Ctrl</param>
-		/// <param name="CancelDefault">ref bool CancelDefault</param>
+		/// <param name="CancelDefault">bool CancelDefault</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public void Click(NetOffice.OfficeApi.CommandBarButton ctrl, ref bool cancelDefault)
+		public void Click(NetOffice.OfficeApi.CommandBarButton ctrl, bool cancelDefault)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(ctrl, cancelDefault);
-			Invoker.Method(this, "Click", paramsArray, modifiers);
-			cancelDefault = (bool)paramsArray[1];
+			Invoker.Method(this, "Click", paramsArray);
 		}
 
 		#endregion

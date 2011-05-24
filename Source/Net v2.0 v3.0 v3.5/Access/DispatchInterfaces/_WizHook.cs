@@ -128,16 +128,13 @@ namespace NetOffice.AccessApi
 		/// <param name="Script">string Script</param>
 		/// <param name="Label">string Label</param>
 		/// <param name="OpenMode">Int32 OpenMode</param>
-		/// <param name="Extra">ref Int32 Extra</param>
-		/// <param name="Version">ref Int32 Version</param>
+		/// <param name="Extra">Int32 Extra</param>
+		/// <param name="Version">Int32 Version</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public Int32 OpenScript(string script, string label, Int32 openMode, ref Int32 extra, ref Int32 version)
+		public Int32 OpenScript(string script, string label, Int32 openMode, Int32 extra, Int32 version)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(script, label, openMode, extra, version);
 			object returnItem = Invoker.MethodReturn(this, "OpenScript", paramsArray);
-			extra = (Int32)paramsArray[3];
-			version = (Int32)paramsArray[4];
 			return (Int32)returnItem;
 		}
 
@@ -146,14 +143,12 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="HScr">Int32 HScr</param>
 		/// <param name="ScriptColumn">Int32 ScriptColumn</param>
-		/// <param name="Value">ref string Value</param>
+		/// <param name="Value">string Value</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public bool GetScriptString(Int32 hScr, Int32 scriptColumn, ref string value)
+		public bool GetScriptString(Int32 hScr, Int32 scriptColumn, string value)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(hScr, scriptColumn, value);
 			object returnItem = Invoker.MethodReturn(this, "GetScriptString", paramsArray);
-			value = (string)paramsArray[2];
 			return (bool)returnItem;
 		}
 
@@ -199,15 +194,13 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="String">ref string String</param>
+		/// <param name="String">string String</param>
 		/// <param name="flags">Int32 flags</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public bool BracketString(ref string _string, Int32 flags)
+		public bool BracketString(string _string, Int32 flags)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(_string, flags);
 			object returnItem = Invoker.MethodReturn(this, "BracketString", paramsArray);
-			_string = (string)paramsArray[0];
 			return (bool)returnItem;
 		}
 
@@ -228,16 +221,13 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="File">ref string File</param>
-		/// <param name="Cancelled">ref bool Cancelled</param>
+		/// <param name="File">string File</param>
+		/// <param name="Cancelled">bool Cancelled</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public bool OpenPictureFile(ref string file, ref bool cancelled)
+		public bool OpenPictureFile(string file, bool cancelled)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(file, cancelled);
 			object returnItem = Invoker.MethodReturn(this, "OpenPictureFile", paramsArray);
-			file = (string)paramsArray[0];
-			cancelled = (bool)paramsArray[1];
 			return (bool)returnItem;
 		}
 
@@ -245,14 +235,12 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="In">string In</param>
-		/// <param name="Out">ref string Out</param>
+		/// <param name="Out">string Out</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public bool EnglishPictToLocal(string _in, ref string _out)
+		public bool EnglishPictToLocal(string _in, string _out)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(_in, _out);
 			object returnItem = Invoker.MethodReturn(this, "EnglishPictToLocal", paramsArray);
-			_out = (string)paramsArray[1];
 			return (bool)returnItem;
 		}
 
@@ -260,16 +248,14 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="In">string In</param>
-		/// <param name="Out">ref string Out</param>
+		/// <param name="Out">string Out</param>
 		/// <param name="ParseFlags">Int32 ParseFlags</param>
 		/// <param name="TranslateFlags">Int32 TranslateFlags</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public bool TranslateExpression(string _in, ref string _out, Int32 parseFlags, Int32 translateFlags)
+		public bool TranslateExpression(string _in, string _out, Int32 parseFlags, Int32 translateFlags)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(_in, _out, parseFlags, translateFlags);
 			object returnItem = Invoker.MethodReturn(this, "TranslateExpression", paramsArray);
-			_out = (string)paramsArray[1];
 			return (bool)returnItem;
 		}
 
@@ -289,14 +275,12 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="RelativePath">string RelativePath</param>
-		/// <param name="FullPath">ref string FullPath</param>
+		/// <param name="FullPath">string FullPath</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public Int16 FullPath(string relativePath, ref string fullPath)
+		public Int16 FullPath(string relativePath, string fullPath)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(relativePath, fullPath);
 			object returnItem = Invoker.MethodReturn(this, "FullPath", paramsArray);
-			fullPath = (string)paramsArray[1];
 			return (Int16)returnItem;
 		}
 
@@ -304,20 +288,15 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Path">string Path</param>
-		/// <param name="Drive">ref string Drive</param>
-		/// <param name="Dir">ref string Dir</param>
-		/// <param name="File">ref string File</param>
-		/// <param name="Ext">ref string Ext</param>
+		/// <param name="Drive">string Drive</param>
+		/// <param name="Dir">string Dir</param>
+		/// <param name="File">string File</param>
+		/// <param name="Ext">string Ext</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public void SplitPath(string path, ref string drive, ref string dir, ref string file, ref string ext)
+		public void SplitPath(string path, string drive, string dir, string file, string ext)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(path, drive, dir, file, ext);
-			Invoker.Method(this, "SplitPath", paramsArray, modifiers);
-			drive = (string)paramsArray[1];
-			dir = (string)paramsArray[2];
-			file = (string)paramsArray[3];
-			ext = (string)paramsArray[4];
+			Invoker.Method(this, "SplitPath", paramsArray);
 		}
 
 		/// <summary>
@@ -331,16 +310,13 @@ namespace NetOffice.AccessApi
 		/// <param name="Cch">Int32 Cch</param>
 		/// <param name="Caption">string Caption</param>
 		/// <param name="MaxWidthCch">Int32 MaxWidthCch</param>
-		/// <param name="dx">ref Int32 dx</param>
-		/// <param name="dy">ref Int32 dy</param>
+		/// <param name="dx">Int32 dx</param>
+		/// <param name="dy">Int32 dy</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public bool TwipsFromFont(string fontName, Int32 size, Int32 weight, bool italic, bool underline, Int32 cch, string caption, Int32 maxWidthCch, ref Int32 dx, ref Int32 dy)
+		public bool TwipsFromFont(string fontName, Int32 size, Int32 weight, bool italic, bool underline, Int32 cch, string caption, Int32 maxWidthCch, Int32 dx, Int32 dy)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,false,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName, size, weight, italic, underline, cch, caption, maxWidthCch, dx, dy);
 			object returnItem = Invoker.MethodReturn(this, "TwipsFromFont", paramsArray);
-			dx = (Int32)paramsArray[8];
-			dy = (Int32)paramsArray[9];
 			return (bool)returnItem;
 		}
 
@@ -371,14 +347,12 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Array">ref String[] Array</param>
+		/// <param name="Array">String[] Array</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public void SortStringArray(ref String[] array)
+		public void SortStringArray(String[] array)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray((object)array);
-			Invoker.Method(this, "SortStringArray", paramsArray, modifiers);
-			array = (String[])paramsArray[0];
+			Invoker.Method(this, "SortStringArray", paramsArray);
 		}
 
 		/// <summary>
@@ -388,14 +362,12 @@ namespace NetOffice.AccessApi
 		/// <param name="Database">NetOffice.DAOApi.Database Database</param>
 		/// <param name="Table">string Table</param>
 		/// <param name="ReturnDebugInfo">bool ReturnDebugInfo</param>
-		/// <param name="Results">ref string Results</param>
+		/// <param name="Results">string Results</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public Int32 AnalyzeTable(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string table, bool returnDebugInfo, ref string results)
+		public Int32 AnalyzeTable(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string table, bool returnDebugInfo, string results)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(workspace, database, table, returnDebugInfo, results);
 			object returnItem = Invoker.MethodReturn(this, "AnalyzeTable", paramsArray);
-			results = (string)paramsArray[4];
 			return (Int32)returnItem;
 		}
 
@@ -405,14 +377,12 @@ namespace NetOffice.AccessApi
 		/// <param name="Workspace">NetOffice.DAOApi.Workspace Workspace</param>
 		/// <param name="Database">NetOffice.DAOApi.Database Database</param>
 		/// <param name="Query">string Query</param>
-		/// <param name="Results">ref string Results</param>
+		/// <param name="Results">string Results</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public Int32 AnalyzeQuery(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string query, ref string results)
+		public Int32 AnalyzeQuery(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string query, string results)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(workspace, database, query, results);
 			object returnItem = Invoker.MethodReturn(this, "AnalyzeQuery", paramsArray);
-			results = (string)paramsArray[3];
 			return (Int32)returnItem;
 		}
 
@@ -423,7 +393,7 @@ namespace NetOffice.AccessApi
 		/// <param name="AppName">string AppName</param>
 		/// <param name="DlgTitle">string DlgTitle</param>
 		/// <param name="OpenTitle">string OpenTitle</param>
-		/// <param name="File">ref string File</param>
+		/// <param name="File">string File</param>
 		/// <param name="InitialDir">string InitialDir</param>
 		/// <param name="Filter">string Filter</param>
 		/// <param name="FilterIndex">Int32 FilterIndex</param>
@@ -431,12 +401,10 @@ namespace NetOffice.AccessApi
 		/// <param name="flags">Int32 flags</param>
 		/// <param name="fOpen">bool fOpen</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public Int32 GetFileName(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, ref string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen)
+		public Int32 GetFileName(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false,false,false,false,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(hwndOwner, appName, dlgTitle, openTitle, file, initialDir, filter, filterIndex, view, flags, fOpen);
 			object returnItem = Invoker.MethodReturn(this, "GetFileName", paramsArray);
-			file = (string)paramsArray[4];
 			return (Int32)returnItem;
 		}
 
@@ -602,17 +570,14 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Name">ref string Name</param>
+		/// <param name="Name">string Name</param>
 		/// <param name="ObjType">NetOffice.AccessApi.Enums.AcObjectType ObjType</param>
-		/// <param name="Attribs">ref Int32 Attribs</param>
+		/// <param name="Attribs">Int32 Attribs</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public bool FirstDbcDataObject(ref string name, NetOffice.AccessApi.Enums.AcObjectType objType, ref Int32 attribs)
+		public bool FirstDbcDataObject(string name, NetOffice.AccessApi.Enums.AcObjectType objType, Int32 attribs)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, objType, attribs);
 			object returnItem = Invoker.MethodReturn(this, "FirstDbcDataObject", paramsArray);
-			name = (string)paramsArray[0];
-			attribs = (Int32)paramsArray[2];
 			return (bool)returnItem;
 		}
 
@@ -666,14 +631,12 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrExt">string bstrExt</param>
-		/// <param name="bstrFilename">ref string bstrFilename</param>
+		/// <param name="bstrFilename">string bstrFilename</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		public Int32 GetFileOdso(string bstrExt, ref string bstrFilename)
+		public Int32 GetFileOdso(string bstrExt, string bstrFilename)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExt, bstrFilename);
 			object returnItem = Invoker.MethodReturn(this, "GetFileOdso", paramsArray);
-			bstrFilename = (string)paramsArray[1];
 			return (Int32)returnItem;
 		}
 
@@ -696,7 +659,7 @@ namespace NetOffice.AccessApi
 		/// <param name="AppName">string AppName</param>
 		/// <param name="DlgTitle">string DlgTitle</param>
 		/// <param name="OpenTitle">string OpenTitle</param>
-		/// <param name="File">ref string File</param>
+		/// <param name="File">string File</param>
 		/// <param name="InitialDir">string InitialDir</param>
 		/// <param name="Filter">string Filter</param>
 		/// <param name="FilterIndex">Int32 FilterIndex</param>
@@ -705,12 +668,10 @@ namespace NetOffice.AccessApi
 		/// <param name="fOpen">bool fOpen</param>
 		/// <param name="fFileSystem">object fFileSystem</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		public Int32 GetFileName2(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, ref string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen, object fFileSystem)
+		public Int32 GetFileName2(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen, object fFileSystem)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false,false,false,false,false,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(hwndOwner, appName, dlgTitle, openTitle, file, initialDir, filter, filterIndex, view, flags, fOpen, fFileSystem);
 			object returnItem = Invoker.MethodReturn(this, "GetFileName2", paramsArray);
-			file = (string)paramsArray[4];
 			return (Int32)returnItem;
 		}
 
@@ -745,16 +706,13 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
-		/// <param name="pbstrUID">ref string pbstrUID</param>
-		/// <param name="pbstrPwd">ref string pbstrPwd</param>
+		/// <param name="pbstrUID">string pbstrUID</param>
+		/// <param name="pbstrPwd">string pbstrPwd</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		public bool AdpUIDPwd(ref string pbstrUID, ref string pbstrPwd)
+		public bool AdpUIDPwd(string pbstrUID, string pbstrPwd)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstrUID, pbstrPwd);
 			object returnItem = Invoker.MethodReturn(this, "AdpUIDPwd", paramsArray);
-			pbstrUID = (string)paramsArray[0];
-			pbstrPwd = (string)paramsArray[1];
 			return (bool)returnItem;
 		}
 
@@ -947,16 +905,13 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="pProperty">NetOffice.AccessApi._AccessProperty pProperty</param>
 		/// <param name="OpenMode">Int32 OpenMode</param>
-		/// <param name="Extra">ref Int32 Extra</param>
-		/// <param name="Version">ref Int32 Version</param>
+		/// <param name="Extra">Int32 Extra</param>
+		/// <param name="Version">Int32 Version</param>
 		[SupportByLibrary("Access", 12,14)]
-		public Int32 OpenEmScript(NetOffice.AccessApi._AccessProperty pProperty, Int32 openMode, ref Int32 extra, ref Int32 version)
+		public Int32 OpenEmScript(NetOffice.AccessApi._AccessProperty pProperty, Int32 openMode, Int32 extra, Int32 version)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pProperty, openMode, extra, version);
 			object returnItem = Invoker.MethodReturn(this, "OpenEmScript", paramsArray);
-			extra = (Int32)paramsArray[2];
-			version = (Int32)paramsArray[3];
 			return (Int32)returnItem;
 		}
 

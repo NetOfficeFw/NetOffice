@@ -1065,15 +1065,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Count">ref optional object Count</param>
+		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Paragraph Next(ref object count)
+		public NetOffice.WordApi.Paragraph Next(object count)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(count);
-			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray);
 			NetOffice.WordApi.Paragraph newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Paragraph;
-			count = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -1092,15 +1090,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Count">ref optional object Count</param>
+		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Paragraph Previous(ref object count)
+		public NetOffice.WordApi.Paragraph Previous(object count)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(count);
-			object returnItem = Invoker.MethodReturn(this, "Previous", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Previous", paramsArray);
 			NetOffice.WordApi.Paragraph newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Paragraph;
-			count = (object)paramsArray[0];
 			return newObject;
 		}
 

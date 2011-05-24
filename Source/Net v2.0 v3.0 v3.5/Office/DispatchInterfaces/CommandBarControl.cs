@@ -317,29 +317,25 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="pszHelpFile">ref string pszHelpFile</param>
+		/// <param name="pszHelpFile">string pszHelpFile</param>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public Int32 get_accHelpTopic(ref string pszHelpFile, object varChild)
+		public Int32 get_accHelpTopic(string pszHelpFile, object varChild)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(pszHelpFile, varChild);
 			object returnItem = Invoker.PropertyGet(this, "accHelpTopic", paramsArray);
-			pszHelpFile = (string)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="pszHelpFile">ref string pszHelpFile</param>
+		/// <param name="pszHelpFile">string pszHelpFile</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public Int32 get_accHelpTopic(ref string pszHelpFile)
+		public Int32 get_accHelpTopic(string pszHelpFile)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pszHelpFile);
 			object returnItem = Invoker.PropertyGet(this, "accHelpTopic", paramsArray);
-			pszHelpFile = (string)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
@@ -898,40 +894,30 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="pxLeft">ref Int32 pxLeft</param>
-		/// <param name="pyTop">ref Int32 pyTop</param>
-		/// <param name="pcxWidth">ref Int32 pcxWidth</param>
-		/// <param name="pcyHeight">ref Int32 pcyHeight</param>
+		/// <param name="pxLeft">Int32 pxLeft</param>
+		/// <param name="pyTop">Int32 pyTop</param>
+		/// <param name="pcxWidth">Int32 pcxWidth</param>
+		/// <param name="pcyHeight">Int32 pcyHeight</param>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public void accLocation(ref Int32 pxLeft, ref Int32 pyTop, ref Int32 pcxWidth, ref Int32 pcyHeight, object varChild)
+		public void accLocation(Int32 pxLeft, Int32 pyTop, Int32 pcxWidth, Int32 pcyHeight, object varChild)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(pxLeft, pyTop, pcxWidth, pcyHeight, varChild);
-			Invoker.Method(this, "accLocation", paramsArray, modifiers);
-			pxLeft = (Int32)paramsArray[0];
-			pyTop = (Int32)paramsArray[1];
-			pcxWidth = (Int32)paramsArray[2];
-			pcyHeight = (Int32)paramsArray[3];
+			Invoker.Method(this, "accLocation", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="pxLeft">ref Int32 pxLeft</param>
-		/// <param name="pyTop">ref Int32 pyTop</param>
-		/// <param name="pcxWidth">ref Int32 pcxWidth</param>
-		/// <param name="pcyHeight">ref Int32 pcyHeight</param>
+		/// <param name="pxLeft">Int32 pxLeft</param>
+		/// <param name="pyTop">Int32 pyTop</param>
+		/// <param name="pcxWidth">Int32 pcxWidth</param>
+		/// <param name="pcyHeight">Int32 pcyHeight</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public void accLocation(ref Int32 pxLeft, ref Int32 pyTop, ref Int32 pcxWidth, ref Int32 pcyHeight)
+		public void accLocation(Int32 pxLeft, Int32 pyTop, Int32 pcxWidth, Int32 pcyHeight)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pxLeft, pyTop, pcxWidth, pcyHeight);
-			Invoker.Method(this, "accLocation", paramsArray, modifiers);
-			pxLeft = (Int32)paramsArray[0];
-			pyTop = (Int32)paramsArray[1];
-			pcxWidth = (Int32)paramsArray[2];
-			pcyHeight = (Int32)paramsArray[3];
+			Invoker.Method(this, "accLocation", paramsArray);
 		}
 
 		/// <summary>

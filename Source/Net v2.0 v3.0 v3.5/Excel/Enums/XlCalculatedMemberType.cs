@@ -13,13 +13,15 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlCalculatedMember = 0,
+		 xlCalculatedMember = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlCalculatedSet = 1
+		 xlCalculatedSet = 1
 	}
 }

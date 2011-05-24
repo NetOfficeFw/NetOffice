@@ -13,13 +13,15 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppListBoxSingle = 0,
+		 ppListBoxSingle = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppListBoxMulti = 1
+		 ppListBoxMulti = 1
 	}
 }

@@ -838,16 +838,19 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelBevelConstants.sbrInset">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelBevelConstants.sbrRaised">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.OLEDropConstants">
             <summary>
@@ -858,11 +861,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.OLEDropConstants.ccOLEDropManual">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IComboItem">
             <summary>
@@ -1051,16 +1056,19 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelAlignmentConstants.sbrCenter">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelAlignmentConstants.sbrRight">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.ErrorConstants">
             <summary>
@@ -1071,176 +1079,211 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccOutOfMemory">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>7</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccTypeMismatch">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>13</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccObjectVariableNotSet">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>91</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccInvalidPropertyValue">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>380</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccSetNotSupportedAtRuntime">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>382</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccSetNotSupported">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>383</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccSetNotPermitted">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>387</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccGetNotSupported">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>394</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccInvalidPicture">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>481</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccInvalidObjectUse">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>425</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccWrongClipboardFormat">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>461</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccDataObjectLocked">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>672</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccExpectedAnArgument">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>673</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccRecursiveOleDrag">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>674</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccFormatNotByteArray">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>675</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccDataNotSetForFormat">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>676</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccIndexOutOfBounds">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35600</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccElemNotFound">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35601</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccNonUniqueKey">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35602</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccInvalidKey">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35603</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccElemNotPartOfCollection">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35605</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccCollectionChangedDuringEnum">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35606</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccWouldIntroduceCycle">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35614</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccMissingRequiredArg">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35607</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccBadObjectReference">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35610</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccCircularReference">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35700</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccCol1MustBeLeftAligned">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35604</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccReadOnlyIfHasImages">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35611</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccImageListMustBeInitialized">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35613</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccNotSameSize">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35615</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccImageListLocked">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35617</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccMaxPanelsExceeded">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35616</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccMaxButtonsExceeded">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>35619</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ErrorConstants.ccInvalidSafeModeProcCall">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>680</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.OrientationConstants">
             <summary>
@@ -1251,11 +1294,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.OrientationConstants.ccOrientationVertical">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ListImages">
             <summary>
@@ -1427,21 +1472,25 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ImageDrawConstants.imlTransparent">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ImageDrawConstants.imlSelected">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ImageDrawConstants.imlFocus">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.ScrollingConstants">
             <summary>
@@ -1452,11 +1501,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ScrollingConstants.ccScrollingSmooth">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ComboItems">
             <summary>
@@ -1946,16 +1997,19 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListColumnAlignmentConstants.lvwColumnRight">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListColumnAlignmentConstants.lvwColumnCenter">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.ListPictureAlignmentConstants">
             <summary>
@@ -1966,31 +2020,37 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListPictureAlignmentConstants.lvwTopRight">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListPictureAlignmentConstants.lvwBottomLeft">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListPictureAlignmentConstants.lvwBottomRight">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListPictureAlignmentConstants.lvwCenter">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListPictureAlignmentConstants.lvwTile">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.TreeStyleConstants">
             <summary>
@@ -2001,41 +2061,49 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeStyleConstants.tvwPictureText">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeStyleConstants.tvwPlusMinusText">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeStyleConstants.tvwPlusPictureText">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeStyleConstants.tvwTreelinesText">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeStyleConstants.tvwTreelinesPictureText">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeStyleConstants.tvwTreelinesPlusMinusText">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>6</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeStyleConstants.tvwTreelinesPlusMinusPictureText">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>7</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.TreeLineStyleConstants">
             <summary>
@@ -2046,11 +2114,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeLineStyleConstants.tvwRootLines">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Controls">
             <summary>
@@ -2600,21 +2670,25 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListViewConstants.lvwSmallIcon">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListViewConstants.lvwList">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListViewConstants.lvwReport">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.PlacementConstants">
             <summary>
@@ -2625,21 +2699,25 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PlacementConstants.tabPlacementBottom">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PlacementConstants.tabPlacementLeft">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PlacementConstants.tabPlacementRight">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ListImage">
             <summary>
@@ -2739,86 +2817,103 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccArrow">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccCross">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccIBeam">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccIcon">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccSize">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccSizeNESW">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>6</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccSizeNS">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>7</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccSizeNWSE">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccSizeEW">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>9</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccUpArrow">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>10</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccHourglass">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>11</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccNoDrop">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>12</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccArrowHourglass">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>13</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccArrowQuestion">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>14</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccSizeAll">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>15</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.MousePointerConstants.ccCustom">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>99</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Node">
             <summary>
@@ -3168,16 +3263,19 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListFindItemWhereConstants.lvwSubItem">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListFindItemWhereConstants.lvwTag">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.PanelStyleConstants">
             <summary>
@@ -3188,41 +3286,49 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelStyleConstants.sbrCaps">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelStyleConstants.sbrNum">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelStyleConstants.sbrIns">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelStyleConstants.sbrScrl">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelStyleConstants.sbrTime">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelStyleConstants.sbrDate">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>6</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelStyleConstants.sbrKana">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>7</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.SbarStyleConstants">
             <summary>
@@ -3233,11 +3339,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.SbarStyleConstants.sbrSimple">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.OLEDragConstants">
             <summary>
@@ -3248,11 +3356,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.OLEDragConstants.ccOLEDragAutomatic">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ImageList">
             <summary>
@@ -3683,16 +3793,19 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ImageComboStyleConstants.ImgCboSimpleCombo">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ImageComboStyleConstants.ImgCboDropdownList">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.TickStyleConstants">
             <summary>
@@ -3703,21 +3816,25 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TickStyleConstants.sldTopLeft">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TickStyleConstants.sldBoth">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TickStyleConstants.sldNoTicks">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.ToolbarTextAlignConstants">
             <summary>
@@ -3728,11 +3845,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ToolbarTextAlignConstants.tbrTextAlignRight">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants">
             <summary>
@@ -3743,31 +3862,37 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants.tbrCheck">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants.tbrButtonGroup">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants.tbrSeparator">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants.tbrPlaceholder">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants.tbrDropdown">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>5</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Nodes">
             <summary>
@@ -4079,11 +4204,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListSortOrderConstants.lvwDescending">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.LabelEditConstants">
             <summary>
@@ -4094,11 +4221,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.LabelEditConstants.tvwManual">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.TabWidthStyleConstants">
             <summary>
@@ -4109,16 +4238,19 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TabWidthStyleConstants.tabNonJustified">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TabWidthStyleConstants.tabFixed">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ButtonMenus">
             <summary>
@@ -4179,11 +4311,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ValueConstants.tbrPressed">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.TabStrip">
             <summary>
@@ -4625,16 +4759,19 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelAutoSizeConstants.sbrSpring">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.PanelAutoSizeConstants.sbrContents">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:MSComctlLibApi.Utils.ProjectInfo">
             <summary>
@@ -4825,16 +4962,19 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListArrangeConstants.lvwAutoLeft">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListArrangeConstants.lvwAutoTop">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.TabSelStyleConstants">
             <summary>
@@ -4845,11 +4985,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TabSelStyleConstants.tabTabOpposite">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ListSubItem">
             <summary>
@@ -5059,11 +5201,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListTextBackgroundConstants.lvwOpaque">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.ToolbarStyleConstants">
             <summary>
@@ -5074,11 +5218,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ToolbarStyleConstants.tbrFlat">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.DragOverConstants">
             <summary>
@@ -5089,16 +5235,19 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.DragOverConstants.ccLeave">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.DragOverConstants.ccOver">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.AppearanceConstants">
             <summary>
@@ -5109,11 +5258,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.AppearanceConstants.cc3D">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ImageCombo">
             <summary>
@@ -5511,11 +5662,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListFindItemHowConstants.lvwPartial">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.TabStyleConstants">
             <summary>
@@ -5526,16 +5679,19 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TabStyleConstants.tabButtons">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TabStyleConstants.tabFlatButtons">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.BorderStyleConstants">
             <summary>
@@ -5546,11 +5702,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.BorderStyleConstants.ccFixedSingle">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ColumnHeader">
             <summary>
@@ -5611,11 +5769,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TextPositionConstants.sldBelowRight">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.ListLabelEditConstants">
             <summary>
@@ -5626,11 +5786,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ListLabelEditConstants.lvwManual">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.TreeRelationshipConstants">
             <summary>
@@ -5641,26 +5803,31 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeRelationshipConstants.tvwLast">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeRelationshipConstants.tvwNext">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeRelationshipConstants.tvwPrevious">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.TreeRelationshipConstants.tvwChild">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>4</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Enums.OLEDropEffectConstants">
             <summary>
@@ -5671,21 +5838,25 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.OLEDropEffectConstants.ccOLEDropEffectCopy">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.OLEDropEffectConstants.ccOLEDropEffectMove">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.OLEDropEffectConstants.ccOLEDropEffectScroll">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>-2147483648</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ListSubItems">
             <summary>
@@ -5746,41 +5917,49 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ClipBoardConstants.ccCFBitmap">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>2</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ClipBoardConstants.ccCFMetafile">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>3</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ClipBoardConstants.ccCFDIB">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>8</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ClipBoardConstants.ccCFPalette">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>9</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ClipBoardConstants.ccCFEMetafile">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>14</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ClipBoardConstants.ccCFFiles">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>15</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.ClipBoardConstants.ccCFRTF">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>-16639</remarks>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ComboItem">
             <summary>
@@ -6041,11 +6220,13 @@
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>0</remarks>
         </member>
         <member name="F:NetOffice.MSComctlLibApi.Enums.VB4AppearanceConstants.vb3D">
             <summary>
             SupportByLibrary MSComctlLib 6, 
             </summary>
+            <remarks>1</remarks>
         </member>
     </members>
 </doc>

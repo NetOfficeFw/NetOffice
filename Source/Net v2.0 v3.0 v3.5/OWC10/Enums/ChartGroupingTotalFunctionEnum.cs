@@ -13,37 +13,43 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chFunctionSum = 1,
+		 chFunctionSum = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chFunctionCount = 2,
+		 chFunctionCount = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chFunctionMin = 3,
+		 chFunctionMin = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chFunctionMax = 4,
+		 chFunctionMax = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chFunctionAvg = 5,
+		 chFunctionAvg = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chFunctionDefault = 6
+		 chFunctionDefault = 6
 	}
 }

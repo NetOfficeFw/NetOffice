@@ -232,14 +232,12 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		/// <param name="pvarId">ref optional object pvarId</param>
+		/// <param name="pvarId">optional object pvarId</param>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		public void ShowHelp(ref object pvarId)
+		public void ShowHelp(object pvarId)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarId);
-			Invoker.Method(this, "ShowHelp", paramsArray, modifiers);
-			pvarId = (object)paramsArray[0];
+			Invoker.Method(this, "ShowHelp", paramsArray);
 		}
 
 		/// <summary>

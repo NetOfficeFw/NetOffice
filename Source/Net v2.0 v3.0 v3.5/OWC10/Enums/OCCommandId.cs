@@ -13,97 +13,113 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1007</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandAbout = 1007,
+		 ocCommandAbout = 1007,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1000</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandUndo = 1000,
+		 ocCommandUndo = 1000,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1001</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandCut = 1001,
+		 ocCommandCut = 1001,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1002</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandCopy = 1002,
+		 ocCommandCopy = 1002,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1003</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandPaste = 1003,
+		 ocCommandPaste = 1003,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1005</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandProperties = 1005,
+		 ocCommandProperties = 1005,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1006</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandHelp = 1006,
+		 ocCommandHelp = 1006,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1004</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandExport = 1004,
+		 ocCommandExport = 1004,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2000</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandSortAsc = 2000,
+		 ocCommandSortAsc = 2000,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2031</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandSortDesc = 2031,
+		 ocCommandSortDesc = 2031,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1010</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandChooser = 1010,
+		 ocCommandChooser = 1010,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1017</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandAutoFilter = 1017,
+		 ocCommandAutoFilter = 1017,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1016</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandAutoCalc = 1016,
+		 ocCommandAutoCalc = 1016,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1013</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandCollapse = 1013,
+		 ocCommandCollapse = 1013,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1012</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandExpand = 1012,
+		 ocCommandExpand = 1012,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1014</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ocCommandRefresh = 1014
+		 ocCommandRefresh = 1014
 	}
 }

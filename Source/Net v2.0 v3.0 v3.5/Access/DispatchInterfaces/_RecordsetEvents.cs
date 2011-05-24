@@ -167,16 +167,14 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="fMoreData">ref Int16 fMoreData</param>
+		/// <param name="fMoreData">Int16 fMoreData</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">object pRecordset</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public void EndOfRecordset(ref Int16 fMoreData, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, object pRecordset)
+		public void EndOfRecordset(Int16 fMoreData, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, object pRecordset)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(fMoreData, adStatus, pRecordset);
-			Invoker.Method(this, "EndOfRecordset", paramsArray, modifiers);
-			fMoreData = (Int16)paramsArray[0];
+			Invoker.Method(this, "EndOfRecordset", paramsArray);
 		}
 
 		/// <summary>

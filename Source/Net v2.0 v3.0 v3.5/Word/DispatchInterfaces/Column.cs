@@ -334,22 +334,16 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ExcludeHeader">ref optional object ExcludeHeader</param>
-		/// <param name="SortFieldType">ref optional object SortFieldType</param>
-		/// <param name="SortOrder">ref optional object SortOrder</param>
-		/// <param name="CaseSensitive">ref optional object CaseSensitive</param>
-		/// <param name="LanguageID">ref optional object LanguageID</param>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void SortOld(ref object excludeHeader, ref object sortFieldType, ref object sortOrder, ref object caseSensitive, ref object languageID)
+		public void SortOld(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object languageID)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive, languageID);
-			Invoker.Method(this, "SortOld", paramsArray, modifiers);
-			excludeHeader = (object)paramsArray[0];
-			sortFieldType = (object)paramsArray[1];
-			sortOrder = (object)paramsArray[2];
-			caseSensitive = (object)paramsArray[3];
-			languageID = (object)paramsArray[4];
+			Invoker.Method(this, "SortOld", paramsArray);
 		}
 
 		/// <summary>
@@ -365,32 +359,21 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ExcludeHeader">ref optional object ExcludeHeader</param>
-		/// <param name="SortFieldType">ref optional object SortFieldType</param>
-		/// <param name="SortOrder">ref optional object SortOrder</param>
-		/// <param name="CaseSensitive">ref optional object CaseSensitive</param>
-		/// <param name="BidiSort">ref optional object BidiSort</param>
-		/// <param name="IgnoreThe">ref optional object IgnoreThe</param>
-		/// <param name="IgnoreKashida">ref optional object IgnoreKashida</param>
-		/// <param name="IgnoreDiacritics">ref optional object IgnoreDiacritics</param>
-		/// <param name="IgnoreHe">ref optional object IgnoreHe</param>
-		/// <param name="LanguageID">ref optional object LanguageID</param>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		/// <param name="IgnoreThe">optional object IgnoreThe</param>
+		/// <param name="IgnoreKashida">optional object IgnoreKashida</param>
+		/// <param name="IgnoreDiacritics">optional object IgnoreDiacritics</param>
+		/// <param name="IgnoreHe">optional object IgnoreHe</param>
+		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Sort(ref object excludeHeader, ref object sortFieldType, ref object sortOrder, ref object caseSensitive, ref object bidiSort, ref object ignoreThe, ref object ignoreKashida, ref object ignoreDiacritics, ref object ignoreHe, ref object languageID)
+		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID);
-			Invoker.Method(this, "Sort", paramsArray, modifiers);
-			excludeHeader = (object)paramsArray[0];
-			sortFieldType = (object)paramsArray[1];
-			sortOrder = (object)paramsArray[2];
-			caseSensitive = (object)paramsArray[3];
-			bidiSort = (object)paramsArray[4];
-			ignoreThe = (object)paramsArray[5];
-			ignoreKashida = (object)paramsArray[6];
-			ignoreDiacritics = (object)paramsArray[7];
-			ignoreHe = (object)paramsArray[8];
-			languageID = (object)paramsArray[9];
+			Invoker.Method(this, "Sort", paramsArray);
 		}
 
 		/// <summary>

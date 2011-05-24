@@ -13,67 +13,78 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlHundreds = -2,
+		 xlHundreds = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-3</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlThousands = -3,
+		 xlThousands = -3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-4</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlTenThousands = -4,
+		 xlTenThousands = -4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-5</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlHundredThousands = -5,
+		 xlHundredThousands = -5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-6</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlMillions = -6,
+		 xlMillions = -6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-7</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlTenMillions = -7,
+		 xlTenMillions = -7,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-8</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlHundredMillions = -8,
+		 xlHundredMillions = -8,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-9</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlThousandMillions = -9,
+		 xlThousandMillions = -9,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-10</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlMillionMillions = -10,
+		 xlMillionMillions = -10,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-4114</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlDisplayUnitCustom = -4114,
+		 xlDisplayUnitCustom = -4114,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
+		/// <remarks>-4142</remarks>
 		[SupportByLibrary("Office", 12,14)]
-		xlDisplayUnitNone = -4142
+		 xlDisplayUnitNone = -4142
 	}
 }

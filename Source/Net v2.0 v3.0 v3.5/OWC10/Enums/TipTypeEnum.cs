@@ -13,25 +13,29 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>-1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		eTipTypeNone = -1,
+		 eTipTypeNone = -1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		eTipTypeText = 0,
+		 eTipTypeText = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		eTipTypeHTML = 1,
+		 eTipTypeHTML = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		eTipTypeAuto = 2
+		 eTipTypeAuto = 2
 	}
 }

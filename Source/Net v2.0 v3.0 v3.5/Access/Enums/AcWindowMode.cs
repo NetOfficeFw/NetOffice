@@ -13,25 +13,29 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acWindowNormal = 0,
+		 acWindowNormal = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acHidden = 1,
+		 acHidden = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acIcon = 2,
+		 acIcon = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acDialog = 3
+		 acDialog = 3
 	}
 }

@@ -13,61 +13,71 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSectionBreakNextPage = 2,
+		 wdSectionBreakNextPage = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSectionBreakContinuous = 3,
+		 wdSectionBreakContinuous = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSectionBreakEvenPage = 4,
+		 wdSectionBreakEvenPage = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdSectionBreakOddPage = 5,
+		 wdSectionBreakOddPage = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdLineBreak = 6,
+		 wdLineBreak = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdPageBreak = 7,
+		 wdPageBreak = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdColumnBreak = 8,
+		 wdColumnBreak = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdLineBreakClearLeft = 9,
+		 wdLineBreakClearLeft = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdLineBreakClearRight = 10,
+		 wdLineBreakClearRight = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdTextWrappingBreak = 11
+		 wdTextWrappingBreak = 11
 	}
 }

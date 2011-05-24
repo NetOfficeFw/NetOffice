@@ -24,23 +24,49 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
         {
             InitializeComponent();
 
-            dataGridView.Rows.Add(5);
-
-            dataGridView.Rows[0].Cells[0].Value = "Excel";
-            dataGridView.Rows[1].Cells[0].Value = "Word";
-            dataGridView.Rows[2].Cells[0].Value = "Outlook";
-            dataGridView.Rows[3].Cells[0].Value = "PowerPoint";
-            dataGridView.Rows[4].Cells[0].Value = "Access";
-            for (int i = 1; i <= 5; i++)
+            if (anyTag is string[])
             {
-                dataGridView.Rows[0].Cells[i].Value = true;
-                dataGridView.Rows[1].Cells[i].Value = true;
-                dataGridView.Rows[2].Cells[i].Value = true;
-                dataGridView.Rows[3].Cells[i].Value = true;
-                dataGridView.Rows[4].Cells[i].Value = true;
-            }
+                string[] paramArray = anyTag as string[];
+                paramArray[0] = paramArray[0].Trim().Replace("-", "").Replace("/", "");
+                if(!System.IO.File.Exists(paramArray[0]))
+                {
+                    Console.WriteLine("NetOffice.DeveloperUtils");
+                    Console.WriteLine("File not found " + paramArray[0]);
+                    return;
+                }
 
-            dataGridView.BorderStyle = BorderStyle.None;
+                AssemblyAnalyzerSettings settings = CreateSettings(paramArray);
+                if (null != settings)
+                {
+                    Console.WriteLine("NetOffice.DeveloperUtils");
+                    Console.WriteLine("Can't proceed Arguments");
+                    return;
+                }
+
+                AssemblyDefinition assemblyDefinition = AssemblyDefinition.ReadAssembly(paramArray[0]);
+                string result = AssemblyAnalyzer.AnalyzeAssembly(assemblyDefinition, settings);
+                Console.Write(result);
+            }
+            else
+            {
+                dataGridView.Rows.Add(5);
+
+                dataGridView.Rows[0].Cells[0].Value = "Excel";
+                dataGridView.Rows[1].Cells[0].Value = "Word";
+                dataGridView.Rows[2].Cells[0].Value = "Outlook";
+                dataGridView.Rows[3].Cells[0].Value = "PowerPoint";
+                dataGridView.Rows[4].Cells[0].Value = "Access";
+                for (int i = 1; i <= 5; i++)
+                {
+                    dataGridView.Rows[0].Cells[i].Value = true;
+                    dataGridView.Rows[1].Cells[i].Value = true;
+                    dataGridView.Rows[2].Cells[i].Value = true;
+                    dataGridView.Rows[3].Cells[i].Value = true;
+                    dataGridView.Rows[4].Cells[i].Value = true;
+                }
+
+                dataGridView.BorderStyle = BorderStyle.None;
+            }
         }
 
         #region IUtilsControl Members
@@ -114,7 +140,76 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                 textBoxConsole.Text = result;
             }
         }
-        
+
+        private void SetSettings(AssemblyAnalyzerSettingsLibrary settings, string[] array)
+        {
+            for (int i = 1; i < array.Length; i++)
+            {
+                array[i] = array[i].Trim();
+                switch (array[i])
+                { 
+                    case "9":
+                    case "09":
+                        settings.Version9 = true;    
+                        break;
+                    case "10":
+                        settings.Version10 = true;
+                    break;
+                    case "11":
+                        settings.Version11 = true;
+                        break;
+                    case "12":
+                        settings.Version12 = true;
+                        break;
+                    case "14":
+                        settings.Version14 = true;
+                        break;
+                }
+            }
+        }
+
+        private AssemblyAnalyzerSettings CreateSettings(string[] paramArray)
+        {
+            try
+            {
+                AssemblyAnalyzerSettings settings = new AssemblyAnalyzerSettings();
+
+                for (int i = 1; i < paramArray.Length; i++)
+                {
+                    string[] splitArray = paramArray[i].Replace("-","").Replace("/","").Trim().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                    splitArray[0] = splitArray[0].ToLower();
+                    switch (splitArray[0]) 
+                    {
+                        case "excel":
+                            SetSettings(settings.Excel, splitArray);
+                            break;
+                        case "word":
+                            SetSettings(settings.Word, splitArray);
+                            break;
+                        case "outlook":
+                            SetSettings(settings.Outlook, splitArray);
+                            break;
+                        case "powerpoint":
+                            SetSettings(settings.PowerPoint, splitArray);
+                            break;
+                        case "access":
+                            SetSettings(settings.Access, splitArray);
+                            break;
+                        case "office":
+                            SetSettings(settings.Office, splitArray);
+                            break;
+                    }
+                }
+
+                return settings;
+            }
+            catch
+            {
+                return null;
+            }
+            
+        }
+
         private AssemblyAnalyzerSettings CreateSettings()
         {
             AssemblyAnalyzerSettings settings = new AssemblyAnalyzerSettings();

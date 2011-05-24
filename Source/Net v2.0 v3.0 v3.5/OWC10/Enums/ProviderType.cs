@@ -13,19 +13,22 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		providerTypeUnknown = 1,
+		 providerTypeUnknown = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		providerTypeRelational = 2,
+		 providerTypeRelational = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		providerTypeMultidimensional = 3
+		 providerTypeMultidimensional = 3
 	}
 }

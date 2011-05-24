@@ -13,13 +13,15 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4148</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlSummaryPivotTable = -4148,
+		 xlSummaryPivotTable = -4148,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlStandardSummary = 1
+		 xlStandardSummary = 1
 	}
 }

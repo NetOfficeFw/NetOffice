@@ -13,25 +13,29 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4127</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlTickLabelPositionHigh = -4127,
+		 xlTickLabelPositionHigh = -4127,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4134</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlTickLabelPositionLow = -4134,
+		 xlTickLabelPositionLow = -4134,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlTickLabelPositionNextToAxis = 4,
+		 xlTickLabelPositionNextToAxis = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4142</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlTickLabelPositionNone = -4142
+		 xlTickLabelPositionNone = -4142
 	}
 }

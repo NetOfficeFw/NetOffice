@@ -13,13 +13,15 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1953</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acPRHorizontalColumnLayout = 1953,
+		 acPRHorizontalColumnLayout = 1953,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1954</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acPRVerticalColumnLayout = 1954
+		 acPRVerticalColumnLayout = 1954
 	}
 }

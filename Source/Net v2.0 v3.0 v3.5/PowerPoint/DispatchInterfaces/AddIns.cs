@@ -115,14 +115,12 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="index">ref object index</param>
+		/// <param name="index">object index</param>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public void Remove(ref object index)
+		public void Remove(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Remove", paramsArray, modifiers);
-			index = (object)paramsArray[0];
+			Invoker.Method(this, "Remove", paramsArray);
 		}
 
 		#endregion

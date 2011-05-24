@@ -13,223 +13,260 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutMixed = -2,
+		 ppLayoutMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTitle = 1,
+		 ppLayoutTitle = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutText = 2,
+		 ppLayoutText = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTwoColumnText = 3,
+		 ppLayoutTwoColumnText = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTable = 4,
+		 ppLayoutTable = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTextAndChart = 5,
+		 ppLayoutTextAndChart = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutChartAndText = 6,
+		 ppLayoutChartAndText = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutOrgchart = 7,
+		 ppLayoutOrgchart = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutChart = 8,
+		 ppLayoutChart = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTextAndClipart = 9,
+		 ppLayoutTextAndClipart = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutClipartAndText = 10,
+		 ppLayoutClipartAndText = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTitleOnly = 11,
+		 ppLayoutTitleOnly = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutBlank = 12,
+		 ppLayoutBlank = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTextAndObject = 13,
+		 ppLayoutTextAndObject = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutObjectAndText = 14,
+		 ppLayoutObjectAndText = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutLargeObject = 15,
+		 ppLayoutLargeObject = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutObject = 16,
+		 ppLayoutObject = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTextAndMediaClip = 17,
+		 ppLayoutTextAndMediaClip = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutMediaClipAndText = 18,
+		 ppLayoutMediaClipAndText = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>19</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutObjectOverText = 19,
+		 ppLayoutObjectOverText = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>20</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTextOverObject = 20,
+		 ppLayoutTextOverObject = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>21</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTextAndTwoObjects = 21,
+		 ppLayoutTextAndTwoObjects = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>22</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTwoObjectsAndText = 22,
+		 ppLayoutTwoObjectsAndText = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>23</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutTwoObjectsOverText = 23,
+		 ppLayoutTwoObjectsOverText = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>24</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutFourObjects = 24,
+		 ppLayoutFourObjects = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>25</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutVerticalText = 25,
+		 ppLayoutVerticalText = 25,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>26</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutClipArtAndVerticalText = 26,
+		 ppLayoutClipArtAndVerticalText = 26,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>27</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutVerticalTitleAndText = 27,
+		 ppLayoutVerticalTitleAndText = 27,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>28</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppLayoutVerticalTitleAndTextOverChart = 28,
+		 ppLayoutVerticalTitleAndTextOverChart = 28,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>29</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		ppLayoutTwoObjects = 29,
+		 ppLayoutTwoObjects = 29,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>30</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		ppLayoutObjectAndTwoObjects = 30,
+		 ppLayoutObjectAndTwoObjects = 30,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>31</remarks>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		ppLayoutTwoObjectsAndObject = 31,
+		 ppLayoutTwoObjectsAndObject = 31,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("PowerPoint", 12,14)]
-		ppLayoutCustom = 32,
+		 ppLayoutCustom = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
+		/// <remarks>33</remarks>
 		[SupportByLibrary("PowerPoint", 12,14)]
-		ppLayoutSectionHeader = 33,
+		 ppLayoutSectionHeader = 33,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
+		/// <remarks>34</remarks>
 		[SupportByLibrary("PowerPoint", 12,14)]
-		ppLayoutComparison = 34,
+		 ppLayoutComparison = 34,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
+		/// <remarks>35</remarks>
 		[SupportByLibrary("PowerPoint", 12,14)]
-		ppLayoutContentWithCaption = 35,
+		 ppLayoutContentWithCaption = 35,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
+		/// <remarks>36</remarks>
 		[SupportByLibrary("PowerPoint", 12,14)]
-		ppLayoutPictureWithCaption = 36
+		 ppLayoutPictureWithCaption = 36
 	}
 }

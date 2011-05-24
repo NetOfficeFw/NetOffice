@@ -13,31 +13,36 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSharedWorkspaceTaskStatusNotStarted = 1,
+		 msoSharedWorkspaceTaskStatusNotStarted = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSharedWorkspaceTaskStatusInProgress = 2,
+		 msoSharedWorkspaceTaskStatusInProgress = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSharedWorkspaceTaskStatusCompleted = 3,
+		 msoSharedWorkspaceTaskStatusCompleted = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSharedWorkspaceTaskStatusDeferred = 4,
+		 msoSharedWorkspaceTaskStatusDeferred = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 11,12,14)]
-		msoSharedWorkspaceTaskStatusWaiting = 5
+		 msoSharedWorkspaceTaskStatusWaiting = 5
 	}
 }

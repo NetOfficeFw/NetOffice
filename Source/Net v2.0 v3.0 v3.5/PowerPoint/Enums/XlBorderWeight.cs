@@ -13,25 +13,29 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlHairline = 1,
+		 xlHairline = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>-4138</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlMedium = -4138,
+		 xlMedium = -4138,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlThick = 4,
+		 xlThick = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlThin = 2
+		 xlThin = 2
 	}
 }

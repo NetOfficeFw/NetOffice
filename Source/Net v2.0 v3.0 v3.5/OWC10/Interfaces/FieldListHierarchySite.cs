@@ -58,14 +58,12 @@ namespace NetOffice.OWC10Api
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="nOldNodeId">Int32 nOldNodeId</param>
 		/// <param name="nOldTypeId">Int32 nOldTypeId</param>
-		/// <param name="pfPrevent">ref Int32 pfPrevent</param>
+		/// <param name="pfPrevent">Int32 pfPrevent</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 PreSelect(Int32 nNodeId, Int32 nTypeId, Int32 nOldNodeId, Int32 nOldTypeId, ref Int32 pfPrevent)
+		public Int32 PreSelect(Int32 nNodeId, Int32 nTypeId, Int32 nOldNodeId, Int32 nOldTypeId, Int32 pfPrevent)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, nOldNodeId, nOldTypeId, pfPrevent);
 			object returnItem = Invoker.MethodReturn(this, "PreSelect", paramsArray);
-			pfPrevent = (Int32)paramsArray[4];
 			return (Int32)returnItem;
 		}
 
@@ -90,14 +88,12 @@ namespace NetOffice.OWC10Api
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="fExpand">Int32 fExpand</param>
-		/// <param name="pfPrevent">ref Int32 pfPrevent</param>
+		/// <param name="pfPrevent">Int32 pfPrevent</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 PreExpand(Int32 nNodeId, Int32 nTypeId, Int32 fExpand, ref Int32 pfPrevent)
+		public Int32 PreExpand(Int32 nNodeId, Int32 nTypeId, Int32 fExpand, Int32 pfPrevent)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, fExpand, pfPrevent);
 			object returnItem = Invoker.MethodReturn(this, "PreExpand", paramsArray);
-			pfPrevent = (Int32)paramsArray[3];
 			return (Int32)returnItem;
 		}
 
@@ -120,18 +116,14 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
-		/// <param name="ppobject">ref object ppobject</param>
-		/// <param name="ppPivotView">ref object ppPivotView</param>
-		/// <param name="pfPrevent">ref Int32 pfPrevent</param>
+		/// <param name="ppobject">object ppobject</param>
+		/// <param name="ppPivotView">object ppPivotView</param>
+		/// <param name="pfPrevent">Int32 pfPrevent</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 PreDrag(Int32 nNodeId, Int32 nTypeId, ref object ppobject, ref object ppPivotView, ref Int32 pfPrevent)
+		public Int32 PreDrag(Int32 nNodeId, Int32 nTypeId, object ppobject, object ppPivotView, Int32 pfPrevent)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, ppobject, ppPivotView, pfPrevent);
 			object returnItem = Invoker.MethodReturn(this, "PreDrag", paramsArray);
-			ppobject = (object)paramsArray[2];
-			ppPivotView = (object)paramsArray[3];
-			pfPrevent = (Int32)paramsArray[4];
 			return (Int32)returnItem;
 		}
 
@@ -168,14 +160,12 @@ namespace NetOffice.OWC10Api
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="hMenu">UIntPtr hMenu</param>
-		/// <param name="pfPrevent">ref Int32 pfPrevent</param>
+		/// <param name="pfPrevent">Int32 pfPrevent</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 ContextMenu(Int32 nNodeId, Int32 nTypeId, UIntPtr hMenu, ref Int32 pfPrevent)
+		public Int32 ContextMenu(Int32 nNodeId, Int32 nTypeId, UIntPtr hMenu, Int32 pfPrevent)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, hMenu, pfPrevent);
 			object returnItem = Invoker.MethodReturn(this, "ContextMenu", paramsArray);
-			pfPrevent = (Int32)paramsArray[3];
 			return (Int32)returnItem;
 		}
 
@@ -252,14 +242,12 @@ namespace NetOffice.OWC10Api
 		/// <param name="nMsg">Int32 nMsg</param>
 		/// <param name="nwParam">Int32 nwParam</param>
 		/// <param name="nlParam">Int32 nlParam</param>
-		/// <param name="pfStopProcessing">ref Int32 pfStopProcessing</param>
+		/// <param name="pfStopProcessing">Int32 pfStopProcessing</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 KeyEvent(Int32 nNodeId, Int32 nTypeId, Int32 nMsg, Int32 nwParam, Int32 nlParam, ref Int32 pfStopProcessing)
+		public Int32 KeyEvent(Int32 nNodeId, Int32 nTypeId, Int32 nMsg, Int32 nwParam, Int32 nlParam, Int32 pfStopProcessing)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, nMsg, nwParam, nlParam, pfStopProcessing);
 			object returnItem = Invoker.MethodReturn(this, "KeyEvent", paramsArray);
-			pfStopProcessing = (Int32)paramsArray[5];
 			return (Int32)returnItem;
 		}
 

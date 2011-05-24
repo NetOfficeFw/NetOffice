@@ -54,14 +54,12 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Cancel">ref bool Cancel</param>
+		/// <param name="Cancel">bool Cancel</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 BeforeRefresh(ref bool cancel)
+		public Int32 BeforeRefresh(bool cancel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(cancel);
 			object returnItem = Invoker.MethodReturn(this, "BeforeRefresh", paramsArray);
-			cancel = (bool)paramsArray[0];
 			return (Int32)returnItem;
 		}
 

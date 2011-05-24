@@ -698,20 +698,15 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="Down">ref optional object Down</param>
-		/// <param name="Up">ref optional object Up</param>
-		/// <param name="ToRight">ref optional object ToRight</param>
-		/// <param name="ToLeft">ref optional object ToLeft</param>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		/// <param name="ToRight">optional object ToRight</param>
+		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void LargeScroll(ref object down, ref object up, ref object toRight, ref object toLeft)
+		public void LargeScroll(object down, object up, object toRight, object toLeft)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
-			Invoker.Method(this, "LargeScroll", paramsArray, modifiers);
-			down = (object)paramsArray[0];
-			up = (object)paramsArray[1];
-			toRight = (object)paramsArray[2];
-			toLeft = (object)paramsArray[3];
+			Invoker.Method(this, "LargeScroll", paramsArray);
 		}
 
 		/// <summary>
@@ -779,14 +774,12 @@ namespace NetOffice.OWC10Api
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
-		/// <param name="Start">ref optional object Start</param>
+		/// <param name="Start">optional object Start</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, ref object start)
+		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, start);
-			Invoker.Method(this, "ScrollIntoView", paramsArray, modifiers);
-			start = (object)paramsArray[4];
+			Invoker.Method(this, "ScrollIntoView", paramsArray);
 		}
 
 		/// <summary>
@@ -806,20 +799,15 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="Down">ref optional object Down</param>
-		/// <param name="Up">ref optional object Up</param>
-		/// <param name="ToRight">ref optional object ToRight</param>
-		/// <param name="ToLeft">ref optional object ToLeft</param>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		/// <param name="ToRight">optional object ToRight</param>
+		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void SmallScroll(ref object down, ref object up, ref object toRight, ref object toLeft)
+		public void SmallScroll(object down, object up, object toRight, object toLeft)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
-			Invoker.Method(this, "SmallScroll", paramsArray, modifiers);
-			down = (object)paramsArray[0];
-			up = (object)paramsArray[1];
-			toRight = (object)paramsArray[2];
-			toLeft = (object)paramsArray[3];
+			Invoker.Method(this, "SmallScroll", paramsArray);
 		}
 
 		/// <summary>

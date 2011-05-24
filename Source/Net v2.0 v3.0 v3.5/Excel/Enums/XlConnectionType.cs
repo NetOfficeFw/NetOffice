@@ -13,31 +13,36 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlConnectionTypeOLEDB = 1,
+		 xlConnectionTypeOLEDB = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlConnectionTypeODBC = 2,
+		 xlConnectionTypeODBC = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlConnectionTypeXMLMAP = 3,
+		 xlConnectionTypeXMLMAP = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlConnectionTypeTEXT = 4,
+		 xlConnectionTypeTEXT = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Excel", 12,14)]
-		xlConnectionTypeWEB = 5
+		 xlConnectionTypeWEB = 5
 	}
 }

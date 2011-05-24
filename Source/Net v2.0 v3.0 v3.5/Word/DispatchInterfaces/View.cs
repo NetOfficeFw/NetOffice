@@ -1212,14 +1212,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Range">ref optional object Range</param>
+		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void CollapseOutline(ref object range)
+		public void CollapseOutline(object range)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			Invoker.Method(this, "CollapseOutline", paramsArray, modifiers);
-			range = (object)paramsArray[0];
+			Invoker.Method(this, "CollapseOutline", paramsArray);
 		}
 
 		/// <summary>
@@ -1235,14 +1233,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Range">ref optional object Range</param>
+		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ExpandOutline(ref object range)
+		public void ExpandOutline(object range)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			Invoker.Method(this, "ExpandOutline", paramsArray, modifiers);
-			range = (object)paramsArray[0];
+			Invoker.Method(this, "ExpandOutline", paramsArray);
 		}
 
 		/// <summary>

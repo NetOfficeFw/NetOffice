@@ -13,19 +13,22 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlArrowHeadLengthLong = 3,
+		 xlArrowHeadLengthLong = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4138</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlArrowHeadLengthMedium = -4138,
+		 xlArrowHeadLengthMedium = -4138,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlArrowHeadLengthShort = 1
+		 xlArrowHeadLengthShort = 1
 	}
 }

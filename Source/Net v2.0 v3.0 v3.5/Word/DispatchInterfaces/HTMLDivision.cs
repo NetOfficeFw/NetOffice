@@ -220,15 +220,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="LevelsUp">ref optional object LevelsUp</param>
+		/// <param name="LevelsUp">optional object LevelsUp</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.HTMLDivision HTMLDivisionParent(ref object levelsUp)
+		public NetOffice.WordApi.HTMLDivision HTMLDivisionParent(object levelsUp)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(levelsUp);
-			object returnItem = Invoker.MethodReturn(this, "HTMLDivisionParent", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "HTMLDivisionParent", paramsArray);
 			NetOffice.WordApi.HTMLDivision newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.HTMLDivision;
-			levelsUp = (object)paramsArray[0];
 			return newObject;
 		}
 

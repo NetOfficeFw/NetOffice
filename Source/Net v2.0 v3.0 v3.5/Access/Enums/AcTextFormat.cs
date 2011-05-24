@@ -13,13 +13,15 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acTextFormatPlain = 0,
+		 acTextFormatPlain = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acTextFormatHTMLRichText = 1
+		 acTextFormatHTMLRichText = 1
 	}
 }

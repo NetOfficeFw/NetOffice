@@ -13,25 +13,29 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppDialogPositionNormal = 1,
+		 ppDialogPositionNormal = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppDialogPositionCenterParent = 2,
+		 ppDialogPositionCenterParent = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppDialogPositionCenterScreen = 3,
+		 ppDialogPositionCenterScreen = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppDialogPositionRememberLast = 4
+		 ppDialogPositionRememberLast = 4
 	}
 }

@@ -150,15 +150,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Window">ref optional object Window</param>
+		/// <param name="Window">optional object Window</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Window Add(ref object window)
+		public NetOffice.WordApi.Window Add(object window)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(window);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Window;
-			window = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -177,14 +175,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ArrangeStyle">ref optional object ArrangeStyle</param>
+		/// <param name="ArrangeStyle">optional object ArrangeStyle</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Arrange(ref object arrangeStyle)
+		public void Arrange(object arrangeStyle)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle);
-			Invoker.Method(this, "Arrange", paramsArray, modifiers);
-			arrangeStyle = (object)paramsArray[0];
+			Invoker.Method(this, "Arrange", paramsArray);
 		}
 
 		/// <summary>
@@ -200,14 +196,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
-		/// <param name="Document">ref object Document</param>
+		/// <param name="Document">object Document</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public bool CompareSideBySideWith(ref object document)
+		public bool CompareSideBySideWith(object document)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(document);
 			object returnItem = Invoker.MethodReturn(this, "CompareSideBySideWith", paramsArray);
-			document = (object)paramsArray[0];
 			return (bool)returnItem;
 		}
 

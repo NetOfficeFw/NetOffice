@@ -13,13 +13,15 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>-4105</remarks>
 		[SupportByLibrary("Word", 14)]
-		xlColorIndexAutomatic = -4105,
+		 xlColorIndexAutomatic = -4105,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>-4142</remarks>
 		[SupportByLibrary("Word", 14)]
-		xlColorIndexNone = -4142
+		 xlColorIndexNone = -4142
 	}
 }

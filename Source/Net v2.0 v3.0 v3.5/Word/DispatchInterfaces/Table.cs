@@ -645,36 +645,23 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ExcludeHeader">ref optional object ExcludeHeader</param>
-		/// <param name="FieldNumber">ref optional object FieldNumber</param>
-		/// <param name="SortFieldType">ref optional object SortFieldType</param>
-		/// <param name="SortOrder">ref optional object SortOrder</param>
-		/// <param name="FieldNumber2">ref optional object FieldNumber2</param>
-		/// <param name="SortFieldType2">ref optional object SortFieldType2</param>
-		/// <param name="SortOrder2">ref optional object SortOrder2</param>
-		/// <param name="FieldNumber3">ref optional object FieldNumber3</param>
-		/// <param name="SortFieldType3">ref optional object SortFieldType3</param>
-		/// <param name="SortOrder3">ref optional object SortOrder3</param>
-		/// <param name="CaseSensitive">ref optional object CaseSensitive</param>
-		/// <param name="LanguageID">ref optional object LanguageID</param>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void SortOld(ref object excludeHeader, ref object fieldNumber, ref object sortFieldType, ref object sortOrder, ref object fieldNumber2, ref object sortFieldType2, ref object sortOrder2, ref object fieldNumber3, ref object sortFieldType3, ref object sortOrder3, ref object caseSensitive, ref object languageID)
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object caseSensitive, object languageID)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, caseSensitive, languageID);
-			Invoker.Method(this, "SortOld", paramsArray, modifiers);
-			excludeHeader = (object)paramsArray[0];
-			fieldNumber = (object)paramsArray[1];
-			sortFieldType = (object)paramsArray[2];
-			sortOrder = (object)paramsArray[3];
-			fieldNumber2 = (object)paramsArray[4];
-			sortFieldType2 = (object)paramsArray[5];
-			sortOrder2 = (object)paramsArray[6];
-			fieldNumber3 = (object)paramsArray[7];
-			sortFieldType3 = (object)paramsArray[8];
-			sortOrder3 = (object)paramsArray[9];
-			caseSensitive = (object)paramsArray[10];
-			languageID = (object)paramsArray[11];
+			Invoker.Method(this, "SortOld", paramsArray);
 		}
 
 		/// <summary>
@@ -710,32 +697,21 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Format">ref optional object Format</param>
-		/// <param name="ApplyBorders">ref optional object ApplyBorders</param>
-		/// <param name="ApplyShading">ref optional object ApplyShading</param>
-		/// <param name="ApplyFont">ref optional object ApplyFont</param>
-		/// <param name="ApplyColor">ref optional object ApplyColor</param>
-		/// <param name="ApplyHeadingRows">ref optional object ApplyHeadingRows</param>
-		/// <param name="ApplyLastRow">ref optional object ApplyLastRow</param>
-		/// <param name="ApplyFirstColumn">ref optional object ApplyFirstColumn</param>
-		/// <param name="ApplyLastColumn">ref optional object ApplyLastColumn</param>
-		/// <param name="AutoFit">ref optional object AutoFit</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		/// <param name="ApplyHeadingRows">optional object ApplyHeadingRows</param>
+		/// <param name="ApplyLastRow">optional object ApplyLastRow</param>
+		/// <param name="ApplyFirstColumn">optional object ApplyFirstColumn</param>
+		/// <param name="ApplyLastColumn">optional object ApplyLastColumn</param>
+		/// <param name="AutoFit">optional object AutoFit</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void AutoFormat(ref object format, ref object applyBorders, ref object applyShading, ref object applyFont, ref object applyColor, ref object applyHeadingRows, ref object applyLastRow, ref object applyFirstColumn, ref object applyLastColumn, ref object autoFit)
+		public void AutoFormat(object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit);
-			Invoker.Method(this, "AutoFormat", paramsArray, modifiers);
-			format = (object)paramsArray[0];
-			applyBorders = (object)paramsArray[1];
-			applyShading = (object)paramsArray[2];
-			applyFont = (object)paramsArray[3];
-			applyColor = (object)paramsArray[4];
-			applyHeadingRows = (object)paramsArray[5];
-			applyLastRow = (object)paramsArray[6];
-			applyFirstColumn = (object)paramsArray[7];
-			applyLastColumn = (object)paramsArray[8];
-			autoFit = (object)paramsArray[9];
+			Invoker.Method(this, "AutoFormat", paramsArray);
 		}
 
 		/// <summary>
@@ -761,15 +737,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Separator">ref optional object Separator</param>
+		/// <param name="Separator">optional object Separator</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range ConvertToTextOld(ref object separator)
+		public NetOffice.WordApi.Range ConvertToTextOld(object separator)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(separator);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTextOld", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTextOld", paramsArray);
 			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
-			separator = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -802,32 +776,27 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="BeforeRow">ref object BeforeRow</param>
+		/// <param name="BeforeRow">object BeforeRow</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Table Split(ref object beforeRow)
+		public NetOffice.WordApi.Table Split(object beforeRow)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeRow);
-			object returnItem = Invoker.MethodReturn(this, "Split", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Split", paramsArray);
 			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Table;
-			beforeRow = (object)paramsArray[0];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Separator">ref optional object Separator</param>
-		/// <param name="NestedTables">ref optional object NestedTables</param>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NestedTables">optional object NestedTables</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range ConvertToText(ref object separator, ref object nestedTables)
+		public NetOffice.WordApi.Range ConvertToText(object separator, object nestedTables)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(separator, nestedTables);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToText", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToText", paramsArray);
 			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
-			separator = (object)paramsArray[0];
-			nestedTables = (object)paramsArray[1];
 			return newObject;
 		}
 
@@ -857,46 +826,28 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ExcludeHeader">ref optional object ExcludeHeader</param>
-		/// <param name="FieldNumber">ref optional object FieldNumber</param>
-		/// <param name="SortFieldType">ref optional object SortFieldType</param>
-		/// <param name="SortOrder">ref optional object SortOrder</param>
-		/// <param name="FieldNumber2">ref optional object FieldNumber2</param>
-		/// <param name="SortFieldType2">ref optional object SortFieldType2</param>
-		/// <param name="SortOrder2">ref optional object SortOrder2</param>
-		/// <param name="FieldNumber3">ref optional object FieldNumber3</param>
-		/// <param name="SortFieldType3">ref optional object SortFieldType3</param>
-		/// <param name="SortOrder3">ref optional object SortOrder3</param>
-		/// <param name="CaseSensitive">ref optional object CaseSensitive</param>
-		/// <param name="BidiSort">ref optional object BidiSort</param>
-		/// <param name="IgnoreThe">ref optional object IgnoreThe</param>
-		/// <param name="IgnoreKashida">ref optional object IgnoreKashida</param>
-		/// <param name="IgnoreDiacritics">ref optional object IgnoreDiacritics</param>
-		/// <param name="IgnoreHe">ref optional object IgnoreHe</param>
-		/// <param name="LanguageID">ref optional object LanguageID</param>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		/// <param name="IgnoreThe">optional object IgnoreThe</param>
+		/// <param name="IgnoreKashida">optional object IgnoreKashida</param>
+		/// <param name="IgnoreDiacritics">optional object IgnoreDiacritics</param>
+		/// <param name="IgnoreHe">optional object IgnoreHe</param>
+		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Sort(ref object excludeHeader, ref object fieldNumber, ref object sortFieldType, ref object sortOrder, ref object fieldNumber2, ref object sortFieldType2, ref object sortOrder2, ref object fieldNumber3, ref object sortFieldType3, ref object sortOrder3, ref object caseSensitive, ref object bidiSort, ref object ignoreThe, ref object ignoreKashida, ref object ignoreDiacritics, ref object ignoreHe, ref object languageID)
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID);
-			Invoker.Method(this, "Sort", paramsArray, modifiers);
-			excludeHeader = (object)paramsArray[0];
-			fieldNumber = (object)paramsArray[1];
-			sortFieldType = (object)paramsArray[2];
-			sortOrder = (object)paramsArray[3];
-			fieldNumber2 = (object)paramsArray[4];
-			sortFieldType2 = (object)paramsArray[5];
-			sortOrder2 = (object)paramsArray[6];
-			fieldNumber3 = (object)paramsArray[7];
-			sortFieldType3 = (object)paramsArray[8];
-			sortOrder3 = (object)paramsArray[9];
-			caseSensitive = (object)paramsArray[10];
-			bidiSort = (object)paramsArray[11];
-			ignoreThe = (object)paramsArray[12];
-			ignoreKashida = (object)paramsArray[13];
-			ignoreDiacritics = (object)paramsArray[14];
-			ignoreHe = (object)paramsArray[15];
-			languageID = (object)paramsArray[16];
+			Invoker.Method(this, "Sort", paramsArray);
 		}
 
 		/// <summary>

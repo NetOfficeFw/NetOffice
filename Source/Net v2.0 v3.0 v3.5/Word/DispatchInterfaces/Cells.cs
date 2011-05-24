@@ -294,15 +294,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="BeforeCell">ref optional object BeforeCell</param>
+		/// <param name="BeforeCell">optional object BeforeCell</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Cell Add(ref object beforeCell)
+		public NetOffice.WordApi.Cell Add(object beforeCell)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeCell);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Cell newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Cell;
-			beforeCell = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -321,14 +319,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ShiftCells">ref optional object ShiftCells</param>
+		/// <param name="ShiftCells">optional object ShiftCells</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Delete(ref object shiftCells)
+		public void Delete(object shiftCells)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(shiftCells);
-			Invoker.Method(this, "Delete", paramsArray, modifiers);
-			shiftCells = (object)paramsArray[0];
+			Invoker.Method(this, "Delete", paramsArray);
 		}
 
 		/// <summary>
@@ -356,15 +352,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="RowHeight">ref object RowHeight</param>
+		/// <param name="RowHeight">object RowHeight</param>
 		/// <param name="HeightRule">NetOffice.WordApi.Enums.WdRowHeightRule HeightRule</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void SetHeight(ref object rowHeight, NetOffice.WordApi.Enums.WdRowHeightRule heightRule)
+		public void SetHeight(object rowHeight, NetOffice.WordApi.Enums.WdRowHeightRule heightRule)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(rowHeight, heightRule);
-			Invoker.Method(this, "SetHeight", paramsArray, modifiers);
-			rowHeight = (object)paramsArray[0];
+			Invoker.Method(this, "SetHeight", paramsArray);
 		}
 
 		/// <summary>
@@ -380,18 +374,14 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="NumRows">ref optional object NumRows</param>
-		/// <param name="NumColumns">ref optional object NumColumns</param>
-		/// <param name="MergeBeforeSplit">ref optional object MergeBeforeSplit</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="MergeBeforeSplit">optional object MergeBeforeSplit</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Split(ref object numRows, ref object numColumns, ref object mergeBeforeSplit)
+		public void Split(object numRows, object numColumns, object mergeBeforeSplit)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows, numColumns, mergeBeforeSplit);
-			Invoker.Method(this, "Split", paramsArray, modifiers);
-			numRows = (object)paramsArray[0];
-			numColumns = (object)paramsArray[1];
-			mergeBeforeSplit = (object)paramsArray[2];
+			Invoker.Method(this, "Split", paramsArray);
 		}
 
 		/// <summary>

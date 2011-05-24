@@ -13,13 +13,15 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acDatasheetAllowEdits = 0,
+		 acDatasheetAllowEdits = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acDatasheetReadOnly = 1
+		 acDatasheetReadOnly = 1
 	}
 }

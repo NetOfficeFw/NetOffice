@@ -13,67 +13,78 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIMEModeNoControl = 0,
+		 xlIMEModeNoControl = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIMEModeOn = 1,
+		 xlIMEModeOn = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIMEModeOff = 2,
+		 xlIMEModeOff = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIMEModeDisable = 3,
+		 xlIMEModeDisable = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIMEModeHiragana = 4,
+		 xlIMEModeHiragana = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIMEModeKatakana = 5,
+		 xlIMEModeKatakana = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIMEModeKatakanaHalf = 6,
+		 xlIMEModeKatakanaHalf = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIMEModeAlphaFull = 7,
+		 xlIMEModeAlphaFull = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIMEModeAlpha = 8,
+		 xlIMEModeAlpha = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIMEModeHangulFull = 9,
+		 xlIMEModeHangulFull = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlIMEModeHangul = 10
+		 xlIMEModeHangul = 10
 	}
 }

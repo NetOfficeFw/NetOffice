@@ -1499,24 +1499,21 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
-		/// <param name="ppsa">ref optional object[] ppsa</param>
+		/// <param name="ppsa">optional object[] ppsa</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public object _Evaluate(string bstrExpr, ref object[] ppsa)
+		public object _Evaluate(string bstrExpr, object[] ppsa)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
-			object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
 			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				ppsa = (object[])paramsArray[1];
-			return newObject;
+				return newObject;
 			}
 			else
 			{
-				ppsa = (object[])paramsArray[1];
-			return  returnItem;
+				return  returnItem;
 			}
 		}
 

@@ -990,18 +990,14 @@ namespace NetOffice.OWC10Api
 		/// <param name="RecordsetDef">string RecordsetDef</param>
 		/// <param name="dl">NetOffice.OWC10Api.Enums.DscDropLocationEnum dl</param>
 		/// <param name="dt">NetOffice.OWC10Api.Enums.DscDropTypeEnum dt</param>
-		/// <param name="DropRowsource">ref string DropRowsource</param>
-		/// <param name="RowsourcesOut">ref object RowsourcesOut</param>
-		/// <param name="RelationshipsOut">ref object RelationshipsOut</param>
+		/// <param name="DropRowsource">string DropRowsource</param>
+		/// <param name="RowsourcesOut">object RowsourcesOut</param>
+		/// <param name="RelationshipsOut">object RelationshipsOut</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void ScriptValidate(object rowsources, object relationships, object fields, string recordsetDef, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, ref string dropRowsource, ref object rowsourcesOut, ref object relationshipsOut)
+		public void ScriptValidate(object rowsources, object relationships, object fields, string recordsetDef, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, string dropRowsource, object rowsourcesOut, object relationshipsOut)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(rowsources, relationships, fields, recordsetDef, dl, dt, dropRowsource, rowsourcesOut, relationshipsOut);
-			Invoker.Method(this, "ScriptValidate", paramsArray, modifiers);
-			dropRowsource = (string)paramsArray[6];
-			rowsourcesOut = (object)paramsArray[7];
-			relationshipsOut = (object)paramsArray[8];
+			Invoker.Method(this, "ScriptValidate", paramsArray);
 		}
 
 		/// <summary>
@@ -1011,20 +1007,15 @@ namespace NetOffice.OWC10Api
 		/// <param name="RecordSetDefName">string RecordSetDefName</param>
 		/// <param name="Location">NetOffice.OWC10Api.Enums.DscDropLocationEnum Location</param>
 		/// <param name="Type">NetOffice.OWC10Api.Enums.DscDropTypeEnum Type</param>
-		/// <param name="DropRowsource">ref string DropRowsource</param>
-		/// <param name="RowsourcesOut">ref object RowsourcesOut</param>
-		/// <param name="RelationshipsOut">ref object RelationshipsOut</param>
-		/// <param name="NumberOfDrops">ref Int32 NumberOfDrops</param>
+		/// <param name="DropRowsource">string DropRowsource</param>
+		/// <param name="RowsourcesOut">object RowsourcesOut</param>
+		/// <param name="RelationshipsOut">object RelationshipsOut</param>
+		/// <param name="NumberOfDrops">Int32 NumberOfDrops</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void ValidateDrop(object unknownDropGoo, string recordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum location, NetOffice.OWC10Api.Enums.DscDropTypeEnum type, ref string dropRowsource, ref object rowsourcesOut, ref object relationshipsOut, ref Int32 numberOfDrops)
+		public void ValidateDrop(object unknownDropGoo, string recordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum location, NetOffice.OWC10Api.Enums.DscDropTypeEnum type, string dropRowsource, object rowsourcesOut, object relationshipsOut, Int32 numberOfDrops)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(unknownDropGoo, recordSetDefName, location, type, dropRowsource, rowsourcesOut, relationshipsOut, numberOfDrops);
-			Invoker.Method(this, "ValidateDrop", paramsArray, modifiers);
-			dropRowsource = (string)paramsArray[4];
-			rowsourcesOut = (object)paramsArray[5];
-			relationshipsOut = (object)paramsArray[6];
-			numberOfDrops = (Int32)paramsArray[7];
+			Invoker.Method(this, "ValidateDrop", paramsArray);
 		}
 
 		/// <summary>
@@ -1099,17 +1090,14 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="SectionElement">object SectionElement</param>
-		/// <param name="RecordSource">ref string RecordSource</param>
+		/// <param name="RecordSource">string RecordSource</param>
 		/// <param name="SectionType">NetOffice.OWC10Api.Enums.SectTypeEnum SectionType</param>
-		/// <param name="GroupLevel">ref NetOffice.OWC10Api.GroupLevel GroupLevel</param>
+		/// <param name="GroupLevel">NetOffice.OWC10Api.GroupLevel GroupLevel</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void GetSectionInfo(object sectionElement, ref string recordSource, NetOffice.OWC10Api.Enums.SectTypeEnum sectionType, ref NetOffice.OWC10Api.GroupLevel groupLevel)
+		public void GetSectionInfo(object sectionElement, string recordSource, NetOffice.OWC10Api.Enums.SectTypeEnum sectionType, NetOffice.OWC10Api.GroupLevel groupLevel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionElement, recordSource, sectionType, groupLevel);
-			Invoker.Method(this, "GetSectionInfo", paramsArray, modifiers);
-			recordSource = (string)paramsArray[1];
-			groupLevel = (NetOffice.OWC10Api.GroupLevel)paramsArray[3];
+			Invoker.Method(this, "GetSectionInfo", paramsArray);
 		}
 
 		/// <summary>
@@ -1150,14 +1138,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="ExportType">NetOffice.OWC10Api.Enums.ExportableConnectStringEnum ExportType</param>
-		/// <param name="ConnectString">ref string ConnectString</param>
+		/// <param name="ConnectString">string ConnectString</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void GetExportableConnectString(NetOffice.OWC10Api.Enums.ExportableConnectStringEnum exportType, ref string connectString)
+		public void GetExportableConnectString(NetOffice.OWC10Api.Enums.ExportableConnectStringEnum exportType, string connectString)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(exportType, connectString);
-			Invoker.Method(this, "GetExportableConnectString", paramsArray, modifiers);
-			connectString = (string)paramsArray[1];
+			Invoker.Method(this, "GetExportableConnectString", paramsArray);
 		}
 
 		/// <summary>
@@ -1186,20 +1172,15 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="OnlineServer">ref string OnlineServer</param>
-		/// <param name="OnlineDatabase">ref string OnlineDatabase</param>
-		/// <param name="OfflineServer">ref string OfflineServer</param>
-		/// <param name="OfflineDatabase">ref string OfflineDatabase</param>
+		/// <param name="OnlineServer">string OnlineServer</param>
+		/// <param name="OnlineDatabase">string OnlineDatabase</param>
+		/// <param name="OfflineServer">string OfflineServer</param>
+		/// <param name="OfflineDatabase">string OfflineDatabase</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void GetOfflineDisplayInfo(ref string onlineServer, ref string onlineDatabase, ref string offlineServer, ref string offlineDatabase)
+		public void GetOfflineDisplayInfo(string onlineServer, string onlineDatabase, string offlineServer, string offlineDatabase)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(onlineServer, onlineDatabase, offlineServer, offlineDatabase);
-			Invoker.Method(this, "GetOfflineDisplayInfo", paramsArray, modifiers);
-			onlineServer = (string)paramsArray[0];
-			onlineDatabase = (string)paramsArray[1];
-			offlineServer = (string)paramsArray[2];
-			offlineDatabase = (string)paramsArray[3];
+			Invoker.Method(this, "GetOfflineDisplayInfo", paramsArray);
 		}
 
 		/// <summary>
@@ -1218,14 +1199,12 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		/// <param name="fChild">Int32 fChild</param>
-		/// <param name="ppGrouplevel">ref NetOffice.OWC10Api.GroupLevel ppGrouplevel</param>
+		/// <param name="ppGrouplevel">NetOffice.OWC10Api.GroupLevel ppGrouplevel</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void FindRelatedGroupLevel(NetOffice.OWC10Api.GroupLevel pGroupLevel, Int32 fChild, ref NetOffice.OWC10Api.GroupLevel ppGrouplevel)
+		public void FindRelatedGroupLevel(NetOffice.OWC10Api.GroupLevel pGroupLevel, Int32 fChild, NetOffice.OWC10Api.GroupLevel ppGrouplevel)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pGroupLevel, fChild, ppGrouplevel);
-			Invoker.Method(this, "FindRelatedGroupLevel", paramsArray, modifiers);
-			ppGrouplevel = (NetOffice.OWC10Api.GroupLevel)paramsArray[2];
+			Invoker.Method(this, "FindRelatedGroupLevel", paramsArray);
 		}
 
 		/// <summary>

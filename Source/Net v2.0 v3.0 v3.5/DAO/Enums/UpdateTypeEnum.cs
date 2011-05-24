@@ -13,19 +13,22 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbUpdateBatch = 4,
+		 dbUpdateBatch = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbUpdateRegular = 1,
+		 dbUpdateRegular = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("DAO", 6,12)]
-		dbUpdateCurrentRecord = 2
+		 dbUpdateCurrentRecord = 2
 	}
 }

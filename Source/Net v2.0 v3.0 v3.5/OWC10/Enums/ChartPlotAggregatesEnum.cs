@@ -13,31 +13,36 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chPlotAggregatesNone = 0,
+		 chPlotAggregatesNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chPlotAggregatesSeries = 1,
+		 chPlotAggregatesSeries = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chPlotAggregatesCategories = 2,
+		 chPlotAggregatesCategories = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chPlotAggregatesCharts = 3,
+		 chPlotAggregatesCharts = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chPlotAggregatesFromTotalOrientation = 4
+		 chPlotAggregatesFromTotalOrientation = 4
 	}
 }

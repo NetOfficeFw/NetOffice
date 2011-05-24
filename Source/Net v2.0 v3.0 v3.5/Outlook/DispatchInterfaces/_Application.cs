@@ -520,14 +520,12 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
-		/// <param name="pvar">ref object pvar</param>
+		/// <param name="pvar">object pvar</param>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public void GetNewNickNames(ref object pvar)
+		public void GetNewNickNames(object pvar)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pvar);
-			Invoker.Method(this, "GetNewNickNames", paramsArray, modifiers);
-			pvar = (object)paramsArray[0];
+			Invoker.Method(this, "GetNewNickNames", paramsArray);
 		}
 
 		/// <summary>

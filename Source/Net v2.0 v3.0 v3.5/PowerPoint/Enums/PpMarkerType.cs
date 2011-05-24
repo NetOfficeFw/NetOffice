@@ -13,67 +13,78 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppBoot = 0,
+		 ppBoot = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppFileNew = 1,
+		 ppFileNew = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppFileOpen = 2,
+		 ppFileOpen = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppFileSave = 3,
+		 ppFileSave = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppPrintForeground = 4,
+		 ppPrintForeground = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppPrintBackground = 5,
+		 ppPrintBackground = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppOLEInsert = 6,
+		 ppOLEInsert = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppSlideShowStart = 7,
+		 ppSlideShowStart = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppSlideShowDraw = 8,
+		 ppSlideShowDraw = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppSlideViewScroll = 9,
+		 ppSlideViewScroll = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("PowerPoint", 9)]
-		ppDialogStart = 10
+		 ppDialogStart = 10
 	}
 }

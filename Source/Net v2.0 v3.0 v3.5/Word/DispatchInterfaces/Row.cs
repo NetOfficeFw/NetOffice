@@ -446,15 +446,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Separator">ref optional object Separator</param>
+		/// <param name="Separator">optional object Separator</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range ConvertToTextOld(ref object separator)
+		public NetOffice.WordApi.Range ConvertToTextOld(object separator)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(separator);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTextOld", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTextOld", paramsArray);
 			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
-			separator = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -473,17 +471,14 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Separator">ref optional object Separator</param>
-		/// <param name="NestedTables">ref optional object NestedTables</param>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NestedTables">optional object NestedTables</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range ConvertToText(ref object separator, ref object nestedTables)
+		public NetOffice.WordApi.Range ConvertToText(object separator, object nestedTables)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(separator, nestedTables);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToText", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToText", paramsArray);
 			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
-			separator = (object)paramsArray[0];
-			nestedTables = (object)paramsArray[1];
 			return newObject;
 		}
 

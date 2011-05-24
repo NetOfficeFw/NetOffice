@@ -204,15 +204,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ConnectedShape">ref NetOffice.WordApi.Shape ConnectedShape</param>
+		/// <param name="ConnectedShape">NetOffice.WordApi.Shape ConnectedShape</param>
 		/// <param name="ConnectionSite">Int32 ConnectionSite</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void BeginConnect(ref NetOffice.WordApi.Shape connectedShape, Int32 connectionSite)
+		public void BeginConnect(NetOffice.WordApi.Shape connectedShape, Int32 connectionSite)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(connectedShape, connectionSite);
-			Invoker.Method(this, "BeginConnect", paramsArray, modifiers);
-			connectedShape = (NetOffice.WordApi.Shape)paramsArray[0];
+			Invoker.Method(this, "BeginConnect", paramsArray);
 		}
 
 		/// <summary>
@@ -228,15 +226,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ConnectedShape">ref NetOffice.WordApi.Shape ConnectedShape</param>
+		/// <param name="ConnectedShape">NetOffice.WordApi.Shape ConnectedShape</param>
 		/// <param name="ConnectionSite">Int32 ConnectionSite</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void EndConnect(ref NetOffice.WordApi.Shape connectedShape, Int32 connectionSite)
+		public void EndConnect(NetOffice.WordApi.Shape connectedShape, Int32 connectionSite)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(connectedShape, connectionSite);
-			Invoker.Method(this, "EndConnect", paramsArray, modifiers);
-			connectedShape = (NetOffice.WordApi.Shape)paramsArray[0];
+			Invoker.Method(this, "EndConnect", paramsArray);
 		}
 
 		/// <summary>

@@ -131,17 +131,14 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="OutlineNumbered">ref optional object OutlineNumbered</param>
-		/// <param name="Name">ref optional object Name</param>
+		/// <param name="OutlineNumbered">optional object OutlineNumbered</param>
+		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.ListTemplate Add(ref object outlineNumbered, ref object name)
+		public NetOffice.WordApi.ListTemplate Add(object outlineNumbered, object name)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(outlineNumbered, name);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.ListTemplate newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ListTemplate;
-			outlineNumbered = (object)paramsArray[0];
-			name = (object)paramsArray[1];
 			return newObject;
 		}
 

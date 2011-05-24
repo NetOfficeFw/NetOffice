@@ -13,37 +13,43 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 14)]
-		msoPickerFieldUnknown = 0,
+		 msoPickerFieldUnknown = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 14)]
-		msoPickerFieldDateTime = 1,
+		 msoPickerFieldDateTime = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Office", 14)]
-		msoPickerFieldNumber = 2,
+		 msoPickerFieldNumber = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Office", 14)]
-		msoPickerFieldText = 3,
+		 msoPickerFieldText = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Office", 14)]
-		msoPickerFieldUser = 4,
+		 msoPickerFieldUser = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Office", 14)]
-		msoPickerFieldMax = 5
+		 msoPickerFieldMax = 5
 	}
 }

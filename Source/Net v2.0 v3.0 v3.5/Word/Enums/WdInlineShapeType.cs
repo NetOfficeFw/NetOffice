@@ -13,91 +13,106 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdInlineShapeEmbeddedOLEObject = 1,
+		 wdInlineShapeEmbeddedOLEObject = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdInlineShapeLinkedOLEObject = 2,
+		 wdInlineShapeLinkedOLEObject = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdInlineShapePicture = 3,
+		 wdInlineShapePicture = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdInlineShapeLinkedPicture = 4,
+		 wdInlineShapeLinkedPicture = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdInlineShapeOLEControlObject = 5,
+		 wdInlineShapeOLEControlObject = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdInlineShapeHorizontalLine = 6,
+		 wdInlineShapeHorizontalLine = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdInlineShapePictureHorizontalLine = 7,
+		 wdInlineShapePictureHorizontalLine = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdInlineShapeLinkedPictureHorizontalLine = 8,
+		 wdInlineShapeLinkedPictureHorizontalLine = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdInlineShapePictureBullet = 9,
+		 wdInlineShapePictureBullet = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdInlineShapeScriptAnchor = 10,
+		 wdInlineShapeScriptAnchor = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdInlineShapeOWSAnchor = 11,
+		 wdInlineShapeOWSAnchor = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdInlineShapeChart = 12,
+		 wdInlineShapeChart = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdInlineShapeDiagram = 13,
+		 wdInlineShapeDiagram = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdInlineShapeLockedCanvas = 14,
+		 wdInlineShapeLockedCanvas = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdInlineShapeSmartArt = 15
+		 wdInlineShapeSmartArt = 15
 	}
 }

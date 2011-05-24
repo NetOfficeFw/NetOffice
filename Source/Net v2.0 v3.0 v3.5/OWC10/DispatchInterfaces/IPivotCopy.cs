@@ -56,14 +56,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Format">Int32 Format</param>
-		/// <param name="Output">ref string Output</param>
+		/// <param name="Output">string Output</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Render(Int32 format, ref string output)
+		public void Render(Int32 format, string output)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(format, output);
-			Invoker.Method(this, "Render", paramsArray, modifiers);
-			output = (string)paramsArray[1];
+			Invoker.Method(this, "Render", paramsArray);
 		}
 
 		#endregion

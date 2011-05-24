@@ -13,43 +13,50 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2007</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlErrDiv0 = 2007,
+		 xlErrDiv0 = 2007,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2042</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlErrNA = 2042,
+		 xlErrNA = 2042,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2029</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlErrName = 2029,
+		 xlErrName = 2029,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2000</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlErrNull = 2000,
+		 xlErrNull = 2000,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2036</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlErrNum = 2036,
+		 xlErrNum = 2036,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2023</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlErrRef = 2023,
+		 xlErrRef = 2023,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2015</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlErrValue = 2015
+		 xlErrValue = 2015
 	}
 }

@@ -181,17 +181,14 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Range">ref optional object Range</param>
-		/// <param name="Start">ref optional object Start</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="Start">optional object Start</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Section Add(ref object range, ref object start)
+		public NetOffice.WordApi.Section Add(object range, object start)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, start);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Section;
-			range = (object)paramsArray[0];
-			start = (object)paramsArray[1];
 			return newObject;
 		}
 

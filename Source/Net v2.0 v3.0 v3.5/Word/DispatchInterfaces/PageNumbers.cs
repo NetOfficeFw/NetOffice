@@ -283,17 +283,14 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="PageNumberAlignment">ref optional object PageNumberAlignment</param>
-		/// <param name="FirstPage">ref optional object FirstPage</param>
+		/// <param name="PageNumberAlignment">optional object PageNumberAlignment</param>
+		/// <param name="FirstPage">optional object FirstPage</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.PageNumber Add(ref object pageNumberAlignment, ref object firstPage)
+		public NetOffice.WordApi.PageNumber Add(object pageNumberAlignment, object firstPage)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pageNumberAlignment, firstPage);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.PageNumber newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.PageNumber;
-			pageNumberAlignment = (object)paramsArray[0];
-			firstPage = (object)paramsArray[1];
 			return newObject;
 		}
 

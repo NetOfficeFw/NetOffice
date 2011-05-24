@@ -217,72 +217,62 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="TargetNode">ref NetOffice.WordApi.DiagramNode TargetNode</param>
+		/// <param name="TargetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
 		/// <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void MoveNode(ref NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public void MoveNode(NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode, pos);
-			Invoker.Method(this, "MoveNode", paramsArray, modifiers);
-			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
+			Invoker.Method(this, "MoveNode", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="TargetNode">ref NetOffice.WordApi.DiagramNode TargetNode</param>
+		/// <param name="TargetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void ReplaceNode(ref NetOffice.WordApi.DiagramNode targetNode)
+		public void ReplaceNode(NetOffice.WordApi.DiagramNode targetNode)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode);
-			Invoker.Method(this, "ReplaceNode", paramsArray, modifiers);
-			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
+			Invoker.Method(this, "ReplaceNode", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="TargetNode">ref NetOffice.WordApi.DiagramNode TargetNode</param>
+		/// <param name="TargetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
 		/// <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void SwapNode(ref NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public void SwapNode(NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode, pos);
-			Invoker.Method(this, "SwapNode", paramsArray, modifiers);
-			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
+			Invoker.Method(this, "SwapNode", paramsArray);
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="copyChildren">bool copyChildren</param>
-		/// <param name="TargetNode">ref NetOffice.WordApi.DiagramNode TargetNode</param>
+		/// <param name="TargetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
 		/// <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.DiagramNode CloneNode(bool copyChildren, ref NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public NetOffice.WordApi.DiagramNode CloneNode(bool copyChildren, NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode, pos);
-			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);
 			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.DiagramNode;
-			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[1];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="ReceivingNode">ref NetOffice.WordApi.DiagramNode ReceivingNode</param>
+		/// <param name="ReceivingNode">NetOffice.WordApi.DiagramNode ReceivingNode</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void TransferChildren(ref NetOffice.WordApi.DiagramNode receivingNode)
+		public void TransferChildren(NetOffice.WordApi.DiagramNode receivingNode)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(receivingNode);
-			Invoker.Method(this, "TransferChildren", paramsArray, modifiers);
-			receivingNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
+			Invoker.Method(this, "TransferChildren", paramsArray);
 		}
 
 		/// <summary>

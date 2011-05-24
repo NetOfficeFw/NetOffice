@@ -130,15 +130,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
-		/// <param name="EditorID">ref object EditorID</param>
+		/// <param name="EditorID">object EditorID</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public NetOffice.WordApi.Editor Add(ref object editorID)
+		public NetOffice.WordApi.Editor Add(object editorID)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(editorID);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Editor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Editor;
-			editorID = (object)paramsArray[0];
 			return newObject;
 		}
 

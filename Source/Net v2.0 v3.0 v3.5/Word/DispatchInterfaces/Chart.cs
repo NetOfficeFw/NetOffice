@@ -1076,18 +1076,14 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="ElementID">ref Int32 ElementID</param>
-		/// <param name="Arg1">ref Int32 Arg1</param>
-		/// <param name="Arg2">ref Int32 Arg2</param>
+		/// <param name="ElementID">Int32 ElementID</param>
+		/// <param name="Arg1">Int32 Arg1</param>
+		/// <param name="Arg2">Int32 Arg2</param>
 		[SupportByLibrary("Word", 14)]
-		public void GetChartElement(Int32 x, Int32 y, ref Int32 elementID, ref Int32 arg1, ref Int32 arg2)
+		public void GetChartElement(Int32 x, Int32 y, Int32 elementID, Int32 arg1, Int32 arg2)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, elementID, arg1, arg2);
-			Invoker.Method(this, "GetChartElement", paramsArray, modifiers);
-			elementID = (Int32)paramsArray[2];
-			arg1 = (Int32)paramsArray[3];
-			arg2 = (Int32)paramsArray[4];
+			Invoker.Method(this, "GetChartElement", paramsArray);
 		}
 
 		/// <summary>

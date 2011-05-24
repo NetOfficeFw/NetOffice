@@ -198,14 +198,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
-		/// <param name="Document">ref object Document</param>
+		/// <param name="Document">object Document</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public void AttachToDocument(ref object document)
+		public void AttachToDocument(object document)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(document);
-			Invoker.Method(this, "AttachToDocument", paramsArray, modifiers);
-			document = (object)paramsArray[0];
+			Invoker.Method(this, "AttachToDocument", paramsArray);
 		}
 
 		/// <summary>

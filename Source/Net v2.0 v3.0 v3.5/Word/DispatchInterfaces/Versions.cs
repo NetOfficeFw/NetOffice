@@ -150,14 +150,12 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Comment">ref optional object Comment</param>
+		/// <param name="Comment">optional object Comment</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Save(ref object comment)
+		public void Save(object comment)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(comment);
-			Invoker.Method(this, "Save", paramsArray, modifiers);
-			comment = (object)paramsArray[0];
+			Invoker.Method(this, "Save", paramsArray);
 		}
 
 		/// <summary>

@@ -13,19 +13,22 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlRangeValueDefault = 10,
+		 xlRangeValueDefault = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlRangeValueXMLSpreadsheet = 11,
+		 xlRangeValueXMLSpreadsheet = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlRangeValueMSPersistXML = 12
+		 xlRangeValueMSPersistXML = 12
 	}
 }

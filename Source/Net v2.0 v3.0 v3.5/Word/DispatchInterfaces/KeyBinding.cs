@@ -244,14 +244,12 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="KeyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="Command">string Command</param>
-		/// <param name="CommandParameter">ref optional object CommandParameter</param>
+		/// <param name="CommandParameter">optional object CommandParameter</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Rebind(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, ref object commandParameter)
+		public void Rebind(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, object commandParameter)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCategory, command, commandParameter);
-			Invoker.Method(this, "Rebind", paramsArray, modifiers);
-			commandParameter = (object)paramsArray[2];
+			Invoker.Method(this, "Rebind", paramsArray);
 		}
 
 		/// <summary>

@@ -176,15 +176,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Where">NetOffice.WordApi.Range Where</param>
-		/// <param name="RichText">ref optional object RichText</param>
+		/// <param name="RichText">optional object RichText</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range Insert(NetOffice.WordApi.Range where, ref object richText)
+		public NetOffice.WordApi.Range Insert(NetOffice.WordApi.Range where, object richText)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(where, richText);
-			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
 			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
-			richText = (object)paramsArray[1];
 			return newObject;
 		}
 

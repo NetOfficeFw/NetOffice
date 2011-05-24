@@ -103,14 +103,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="pdwState">ref Int32 pdwState</param>
+		/// <param name="pdwState">Int32 pdwState</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetParentState(ref Int32 pdwState)
+		public Int32 GetParentState(Int32 pdwState)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pdwState);
 			object returnItem = Invoker.MethodReturn(this, "GetParentState", paramsArray);
-			pdwState = (Int32)paramsArray[0];
 			return (Int32)returnItem;
 		}
 

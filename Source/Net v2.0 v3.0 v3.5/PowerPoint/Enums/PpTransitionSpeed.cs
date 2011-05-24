@@ -13,25 +13,29 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppTransitionSpeedMixed = -2,
+		 ppTransitionSpeedMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppTransitionSpeedSlow = 1,
+		 ppTransitionSpeedSlow = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppTransitionSpeedMedium = 2,
+		 ppTransitionSpeedMedium = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppTransitionSpeedFast = 3
+		 ppTransitionSpeedFast = 3
 	}
 }

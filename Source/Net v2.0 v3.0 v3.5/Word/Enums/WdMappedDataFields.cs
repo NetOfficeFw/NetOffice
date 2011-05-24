@@ -13,181 +13,211 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdUniqueIdentifier = 1,
+		 wdUniqueIdentifier = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdCourtesyTitle = 2,
+		 wdCourtesyTitle = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdFirstName = 3,
+		 wdFirstName = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdMiddleName = 4,
+		 wdMiddleName = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdLastName = 5,
+		 wdLastName = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdSuffix = 6,
+		 wdSuffix = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdNickname = 7,
+		 wdNickname = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdJobTitle = 8,
+		 wdJobTitle = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdCompany = 9,
+		 wdCompany = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdAddress1 = 10,
+		 wdAddress1 = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdAddress2 = 11,
+		 wdAddress2 = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdCity = 12,
+		 wdCity = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdState = 13,
+		 wdState = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdPostalCode = 14,
+		 wdPostalCode = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdCountryRegion = 15,
+		 wdCountryRegion = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdBusinessPhone = 16,
+		 wdBusinessPhone = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdBusinessFax = 17,
+		 wdBusinessFax = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>18</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdHomePhone = 18,
+		 wdHomePhone = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>19</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdHomeFax = 19,
+		 wdHomeFax = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>20</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdEmailAddress = 20,
+		 wdEmailAddress = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>21</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdWebPageURL = 21,
+		 wdWebPageURL = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>22</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdSpouseCourtesyTitle = 22,
+		 wdSpouseCourtesyTitle = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>23</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdSpouseFirstName = 23,
+		 wdSpouseFirstName = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>24</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdSpouseMiddleName = 24,
+		 wdSpouseMiddleName = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>25</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdSpouseLastName = 25,
+		 wdSpouseLastName = 25,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>26</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdSpouseNickname = 26,
+		 wdSpouseNickname = 26,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>27</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdRubyFirstName = 27,
+		 wdRubyFirstName = 27,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>28</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdRubyLastName = 28,
+		 wdRubyLastName = 28,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>29</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdAddress3 = 29,
+		 wdAddress3 = 29,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>30</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdDepartment = 30
+		 wdDepartment = 30
 	}
 }

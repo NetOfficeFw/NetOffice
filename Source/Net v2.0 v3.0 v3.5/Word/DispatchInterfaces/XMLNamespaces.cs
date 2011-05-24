@@ -132,18 +132,15 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Path">string Path</param>
-		/// <param name="NamespaceURI">ref object NamespaceURI</param>
-		/// <param name="Alias">ref object Alias</param>
+		/// <param name="NamespaceURI">object NamespaceURI</param>
+		/// <param name="Alias">object Alias</param>
 		/// <param name="InstallForAllUsers">bool InstallForAllUsers</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public NetOffice.WordApi.XMLNamespace Add(string path, ref object namespaceURI, ref object alias, bool installForAllUsers)
+		public NetOffice.WordApi.XMLNamespace Add(string path, object namespaceURI, object alias, bool installForAllUsers)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(path, namespaceURI, alias, installForAllUsers);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.XMLNamespace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLNamespace;
-			namespaceURI = (object)paramsArray[1];
-			alias = (object)paramsArray[2];
 			return newObject;
 		}
 

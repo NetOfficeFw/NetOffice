@@ -55,16 +55,13 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
-		/// <param name="BlogPictureProvider">ref string BlogPictureProvider</param>
-		/// <param name="FriendlyName">ref string FriendlyName</param>
+		/// <param name="BlogPictureProvider">string BlogPictureProvider</param>
+		/// <param name="FriendlyName">string FriendlyName</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void BlogPictureProviderProperties(ref string blogPictureProvider, ref string friendlyName)
+		public void BlogPictureProviderProperties(string blogPictureProvider, string friendlyName)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(blogPictureProvider, friendlyName);
-			Invoker.Method(this, "BlogPictureProviderProperties", paramsArray, modifiers);
-			blogPictureProvider = (string)paramsArray[0];
-			friendlyName = (string)paramsArray[1];
+			Invoker.Method(this, "BlogPictureProviderProperties", paramsArray);
 		}
 
 		/// <summary>
@@ -88,15 +85,13 @@ namespace NetOffice.OfficeApi
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
 		/// <param name="Document">object Document</param>
 		/// <param name="Image">object Image</param>
-		/// <param name="PictureURI">ref string PictureURI</param>
+		/// <param name="PictureURI">string PictureURI</param>
 		/// <param name="ImageType">Int32 ImageType</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void PublishPicture(string account, Int32 parentWindow, object document, object image, ref string pictureURI, Int32 imageType)
+		public void PublishPicture(string account, Int32 parentWindow, object document, object image, string pictureURI, Int32 imageType)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, image, pictureURI, imageType);
-			Invoker.Method(this, "PublishPicture", paramsArray, modifiers);
-			pictureURI = (string)paramsArray[4];
+			Invoker.Method(this, "PublishPicture", paramsArray);
 		}
 
 		#endregion

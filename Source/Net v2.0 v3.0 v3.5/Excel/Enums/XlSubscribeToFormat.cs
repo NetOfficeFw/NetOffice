@@ -13,13 +13,15 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4147</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlSubscribeToPicture = -4147,
+		 xlSubscribeToPicture = -4147,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4158</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlSubscribeToText = -4158
+		 xlSubscribeToText = -4158
 	}
 }

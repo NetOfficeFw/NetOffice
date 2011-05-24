@@ -223,24 +223,21 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Index">ref optional object Index</param>
+		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public object get_Recipients(ref object index)
+		public object get_Recipients(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Recipients", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "Recipients", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
 			if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				index = (object)paramsArray[0];
-			return newObject;
+				return newObject;
 			}
 			else
 			{
-				index = (object)paramsArray[0];
-			return  returnItem;
+				return  returnItem;
 			}
 		}
 

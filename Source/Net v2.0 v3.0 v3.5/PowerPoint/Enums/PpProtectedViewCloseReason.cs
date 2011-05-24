@@ -13,19 +13,22 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		ppProtectedViewCloseNormal = 0,
+		 ppProtectedViewCloseNormal = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		ppProtectedViewCloseEdit = 1,
+		 ppProtectedViewCloseEdit = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		ppProtectedViewCloseForced = 2
+		 ppProtectedViewCloseForced = 2
 	}
 }

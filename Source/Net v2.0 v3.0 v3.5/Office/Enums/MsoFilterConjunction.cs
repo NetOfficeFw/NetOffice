@@ -13,13 +13,15 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoFilterConjunctionAnd = 0,
+		 msoFilterConjunctionAnd = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		msoFilterConjunctionOr = 1
+		 msoFilterConjunctionOr = 1
 	}
 }

@@ -150,44 +150,33 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Name">ref object Name</param>
-		/// <param name="ConfirmConversions">ref optional object ConfirmConversions</param>
-		/// <param name="ReadOnly">ref optional object ReadOnly</param>
-		/// <param name="PasswordDocument">ref optional object PasswordDocument</param>
-		/// <param name="PasswordTemplate">ref optional object PasswordTemplate</param>
-		/// <param name="Revert">ref optional object Revert</param>
-		/// <param name="WritePasswordDocument">ref optional object WritePasswordDocument</param>
-		/// <param name="WritePasswordTemplate">ref optional object WritePasswordTemplate</param>
+		/// <param name="Name">object Name</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Subdocument AddFromFile(ref object name, ref object confirmConversions, ref object readOnly, ref object passwordDocument, ref object passwordTemplate, ref object revert, ref object writePasswordDocument, ref object writePasswordTemplate)
+		public NetOffice.WordApi.Subdocument AddFromFile(object name, object confirmConversions, object readOnly, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name, confirmConversions, readOnly, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
-			object returnItem = Invoker.MethodReturn(this, "AddFromFile", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddFromFile", paramsArray);
 			NetOffice.WordApi.Subdocument newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Subdocument;
-			name = (object)paramsArray[0];
-			confirmConversions = (object)paramsArray[1];
-			readOnly = (object)paramsArray[2];
-			passwordDocument = (object)paramsArray[3];
-			passwordTemplate = (object)paramsArray[4];
-			revert = (object)paramsArray[5];
-			writePasswordDocument = (object)paramsArray[6];
-			writePasswordTemplate = (object)paramsArray[7];
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Name">ref object Name</param>
+		/// <param name="Name">object Name</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Subdocument AddFromFile(ref object name)
+		public NetOffice.WordApi.Subdocument AddFromFile(object name)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "AddFromFile", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddFromFile", paramsArray);
 			NetOffice.WordApi.Subdocument newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Subdocument;
-			name = (object)paramsArray[0];
 			return newObject;
 		}
 
@@ -207,16 +196,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="FirstSubdocument">ref optional object FirstSubdocument</param>
-		/// <param name="LastSubdocument">ref optional object LastSubdocument</param>
+		/// <param name="FirstSubdocument">optional object FirstSubdocument</param>
+		/// <param name="LastSubdocument">optional object LastSubdocument</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Merge(ref object firstSubdocument, ref object lastSubdocument)
+		public void Merge(object firstSubdocument, object lastSubdocument)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(firstSubdocument, lastSubdocument);
-			Invoker.Method(this, "Merge", paramsArray, modifiers);
-			firstSubdocument = (object)paramsArray[0];
-			lastSubdocument = (object)paramsArray[1];
+			Invoker.Method(this, "Merge", paramsArray);
 		}
 
 		/// <summary>

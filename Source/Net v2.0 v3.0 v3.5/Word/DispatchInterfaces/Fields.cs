@@ -192,19 +192,15 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		/// <param name="Type">ref optional object Type</param>
-		/// <param name="Text">ref optional object Text</param>
-		/// <param name="PreserveFormatting">ref optional object PreserveFormatting</param>
+		/// <param name="Type">optional object Type</param>
+		/// <param name="Text">optional object Text</param>
+		/// <param name="PreserveFormatting">optional object PreserveFormatting</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Field Add(NetOffice.WordApi.Range range, ref object type, ref object text, ref object preserveFormatting)
+		public NetOffice.WordApi.Field Add(NetOffice.WordApi.Range range, object type, object text, object preserveFormatting)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, type, text, preserveFormatting);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Field;
-			type = (object)paramsArray[1];
-			text = (object)paramsArray[2];
-			preserveFormatting = (object)paramsArray[3];
 			return newObject;
 		}
 

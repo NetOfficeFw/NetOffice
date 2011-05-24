@@ -13,13 +13,15 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>-4105</remarks>
 		[SupportByLibrary("Word", 14)]
-		xlChartElementPositionAutomatic = -4105,
+		 xlChartElementPositionAutomatic = -4105,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>-4114</remarks>
 		[SupportByLibrary("Word", 14)]
-		xlChartElementPositionCustom = -4114
+		 xlChartElementPositionCustom = -4114
 	}
 }

@@ -13,49 +13,57 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chAllFaces = 7,
+		 chAllFaces = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chEnd = 2,
+		 chEnd = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chEndSides = 6,
+		 chEndSides = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chFront = 1,
+		 chFront = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chFrontEnd = 3,
+		 chFrontEnd = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chFrontSides = 5,
+		 chFrontSides = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chSides = 4,
+		 chSides = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		chProjectFront = 8
+		 chProjectFront = 8
 	}
 }

@@ -13,19 +13,22 @@ namespace NetOffice.VBIDEApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_vm_Run = 0,
+		 vbext_vm_Run = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_vm_Break = 1,
+		 vbext_vm_Break = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		vbext_vm_Design = 2
+		 vbext_vm_Design = 2
 	}
 }

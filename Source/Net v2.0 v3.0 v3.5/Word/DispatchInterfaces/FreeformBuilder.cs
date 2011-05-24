@@ -117,15 +117,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Anchor">ref optional object Anchor</param>
+		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape ConvertToShape(ref object anchor)
+		public NetOffice.WordApi.Shape ConvertToShape(object anchor)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToShape", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToShape", paramsArray);
 			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
-			anchor = (object)paramsArray[0];
 			return newObject;
 		}
 

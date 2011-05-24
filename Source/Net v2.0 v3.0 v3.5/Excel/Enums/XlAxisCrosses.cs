@@ -13,25 +13,29 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4105</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlAxisCrossesAutomatic = -4105,
+		 xlAxisCrossesAutomatic = -4105,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-4114</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlAxisCrossesCustom = -4114,
+		 xlAxisCrossesCustom = -4114,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlAxisCrossesMaximum = 2,
+		 xlAxisCrossesMaximum = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		xlAxisCrossesMinimum = 4
+		 xlAxisCrossesMinimum = 4
 	}
 }

@@ -131,15 +131,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.ShapeRange Range(ref object index)
+		public NetOffice.WordApi.ShapeRange Range(object index)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Range", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Range", paramsArray);
 			NetOffice.WordApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ShapeRange;
-			index = (object)paramsArray[0];
 			return newObject;
 		}
 

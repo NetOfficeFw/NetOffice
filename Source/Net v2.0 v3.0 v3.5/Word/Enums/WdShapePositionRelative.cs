@@ -13,7 +13,8 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
+		/// <remarks>-999999</remarks>
 		[SupportByLibrary("Word", 12,14)]
-		wdShapePositionRelativeNone = -999999
+		 wdShapePositionRelativeNone = -999999
 	}
 }

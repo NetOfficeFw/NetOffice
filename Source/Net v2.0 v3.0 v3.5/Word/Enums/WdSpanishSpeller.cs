@@ -13,19 +13,22 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Word", 14)]
-		wdSpanishTuteoOnly = 0,
+		 wdSpanishTuteoOnly = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 14)]
-		wdSpanishTuteoAndVoseo = 1,
+		 wdSpanishTuteoAndVoseo = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 14)]
-		wdSpanishVoseoOnly = 2
+		 wdSpanishVoseoOnly = 2
 	}
 }

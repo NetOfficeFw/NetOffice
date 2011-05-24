@@ -13,49 +13,57 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-2</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateLevelMixed = -2,
+		 ppAnimateLevelMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateLevelNone = 0,
+		 ppAnimateLevelNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateByFirstLevel = 1,
+		 ppAnimateByFirstLevel = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateBySecondLevel = 2,
+		 ppAnimateBySecondLevel = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateByThirdLevel = 3,
+		 ppAnimateByThirdLevel = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateByFourthLevel = 4,
+		 ppAnimateByFourthLevel = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateByFifthLevel = 5,
+		 ppAnimateByFifthLevel = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		ppAnimateByAllLevels = 16
+		 ppAnimateByAllLevels = 16
 	}
 }

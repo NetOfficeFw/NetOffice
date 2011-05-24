@@ -13,103 +13,120 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssCalculate = 0,
+		 ssCalculate = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssInsertRows = 2,
+		 ssInsertRows = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssInsertColumns = 3,
+		 ssInsertColumns = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssDeleteRows = 4,
+		 ssDeleteRows = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssDeleteColumns = 5,
+		 ssDeleteColumns = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssCut = 6,
+		 ssCut = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssCopy = 7,
+		 ssCopy = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssPaste = 8,
+		 ssPaste = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssExport = 9,
+		 ssExport = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssUndo = 10,
+		 ssUndo = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssSortAscending = 11,
+		 ssSortAscending = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssSortDescending = 12,
+		 ssSortDescending = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssFind = 13,
+		 ssFind = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>14</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssClear = 14,
+		 ssClear = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>15</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssAutoFilter = 15,
+		 ssAutoFilter = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssProperties = 16,
+		 ssProperties = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
+		/// <remarks>17</remarks>
 		[SupportByLibrary("OWC10", 1)]
-		ssHelp = 17
+		 ssHelp = 17
 	}
 }

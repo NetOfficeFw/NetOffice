@@ -13,67 +13,78 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlLinkStatusOK = 0,
+		 xlLinkStatusOK = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlLinkStatusMissingFile = 1,
+		 xlLinkStatusMissingFile = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlLinkStatusMissingSheet = 2,
+		 xlLinkStatusMissingSheet = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlLinkStatusOld = 3,
+		 xlLinkStatusOld = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlLinkStatusSourceNotCalculated = 4,
+		 xlLinkStatusSourceNotCalculated = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlLinkStatusIndeterminate = 5,
+		 xlLinkStatusIndeterminate = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlLinkStatusNotStarted = 6,
+		 xlLinkStatusNotStarted = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlLinkStatusInvalidName = 7,
+		 xlLinkStatusInvalidName = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlLinkStatusSourceNotOpen = 8,
+		 xlLinkStatusSourceNotOpen = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlLinkStatusSourceOpen = 9,
+		 xlLinkStatusSourceOpen = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		xlLinkStatusCopiedValues = 10
+		 xlLinkStatusCopiedValues = 10
 	}
 }

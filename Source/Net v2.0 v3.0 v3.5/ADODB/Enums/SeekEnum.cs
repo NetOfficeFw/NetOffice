@@ -13,37 +13,43 @@ namespace NetOffice.ADODBApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adSeekFirstEQ = 1,
+		 adSeekFirstEQ = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adSeekLastEQ = 2,
+		 adSeekLastEQ = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adSeekAfterEQ = 4,
+		 adSeekAfterEQ = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adSeekAfter = 8,
+		 adSeekAfter = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>16</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adSeekBeforeEQ = 16,
+		 adSeekBeforeEQ = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>32</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adSeekBefore = 32
+		 adSeekBefore = 32
 	}
 }

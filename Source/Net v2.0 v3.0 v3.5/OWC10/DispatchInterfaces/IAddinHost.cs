@@ -55,25 +55,22 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="varoper">ref object varoper</param>
+		/// <param name="varoper">object varoper</param>
 		/// <param name="grbit">NetOffice.OWC10Api.Enums.AddinClientTypeEnum grbit</param>
 		[SupportByLibrary("OWC10", 1)]
-		public object CoerceOper(ref object varoper, NetOffice.OWC10Api.Enums.AddinClientTypeEnum grbit)
+		public object CoerceOper(object varoper, NetOffice.OWC10Api.Enums.AddinClientTypeEnum grbit)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(varoper, grbit);
-			object returnItem = Invoker.MethodReturn(this, "CoerceOper", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "CoerceOper", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
 			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				varoper = (object)paramsArray[0];
-			return newObject;
+				return newObject;
 			}
 			else
 			{
-				varoper = (object)paramsArray[0];
-			return  returnItem;
+				return  returnItem;
 			}
 		}
 

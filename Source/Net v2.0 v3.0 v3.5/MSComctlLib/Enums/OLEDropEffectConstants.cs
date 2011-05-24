@@ -13,25 +13,29 @@ namespace NetOffice.MSComctlLibApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		ccOLEDropEffectNone = 0,
+		 ccOLEDropEffectNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		ccOLEDropEffectCopy = 1,
+		 ccOLEDropEffectCopy = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		ccOLEDropEffectMove = 2,
+		 ccOLEDropEffectMove = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>-2147483648</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		ccOLEDropEffectScroll = -2147483648
+		 ccOLEDropEffectScroll = -2147483648
 	}
 }

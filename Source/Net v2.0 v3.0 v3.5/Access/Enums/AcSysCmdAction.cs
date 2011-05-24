@@ -13,79 +13,92 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdInitMeter = 1,
+		 acSysCmdInitMeter = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdUpdateMeter = 2,
+		 acSysCmdUpdateMeter = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdRemoveMeter = 3,
+		 acSysCmdRemoveMeter = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdSetStatus = 4,
+		 acSysCmdSetStatus = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdClearStatus = 5,
+		 acSysCmdClearStatus = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdRuntime = 6,
+		 acSysCmdRuntime = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdAccessVer = 7,
+		 acSysCmdAccessVer = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdIniFile = 8,
+		 acSysCmdIniFile = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdAccessDir = 9,
+		 acSysCmdAccessDir = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdGetObjectState = 10,
+		 acSysCmdGetObjectState = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>11</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdClearHelpTopic = 11,
+		 acSysCmdClearHelpTopic = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdProfile = 12,
+		 acSysCmdProfile = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>13</remarks>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		acSysCmdGetWorkgroupFile = 13
+		 acSysCmdGetWorkgroupFile = 13
 	}
 }

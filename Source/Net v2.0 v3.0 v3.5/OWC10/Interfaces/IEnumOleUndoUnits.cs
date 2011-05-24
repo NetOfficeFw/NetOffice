@@ -55,16 +55,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
-		/// <param name="rgElt">ref NetOffice.OWC10Api.IOleUndoUnit rgElt</param>
-		/// <param name="pcEltFetched">ref Int32 pcEltFetched</param>
+		/// <param name="rgElt">NetOffice.OWC10Api.IOleUndoUnit rgElt</param>
+		/// <param name="pcEltFetched">Int32 pcEltFetched</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 RemoteNext(Int32 cElt, ref NetOffice.OWC10Api.IOleUndoUnit rgElt, ref Int32 pcEltFetched)
+		public Int32 RemoteNext(Int32 cElt, NetOffice.OWC10Api.IOleUndoUnit rgElt, Int32 pcEltFetched)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt, rgElt, pcEltFetched);
 			object returnItem = Invoker.MethodReturn(this, "RemoteNext", paramsArray);
-			rgElt = (NetOffice.OWC10Api.IOleUndoUnit)paramsArray[1];
-			pcEltFetched = (Int32)paramsArray[2];
 			return (Int32)returnItem;
 		}
 
@@ -94,14 +91,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="ppEnum">ref NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
+		/// <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 Clone(ref NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
+		public Int32 Clone(NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
-			ppEnum = (NetOffice.OWC10Api.IEnumOleUndoUnits)paramsArray[0];
 			return (Int32)returnItem;
 		}
 

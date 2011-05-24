@@ -13,13 +13,15 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Excel", 14)]
-		xlOartHorizontalOverflowOverflow = 0,
+		 xlOartHorizontalOverflowOverflow = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Excel", 14)]
-		xlOartHorizontalOverflowClip = 1
+		 xlOartHorizontalOverflowClip = 1
 	}
 }

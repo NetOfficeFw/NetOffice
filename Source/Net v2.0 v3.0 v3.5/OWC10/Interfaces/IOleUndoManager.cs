@@ -91,14 +91,12 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="pdwState">ref Int32 pdwState</param>
+		/// <param name="pdwState">Int32 pdwState</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetOpenParentState(ref Int32 pdwState)
+		public Int32 GetOpenParentState(Int32 pdwState)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pdwState);
 			object returnItem = Invoker.MethodReturn(this, "GetOpenParentState", paramsArray);
-			pdwState = (Int32)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
@@ -141,56 +139,48 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="ppEnum">ref NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
+		/// <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 EnumUndoable(ref NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
+		public Int32 EnumUndoable(NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
 			object returnItem = Invoker.MethodReturn(this, "EnumUndoable", paramsArray);
-			ppEnum = (NetOffice.OWC10Api.IEnumOleUndoUnits)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="ppEnum">ref NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
+		/// <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 EnumRedoable(ref NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
+		public Int32 EnumRedoable(NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
 			object returnItem = Invoker.MethodReturn(this, "EnumRedoable", paramsArray);
-			ppEnum = (NetOffice.OWC10Api.IEnumOleUndoUnits)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="pbstr">ref string pbstr</param>
+		/// <param name="pbstr">string pbstr</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetLastUndoDescription(ref string pbstr)
+		public Int32 GetLastUndoDescription(string pbstr)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstr);
 			object returnItem = Invoker.MethodReturn(this, "GetLastUndoDescription", paramsArray);
-			pbstr = (string)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		/// <param name="pbstr">ref string pbstr</param>
+		/// <param name="pbstr">string pbstr</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 GetLastRedoDescription(ref string pbstr)
+		public Int32 GetLastRedoDescription(string pbstr)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstr);
 			object returnItem = Invoker.MethodReturn(this, "GetLastRedoDescription", paramsArray);
-			pbstr = (string)paramsArray[0];
 			return (Int32)returnItem;
 		}
 

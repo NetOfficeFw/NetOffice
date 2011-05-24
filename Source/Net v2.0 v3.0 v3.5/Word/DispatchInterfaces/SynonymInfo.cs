@@ -183,24 +183,21 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Meaning">ref object Meaning</param>
+		/// <param name="Meaning">object Meaning</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public object get_SynonymList(ref object meaning)
+		public object get_SynonymList(object meaning)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(meaning);
-			object returnItem = Invoker.PropertyGet(this, "SynonymList", paramsArray, modifiers);
+			object returnItem = Invoker.PropertyGet(this, "SynonymList", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
 			if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				meaning = (object)paramsArray[0];
-			return newObject;
+				return newObject;
 			}
 			else
 			{
-				meaning = (object)paramsArray[0];
-			return  returnItem;
+				return  returnItem;
 			}
 		}
 

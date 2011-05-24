@@ -132,16 +132,14 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Location">string Location</param>
-		/// <param name="Alias">ref object Alias</param>
+		/// <param name="Alias">object Alias</param>
 		/// <param name="InstallForAllUsers">bool InstallForAllUsers</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public NetOffice.WordApi.XSLTransform Add(string location, ref object alias, bool installForAllUsers)
+		public NetOffice.WordApi.XSLTransform Add(string location, object alias, bool installForAllUsers)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(location, alias, installForAllUsers);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.XSLTransform newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XSLTransform;
-			alias = (object)paramsArray[1];
 			return newObject;
 		}
 

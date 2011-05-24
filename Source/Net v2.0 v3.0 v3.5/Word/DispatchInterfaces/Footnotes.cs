@@ -253,17 +253,14 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		/// <param name="Reference">ref optional object Reference</param>
-		/// <param name="Text">ref optional object Text</param>
+		/// <param name="Reference">optional object Reference</param>
+		/// <param name="Text">optional object Text</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Footnote Add(NetOffice.WordApi.Range range, ref object reference, ref object text)
+		public NetOffice.WordApi.Footnote Add(NetOffice.WordApi.Range range, object reference, object text)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, reference, text);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Footnote newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Footnote;
-			reference = (object)paramsArray[1];
-			text = (object)paramsArray[2];
 			return newObject;
 		}
 

@@ -626,14 +626,12 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ListTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="ListLevelNumber">ref optional object ListLevelNumber</param>
+		/// <param name="ListLevelNumber">optional object ListLevelNumber</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void LinkToListTemplate(NetOffice.WordApi.ListTemplate listTemplate, ref object listLevelNumber)
+		public void LinkToListTemplate(NetOffice.WordApi.ListTemplate listTemplate, object listLevelNumber)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, listLevelNumber);
-			Invoker.Method(this, "LinkToListTemplate", paramsArray, modifiers);
-			listLevelNumber = (object)paramsArray[1];
+			Invoker.Method(this, "LinkToListTemplate", paramsArray);
 		}
 
 		/// <summary>

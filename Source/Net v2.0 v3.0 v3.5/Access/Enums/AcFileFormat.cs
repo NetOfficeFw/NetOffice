@@ -13,37 +13,43 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acFileFormatAccess2 = 2,
+		 acFileFormatAccess2 = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acFileFormatAccess95 = 7,
+		 acFileFormatAccess95 = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>8</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acFileFormatAccess97 = 8,
+		 acFileFormatAccess97 = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>9</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acFileFormatAccess2000 = 9,
+		 acFileFormatAccess2000 = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>10</remarks>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		acFileFormatAccess2002 = 10,
+		 acFileFormatAccess2002 = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>12</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acFileFormatAccess2007 = 12
+		 acFileFormatAccess2007 = 12
 	}
 }

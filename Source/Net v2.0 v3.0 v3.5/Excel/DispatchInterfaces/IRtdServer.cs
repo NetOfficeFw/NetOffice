@@ -68,51 +68,43 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TopicID">Int32 TopicID</param>
-		/// <param name="Strings">ref object[] Strings</param>
-		/// <param name="GetNewValues">ref bool GetNewValues</param>
+		/// <param name="Strings">object[] Strings</param>
+		/// <param name="GetNewValues">bool GetNewValues</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object ConnectData(Int32 topicID, ref object[] strings, ref bool getNewValues)
+		public object ConnectData(Int32 topicID, object[] strings, bool getNewValues)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(topicID, (object)strings, getNewValues);
-			object returnItem = Invoker.MethodReturn(this, "ConnectData", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "ConnectData", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
 			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
-				strings = (object[])paramsArray[1];
-			getNewValues = (bool)paramsArray[2];
-			return newObject;
+				return newObject;
 			}
 			else
 			{
-				strings = (object[])paramsArray[1];
-			getNewValues = (bool)paramsArray[2];
-			return  returnItem;
+				return  returnItem;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
-		/// <param name="TopicCount">ref Int32 TopicCount</param>
+		/// <param name="TopicCount">Int32 TopicCount</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object[] RefreshData(ref Int32 topicCount)
+		public object[] RefreshData(Int32 topicCount)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(topicCount);
-			object returnItem = Invoker.MethodReturn(this, "RefreshData", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "RefreshData", paramsArray);
 			Type returnItemType = Invoker.GetObjectType(returnItem);
 			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
 			{
 				COMObject[] newObject = LateBindingApi.Core.Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem);
-				topicCount = (Int32)paramsArray[0];
-			return newObject;
+				return newObject;
 			}
 			else
 			{
-				topicCount = (Int32)paramsArray[0];
-			return (object[]) returnItem;
+				return (object[]) returnItem;
 			}
 		}
 

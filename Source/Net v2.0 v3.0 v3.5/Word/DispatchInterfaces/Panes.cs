@@ -131,15 +131,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="SplitVertical">ref optional object SplitVertical</param>
+		/// <param name="SplitVertical">optional object SplitVertical</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Pane Add(ref object splitVertical)
+		public NetOffice.WordApi.Pane Add(object splitVertical)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(splitVertical);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Pane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Pane;
-			splitVertical = (object)paramsArray[0];
 			return newObject;
 		}
 

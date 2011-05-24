@@ -132,17 +132,14 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Position">Single Position</param>
-		/// <param name="Alignment">ref optional object Alignment</param>
-		/// <param name="Leader">ref optional object Leader</param>
+		/// <param name="Alignment">optional object Alignment</param>
+		/// <param name="Leader">optional object Leader</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.TabStop Add(Single position, ref object alignment, ref object leader)
+		public NetOffice.WordApi.TabStop Add(Single position, object alignment, object leader)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(position, alignment, leader);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.TabStop newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TabStop;
-			alignment = (object)paramsArray[1];
-			leader = (object)paramsArray[2];
 			return newObject;
 		}
 

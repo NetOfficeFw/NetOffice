@@ -236,20 +236,16 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
-		/// <param name="NamespaceURI">ref object NamespaceURI</param>
-		/// <param name="Alias">ref object Alias</param>
-		/// <param name="FileName">ref object FileName</param>
+		/// <param name="NamespaceURI">object NamespaceURI</param>
+		/// <param name="Alias">object Alias</param>
+		/// <param name="FileName">object FileName</param>
 		/// <param name="InstallForAllUsers">bool InstallForAllUsers</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public NetOffice.WordApi.XMLSchemaReference Add(ref object namespaceURI, ref object alias, ref object fileName, bool installForAllUsers)
+		public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI, object alias, object fileName, bool installForAllUsers)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName, installForAllUsers);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.XMLSchemaReference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLSchemaReference;
-			namespaceURI = (object)paramsArray[0];
-			alias = (object)paramsArray[1];
-			fileName = (object)paramsArray[2];
 			return newObject;
 		}
 

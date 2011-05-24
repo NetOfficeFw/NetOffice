@@ -13,43 +13,50 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlSides = 1,
+		 xlSides = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlEnd = 2,
+		 xlEnd = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlEndSides = 3,
+		 xlEndSides = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlFront = 4,
+		 xlFront = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlFrontSides = 5,
+		 xlFrontSides = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlFrontEnd = 6,
+		 xlFrontEnd = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("PowerPoint", 14)]
-		xlAllFaces = 7
+		 xlAllFaces = 7
 	}
 }

@@ -525,15 +525,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Status">NetOffice.WordApi.Enums.WdXMLValidationStatus Status</param>
-		/// <param name="ErrorText">ref object ErrorText</param>
+		/// <param name="ErrorText">object ErrorText</param>
 		/// <param name="ClearedAutomatically">bool ClearedAutomatically</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public void SetValidationError(NetOffice.WordApi.Enums.WdXMLValidationStatus status, ref object errorText, bool clearedAutomatically)
+		public void SetValidationError(NetOffice.WordApi.Enums.WdXMLValidationStatus status, object errorText, bool clearedAutomatically)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(status, errorText, clearedAutomatically);
-			Invoker.Method(this, "SetValidationError", paramsArray, modifiers);
-			errorText = (object)paramsArray[1];
+			Invoker.Method(this, "SetValidationError", paramsArray);
 		}
 
 		#endregion

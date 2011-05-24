@@ -142,15 +142,13 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
-		/// <param name="Range">ref optional object Range</param>
+		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public NetOffice.WordApi.XMLNode Insert(ref object range)
+		public NetOffice.WordApi.XMLNode Insert(object range)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
 			NetOffice.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLNode;
-			range = (object)paramsArray[0];
 			return newObject;
 		}
 

@@ -90,14 +90,12 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="EncryptionData">object EncryptionData</param>
-		/// <param name="PermissionsMask">ref UIntPtr PermissionsMask</param>
+		/// <param name="PermissionsMask">UIntPtr PermissionsMask</param>
 		[SupportByLibrary("Office", 12,14)]
-		public Int32 Authenticate(object parentWindow, object encryptionData, ref UIntPtr permissionsMask)
+		public Int32 Authenticate(object parentWindow, object encryptionData, UIntPtr permissionsMask)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, encryptionData, permissionsMask);
 			object returnItem = Invoker.MethodReturn(this, "Authenticate", paramsArray);
-			permissionsMask = (UIntPtr)paramsArray[2];
 			return (Int32)returnItem;
 		}
 
@@ -171,14 +169,12 @@ namespace NetOffice.OfficeApi
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="ReadOnly">bool ReadOnly</param>
-		/// <param name="Remove">ref bool Remove</param>
+		/// <param name="Remove">bool Remove</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void ShowSettings(Int32 sessionHandle, object parentWindow, bool readOnly, ref bool remove)
+		public void ShowSettings(Int32 sessionHandle, object parentWindow, bool readOnly, bool remove)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, parentWindow, readOnly, remove);
-			Invoker.Method(this, "ShowSettings", paramsArray, modifiers);
-			remove = (bool)paramsArray[3];
+			Invoker.Method(this, "ShowSettings", paramsArray);
 		}
 
 		#endregion

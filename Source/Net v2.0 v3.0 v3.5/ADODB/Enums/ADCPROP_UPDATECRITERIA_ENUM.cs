@@ -13,25 +13,29 @@ namespace NetOffice.ADODBApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adCriteriaKey = 0,
+		 adCriteriaKey = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adCriteriaAllCols = 1,
+		 adCriteriaAllCols = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adCriteriaUpdCols = 2,
+		 adCriteriaUpdCols = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		adCriteriaTimeStamp = 3
+		 adCriteriaTimeStamp = 3
 	}
 }

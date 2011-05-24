@@ -13,43 +13,50 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-999999</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFrameTop = -999999,
+		 wdFrameTop = -999999,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-999998</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFrameLeft = -999998,
+		 wdFrameLeft = -999998,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-999997</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFrameBottom = -999997,
+		 wdFrameBottom = -999997,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-999996</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFrameRight = -999996,
+		 wdFrameRight = -999996,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-999995</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFrameCenter = -999995,
+		 wdFrameCenter = -999995,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-999994</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFrameInside = -999994,
+		 wdFrameInside = -999994,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>-999993</remarks>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		wdFrameOutside = -999993
+		 wdFrameOutside = -999993
 	}
 }

@@ -132,15 +132,13 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.WordApi.Enums.WdContentControlType Type</param>
-		/// <param name="Range">ref optional object Range</param>
+		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.ContentControl Add(NetOffice.WordApi.Enums.WdContentControlType type, ref object range)
+		public NetOffice.WordApi.ContentControl Add(NetOffice.WordApi.Enums.WdContentControlType type, object range)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(type, range);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.ContentControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ContentControl;
-			range = (object)paramsArray[1];
 			return newObject;
 		}
 

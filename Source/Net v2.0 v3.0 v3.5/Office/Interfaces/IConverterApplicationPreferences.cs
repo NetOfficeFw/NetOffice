@@ -54,56 +54,48 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 14
 		/// </summary>
-		/// <param name="plcid">ref Int32 plcid</param>
+		/// <param name="plcid">Int32 plcid</param>
 		[SupportByLibrary("Office", 14)]
-		public Int32 HrGetLcid(ref Int32 plcid)
+		public Int32 HrGetLcid(Int32 plcid)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(plcid);
 			object returnItem = Invoker.MethodReturn(this, "HrGetLcid", paramsArray);
-			plcid = (Int32)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Office 14
 		/// </summary>
-		/// <param name="phwnd">ref Int32 phwnd</param>
+		/// <param name="phwnd">Int32 phwnd</param>
 		[SupportByLibrary("Office", 14)]
-		public Int32 HrGetHwnd(ref Int32 phwnd)
+		public Int32 HrGetHwnd(Int32 phwnd)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(phwnd);
 			object returnItem = Invoker.MethodReturn(this, "HrGetHwnd", paramsArray);
-			phwnd = (Int32)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Office 14
 		/// </summary>
-		/// <param name="pbstrApplication">ref string pbstrApplication</param>
+		/// <param name="pbstrApplication">string pbstrApplication</param>
 		[SupportByLibrary("Office", 14)]
-		public Int32 HrGetApplication(ref string pbstrApplication)
+		public Int32 HrGetApplication(string pbstrApplication)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstrApplication);
 			object returnItem = Invoker.MethodReturn(this, "HrGetApplication", paramsArray);
-			pbstrApplication = (string)paramsArray[0];
 			return (Int32)returnItem;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Office 14
 		/// </summary>
-		/// <param name="pFormat">ref Int32 pFormat</param>
+		/// <param name="pFormat">Int32 pFormat</param>
 		[SupportByLibrary("Office", 14)]
-		public Int32 HrCheckFormat(ref Int32 pFormat)
+		public Int32 HrCheckFormat(Int32 pFormat)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(pFormat);
 			object returnItem = Invoker.MethodReturn(this, "HrCheckFormat", paramsArray);
-			pFormat = (Int32)paramsArray[0];
 			return (Int32)returnItem;
 		}
 

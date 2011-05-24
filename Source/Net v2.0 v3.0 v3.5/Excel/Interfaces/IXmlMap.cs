@@ -419,14 +419,12 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
-		/// <param name="Data">ref string Data</param>
+		/// <param name="Data">string Data</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.Enums.XlXmlExportResult ExportXml(ref string data)
+		public NetOffice.ExcelApi.Enums.XlXmlExportResult ExportXml(string data)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			object[] paramsArray = Invoker.ValidateParamsArray(data);
 			object returnItem = Invoker.MethodReturn(this, "ExportXml", paramsArray);
-			data = (string)paramsArray[0];
 			return (NetOffice.ExcelApi.Enums.XlXmlExportResult)returnItem;
 		}
 

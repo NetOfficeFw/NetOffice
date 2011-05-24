@@ -68,16 +68,13 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
-		/// <param name="HelpFile">ref string HelpFile</param>
-		/// <param name="HelpContext">ref Int32 HelpContext</param>
+		/// <param name="HelpFile">string HelpFile</param>
+		/// <param name="HelpContext">Int32 HelpContext</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public Int32 GetPageInfo(ref string helpFile, ref Int32 helpContext)
+		public Int32 GetPageInfo(string helpFile, Int32 helpContext)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile, helpContext);
 			object returnItem = Invoker.MethodReturn(this, "GetPageInfo", paramsArray);
-			helpFile = (string)paramsArray[0];
-			helpContext = (Int32)paramsArray[1];
 			return (Int32)returnItem;
 		}
 

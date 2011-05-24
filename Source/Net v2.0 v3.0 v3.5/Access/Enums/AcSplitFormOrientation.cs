@@ -13,25 +13,29 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acDatasheetOnTop = 0,
+		 acDatasheetOnTop = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acDatasheetOnBottom = 1,
+		 acDatasheetOnBottom = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acDatasheetOnLeft = 2,
+		 acDatasheetOnLeft = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Access", 12,14)]
-		acDatasheetOnRight = 3
+		 acDatasheetOnRight = 3
 	}
 }

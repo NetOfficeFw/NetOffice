@@ -13,19 +13,22 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdEmailHTMLFidelityLow = 1,
+		 wdEmailHTMLFidelityLow = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdEmailHTMLFidelityMedium = 2,
+		 wdEmailHTMLFidelityMedium = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		wdEmailHTMLFidelityHigh = 3
+		 wdEmailHTMLFidelityHigh = 3
 	}
 }

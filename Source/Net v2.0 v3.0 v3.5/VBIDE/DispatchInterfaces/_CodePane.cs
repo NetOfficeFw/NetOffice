@@ -162,20 +162,15 @@ namespace NetOffice.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
-		/// <param name="StartLine">ref Int32 StartLine</param>
-		/// <param name="StartColumn">ref Int32 StartColumn</param>
-		/// <param name="EndLine">ref Int32 EndLine</param>
-		/// <param name="EndColumn">ref Int32 EndColumn</param>
+		/// <param name="StartLine">Int32 StartLine</param>
+		/// <param name="StartColumn">Int32 StartColumn</param>
+		/// <param name="EndLine">Int32 EndLine</param>
+		/// <param name="EndColumn">Int32 EndColumn</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
-		public void GetSelection(ref Int32 startLine, ref Int32 startColumn, ref Int32 endLine, ref Int32 endColumn)
+		public void GetSelection(Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(startLine, startColumn, endLine, endColumn);
-			Invoker.Method(this, "GetSelection", paramsArray, modifiers);
-			startLine = (Int32)paramsArray[0];
-			startColumn = (Int32)paramsArray[1];
-			endLine = (Int32)paramsArray[2];
-			endColumn = (Int32)paramsArray[3];
+			Invoker.Method(this, "GetSelection", paramsArray);
 		}
 
 		/// <summary>

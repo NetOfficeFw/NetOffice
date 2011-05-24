@@ -13,49 +13,57 @@ namespace NetOffice.MSComctlLibApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>0</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tvwTextOnly = 0,
+		 tvwTextOnly = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>1</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tvwPictureText = 1,
+		 tvwPictureText = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>2</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tvwPlusMinusText = 2,
+		 tvwPlusMinusText = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>3</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tvwPlusPictureText = 3,
+		 tvwPlusPictureText = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>4</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tvwTreelinesText = 4,
+		 tvwTreelinesText = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>5</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tvwTreelinesPictureText = 5,
+		 tvwTreelinesPictureText = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>6</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tvwTreelinesPlusMinusText = 6,
+		 tvwTreelinesPlusMinusText = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
+		/// <remarks>7</remarks>
 		[SupportByLibrary("MSComctlLib", 6)]
-		tvwTreelinesPlusMinusPictureText = 7
+		 tvwTreelinesPlusMinusPictureText = 7
 	}
 }

@@ -161,16 +161,14 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		/// <param name="Index">ref object Index</param>
+		/// <param name="Index">object Index</param>
 		/// <param name="NodeType">NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.DiagramNode AddNode(ref object index, NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType)
+		public NetOffice.WordApi.DiagramNode AddNode(object index, NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(index, nodeType);
-			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
 			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.DiagramNode;
-			index = (object)paramsArray[0];
 			return newObject;
 		}
 

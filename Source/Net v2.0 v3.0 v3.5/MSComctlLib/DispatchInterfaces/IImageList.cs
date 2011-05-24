@@ -189,17 +189,14 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		/// <param name="Key1">ref object Key1</param>
-		/// <param name="Key2">ref object Key2</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">object Key2</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public stdole.Picture Overlay(ref object key1, ref object key2)
+		public stdole.Picture Overlay(object key1, object key2)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, key2);
-			object returnItem = Invoker.MethodReturn(this, "Overlay", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Overlay", paramsArray);
 			stdole.Picture newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as stdole.Picture;
-			key1 = (object)paramsArray[0];
-			key2 = (object)paramsArray[1];
 			return newObject;
 		}
 

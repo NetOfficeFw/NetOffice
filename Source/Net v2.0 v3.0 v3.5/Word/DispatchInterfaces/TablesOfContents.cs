@@ -151,29 +151,20 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		/// <param name="UseHeadingStyles">ref optional object UseHeadingStyles</param>
-		/// <param name="UpperHeadingLevel">ref optional object UpperHeadingLevel</param>
-		/// <param name="LowerHeadingLevel">ref optional object LowerHeadingLevel</param>
-		/// <param name="UseFields">ref optional object UseFields</param>
-		/// <param name="TableID">ref optional object TableID</param>
-		/// <param name="RightAlignPageNumbers">ref optional object RightAlignPageNumbers</param>
-		/// <param name="IncludePageNumbers">ref optional object IncludePageNumbers</param>
-		/// <param name="AddedStyles">ref optional object AddedStyles</param>
+		/// <param name="UseHeadingStyles">optional object UseHeadingStyles</param>
+		/// <param name="UpperHeadingLevel">optional object UpperHeadingLevel</param>
+		/// <param name="LowerHeadingLevel">optional object LowerHeadingLevel</param>
+		/// <param name="UseFields">optional object UseFields</param>
+		/// <param name="TableID">optional object TableID</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		/// <param name="IncludePageNumbers">optional object IncludePageNumbers</param>
+		/// <param name="AddedStyles">optional object AddedStyles</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.TableOfContents AddOld(NetOffice.WordApi.Range range, ref object useHeadingStyles, ref object upperHeadingLevel, ref object lowerHeadingLevel, ref object useFields, ref object tableID, ref object rightAlignPageNumbers, ref object includePageNumbers, ref object addedStyles)
+		public NetOffice.WordApi.TableOfContents AddOld(NetOffice.WordApi.Range range, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers, object addedStyles)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles);
-			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
 			NetOffice.WordApi.TableOfContents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfContents;
-			useHeadingStyles = (object)paramsArray[1];
-			upperHeadingLevel = (object)paramsArray[2];
-			lowerHeadingLevel = (object)paramsArray[3];
-			useFields = (object)paramsArray[4];
-			tableID = (object)paramsArray[5];
-			rightAlignPageNumbers = (object)paramsArray[6];
-			includePageNumbers = (object)paramsArray[7];
-			addedStyles = (object)paramsArray[8];
 			return newObject;
 		}
 
@@ -194,21 +185,16 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		/// <param name="Entry">ref optional object Entry</param>
-		/// <param name="EntryAutoText">ref optional object EntryAutoText</param>
-		/// <param name="TableID">ref optional object TableID</param>
-		/// <param name="Level">ref optional object Level</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		/// <param name="TableID">optional object TableID</param>
+		/// <param name="Level">optional object Level</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, ref object entry, ref object entryAutoText, ref object tableID, ref object level)
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object tableID, object level)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, tableID, level);
-			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
 			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Field;
-			entry = (object)paramsArray[1];
-			entryAutoText = (object)paramsArray[2];
-			tableID = (object)paramsArray[3];
-			level = (object)paramsArray[4];
 			return newObject;
 		}
 
@@ -229,33 +215,22 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		/// <param name="UseHeadingStyles">ref optional object UseHeadingStyles</param>
-		/// <param name="UpperHeadingLevel">ref optional object UpperHeadingLevel</param>
-		/// <param name="LowerHeadingLevel">ref optional object LowerHeadingLevel</param>
-		/// <param name="UseFields">ref optional object UseFields</param>
-		/// <param name="TableID">ref optional object TableID</param>
-		/// <param name="RightAlignPageNumbers">ref optional object RightAlignPageNumbers</param>
-		/// <param name="IncludePageNumbers">ref optional object IncludePageNumbers</param>
-		/// <param name="AddedStyles">ref optional object AddedStyles</param>
-		/// <param name="UseHyperlinks">ref optional object UseHyperlinks</param>
-		/// <param name="HidePageNumbersInWeb">ref optional object HidePageNumbersInWeb</param>
+		/// <param name="UseHeadingStyles">optional object UseHeadingStyles</param>
+		/// <param name="UpperHeadingLevel">optional object UpperHeadingLevel</param>
+		/// <param name="LowerHeadingLevel">optional object LowerHeadingLevel</param>
+		/// <param name="UseFields">optional object UseFields</param>
+		/// <param name="TableID">optional object TableID</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		/// <param name="IncludePageNumbers">optional object IncludePageNumbers</param>
+		/// <param name="AddedStyles">optional object AddedStyles</param>
+		/// <param name="UseHyperlinks">optional object UseHyperlinks</param>
+		/// <param name="HidePageNumbersInWeb">optional object HidePageNumbersInWeb</param>
 		[SupportByLibrary("Word", 9)]
-		public NetOffice.WordApi.TableOfContents Add(NetOffice.WordApi.Range range, ref object useHeadingStyles, ref object upperHeadingLevel, ref object lowerHeadingLevel, ref object useFields, ref object tableID, ref object rightAlignPageNumbers, ref object includePageNumbers, ref object addedStyles, ref object useHyperlinks, ref object hidePageNumbersInWeb)
+		public NetOffice.WordApi.TableOfContents Add(NetOffice.WordApi.Range range, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers, object addedStyles, object useHyperlinks, object hidePageNumbersInWeb)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles, useHyperlinks, hidePageNumbersInWeb);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.TableOfContents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfContents;
-			useHeadingStyles = (object)paramsArray[1];
-			upperHeadingLevel = (object)paramsArray[2];
-			lowerHeadingLevel = (object)paramsArray[3];
-			useFields = (object)paramsArray[4];
-			tableID = (object)paramsArray[5];
-			rightAlignPageNumbers = (object)paramsArray[6];
-			includePageNumbers = (object)paramsArray[7];
-			addedStyles = (object)paramsArray[8];
-			useHyperlinks = (object)paramsArray[9];
-			hidePageNumbersInWeb = (object)paramsArray[10];
 			return newObject;
 		}
 
@@ -263,35 +238,23 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		/// <param name="UseHeadingStyles">ref optional object UseHeadingStyles</param>
-		/// <param name="UpperHeadingLevel">ref optional object UpperHeadingLevel</param>
-		/// <param name="LowerHeadingLevel">ref optional object LowerHeadingLevel</param>
-		/// <param name="UseFields">ref optional object UseFields</param>
-		/// <param name="TableID">ref optional object TableID</param>
-		/// <param name="RightAlignPageNumbers">ref optional object RightAlignPageNumbers</param>
-		/// <param name="IncludePageNumbers">ref optional object IncludePageNumbers</param>
-		/// <param name="AddedStyles">ref optional object AddedStyles</param>
-		/// <param name="UseHyperlinks">ref optional object UseHyperlinks</param>
-		/// <param name="HidePageNumbersInWeb">ref optional object HidePageNumbersInWeb</param>
-		/// <param name="UseOutlineLevels">ref optional object UseOutlineLevels</param>
+		/// <param name="UseHeadingStyles">optional object UseHeadingStyles</param>
+		/// <param name="UpperHeadingLevel">optional object UpperHeadingLevel</param>
+		/// <param name="LowerHeadingLevel">optional object LowerHeadingLevel</param>
+		/// <param name="UseFields">optional object UseFields</param>
+		/// <param name="TableID">optional object TableID</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		/// <param name="IncludePageNumbers">optional object IncludePageNumbers</param>
+		/// <param name="AddedStyles">optional object AddedStyles</param>
+		/// <param name="UseHyperlinks">optional object UseHyperlinks</param>
+		/// <param name="HidePageNumbersInWeb">optional object HidePageNumbersInWeb</param>
+		/// <param name="UseOutlineLevels">optional object UseOutlineLevels</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.TableOfContents Add(NetOffice.WordApi.Range range, ref object useHeadingStyles, ref object upperHeadingLevel, ref object lowerHeadingLevel, ref object useFields, ref object tableID, ref object rightAlignPageNumbers, ref object includePageNumbers, ref object addedStyles, ref object useHyperlinks, ref object hidePageNumbersInWeb, ref object useOutlineLevels)
+		public NetOffice.WordApi.TableOfContents Add(NetOffice.WordApi.Range range, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers, object addedStyles, object useHyperlinks, object hidePageNumbersInWeb, object useOutlineLevels)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles, useHyperlinks, hidePageNumbersInWeb, useOutlineLevels);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.TableOfContents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfContents;
-			useHeadingStyles = (object)paramsArray[1];
-			upperHeadingLevel = (object)paramsArray[2];
-			lowerHeadingLevel = (object)paramsArray[3];
-			useFields = (object)paramsArray[4];
-			tableID = (object)paramsArray[5];
-			rightAlignPageNumbers = (object)paramsArray[6];
-			includePageNumbers = (object)paramsArray[7];
-			addedStyles = (object)paramsArray[8];
-			useHyperlinks = (object)paramsArray[9];
-			hidePageNumbersInWeb = (object)paramsArray[10];
-			useOutlineLevels = (object)paramsArray[11];
 			return newObject;
 		}
 
@@ -312,33 +275,22 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		/// <param name="UseHeadingStyles">ref optional object UseHeadingStyles</param>
-		/// <param name="UpperHeadingLevel">ref optional object UpperHeadingLevel</param>
-		/// <param name="LowerHeadingLevel">ref optional object LowerHeadingLevel</param>
-		/// <param name="UseFields">ref optional object UseFields</param>
-		/// <param name="TableID">ref optional object TableID</param>
-		/// <param name="RightAlignPageNumbers">ref optional object RightAlignPageNumbers</param>
-		/// <param name="IncludePageNumbers">ref optional object IncludePageNumbers</param>
-		/// <param name="AddedStyles">ref optional object AddedStyles</param>
-		/// <param name="UseHyperlinks">ref optional object UseHyperlinks</param>
-		/// <param name="HidePageNumbersInWeb">ref optional object HidePageNumbersInWeb</param>
+		/// <param name="UseHeadingStyles">optional object UseHeadingStyles</param>
+		/// <param name="UpperHeadingLevel">optional object UpperHeadingLevel</param>
+		/// <param name="LowerHeadingLevel">optional object LowerHeadingLevel</param>
+		/// <param name="UseFields">optional object UseFields</param>
+		/// <param name="TableID">optional object TableID</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		/// <param name="IncludePageNumbers">optional object IncludePageNumbers</param>
+		/// <param name="AddedStyles">optional object AddedStyles</param>
+		/// <param name="UseHyperlinks">optional object UseHyperlinks</param>
+		/// <param name="HidePageNumbersInWeb">optional object HidePageNumbersInWeb</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.TableOfContents Add2000(NetOffice.WordApi.Range range, ref object useHeadingStyles, ref object upperHeadingLevel, ref object lowerHeadingLevel, ref object useFields, ref object tableID, ref object rightAlignPageNumbers, ref object includePageNumbers, ref object addedStyles, ref object useHyperlinks, ref object hidePageNumbersInWeb)
+		public NetOffice.WordApi.TableOfContents Add2000(NetOffice.WordApi.Range range, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers, object addedStyles, object useHyperlinks, object hidePageNumbersInWeb)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true,true,true,true,true,true,true);
 			object[] paramsArray = Invoker.ValidateParamsArray(range, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles, useHyperlinks, hidePageNumbersInWeb);
-			object returnItem = Invoker.MethodReturn(this, "Add2000", paramsArray, modifiers);
+			object returnItem = Invoker.MethodReturn(this, "Add2000", paramsArray);
 			NetOffice.WordApi.TableOfContents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.TableOfContents;
-			useHeadingStyles = (object)paramsArray[1];
-			upperHeadingLevel = (object)paramsArray[2];
-			lowerHeadingLevel = (object)paramsArray[3];
-			useFields = (object)paramsArray[4];
-			tableID = (object)paramsArray[5];
-			rightAlignPageNumbers = (object)paramsArray[6];
-			includePageNumbers = (object)paramsArray[7];
-			addedStyles = (object)paramsArray[8];
-			useHyperlinks = (object)paramsArray[9];
-			hidePageNumbersInWeb = (object)paramsArray[10];
 			return newObject;
 		}
 
