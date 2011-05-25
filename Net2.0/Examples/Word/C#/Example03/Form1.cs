@@ -28,7 +28,7 @@ namespace Example03
             // start word and turn off msg boxes
             Word.Application wordApplication = new Word.Application();
             wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
-
+             
             // add a new document
             Word.Document newDocument = wordApplication.Documents.Add();
 
@@ -45,7 +45,7 @@ namespace Example03
             levels[1].TrailingCharacter = WdTrailingCharacter.wdTrailingTab;
             levels[1].NumberStyle = WdListNumberStyle.wdListNumberStyleArabic;
             levels[1].NumberPosition = 0;
-            levels[1].Alignment = WdListLevelAlignment.wdListLevelAlignLeft;
+            levels[1].Alignment = WdListLevelAlignment.wdListLevelAlignLeft;    
             levels[1].TextPosition = wordApplication.CentimetersToPoints(0.63F);
             levels[1].TabPosition = wordApplication.CentimetersToPoints(0.63F);
             levels[1].ResetOnHigher = 0;

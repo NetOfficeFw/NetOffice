@@ -42,7 +42,7 @@ namespace LateBindingApi.Core
         /// <param name="paramsArray"></param>
         public static void Method(COMObject comObject, string name, object[] paramsArray)
         {
-            comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+            comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace LateBindingApi.Core
         /// <param name="paramsArray"></param>
         public static void Method(object comObject, string name, object[] paramsArray)
         {
-            comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod, null, comObject, paramsArray, Settings.ThreadCulture);
+            comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace LateBindingApi.Core
         /// <param name="paramModifiers"></param>
         public static void Method(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
-            comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+            comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace LateBindingApi.Core
         /// <returns></returns>
         public static object MethodReturn(COMObject comObject, string name)
         {
-            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
+            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
             return returnValue;
         }
 
@@ -89,7 +89,7 @@ namespace LateBindingApi.Core
         /// <returns></returns>
         public static object MethodReturn(COMObject comObject, string name, object[] paramsArray)
         {
-            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
             return returnValue;
         }
 
@@ -103,7 +103,7 @@ namespace LateBindingApi.Core
         /// <returns></returns>
         public static object MethodReturn(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
-            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
             return returnValue;
         }
 
