@@ -29,7 +29,6 @@ namespace Example04
             
             // one simple call
             outlookApplication.Session.SendAndReceive(false);
-            outlookApplication.GetNamespace("MAPI").SendAndReceive(false);
 
             // close outlook and dispose
             outlookApplication.Quit();

@@ -39,12 +39,14 @@ namespace Example07
             // start outlook
             _outlookApplication = new Outlook.Application();
 
+            Outlook._NameSpace outlookNS = _outlookApplication.GetNamespace("MAPI");
+            Outlook.MAPIFolder inboxFolder = outlookNS.GetDefaultFolder(OlDefaultFolders.olFolderInbox);
+            inboxFolder.Display();
        
             // add a commandbar popup
             Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_outlookApplication.ActiveExplorer().CommandBars["Menu Bar"].Controls.Add(
                                                                                 MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, true);
             commandBarPopup.Caption = "commandBarPopup";
-
 
             #region few words, how to access the picture
             /*

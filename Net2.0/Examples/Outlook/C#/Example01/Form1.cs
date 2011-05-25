@@ -45,7 +45,6 @@ namespace Example1
                 Outlook.MailItem mailItem = item as Outlook.MailItem;
                 if (null != mailItem)
                 {
-                    //Console.WriteLine(i.ToString() + " " + mailItem.SenderName);
                     ListViewItem newItem = listView1.Items.Add(mailItem.SenderName);
                     newItem.SubItems.Add(mailItem.Subject);
                 }
