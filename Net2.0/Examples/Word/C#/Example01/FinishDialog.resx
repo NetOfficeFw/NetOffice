@@ -117,8 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>This example contains code to create your own menu items in older word versions without ribbons. Look at the main menu, the toolbars and the context menu at the created instance and watch the event listener to see the click events. 
-Note: The COMAddin example contains an advanced ribbon example for modern word versions.</value>
-  </data>
 </root>
