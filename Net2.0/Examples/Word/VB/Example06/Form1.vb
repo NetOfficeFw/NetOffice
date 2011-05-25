@@ -22,7 +22,7 @@ Public Class Form1
         ' Initialize Api COMObject Support
         LateBindingApi.Core.Factory.Initialize()
 
-        ' start powerpoint and turn off msg boxes
+        ' start word and turn off msg boxes
         Dim wordApplication As New Word.Application()
         wordApplication.DisplayAlerts = False
 
@@ -39,7 +39,7 @@ Public Class Form1
         Dim document As Word.Document = wordApplication.Documents.Add()
         document.Close()
 
-        ' close power point and dispose reference
+        ' close word and dispose reference
         wordApplication.Quit()
         wordApplication.Dispose()
 

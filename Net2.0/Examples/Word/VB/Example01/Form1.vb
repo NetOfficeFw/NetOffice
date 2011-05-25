@@ -30,13 +30,13 @@ Public Class Form1
 
         wordApplication.Selection.HomeKey()
 
-        'save the document
+        ' save the document
         Dim fileExtension As String = GetDefaultExtension(wordApplication)
         Dim documentFile As String = String.Format("{0}\Example01{1}", Application.StartupPath, fileExtension)
         newDocument.SaveAs(documentFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, _
                                         Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value)
 
-        ' close excel and dispose reference
+        ' close word and dispose reference
         wordApplication.Quit()
         wordApplication.Dispose()
 
