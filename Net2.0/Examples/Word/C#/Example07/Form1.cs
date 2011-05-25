@@ -36,7 +36,7 @@ namespace Example07
             Office.CommandBar commandBar;
             Office.CommandBarButton commandBarBtn;
 
-            // start powerpoint and turn off msg boxes
+            // start word and turn off msg boxes
             _wordApplication = new Word.Application();
             _wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone; 
 

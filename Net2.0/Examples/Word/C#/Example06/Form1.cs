@@ -44,7 +44,7 @@ namespace Example06
             Word.Document document = wordApplication.Documents.Add();
             document.Close();
             
-            // close power point and dispose reference
+            // close word and dispose reference
             wordApplication.Quit();
             wordApplication.Dispose();
         }
