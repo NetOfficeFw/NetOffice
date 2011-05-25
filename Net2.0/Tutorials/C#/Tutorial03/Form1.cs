@@ -34,7 +34,7 @@ namespace Tutorial03
             // we dispose the instance. the parameter false signals to api dont release the event listener
             // set parameter to true and the event listener will stopped and you dont get events for the instance
             // the DisposeChildInstances() method has the same method overload
-             book.Close();
+            book.Close();
 	        book.Dispose(false);
 
             application.Quit();
