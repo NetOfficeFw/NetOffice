@@ -1,29 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
-using System.Diagnostics;
+using System.Reflection;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Example01
 {
     public partial class FinishDialog : Form
     {
-        
-        string _message;
-        string _workbookPath;
 
-        public FinishDialog(string message, string workbookPath)
+        string _message;
+        string _DocumentPath;
+
+        public FinishDialog(string message, string documentPath)
         {
             InitializeComponent();
 
             _message = message;
-            _workbookPath = workbookPath;
+            _DocumentPath = documentPath;
 
-            labelMessage.Text      = _message;
-            labelWorkbookPath.Text = _workbookPath; 
+            labelMessage.Text = _message;
+            labelDocumentPath.Text = _DocumentPath;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -31,11 +30,10 @@ namespace Example01
             this.Close();
         }
 
-        private void buttonOpenWorkbook_Click(object sender, EventArgs e)
+        private void buttonOpenDocument_Click(object sender, EventArgs e)
         {
-            Process.Start(_workbookPath);         
+            Process.Start(_DocumentPath);
             this.Close();
         }
-
     }
 }

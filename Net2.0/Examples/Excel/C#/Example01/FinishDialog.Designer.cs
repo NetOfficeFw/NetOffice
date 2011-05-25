@@ -31,7 +31,7 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonOpenWorkbook = new System.Windows.Forms.Button();
             this.labelMessage = new System.Windows.Forms.Label();
-            this.labelWorkbookPath = new System.Windows.Forms.Label();
+            this.labelDocumentPath = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonClose
@@ -50,9 +50,8 @@
             this.buttonOpenWorkbook.Name = "buttonOpenWorkbook";
             this.buttonOpenWorkbook.Size = new System.Drawing.Size(102, 22);
             this.buttonOpenWorkbook.TabIndex = 3;
-            this.buttonOpenWorkbook.Text = "Open Workbook";
+            this.buttonOpenWorkbook.Text = "Open Document";
             this.buttonOpenWorkbook.UseVisualStyleBackColor = true;
-            this.buttonOpenWorkbook.Click += new System.EventHandler(this.buttonOpenWorkbook_Click);
             // 
             // labelMessage
             // 
@@ -63,21 +62,21 @@
             this.labelMessage.TabIndex = 4;
             this.labelMessage.Text = "labelMessage";
             // 
-            // labelWorkbookPath
+            // labelDocumentPath
             // 
-            this.labelWorkbookPath.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelWorkbookPath.Location = new System.Drawing.Point(24, 35);
-            this.labelWorkbookPath.Name = "labelWorkbookPath";
-            this.labelWorkbookPath.Size = new System.Drawing.Size(321, 41);
-            this.labelWorkbookPath.TabIndex = 5;
-            this.labelWorkbookPath.Text = "labelWorkbookPath";
+            this.labelDocumentPath.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelDocumentPath.Location = new System.Drawing.Point(24, 35);
+            this.labelDocumentPath.Name = "labelDocumentPath";
+            this.labelDocumentPath.Size = new System.Drawing.Size(321, 41);
+            this.labelDocumentPath.TabIndex = 5;
+            this.labelDocumentPath.Text = "labelWorkbookPath";
             // 
             // FinishDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 113);
-            this.Controls.Add(this.labelWorkbookPath);
+            this.Controls.Add(this.labelDocumentPath);
             this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.buttonOpenWorkbook);
             this.Controls.Add(this.buttonClose);
@@ -96,7 +95,7 @@
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonOpenWorkbook;
         private System.Windows.Forms.Label labelMessage;
-        private System.Windows.Forms.Label labelWorkbookPath;
+        private System.Windows.Forms.Label labelDocumentPath;
 
     }
 }
