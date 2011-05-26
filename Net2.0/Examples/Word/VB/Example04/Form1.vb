@@ -47,7 +47,7 @@ Public Class Form1
 
         wordApplication.Selection.TypeText(" or click ")
 
-        newDocument.Hyperlinks.Add(wordApplication.Selection.Range, newDocument.MailMerge.DataSource.DataFields(1).Value, _
+        newDocument.Hyperlinks.Add(wordApplication.Selection.Range, newDocument.MailMerge.DataSource.DataFields(2).Value, _
                                    Missing.Value, "come on dude click me, i know you want it...", "here", Missing.Value)
 
         'show the contents of the fields
