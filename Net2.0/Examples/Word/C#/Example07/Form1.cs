@@ -140,7 +140,5 @@ namespace Example07
         {
             textBoxEvents.AppendText(Message + "\r\n");
         }
-
-       
     }
 }

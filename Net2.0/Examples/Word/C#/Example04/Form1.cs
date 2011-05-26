@@ -23,7 +23,6 @@ namespace Example04
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
             // Initialize Api COMObject Support
             LateBindingApi.Core.Factory.Initialize();
 

@@ -20,7 +20,7 @@ Public Class Form1
         Dim newDocument As Word.Document
         newDocument = wordApplication.Documents.Add()
 
-        'insert some text
+        ' insert some text
         wordApplication.Selection.TypeText("This text is written by NetOffice")
 
         wordApplication.Selection.HomeKey(WdUnits.wdLine, WdMovementType.wdExtend)

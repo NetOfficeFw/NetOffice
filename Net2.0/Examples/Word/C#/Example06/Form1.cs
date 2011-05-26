@@ -29,7 +29,7 @@ namespace Example06
             // Initialize Api COMObject Support
             LateBindingApi.Core.Factory.Initialize();
 
-            // start powerpoint and turn off msg boxes
+            // start word and turn off msg boxes
             Word.Application wordApplication = new Word.Application();
             wordApplication.DisplayAlerts = NetOffice.WordApi.Enums.WdAlertLevel.wdAlertsNone; 
 

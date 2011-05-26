@@ -16,8 +16,6 @@ namespace Example02
 {
     public partial class Form1 : Form
     {
-        Word.Application wordApplication;
-
         public Form1()
         {
             InitializeComponent();
@@ -29,7 +27,7 @@ namespace Example02
             LateBindingApi.Core.Factory.Initialize();
 
             // start word and turn off msg boxes
-            wordApplication = new Word.Application();
+            Word.Application wordApplication = new Word.Application();
             wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
             // add a new document
