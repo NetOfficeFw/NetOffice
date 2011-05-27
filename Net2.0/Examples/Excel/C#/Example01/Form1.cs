@@ -8,8 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 
 using LateBindingApi.Core;
-using Word = NetOffice.WordApi;
-using NetOffice.WordApi.Enums;
+using Excel = NetOffice.ExcelApi;
+using NetOffice.ExcelApi.Enums;
 using NetOffice.VBIDEApi.Enums;
 
 namespace Example01
@@ -24,54 +24,86 @@ namespace Example01
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
-            LateBindingApi.Core.Factory.Initialize();
+            // start excel and turn off msg boxes
+            Excel.Application excelApplication = new Excel.Application();
+            excelApplication.DisplayAlerts = false;
 
-            // start word and turn off msg boxes
-            Word.Application wordApplication = new Word.Application();
-            wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
+            // add a new workbook
+            Excel.Workbook workBook = excelApplication.Workbooks.Add();
+            Excel.Worksheet workSheet = (Excel.Worksheet)workBook.Worksheets[1];
 
-            // add a new document
-            Word.Document newDocument = wordApplication.Documents.Add();
+            /*do background color for cells*/
 
-            // insert some text
-            wordApplication.Selection.TypeText("This text is written by NetOffice");
+            string listSeperator = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ListSeparator;
 
-            wordApplication.Selection.HomeKey(WdUnits.wdLine, WdMovementType.wdExtend);
-            wordApplication.Selection.Font.Color = WdColor.wdColorSeaGreen;
-            wordApplication.Selection.Font.Bold = 1;
-            wordApplication.Selection.Font.Size = 18;
+            // draw the face
+            string rangeAdressFace = string.Format("$C10:$M10{0}$C30:$M30{0}$C11:$C30{0}$M11:$M30", listSeperator);
+            workSheet.get_Range(rangeAdressFace).Interior.Color = ToDouble(Color.DarkGreen);
 
-            // save the document
-            string fileExtension = GetDefaultExtension(wordApplication);
-            object documentFile = string.Format("{0}\\Example01{1}", Application.StartupPath, fileExtension);
-            newDocument.SaveAs(documentFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value,
-                            Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+            string rangeAdressEyes = string.Format("$F14{0}$J14", listSeperator);
+            workSheet.get_Range(rangeAdressEyes).Interior.Color = ToDouble(Color.Black);
 
-            // close word and dispose reference
-            wordApplication.Quit();
-            wordApplication.Dispose();
+            string rangeAdressNoise = string.Format("$G18:$I19", listSeperator);
+            workSheet.get_Range(rangeAdressNoise).Interior.Color = ToDouble(Color.DarkGreen);
 
-            FinishDialog fDialog = new FinishDialog("Document saved.", documentFile.ToString());
+            string rangeAdressMouth = string.Format("$F26{0}$J26{0}$G27:$I27", listSeperator);
+            workSheet.get_Range(rangeAdressMouth).Interior.Color = ToDouble(Color.DarkGreen);
+
+            // border the face with the border arround method
+            workSheet.get_Range(rangeAdressFace).BorderAround(XlLineStyle.xlDashDot, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexNone, Color.BlueViolet.ToArgb());
+            workSheet.get_Range(rangeAdressEyes).BorderAround(XlLineStyle.xlDashDot, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexNone, Color.BlueViolet.ToArgb());
+            workSheet.get_Range(rangeAdressNoise).BorderAround(XlLineStyle.xlDouble, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexNone, Color.BlueViolet.ToArgb());
+
+            // border explicitly
+            workSheet.get_Range(rangeAdressMouth).Borders[XlBordersIndex.xlEdgeBottom].LineStyle = XlLineStyle.xlDouble;
+            workSheet.get_Range(rangeAdressMouth).Borders[XlBordersIndex.xlEdgeBottom].Weight = 4;
+            workSheet.get_Range(rangeAdressMouth).Borders[XlBordersIndex.xlEdgeBottom].Color = ToDouble(Color.Black);
+
+            // save the book 
+            string fileExtension = GetDefaultExtension(excelApplication);
+            string workbookFile = string.Format("{0}\\Example01{1}", Application.StartupPath, fileExtension);
+            workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, 
+                                                                                        XlSaveAsAccessMode.xlExclusive);
+
+            // close excel and dispose reference
+            excelApplication.Quit();
+            excelApplication.Dispose();
+
+            FinishDialog fDialog = new FinishDialog("Workbook saved.", workbookFile);
             fDialog.ShowDialog(this);
         }
 
         #region Helper
 
         /// <summary>
-        /// returns the valid file extension for the instance. for example ".doc" or ".docx"
+        /// Translate a color to double
+        /// </summary>
+        /// <param name="color">expression to convert</param>
+        /// <returns>color</returns>
+        private static double ToDouble(System.Drawing.Color color)
+        {
+            uint returnValue = color.B;
+            returnValue = returnValue << 8;
+            returnValue += color.G;
+            returnValue = returnValue << 8;
+            returnValue += color.R;
+            return returnValue;
+        }
+
+        /// <summary>
+        /// returns the valid file extension for the instance. for example ".xls" or ".xlsx"
         /// </summary>
         /// <param name="application">the instance</param>
         /// <returns>the extension</returns>
-        private static string GetDefaultExtension(Word.Application application)
+        private static string GetDefaultExtension(Excel.Application application)
         {
-            double version = Convert.ToDouble(application.Version);
-            if (version >= 120.00)
-                return ".docx";
+            double Version = Convert.ToDouble(application.Version);
+            if (Version >= 120.00)
+                return ".xlsx";
             else
-                return ".doc";
+                return ".xls";
         }
-
+        
         #endregion
 
     }
