@@ -30,7 +30,7 @@ namespace LateBindingApi.Core
     #endregion
 
     /// <summary>
-    /// creation factory for COMObject and derived types
+    /// Creation Factory for COMObject and derived types
     /// </summary>
     public static class Factory
     {
@@ -128,9 +128,9 @@ namespace LateBindingApi.Core
         /// <summary>
         /// creates a new COMObject based on classType of comProxy 
         /// </summary>
-        /// <param name="caller"></param>
-        /// <param name="comProxy"></param>
-        /// <returns></returns>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(COMObject caller, object comProxy)
         { 
             if (null == comProxy)
@@ -151,10 +151,10 @@ namespace LateBindingApi.Core
         /// <summary>
         /// creates a new COMObject based on classType of comProxy 
         /// </summary>
-        /// <param name="caller"></param>
-        /// <param name="comProxy"></param>
-        /// <param name="comProxyType"></param>
-        /// <returns></returns>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <param name="comProxyType">Type of comProxy</param>
+        /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(COMObject caller, object comProxy, Type comProxyType)
         {
             if (null == comProxy)
@@ -174,13 +174,13 @@ namespace LateBindingApi.Core
         /// <summary>
         /// creates a new COMObject from factoryInfo
         /// </summary>
-        /// <param name="factoryInfo"></param>
-        /// <param name="caller"></param>
-        /// <param name="comProxy"></param>
-        /// <param name="comProxyType"></param>
-        /// <param name="className"></param>
-        /// <param name="fullClassName"></param>
-        /// <returns></returns>
+        /// <param name="factoryInfo">Factory Info from Wrapper Assemblies</param>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <param name="comProxyType">Type of comProxy</param>
+        /// <param name="className">name of COMServer proxy class</param>
+        /// <param name="fullClassName">full namespace and name of COMServer proxy class</param>
+        /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, COMObject caller, object comProxy, Type comProxyType, string className, string fullClassName)
         {
             Type classType = null;
@@ -206,9 +206,9 @@ namespace LateBindingApi.Core
         /// <summary>
         ///  creates a new COMObject array
         /// </summary>
-        /// <param name="caller"></param>
-        /// <param name="comProxyArray"></param>
-        /// <returns></returns>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxyArray">new created proxy array</param>
+        /// <returns>corresponding Wrapper class Instance array or plain COMObject array</returns>
         public static COMObject[] CreateObjectArrayFromComProxy(COMObject caller, object[] comProxyArray)
         {
             if (null == comProxyArray)
@@ -290,9 +290,10 @@ namespace LateBindingApi.Core
             parentTypeLib.GetLibAttr(out attributesPointer);
            
             COMTypes.TYPEATTR attributes = (COMTypes.TYPEATTR)Marshal.PtrToStructure(attributesPointer, typeof(COMTypes.TYPEATTR));
-            returnGuid = attributes.guid; 
-            
-            parentTypeLib.ReleaseTLibAttr(attributesPointer);
+            returnGuid = attributes.guid;
+
+            Marshal.FreeHGlobal(attributesPointer); 
+            //parentTypeLib.ReleaseTLibAttr(attributesPointer);
             Marshal.ReleaseComObject(parentTypeLib);
             Marshal.ReleaseComObject(typeInfo);
 

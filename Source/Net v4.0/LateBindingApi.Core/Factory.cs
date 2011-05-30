@@ -290,9 +290,10 @@ namespace LateBindingApi.Core
             parentTypeLib.GetLibAttr(out attributesPointer);
            
             COMTypes.TYPEATTR attributes = (COMTypes.TYPEATTR)Marshal.PtrToStructure(attributesPointer, typeof(COMTypes.TYPEATTR));
-            returnGuid = attributes.guid; 
-            
-            parentTypeLib.ReleaseTLibAttr(attributesPointer);
+            returnGuid = attributes.guid;
+
+            Marshal.FreeHGlobal(attributesPointer); 
+            //parentTypeLib.ReleaseTLibAttr(attributesPointer);
             Marshal.ReleaseComObject(parentTypeLib);
             Marshal.ReleaseComObject(typeInfo);
 
