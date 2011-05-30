@@ -146,7 +146,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="y">optional object y</param>
 		/// <param name="Style">optional object Style</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void Draw(Int32 hDC, object x=null, object y=null, object style=null)
+		public void Draw(Int32 hDC, object x, object y, object style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, x, y, style);
 			Invoker.Method(this, "Draw", paramsArray);

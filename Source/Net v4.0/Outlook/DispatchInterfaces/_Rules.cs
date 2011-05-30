@@ -180,7 +180,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="ShowProgress">optional object ShowProgress</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public void Save(object showProgress=null)
+		public void Save(object showProgress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showProgress);
 			Invoker.Method(this, "Save", paramsArray);

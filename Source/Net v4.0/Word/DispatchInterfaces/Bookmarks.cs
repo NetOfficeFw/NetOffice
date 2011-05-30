@@ -172,7 +172,7 @@ namespace NetOffice.WordApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Bookmark Add(string name, object range=null)
+		public NetOffice.WordApi.Bookmark Add(string name, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, range);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

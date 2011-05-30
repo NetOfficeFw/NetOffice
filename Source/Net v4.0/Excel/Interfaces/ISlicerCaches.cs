@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SourceField">object SourceField</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("Excel", 14)]
-		public NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField, object name=null)
+		public NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, sourceField, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

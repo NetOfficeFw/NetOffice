@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Locked">optional object Locked</param>
 		/// <param name="Hidden">optional object Hidden</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Scenario Add(string name, object changingCells, object values=null, object comment=null, object locked=null, object hidden=null)
+		public NetOffice.ExcelApi.Scenario Add(string name, object changingCells, object values, object comment, object locked, object hidden)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, changingCells, values, comment, locked, hidden);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ReportType">NetOffice.ExcelApi.Enums.XlSummaryReportType ReportType</param>
 		/// <param name="ResultCells">optional object ResultCells</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object CreateSummary(NetOffice.ExcelApi.Enums.XlSummaryReportType reportType, object resultCells=null)
+		public object CreateSummary(NetOffice.ExcelApi.Enums.XlSummaryReportType reportType, object resultCells)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportType, resultCells);
 			object returnItem = Invoker.MethodReturn(this, "CreateSummary", paramsArray);

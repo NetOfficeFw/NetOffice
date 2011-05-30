@@ -3226,7 +3226,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrExpr">string bstrExpr</param>
 		/// <param name="ppsa">optional object[] ppsa</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public object _Evaluate(string bstrExpr, object[] ppsa=null)
+		public object _Evaluate(string bstrExpr, object[] ppsa)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
 			object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);

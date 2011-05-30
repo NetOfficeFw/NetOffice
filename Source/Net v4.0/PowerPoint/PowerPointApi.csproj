@@ -8,7 +8,7 @@
     <ProjectGuid>{EDA28F44-DDA4-4C84-973D-E59C775F39AA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.PowerPointApi</RootNamespace>
+    <RootNamespace>NetOffice.PowerPointApi</RootNamespace>
     <AssemblyName>PowerPointApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

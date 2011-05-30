@@ -325,7 +325,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Expression1">optional object Expression1</param>
 		/// <param name="Expression2">optional object Expression2</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public void Modify(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator, object expression1=null, object expression2=null)
+		public void Modify(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator, object expression1, object expression2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, expression1, expression2);
 			Invoker.Method(this, "Modify", paramsArray);

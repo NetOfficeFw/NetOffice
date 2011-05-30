@@ -134,7 +134,7 @@ namespace NetOffice.WordApi
 		/// <param name="OutlineNumbered">optional object OutlineNumbered</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.ListTemplate Add(object outlineNumbered=null, object name=null)
+		public NetOffice.WordApi.ListTemplate Add(object outlineNumbered, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outlineNumbered, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

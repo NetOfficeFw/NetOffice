@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="HelpFile">optional object HelpFile</param>
 		/// <param name="HelpContextID">optional object HelpContextID</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.MenuItem Add(string caption, object onAction=null, object shortcutKey=null, object before=null, object restore=null, object statusBar=null, object helpFile=null, object helpContextID=null)
+		public NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey, object before, object restore, object statusBar, object helpFile, object helpContextID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(caption, onAction, shortcutKey, before, restore, statusBar, helpFile, helpContextID);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Before">optional object Before</param>
 		/// <param name="Restore">optional object Restore</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Menu AddMenu(string caption, object before=null, object restore=null)
+		public NetOffice.ExcelApi.Menu AddMenu(string caption, object before, object restore)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(caption, before, restore);
 			object returnItem = Invoker.MethodReturn(this, "AddMenu", paramsArray);

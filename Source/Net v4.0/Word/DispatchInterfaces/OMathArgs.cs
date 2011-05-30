@@ -132,7 +132,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="BeforeArg">optional object BeforeArg</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.OMath Add(object beforeArg=null)
+		public NetOffice.WordApi.OMath Add(object beforeArg)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeArg);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

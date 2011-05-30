@@ -4646,7 +4646,7 @@ namespace NetOffice.WordApi
 		/// <param name="DemoSpeed">optional object DemoSpeed</param>
 		/// <param name="HelpType">optional object HelpType</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void SetWPHelpOptions(object commandKeyHelp=null, object docNavigationKeys=null, object mouseSimulation=null, object demoGuidance=null, object demoSpeed=null, object helpType=null)
+		public void SetWPHelpOptions(object commandKeyHelp, object docNavigationKeys, object mouseSimulation, object demoGuidance, object demoSpeed, object helpType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commandKeyHelp, docNavigationKeys, mouseSimulation, demoGuidance, demoSpeed, helpType);
 			Invoker.Method(this, "SetWPHelpOptions", paramsArray);

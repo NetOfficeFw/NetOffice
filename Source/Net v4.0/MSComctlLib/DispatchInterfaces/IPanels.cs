@@ -122,7 +122,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Style">optional object Style</param>
 		/// <param name="Picture">optional object Picture</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IPanel Add(object index=null, object key=null, object text=null, object style=null, object picture=null)
+		public NetOffice.MSComctlLibApi.IPanel Add(object index, object key, object text, object style, object picture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, style, picture);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

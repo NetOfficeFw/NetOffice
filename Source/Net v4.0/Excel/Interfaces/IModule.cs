@@ -342,7 +342,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 Copy(object before=null, object after=null)
+		public Int32 Copy(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
@@ -377,7 +377,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 Move(object before=null, object after=null)
+		public Int32 Move(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
 			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
@@ -406,7 +406,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 _PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null)
+		public Int32 _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
 			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
@@ -443,7 +443,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Scenarios">optional object Scenarios</param>
 		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 Protect(object password=null, object drawingObjects=null, object contents=null, object scenarios=null, object userInterfaceOnly=null)
+		public Int32 Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly);
 			object returnItem = Invoker.MethodReturn(this, "Protect", paramsArray);
@@ -494,7 +494,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="TextCodepage">optional object TextCodepage</param>
 		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 SaveAs(string filename, object fileFormat=null, object password=null, object writeResPassword=null, object readOnlyRecommended=null, object createBackup=null, object addToMru=null, object textCodepage=null, object textVisualLayout=null)
+		public Int32 SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object addToMru, object textCodepage, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, addToMru, textCodepage, textVisualLayout);
 			object returnItem = Invoker.MethodReturn(this, "SaveAs", paramsArray);
@@ -518,7 +518,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 Select(object replace=null)
+		public Int32 Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
@@ -541,7 +541,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Password">optional object Password</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 Unprotect(object password=null)
+		public Int32 Unprotect(object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password);
 			object returnItem = Invoker.MethodReturn(this, "Unprotect", paramsArray);
@@ -565,7 +565,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Filename">object Filename</param>
 		/// <param name="Merge">optional object Merge</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object InsertFile(object filename, object merge=null)
+		public object InsertFile(object filename, object merge)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, merge);
 			object returnItem = Invoker.MethodReturn(this, "InsertFile", paramsArray);
@@ -611,7 +611,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Scenarios">optional object Scenarios</param>
 		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public Int32 _Protect(object password=null, object drawingObjects=null, object contents=null, object scenarios=null, object userInterfaceOnly=null)
+		public Int32 _Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly);
 			object returnItem = Invoker.MethodReturn(this, "_Protect", paramsArray);
@@ -642,7 +642,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="TextCodepage">optional object TextCodepage</param>
 		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public Int32 _SaveAs(string filename, object fileFormat=null, object password=null, object writeResPassword=null, object readOnlyRecommended=null, object createBackup=null, object addToMru=null, object textCodepage=null, object textVisualLayout=null)
+		public Int32 _SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object addToMru, object textCodepage, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, addToMru, textCodepage, textVisualLayout);
 			object returnItem = Invoker.MethodReturn(this, "_SaveAs", paramsArray);
@@ -672,7 +672,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public Int32 __PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null)
+		public Int32 __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
 			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
@@ -701,7 +701,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public Int32 PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null)
+		public Int32 PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
 			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);

@@ -91,7 +91,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="DataType">NetOffice.ADODBApi.Enums.DataTypeEnum DataType</param>
 		/// <param name="Length">optional object Length</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.SchemaField Add(string name, NetOffice.ADODBApi.Enums.DataTypeEnum dataType, object length=null)
+		public NetOffice.OWC10Api.SchemaField Add(string name, NetOffice.ADODBApi.Enums.DataTypeEnum dataType, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType, length);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

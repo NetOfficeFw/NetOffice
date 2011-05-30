@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="newtype">NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype</param>
 		/// <param name="newvalue">optional object newvalue</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public Int32 Modify(NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype, object newvalue=null)
+		public Int32 Modify(NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype, object newvalue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newtype, newvalue);
 			object returnItem = Invoker.MethodReturn(this, "Modify", paramsArray);

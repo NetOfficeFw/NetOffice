@@ -91,7 +91,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="RowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
 		/// <param name="CommandText">optional object CommandText</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.SchemaRowsource Add(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText=null)
+		public NetOffice.OWC10Api.SchemaRowsource Add(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType, commandText);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -120,7 +120,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="RowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
 		/// <param name="CommandText">optional object CommandText</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.SchemaRowsource AddNew(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText=null)
+		public NetOffice.OWC10Api.SchemaRowsource AddNew(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType, commandText);
 			object returnItem = Invoker.MethodReturn(this, "AddNew", paramsArray);

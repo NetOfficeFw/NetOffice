@@ -133,7 +133,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="BeforeCol">optional object BeforeCol</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.OMathMatCol Add(object beforeCol=null)
+		public NetOffice.WordApi.OMathMatCol Add(object beforeCol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeCol);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

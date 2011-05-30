@@ -23,7 +23,7 @@ namespace Example1
  
             // start outlook
             Outlook.Application outlookApplication = new Outlook.Application();
-            
+
             // Get inbox 
             Outlook._NameSpace outlookNS = outlookApplication.GetNamespace("MAPI");
             Outlook.MAPIFolder inboxFolder = outlookNS.GetDefaultFolder(OlDefaultFolders.olFolderInbox);

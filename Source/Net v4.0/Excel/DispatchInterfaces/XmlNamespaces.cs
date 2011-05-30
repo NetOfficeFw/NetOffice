@@ -161,7 +161,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Path">string Path</param>
 		/// <param name="InstallForAllUsers">optional object InstallForAllUsers</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public void InstallManifest(string path, object installForAllUsers=null)
+		public void InstallManifest(string path, object installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, installForAllUsers);
 			Invoker.Method(this, "InstallManifest", paramsArray);

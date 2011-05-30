@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="filter">optional object filter</param>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		public void Delete(object filter=null)
+		public void Delete(object filter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filter);
 			Invoker.Method(this, "Delete", paramsArray);
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Extensions">string Extensions</param>
 		/// <param name="Position">optional object Position</param>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		public NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions, object position=null)
+		public NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(description, extensions, position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

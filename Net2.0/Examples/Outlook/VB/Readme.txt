@@ -1,9 +1,9 @@
 Outlook\COMAddinClassicExample	- demonstrate a version independent COMAddin with classic UI
 Outlook\COMAddinRibbonExample	- demonstrate a version independent COMAddin with ribbon UI
-Excel\Example01			- inbox folder 
-Excel\Example02			- create task item
-Excel\Example03			- send mail
-Excel\Example04			- send and recieve
-Excel\Example05			- list all contacts
-Excel\Example06			- events
-Excel\Example07			- customize classic ui
+Outlook\Example01			- inbox folder 
+Outlook\Example02			- create task item
+Outlook\Example03			- send mail
+Outlook\Example04			- send and recieve
+Outlook\Example05			- list all contacts
+Outlook\Example06			- events
+Outlook\Example07			- customize classic ui

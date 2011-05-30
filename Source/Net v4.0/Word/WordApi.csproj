@@ -8,7 +8,7 @@
     <ProjectGuid>{178F30B2-E831-4ECF-82A1-F0CA44B43E46}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.WordApi</RootNamespace>
+    <RootNamespace>NetOffice.WordApi</RootNamespace>
     <AssemblyName>WordApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

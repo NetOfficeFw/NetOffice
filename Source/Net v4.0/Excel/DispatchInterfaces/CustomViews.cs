@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PrintSettings">optional object PrintSettings</param>
 		/// <param name="RowColSettings">optional object RowColSettings</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings=null, object rowColSettings=null)
+		public NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings, object rowColSettings)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(viewName, printSettings, rowColSettings);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

@@ -118,7 +118,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="Rowcol">optional object Rowcol</param>
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
 		[SupportByLibrary("PowerPoint", 14)]
-		public object Extend(object source, object rowcol=null, object categoryLabels=null)
+		public object Extend(object source, object rowcol, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, categoryLabels);
 			object returnItem = Invoker.MethodReturn(this, "Extend", paramsArray);
@@ -193,7 +193,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol, object seriesLabels=null, object categoryLabels=null, object replace=null)
+		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

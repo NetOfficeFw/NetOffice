@@ -3141,7 +3141,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="Modal">optional object Modal</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public void Display(object modal=null)
+		public void Display(object modal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(modal);
 			Invoker.Method(this, "Display", paramsArray);
@@ -3196,7 +3196,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Path">string Path</param>
 		/// <param name="Type">optional object Type</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public void SaveAs(string path, object type=null)
+		public void SaveAs(string path, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, type);
 			Invoker.Method(this, "SaveAs", paramsArray);

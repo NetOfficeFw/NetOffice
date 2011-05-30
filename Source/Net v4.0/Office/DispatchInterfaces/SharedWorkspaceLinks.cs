@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Description">optional object Description</param>
 		/// <param name="Notes">optional object Notes</param>
 		[SupportByLibrary("Office", 11,12,14)]
-		public NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL, object description=null, object notes=null)
+		public NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL, object description, object notes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uRL, description, notes);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

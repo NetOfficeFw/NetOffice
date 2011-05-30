@@ -222,7 +222,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="LevelsUp">optional object LevelsUp</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.HTMLDivision HTMLDivisionParent(object levelsUp=null)
+		public NetOffice.WordApi.HTMLDivision HTMLDivisionParent(object levelsUp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(levelsUp);
 			object returnItem = Invoker.MethodReturn(this, "HTMLDivisionParent", paramsArray);

@@ -152,7 +152,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Window">optional object Window</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Window Add(object window=null)
+		public NetOffice.WordApi.Window Add(object window)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(window);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -177,7 +177,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="ArrangeStyle">optional object ArrangeStyle</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Arrange(object arrangeStyle=null)
+		public void Arrange(object arrangeStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle);
 			Invoker.Method(this, "Arrange", paramsArray);

@@ -135,7 +135,7 @@ namespace NetOffice.WordApi
 		/// <param name="Alignment">optional object Alignment</param>
 		/// <param name="Leader">optional object Leader</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.TabStop Add(Single position, object alignment=null, object leader=null)
+		public NetOffice.WordApi.TabStop Add(Single position, object alignment, object leader)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, alignment, leader);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

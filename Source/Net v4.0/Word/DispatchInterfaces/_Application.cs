@@ -2153,7 +2153,7 @@ namespace NetOffice.WordApi
 		/// <param name="OriginalFormat">optional object OriginalFormat</param>
 		/// <param name="RouteDocument">optional object RouteDocument</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Quit(object saveChanges=null, object originalFormat=null, object routeDocument=null)
+		public void Quit(object saveChanges, object originalFormat, object routeDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, originalFormat, routeDocument);
 			Invoker.Method(this, "Quit", paramsArray);
@@ -2198,7 +2198,7 @@ namespace NetOffice.WordApi
 		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
 		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PrintOutOld(object background=null, object append=null, object range=null, object outputFileName=null, object from=null, object to=null, object item=null, object copies=null, object pages=null, object pageType=null, object printToFile=null, object collate=null, object fileName=null, object activePrinterMacGX=null, object manualDuplexPrint=null)
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object fileName, object activePrinterMacGX, object manualDuplexPrint)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, fileName, activePrinterMacGX, manualDuplexPrint);
 			Invoker.Method(this, "PrintOutOld", paramsArray);
@@ -2242,7 +2242,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Times">optional object Times</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool Repeat(object times=null)
+		public bool Repeat(object times)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(times);
 			object returnItem = Invoker.MethodReturn(this, "Repeat", paramsArray);
@@ -2340,7 +2340,7 @@ namespace NetOffice.WordApi
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, object arg2=null, object arg3=null, object arg4=null)
+		public Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "BuildKeyCode", paramsArray);
@@ -2365,7 +2365,7 @@ namespace NetOffice.WordApi
 		/// <param name="KeyCode">Int32 KeyCode</param>
 		/// <param name="KeyCode2">optional object KeyCode2</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public string KeyString(Int32 keyCode, object keyCode2=null)
+		public string KeyString(Int32 keyCode, object keyCode2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
 			object returnItem = Invoker.MethodReturn(this, "KeyString", paramsArray);
@@ -2449,7 +2449,7 @@ namespace NetOffice.WordApi
 		/// <param name="RecentAddressesChoice">optional object RecentAddressesChoice</param>
 		/// <param name="UpdateRecentAddresses">optional object UpdateRecentAddresses</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public string GetAddress(object name=null, object addressProperties=null, object useAutoText=null, object displaySelectDialog=null, object selectDialog=null, object checkNamesDialog=null, object recentAddressesChoice=null, object updateRecentAddresses=null)
+		public string GetAddress(object name, object addressProperties, object useAutoText, object displaySelectDialog, object selectDialog, object checkNamesDialog, object recentAddressesChoice, object updateRecentAddresses)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, addressProperties, useAutoText, displaySelectDialog, selectDialog, checkNamesDialog, recentAddressesChoice, updateRecentAddresses);
 			object returnItem = Invoker.MethodReturn(this, "GetAddress", paramsArray);
@@ -2496,7 +2496,7 @@ namespace NetOffice.WordApi
 		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
 		/// <param name="CustomDictionary10">optional object CustomDictionary10</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool CheckSpelling(string word, object customDictionary=null, object ignoreUppercase=null, object mainDictionary=null, object customDictionary2=null, object customDictionary3=null, object customDictionary4=null, object customDictionary5=null, object customDictionary6=null, object customDictionary7=null, object customDictionary8=null, object customDictionary9=null, object customDictionary10=null)
+		public bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
 			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
@@ -2543,7 +2543,7 @@ namespace NetOffice.WordApi
 		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
 		/// <param name="CustomDictionary10">optional object CustomDictionary10</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary=null, object ignoreUppercase=null, object mainDictionary=null, object suggestionMode=null, object customDictionary2=null, object customDictionary3=null, object customDictionary4=null, object customDictionary5=null, object customDictionary6=null, object customDictionary7=null, object customDictionary8=null, object customDictionary9=null, object customDictionary10=null)
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
 			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
@@ -2655,7 +2655,7 @@ namespace NetOffice.WordApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Tolerance">optional object Tolerance</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void OnTime(object when, string name, object tolerance=null)
+		public void OnTime(object when, string name, object tolerance)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(when, name, tolerance);
 			Invoker.Method(this, "OnTime", paramsArray);
@@ -2693,7 +2693,7 @@ namespace NetOffice.WordApi
 		/// <param name="UserPassword">optional object UserPassword</param>
 		/// <param name="VolumePassword">optional object VolumePassword</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int16 MountVolume(string zone, string server, string volume, object user=null, object userPassword=null, object volumePassword=null)
+		public Int16 MountVolume(string zone, string server, string volume, object user, object userPassword, object volumePassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(zone, server, volume, user, userPassword, volumePassword);
 			object returnItem = Invoker.MethodReturn(this, "MountVolume", paramsArray);
@@ -2928,7 +2928,7 @@ namespace NetOffice.WordApi
 		/// <param name="Points">Single Points</param>
 		/// <param name="fVertical">optional object fVertical</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Single PointsToPixels(Single points, object fVertical=null)
+		public Single PointsToPixels(Single points, object fVertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points, fVertical);
 			object returnItem = Invoker.MethodReturn(this, "PointsToPixels", paramsArray);
@@ -2953,7 +2953,7 @@ namespace NetOffice.WordApi
 		/// <param name="Pixels">Single Pixels</param>
 		/// <param name="fVertical">optional object fVertical</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Single PixelsToPoints(Single pixels, object fVertical=null)
+		public Single PixelsToPoints(Single pixels, object fVertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pixels, fVertical);
 			object returnItem = Invoker.MethodReturn(this, "PixelsToPoints", paramsArray);
@@ -3097,7 +3097,7 @@ namespace NetOffice.WordApi
 		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
 		/// <param name="PrintZoomPaperHeight">optional object PrintZoomPaperHeight</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PrintOut(object background=null, object append=null, object range=null, object outputFileName=null, object from=null, object to=null, object item=null, object copies=null, object pages=null, object pageType=null, object printToFile=null, object collate=null, object fileName=null, object activePrinterMacGX=null, object manualDuplexPrint=null, object printZoomColumn=null, object printZoomRow=null, object printZoomPaperWidth=null, object printZoomPaperHeight=null)
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object fileName, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, fileName, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -3148,7 +3148,7 @@ namespace NetOffice.WordApi
 		/// <param name="varg29">optional object varg29</param>
 		/// <param name="varg30">optional object varg30</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public object Run(string macroName, object varg1=null, object varg2=null, object varg3=null, object varg4=null, object varg5=null, object varg6=null, object varg7=null, object varg8=null, object varg9=null, object varg10=null, object varg11=null, object varg12=null, object varg13=null, object varg14=null, object varg15=null, object varg16=null, object varg17=null, object varg18=null, object varg19=null, object varg20=null, object varg21=null, object varg22=null, object varg23=null, object varg24=null, object varg25=null, object varg26=null, object varg27=null, object varg28=null, object varg29=null, object varg30=null)
+		public object Run(string macroName, object varg1, object varg2, object varg3, object varg4, object varg5, object varg6, object varg7, object varg8, object varg9, object varg10, object varg11, object varg12, object varg13, object varg14, object varg15, object varg16, object varg17, object varg18, object varg19, object varg20, object varg21, object varg22, object varg23, object varg24, object varg25, object varg26, object varg27, object varg28, object varg29, object varg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macroName, varg1, varg2, varg3, varg4, varg5, varg6, varg7, varg8, varg9, varg10, varg11, varg12, varg13, varg14, varg15, varg16, varg17, varg18, varg19, varg20, varg21, varg22, varg23, varg24, varg25, varg26, varg27, varg28, varg29, varg30);
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
@@ -3208,7 +3208,7 @@ namespace NetOffice.WordApi
 		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
 		/// <param name="PrintZoomPaperHeight">optional object PrintZoomPaperHeight</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void PrintOut2000(object background=null, object append=null, object range=null, object outputFileName=null, object from=null, object to=null, object item=null, object copies=null, object pages=null, object pageType=null, object printToFile=null, object collate=null, object fileName=null, object activePrinterMacGX=null, object manualDuplexPrint=null, object printZoomColumn=null, object printZoomRow=null, object printZoomPaperWidth=null, object printZoomPaperHeight=null)
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object fileName, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, fileName, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
 			Invoker.Method(this, "PrintOut2000", paramsArray);

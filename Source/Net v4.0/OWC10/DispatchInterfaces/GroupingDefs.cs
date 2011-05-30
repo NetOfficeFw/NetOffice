@@ -92,7 +92,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="PageFieldName">string PageFieldName</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.GroupingDef Add(string groupingDefName, string groupingFieldName, string pageFieldName, object index=null)
+		public NetOffice.OWC10Api.GroupingDef Add(string groupingDefName, string groupingFieldName, string pageFieldName, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -124,7 +124,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.GroupingDef AddTotal(string groupingDefName, string groupingFieldName, string pageFieldName, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index=null)
+		public NetOffice.OWC10Api.GroupingDef AddTotal(string groupingDefName, string groupingFieldName, string pageFieldName, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName, totalType, index);
 			object returnItem = Invoker.MethodReturn(this, "AddTotal", paramsArray);

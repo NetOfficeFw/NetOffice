@@ -150,7 +150,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Position">optional object Position</param>
 		/// <param name="DisplayName">optional object DisplayName</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public NetOffice.OutlookApi.Attachment Add(object source, object type=null, object position=null, object displayName=null)
+		public NetOffice.OutlookApi.Attachment Add(object source, object type, object position, object displayName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, type, position, displayName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

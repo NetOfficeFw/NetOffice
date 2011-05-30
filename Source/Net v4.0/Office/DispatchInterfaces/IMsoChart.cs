@@ -1121,7 +1121,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Password">optional object Password</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void UnProtect(object password=null)
+		public void UnProtect(object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password);
 			Invoker.Method(this, "UnProtect", paramsArray);
@@ -1146,7 +1146,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Scenarios">optional object Scenarios</param>
 		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void Protect(object password=null, object drawingObjects=null, object contents=null, object scenarios=null, object userInterfaceOnly=null)
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly);
 			Invoker.Method(this, "Protect", paramsArray);
@@ -1167,7 +1167,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 12,14)]
-		public COMObject SeriesCollection(object index=null)
+		public COMObject SeriesCollection(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "SeriesCollection", paramsArray);
@@ -1195,7 +1195,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="AutoText">optional object AutoText</param>
 		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey=null, object autoText=null, object hasLeaderLines=null)
+		public void _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -1226,7 +1226,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="ShowBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="Separator">optional object Separator</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey=null, object autoText=null, object hasLeaderLines=null, object showSeriesName=null, object showCategoryName=null, object showValue=null, object showPercentage=null, object showBubbleSize=null, object separator=null)
+		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1249,7 +1249,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="ChartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
 		/// <param name="TypeName">optional object TypeName</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void ApplyCustomType(NetOffice.OfficeApi.Enums.XlChartType chartType, object typeName=null)
+		public void ApplyCustomType(NetOffice.OfficeApi.Enums.XlChartType chartType, object typeName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chartType, typeName);
 			Invoker.Method(this, "ApplyCustomType", paramsArray);
@@ -1287,7 +1287,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Source">string Source</param>
 		/// <param name="PlotBy">optional object PlotBy</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void SetSourceData(string source, object plotBy=null)
+		public void SetSourceData(string source, object plotBy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, plotBy);
 			Invoker.Method(this, "SetSourceData", paramsArray);
@@ -1324,7 +1324,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="rGallery">Int32 rGallery</param>
 		/// <param name="varFormat">optional object varFormat</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void AutoFormat(Int32 rGallery, object varFormat=null)
+		public void AutoFormat(Int32 rGallery, object varFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGallery, varFormat);
 			Invoker.Method(this, "AutoFormat", paramsArray);
@@ -1367,7 +1367,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="varValueTitle">optional object varValueTitle</param>
 		/// <param name="varExtraTitle">optional object varExtraTitle</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void ChartWizard(object varSource=null, object varGallery=null, object varFormat=null, object varPlotBy=null, object varCategoryLabels=null, object varSeriesLabels=null, object varHasLegend=null, object varTitle=null, object varCategoryTitle=null, object varValueTitle=null, object varExtraTitle=null)
+		public void ChartWizard(object varSource, object varGallery, object varFormat, object varPlotBy, object varCategoryLabels, object varSeriesLabels, object varHasLegend, object varTitle, object varCategoryTitle, object varValueTitle, object varExtraTitle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels, varHasLegend, varTitle, varCategoryTitle, varValueTitle, varExtraTitle);
 			Invoker.Method(this, "ChartWizard", paramsArray);
@@ -1446,7 +1446,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="varType">optional object varType</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void Paste(object varType=null)
+		public void Paste(object varType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varType);
 			Invoker.Method(this, "Paste", paramsArray);
@@ -1469,7 +1469,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="varFilterName">optional object varFilterName</param>
 		/// <param name="varInteractive">optional object varInteractive</param>
 		[SupportByLibrary("Office", 12,14)]
-		public bool Export(string bstr, object varFilterName=null, object varInteractive=null)
+		public bool Export(string bstr, object varFilterName, object varInteractive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstr, varFilterName, varInteractive);
 			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
@@ -1547,7 +1547,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Layout">Int32 Layout</param>
 		/// <param name="varChartType">optional object varChartType</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void ApplyLayout(Int32 layout, object varChartType=null)
+		public void ApplyLayout(Int32 layout, object varChartType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, varChartType);
 			Invoker.Method(this, "ApplyLayout", paramsArray);
@@ -1590,7 +1590,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 14)]
-		public COMObject AreaGroups(object index=null)
+		public COMObject AreaGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "AreaGroups", paramsArray);
@@ -1615,7 +1615,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 14)]
-		public COMObject BarGroups(object index=null)
+		public COMObject BarGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "BarGroups", paramsArray);
@@ -1640,7 +1640,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 14)]
-		public COMObject ColumnGroups(object index=null)
+		public COMObject ColumnGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "ColumnGroups", paramsArray);
@@ -1665,7 +1665,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 14)]
-		public COMObject LineGroups(object index=null)
+		public COMObject LineGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "LineGroups", paramsArray);
@@ -1690,7 +1690,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 14)]
-		public COMObject PieGroups(object index=null)
+		public COMObject PieGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "PieGroups", paramsArray);
@@ -1715,7 +1715,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 14)]
-		public COMObject DoughnutGroups(object index=null)
+		public COMObject DoughnutGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "DoughnutGroups", paramsArray);
@@ -1740,7 +1740,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 14)]
-		public COMObject RadarGroups(object index=null)
+		public COMObject RadarGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "RadarGroups", paramsArray);
@@ -1765,7 +1765,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 14)]
-		public COMObject XYGroups(object index=null)
+		public COMObject XYGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "XYGroups", paramsArray);
@@ -1830,7 +1830,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Office", 14)]
-		public object Select(object replace=null)
+		public object Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);

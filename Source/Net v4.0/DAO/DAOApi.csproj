@@ -8,7 +8,7 @@
     <ProjectGuid>{8E811738-2D9F-451D-B806-262ADB1A4671}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.DAOApi</RootNamespace>
+    <RootNamespace>NetOffice.DAOApi</RootNamespace>
     <AssemblyName>DAOApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

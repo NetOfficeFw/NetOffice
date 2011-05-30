@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Range">NetOffice.ExcelApi.Range Range</param>
 		/// <param name="Password">optional object Password</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range, object password=null)
+		public NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, range, password);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

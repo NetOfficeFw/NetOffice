@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Name">string Name</param>
 		/// <param name="iDataType">optional object iDataType</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Parameter Add(string name, object iDataType=null)
+		public NetOffice.ExcelApi.Parameter Add(string name, object iDataType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, iDataType);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

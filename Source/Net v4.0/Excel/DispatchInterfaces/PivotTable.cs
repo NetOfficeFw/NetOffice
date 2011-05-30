@@ -2007,7 +2007,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PageFields">optional object PageFields</param>
 		/// <param name="AddToTable">optional object AddToTable</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object AddFields(object rowFields=null, object columnFields=null, object pageFields=null, object addToTable=null)
+		public object AddFields(object rowFields, object columnFields, object pageFields, object addToTable)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowFields, columnFields, pageFields, addToTable);
 			object returnItem = Invoker.MethodReturn(this, "AddFields", paramsArray);
@@ -2048,7 +2048,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="PageField">optional object PageField</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object ShowPages(object pageField=null)
+		public object ShowPages(object pageField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pageField);
 			object returnItem = Invoker.MethodReturn(this, "ShowPages", paramsArray);
@@ -2089,7 +2089,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public COMObject PivotFields(object index=null)
+		public COMObject PivotFields(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "PivotFields", paramsArray);
@@ -2186,7 +2186,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ReadData">optional object ReadData</param>
 		/// <param name="Connection">optional object Connection</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void PivotTableWizard(object sourceType=null, object sourceData=null, object tableDestination=null, object tableName=null, object rowGrand=null, object columnGrand=null, object saveData=null, object hasAutoFormat=null, object autoPage=null, object reserved=null, object backgroundQuery=null, object optimizeCache=null, object pageFieldOrder=null, object pageFieldWrapCount=null, object readData=null, object connection=null)
+		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand, object saveData, object hasAutoFormat, object autoPage, object reserved, object backgroundQuery, object optimizeCache, object pageFieldOrder, object pageFieldWrapCount, object readData, object connection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache, pageFieldOrder, pageFieldWrapCount, readData, connection);
 			Invoker.Method(this, "PivotTableWizard", paramsArray);
@@ -2221,7 +2221,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Mode">NetOffice.ExcelApi.Enums.XlPTSelectionMode Mode</param>
 		/// <param name="UseStandardName">optional object UseStandardName</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public void PivotSelect(string name, NetOffice.ExcelApi.Enums.XlPTSelectionMode mode, object useStandardName=null)
+		public void PivotSelect(string name, NetOffice.ExcelApi.Enums.XlPTSelectionMode mode, object useStandardName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, mode, useStandardName);
 			Invoker.Method(this, "PivotSelect", paramsArray);
@@ -2293,7 +2293,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Field14">optional object Field14</param>
 		/// <param name="Item14">optional object Item14</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public NetOffice.ExcelApi.Range GetPivotData(object dataField=null, object field1=null, object item1=null, object field2=null, object item2=null, object field3=null, object item3=null, object field4=null, object item4=null, object field5=null, object item5=null, object field6=null, object item6=null, object field7=null, object item7=null, object field8=null, object item8=null, object field9=null, object item9=null, object field10=null, object item10=null, object field11=null, object item11=null, object field12=null, object item12=null, object field13=null, object item13=null, object field14=null, object item14=null)
+		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9, object field10, object item10, object field11, object item11, object field12, object item12, object field13, object item13, object field14, object item14)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12, item12, field13, item13, field14, item14);
 			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
@@ -2320,7 +2320,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Caption">optional object Caption</param>
 		/// <param name="Function">optional object Function</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public NetOffice.ExcelApi.PivotField AddDataField(object field, object caption=null, object function=null)
+		public NetOffice.ExcelApi.PivotField AddDataField(object field, object caption, object function)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, caption, function);
 			object returnItem = Invoker.MethodReturn(this, "AddDataField", paramsArray);
@@ -2375,7 +2375,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object Dummy15(object arg1, object arg2=null, object arg3=null, object arg4=null, object arg5=null, object arg6=null, object arg7=null, object arg8=null, object arg9=null, object arg10=null, object arg11=null, object arg12=null, object arg13=null, object arg14=null, object arg15=null, object arg16=null, object arg17=null, object arg18=null, object arg19=null, object arg20=null, object arg21=null, object arg22=null, object arg23=null, object arg24=null, object arg25=null, object arg26=null, object arg27=null, object arg28=null, object arg29=null, object arg30=null)
+		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
@@ -2421,7 +2421,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Members">optional object Members</param>
 		/// <param name="Properties">optional object Properties</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public string CreateCubeFile(string file, object measures=null, object levels=null, object members=null, object properties=null)
+		public string CreateCubeFile(string file, object measures, object levels, object members, object properties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(file, measures, levels, members, properties);
 			object returnItem = Invoker.MethodReturn(this, "CreateCubeFile", paramsArray);

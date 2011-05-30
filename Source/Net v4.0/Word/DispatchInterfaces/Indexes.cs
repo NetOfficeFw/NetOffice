@@ -157,7 +157,7 @@ namespace NetOffice.WordApi
 		/// <param name="NumberOfColumns">optional object NumberOfColumns</param>
 		/// <param name="AccentedLetters">optional object AccentedLetters</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator=null, object rightAlignPageNumbers=null, object type=null, object numberOfColumns=null, object accentedLetters=null)
+		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
 		/// <param name="Italic">optional object Italic</param>
 		/// <param name="Reading">optional object Reading</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry=null, object entryAutoText=null, object crossReference=null, object crossReferenceAutoText=null, object bookmarkName=null, object bold=null, object italic=null, object reading=null)
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold, object italic, object reading)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic, reading);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
@@ -224,7 +224,7 @@ namespace NetOffice.WordApi
 		/// <param name="Bold">optional object Bold</param>
 		/// <param name="Italic">optional object Italic</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry=null, object entryAutoText=null, object crossReference=null, object crossReferenceAutoText=null, object bookmarkName=null, object bold=null, object italic=null)
+		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold, object italic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic);
 			Invoker.Method(this, "MarkAllEntries", paramsArray);
@@ -264,7 +264,7 @@ namespace NetOffice.WordApi
 		/// <param name="SortBy">optional object SortBy</param>
 		/// <param name="IndexLanguage">optional object IndexLanguage</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator=null, object rightAlignPageNumbers=null, object type=null, object numberOfColumns=null, object accentedLetters=null, object sortBy=null, object indexLanguage=null)
+		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters, object sortBy, object indexLanguage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters, sortBy, indexLanguage);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

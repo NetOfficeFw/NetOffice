@@ -808,7 +808,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Select(object replace=null)
+		public object Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
@@ -880,7 +880,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Text">object Text</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object AddItem(object text, object index=null)
+		public object AddItem(object text, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, index);
 			object returnItem = Invoker.MethodReturn(this, "AddItem", paramsArray);
@@ -973,7 +973,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Index">Int32 Index</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object RemoveItem(Int32 index, object count=null)
+		public object RemoveItem(Int32 index, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, count);
 			object returnItem = Invoker.MethodReturn(this, "RemoveItem", paramsArray);
@@ -1019,7 +1019,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Height">Double Height</param>
 		/// <param name="Editable">optional object Editable</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.DropDown Add(Double left, Double top, Double width, Double height, object editable=null)
+		public NetOffice.ExcelApi.DropDown Add(Double left, Double top, Double width, Double height, object editable)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, editable);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

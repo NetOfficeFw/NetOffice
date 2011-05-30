@@ -776,7 +776,7 @@ namespace NetOffice.WordApi
 		/// <param name="SaveChanges">optional object SaveChanges</param>
 		/// <param name="RouteDocument">optional object RouteDocument</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Close(object saveChanges=null, object routeDocument=null)
+		public void Close(object saveChanges, object routeDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, routeDocument);
 			Invoker.Method(this, "Close", paramsArray);
@@ -800,7 +800,7 @@ namespace NetOffice.WordApi
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void LargeScroll(object down=null, object up=null, object toRight=null, object toLeft=null)
+		public void LargeScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			Invoker.Method(this, "LargeScroll", paramsArray);
@@ -824,7 +824,7 @@ namespace NetOffice.WordApi
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void SmallScroll(object down=null, object up=null, object toRight=null, object toLeft=null)
+		public void SmallScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			Invoker.Method(this, "SmallScroll", paramsArray);
@@ -870,7 +870,7 @@ namespace NetOffice.WordApi
 		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
 		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PrintOutOld(object background=null, object append=null, object range=null, object outputFileName=null, object from=null, object to=null, object item=null, object copies=null, object pages=null, object pageType=null, object printToFile=null, object collate=null, object activePrinterMacGX=null, object manualDuplexPrint=null)
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint);
 			Invoker.Method(this, "PrintOutOld", paramsArray);
@@ -892,7 +892,7 @@ namespace NetOffice.WordApi
 		/// <param name="Down">optional object Down</param>
 		/// <param name="Up">optional object Up</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PageScroll(object down=null, object up=null)
+		public void PageScroll(object down, object up)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
 			Invoker.Method(this, "PageScroll", paramsArray);
@@ -938,7 +938,7 @@ namespace NetOffice.WordApi
 		/// <param name="obj">object obj</param>
 		/// <param name="Start">optional object Start</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ScrollIntoView(object obj, object start=null)
+		public void ScrollIntoView(object obj, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(obj, start);
 			Invoker.Method(this, "ScrollIntoView", paramsArray);
@@ -992,7 +992,7 @@ namespace NetOffice.WordApi
 		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
 		/// <param name="PrintZoomPaperHeight">optional object PrintZoomPaperHeight</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PrintOut(object background=null, object append=null, object range=null, object outputFileName=null, object from=null, object to=null, object item=null, object copies=null, object pages=null, object pageType=null, object printToFile=null, object collate=null, object activePrinterMacGX=null, object manualDuplexPrint=null, object printZoomColumn=null, object printZoomRow=null, object printZoomPaperWidth=null, object printZoomPaperHeight=null)
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -1030,7 +1030,7 @@ namespace NetOffice.WordApi
 		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
 		/// <param name="PrintZoomPaperHeight">optional object PrintZoomPaperHeight</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void PrintOut2000(object background=null, object append=null, object range=null, object outputFileName=null, object from=null, object to=null, object item=null, object copies=null, object pages=null, object pageType=null, object printToFile=null, object collate=null, object activePrinterMacGX=null, object manualDuplexPrint=null, object printZoomColumn=null, object printZoomRow=null, object printZoomPaperWidth=null, object printZoomPaperHeight=null)
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
 			Invoker.Method(this, "PrintOut2000", paramsArray);

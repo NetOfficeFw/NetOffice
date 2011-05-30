@@ -8,7 +8,7 @@
     <ProjectGuid>{9B4FEC3A-AF4F-4841-96D0-A6896D196F94}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.OfficeApi</RootNamespace>
+    <RootNamespace>NetOffice.OfficeApi</RootNamespace>
     <AssemblyName>OfficeApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

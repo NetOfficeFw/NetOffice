@@ -230,7 +230,7 @@ namespace NetOffice.WordApi
 		/// <param name="Spacing">optional object Spacing</param>
 		/// <param name="EvenlySpaced">optional object EvenlySpaced</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.TextColumn Add(object width=null, object spacing=null, object evenlySpaced=null)
+		public NetOffice.WordApi.TextColumn Add(object width, object spacing, object evenlySpaced)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(width, spacing, evenlySpaced);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="AllocationMethod">optional object AllocationMethod</param>
 		/// <param name="AllocationWeightExpression">optional object AllocationWeightExpression</param>
 		[SupportByLibrary("Excel", 14)]
-		public NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue=null, object allocationMethod=null, object allocationWeightExpression=null)
+		public NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue, object allocationMethod, object allocationWeightExpression)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tuple, value, allocationValue, allocationMethod, allocationWeightExpression);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="HelpFile">optional object HelpFile</param>
 		/// <param name="HelpContextID">optional object HelpContextID</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button=null, object before=null, object onAction=null, object pushed=null, object enabled=null, object statusBar=null, object helpFile=null, object helpContextID=null)
+		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile, object helpContextID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(button, before, onAction, pushed, enabled, statusBar, helpFile, helpContextID);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

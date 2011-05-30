@@ -90,7 +90,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="ParameterName">string ParameterName</param>
 		/// <param name="Value">optional object Value</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.ParameterValue Add(string parameterName, object value=null)
+		public NetOffice.OWC10Api.ParameterValue Add(string parameterName, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parameterName, value);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

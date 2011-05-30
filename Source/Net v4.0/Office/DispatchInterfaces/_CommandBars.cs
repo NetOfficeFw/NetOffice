@@ -315,7 +315,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="MenuBar">optional object MenuBar</param>
 		/// <param name="Temporary">optional object Temporary</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.CommandBar Add(object name=null, object position=null, object menuBar=null, object temporary=null)
+		public NetOffice.OfficeApi.CommandBar Add(object name, object position, object menuBar, object temporary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, position, menuBar, temporary);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -343,7 +343,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Tag">optional object Tag</param>
 		/// <param name="Visible">optional object Visible</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.CommandBarControl FindControl(object type=null, object id=null, object tag=null, object visible=null)
+		public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id, tag, visible);
 			object returnItem = Invoker.MethodReturn(this, "FindControl", paramsArray);
@@ -381,7 +381,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Tag">optional object Tag</param>
 		/// <param name="Visible">optional object Visible</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.CommandBarControls FindControls(object type=null, object id=null, object tag=null, object visible=null)
+		public NetOffice.OfficeApi.CommandBarControls FindControls(object type, object id, object tag, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id, tag, visible);
 			object returnItem = Invoker.MethodReturn(this, "FindControls", paramsArray);
@@ -410,7 +410,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Temporary">optional object Temporary</param>
 		/// <param name="TbtrProtection">optional object TbtrProtection</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName=null, object position=null, object menuBar=null, object temporary=null, object tbtrProtection=null)
+		public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName, object position, object menuBar, object temporary, object tbtrProtection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tbidOrName, position, menuBar, temporary, tbtrProtection);
 			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);

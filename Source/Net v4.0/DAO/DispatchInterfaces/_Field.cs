@@ -499,7 +499,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Value">optional object Value</param>
 		/// <param name="DDL">optional object DDL</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Property CreateProperty(object name=null, object type=null, object value=null, object dDL=null)
+		public NetOffice.DAOApi.Property CreateProperty(object name, object type, object value, object dDL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, value, dDL);
 			object returnItem = Invoker.MethodReturn(this, "CreateProperty", paramsArray);

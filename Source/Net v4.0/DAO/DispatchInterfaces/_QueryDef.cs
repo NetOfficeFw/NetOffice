@@ -375,7 +375,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset _30_OpenRecordset(object type=null, object options=null)
+		public NetOffice.DAOApi.Recordset _30_OpenRecordset(object type, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options);
 			object returnItem = Invoker.MethodReturn(this, "_30_OpenRecordset", paramsArray);
@@ -401,7 +401,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset _30__OpenRecordset(object type=null, object options=null)
+		public NetOffice.DAOApi.Recordset _30__OpenRecordset(object type, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options);
 			object returnItem = Invoker.MethodReturn(this, "_30__OpenRecordset", paramsArray);
@@ -438,7 +438,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void Execute(object options=null)
+		public void Execute(object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);
 			Invoker.Method(this, "Execute", paramsArray);
@@ -472,7 +472,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Options">optional object Options</param>
 		/// <param name="Inconsistent">optional object Inconsistent</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset CreateDynaset(object options=null, object inconsistent=null)
+		public NetOffice.DAOApi.Recordset CreateDynaset(object options, object inconsistent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options, inconsistent);
 			object returnItem = Invoker.MethodReturn(this, "CreateDynaset", paramsArray);
@@ -497,7 +497,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset CreateSnapshot(object options=null)
+		public NetOffice.DAOApi.Recordset CreateSnapshot(object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);
 			object returnItem = Invoker.MethodReturn(this, "CreateSnapshot", paramsArray);
@@ -537,7 +537,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Value">optional object Value</param>
 		/// <param name="DDL">optional object DDL</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Property CreateProperty(object name=null, object type=null, object value=null, object dDL=null)
+		public NetOffice.DAOApi.Property CreateProperty(object name, object type, object value, object dDL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, value, dDL);
 			object returnItem = Invoker.MethodReturn(this, "CreateProperty", paramsArray);
@@ -564,7 +564,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Options">optional object Options</param>
 		/// <param name="LockEdit">optional object LockEdit</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset OpenRecordset(object type=null, object options=null, object lockEdit=null)
+		public NetOffice.DAOApi.Recordset OpenRecordset(object type, object options, object lockEdit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options, lockEdit);
 			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
@@ -591,7 +591,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Options">optional object Options</param>
 		/// <param name="LockEdit">optional object LockEdit</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset _OpenRecordset(object type=null, object options=null, object lockEdit=null)
+		public NetOffice.DAOApi.Recordset _OpenRecordset(object type, object options, object lockEdit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options, lockEdit);
 			object returnItem = Invoker.MethodReturn(this, "_OpenRecordset", paramsArray);

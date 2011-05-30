@@ -393,7 +393,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="TemplatePath">string TemplatePath</param>
 		/// <param name="InFolder">optional object InFolder</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public COMObject CreateItemFromTemplate(string templatePath, object inFolder=null)
+		public COMObject CreateItemFromTemplate(string templatePath, object inFolder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templatePath, inFolder);
 			object returnItem = Invoker.MethodReturn(this, "CreateItemFromTemplate", paramsArray);
@@ -484,7 +484,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="SearchSubFolders">optional object SearchSubFolders</param>
 		/// <param name="Tag">optional object Tag</param>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public NetOffice.OutlookApi.Search AdvancedSearch(string scope, object filter=null, object searchSubFolders=null, object tag=null)
+		public NetOffice.OutlookApi.Search AdvancedSearch(string scope, object filter, object searchSubFolders, object tag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scope, filter, searchSubFolders, tag);
 			object returnItem = Invoker.MethodReturn(this, "AdvancedSearch", paramsArray);

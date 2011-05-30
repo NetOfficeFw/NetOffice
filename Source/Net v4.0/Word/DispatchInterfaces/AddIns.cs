@@ -134,7 +134,7 @@ namespace NetOffice.WordApi
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Install">optional object Install</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.AddIn Add(string fileName, object install=null)
+		public NetOffice.WordApi.AddIn Add(string fileName, object install)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, install);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

@@ -119,7 +119,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Anchor">optional object Anchor</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Shape ConvertToShape(object anchor=null)
+		public NetOffice.WordApi.Shape ConvertToShape(object anchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToShape", paramsArray);

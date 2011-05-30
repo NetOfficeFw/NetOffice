@@ -874,7 +874,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="flagsSelect">Int32 flagsSelect</param>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public void accSelect(Int32 flagsSelect, object varChild=null)
+		public void accSelect(Int32 flagsSelect, object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(flagsSelect, varChild);
 			Invoker.Method(this, "accSelect", paramsArray);
@@ -900,7 +900,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="pcyHeight">Int32 pcyHeight</param>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public void accLocation(Int32 pxLeft, Int32 pyTop, Int32 pcxWidth, Int32 pcyHeight, object varChild=null)
+		public void accLocation(Int32 pxLeft, Int32 pyTop, Int32 pcxWidth, Int32 pcyHeight, object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pxLeft, pyTop, pcxWidth, pcyHeight, varChild);
 			Invoker.Method(this, "accLocation", paramsArray);
@@ -926,7 +926,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="navDir">Int32 navDir</param>
 		/// <param name="varStart">optional object varStart</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public object accNavigate(Int32 navDir, object varStart=null)
+		public object accNavigate(Int32 navDir, object varStart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(navDir, varStart);
 			object returnItem = Invoker.MethodReturn(this, "accNavigate", paramsArray);
@@ -990,7 +990,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public void accDoDefaultAction(object varChild=null)
+		public void accDoDefaultAction(object varChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
 			Invoker.Method(this, "accDoDefaultAction", paramsArray);
@@ -1012,7 +1012,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Bar">optional object Bar</param>
 		/// <param name="Before">optional object Before</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.CommandBarControl Copy(object bar=null, object before=null)
+		public NetOffice.OfficeApi.CommandBarControl Copy(object bar, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bar, before);
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
@@ -1037,7 +1037,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Temporary">optional object Temporary</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public void Delete(object temporary=null)
+		public void Delete(object temporary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(temporary);
 			Invoker.Method(this, "Delete", paramsArray);
@@ -1069,7 +1069,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Bar">optional object Bar</param>
 		/// <param name="Before">optional object Before</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.CommandBarControl Move(object bar=null, object before=null)
+		public NetOffice.OfficeApi.CommandBarControl Move(object bar, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bar, before);
 			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);

@@ -1050,7 +1050,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="RelativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
 		/// <param name="Scale">optional object Scale</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale=null)
+		public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(factor, relativeToOriginalSize, scale);
 			Invoker.Method(this, "ScaleHeight", paramsArray);
@@ -1075,7 +1075,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="RelativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
 		/// <param name="Scale">optional object Scale</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale=null)
+		public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(factor, relativeToOriginalSize, scale);
 			Invoker.Method(this, "ScaleWidth", paramsArray);
@@ -1098,7 +1098,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Select(object replace=null)
+		public void Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			Invoker.Method(this, "Select", paramsArray);

@@ -321,7 +321,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="varDelSuggSignerLine2">optional object varDelSuggSignerLine2</param>
 		/// <param name="varDelSuggSignerEmail">optional object varDelSuggSignerEmail</param>
 		[SupportByLibrary("Office", 12,14)]
-		public void Sign(object varSigImg=null, object varDelSuggSigner=null, object varDelSuggSignerLine2=null, object varDelSuggSignerEmail=null)
+		public void Sign(object varSigImg, object varDelSuggSigner, object varDelSuggSignerLine2, object varDelSuggSignerEmail)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varSigImg, varDelSuggSigner, varDelSuggSignerLine2, varDelSuggSignerEmail);
 			Invoker.Method(this, "Sign", paramsArray);

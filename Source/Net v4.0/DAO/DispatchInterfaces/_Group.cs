@@ -112,7 +112,7 @@ namespace NetOffice.DAOApi
 		/// <param name="PID">optional object PID</param>
 		/// <param name="Password">optional object Password</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.User CreateUser(object name=null, object pID=null, object password=null)
+		public NetOffice.DAOApi.User CreateUser(object name, object pID, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID, password);
 			object returnItem = Invoker.MethodReturn(this, "CreateUser", paramsArray);

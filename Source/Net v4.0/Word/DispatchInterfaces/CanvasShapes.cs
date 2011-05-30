@@ -219,7 +219,7 @@ namespace NetOffice.WordApi
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile=null, object saveWithDocument=null, object left=null, object top=null, object width=null, object height=null)
+		public NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);

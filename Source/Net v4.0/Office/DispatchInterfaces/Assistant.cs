@@ -520,7 +520,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Bottom">optional object Bottom</param>
 		/// <param name="Right">optional object Right</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation=null, object customTeaser=null, object top=null, object left=null, object bottom=null, object right=null)
+		public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left, object bottom, object right)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(on, callback, privateX, animation, customTeaser, top, left, bottom, right);
 			object returnItem = Invoker.MethodReturn(this, "StartWizard", paramsArray);
@@ -548,7 +548,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="varfSuccess">bool varfSuccess</param>
 		/// <param name="Animation">optional object Animation</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public void EndWizard(Int32 wizardID, bool varfSuccess, object animation=null)
+		public void EndWizard(Int32 wizardID, bool varfSuccess, object animation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wizardID, varfSuccess, animation);
 			Invoker.Method(this, "EndWizard", paramsArray);
@@ -573,7 +573,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="act">NetOffice.OfficeApi.Enums.MsoWizardActType act</param>
 		/// <param name="Animation">optional object Animation</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act, object animation=null)
+		public void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act, object animation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wizardID, act, animation);
 			Invoker.Method(this, "ActivateWizard", paramsArray);

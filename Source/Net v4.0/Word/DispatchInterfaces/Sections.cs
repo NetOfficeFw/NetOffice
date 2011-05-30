@@ -184,7 +184,7 @@ namespace NetOffice.WordApi
 		/// <param name="Range">optional object Range</param>
 		/// <param name="Start">optional object Start</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Section Add(object range=null, object start=null)
+		public NetOffice.WordApi.Section Add(object range, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, start);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

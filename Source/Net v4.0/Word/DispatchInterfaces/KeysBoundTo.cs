@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
 		/// <param name="KeyCode">Int32 KeyCode</param>
 		/// <param name="KeyCode2">optional object KeyCode2</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.KeyBinding Key(Int32 keyCode, object keyCode2=null)
+		public NetOffice.WordApi.KeyBinding Key(Int32 keyCode, object keyCode2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
 			object returnItem = Invoker.MethodReturn(this, "Key", paramsArray);

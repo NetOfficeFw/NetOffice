@@ -296,7 +296,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="BeforeCell">optional object BeforeCell</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Cell Add(object beforeCell=null)
+		public NetOffice.WordApi.Cell Add(object beforeCell)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeCell);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -321,7 +321,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="ShiftCells">optional object ShiftCells</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Delete(object shiftCells=null)
+		public void Delete(object shiftCells)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shiftCells);
 			Invoker.Method(this, "Delete", paramsArray);
@@ -378,7 +378,7 @@ namespace NetOffice.WordApi
 		/// <param name="NumColumns">optional object NumColumns</param>
 		/// <param name="MergeBeforeSplit">optional object MergeBeforeSplit</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Split(object numRows=null, object numColumns=null, object mergeBeforeSplit=null)
+		public void Split(object numRows, object numColumns, object mergeBeforeSplit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows, numColumns, mergeBeforeSplit);
 			Invoker.Method(this, "Split", paramsArray);

@@ -8,7 +8,7 @@
     <ProjectGuid>{7FA05519-07E6-4C6A-B53F-AC61A3FA75E6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.MSComctlLibApi</RootNamespace>
+    <RootNamespace>NetOffice.MSComctlLibApi</RootNamespace>
     <AssemblyName>MSComctlLibApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

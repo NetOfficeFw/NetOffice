@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Description">optional object Description</param>
 		/// <param name="MemberPropertyField">optional object MemberPropertyField</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField=null, object value1=null, object value2=null, object order=null, object name=null, object description=null, object memberPropertyField=null)
+		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, dataField, value1, value2, order, name, description, memberPropertyField);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

@@ -1184,7 +1184,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="RelativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
 		/// <param name="Scale">optional object Scale</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale=null)
+		public Int32 ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(factor, relativeToOriginalSize, scale);
 			object returnItem = Invoker.MethodReturn(this, "ScaleHeight", paramsArray);
@@ -1211,7 +1211,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="RelativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
 		/// <param name="Scale">optional object Scale</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale=null)
+		public Int32 ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(factor, relativeToOriginalSize, scale);
 			object returnItem = Invoker.MethodReturn(this, "ScaleWidth", paramsArray);
@@ -1236,7 +1236,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 Select(object replace=null)
+		public Int32 Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
@@ -1317,7 +1317,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Appearance">optional object Appearance</param>
 		/// <param name="Format">optional object Format</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 CopyPicture(object appearance=null, object format=null)
+		public Int32 CopyPicture(object appearance, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format);
 			object returnItem = Invoker.MethodReturn(this, "CopyPicture", paramsArray);

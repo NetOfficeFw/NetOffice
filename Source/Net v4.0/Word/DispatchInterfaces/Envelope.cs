@@ -596,7 +596,7 @@ namespace NetOffice.WordApi
 		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
 		[SupportByLibrary("Word", 9)]
-		public void Insert(object extractAddress=null, object address=null, object autoText=null, object omitReturnAddress=null, object returnAddress=null, object returnAutoText=null, object printBarCode=null, object printFIMA=null, object size=null, object height=null, object width=null, object feedSource=null, object addressFromLeft=null, object addressFromTop=null, object returnAddressFromLeft=null, object returnAddressFromTop=null, object defaultFaceUp=null, object defaultOrientation=null)
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
 			Invoker.Method(this, "Insert", paramsArray);
@@ -634,7 +634,7 @@ namespace NetOffice.WordApi
 		/// <param name="SenderPostalfromLeft">optional object SenderPostalfromLeft</param>
 		/// <param name="SenderPostalfromTop">optional object SenderPostalfromTop</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void Insert(object extractAddress=null, object address=null, object autoText=null, object omitReturnAddress=null, object returnAddress=null, object returnAutoText=null, object printBarCode=null, object printFIMA=null, object size=null, object height=null, object width=null, object feedSource=null, object addressFromLeft=null, object addressFromTop=null, object returnAddressFromLeft=null, object returnAddressFromTop=null, object defaultFaceUp=null, object defaultOrientation=null, object printEPostage=null, object vertical=null, object recipientNamefromLeft=null, object recipientNamefromTop=null, object recipientPostalfromLeft=null, object recipientPostalfromTop=null, object senderNamefromLeft=null, object senderNamefromTop=null, object senderPostalfromLeft=null, object senderPostalfromTop=null)
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft, object senderPostalfromTop)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft, senderNamefromTop, senderPostalfromLeft, senderPostalfromTop);
 			Invoker.Method(this, "Insert", paramsArray);
@@ -672,7 +672,7 @@ namespace NetOffice.WordApi
 		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
 		[SupportByLibrary("Word", 9)]
-		public void PrintOut(object extractAddress=null, object address=null, object autoText=null, object omitReturnAddress=null, object returnAddress=null, object returnAutoText=null, object printBarCode=null, object printFIMA=null, object size=null, object height=null, object width=null, object feedSource=null, object addressFromLeft=null, object addressFromTop=null, object returnAddressFromLeft=null, object returnAddressFromTop=null, object defaultFaceUp=null, object defaultOrientation=null)
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -710,7 +710,7 @@ namespace NetOffice.WordApi
 		/// <param name="SenderPostalfromLeft">optional object SenderPostalfromLeft</param>
 		/// <param name="SenderPostalfromTop">optional object SenderPostalfromTop</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void PrintOut(object extractAddress=null, object address=null, object autoText=null, object omitReturnAddress=null, object returnAddress=null, object returnAutoText=null, object printBarCode=null, object printFIMA=null, object size=null, object height=null, object width=null, object feedSource=null, object addressFromLeft=null, object addressFromTop=null, object returnAddressFromLeft=null, object returnAddressFromTop=null, object defaultFaceUp=null, object defaultOrientation=null, object printEPostage=null, object vertical=null, object recipientNamefromLeft=null, object recipientNamefromTop=null, object recipientPostalfromLeft=null, object recipientPostalfromTop=null, object senderNamefromLeft=null, object senderNamefromTop=null, object senderPostalfromLeft=null, object senderPostalfromTop=null)
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft, object senderPostalfromTop)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft, senderNamefromTop, senderPostalfromLeft, senderPostalfromTop);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -758,7 +758,7 @@ namespace NetOffice.WordApi
 		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void Insert2000(object extractAddress=null, object address=null, object autoText=null, object omitReturnAddress=null, object returnAddress=null, object returnAutoText=null, object printBarCode=null, object printFIMA=null, object size=null, object height=null, object width=null, object feedSource=null, object addressFromLeft=null, object addressFromTop=null, object returnAddressFromLeft=null, object returnAddressFromTop=null, object defaultFaceUp=null, object defaultOrientation=null)
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
 			Invoker.Method(this, "Insert2000", paramsArray);
@@ -796,7 +796,7 @@ namespace NetOffice.WordApi
 		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void PrintOut2000(object extractAddress=null, object address=null, object autoText=null, object omitReturnAddress=null, object returnAddress=null, object returnAutoText=null, object printBarCode=null, object printFIMA=null, object size=null, object height=null, object width=null, object feedSource=null, object addressFromLeft=null, object addressFromTop=null, object returnAddressFromLeft=null, object returnAddressFromTop=null, object defaultFaceUp=null, object defaultOrientation=null)
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
 			Invoker.Method(this, "PrintOut2000", paramsArray);

@@ -8,7 +8,7 @@
     <ProjectGuid>{999801CF-F213-4DFC-9511-FF9B24B4B664}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.ExcelApi</RootNamespace>
+    <RootNamespace>NetOffice.ExcelApi</RootNamespace>
     <AssemblyName>ExcelApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

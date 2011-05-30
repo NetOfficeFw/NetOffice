@@ -313,7 +313,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Query">string Query</param>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void Execute(string query, object options=null)
+		public void Execute(string query, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(query, options);
 			Invoker.Method(this, "Execute", paramsArray);
@@ -337,7 +337,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset _30_OpenRecordset(string name, object type=null, object options=null)
+		public NetOffice.DAOApi.Recordset _30_OpenRecordset(string name, object type, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, options);
 			object returnItem = Invoker.MethodReturn(this, "_30_OpenRecordset", paramsArray);
@@ -366,7 +366,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Value">optional object Value</param>
 		/// <param name="DDL">optional object DDL</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Property CreateProperty(object name=null, object type=null, object value=null, object dDL=null)
+		public NetOffice.DAOApi.Property CreateProperty(object name, object type, object value, object dDL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, value, dDL);
 			object returnItem = Invoker.MethodReturn(this, "CreateProperty", paramsArray);
@@ -394,7 +394,7 @@ namespace NetOffice.DAOApi
 		/// <param name="ForeignTable">optional object ForeignTable</param>
 		/// <param name="Attributes">optional object Attributes</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Relation CreateRelation(object name=null, object table=null, object foreignTable=null, object attributes=null)
+		public NetOffice.DAOApi.Relation CreateRelation(object name, object table, object foreignTable, object attributes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, table, foreignTable, attributes);
 			object returnItem = Invoker.MethodReturn(this, "CreateRelation", paramsArray);
@@ -422,7 +422,7 @@ namespace NetOffice.DAOApi
 		/// <param name="SourceTableName">optional object SourceTableName</param>
 		/// <param name="Connect">optional object Connect</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.TableDef CreateTableDef(object name=null, object attributes=null, object sourceTableName=null, object connect=null)
+		public NetOffice.DAOApi.TableDef CreateTableDef(object name, object attributes, object sourceTableName, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, attributes, sourceTableName, connect);
 			object returnItem = Invoker.MethodReturn(this, "CreateTableDef", paramsArray);
@@ -480,7 +480,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Options">optional object Options</param>
 		/// <param name="Inconsistent">optional object Inconsistent</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset CreateDynaset(string name, object options=null, object inconsistent=null)
+		public NetOffice.DAOApi.Recordset CreateDynaset(string name, object options, object inconsistent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, inconsistent);
 			object returnItem = Invoker.MethodReturn(this, "CreateDynaset", paramsArray);
@@ -507,7 +507,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Name">optional object Name</param>
 		/// <param name="SQLText">optional object SQLText</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.QueryDef CreateQueryDef(object name=null, object sQLText=null)
+		public NetOffice.DAOApi.QueryDef CreateQueryDef(object name, object sQLText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, sQLText);
 			object returnItem = Invoker.MethodReturn(this, "CreateQueryDef", paramsArray);
@@ -533,7 +533,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Source">string Source</param>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset CreateSnapshot(string source, object options=null)
+		public NetOffice.DAOApi.Recordset CreateSnapshot(string source, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, options);
 			object returnItem = Invoker.MethodReturn(this, "CreateSnapshot", paramsArray);
@@ -621,7 +621,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset OpenTable(string name, object options=null)
+		public NetOffice.DAOApi.Recordset OpenTable(string name, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options);
 			object returnItem = Invoker.MethodReturn(this, "OpenTable", paramsArray);
@@ -648,7 +648,7 @@ namespace NetOffice.DAOApi
 		/// <param name="DbPathName">string DbPathName</param>
 		/// <param name="ExchangeType">optional object ExchangeType</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void Synchronize(string dbPathName, object exchangeType=null)
+		public void Synchronize(string dbPathName, object exchangeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dbPathName, exchangeType);
 			Invoker.Method(this, "Synchronize", paramsArray);
@@ -672,7 +672,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Description">string Description</param>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void MakeReplica(string pathName, string description, object options=null)
+		public void MakeReplica(string pathName, string description, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pathName, description, options);
 			Invoker.Method(this, "MakeReplica", paramsArray);
@@ -710,7 +710,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Options">optional object Options</param>
 		/// <param name="LockEdit">optional object LockEdit</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset OpenRecordset(string name, object type=null, object options=null, object lockEdit=null)
+		public NetOffice.DAOApi.Recordset OpenRecordset(string name, object type, object options, object lockEdit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, options, lockEdit);
 			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);

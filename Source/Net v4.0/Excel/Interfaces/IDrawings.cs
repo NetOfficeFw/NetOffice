@@ -825,7 +825,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Select(object replace=null)
+		public object Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
@@ -899,7 +899,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
 		/// <param name="SpellLang">optional object SpellLang</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object CheckSpelling(object customDictionary=null, object ignoreUppercase=null, object alwaysSuggest=null, object spellLang=null)
+		public object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object spellLang)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, spellLang);
 			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
@@ -953,7 +953,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Left">optional object Left</param>
 		/// <param name="Top">optional object Top</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Reshape(Int32 vertex, bool insert, object left=null, object top=null)
+		public object Reshape(Int32 vertex, bool insert, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vertex, insert, left, top);
 			object returnItem = Invoker.MethodReturn(this, "Reshape", paramsArray);

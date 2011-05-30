@@ -104,7 +104,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index=null)
+		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -137,7 +137,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index=null)
+		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
 			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);

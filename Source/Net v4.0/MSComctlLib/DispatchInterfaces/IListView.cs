@@ -792,7 +792,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Index">optional object Index</param>
 		/// <param name="fPartial">optional object fPartial</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where=null, object index=null, object fPartial=null)
+		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where, object index, object fPartial)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sz, where, index, fPartial);
 			object returnItem = Invoker.MethodReturn(this, "FindItem", paramsArray);

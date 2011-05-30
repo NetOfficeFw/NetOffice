@@ -702,7 +702,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Description">optional object Description</param>
 		/// <param name="Keywords">optional object Keywords</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public void SaveAsODC(string oDCFileName, object description=null, object keywords=null)
+		public void SaveAsODC(string oDCFileName, object description, object keywords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oDCFileName, description, keywords);
 			Invoker.Method(this, "SaveAsODC", paramsArray);

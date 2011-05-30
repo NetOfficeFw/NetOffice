@@ -4399,7 +4399,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3=null, object arg4=null, object arg5=null, object arg6=null, object arg7=null, object arg8=null, object arg9=null, object arg10=null, object arg11=null, object arg12=null, object arg13=null, object arg14=null, object arg15=null, object arg16=null, object arg17=null, object arg18=null, object arg19=null, object arg20=null, object arg21=null, object arg22=null, object arg23=null, object arg24=null, object arg25=null, object arg26=null, object arg27=null, object arg28=null, object arg29=null, object arg30=null)
+		public NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Intersect", paramsArray);
@@ -4456,7 +4456,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Run(object macro=null, object arg1=null, object arg2=null, object arg3=null, object arg4=null, object arg5=null, object arg6=null, object arg7=null, object arg8=null, object arg9=null, object arg10=null, object arg11=null, object arg12=null, object arg13=null, object arg14=null, object arg15=null, object arg16=null, object arg17=null, object arg18=null, object arg19=null, object arg20=null, object arg21=null, object arg22=null, object arg23=null, object arg24=null, object arg25=null, object arg26=null, object arg27=null, object arg28=null, object arg29=null, object arg30=null)
+		public object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
@@ -4527,7 +4527,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object _Run2(object macro=null, object arg1=null, object arg2=null, object arg3=null, object arg4=null, object arg5=null, object arg6=null, object arg7=null, object arg8=null, object arg9=null, object arg10=null, object arg11=null, object arg12=null, object arg13=null, object arg14=null, object arg15=null, object arg16=null, object arg17=null, object arg18=null, object arg19=null, object arg20=null, object arg21=null, object arg22=null, object arg23=null, object arg24=null, object arg25=null, object arg26=null, object arg27=null, object arg28=null, object arg29=null, object arg30=null)
+		public object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "_Run2", paramsArray);
@@ -4569,7 +4569,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Keys">object Keys</param>
 		/// <param name="Wait">optional object Wait</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void SendKeys(object keys, object wait=null)
+		public void SendKeys(object keys, object wait)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keys, wait);
 			Invoker.Method(this, "SendKeys", paramsArray);
@@ -4620,7 +4620,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3=null, object arg4=null, object arg5=null, object arg6=null, object arg7=null, object arg8=null, object arg9=null, object arg10=null, object arg11=null, object arg12=null, object arg13=null, object arg14=null, object arg15=null, object arg16=null, object arg17=null, object arg18=null, object arg19=null, object arg20=null, object arg21=null, object arg22=null, object arg23=null, object arg24=null, object arg25=null, object arg26=null, object arg27=null, object arg28=null, object arg29=null, object arg30=null)
+		public NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Union", paramsArray);
@@ -4660,7 +4660,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Description">optional object Description</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void AddChartAutoFormat(object chart, string name, object description=null)
+		public void AddChartAutoFormat(object chart, string name, object description)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chart, name, description);
 			Invoker.Method(this, "AddChartAutoFormat", paramsArray);
@@ -4684,7 +4684,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ListArray">object ListArray</param>
 		/// <param name="ByRow">optional object ByRow</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void AddCustomList(object listArray, object byRow=null)
+		public void AddCustomList(object listArray, object byRow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(listArray, byRow);
 			Invoker.Method(this, "AddCustomList", paramsArray);
@@ -4720,7 +4720,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="CustomDictionary">optional object CustomDictionary</param>
 		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public bool CheckSpelling(string word, object customDictionary=null, object ignoreUppercase=null)
+		public bool CheckSpelling(string word, object customDictionary, object ignoreUppercase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase);
 			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
@@ -4748,7 +4748,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ToAbsolute">optional object ToAbsolute</param>
 		/// <param name="RelativeTo">optional object RelativeTo</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object ConvertFormula(object formula, NetOffice.ExcelApi.Enums.XlReferenceStyle fromReferenceStyle, object toReferenceStyle=null, object toAbsolute=null, object relativeTo=null)
+		public object ConvertFormula(object formula, NetOffice.ExcelApi.Enums.XlReferenceStyle fromReferenceStyle, object toReferenceStyle, object toAbsolute, object relativeTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formula, fromReferenceStyle, toReferenceStyle, toAbsolute, relativeTo);
 			object returnItem = Invoker.MethodReturn(this, "ConvertFormula", paramsArray);
@@ -4804,7 +4804,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object Dummy1(object arg1=null, object arg2=null, object arg3=null, object arg4=null)
+		public object Dummy1(object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Dummy1", paramsArray);
@@ -4842,7 +4842,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg7">optional object Arg7</param>
 		/// <param name="Arg8">optional object Arg8</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object Dummy2(object arg1=null, object arg2=null, object arg3=null, object arg4=null, object arg5=null, object arg6=null, object arg7=null, object arg8=null)
+		public object Dummy2(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Dummy2", paramsArray);
@@ -4897,7 +4897,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg14">optional object Arg14</param>
 		/// <param name="Arg15">optional object Arg15</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object Dummy4(object arg1=null, object arg2=null, object arg3=null, object arg4=null, object arg5=null, object arg6=null, object arg7=null, object arg8=null, object arg9=null, object arg10=null, object arg11=null, object arg12=null, object arg13=null, object arg14=null, object arg15=null)
+		public object Dummy4(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Dummy4", paramsArray);
@@ -4940,7 +4940,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg12">optional object Arg12</param>
 		/// <param name="Arg13">optional object Arg13</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object Dummy5(object arg1=null, object arg2=null, object arg3=null, object arg4=null, object arg5=null, object arg6=null, object arg7=null, object arg8=null, object arg9=null, object arg10=null, object arg11=null, object arg12=null, object arg13=null)
+		public object Dummy5(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Dummy5", paramsArray);
@@ -4991,7 +4991,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Arg1">optional object Arg1</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object Dummy8(object arg1=null)
+		public object Dummy8(object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Dummy8", paramsArray);
@@ -5032,7 +5032,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="arg">optional object arg</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public bool Dummy10(object arg=null)
+		public bool Dummy10(object arg)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg);
 			object returnItem = Invoker.MethodReturn(this, "Dummy10", paramsArray);
@@ -5133,7 +5133,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ButtonText">optional object ButtonText</param>
 		/// <param name="MultiSelect">optional object MultiSelect</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object GetOpenFilename(object fileFilter=null, object filterIndex=null, object title=null, object buttonText=null, object multiSelect=null)
+		public object GetOpenFilename(object fileFilter, object filterIndex, object title, object buttonText, object multiSelect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileFilter, filterIndex, title, buttonText, multiSelect);
 			object returnItem = Invoker.MethodReturn(this, "GetOpenFilename", paramsArray);
@@ -5178,7 +5178,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Title">optional object Title</param>
 		/// <param name="ButtonText">optional object ButtonText</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object GetSaveAsFilename(object initialFilename=null, object fileFilter=null, object filterIndex=null, object title=null, object buttonText=null)
+		public object GetSaveAsFilename(object initialFilename, object fileFilter, object filterIndex, object title, object buttonText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(initialFilename, fileFilter, filterIndex, title, buttonText);
 			object returnItem = Invoker.MethodReturn(this, "GetSaveAsFilename", paramsArray);
@@ -5220,7 +5220,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Reference">optional object Reference</param>
 		/// <param name="Scroll">optional object Scroll</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Goto(object reference=null, object scroll=null)
+		public void Goto(object reference, object scroll)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reference, scroll);
 			Invoker.Method(this, "Goto", paramsArray);
@@ -5242,7 +5242,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="HelpFile">optional object HelpFile</param>
 		/// <param name="HelpContextID">optional object HelpContextID</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Help(object helpFile=null, object helpContextID=null)
+		public void Help(object helpFile, object helpContextID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile, helpContextID);
 			Invoker.Method(this, "Help", paramsArray);
@@ -5282,7 +5282,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="HelpContextID">optional object HelpContextID</param>
 		/// <param name="Type">optional object Type</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object InputBox(string prompt, object title=null, object _default=null, object left=null, object top=null, object helpFile=null, object helpContextID=null, object type=null)
+		public object InputBox(string prompt, object title, object _default, object left, object top, object helpFile, object helpContextID, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(prompt, title, _default, left, top, helpFile, helpContextID, type);
 			object returnItem = Invoker.MethodReturn(this, "InputBox", paramsArray);
@@ -5333,7 +5333,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="HelpContextID">optional object HelpContextID</param>
 		/// <param name="HelpFile">optional object HelpFile</param>
 		[SupportByLibrary("Excel", 9,10,11,12)]
-		public void MacroOptions(object macro=null, object description=null, object hasMenu=null, object menuText=null, object hasShortcutKey=null, object shortcutKey=null, object category=null, object statusBar=null, object helpContextID=null, object helpFile=null)
+		public void MacroOptions(object macro, object description, object hasMenu, object menuText, object hasShortcutKey, object shortcutKey, object category, object statusBar, object helpContextID, object helpFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, description, hasMenu, menuText, hasShortcutKey, shortcutKey, category, statusBar, helpContextID, helpFile);
 			Invoker.Method(this, "MacroOptions", paramsArray);
@@ -5354,7 +5354,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="HelpFile">optional object HelpFile</param>
 		/// <param name="ArgumentDescriptions">optional object ArgumentDescriptions</param>
 		[SupportByLibrary("Excel", 14)]
-		public void MacroOptions(object macro=null, object description=null, object hasMenu=null, object menuText=null, object hasShortcutKey=null, object shortcutKey=null, object category=null, object statusBar=null, object helpContextID=null, object helpFile=null, object argumentDescriptions=null)
+		public void MacroOptions(object macro, object description, object hasMenu, object menuText, object hasShortcutKey, object shortcutKey, object category, object statusBar, object helpContextID, object helpFile, object argumentDescriptions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, description, hasMenu, menuText, hasShortcutKey, shortcutKey, category, statusBar, helpContextID, helpFile, argumentDescriptions);
 			Invoker.Method(this, "MacroOptions", paramsArray);
@@ -5387,7 +5387,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Password">optional object Password</param>
 		/// <param name="DownloadNewMail">optional object DownloadNewMail</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void MailLogon(object name=null, object password=null, object downloadNewMail=null)
+		public void MailLogon(object name, object password, object downloadNewMail)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, password, downloadNewMail);
 			Invoker.Method(this, "MailLogon", paramsArray);
@@ -5421,7 +5421,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Key">string Key</param>
 		/// <param name="Procedure">optional object Procedure</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void OnKey(string key, object procedure=null)
+		public void OnKey(string key, object procedure)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key, procedure);
 			Invoker.Method(this, "OnKey", paramsArray);
@@ -5458,7 +5458,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="LatestTime">optional object LatestTime</param>
 		/// <param name="Schedule">optional object Schedule</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void OnTime(object earliestTime, string procedure, object latestTime=null, object schedule=null)
+		public void OnTime(object earliestTime, string procedure, object latestTime, object schedule)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(earliestTime, procedure, latestTime, schedule);
 			Invoker.Method(this, "OnTime", paramsArray);
@@ -5504,7 +5504,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="BasicCode">optional object BasicCode</param>
 		/// <param name="XlmCode">optional object XlmCode</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void RecordMacro(object basicCode=null, object xlmCode=null)
+		public void RecordMacro(object basicCode, object xlmCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(basicCode, xlmCode);
 			Invoker.Method(this, "RecordMacro", paramsArray);
@@ -5557,7 +5557,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Filename">optional object Filename</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Save(object filename=null)
+		public void Save(object filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			Invoker.Method(this, "Save", paramsArray);
@@ -5578,7 +5578,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Filename">optional object Filename</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void SaveWorkspace(object filename=null)
+		public void SaveWorkspace(object filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			Invoker.Method(this, "SaveWorkspace", paramsArray);
@@ -5600,7 +5600,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="FormatName">optional object FormatName</param>
 		/// <param name="Gallery">optional object Gallery</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void SetDefaultChart(object formatName=null, object gallery=null)
+		public void SetDefaultChart(object formatName, object gallery)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formatName, gallery);
 			Invoker.Method(this, "SetDefaultChart", paramsArray);
@@ -5631,7 +5631,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Volatile">optional object Volatile</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Volatile(object _volatile=null)
+		public void Volatile(object _volatile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_volatile);
 			Invoker.Method(this, "Volatile", paramsArray);
@@ -5692,7 +5692,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object _WSFunction(object arg1=null, object arg2=null, object arg3=null, object arg4=null, object arg5=null, object arg6=null, object arg7=null, object arg8=null, object arg9=null, object arg10=null, object arg11=null, object arg12=null, object arg13=null, object arg14=null, object arg15=null, object arg16=null, object arg17=null, object arg18=null, object arg19=null, object arg20=null, object arg21=null, object arg22=null, object arg23=null, object arg24=null, object arg25=null, object arg26=null, object arg27=null, object arg28=null, object arg29=null, object arg30=null)
+		public object _WSFunction(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "_WSFunction", paramsArray);
@@ -5745,7 +5745,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Text">optional object Text</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public string GetPhonetic(object text=null)
+		public string GetPhonetic(object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
 			object returnItem = Invoker.MethodReturn(this, "GetPhonetic", paramsArray);
@@ -5840,7 +5840,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object Dummy13(object arg1, object arg2=null, object arg3=null, object arg4=null, object arg5=null, object arg6=null, object arg7=null, object arg8=null, object arg9=null, object arg10=null, object arg11=null, object arg12=null, object arg13=null, object arg14=null, object arg15=null, object arg16=null, object arg17=null, object arg18=null, object arg19=null, object arg20=null, object arg21=null, object arg22=null, object arg23=null, object arg24=null, object arg25=null, object arg26=null, object arg27=null, object arg28=null, object arg29=null, object arg30=null)
+		public object Dummy13(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Dummy13", paramsArray);
@@ -5902,7 +5902,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="KeepAbort">optional object KeepAbort</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public void CheckAbort(object keepAbort=null)
+		public void CheckAbort(object keepAbort)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keepAbort);
 			Invoker.Method(this, "CheckAbort", paramsArray);
@@ -5923,7 +5923,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="XmlMap">optional object XmlMap</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public void DisplayXMLSourcePane(object xmlMap=null)
+		public void DisplayXMLSourcePane(object xmlMap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xmlMap);
 			Invoker.Method(this, "DisplayXMLSourcePane", paramsArray);
@@ -5946,7 +5946,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ID">Int32 ID</param>
 		/// <param name="arg">optional object arg</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public object Support(object _object, Int32 iD, object arg=null)
+		public object Support(object _object, Int32 iD, object arg)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_object, iD, arg);
 			object returnItem = Invoker.MethodReturn(this, "Support", paramsArray);
@@ -6041,7 +6041,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="HelpContextID">optional object HelpContextID</param>
 		/// <param name="HelpFile">optional object HelpFile</param>
 		[SupportByLibrary("Excel", 14)]
-		public void _MacroOptions(object macro=null, object description=null, object hasMenu=null, object menuText=null, object hasShortcutKey=null, object shortcutKey=null, object category=null, object statusBar=null, object helpContextID=null, object helpFile=null)
+		public void _MacroOptions(object macro, object description, object hasMenu, object menuText, object hasShortcutKey, object shortcutKey, object category, object statusBar, object helpContextID, object helpFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, description, hasMenu, menuText, hasShortcutKey, shortcutKey, category, statusBar, helpContextID, helpFile);
 			Invoker.Method(this, "_MacroOptions", paramsArray);

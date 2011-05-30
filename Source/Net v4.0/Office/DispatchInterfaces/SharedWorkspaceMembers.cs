@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="DisplayName">string DisplayName</param>
 		/// <param name="Role">optional object Role</param>
 		[SupportByLibrary("Office", 11,12,14)]
-		public NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName, object role=null)
+		public NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName, object role)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(email, domainName, displayName, role);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

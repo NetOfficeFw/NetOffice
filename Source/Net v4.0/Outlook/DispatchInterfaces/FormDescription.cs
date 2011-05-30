@@ -449,7 +449,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Registry">NetOffice.OutlookApi.Enums.OlFormRegistry Registry</param>
 		/// <param name="Folder">optional object Folder</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public void PublishForm(NetOffice.OutlookApi.Enums.OlFormRegistry registry, object folder=null)
+		public void PublishForm(NetOffice.OutlookApi.Enums.OlFormRegistry registry, object folder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(registry, folder);
 			Invoker.Method(this, "PublishForm", paramsArray);

@@ -238,7 +238,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="SortProperty">string SortProperty</param>
 		/// <param name="Descending">optional object Descending</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public void Sort(string sortProperty, object descending=null)
+		public void Sort(string sortProperty, object descending)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortProperty, descending);
 			Invoker.Method(this, "Sort", paramsArray);

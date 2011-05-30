@@ -73,13 +73,15 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
     public static class AssemblyAnalyzer
     {
         private static string _apiName = "NetOffice";
- 
+
+        #region Public Methods
+
         /// <summary>
         /// Analzye an assembly for NetOffice calls
         /// </summary>
         /// <param name="fullFileName"></param>
         /// <param name="analyzeDependencies"></param>
-        public static string AnalyzeAssembly(AssemblyDefinition assemblyDefinition, AssemblyAnalyzerSettings settings)
+        public static string[] AnalyzeAssembly(AssemblyDefinition assemblyDefinition, AssemblyAnalyzerSettings settings)
         {
             List<AssemblyNameReference> listReferences = new List<AssemblyNameReference>();
 
@@ -130,9 +132,13 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
             }
 
             string result = NetOfficeAnalyzer.AnalyzeNetOfficeAssemblies(document, listReferences, settings);
-            return result;
+            return new string[]{result, document.ToString()};
         }
 
+        #endregion
+
+        #region Internal Methods
+        
         private static bool AnalyzeField(FieldDefinition fieldDefinition, XElement newElement)
         {
             bool result = false;
@@ -575,5 +581,7 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
 
             return result;
         }
+
+        #endregion
     }
 }

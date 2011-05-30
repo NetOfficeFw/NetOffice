@@ -354,7 +354,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PictureStackUnit">optional object PictureStackUnit</param>
 		/// <param name="PicturePlacement">optional object PicturePlacement</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 UserPicture(object pictureFile=null, object pictureFormat=null, object pictureStackUnit=null, object picturePlacement=null)
+		public Int32 UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit, object picturePlacement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pictureFile, pictureFormat, pictureStackUnit, picturePlacement);
 			object returnItem = Invoker.MethodReturn(this, "UserPicture", paramsArray);

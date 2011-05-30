@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="X3">optional object X3</param>
 		/// <param name="Y3">optional object Y3</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2=null, object y2=null, object x3=null, object y3=null)
+		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3, object y3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(segmentType, editingType, x1, y1, x2, y2, x3, y3);
 			Invoker.Method(this, "AddNodes", paramsArray);

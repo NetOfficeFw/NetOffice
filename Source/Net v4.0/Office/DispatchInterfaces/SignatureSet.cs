@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="varSigProv">optional object varSigProv</param>
 		[SupportByLibrary("Office", 12,14)]
-		public NetOffice.OfficeApi.Signature AddNonVisibleSignature(object varSigProv=null)
+		public NetOffice.OfficeApi.Signature AddNonVisibleSignature(object varSigProv)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varSigProv);
 			object returnItem = Invoker.MethodReturn(this, "AddNonVisibleSignature", paramsArray);
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="varSigProv">optional object varSigProv</param>
 		[SupportByLibrary("Office", 12,14)]
-		public NetOffice.OfficeApi.Signature AddSignatureLine(object varSigProv=null)
+		public NetOffice.OfficeApi.Signature AddSignatureLine(object varSigProv)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varSigProv);
 			object returnItem = Invoker.MethodReturn(this, "AddSignatureLine", paramsArray);

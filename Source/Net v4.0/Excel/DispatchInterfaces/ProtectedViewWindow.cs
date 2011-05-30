@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="WriteResPassword">optional object WriteResPassword</param>
 		/// <param name="UpdateLinks">optional object UpdateLinks</param>
 		[SupportByLibrary("Excel", 14)]
-		public NetOffice.ExcelApi.Workbook Edit(object writeResPassword=null, object updateLinks=null)
+		public NetOffice.ExcelApi.Workbook Edit(object writeResPassword, object updateLinks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(writeResPassword, updateLinks);
 			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray);

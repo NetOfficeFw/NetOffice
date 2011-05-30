@@ -196,7 +196,7 @@ namespace NetOffice.WordApi
 		/// <param name="ExtractAddress">optional object ExtractAddress</param>
 		/// <param name="LaserTray">optional object LaserTray</param>
 		[SupportByLibrary("Word", 9)]
-		public NetOffice.WordApi.Document CreateNewDocument(object name=null, object address=null, object autoText=null, object extractAddress=null, object laserTray=null)
+		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray);
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
@@ -215,7 +215,7 @@ namespace NetOffice.WordApi
 		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">optional object Vertical</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.Document CreateNewDocument(object name=null, object address=null, object autoText=null, object extractAddress=null, object laserTray=null, object printEPostageLabel=null, object vertical=null)
+		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical);
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
@@ -246,7 +246,7 @@ namespace NetOffice.WordApi
 		/// <param name="Row">optional object Row</param>
 		/// <param name="Column">optional object Column</param>
 		[SupportByLibrary("Word", 9)]
-		public void PrintOut(object name=null, object address=null, object extractAddress=null, object laserTray=null, object singleLabel=null, object row=null, object column=null)
+		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -265,7 +265,7 @@ namespace NetOffice.WordApi
 		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">optional object Vertical</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void PrintOut(object name=null, object address=null, object extractAddress=null, object laserTray=null, object singleLabel=null, object row=null, object column=null, object printEPostageLabel=null, object vertical=null)
+		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -290,7 +290,7 @@ namespace NetOffice.WordApi
 		/// <param name="ExtractAddress">optional object ExtractAddress</param>
 		/// <param name="LaserTray">optional object LaserTray</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.Document CreateNewDocument2000(object name=null, object address=null, object autoText=null, object extractAddress=null, object laserTray=null)
+		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText, object extractAddress, object laserTray)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray);
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
@@ -321,7 +321,7 @@ namespace NetOffice.WordApi
 		/// <param name="Row">optional object Row</param>
 		/// <param name="Column">optional object Column</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void PrintOut2000(object name=null, object address=null, object extractAddress=null, object laserTray=null, object singleLabel=null, object row=null, object column=null)
+		public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column);
 			Invoker.Method(this, "PrintOut2000", paramsArray);
@@ -358,7 +358,7 @@ namespace NetOffice.WordApi
 		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">optional object Vertical</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID=null, object address=null, object autoText=null, object extractAddress=null, object laserTray=null, object printEPostageLabel=null, object vertical=null)
+		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical);
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
@@ -391,7 +391,7 @@ namespace NetOffice.WordApi
 		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">optional object Vertical</param>
 		[SupportByLibrary("Word", 12,14)]
-		public void PrintOutByID(object labelID=null, object address=null, object extractAddress=null, object laserTray=null, object singleLabel=null, object row=null, object column=null, object printEPostageLabel=null, object vertical=null)
+		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical);
 			Invoker.Method(this, "PrintOutByID", paramsArray);

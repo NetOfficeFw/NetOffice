@@ -154,7 +154,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Level">optional object Level</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.ListTemplate Convert(object level=null)
+		public NetOffice.WordApi.ListTemplate Convert(object level)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level);
 			object returnItem = Invoker.MethodReturn(this, "Convert", paramsArray);

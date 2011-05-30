@@ -111,7 +111,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Alignment">optional object Alignment</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index=null, object key=null, object text=null, object width=null, object alignment=null)
+		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text, object width, object alignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment);
 			object returnItem = Invoker.MethodReturn(this, "Add_PreVB98", paramsArray);
@@ -162,7 +162,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Alignment">optional object Alignment</param>
 		/// <param name="Icon">optional object Icon</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index=null, object key=null, object text=null, object width=null, object alignment=null, object icon=null)
+		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width, object alignment, object icon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment, icon);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

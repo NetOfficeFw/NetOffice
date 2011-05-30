@@ -123,7 +123,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="SelImage">optional object SelImage</param>
 		/// <param name="Indentation">optional object Indentation</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IComboItem Add(object index=null, object key=null, object text=null, object image=null, object selImage=null, object indentation=null)
+		public NetOffice.MSComctlLibApi.IComboItem Add(object index, object key, object text, object image, object selImage, object indentation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, image, selImage, indentation);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

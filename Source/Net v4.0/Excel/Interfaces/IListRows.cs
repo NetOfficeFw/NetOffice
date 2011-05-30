@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Position">optional object Position</param>
 		[SupportByLibrary("Excel", 11)]
-		public NetOffice.ExcelApi.ListRow Add(object position=null)
+		public NetOffice.ExcelApi.ListRow Add(object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Position">optional object Position</param>
 		/// <param name="AlwaysInsert">optional object AlwaysInsert</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public NetOffice.ExcelApi.ListRow Add(object position=null, object alwaysInsert=null)
+		public NetOffice.ExcelApi.ListRow Add(object position, object alwaysInsert)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, alwaysInsert);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Position">optional object Position</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public NetOffice.ExcelApi.ListRow _Add(object position=null)
+		public NetOffice.ExcelApi.ListRow _Add(object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);

@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="DivID">optional object DivID</param>
 		/// <param name="Title">optional object Title</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.PublishObject Add(NetOffice.ExcelApi.Enums.XlSourceType sourceType, string filename, object sheet=null, object source=null, object htmlType=null, object divID=null, object title=null)
+		public NetOffice.ExcelApi.PublishObject Add(NetOffice.ExcelApi.Enums.XlSourceType sourceType, string filename, object sheet, object source, object htmlType, object divID, object title)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, filename, sheet, source, htmlType, divID, title);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

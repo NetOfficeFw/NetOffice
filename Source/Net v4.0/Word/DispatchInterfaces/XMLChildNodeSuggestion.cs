@@ -144,7 +144,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public NetOffice.WordApi.XMLNode Insert(object range=null)
+		public NetOffice.WordApi.XMLNode Insert(object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);

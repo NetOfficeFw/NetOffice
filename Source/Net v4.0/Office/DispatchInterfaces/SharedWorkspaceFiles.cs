@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="OverwriteIfFileAlreadyExists">optional object OverwriteIfFileAlreadyExists</param>
 		/// <param name="KeepInSync">optional object KeepInSync</param>
 		[SupportByLibrary("Office", 11,12,14)]
-		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder=null, object overwriteIfFileAlreadyExists=null, object keepInSync=null)
+		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists, object keepInSync)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, parentFolder, overwriteIfFileAlreadyExists, keepInSync);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

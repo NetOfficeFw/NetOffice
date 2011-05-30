@@ -362,7 +362,7 @@ namespace NetOffice.WordApi
 		/// <param name="Connection">optional object Connection</param>
 		/// <param name="LinkToSource">optional object LinkToSource</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void CreateDataSource(object name=null, object passwordDocument=null, object writePasswordDocument=null, object headerRecord=null, object mSQuery=null, object sQLStatement=null, object sQLStatement1=null, object connection=null, object linkToSource=null)
+		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement, object sQLStatement1, object connection, object linkToSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1, connection, linkToSource);
 			Invoker.Method(this, "CreateDataSource", paramsArray);
@@ -386,7 +386,7 @@ namespace NetOffice.WordApi
 		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="HeaderRecord">optional object HeaderRecord</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void CreateHeaderSource(string name, object passwordDocument=null, object writePasswordDocument=null, object headerRecord=null)
+		public void CreateHeaderSource(string name, object passwordDocument, object writePasswordDocument, object headerRecord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord);
 			Invoker.Method(this, "CreateHeaderSource", paramsArray);
@@ -421,7 +421,7 @@ namespace NetOffice.WordApi
 		/// <param name="SQLStatement">optional object SQLStatement</param>
 		/// <param name="SQLStatement1">optional object SQLStatement1</param>
 		[SupportByLibrary("Word", 9)]
-		public void OpenDataSource(string name, object format=null, object confirmConversions=null, object readOnly=null, object linkToSource=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null, object connection=null, object sQLStatement=null, object sQLStatement1=null)
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1);
 			Invoker.Method(this, "OpenDataSource", paramsArray);
@@ -447,7 +447,7 @@ namespace NetOffice.WordApi
 		/// <param name="OpenExclusive">optional object OpenExclusive</param>
 		/// <param name="SubType">optional object SubType</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void OpenDataSource(string name, object format=null, object confirmConversions=null, object readOnly=null, object linkToSource=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null, object connection=null, object sQLStatement=null, object sQLStatement1=null, object openExclusive=null, object subType=null)
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1, object openExclusive, object subType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1, openExclusive, subType);
 			Invoker.Method(this, "OpenDataSource", paramsArray);
@@ -478,7 +478,7 @@ namespace NetOffice.WordApi
 		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
 		[SupportByLibrary("Word", 9)]
-		public void OpenHeaderSource(string name, object format=null, object confirmConversions=null, object readOnly=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null)
+		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
 			Invoker.Method(this, "OpenHeaderSource", paramsArray);
@@ -499,7 +499,7 @@ namespace NetOffice.WordApi
 		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
 		/// <param name="OpenExclusive">optional object OpenExclusive</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void OpenHeaderSource(string name, object format=null, object confirmConversions=null, object readOnly=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null, object openExclusive=null)
+		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object openExclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, openExclusive);
 			Invoker.Method(this, "OpenHeaderSource", paramsArray);
@@ -521,7 +521,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Pause">optional object Pause</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Execute(object pause=null)
+		public void Execute(object pause)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pause);
 			Invoker.Method(this, "Execute", paramsArray);
@@ -606,7 +606,7 @@ namespace NetOffice.WordApi
 		/// <param name="SQLStatement">optional object SQLStatement</param>
 		/// <param name="SQLStatement1">optional object SQLStatement1</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void OpenDataSource2000(string name, object format=null, object confirmConversions=null, object readOnly=null, object linkToSource=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null, object connection=null, object sQLStatement=null, object sQLStatement1=null)
+		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1);
 			Invoker.Method(this, "OpenDataSource2000", paramsArray);
@@ -637,7 +637,7 @@ namespace NetOffice.WordApi
 		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void OpenHeaderSource2000(string name, object format=null, object confirmConversions=null, object readOnly=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null)
+		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
 			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
@@ -665,7 +665,7 @@ namespace NetOffice.WordApi
 		/// <param name="ShowPreviewStep">optional object ShowPreviewStep</param>
 		/// <param name="ShowMergeStep">optional object ShowMergeStep</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void ShowWizard(object initialState, object showDocumentStep=null, object showTemplateStep=null, object showDataStep=null, object showWriteStep=null, object showPreviewStep=null, object showMergeStep=null)
+		public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep, object showMergeStep)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep);
 			Invoker.Method(this, "ShowWizard", paramsArray);

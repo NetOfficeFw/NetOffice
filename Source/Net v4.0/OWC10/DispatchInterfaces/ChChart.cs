@@ -837,7 +837,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="DataSourceIndex">Int32 DataSourceIndex</param>
 		/// <param name="DataReference">optional object DataReference</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void SetData(NetOffice.OWC10Api.Enums.ChartDimensionsEnum dimension, Int32 dataSourceIndex, object dataReference=null)
+		public void SetData(NetOffice.OWC10Api.Enums.ChartDimensionsEnum dimension, Int32 dataSourceIndex, object dataReference)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dimension, dataSourceIndex, dataReference);
 			Invoker.Method(this, "SetData", paramsArray);

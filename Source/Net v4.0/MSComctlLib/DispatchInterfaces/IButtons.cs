@@ -143,7 +143,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Style">optional object Style</param>
 		/// <param name="Image">optional object Image</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IButton Add(object index=null, object key=null, object caption=null, object style=null, object image=null)
+		public NetOffice.MSComctlLibApi.IButton Add(object index, object key, object caption, object style, object image)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, caption, style, image);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

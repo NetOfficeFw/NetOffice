@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Before">optional object Before</param>
 		/// <param name="Restore">optional object Restore</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Menu Add(string caption, object before=null, object restore=null)
+		public NetOffice.ExcelApi.Menu Add(string caption, object before, object restore)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(caption, before, restore);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

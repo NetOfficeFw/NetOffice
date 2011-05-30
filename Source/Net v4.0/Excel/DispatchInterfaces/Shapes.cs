@@ -377,7 +377,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType=null, object filename=null, object link=null, object displayAsIcon=null, object iconFileName=null, object iconIndex=null, object iconLabel=null, object left=null, object top=null, object width=null, object height=null)
+		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -439,7 +439,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public NetOffice.ExcelApi.Shape AddChart(object xlChartType=null, object left=null, object top=null, object width=null, object height=null)
+		public NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xlChartType, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -468,7 +468,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
 		[SupportByLibrary("Excel", 14)]
-		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left=null, object top=null, object width=null, object height=null)
+		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);

@@ -111,7 +111,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="ReportIcon">optional object ReportIcon</param>
 		/// <param name="ToolTipText">optional object ToolTipText</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IListSubItem Add(object index=null, object key=null, object text=null, object reportIcon=null, object toolTipText=null)
+		public NetOffice.MSComctlLibApi.IListSubItem Add(object index, object key, object text, object reportIcon, object toolTipText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, reportIcon, toolTipText);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

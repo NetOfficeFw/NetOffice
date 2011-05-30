@@ -1253,7 +1253,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Direction">optional object Direction</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Collapse(object direction=null)
+		public void Collapse(object direction)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(direction);
 			Invoker.Method(this, "Collapse", paramsArray);
@@ -1297,7 +1297,7 @@ namespace NetOffice.WordApi
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range Next(object unit=null, object count=null)
+		public NetOffice.WordApi.Range Next(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray);
@@ -1323,7 +1323,7 @@ namespace NetOffice.WordApi
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range Previous(object unit=null, object count=null)
+		public NetOffice.WordApi.Range Previous(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "Previous", paramsArray);
@@ -1349,7 +1349,7 @@ namespace NetOffice.WordApi
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Extend">optional object Extend</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 StartOf(object unit=null, object extend=null)
+		public Int32 StartOf(object unit, object extend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, extend);
 			object returnItem = Invoker.MethodReturn(this, "StartOf", paramsArray);
@@ -1373,7 +1373,7 @@ namespace NetOffice.WordApi
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Extend">optional object Extend</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 EndOf(object unit=null, object extend=null)
+		public Int32 EndOf(object unit, object extend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, extend);
 			object returnItem = Invoker.MethodReturn(this, "EndOf", paramsArray);
@@ -1397,7 +1397,7 @@ namespace NetOffice.WordApi
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 Move(object unit=null, object count=null)
+		public Int32 Move(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
@@ -1421,7 +1421,7 @@ namespace NetOffice.WordApi
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveStart(object unit=null, object count=null)
+		public Int32 MoveStart(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "MoveStart", paramsArray);
@@ -1445,7 +1445,7 @@ namespace NetOffice.WordApi
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveEnd(object unit=null, object count=null)
+		public Int32 MoveEnd(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "MoveEnd", paramsArray);
@@ -1469,7 +1469,7 @@ namespace NetOffice.WordApi
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveWhile(object cset, object count=null)
+		public Int32 MoveWhile(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
 			object returnItem = Invoker.MethodReturn(this, "MoveWhile", paramsArray);
@@ -1494,7 +1494,7 @@ namespace NetOffice.WordApi
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveStartWhile(object cset, object count=null)
+		public Int32 MoveStartWhile(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
 			object returnItem = Invoker.MethodReturn(this, "MoveStartWhile", paramsArray);
@@ -1519,7 +1519,7 @@ namespace NetOffice.WordApi
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveEndWhile(object cset, object count=null)
+		public Int32 MoveEndWhile(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
 			object returnItem = Invoker.MethodReturn(this, "MoveEndWhile", paramsArray);
@@ -1544,7 +1544,7 @@ namespace NetOffice.WordApi
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveUntil(object cset, object count=null)
+		public Int32 MoveUntil(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
 			object returnItem = Invoker.MethodReturn(this, "MoveUntil", paramsArray);
@@ -1569,7 +1569,7 @@ namespace NetOffice.WordApi
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveStartUntil(object cset, object count=null)
+		public Int32 MoveStartUntil(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
 			object returnItem = Invoker.MethodReturn(this, "MoveStartUntil", paramsArray);
@@ -1594,7 +1594,7 @@ namespace NetOffice.WordApi
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveEndUntil(object cset, object count=null)
+		public Int32 MoveEndUntil(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
 			object returnItem = Invoker.MethodReturn(this, "MoveEndUntil", paramsArray);
@@ -1648,7 +1648,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Type">optional object Type</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void InsertBreak(object type=null)
+		public void InsertBreak(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "InsertBreak", paramsArray);
@@ -1673,7 +1673,7 @@ namespace NetOffice.WordApi
 		/// <param name="Link">optional object Link</param>
 		/// <param name="Attachment">optional object Attachment</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void InsertFile(string fileName, object range=null, object confirmConversions=null, object link=null, object attachment=null)
+		public void InsertFile(string fileName, object range, object confirmConversions, object link, object attachment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range, confirmConversions, link, attachment);
 			Invoker.Method(this, "InsertFile", paramsArray);
@@ -1720,7 +1720,7 @@ namespace NetOffice.WordApi
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 Delete(object unit=null, object count=null)
+		public Int32 Delete(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
@@ -1743,7 +1743,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Unit">optional object Unit</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 Expand(object unit=null)
+		public Int32 Expand(object unit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit);
 			object returnItem = Invoker.MethodReturn(this, "Expand", paramsArray);
@@ -1799,7 +1799,7 @@ namespace NetOffice.WordApi
 		/// <param name="ApplyLastColumn">optional object ApplyLastColumn</param>
 		/// <param name="AutoFit">optional object AutoFit</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Table ConvertToTableOld(object separator=null, object numRows=null, object numColumns=null, object initialColumnWidth=null, object format=null, object applyBorders=null, object applyShading=null, object applyFont=null, object applyColor=null, object applyHeadingRows=null, object applyLastRow=null, object applyFirstColumn=null, object applyLastColumn=null, object autoFit=null)
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
@@ -1826,7 +1826,7 @@ namespace NetOffice.WordApi
 		/// <param name="InsertAsField">optional object InsertAsField</param>
 		/// <param name="InsertAsFullWidth">optional object InsertAsFullWidth</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void InsertDateTimeOld(object dateTimeFormat=null, object insertAsField=null, object insertAsFullWidth=null)
+		public void InsertDateTimeOld(object dateTimeFormat, object insertAsField, object insertAsFullWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField, insertAsFullWidth);
 			Invoker.Method(this, "InsertDateTimeOld", paramsArray);
@@ -1850,7 +1850,7 @@ namespace NetOffice.WordApi
 		/// <param name="Unicode">optional object Unicode</param>
 		/// <param name="Bias">optional object Bias</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void InsertSymbol(Int32 characterNumber, object font=null, object unicode=null, object bias=null)
+		public void InsertSymbol(Int32 characterNumber, object font, object unicode, object bias)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(characterNumber, font, unicode, bias);
 			Invoker.Method(this, "InsertSymbol", paramsArray);
@@ -1876,7 +1876,7 @@ namespace NetOffice.WordApi
 		/// <param name="InsertAsHyperlink">optional object InsertAsHyperlink</param>
 		/// <param name="IncludePosition">optional object IncludePosition</param>
 		[SupportByLibrary("Word", 9,10)]
-		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink=null, object includePosition=null)
+		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition);
 			Invoker.Method(this, "InsertCrossReference", paramsArray);
@@ -1893,7 +1893,7 @@ namespace NetOffice.WordApi
 		/// <param name="SeparateNumbers">optional object SeparateNumbers</param>
 		/// <param name="SeparatorString">optional object SeparatorString</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink=null, object includePosition=null, object separateNumbers=null, object separatorString=null)
+		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition, object separateNumbers, object separatorString)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition, separateNumbers, separatorString);
 			Invoker.Method(this, "InsertCrossReference", paramsArray);
@@ -1920,7 +1920,7 @@ namespace NetOffice.WordApi
 		/// <param name="TitleAutoText">optional object TitleAutoText</param>
 		/// <param name="Position">optional object Position</param>
 		[SupportByLibrary("Word", 9,10)]
-		public void InsertCaption(object label, object title=null, object titleAutoText=null, object position=null)
+		public void InsertCaption(object label, object title, object titleAutoText, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText, position);
 			Invoker.Method(this, "InsertCaption", paramsArray);
@@ -1935,7 +1935,7 @@ namespace NetOffice.WordApi
 		/// <param name="Position">optional object Position</param>
 		/// <param name="ExcludeLabel">optional object ExcludeLabel</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public void InsertCaption(object label, object title=null, object titleAutoText=null, object position=null, object excludeLabel=null)
+		public void InsertCaption(object label, object title, object titleAutoText, object position, object excludeLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText, position, excludeLabel);
 			Invoker.Method(this, "InsertCaption", paramsArray);
@@ -1980,7 +1980,7 @@ namespace NetOffice.WordApi
 		/// <param name="CaseSensitive">optional object CaseSensitive</param>
 		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void SortOld(object excludeHeader=null, object fieldNumber=null, object sortFieldType=null, object sortOrder=null, object fieldNumber2=null, object sortFieldType2=null, object sortOrder2=null, object fieldNumber3=null, object sortFieldType3=null, object sortOrder3=null, object sortColumn=null, object separator=null, object caseSensitive=null, object languageID=null)
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object languageID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, languageID);
 			Invoker.Method(this, "SortOld", paramsArray);
@@ -2047,7 +2047,7 @@ namespace NetOffice.WordApi
 		/// <param name="Count">optional object Count</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range GoTo(object what=null, object which=null, object count=null, object name=null)
+		public NetOffice.WordApi.Range GoTo(object what, object which, object count, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, which, count, name);
 			object returnItem = Invoker.MethodReturn(this, "GoTo", paramsArray);
@@ -2104,7 +2104,7 @@ namespace NetOffice.WordApi
 		/// <param name="IconFileName">optional object IconFileName</param>
 		/// <param name="IconLabel">optional object IconLabel</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void PasteSpecial(object iconIndex=null, object link=null, object placement=null, object displayAsIcon=null, object dataType=null, object iconFileName=null, object iconLabel=null)
+		public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon, object dataType, object iconFileName, object iconLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link, placement, displayAsIcon, dataType, iconFileName, iconLabel);
 			Invoker.Method(this, "PasteSpecial", paramsArray);
@@ -2159,7 +2159,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="ShiftCells">optional object ShiftCells</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void InsertCells(object shiftCells=null)
+		public void InsertCells(object shiftCells)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shiftCells);
 			Invoker.Method(this, "InsertCells", paramsArray);
@@ -2180,7 +2180,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Character">optional object Character</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Extend(object character=null)
+		public void Extend(object character)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(character);
 			Invoker.Method(this, "Extend", paramsArray);
@@ -2213,7 +2213,7 @@ namespace NetOffice.WordApi
 		/// <param name="Count">optional object Count</param>
 		/// <param name="Extend">optional object Extend</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveLeft(object unit=null, object count=null, object extend=null)
+		public Int32 MoveLeft(object unit, object count, object extend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count, extend);
 			object returnItem = Invoker.MethodReturn(this, "MoveLeft", paramsArray);
@@ -2238,7 +2238,7 @@ namespace NetOffice.WordApi
 		/// <param name="Count">optional object Count</param>
 		/// <param name="Extend">optional object Extend</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveRight(object unit=null, object count=null, object extend=null)
+		public Int32 MoveRight(object unit, object count, object extend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count, extend);
 			object returnItem = Invoker.MethodReturn(this, "MoveRight", paramsArray);
@@ -2263,7 +2263,7 @@ namespace NetOffice.WordApi
 		/// <param name="Count">optional object Count</param>
 		/// <param name="Extend">optional object Extend</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveUp(object unit=null, object count=null, object extend=null)
+		public Int32 MoveUp(object unit, object count, object extend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count, extend);
 			object returnItem = Invoker.MethodReturn(this, "MoveUp", paramsArray);
@@ -2288,7 +2288,7 @@ namespace NetOffice.WordApi
 		/// <param name="Count">optional object Count</param>
 		/// <param name="Extend">optional object Extend</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 MoveDown(object unit=null, object count=null, object extend=null)
+		public Int32 MoveDown(object unit, object count, object extend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count, extend);
 			object returnItem = Invoker.MethodReturn(this, "MoveDown", paramsArray);
@@ -2312,7 +2312,7 @@ namespace NetOffice.WordApi
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Extend">optional object Extend</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 HomeKey(object unit=null, object extend=null)
+		public Int32 HomeKey(object unit, object extend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, extend);
 			object returnItem = Invoker.MethodReturn(this, "HomeKey", paramsArray);
@@ -2336,7 +2336,7 @@ namespace NetOffice.WordApi
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Extend">optional object Extend</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 EndKey(object unit=null, object extend=null)
+		public Int32 EndKey(object unit, object extend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, extend);
 			object returnItem = Invoker.MethodReturn(this, "EndKey", paramsArray);
@@ -2550,7 +2550,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="NumRows">optional object NumRows</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void InsertRows(object numRows=null)
+		public void InsertRows(object numRows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows);
 			Invoker.Method(this, "InsertRows", paramsArray);
@@ -2582,7 +2582,7 @@ namespace NetOffice.WordApi
 		/// <param name="Formula">optional object Formula</param>
 		/// <param name="NumberFormat">optional object NumberFormat</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void InsertFormula(object formula=null, object numberFormat=null)
+		public void InsertFormula(object formula, object numberFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formula, numberFormat);
 			Invoker.Method(this, "InsertFormula", paramsArray);
@@ -2603,7 +2603,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Wrap">optional object Wrap</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Revision NextRevision(object wrap=null)
+		public NetOffice.WordApi.Revision NextRevision(object wrap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wrap);
 			object returnItem = Invoker.MethodReturn(this, "NextRevision", paramsArray);
@@ -2628,7 +2628,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Wrap">optional object Wrap</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Revision PreviousRevision(object wrap=null)
+		public NetOffice.WordApi.Revision PreviousRevision(object wrap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wrap);
 			object returnItem = Invoker.MethodReturn(this, "PreviousRevision", paramsArray);
@@ -2697,7 +2697,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="NumRows">optional object NumRows</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void InsertRowsBelow(object numRows=null)
+		public void InsertRowsBelow(object numRows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows);
 			Invoker.Method(this, "InsertRowsBelow", paramsArray);
@@ -2728,7 +2728,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="NumRows">optional object NumRows</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void InsertRowsAbove(object numRows=null)
+		public void InsertRowsAbove(object numRows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows);
 			Invoker.Method(this, "InsertRowsAbove", paramsArray);
@@ -2813,7 +2813,7 @@ namespace NetOffice.WordApi
 		/// <param name="DateLanguage">optional object DateLanguage</param>
 		/// <param name="CalendarType">optional object CalendarType</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void InsertDateTime(object dateTimeFormat=null, object insertAsField=null, object insertAsFullWidth=null, object dateLanguage=null, object calendarType=null)
+		public void InsertDateTime(object dateTimeFormat, object insertAsField, object insertAsFullWidth, object dateLanguage, object calendarType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField, insertAsFullWidth, dateLanguage, calendarType);
 			Invoker.Method(this, "InsertDateTime", paramsArray);
@@ -2852,7 +2852,7 @@ namespace NetOffice.WordApi
 		/// <param name="IgnoreHe">optional object IgnoreHe</param>
 		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9)]
-		public void Sort(object excludeHeader=null, object fieldNumber=null, object sortFieldType=null, object sortOrder=null, object fieldNumber2=null, object sortFieldType2=null, object sortOrder2=null, object fieldNumber3=null, object sortFieldType3=null, object sortOrder3=null, object sortColumn=null, object separator=null, object caseSensitive=null, object bidiSort=null, object ignoreThe=null, object ignoreKashida=null, object ignoreDiacritics=null, object ignoreHe=null, object languageID=null)
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID);
 			Invoker.Method(this, "Sort", paramsArray);
@@ -2884,7 +2884,7 @@ namespace NetOffice.WordApi
 		/// <param name="SubFieldNumber2">optional object SubFieldNumber2</param>
 		/// <param name="SubFieldNumber3">optional object SubFieldNumber3</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void Sort(object excludeHeader=null, object fieldNumber=null, object sortFieldType=null, object sortOrder=null, object fieldNumber2=null, object sortFieldType2=null, object sortOrder2=null, object fieldNumber3=null, object sortFieldType3=null, object sortOrder3=null, object sortColumn=null, object separator=null, object caseSensitive=null, object bidiSort=null, object ignoreThe=null, object ignoreKashida=null, object ignoreDiacritics=null, object ignoreHe=null, object languageID=null, object subFieldNumber=null, object subFieldNumber2=null, object subFieldNumber3=null)
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID, object subFieldNumber, object subFieldNumber2, object subFieldNumber3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID, subFieldNumber, subFieldNumber2, subFieldNumber3);
 			Invoker.Method(this, "Sort", paramsArray);
@@ -2920,7 +2920,7 @@ namespace NetOffice.WordApi
 		/// <param name="AutoFitBehavior">optional object AutoFitBehavior</param>
 		/// <param name="DefaultTableBehavior">optional object DefaultTableBehavior</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Table ConvertToTable(object separator=null, object numRows=null, object numColumns=null, object initialColumnWidth=null, object format=null, object applyBorders=null, object applyShading=null, object applyFont=null, object applyColor=null, object applyHeadingRows=null, object applyLastRow=null, object applyFirstColumn=null, object applyLastColumn=null, object autoFit=null, object autoFitBehavior=null, object defaultTableBehavior=null)
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit, object autoFitBehavior, object defaultTableBehavior)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit, autoFitBehavior, defaultTableBehavior);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
@@ -2963,7 +2963,7 @@ namespace NetOffice.WordApi
 		/// <param name="IgnoreHe">optional object IgnoreHe</param>
 		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public void Sort2000(object excludeHeader=null, object fieldNumber=null, object sortFieldType=null, object sortOrder=null, object fieldNumber2=null, object sortFieldType2=null, object sortOrder2=null, object fieldNumber3=null, object sortFieldType3=null, object sortOrder3=null, object sortColumn=null, object separator=null, object caseSensitive=null, object bidiSort=null, object ignoreThe=null, object ignoreKashida=null, object ignoreDiacritics=null, object ignoreHe=null, object languageID=null)
+		public void Sort2000(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID);
 			Invoker.Method(this, "Sort2000", paramsArray);
@@ -3062,7 +3062,7 @@ namespace NetOffice.WordApi
 		/// <param name="InsertAsHyperlink">optional object InsertAsHyperlink</param>
 		/// <param name="IncludePosition">optional object IncludePosition</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public void InsertCrossReference_2002(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink=null, object includePosition=null)
+		public void InsertCrossReference_2002(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition);
 			Invoker.Method(this, "InsertCrossReference_2002", paramsArray);
@@ -3089,7 +3089,7 @@ namespace NetOffice.WordApi
 		/// <param name="TitleAutoText">optional object TitleAutoText</param>
 		/// <param name="Position">optional object Position</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public void InsertCaptionXP(object label, object title=null, object titleAutoText=null, object position=null)
+		public void InsertCaptionXP(object label, object title, object titleAutoText, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText, position);
 			Invoker.Method(this, "InsertCaptionXP", paramsArray);
@@ -3111,7 +3111,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="EditorID">optional object EditorID</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public NetOffice.WordApi.Range GoToEditableRange(object editorID=null)
+		public NetOffice.WordApi.Range GoToEditableRange(object editorID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(editorID);
 			object returnItem = Invoker.MethodReturn(this, "GoToEditableRange", paramsArray);
@@ -3137,7 +3137,7 @@ namespace NetOffice.WordApi
 		/// <param name="XML">string XML</param>
 		/// <param name="Transform">optional object Transform</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public void InsertXML(string xML, object transform=null)
+		public void InsertXML(string xML, object transform)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xML, transform);
 			Invoker.Method(this, "InsertXML", paramsArray);
@@ -3211,7 +3211,7 @@ namespace NetOffice.WordApi
 		/// <param name="UseISO19005_1">bool UseISO19005_1</param>
 		/// <param name="FixedFormatExtClassPtr">optional object FixedFormatExtClassPtr</param>
 		[SupportByLibrary("Word", 12,14)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item, bool includeDocProps, bool keepIRM, NetOffice.WordApi.Enums.WdExportCreateBookmarks createBookmarks, bool docStructureTags, bool bitmapMissingFonts, bool useISO19005_1, object fixedFormatExtClassPtr=null)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item, bool includeDocProps, bool keepIRM, NetOffice.WordApi.Enums.WdExportCreateBookmarks createBookmarks, bool docStructureTags, bool bitmapMissingFonts, bool useISO19005_1, object fixedFormatExtClassPtr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1, fixedFormatExtClassPtr);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);

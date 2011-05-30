@@ -981,7 +981,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="MacroName">string MacroName</param>
 		/// <param name="safeArrayOfParams">optional object[] safeArrayOfParams</param>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public object Run(string macroName, object[] safeArrayOfParams=null)
+		public object Run(string macroName, object[] safeArrayOfParams)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macroName, (object)safeArrayOfParams);
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);

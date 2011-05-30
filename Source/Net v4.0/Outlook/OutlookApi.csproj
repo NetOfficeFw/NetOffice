@@ -8,7 +8,7 @@
     <ProjectGuid>{33850961-E37E-4E45-8D62-49A2CAD585CA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.OutlookApi</RootNamespace>
+    <RootNamespace>NetOffice.OutlookApi</RootNamespace>
     <AssemblyName>OutlookApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

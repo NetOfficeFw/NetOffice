@@ -364,7 +364,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PageFields">optional object PageFields</param>
 		/// <param name="AppendField">optional object AppendField</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void AddFields(object rowFields=null, object columnFields=null, object pageFields=null, object appendField=null)
+		public void AddFields(object rowFields, object columnFields, object pageFields, object appendField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowFields, columnFields, pageFields, appendField);
 			Invoker.Method(this, "AddFields", paramsArray);

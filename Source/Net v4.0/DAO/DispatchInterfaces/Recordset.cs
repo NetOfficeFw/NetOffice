@@ -743,7 +743,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset OpenRecordset(object type=null, object options=null)
+		public NetOffice.DAOApi.Recordset OpenRecordset(object type, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options);
 			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
@@ -885,7 +885,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Key12">optional object Key12</param>
 		/// <param name="Key13">optional object Key13</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void Seek(string comparison, object key1, object key2=null, object key3=null, object key4=null, object key5=null, object key6=null, object key7=null, object key8=null, object key9=null, object key10=null, object key11=null, object key12=null, object key13=null)
+		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10, object key11, object key12, object key13)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12, key13);
 			Invoker.Method(this, "Seek", paramsArray);
@@ -930,7 +930,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="NewQueryDef">optional object NewQueryDef</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void Requery(object newQueryDef=null)
+		public void Requery(object newQueryDef)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newQueryDef);
 			Invoker.Method(this, "Requery", paramsArray);
@@ -952,7 +952,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Rows">Int32 Rows</param>
 		/// <param name="StartBookmark">optional object StartBookmark</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void Move(Int32 rows, object startBookmark=null)
+		public void Move(Int32 rows, object startBookmark)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rows, startBookmark);
 			Invoker.Method(this, "Move", paramsArray);
@@ -975,7 +975,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Rows">optional object Rows</param>
 		/// <param name="StartBookmark">optional object StartBookmark</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void FillCache(object rows=null, object startBookmark=null)
+		public void FillCache(object rows, object startBookmark)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rows, startBookmark);
 			Invoker.Method(this, "FillCache", paramsArray);
@@ -997,7 +997,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Options">optional object Options</param>
 		/// <param name="Inconsistent">optional object Inconsistent</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset CreateDynaset(object options=null, object inconsistent=null)
+		public NetOffice.DAOApi.Recordset CreateDynaset(object options, object inconsistent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options, inconsistent);
 			object returnItem = Invoker.MethodReturn(this, "CreateDynaset", paramsArray);
@@ -1022,7 +1022,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset CreateSnapshot(object options=null)
+		public NetOffice.DAOApi.Recordset CreateSnapshot(object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);
 			object returnItem = Invoker.MethodReturn(this, "CreateSnapshot", paramsArray);
@@ -1083,7 +1083,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="NumRows">optional object NumRows</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public object GetRows(object numRows=null)
+		public object GetRows(object numRows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows);
 			object returnItem = Invoker.MethodReturn(this, "GetRows", paramsArray);

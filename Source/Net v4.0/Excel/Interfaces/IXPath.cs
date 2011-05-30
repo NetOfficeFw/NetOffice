@@ -160,7 +160,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SelectionNamespace">optional object SelectionNamespace</param>
 		/// <param name="Repeating">optional object Repeating</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public Int32 SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace=null, object repeating=null)
+		public Int32 SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace, object repeating)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath, selectionNamespace, repeating);
 			object returnItem = Invoker.MethodReturn(this, "SetValue", paramsArray);

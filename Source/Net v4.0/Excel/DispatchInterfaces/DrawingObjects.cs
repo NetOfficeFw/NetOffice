@@ -1299,7 +1299,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Select(object replace=null)
+		public object Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
@@ -1381,7 +1381,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Text">object Text</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object AddItem(object text, object index=null)
+		public object AddItem(object text, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, index);
 			object returnItem = Invoker.MethodReturn(this, "AddItem", paramsArray);
@@ -1426,7 +1426,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
 		/// <param name="SpellLang">optional object SpellLang</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object CheckSpelling(object customDictionary=null, object ignoreUppercase=null, object alwaysSuggest=null, object spellLang=null)
+		public object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object spellLang)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, spellLang);
 			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
@@ -1487,7 +1487,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object List(object index=null)
+		public object List(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "List", paramsArray);
@@ -1559,7 +1559,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Index">Int32 Index</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object RemoveItem(Int32 index, object count=null)
+		public object RemoveItem(Int32 index, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, count);
 			object returnItem = Invoker.MethodReturn(this, "RemoveItem", paramsArray);
@@ -1604,7 +1604,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Left">optional object Left</param>
 		/// <param name="Top">optional object Top</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Reshape(Int32 vertex, object insert, object left=null, object top=null)
+		public object Reshape(Int32 vertex, object insert, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vertex, insert, left, top);
 			object returnItem = Invoker.MethodReturn(this, "Reshape", paramsArray);
@@ -1647,7 +1647,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Selected(object index=null)
+		public object Selected(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Selected", paramsArray);
@@ -1701,7 +1701,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Index1">optional object Index1</param>
 		/// <param name="Index2">optional object Index2</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Vertices(object index1=null, object index2=null)
+		public object Vertices(object index1, object index2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
 			object returnItem = Invoker.MethodReturn(this, "Vertices", paramsArray);
@@ -1771,7 +1771,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Link">optional object Link</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object LinkCombo(object link=null)
+		public object LinkCombo(object link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(link);
 			object returnItem = Invoker.MethodReturn(this, "LinkCombo", paramsArray);

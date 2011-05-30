@@ -137,7 +137,7 @@ namespace NetOffice.WordApi
 		/// <param name="Visible">optional object Visible</param>
 		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
 		[SupportByLibrary("Word", 14)]
-		public NetOffice.WordApi.ProtectedViewWindow Open(object fileName, object addToRecentFiles=null, object passwordDocument=null, object visible=null, object openAndRepair=null)
+		public NetOffice.WordApi.ProtectedViewWindow Open(object fileName, object addToRecentFiles, object passwordDocument, object visible, object openAndRepair)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, addToRecentFiles, passwordDocument, visible, openAndRepair);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);

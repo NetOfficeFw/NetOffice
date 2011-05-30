@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="CommandText">object CommandText</param>
 		/// <param name="lCmdtype">optional object lCmdtype</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype=null)
+		public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, description, connectionString, commandText, lCmdtype);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

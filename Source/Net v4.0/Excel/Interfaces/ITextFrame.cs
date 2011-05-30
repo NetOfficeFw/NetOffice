@@ -329,7 +329,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Start">optional object Start</param>
 		/// <param name="Length">optional object Length</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Characters Characters(object start=null, object length=null)
+		public NetOffice.ExcelApi.Characters Characters(object start, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Characters", paramsArray);

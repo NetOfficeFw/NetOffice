@@ -136,7 +136,7 @@ namespace NetOffice.WordApi
 		/// <param name="NumArgs">optional object NumArgs</param>
 		/// <param name="NumCols">optional object NumCols</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.OMathFunction Add(NetOffice.WordApi.Range range, NetOffice.WordApi.Enums.WdOMathFunctionType type, object numArgs=null, object numCols=null)
+		public NetOffice.WordApi.OMathFunction Add(NetOffice.WordApi.Range range, NetOffice.WordApi.Enums.WdOMathFunctionType type, object numArgs, object numCols)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, type, numArgs, numCols);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

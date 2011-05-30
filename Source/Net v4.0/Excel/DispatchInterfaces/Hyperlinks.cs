@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ScreenTip">optional object ScreenTip</param>
 		/// <param name="TextToDisplay">optional object TextToDisplay</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public COMObject Add(object anchor, string address, object subAddress=null, object screenTip=null, object textToDisplay=null)
+		public COMObject Add(object anchor, string address, object subAddress, object screenTip, object textToDisplay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress, screenTip, textToDisplay);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

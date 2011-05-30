@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="ItemData">optional object ItemData</param>
 		/// <param name="SubItems">optional object SubItems</param>
 		[SupportByLibrary("Office", 14)]
-		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId, object itemData=null, object subItems=null)
+		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId, object itemData, object subItems)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId, itemData, subItems);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

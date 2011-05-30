@@ -8,7 +8,7 @@
     <ProjectGuid>{377A3B03-736A-480E-B246-914C4BF5E868}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.ADODBApi</RootNamespace>
+    <RootNamespace>NetOffice.ADODBApi</RootNamespace>
     <AssemblyName>ADODBApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

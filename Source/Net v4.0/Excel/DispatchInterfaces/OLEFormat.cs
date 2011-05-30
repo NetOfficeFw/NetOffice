@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Verb">optional object Verb</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Verb(object verb=null)
+		public void Verb(object verb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(verb);
 			Invoker.Method(this, "Verb", paramsArray);

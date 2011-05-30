@@ -181,7 +181,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="Type">optional object Type</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public COMObject Add(object type=null)
+		public COMObject Add(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -325,7 +325,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Property">string Property</param>
 		/// <param name="Descending">optional object Descending</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public void Sort(string property, object descending=null)
+		public void Sort(string property, object descending)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(property, descending);
 			Invoker.Method(this, "Sort", paramsArray);

@@ -398,7 +398,7 @@ namespace NetOffice.AccessApi
 		/// <param name="UserID">optional object UserID</param>
 		/// <param name="Password">optional object Password</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public void OpenConnection(object baseConnectionString=null, object userID=null, object password=null)
+		public void OpenConnection(object baseConnectionString, object userID, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(baseConnectionString, userID, password);
 			Invoker.Method(this, "OpenConnection", paramsArray);

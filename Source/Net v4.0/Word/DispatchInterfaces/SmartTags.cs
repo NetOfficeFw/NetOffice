@@ -135,7 +135,7 @@ namespace NetOffice.WordApi
 		/// <param name="Range">optional object Range</param>
 		/// <param name="Properties">optional object Properties</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.SmartTag Add(string name, object range=null, object properties=null)
+		public NetOffice.WordApi.SmartTag Add(string name, object range, object properties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, range, properties);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

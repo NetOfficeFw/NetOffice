@@ -162,7 +162,7 @@ namespace NetOffice.WordApi
 		/// <param name="IncludePageNumbers">optional object IncludePageNumbers</param>
 		/// <param name="AddedStyles">optional object AddedStyles</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption=null, object includeLabel=null, object useHeadingStyles=null, object upperHeadingLevel=null, object lowerHeadingLevel=null, object useFields=null, object tableID=null, object rightAlignPageNumbers=null, object includePageNumbers=null, object addedStyles=null)
+		public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers, object addedStyles)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
@@ -192,7 +192,7 @@ namespace NetOffice.WordApi
 		/// <param name="TableID">optional object TableID</param>
 		/// <param name="Level">optional object Level</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry=null, object entryAutoText=null, object tableID=null, object level=null)
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object tableID, object level)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, tableID, level);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
@@ -230,7 +230,7 @@ namespace NetOffice.WordApi
 		/// <param name="UseHyperlinks">optional object UseHyperlinks</param>
 		/// <param name="HidePageNumbersInWeb">optional object HidePageNumbersInWeb</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption=null, object includeLabel=null, object useHeadingStyles=null, object upperHeadingLevel=null, object lowerHeadingLevel=null, object useFields=null, object tableID=null, object rightAlignPageNumbers=null, object includePageNumbers=null, object addedStyles=null, object useHyperlinks=null, object hidePageNumbersInWeb=null)
+		public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers, object addedStyles, object useHyperlinks, object hidePageNumbersInWeb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles, useHyperlinks, hidePageNumbersInWeb);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

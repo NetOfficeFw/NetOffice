@@ -390,7 +390,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public COMObject LegendEntries(object index=null)
+		public COMObject LegendEntries(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "LegendEntries", paramsArray);

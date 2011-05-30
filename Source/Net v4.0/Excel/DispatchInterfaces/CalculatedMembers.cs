@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SolveOrder">optional object SolveOrder</param>
 		/// <param name="Type">optional object Type</param>
 		[SupportByLibrary("Excel", 10,11,12)]
-		public NetOffice.ExcelApi.CalculatedMember Add(string name, string formula, object solveOrder=null, object type=null)
+		public NetOffice.ExcelApi.CalculatedMember Add(string name, string formula, object solveOrder, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="DisplayFolder">optional object DisplayFolder</param>
 		/// <param name="HierarchizeDistinct">optional object HierarchizeDistinct</param>
 		[SupportByLibrary("Excel", 14)]
-		public NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder=null, object type=null, object dynamic=null, object displayFolder=null, object hierarchizeDistinct=null)
+		public NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic, object displayFolder, object hierarchizeDistinct)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, dynamic, displayFolder, hierarchizeDistinct);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SolveOrder">optional object SolveOrder</param>
 		/// <param name="Type">optional object Type</param>
 		[SupportByLibrary("Excel", 14)]
-		public NetOffice.ExcelApi.CalculatedMember _Add(string name, string formula, object solveOrder=null, object type=null)
+		public NetOffice.ExcelApi.CalculatedMember _Add(string name, string formula, object solveOrder, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);

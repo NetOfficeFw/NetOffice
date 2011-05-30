@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Toolbar Add(object name=null)
+		public NetOffice.ExcelApi.Toolbar Add(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

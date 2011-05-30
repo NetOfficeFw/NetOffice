@@ -94,7 +94,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Precision">optional object Precision</param>
 		/// <param name="Direction">optional object Direction</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.SchemaParameter Add(string name, object dataType=null, object size=null, object scale=null, object precision=null, object direction=null)
+		public NetOffice.OWC10Api.SchemaParameter Add(string name, object dataType, object size, object scale, object precision, object direction)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType, size, scale, precision, direction);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

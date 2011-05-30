@@ -8,7 +8,7 @@
     <ProjectGuid>{20313A53-5D62-4E11-ACE9-1694E6DBB765}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.MSDATASRCApi</RootNamespace>
+    <RootNamespace>NetOffice.MSDATASRCApi</RootNamespace>
     <AssemblyName>MSDATASRCApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

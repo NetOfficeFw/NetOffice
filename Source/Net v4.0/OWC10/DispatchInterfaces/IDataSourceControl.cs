@@ -1260,7 +1260,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="FullPrecision">optional object FullPrecision</param>
 		/// <param name="TriangulationPrecision">optional object TriangulationPrecision</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency, object fullPrecision=null, object triangulationPrecision=null)
+		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency, object fullPrecision, object triangulationPrecision)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency, fullPrecision, triangulationPrecision);
 			object returnItem = Invoker.MethodReturn(this, "EuroConvert", paramsArray);
@@ -1342,7 +1342,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Value">object Value</param>
 		/// <param name="ValueIfNull">optional object ValueIfNull</param>
 		[SupportByLibrary("OWC10", 1)]
-		public object Nz(object value, object valueIfNull=null)
+		public object Nz(object value, object valueIfNull)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value, valueIfNull);
 			object returnItem = Invoker.MethodReturn(this, "Nz", paramsArray);

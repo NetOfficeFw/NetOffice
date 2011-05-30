@@ -18,6 +18,8 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
     {
         private static List<XDocument> _docuFiles = new List<XDocument>();
 
+        #region Public Methods
+        
         public static string AnalyzeNetOfficeAssemblies(XDocument assemblyDocument, List<AssemblyNameReference> listReferences, AssemblyAnalyzerSettings settings)
         {
             List<string> listResult = new List<string>();
@@ -49,7 +51,7 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                     string[] libs = GetSupportByLibrary(itemField, ref libName);
                     if (!FieldPassed(libName, libs, settings))
                     {
-                        string warning = string.Format("class {0}: Field {1} {2}; SupportByLibrary {4}, {3}", 
+                        string warning = string.Format("class {0}: Field {2}; {1}; SupportByLibrary {4}, {3}", 
                                                         itemClass.Attribute("Name").Value, itemField.Attribute("Type").Value,
                                                         itemField.Attribute("Name").Value, ToString(libs), libName);
                         listResult.Add(warning); 
@@ -82,7 +84,6 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                     string[] warnings = new string[0];
                     if (!MethodBodyPassed(itemClass, itemMethod, settings, ref warnings))
                     {
-
                         foreach (string item in warnings)
                             listResult.Add(item);
                     }
@@ -105,6 +106,10 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
             return result;
         }
 
+        #endregion
+
+        #region Private Methods
+       
         private static string ToString(string[] value)
         {
             string result = "";
@@ -125,22 +130,84 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
             throw (new ArgumentException(name + " not exists."));
         }
 
+        private static string GetEnumMemberName(string enumName, string value)
+        {
+            string[] splitArray = enumName.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+            XDocument apiDocument = GetDocument(splitArray[1]);
+            var memberNodes = (from a in apiDocument.Element("doc").Element("members").Elements("member")
+                                   where a.Attribute("name").Value.StartsWith("F:" + enumName)
+                                   select a);
+            
+            foreach (XElement item in memberNodes)
+            {
+                if (value == item.Element("remarks").Value)
+                    return item.Attribute("name").Value.Substring(2);
+            }
+            throw new ArgumentException(enumName + " not exists or has no remarks tag");
+        }
+
         private static string[] GetSupportByLibrary(XElement itemField, ref string libName)
         {
-            string[] splitArray = itemField.Attribute("Type").Value.Split(new string[]{ "." },StringSplitOptions.RemoveEmptyEntries);
-            XDocument apiDocument = GetDocument(splitArray[1]);
+            switch (itemField.Name.LocalName)
+            {
+                case "Var":
+                case "Field":
+                {
+                    string[] splitArray = itemField.Attribute("Type").Value.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+                    XDocument apiDocument = GetDocument(splitArray[1]);
 
-            XElement memberNode = (from a in apiDocument.Element("doc").Element("members").Elements("member")
-                                where a.Attribute("name").Value.Equals("T:" + itemField.Attribute("Type").Value)
-                                select a).FirstOrDefault();
-            
-            string value = memberNode.Value.Replace("\r\n", "").Replace("\n", "").Replace("\t", "");
-            value = value.Substring(value.IndexOf("SupportByLibrary") + "SupportByLibrary".Length).Trim();
-            libName = value.Substring(0, value.IndexOf(" ")).Replace(",","");
-            value = value.Substring(value.IndexOf(" ") + 1).Replace(" ", "");
+                    XElement memberNode = (from a in apiDocument.Element("doc").Element("members").Elements("member")
+                                           where a.Attribute("name").Value.Equals("T:" + itemField.Attribute("Type").Value)
+                                           select a).FirstOrDefault();
 
-            string[] returnArray = value.Split(new String[]{","},StringSplitOptions.RemoveEmptyEntries);
-            return returnArray;
+                    string value = memberNode.Value.Replace("\r\n", "").Replace("\n", "").Replace("\t", "");
+                    value = value.Substring(value.IndexOf("SupportByLibrary") + "SupportByLibrary".Length).Trim();
+                    libName = value.Substring(0, value.IndexOf(" ")).Replace(",", "");
+                    value = value.Substring(value.IndexOf(" ") + 1).Replace(" ", "");
+
+                    string[] returnArray = value.Split(new String[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                    return returnArray;
+                }
+                case "Set":
+                {
+                    string[] splitArray = itemField.Attribute("Value").Value.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+                    XDocument apiDocument = GetDocument(splitArray[1]);
+
+                    XElement memberNode = (from a in apiDocument.Element("doc").Element("members").Elements("member")
+                                           where a.Attribute("name").Value.Equals("F:" + itemField.Attribute("Value").Value)
+                                           select a).FirstOrDefault();
+
+                    string value = memberNode.Value.Replace("\r\n", "").Replace("\n", "").Replace("\t", "");
+                    value = value.Substring(0, value.LastIndexOf(","));
+                    value = value.Substring(value.IndexOf("SupportByLibrary") + "SupportByLibrary".Length).Trim();
+                    libName = value.Substring(0, value.IndexOf(" ")).Replace(",", "");
+                    value = value.Substring(value.IndexOf(" ") + 1).Replace(" ", "");
+
+                    string[] returnArray = value.Split(new String[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                    return returnArray;
+                }
+                case "FieldSet":
+                {
+                    string[] splitArray = itemField.FirstAttribute.Value.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+                    XDocument apiDocument = GetDocument(splitArray[1]);
+
+                    XElement memberNode = (from a in apiDocument.Element("doc").Element("members").Elements("member")
+                                           where a.Attribute("name").Value.Equals("F:" + itemField.FirstAttribute.Value)
+                                           select a).FirstOrDefault();
+
+                    string value = memberNode.Value.Replace("\r\n", "").Replace("\n", "").Replace("\t", "");
+                    value = value.Substring(0, value.LastIndexOf(","));
+                    value = value.Substring(value.IndexOf("SupportByLibrary") + "SupportByLibrary".Length).Trim();
+                    libName = value.Substring(0, value.IndexOf(" ")).Replace(",", "");
+                    value = value.Substring(value.IndexOf(" ") + 1).Replace(" ", "");
+
+                    string[] returnArray = value.Split(new String[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                    return returnArray;
+                }
+
+            }
+
+            throw new ArgumentException(itemField + " is unkown");
         }
 
         private static bool Includes(string[] libs, string value)
@@ -229,9 +296,8 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                         string[] libs = GetSupportByLibrary(itemEntity, ref libName);
                         if (!FieldPassed(libName, libs, settings))
                         {
-                            string warning = string.Format("class {0}: Entity ReturnValue {4} {1}; SupportByLibrary {3}, {2}",
-                                                            itemClass.Attribute("Name").Value,
-                                                            itemMethod.Attribute("Name").Value,
+                            string warning = string.Format("class {0}: Method {1}; ReturnValue: {4}; SupportByLibrary {3}, {2}",
+                                                            itemClass.Attribute("Name").Value, itemMethod.Attribute("Name").Value,
                                                             ToString(libs), libName, itemEntity.Attribute("Type").Value);
                             
                             listWarnings.Add(warning);                          
@@ -244,9 +310,8 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                         string[] libs = GetSupportByLibrary(itemEntity, ref libName);
                         if (!FieldPassed(libName, libs, settings))
                         {
-                            string warning = string.Format("class {0}: Entity Local Variable {4} {1}; SupportByLibrary {3}, {2}",
-                                                            itemClass.Attribute("Name").Value,
-                                                            itemMethod.Attribute("Name").Value,
+                            string warning = string.Format("class {0}: Method {1}; Variable: {4}; SupportByLibrary {3}, {2}",
+                                                            itemClass.Attribute("Name").Value, itemMethod.Attribute("Name").Value,
                                                             ToString(libs), libName, itemEntity.Attribute("Type").Value);
 
                             listWarnings.Add(warning);
@@ -257,22 +322,74 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                         {
                             string setValue = itemSet.Attribute("Value").Value;
                             if (IsEnum(type))
-                            { 
+                            {
+                                itemSet.Attribute("Value").Value = GetEnumMemberName(type, setValue);
+                                libName = "";
+                                libs = GetSupportByLibrary(itemSet, ref libName);                                
+                            }
+                            if (!FieldPassed(libName, libs, settings))
+                            {
+                                string warning = string.Format("class {0}: Method {1}; Variable Set: {4}; SupportByLibrary {3}, {2}",
+                                                                itemClass.Attribute("Name").Value, itemMethod.Attribute("Name").Value,
+                                                                ToString(libs), libName, itemSet.Attribute("Value").Value);
+
+                                listWarnings.Add(warning);
                             }
                         }
 
                         break;
                     }
                     case "FieldSet":
-                        break;
+                    {
+                        string libName = "";
+                        string[] libs = null;
+                        XElement field = (from a in itemClass.Element("Fields").Elements("Field")
+                                          where a.Attribute("Name").Value.Equals(itemEntity.FirstAttribute.Name.LocalName)
+                                   select a).FirstOrDefault();
+                        string type = field.Attribute("Type").Value;
+                        string setValue = itemEntity.FirstAttribute.Value;
+                        if (IsEnum(type))
+                        {
+                            itemEntity.FirstAttribute.Value = GetEnumMemberName(type, setValue);
+                            libs =  GetSupportByLibrary(itemEntity, ref libName);
+                        }
 
+                        if (!FieldPassed(libName, libs, settings))
+                        {
+                            string warning = string.Format("class {0}: Method {1}; Field Set: {4}; SupportByLibrary {3}, {2}",
+                                                            itemClass.Attribute("Name").Value, itemMethod.Attribute("Name").Value,
+                                                            ToString(libs), libName, itemEntity.FirstAttribute.Value);
+
+                            listWarnings.Add(warning);
+                        }
+
+                        break;
+                    }
                     case "Call":
-                        break;
+                    {
+                        if (itemEntity.Attribute("Name").Value != ".ctor")
+                        {
+                            string targetType = itemEntity.Attribute("Name").Value.StartsWith("set_") 
+                                                || itemEntity.Attribute("Name").Value.StartsWith("get_") ? "P:" : "M:";
 
+
+                        }
+                        break;
+                    }
                 }
             }
 
-            return false;
+            warnings = new string[listWarnings.Count];
+            int i = 0;
+            foreach (string item in listWarnings)
+            {
+                warnings[i] = item;
+                i++;
+            }
+
+            return warnings.Length > 0 ? false : true;
         }
+        
+        #endregion
     }
 }

@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Password">optional object Password</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public Int32 Unprotect(object password=null)
+		public Int32 Unprotect(object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password);
 			object returnItem = Invoker.MethodReturn(this, "Unprotect", paramsArray);

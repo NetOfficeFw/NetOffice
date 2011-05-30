@@ -144,7 +144,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="Prompt">optional object Prompt</param>
 		[SupportByLibrary("Access", 12,14)]
-		public void Execute(object prompt=null)
+		public void Execute(object prompt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(prompt);
 			Invoker.Method(this, "Execute", paramsArray);

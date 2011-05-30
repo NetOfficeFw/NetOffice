@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Position">optional object Position</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.ListColumn Add(object position=null)
+		public NetOffice.ExcelApi.ListColumn Add(object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

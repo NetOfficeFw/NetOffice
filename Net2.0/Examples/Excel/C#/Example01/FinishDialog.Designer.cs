@@ -50,7 +50,7 @@
             this.buttonOpenWorkbook.Name = "buttonOpenWorkbook";
             this.buttonOpenWorkbook.Size = new System.Drawing.Size(102, 22);
             this.buttonOpenWorkbook.TabIndex = 3;
-            this.buttonOpenWorkbook.Text = "Open Document";
+            this.buttonOpenWorkbook.Text = "Open Workbook";
             this.buttonOpenWorkbook.UseVisualStyleBackColor = true;
             // 
             // labelMessage

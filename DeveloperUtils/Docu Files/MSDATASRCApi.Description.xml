@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Assembly Name="MSDATASRCApi">
+  <Types>
+    <Type Name="DataSource">
+      <SupportByLibrary Name="MSDATASRC">
+        <Version>1</Version>
+      </SupportByLibrary>
+      <Method Name="getDataMember" Type="LateBindingApi.Core.COMObject">
+        <SupportByLibrary Name="MSDATASRC">
+          <Version>1</Version>
+        </SupportByLibrary>
+        <Param Name="bstrDM" Type="System.String" />
+        <Param Name="riid" Type="System.Guid" />
+      </Method>
+      <Method Name="getDataMemberName" Type="System.String">
+        <SupportByLibrary Name="MSDATASRC">
+          <Version>1</Version>
+        </SupportByLibrary>
+        <Param Name="lIndex" Type="System.Int32" />
+      </Method>
+      <Method Name="getDataMemberCount" Type="System.Int32">
+        <SupportByLibrary Name="MSDATASRC">
+          <Version>1</Version>
+        </SupportByLibrary>
+      </Method>
+      <Method Name="addDataSourceListener" Type="System.Int32">
+        <SupportByLibrary Name="MSDATASRC">
+          <Version>1</Version>
+        </SupportByLibrary>
+        <Param Name="pDSL" Type="NetOffice.MSDATASRCApi.DataSourceListener" />
+      </Method>
+      <Method Name="removeDataSourceListener" Type="System.Int32">
+        <SupportByLibrary Name="MSDATASRC">
+          <Version>1</Version>
+        </SupportByLibrary>
+        <Param Name="pDSL" Type="NetOffice.MSDATASRCApi.DataSourceListener" />
+      </Method>
+    </Type>
+    <Type Name="DataSourceListener">
+      <SupportByLibrary Name="MSDATASRC">
+        <Version>1</Version>
+      </SupportByLibrary>
+      <Method Name="dataMemberChanged" Type="System.Int32">
+        <SupportByLibrary Name="MSDATASRC">
+          <Version>1</Version>
+        </SupportByLibrary>
+        <Param Name="bstrDM" Type="System.String" />
+      </Method>
+      <Method Name="dataMemberAdded" Type="System.Int32">
+        <SupportByLibrary Name="MSDATASRC">
+          <Version>1</Version>
+        </SupportByLibrary>
+        <Param Name="bstrDM" Type="System.String" />
+      </Method>
+      <Method Name="dataMemberRemoved" Type="System.Int32">
+        <SupportByLibrary Name="MSDATASRC">
+          <Version>1</Version>
+        </SupportByLibrary>
+        <Param Name="bstrDM" Type="System.String" />
+      </Method>
+    </Type>
+  </Types>
+  <Enums></Enums>
+  <Constants></Constants>
+</Assembly>

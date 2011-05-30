@@ -266,7 +266,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Structure">optional object Structure</param>
 		/// <param name="Windows">optional object Windows</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Protect(object password=null, object structure=null, object windows=null)
+		public void Protect(object password, object structure, object windows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password, structure, windows);
 			Invoker.Method(this, "Protect", paramsArray);
@@ -297,7 +297,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Password">optional object Password</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Unprotect(object password=null)
+		public void Unprotect(object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password);
 			Invoker.Method(this, "Unprotect", paramsArray);

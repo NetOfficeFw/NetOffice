@@ -150,7 +150,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Count">optional object Count</param>
 		/// <param name="Type">optional object Type</param>
 		[SupportByLibrary("OWC10", 1)]
-		public COMObject Add(object before=null, object after=null, object count=null, object type=null)
+		public COMObject Add(object before, object after, object count, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after, count, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -176,7 +176,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Copy(object before=null, object after=null)
+		public void Copy(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
 			Invoker.Method(this, "Copy", paramsArray);
@@ -208,7 +208,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Move(object before=null, object after=null)
+		public void Move(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
 			Invoker.Method(this, "Move", paramsArray);
@@ -229,7 +229,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Select(object replace=null)
+		public void Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			Invoker.Method(this, "Select", paramsArray);

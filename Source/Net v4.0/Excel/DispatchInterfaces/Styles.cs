@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Name">string Name</param>
 		/// <param name="BasedOn">optional object BasedOn</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Style Add(string name, object basedOn=null)
+		public NetOffice.ExcelApi.Style Add(string name, object basedOn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, basedOn);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

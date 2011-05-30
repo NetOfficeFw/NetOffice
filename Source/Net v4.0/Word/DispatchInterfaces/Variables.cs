@@ -134,7 +134,7 @@ namespace NetOffice.WordApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Value">optional object Value</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Variable Add(string name, object value=null)
+		public NetOffice.WordApi.Variable Add(string name, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

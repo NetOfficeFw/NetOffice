@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Destination">NetOffice.ExcelApi.Range Destination</param>
 		/// <param name="Sql">optional object Sql</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.QueryTable Add(object connection, NetOffice.ExcelApi.Range destination, object sql=null)
+		public NetOffice.ExcelApi.QueryTable Add(object connection, NetOffice.ExcelApi.Range destination, object sql)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connection, destination, sql);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

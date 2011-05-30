@@ -431,7 +431,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="ItemText">string ItemText</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public void AddItem(string itemText, object index=null)
+		public void AddItem(string itemText, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(itemText, index);
 			Invoker.Method(this, "AddItem", paramsArray);

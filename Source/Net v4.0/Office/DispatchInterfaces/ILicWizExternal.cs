@@ -234,7 +234,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="pvarId">optional object pvarId</param>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		public void ShowHelp(object pvarId=null)
+		public void ShowHelp(object pvarId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarId);
 			Invoker.Method(this, "ShowHelp", paramsArray);

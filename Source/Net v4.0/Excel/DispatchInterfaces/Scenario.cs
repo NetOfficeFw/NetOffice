@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ChangingCells">object ChangingCells</param>
 		/// <param name="Values">optional object Values</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object ChangeScenario(object changingCells, object values=null)
+		public object ChangeScenario(object changingCells, object values)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(changingCells, values);
 			object returnItem = Invoker.MethodReturn(this, "ChangeScenario", paramsArray);

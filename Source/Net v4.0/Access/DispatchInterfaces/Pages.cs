@@ -89,7 +89,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="Before">optional object Before</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public NetOffice.AccessApi.Page Add(object before=null)
+		public NetOffice.AccessApi.Page Add(object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -114,7 +114,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="Item">optional object Item</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public void Remove(object item=null)
+		public void Remove(object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
 			Invoker.Method(this, "Remove", paramsArray);

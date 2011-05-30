@@ -8,7 +8,7 @@
     <ProjectGuid>{87D0F51E-B87D-483D-85E1-2152BA45403E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.AccessApi</RootNamespace>
+    <RootNamespace>NetOffice.AccessApi</RootNamespace>
     <AssemblyName>AccessApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

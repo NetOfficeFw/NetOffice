@@ -120,7 +120,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Key">optional object Key</param>
 		/// <param name="Picture">optional object Picture</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IImage Add(object index=null, object key=null, object picture=null)
+		public NetOffice.MSComctlLibApi.IImage Add(object index, object key, object picture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, picture);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

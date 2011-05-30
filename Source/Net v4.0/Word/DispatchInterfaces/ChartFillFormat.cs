@@ -350,7 +350,7 @@ namespace NetOffice.WordApi
 		/// <param name="PictureStackUnit">optional object PictureStackUnit</param>
 		/// <param name="PicturePlacement">optional object PicturePlacement</param>
 		[SupportByLibrary("Word", 14)]
-		public void UserPicture(object pictureFile=null, object pictureFormat=null, object pictureStackUnit=null, object picturePlacement=null)
+		public void UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit, object picturePlacement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pictureFile, pictureFormat, pictureStackUnit, picturePlacement);
 			Invoker.Method(this, "UserPicture", paramsArray);

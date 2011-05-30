@@ -340,7 +340,7 @@ namespace NetOffice.WordApi
 		/// <param name="CaseSensitive">optional object CaseSensitive</param>
 		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void SortOld(object excludeHeader=null, object sortFieldType=null, object sortOrder=null, object caseSensitive=null, object languageID=null)
+		public void SortOld(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object languageID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive, languageID);
 			Invoker.Method(this, "SortOld", paramsArray);
@@ -370,7 +370,7 @@ namespace NetOffice.WordApi
 		/// <param name="IgnoreHe">optional object IgnoreHe</param>
 		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Sort(object excludeHeader=null, object sortFieldType=null, object sortOrder=null, object caseSensitive=null, object bidiSort=null, object ignoreThe=null, object ignoreKashida=null, object ignoreDiacritics=null, object ignoreHe=null, object languageID=null)
+		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID);
 			Invoker.Method(this, "Sort", paramsArray);

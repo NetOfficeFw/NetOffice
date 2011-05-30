@@ -356,7 +356,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="MinPerChar">Int32 MinPerChar</param>
 		/// <param name="CompleteFormat">optional object CompleteFormat</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public string FreeBusy(DateTime start, Int32 minPerChar, object completeFormat=null)
+		public string FreeBusy(DateTime start, Int32 minPerChar, object completeFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, minPerChar, completeFormat);
 			object returnItem = Invoker.MethodReturn(this, "FreeBusy", paramsArray);

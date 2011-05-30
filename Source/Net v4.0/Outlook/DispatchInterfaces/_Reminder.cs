@@ -197,7 +197,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="SnoozeTime">optional object SnoozeTime</param>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public void Snooze(object snoozeTime=null)
+		public void Snooze(object snoozeTime)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(snoozeTime);
 			Invoker.Method(this, "Snooze", paramsArray);

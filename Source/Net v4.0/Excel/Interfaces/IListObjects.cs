@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
 		/// <param name="Destination">optional object Destination</param>
 		[SupportByLibrary("Excel", 11)]
-		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination=null)
+		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Destination">optional object Destination</param>
 		/// <param name="TableStyleName">optional object TableStyleName</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination=null, object tableStyleName=null)
+		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination, object tableStyleName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination, tableStyleName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="XlListObjectHasHeaders">NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders</param>
 		/// <param name="Destination">optional object Destination</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public NetOffice.ExcelApi.ListObject _Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination=null)
+		public NetOffice.ExcelApi.ListObject _Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);

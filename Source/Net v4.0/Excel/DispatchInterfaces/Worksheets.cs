@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Count">optional object Count</param>
 		/// <param name="Type">optional object Type</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public COMObject Add(object before=null, object after=null, object count=null, object type=null)
+		public COMObject Add(object before, object after, object count, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after, count, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -233,7 +233,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Copy(object before=null, object after=null)
+		public void Copy(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
 			Invoker.Method(this, "Copy", paramsArray);
@@ -277,7 +277,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Move(object before=null, object after=null)
+		public void Move(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
 			Invoker.Method(this, "Move", paramsArray);
@@ -304,7 +304,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
 		[SupportByLibrary("Excel", 9,10,11)]
-		public void _PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null)
+		public void _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
 			Invoker.Method(this, "_PrintOut", paramsArray);
@@ -322,7 +322,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Collate">optional object Collate</param>
 		/// <param name="PrToFileName">optional object PrToFileName</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public void _PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null, object prToFileName=null)
+		public void _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
 			Invoker.Method(this, "_PrintOut", paramsArray);
@@ -343,7 +343,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="EnableChanges">optional object EnableChanges</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void PrintPreview(object enableChanges=null)
+		public void PrintPreview(object enableChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(enableChanges);
 			Invoker.Method(this, "PrintPreview", paramsArray);
@@ -364,7 +364,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Select(object replace=null)
+		public void Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			Invoker.Method(this, "Select", paramsArray);
@@ -392,7 +392,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Collate">optional object Collate</param>
 		/// <param name="PrToFileName">optional object PrToFileName</param>
 		[SupportByLibrary("Excel", 9,10,11)]
-		public void PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null, object prToFileName=null)
+		public void PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -411,7 +411,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PrToFileName">optional object PrToFileName</param>
 		/// <param name="IgnorePrintAreas">optional object IgnorePrintAreas</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public void PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null, object prToFileName=null, object ignorePrintAreas=null)
+		public void PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName, object ignorePrintAreas)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName, ignorePrintAreas);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -438,7 +438,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public void __PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null)
+		public void __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
 			Invoker.Method(this, "__PrintOut", paramsArray);

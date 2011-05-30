@@ -259,7 +259,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="GroupingDefDest">string GroupingDefDest</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.GroupingDef MoveGrouping(string groupingDefDest, object index=null)
+		public NetOffice.OWC10Api.GroupingDef MoveGrouping(string groupingDefDest, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefDest, index);
 			object returnItem = Invoker.MethodReturn(this, "MoveGrouping", paramsArray);

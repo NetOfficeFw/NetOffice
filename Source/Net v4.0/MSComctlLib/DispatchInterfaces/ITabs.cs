@@ -142,7 +142,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="pvCaption">optional object pvCaption</param>
 		/// <param name="pvImage">optional object pvImage</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.ITab Add(object pvIndex=null, object pvKey=null, object pvCaption=null, object pvImage=null)
+		public NetOffice.MSComctlLibApi.ITab Add(object pvIndex, object pvKey, object pvCaption, object pvImage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex, pvKey, pvCaption, pvImage);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

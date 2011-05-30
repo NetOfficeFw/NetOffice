@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="NewTableStyleName">optional object NewTableStyleName</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public NetOffice.ExcelApi.TableStyle Duplicate(object newTableStyleName=null)
+		public NetOffice.ExcelApi.TableStyle Duplicate(object newTableStyleName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newTableStyleName);
 			object returnItem = Invoker.MethodReturn(this, "Duplicate", paramsArray);

@@ -178,7 +178,7 @@ namespace NetOffice.WordApi
 		/// <param name="Where">NetOffice.WordApi.Range Where</param>
 		/// <param name="RichText">optional object RichText</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range Insert(NetOffice.WordApi.Range where, object richText=null)
+		public NetOffice.WordApi.Range Insert(NetOffice.WordApi.Range where, object richText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(where, richText);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);

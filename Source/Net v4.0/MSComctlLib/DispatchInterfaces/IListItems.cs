@@ -111,7 +111,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Icon">optional object Icon</param>
 		/// <param name="SmallIcon">optional object SmallIcon</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IListItem Add(object index=null, object key=null, object text=null, object icon=null, object smallIcon=null)
+		public NetOffice.MSComctlLibApi.IListItem Add(object index, object key, object text, object icon, object smallIcon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, icon, smallIcon);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

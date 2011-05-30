@@ -116,7 +116,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="vValue">optional object vValue</param>
 		/// <param name="vFormat">optional object vFormat</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void SetData(object vValue=null, object vFormat=null)
+		public void SetData(object vValue, object vFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vValue, vFormat);
 			Invoker.Method(this, "SetData", paramsArray);

@@ -715,7 +715,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="TableName">optional object TableName</param>
 		/// <param name="ReadData">optional object ReadData</param>
 		[SupportByLibrary("Excel", 9)]
-		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName=null, object readData=null)
+		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tableDestination, tableName, readData);
 			object returnItem = Invoker.MethodReturn(this, "CreatePivotTable", paramsArray);
@@ -731,7 +731,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ReadData">optional object ReadData</param>
 		/// <param name="DefaultVersion">optional object DefaultVersion</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName=null, object readData=null, object defaultVersion=null)
+		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData, object defaultVersion)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tableDestination, tableName, readData, defaultVersion);
 			object returnItem = Invoker.MethodReturn(this, "CreatePivotTable", paramsArray);
@@ -770,7 +770,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Description">optional object Description</param>
 		/// <param name="Keywords">optional object Keywords</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public Int32 SaveAsODC(string oDCFileName, object description=null, object keywords=null)
+		public Int32 SaveAsODC(string oDCFileName, object description, object keywords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oDCFileName, description, keywords);
 			object returnItem = Invoker.MethodReturn(this, "SaveAsODC", paramsArray);

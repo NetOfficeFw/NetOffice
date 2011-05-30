@@ -146,7 +146,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index">optional object index</param>
 		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public NetOffice.PowerPointApi.SlideRange Range(object index=null)
+		public NetOffice.PowerPointApi.SlideRange Range(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Range", paramsArray);

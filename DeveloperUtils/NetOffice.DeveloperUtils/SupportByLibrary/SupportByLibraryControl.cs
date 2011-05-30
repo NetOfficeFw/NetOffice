@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
@@ -15,6 +16,8 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
 {
     public partial class SupportByLibraryControl : UserControl, IUtilsControl
     {
+        #region Construction
+        
         public SupportByLibraryControl()
         {
             InitializeComponent();
@@ -44,8 +47,8 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                 }
 
                 AssemblyDefinition assemblyDefinition = AssemblyDefinition.ReadAssembly(paramArray[0]);
-                string result = AssemblyAnalyzer.AnalyzeAssembly(assemblyDefinition, settings);
-                Console.Write(result);
+                string[] result = AssemblyAnalyzer.AnalyzeAssembly(assemblyDefinition, settings);
+                Console.Write(result[0]);
             }
             else
             {
@@ -68,6 +71,8 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                 dataGridView.BorderStyle = BorderStyle.None;
             }
         }
+        
+        #endregion
 
         #region IUtilsControl Members
 
@@ -103,11 +108,14 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
 
         #endregion
 
+        #region Gui Trigger
+        
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
                 return;
 
+            // set all and clear buttons
             if (e.ColumnIndex >= 6)
             {
                 DataGridViewRow row = dataGridView.Rows[e.RowIndex];
@@ -126,21 +134,40 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
         {
             if (!OneOrMoreLibraryVersionIsSelected())
             {
-                MessageBox.Show(this, "Please select one or more Type Library Version first.", "Please select", MessageBoxButtons.OK, MessageBoxIcon.Error);   
+                MessageBox.Show(this, "Please select one or more Type Library Version first.", "Please select", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             OpenFileDialog dialog = new OpenFileDialog();
+            dialog.InitialDirectory = @"D:\Workbench\Sebastian\LateBindingApi\LateBindingApi.CodeGenerator.WFApplication\bin\Debug\NetOffice\ClientApplication\bin\Debug";
             dialog.Filter = "*.exe|*.exe|*.dll|*.dll|All Files|*.*";
             if (DialogResult.OK == dialog.ShowDialog(this))
             {
+                if (Path.GetFileName(dialog.FileName) == "NetOffice.DeveloperUtils.exe")
+                {
+                    MessageBox.Show(this, "It's not possible to analyze NetOffice.DeveloperUtils.exe", "Selection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 AssemblyDefinition assemblyDefinition = AssemblyDefinition.ReadAssembly(dialog.FileName);
                 textBoxAssembly.Text = assemblyDefinition.Name.ToString();
-                string result = AssemblyAnalyzer.AnalyzeAssembly(assemblyDefinition, CreateSettings());               
-                textBoxConsole.Text = result;
+                
+                string[] result = AssemblyAnalyzer.AnalyzeAssembly(assemblyDefinition, CreateSettings());
+                
+                textBoxConsole.Text = result[0];
+                textBoxDocument.Text = result[1];
             }
         }
 
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// set settings from commandline string array
+        /// </summary>
+        /// <param name="settings"></param>
+        /// <param name="array"></param>
         private void SetSettings(AssemblyAnalyzerSettingsLibrary settings, string[] array)
         {
             for (int i = 1; i < array.Length; i++)
@@ -168,6 +195,11 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
             }
         }
 
+        /// <summary>
+        /// create new AssemblyAnalyzerSettings from commandline arguments
+        /// </summary>
+        /// <param name="paramArray"></param>
+        /// <returns></returns>
         private AssemblyAnalyzerSettings CreateSettings(string[] paramArray)
         {
             try
@@ -210,6 +242,10 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
             
         }
 
+        /// <summary>
+        /// create new AssemblyAnalyzerSettings from gui selection 
+        /// </summary>
+        /// <returns></returns>
         private AssemblyAnalyzerSettings CreateSettings()
         {
             AssemblyAnalyzerSettings settings = new AssemblyAnalyzerSettings();
@@ -248,7 +284,7 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
             {
                 for (int y = 0; y <= 4; y++)
                 {
-                    bool  value = (bool)dataGridView.Rows[y].Cells[i].Value;
+                    bool value = (bool)dataGridView.Rows[y].Cells[i].Value;
                     if (value)
                         settings.Office.Version9 = true;
                 }                
@@ -257,6 +293,10 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
             return settings;
         }
 
+        /// <summary>
+        /// checks one ore more lib versions are selected in gui
+        /// </summary>
+        /// <returns></returns>
         private bool OneOrMoreLibraryVersionIsSelected()
         {
             for (int i = 1; i <= 5; i++)
@@ -308,5 +348,7 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
             }
             return false;
         }
+
+        #endregion
     }
 }

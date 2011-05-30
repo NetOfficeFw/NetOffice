@@ -162,7 +162,7 @@ namespace NetOffice.WordApi
 		/// <param name="IncludeCategoryHeader">optional object IncludeCategoryHeader</param>
 		/// <param name="PageNumberSeparator">optional object PageNumberSeparator</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category=null, object bookmark=null, object passim=null, object keepEntryFormatting=null, object separator=null, object includeSequenceName=null, object entrySeparator=null, object pageRangeSeparator=null, object includeCategoryHeader=null, object pageNumberSeparator=null)
+		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName, object entrySeparator, object pageRangeSeparator, object includeCategoryHeader, object pageNumberSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader, pageNumberSeparator);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -203,7 +203,7 @@ namespace NetOffice.WordApi
 		/// <param name="LongCitationAutoText">optional object LongCitationAutoText</param>
 		/// <param name="Category">optional object Category</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, object longCitation=null, object longCitationAutoText=null, object category=null)
+		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, object longCitation, object longCitationAutoText, object category)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation, longCitation, longCitationAutoText, category);
 			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray);
@@ -233,7 +233,7 @@ namespace NetOffice.WordApi
 		/// <param name="LongCitationAutoText">optional object LongCitationAutoText</param>
 		/// <param name="Category">optional object Category</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void MarkAllCitations(string shortCitation, object longCitation=null, object longCitationAutoText=null, object category=null)
+		public void MarkAllCitations(string shortCitation, object longCitation, object longCitationAutoText, object category)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shortCitation, longCitation, longCitationAutoText, category);
 			Invoker.Method(this, "MarkAllCitations", paramsArray);

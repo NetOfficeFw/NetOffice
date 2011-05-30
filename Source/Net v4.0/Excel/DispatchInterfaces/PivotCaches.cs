@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType</param>
 		/// <param name="SourceData">optional object SourceData</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.PivotCache Add(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData=null)
+		public NetOffice.ExcelApi.PivotCache Add(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SourceData">optional object SourceData</param>
 		/// <param name="Version">optional object Version</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public NetOffice.ExcelApi.PivotCache Create(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData=null, object version=null)
+		public NetOffice.ExcelApi.PivotCache Create(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData, object version)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, version);
 			object returnItem = Invoker.MethodReturn(this, "Create", paramsArray);

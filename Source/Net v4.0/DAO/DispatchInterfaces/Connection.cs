@@ -240,7 +240,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Name">optional object Name</param>
 		/// <param name="SQLText">optional object SQLText</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.QueryDef CreateQueryDef(object name=null, object sQLText=null)
+		public NetOffice.DAOApi.QueryDef CreateQueryDef(object name, object sQLText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, sQLText);
 			object returnItem = Invoker.MethodReturn(this, "CreateQueryDef", paramsArray);
@@ -266,7 +266,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Query">string Query</param>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void Execute(string query, object options=null)
+		public void Execute(string query, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(query, options);
 			Invoker.Method(this, "Execute", paramsArray);
@@ -291,7 +291,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Options">optional object Options</param>
 		/// <param name="LockEdit">optional object LockEdit</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset OpenRecordset(string name, object type=null, object options=null, object lockEdit=null)
+		public NetOffice.DAOApi.Recordset OpenRecordset(string name, object type, object options, object lockEdit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, options, lockEdit);
 			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);

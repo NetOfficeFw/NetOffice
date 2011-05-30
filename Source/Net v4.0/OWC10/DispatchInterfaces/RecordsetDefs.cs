@@ -90,7 +90,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="SchemaRowsource">object SchemaRowsource</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.RecordsetDef Add(object schemaRowsource, object name=null)
+		public NetOffice.OWC10Api.RecordsetDef Add(object schemaRowsource, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaRowsource, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -118,7 +118,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="RowsourceType">optional object RowsourceType</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api.RecordsetDef AddNew(string source, object rowsourceType=null, object name=null)
+		public NetOffice.OWC10Api.RecordsetDef AddNew(string source, object rowsourceType, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowsourceType, name);
 			object returnItem = Invoker.MethodReturn(this, "AddNew", paramsArray);

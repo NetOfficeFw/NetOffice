@@ -390,7 +390,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="EntryIDFolder">string EntryIDFolder</param>
 		/// <param name="EntryIDStore">optional object EntryIDStore</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public NetOffice.OutlookApi.MAPIFolder GetFolderFromID(string entryIDFolder, object entryIDStore=null)
+		public NetOffice.OutlookApi.MAPIFolder GetFolderFromID(string entryIDFolder, object entryIDStore)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(entryIDFolder, entryIDStore);
 			object returnItem = Invoker.MethodReturn(this, "GetFolderFromID", paramsArray);
@@ -417,7 +417,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="EntryIDItem">string EntryIDItem</param>
 		/// <param name="EntryIDStore">optional object EntryIDStore</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public COMObject GetItemFromID(string entryIDItem, object entryIDStore=null)
+		public COMObject GetItemFromID(string entryIDItem, object entryIDStore)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(entryIDItem, entryIDStore);
 			object returnItem = Invoker.MethodReturn(this, "GetItemFromID", paramsArray);
@@ -483,7 +483,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="ShowDialog">optional object ShowDialog</param>
 		/// <param name="NewSession">optional object NewSession</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public void Logon(object profile=null, object password=null, object showDialog=null, object newSession=null)
+		public void Logon(object profile, object password, object showDialog, object newSession)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(profile, password, showDialog, newSession);
 			Invoker.Method(this, "Logon", paramsArray);
@@ -548,7 +548,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="ContactItem">optional object ContactItem</param>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public void Dial(object contactItem=null)
+		public void Dial(object contactItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(contactItem);
 			Invoker.Method(this, "Dial", paramsArray);
@@ -645,7 +645,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="DownloadAttachments">optional object DownloadAttachments</param>
 		/// <param name="UseTTL">optional object UseTTL</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public NetOffice.OutlookApi.MAPIFolder OpenSharedFolder(string path, object name=null, object downloadAttachments=null, object useTTL=null)
+		public NetOffice.OutlookApi.MAPIFolder OpenSharedFolder(string path, object name, object downloadAttachments, object useTTL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, name, downloadAttachments, useTTL);
 			object returnItem = Invoker.MethodReturn(this, "OpenSharedFolder", paramsArray);
@@ -685,7 +685,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Context">object Context</param>
 		/// <param name="Provider">optional object Provider</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public NetOffice.OutlookApi.SharingItem CreateSharingItem(object context, object provider=null)
+		public NetOffice.OutlookApi.SharingItem CreateSharingItem(object context, object provider)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(context, provider);
 			object returnItem = Invoker.MethodReturn(this, "CreateSharingItem", paramsArray);

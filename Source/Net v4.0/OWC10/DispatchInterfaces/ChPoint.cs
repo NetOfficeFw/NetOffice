@@ -244,7 +244,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Dimension">NetOffice.OWC10Api.Enums.ChartDimensionsEnum Dimension</param>
 		/// <param name="scaled">optional object scaled</param>
 		[SupportByLibrary("OWC10", 1)]
-		public object GetValue(NetOffice.OWC10Api.Enums.ChartDimensionsEnum dimension, object scaled=null)
+		public object GetValue(NetOffice.OWC10Api.Enums.ChartDimensionsEnum dimension, object scaled)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dimension, scaled);
 			object returnItem = Invoker.MethodReturn(this, "GetValue", paramsArray);

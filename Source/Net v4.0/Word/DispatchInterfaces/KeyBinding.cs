@@ -246,7 +246,7 @@ namespace NetOffice.WordApi
 		/// <param name="Command">string Command</param>
 		/// <param name="CommandParameter">optional object CommandParameter</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Rebind(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, object commandParameter=null)
+		public void Rebind(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, object commandParameter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCategory, command, commandParameter);
 			Invoker.Method(this, "Rebind", paramsArray);

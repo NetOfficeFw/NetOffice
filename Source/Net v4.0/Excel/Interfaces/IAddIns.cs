@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Filename">string Filename</param>
 		/// <param name="CopyFile">optional object CopyFile</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.AddIn Add(string filename, object copyFile=null)
+		public NetOffice.ExcelApi.AddIn Add(string filename, object copyFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, copyFile);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

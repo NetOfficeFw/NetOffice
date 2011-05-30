@@ -525,7 +525,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Copy(object before=null, object after=null)
+		public void Copy(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
 			Invoker.Method(this, "Copy", paramsArray);
@@ -609,7 +609,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Move(object before=null, object after=null)
+		public void Move(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
 			Invoker.Method(this, "Move", paramsArray);
@@ -631,7 +631,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Destination">optional object Destination</param>
 		/// <param name="Link">optional object Link</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Paste(object destination=null, object link=null)
+		public void Paste(object destination, object link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, link);
 			Invoker.Method(this, "Paste", paramsArray);
@@ -667,7 +667,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="AllowFiltering">optional object AllowFiltering</param>
 		/// <param name="AllowUsingPivotTableReports">optional object AllowUsingPivotTableReports</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Protect(object password=null, object drawingObjects=null, object contents=null, object scenarios=null, object userInterfaceOnly=null, object allowFormattingCells=null, object allowFormattingColumns=null, object allowFormattingRows=null, object allowInsertingColumns=null, object allowInsertingRows=null, object allowInsertingHyperlinks=null, object allowDeletingColumns=null, object allowDeletingRows=null, object allowSorting=null, object allowFiltering=null, object allowUsingPivotTableReports=null)
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns, object allowFormattingRows, object allowInsertingColumns, object allowInsertingRows, object allowInsertingHyperlinks, object allowDeletingColumns, object allowDeletingRows, object allowSorting, object allowFiltering, object allowUsingPivotTableReports)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns, allowFormattingRows, allowInsertingColumns, allowInsertingRows, allowInsertingHyperlinks, allowDeletingColumns, allowDeletingRows, allowSorting, allowFiltering, allowUsingPivotTableReports);
 			Invoker.Method(this, "Protect", paramsArray);
@@ -698,7 +698,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Select(object replace=null)
+		public void Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			Invoker.Method(this, "Select", paramsArray);
@@ -729,7 +729,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Password">optional object Password</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Unprotect(object password=null)
+		public void Unprotect(object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password);
 			Invoker.Method(this, "Unprotect", paramsArray);

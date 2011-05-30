@@ -136,7 +136,7 @@ namespace NetOffice.WordApi
 		/// <param name="SaveWithDocument">optional object SaveWithDocument</param>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.InlineShape AddPicture(string fileName, object linkToFile=null, object saveWithDocument=null, object range=null)
+		public NetOffice.WordApi.InlineShape AddPicture(string fileName, object linkToFile, object saveWithDocument, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, range);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
 		/// <param name="IconLabel">optional object IconLabel</param>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.InlineShape AddOLEObject(object classType=null, object fileName=null, object linkToFile=null, object displayAsIcon=null, object iconFileName=null, object iconIndex=null, object iconLabel=null, object range=null)
+		public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, range);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -195,7 +195,7 @@ namespace NetOffice.WordApi
 		/// <param name="ClassType">optional object ClassType</param>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.InlineShape AddOLEControl(object classType=null, object range=null)
+		public NetOffice.WordApi.InlineShape AddOLEControl(object classType, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, range);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEControl", paramsArray);
@@ -234,7 +234,7 @@ namespace NetOffice.WordApi
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.InlineShape AddHorizontalLine(string fileName, object range=null)
+		public NetOffice.WordApi.InlineShape AddHorizontalLine(string fileName, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range);
 			object returnItem = Invoker.MethodReturn(this, "AddHorizontalLine", paramsArray);
@@ -260,7 +260,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.InlineShape AddHorizontalLineStandard(object range=null)
+		public NetOffice.WordApi.InlineShape AddHorizontalLineStandard(object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "AddHorizontalLineStandard", paramsArray);
@@ -286,7 +286,7 @@ namespace NetOffice.WordApi
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.InlineShape AddPictureBullet(string fileName, object range=null)
+		public NetOffice.WordApi.InlineShape AddPictureBullet(string fileName, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range);
 			object returnItem = Invoker.MethodReturn(this, "AddPictureBullet", paramsArray);
@@ -313,7 +313,7 @@ namespace NetOffice.WordApi
 		/// <param name="Type">NetOffice.OfficeApi.Enums.XlChartType Type</param>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.InlineShape AddChart(NetOffice.OfficeApi.Enums.XlChartType type, object range=null)
+		public NetOffice.WordApi.InlineShape AddChart(NetOffice.OfficeApi.Enums.XlChartType type, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, range);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -340,7 +340,7 @@ namespace NetOffice.WordApi
 		/// <param name="Layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 14)]
-		public NetOffice.WordApi.InlineShape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object range=null)
+		public NetOffice.WordApi.InlineShape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, range);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);

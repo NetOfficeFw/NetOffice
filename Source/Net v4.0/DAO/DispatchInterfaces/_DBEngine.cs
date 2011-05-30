@@ -215,7 +215,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Action">optional object Action</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void Idle(object action=null)
+		public void Idle(object action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action);
 			Invoker.Method(this, "Idle", paramsArray);
@@ -240,7 +240,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Options">optional object Options</param>
 		/// <param name="SrcLocale">optional object SrcLocale</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public void CompactDatabase(string srcName, string dstName, object dstLocale=null, object options=null, object srcLocale=null)
+		public void CompactDatabase(string srcName, string dstName, object dstLocale, object options, object srcLocale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(srcName, dstName, dstLocale, options, srcLocale);
 			Invoker.Method(this, "CompactDatabase", paramsArray);
@@ -306,7 +306,7 @@ namespace NetOffice.DAOApi
 		/// <param name="ReadOnly">optional object ReadOnly</param>
 		/// <param name="Connect">optional object Connect</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Database OpenDatabase(string name, object options=null, object readOnly=null, object connect=null)
+		public NetOffice.DAOApi.Database OpenDatabase(string name, object options, object readOnly, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
 			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
@@ -334,7 +334,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Locale">string Locale</param>
 		/// <param name="Option">optional object Option</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Database CreateDatabase(string name, string locale, object option=null)
+		public NetOffice.DAOApi.Database CreateDatabase(string name, string locale, object option)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, locale, option);
 			object returnItem = Invoker.MethodReturn(this, "CreateDatabase", paramsArray);
@@ -427,7 +427,7 @@ namespace NetOffice.DAOApi
 		/// <param name="StatNum">Int32 StatNum</param>
 		/// <param name="Reset">optional object Reset</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public Int32 ISAMStats(Int32 statNum, object reset=null)
+		public Int32 ISAMStats(Int32 statNum, object reset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(statNum, reset);
 			object returnItem = Invoker.MethodReturn(this, "ISAMStats", paramsArray);
@@ -454,7 +454,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Password">string Password</param>
 		/// <param name="UseType">optional object UseType</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Workspace CreateWorkspace(string name, string userName, string password, object useType=null)
+		public NetOffice.DAOApi.Workspace CreateWorkspace(string name, string userName, string password, object useType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password, useType);
 			object returnItem = Invoker.MethodReturn(this, "CreateWorkspace", paramsArray);
@@ -485,7 +485,7 @@ namespace NetOffice.DAOApi
 		/// <param name="ReadOnly">optional object ReadOnly</param>
 		/// <param name="Connect">optional object Connect</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Connection OpenConnection(string name, object options=null, object readOnly=null, object connect=null)
+		public NetOffice.DAOApi.Connection OpenConnection(string name, object options, object readOnly, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
 			object returnItem = Invoker.MethodReturn(this, "OpenConnection", paramsArray);

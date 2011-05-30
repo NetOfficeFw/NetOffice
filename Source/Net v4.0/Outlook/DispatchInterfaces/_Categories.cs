@@ -149,7 +149,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Color">optional object Color</param>
 		/// <param name="ShortcutKey">optional object ShortcutKey</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public NetOffice.OutlookApi.Category Add(string name, object color=null, object shortcutKey=null)
+		public NetOffice.OutlookApi.Category Add(string name, object color, object shortcutKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, color, shortcutKey);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

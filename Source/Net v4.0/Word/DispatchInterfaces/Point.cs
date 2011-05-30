@@ -697,7 +697,7 @@ namespace NetOffice.WordApi
 		/// <param name="ShowBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="Separator">optional object Separator</param>
 		[SupportByLibrary("Word", 14)]
-		public object ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey=null, object autoText=null, object hasLeaderLines=null, object showSeriesName=null, object showCategoryName=null, object showValue=null, object showPercentage=null, object showBubbleSize=null, object separator=null)
+		public object ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);

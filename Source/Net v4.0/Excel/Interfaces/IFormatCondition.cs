@@ -375,7 +375,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Formula1">optional object Formula1</param>
 		/// <param name="Formula2">optional object Formula2</param>
 		[SupportByLibrary("Excel", 9,10,11)]
-		public Int32 Modify(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator=null, object formula1=null, object formula2=null)
+		public Int32 Modify(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, formula1, formula2);
 			object returnItem = Invoker.MethodReturn(this, "Modify", paramsArray);
@@ -392,7 +392,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="String">optional object String</param>
 		/// <param name="Operator2">optional object Operator2</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public Int32 Modify(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator=null, object formula1=null, object formula2=null, object _string=null, object operator2=null)
+		public Int32 Modify(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object operator2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, formula1, formula2, _string, operator2);
 			object returnItem = Invoker.MethodReturn(this, "Modify", paramsArray);
@@ -430,7 +430,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Formula1">optional object Formula1</param>
 		/// <param name="Formula2">optional object Formula2</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public Int32 _Modify(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator=null, object formula1=null, object formula2=null)
+		public Int32 _Modify(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, formula1, formula2);
 			object returnItem = Invoker.MethodReturn(this, "_Modify", paramsArray);

@@ -249,7 +249,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="IncludeSubfolders">optional object IncludeSubfolders</param>
 		/// <param name="RuleExecuteOption">optional object RuleExecuteOption</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public void Execute(object showProgress=null, object folder=null, object includeSubfolders=null, object ruleExecuteOption=null)
+		public void Execute(object showProgress, object folder, object includeSubfolders, object ruleExecuteOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showProgress, folder, includeSubfolders, ruleExecuteOption);
 			Invoker.Method(this, "Execute", paramsArray);

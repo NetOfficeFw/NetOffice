@@ -134,7 +134,7 @@ namespace NetOffice.WordApi
 		/// <param name="Name">string Name</param>
 		/// <param name="DotMatrix">optional object DotMatrix</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.CustomLabel Add(string name, object dotMatrix=null)
+		public NetOffice.WordApi.CustomLabel Add(string name, object dotMatrix)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, dotMatrix);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

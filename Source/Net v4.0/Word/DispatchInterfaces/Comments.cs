@@ -153,7 +153,7 @@ namespace NetOffice.WordApi
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Text">optional object Text</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Comment Add(NetOffice.WordApi.Range range, object text=null)
+		public NetOffice.WordApi.Comment Add(NetOffice.WordApi.Range range, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, text);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

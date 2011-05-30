@@ -135,7 +135,7 @@ namespace NetOffice.WordApi
 		/// <param name="Namespace">string Namespace</param>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public NetOffice.WordApi.XMLNode Add(string name, string _namespace, object range=null)
+		public NetOffice.WordApi.XMLNode Add(string name, string _namespace, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, _namespace, range);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

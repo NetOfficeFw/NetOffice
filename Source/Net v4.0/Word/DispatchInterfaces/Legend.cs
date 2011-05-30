@@ -391,7 +391,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Word", 14)]
-		public COMObject LegendEntries(object index=null)
+		public COMObject LegendEntries(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "LegendEntries", paramsArray);

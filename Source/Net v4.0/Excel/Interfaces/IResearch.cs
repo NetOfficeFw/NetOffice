@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="UseSelection">optional object UseSelection</param>
 		/// <param name="LaunchQuery">optional object LaunchQuery</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public object Query(string serviceID, object queryString=null, object queryLanguage=null, object useSelection=null, object launchQuery=null)
+		public object Query(string serviceID, object queryString, object queryLanguage, object useSelection, object launchQuery)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection, launchQuery);
 			object returnItem = Invoker.MethodReturn(this, "Query", paramsArray);

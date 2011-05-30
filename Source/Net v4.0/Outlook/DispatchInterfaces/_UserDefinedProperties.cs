@@ -150,7 +150,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="DisplayFormat">optional object DisplayFormat</param>
 		/// <param name="Formula">optional object Formula</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public NetOffice.OutlookApi.UserDefinedProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object displayFormat=null, object formula=null)
+		public NetOffice.OutlookApi.UserDefinedProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object displayFormat, object formula)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, displayFormat, formula);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

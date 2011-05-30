@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="CTPTitle">string CTPTitle</param>
 		/// <param name="CTPParentWindow">optional object CTPParentWindow</param>
 		[SupportByLibrary("Office", 12,14)]
-		public NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle, object cTPParentWindow=null)
+		public NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle, object cTPParentWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle, cTPParentWindow);
 			object returnItem = Invoker.MethodReturn(this, "CreateCTP", paramsArray);

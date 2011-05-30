@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="DeleteEventIfFolderContainsFiles">optional object DeleteEventIfFolderContainsFiles</param>
 		[SupportByLibrary("Office", 11,12,14)]
-		public void Delete(object deleteEventIfFolderContainsFiles=null)
+		public void Delete(object deleteEventIfFolderContainsFiles)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deleteEventIfFolderContainsFiles);
 			Invoker.Method(this, "Delete", paramsArray);

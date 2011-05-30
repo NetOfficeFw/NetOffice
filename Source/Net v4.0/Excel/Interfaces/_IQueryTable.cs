@@ -1316,7 +1316,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="BackgroundQuery">optional object BackgroundQuery</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public bool Refresh(object backgroundQuery=null)
+		public bool Refresh(object backgroundQuery)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(backgroundQuery);
 			object returnItem = Invoker.MethodReturn(this, "Refresh", paramsArray);
@@ -1352,7 +1352,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Description">optional object Description</param>
 		/// <param name="Keywords">optional object Keywords</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public Int32 SaveAsODC(string oDCFileName, object description=null, object keywords=null)
+		public Int32 SaveAsODC(string oDCFileName, object description, object keywords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oDCFileName, description, keywords);
 			object returnItem = Invoker.MethodReturn(this, "SaveAsODC", paramsArray);

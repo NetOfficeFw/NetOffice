@@ -40,8 +40,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(381, 127);
             this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "This example contains code to add a new document. \r\nIn this document we insert so" +
-                "me text and change color, size and fontstyle.";
+            this.textBox1.Text = "This example contains code to change \r\nbackground color and borders for cells";
             // 
             // button1
             // 
@@ -62,7 +61,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Example01 - Document Basics";
+            this.Text = "Example1 - Cell Colors and Borders";
             this.ResumeLayout(false);
             this.PerformLayout();
 

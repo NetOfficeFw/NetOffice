@@ -1067,7 +1067,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Paragraph Next(object count=null)
+		public NetOffice.WordApi.Paragraph Next(object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(count);
 			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray);
@@ -1092,7 +1092,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Paragraph Previous(object count=null)
+		public NetOffice.WordApi.Paragraph Previous(object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(count);
 			object returnItem = Invoker.MethodReturn(this, "Previous", paramsArray);

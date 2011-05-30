@@ -123,7 +123,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Image">optional object Image</param>
 		/// <param name="SelectedImage">optional object SelectedImage</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.INode Add(object relative=null, object relationship=null, object key=null, object text=null, object image=null, object selectedImage=null)
+		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key, object text, object image, object selectedImage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship, key, text, image, selectedImage);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

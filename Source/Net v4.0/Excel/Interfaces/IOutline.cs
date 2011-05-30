@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="RowLevels">optional object RowLevels</param>
 		/// <param name="ColumnLevels">optional object ColumnLevels</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object ShowLevels(object rowLevels=null, object columnLevels=null)
+		public object ShowLevels(object rowLevels, object columnLevels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowLevels, columnLevels);
 			object returnItem = Invoker.MethodReturn(this, "ShowLevels", paramsArray);

@@ -135,7 +135,7 @@ namespace NetOffice.WordApi
 		/// <param name="Address">optional object Address</param>
 		/// <param name="SubAddress">optional object SubAddress</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Hyperlink _Add(object anchor, object address=null, object subAddress=null)
+		public NetOffice.WordApi.Hyperlink _Add(object anchor, object address, object subAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
@@ -166,7 +166,7 @@ namespace NetOffice.WordApi
 		/// <param name="TextToDisplay">optional object TextToDisplay</param>
 		/// <param name="Target">optional object Target</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Hyperlink Add(object anchor, object address=null, object subAddress=null, object screenTip=null, object textToDisplay=null, object target=null)
+		public NetOffice.WordApi.Hyperlink Add(object anchor, object address, object subAddress, object screenTip, object textToDisplay, object target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress, screenTip, textToDisplay, target);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

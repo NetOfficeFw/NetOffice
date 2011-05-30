@@ -206,7 +206,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="Size">Int32 Size</param>
 		/// <param name="Value">optional object Value</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Parameter CreateParameter(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, NetOffice.ADODBApi.Enums.ParameterDirectionEnum direction, Int32 size, object value=null)
+		public NetOffice.ADODBApi._Parameter CreateParameter(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, NetOffice.ADODBApi.Enums.ParameterDirectionEnum direction, Int32 size, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size, value);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);

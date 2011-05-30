@@ -224,7 +224,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="Height">Single Height</param>
 		/// <param name="VerticalScrollBar">optional object VerticalScrollBar</param>
 		[SupportByLibrary("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPEditText AddEditText(Single left, Single top, Single width, Single height, object verticalScrollBar=null)
+		public NetOffice.PowerPointApi.PPEditText AddEditText(Single left, Single top, Single width, Single height, object verticalScrollBar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, verticalScrollBar);
 			object returnItem = Invoker.MethodReturn(this, "AddEditText", paramsArray);

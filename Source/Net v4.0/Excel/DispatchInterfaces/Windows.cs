@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SyncHorizontal">optional object SyncHorizontal</param>
 		/// <param name="SyncVertical">optional object SyncVertical</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Arrange(NetOffice.ExcelApi.Enums.XlArrangeStyle arrangeStyle, object activeWorkbook=null, object syncHorizontal=null, object syncVertical=null)
+		public object Arrange(NetOffice.ExcelApi.Enums.XlArrangeStyle arrangeStyle, object activeWorkbook, object syncHorizontal, object syncVertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle, activeWorkbook, syncHorizontal, syncVertical);
 			object returnItem = Invoker.MethodReturn(this, "Arrange", paramsArray);

@@ -142,7 +142,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Name">optional object Name</param>
 		/// <param name="PID">optional object PID</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Group CreateGroup(object name=null, object pID=null)
+		public NetOffice.DAOApi.Group CreateGroup(object name, object pID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID);
 			object returnItem = Invoker.MethodReturn(this, "CreateGroup", paramsArray);

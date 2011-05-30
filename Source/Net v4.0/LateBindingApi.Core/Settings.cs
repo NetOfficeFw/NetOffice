@@ -86,6 +86,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// Get or set the Message Filter enabled.
         /// The MessageFilter suspress any exceptional dialog messages, specialy the "Application ist waiting for another OLE Task" dialog
+        ///default is true
         /// </summary>
         public static bool EnableMessageFilter
         {

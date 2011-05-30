@@ -247,7 +247,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="URL">optional object URL</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("Office", 11,12,14)]
-		public void CreateNew(object uRL=null, object name=null)
+		public void CreateNew(object uRL, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uRL, name);
 			Invoker.Method(this, "CreateNew", paramsArray);

@@ -658,7 +658,7 @@ namespace NetOffice.WordApi
 		/// <param name="CaseSensitive">optional object CaseSensitive</param>
 		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void SortOld(object excludeHeader=null, object fieldNumber=null, object sortFieldType=null, object sortOrder=null, object fieldNumber2=null, object sortFieldType2=null, object sortOrder2=null, object fieldNumber3=null, object sortFieldType3=null, object sortOrder3=null, object caseSensitive=null, object languageID=null)
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object caseSensitive, object languageID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, caseSensitive, languageID);
 			Invoker.Method(this, "SortOld", paramsArray);
@@ -708,7 +708,7 @@ namespace NetOffice.WordApi
 		/// <param name="ApplyLastColumn">optional object ApplyLastColumn</param>
 		/// <param name="AutoFit">optional object AutoFit</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void AutoFormat(object format=null, object applyBorders=null, object applyShading=null, object applyFont=null, object applyColor=null, object applyHeadingRows=null, object applyLastRow=null, object applyFirstColumn=null, object applyLastColumn=null, object autoFit=null)
+		public void AutoFormat(object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit);
 			Invoker.Method(this, "AutoFormat", paramsArray);
@@ -739,7 +739,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Separator">optional object Separator</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range ConvertToTextOld(object separator=null)
+		public NetOffice.WordApi.Range ConvertToTextOld(object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(separator);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToTextOld", paramsArray);
@@ -792,7 +792,7 @@ namespace NetOffice.WordApi
 		/// <param name="Separator">optional object Separator</param>
 		/// <param name="NestedTables">optional object NestedTables</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range ConvertToText(object separator=null, object nestedTables=null)
+		public NetOffice.WordApi.Range ConvertToText(object separator, object nestedTables)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(separator, nestedTables);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToText", paramsArray);
@@ -844,7 +844,7 @@ namespace NetOffice.WordApi
 		/// <param name="IgnoreHe">optional object IgnoreHe</param>
 		/// <param name="LanguageID">optional object LanguageID</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Sort(object excludeHeader=null, object fieldNumber=null, object sortFieldType=null, object sortOrder=null, object fieldNumber2=null, object sortFieldType2=null, object sortOrder2=null, object fieldNumber3=null, object sortFieldType3=null, object sortOrder3=null, object caseSensitive=null, object bidiSort=null, object ignoreThe=null, object ignoreKashida=null, object ignoreDiacritics=null, object ignoreHe=null, object languageID=null)
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID);
 			Invoker.Method(this, "Sort", paramsArray);

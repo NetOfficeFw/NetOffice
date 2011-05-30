@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="DisplayRSquared">optional object DisplayRSquared</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Trendline Add(NetOffice.ExcelApi.Enums.XlTrendlineType type, object order=null, object period=null, object forward=null, object backward=null, object intercept=null, object displayEquation=null, object displayRSquared=null, object name=null)
+		public NetOffice.ExcelApi.Trendline Add(NetOffice.ExcelApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.ExcelApi.Trendline this[object index=null]
+		public NetOffice.ExcelApi.Trendline this[object index]
 		{
 			get
 			{
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public NetOffice.ExcelApi.Trendline _Default(object index=null)
+		public NetOffice.ExcelApi.Trendline _Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);

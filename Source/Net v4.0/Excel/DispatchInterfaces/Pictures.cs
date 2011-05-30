@@ -556,7 +556,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Select(object replace=null)
+		public object Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
@@ -656,7 +656,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Filename">string Filename</param>
 		/// <param name="Converter">optional object Converter</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Picture Insert(string filename, object converter=null)
+		public NetOffice.ExcelApi.Picture Insert(string filename, object converter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, converter);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
@@ -699,7 +699,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Link">optional object Link</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Picture Paste(object link=null)
+		public NetOffice.ExcelApi.Picture Paste(object link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(link);
 			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);

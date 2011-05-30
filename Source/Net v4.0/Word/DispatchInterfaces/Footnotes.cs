@@ -256,7 +256,7 @@ namespace NetOffice.WordApi
 		/// <param name="Reference">optional object Reference</param>
 		/// <param name="Text">optional object Text</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Footnote Add(NetOffice.WordApi.Range range, object reference=null, object text=null)
+		public NetOffice.WordApi.Footnote Add(NetOffice.WordApi.Range range, object reference, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, reference, text);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

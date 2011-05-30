@@ -105,7 +105,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="RefersTo">optional object RefersTo</param>
 		[SupportByLibrary("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.OWC10Api.Name this[object index=null, object indexLocal=null, object refersTo=null]
+		public NetOffice.OWC10Api.Name this[object index, object indexLocal, object refersTo]
 		{
 			get
 			{
@@ -131,7 +131,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="RefersToR1C1">optional object RefersToR1C1</param>
 		/// <param name="RefersToR1C1Local">optional object RefersToR1C1Local</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Add(object name=null, object refersTo=null, object visible=null, object macroType=null, object shortcutKey=null, object category=null, object nameLocal=null, object refersToLocal=null, object categoryLocal=null, object refersToR1C1=null, object refersToR1C1Local=null)
+		public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1, object refersToR1C1Local)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1, refersToR1C1Local);
 			Invoker.Method(this, "Add", paramsArray);
@@ -162,7 +162,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="varRefersToR1C1">optional object varRefersToR1C1</param>
 		/// <param name="varRefersToR1C1Local">optional object varRefersToR1C1Local</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void AddUI(object varName=null, object varRefersTo=null, object varVisible=null, object varMacroType=null, object varShortcutKey=null, object varCategory=null, object varNameLocal=null, object varRefersToLocal=null, object varCategoryLocal=null, object varRefersToR1C1=null, object varRefersToR1C1Local=null)
+		public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory, object varNameLocal, object varRefersToLocal, object varCategoryLocal, object varRefersToR1C1, object varRefersToR1C1Local)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal, varCategoryLocal, varRefersToR1C1, varRefersToR1C1Local);
 			Invoker.Method(this, "AddUI", paramsArray);

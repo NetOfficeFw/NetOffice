@@ -163,7 +163,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="sectionName">optional object sectionName</param>
 		[SupportByLibrary("PowerPoint", 14)]
-		public Int32 AddSection(Int32 sectionIndex, object sectionName=null)
+		public Int32 AddSection(Int32 sectionIndex, object sectionName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex, sectionName);
 			object returnItem = Invoker.MethodReturn(this, "AddSection", paramsArray);

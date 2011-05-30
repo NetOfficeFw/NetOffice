@@ -845,7 +845,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Times">optional object Times</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool Repeat(object times=null)
+		public bool Repeat(object times)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(times);
 			object returnItem = Invoker.MethodReturn(this, "Repeat", paramsArray);
@@ -943,7 +943,7 @@ namespace NetOffice.WordApi
 		/// <param name="Arg3">optional object Arg3</param>
 		/// <param name="Arg4">optional object Arg4</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, object arg2=null, object arg3=null, object arg4=null)
+		public Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "BuildKeyCode", paramsArray);
@@ -968,7 +968,7 @@ namespace NetOffice.WordApi
 		/// <param name="KeyCode">Int32 KeyCode</param>
 		/// <param name="KeyCode2">optional object KeyCode2</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public string KeyString(Int32 keyCode, object keyCode2=null)
+		public string KeyString(Int32 keyCode, object keyCode2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
 			object returnItem = Invoker.MethodReturn(this, "KeyString", paramsArray);
@@ -1004,7 +1004,7 @@ namespace NetOffice.WordApi
 		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
 		/// <param name="CustomDictionary10">optional object CustomDictionary10</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool CheckSpelling(string word, object customDictionary=null, object ignoreUppercase=null, object mainDictionary=null, object customDictionary2=null, object customDictionary3=null, object customDictionary4=null, object customDictionary5=null, object customDictionary6=null, object customDictionary7=null, object customDictionary8=null, object customDictionary9=null, object customDictionary10=null)
+		public bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
 			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
@@ -1041,7 +1041,7 @@ namespace NetOffice.WordApi
 		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
 		/// <param name="CustomDictionary10">optional object CustomDictionary10</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary=null, object ignoreUppercase=null, object mainDictionary=null, object suggestionMode=null, object customDictionary2=null, object customDictionary3=null, object customDictionary4=null, object customDictionary5=null, object customDictionary6=null, object customDictionary7=null, object customDictionary8=null, object customDictionary9=null, object customDictionary10=null)
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
 			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
@@ -1234,7 +1234,7 @@ namespace NetOffice.WordApi
 		/// <param name="Points">Single Points</param>
 		/// <param name="fVertical">optional object fVertical</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Single PointsToPixels(Single points, object fVertical=null)
+		public Single PointsToPixels(Single points, object fVertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points, fVertical);
 			object returnItem = Invoker.MethodReturn(this, "PointsToPixels", paramsArray);
@@ -1259,7 +1259,7 @@ namespace NetOffice.WordApi
 		/// <param name="Pixels">Single Pixels</param>
 		/// <param name="fVertical">optional object fVertical</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public Single PixelsToPoints(Single pixels, object fVertical=null)
+		public Single PixelsToPoints(Single pixels, object fVertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pixels, fVertical);
 			object returnItem = Invoker.MethodReturn(this, "PixelsToPoints", paramsArray);

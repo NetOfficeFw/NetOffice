@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object LargeScroll(object down=null, object up=null, object toRight=null, object toLeft=null)
+		public object LargeScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			object returnItem = Invoker.MethodReturn(this, "LargeScroll", paramsArray);
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object SmallScroll(object down=null, object up=null, object toRight=null, object toLeft=null)
+		public object SmallScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			object returnItem = Invoker.MethodReturn(this, "SmallScroll", paramsArray);
@@ -271,7 +271,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Height">Int32 Height</param>
 		/// <param name="Start">optional object Start</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start=null)
+		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, start);
 			Invoker.Method(this, "ScrollIntoView", paramsArray);

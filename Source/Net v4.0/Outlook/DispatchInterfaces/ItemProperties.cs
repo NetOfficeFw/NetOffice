@@ -151,7 +151,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="AddToFolderFields">optional object AddToFolderFields</param>
 		/// <param name="DisplayFormat">optional object DisplayFormat</param>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public NetOffice.OutlookApi.ItemProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields=null, object displayFormat=null)
+		public NetOffice.OutlookApi.ItemProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields, object displayFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, addToFolderFields, displayFormat);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

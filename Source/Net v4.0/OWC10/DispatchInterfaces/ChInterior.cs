@@ -292,7 +292,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Color">optional object Color</param>
 		/// <param name="BackColor">optional object BackColor</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void SetPatterned(NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType, object color=null, object backColor=null)
+		public void SetPatterned(NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType, object color, object backColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(patternType, color, backColor);
 			Invoker.Method(this, "SetPatterned", paramsArray);
@@ -344,7 +344,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="GradientDegree">Double GradientDegree</param>
 		/// <param name="Color">optional object Color</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void SetOneColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, Double gradientDegree, object color=null)
+		public void SetOneColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, Double gradientDegree, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(gradientStyle, gradientVariant, gradientDegree, color);
 			Invoker.Method(this, "SetOneColorGradient", paramsArray);
@@ -368,7 +368,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Color">optional object Color</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void SetSolid(object color=null)
+		public void SetSolid(object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(color);
 			Invoker.Method(this, "SetSolid", paramsArray);
@@ -392,7 +392,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Color">optional object Color</param>
 		/// <param name="BackColor">optional object BackColor</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void SetTwoColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, object color=null, object backColor=null)
+		public void SetTwoColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, object color, object backColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(gradientStyle, gradientVariant, color, backColor);
 			Invoker.Method(this, "SetTwoColorGradient", paramsArray);

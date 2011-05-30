@@ -243,7 +243,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Permission">optional object Permission</param>
 		/// <param name="ExpirationDate">optional object ExpirationDate</param>
 		[SupportByLibrary("Office", 11,12,14)]
-		public NetOffice.OfficeApi.UserPermission Add(string userId, object permission=null, object expirationDate=null)
+		public NetOffice.OfficeApi.UserPermission Add(string userId, object permission, object expirationDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(userId, permission, expirationDate);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

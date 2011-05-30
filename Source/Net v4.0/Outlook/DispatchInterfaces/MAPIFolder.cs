@@ -586,7 +586,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="DisplayMode">optional object DisplayMode</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public NetOffice.OutlookApi._Explorer GetExplorer(object displayMode=null)
+		public NetOffice.OutlookApi._Explorer GetExplorer(object displayMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(displayMode);
 			object returnItem = Invoker.MethodReturn(this, "GetExplorer", paramsArray);
@@ -633,7 +633,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="fNoUI">optional object fNoUI</param>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public void AddToFavorites(object fNoUI=null, object name=null)
+		public void AddToFavorites(object fNoUI, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fNoUI, name);
 			Invoker.Method(this, "AddToFavorites", paramsArray);
@@ -669,7 +669,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Filter">optional object Filter</param>
 		/// <param name="TableContents">optional object TableContents</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public NetOffice.OutlookApi.Table GetTable(object filter=null, object tableContents=null)
+		public NetOffice.OutlookApi.Table GetTable(object filter, object tableContents)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filter, tableContents);
 			object returnItem = Invoker.MethodReturn(this, "GetTable", paramsArray);

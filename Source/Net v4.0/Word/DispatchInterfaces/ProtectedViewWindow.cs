@@ -317,7 +317,7 @@ namespace NetOffice.WordApi
 		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
 		[SupportByLibrary("Word", 14)]
-		public NetOffice.WordApi.Document Edit(object passwordTemplate=null, object writePasswordDocument=null, object writePasswordTemplate=null)
+		public NetOffice.WordApi.Document Edit(object passwordTemplate, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(passwordTemplate, writePasswordDocument, writePasswordTemplate);
 			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray);

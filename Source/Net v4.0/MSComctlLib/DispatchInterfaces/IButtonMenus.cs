@@ -141,7 +141,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Key">optional object Key</param>
 		/// <param name="Text">optional object Text</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IButtonMenu Add(object index=null, object key=null, object text=null)
+		public NetOffice.MSComctlLibApi.IButtonMenu Add(object index, object key, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

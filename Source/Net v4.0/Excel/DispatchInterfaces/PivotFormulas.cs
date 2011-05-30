@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Formula">string Formula</param>
 		/// <param name="UseStandardFormula">optional object UseStandardFormula</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public NetOffice.ExcelApi.PivotFormula Add(string formula, object useStandardFormula=null)
+		public NetOffice.ExcelApi.PivotFormula Add(string formula, object useStandardFormula)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formula, useStandardFormula);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

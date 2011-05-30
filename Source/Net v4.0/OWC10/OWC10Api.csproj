@@ -8,7 +8,7 @@
     <ProjectGuid>{B99E5A86-78A0-445A-88EF-A209B40FEEFF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.OWC10Api</RootNamespace>
+    <RootNamespace>NetOffice.OWC10Api</RootNamespace>
     <AssemblyName>OWC10Api</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

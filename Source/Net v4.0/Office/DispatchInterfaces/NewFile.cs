@@ -60,7 +60,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="DisplayName">optional object DisplayName</param>
 		/// <param name="Action">optional object Action</param>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		public bool Add(string fileName, object section=null, object displayName=null, object action=null)
+		public bool Add(string fileName, object section, object displayName, object action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName, action);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="DisplayName">optional object DisplayName</param>
 		/// <param name="Action">optional object Action</param>
 		[SupportByLibrary("Office", 10,11,12,14)]
-		public bool Remove(string fileName, object section=null, object displayName=null, object action=null)
+		public bool Remove(string fileName, object section, object displayName, object action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName, action);
 			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);

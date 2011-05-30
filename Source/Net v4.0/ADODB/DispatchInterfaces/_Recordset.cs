@@ -596,7 +596,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="FieldList">optional object FieldList</param>
 		/// <param name="Values">optional object Values</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public void AddNew(object fieldList=null, object values=null)
+		public void AddNew(object fieldList, object values)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldList, values);
 			Invoker.Method(this, "AddNew", paramsArray);
@@ -650,7 +650,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="Start">optional object Start</param>
 		/// <param name="Fields">optional object Fields</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public object GetRows(Int32 rows, object start=null, object fields=null)
+		public object GetRows(Int32 rows, object start, object fields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rows, start, fields);
 			object returnItem = Invoker.MethodReturn(this, "GetRows", paramsArray);
@@ -693,7 +693,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="NumRecords">Int32 NumRecords</param>
 		/// <param name="Start">optional object Start</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public void Move(Int32 numRecords, object start=null)
+		public void Move(Int32 numRecords, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRecords, start);
 			Invoker.Method(this, "Move", paramsArray);
@@ -793,7 +793,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="Fields">optional object Fields</param>
 		/// <param name="Values">optional object Values</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public void Update(object fields=null, object values=null)
+		public void Update(object fields, object values)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fields, values);
 			Invoker.Method(this, "Update", paramsArray);
@@ -848,7 +848,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="RecordsAffected">optional object RecordsAffected</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Recordset NextRecordset(object recordsAffected=null)
+		public NetOffice.ADODBApi._Recordset NextRecordset(object recordsAffected)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected);
 			object returnItem = Invoker.MethodReturn(this, "NextRecordset", paramsArray);
@@ -888,7 +888,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="SearchDirection">NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection</param>
 		/// <param name="Start">optional object Start</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public void Find(string criteria, Int32 skipRecords, NetOffice.ADODBApi.Enums.SearchDirectionEnum searchDirection, object start=null)
+		public void Find(string criteria, Int32 skipRecords, NetOffice.ADODBApi.Enums.SearchDirectionEnum searchDirection, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(criteria, skipRecords, searchDirection, start);
 			Invoker.Method(this, "Find", paramsArray);

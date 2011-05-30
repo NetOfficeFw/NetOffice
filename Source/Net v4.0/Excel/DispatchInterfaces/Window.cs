@@ -1081,7 +1081,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Filename">optional object Filename</param>
 		/// <param name="RouteWorkbook">optional object RouteWorkbook</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public bool Close(object saveChanges=null, object filename=null, object routeWorkbook=null)
+		public bool Close(object saveChanges, object filename, object routeWorkbook)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, filename, routeWorkbook);
 			object returnItem = Invoker.MethodReturn(this, "Close", paramsArray);
@@ -1107,7 +1107,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object LargeScroll(object down=null, object up=null, object toRight=null, object toLeft=null)
+		public object LargeScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			object returnItem = Invoker.MethodReturn(this, "LargeScroll", paramsArray);
@@ -1167,7 +1167,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Collate">optional object Collate</param>
 		/// <param name="PrToFileName">optional object PrToFileName</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null, object prToFileName=null)
+		public object PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
 			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
@@ -1208,7 +1208,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="EnableChanges">optional object EnableChanges</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object PrintPreview(object enableChanges=null)
+		public object PrintPreview(object enableChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(enableChanges);
 			object returnItem = Invoker.MethodReturn(this, "PrintPreview", paramsArray);
@@ -1250,7 +1250,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Sheets">optional object Sheets</param>
 		/// <param name="Position">optional object Position</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object ScrollWorkbookTabs(object sheets=null, object position=null)
+		public object ScrollWorkbookTabs(object sheets, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sheets, position);
 			object returnItem = Invoker.MethodReturn(this, "ScrollWorkbookTabs", paramsArray);
@@ -1294,7 +1294,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object SmallScroll(object down=null, object up=null, object toRight=null, object toLeft=null)
+		public object SmallScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			object returnItem = Invoker.MethodReturn(this, "SmallScroll", paramsArray);
@@ -1377,7 +1377,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Height">Int32 Height</param>
 		/// <param name="Start">optional object Start</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start=null)
+		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, start);
 			Invoker.Method(this, "ScrollIntoView", paramsArray);
@@ -1409,7 +1409,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Collate">optional object Collate</param>
 		/// <param name="PrToFileName">optional object PrToFileName</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public object _PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null, object prToFileName=null)
+		public object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
 			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);

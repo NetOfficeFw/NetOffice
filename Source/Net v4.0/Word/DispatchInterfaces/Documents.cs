@@ -135,7 +135,7 @@ namespace NetOffice.WordApi
 		/// <param name="OriginalFormat">optional object OriginalFormat</param>
 		/// <param name="RouteDocument">optional object RouteDocument</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Close(object saveChanges=null, object originalFormat=null, object routeDocument=null)
+		public void Close(object saveChanges, object originalFormat, object routeDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, originalFormat, routeDocument);
 			Invoker.Method(this, "Close", paramsArray);
@@ -157,7 +157,7 @@ namespace NetOffice.WordApi
 		/// <param name="Template">optional object Template</param>
 		/// <param name="NewTemplate">optional object NewTemplate</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Document AddOld(object template=null, object newTemplate=null)
+		public NetOffice.WordApi.Document AddOld(object template, object newTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template, newTemplate);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
 		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
 		/// <param name="Format">optional object Format</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions=null, object readOnly=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null, object format=null)
+		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format);
 			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
@@ -218,7 +218,7 @@ namespace NetOffice.WordApi
 		/// <param name="NoPrompt">optional object NoPrompt</param>
 		/// <param name="OriginalFormat">optional object OriginalFormat</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Save(object noPrompt=null, object originalFormat=null)
+		public void Save(object noPrompt, object originalFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(noPrompt, originalFormat);
 			Invoker.Method(this, "Save", paramsArray);
@@ -242,7 +242,7 @@ namespace NetOffice.WordApi
 		/// <param name="DocumentType">optional object DocumentType</param>
 		/// <param name="Visible">optional object Visible</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Document Add(object template=null, object newTemplate=null, object documentType=null, object visible=null)
+		public NetOffice.WordApi.Document Add(object template, object newTemplate, object documentType, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template, newTemplate, documentType, visible);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -278,7 +278,7 @@ namespace NetOffice.WordApi
 		/// <param name="Encoding">optional object Encoding</param>
 		/// <param name="Visible">optional object Visible</param>
 		[SupportByLibrary("Word", 9)]
-		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions=null, object readOnly=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null, object format=null, object encoding=null, object visible=null)
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
@@ -305,7 +305,7 @@ namespace NetOffice.WordApi
 		/// <param name="DocumentDirection">optional object DocumentDirection</param>
 		/// <param name="NoEncodingDialog">optional object NoEncodingDialog</param>
 		[SupportByLibrary("Word", 10)]
-		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions=null, object readOnly=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null, object format=null, object encoding=null, object visible=null, object openAndRepair=null, object documentDirection=null, object noEncodingDialog=null)
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
@@ -333,7 +333,7 @@ namespace NetOffice.WordApi
 		/// <param name="NoEncodingDialog">optional object NoEncodingDialog</param>
 		/// <param name="XMLTransform">optional object XMLTransform</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions=null, object readOnly=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null, object format=null, object encoding=null, object visible=null, object openAndRepair=null, object documentDirection=null, object noEncodingDialog=null, object xMLTransform=null)
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog, object xMLTransform)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog, xMLTransform);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
@@ -370,7 +370,7 @@ namespace NetOffice.WordApi
 		/// <param name="Encoding">optional object Encoding</param>
 		/// <param name="Visible">optional object Visible</param>
 		[SupportByLibrary("Word", 10,11,12,14)]
-		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions=null, object readOnly=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null, object format=null, object encoding=null, object visible=null)
+		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible);
 			object returnItem = Invoker.MethodReturn(this, "Open2000", paramsArray);
@@ -433,7 +433,7 @@ namespace NetOffice.WordApi
 		/// <param name="DocumentDirection">optional object DocumentDirection</param>
 		/// <param name="NoEncodingDialog">optional object NoEncodingDialog</param>
 		[SupportByLibrary("Word", 11,12,14)]
-		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions=null, object readOnly=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null, object format=null, object encoding=null, object visible=null, object openAndRepair=null, object documentDirection=null, object noEncodingDialog=null)
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog);
 			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
@@ -474,7 +474,7 @@ namespace NetOffice.WordApi
 		/// <param name="NoEncodingDialog">optional object NoEncodingDialog</param>
 		/// <param name="XMLTransform">optional object XMLTransform</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions=null, object readOnly=null, object addToRecentFiles=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null, object format=null, object encoding=null, object visible=null, object openAndRepair=null, object documentDirection=null, object noEncodingDialog=null, object xMLTransform=null)
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog, object xMLTransform)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog, xMLTransform);
 			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);

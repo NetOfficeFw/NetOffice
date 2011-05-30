@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
 		[SupportByLibrary("Excel", 14)]
-		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level=null, object name=null, object caption=null, object top=null, object left=null, object width=null, object height=null)
+		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slicerDestination, level, name, caption, top, left, width, height);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

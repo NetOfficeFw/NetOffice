@@ -703,7 +703,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void LargeScroll(object down=null, object up=null, object toRight=null, object toLeft=null)
+		public void LargeScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			Invoker.Method(this, "LargeScroll", paramsArray);
@@ -776,7 +776,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Height">Int32 Height</param>
 		/// <param name="Start">optional object Start</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start=null)
+		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, start);
 			Invoker.Method(this, "ScrollIntoView", paramsArray);
@@ -804,7 +804,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void SmallScroll(object down=null, object up=null, object toRight=null, object toLeft=null)
+		public void SmallScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			Invoker.Method(this, "SmallScroll", paramsArray);

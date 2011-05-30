@@ -286,7 +286,7 @@ namespace NetOffice.WordApi
 		/// <param name="PageNumberAlignment">optional object PageNumberAlignment</param>
 		/// <param name="FirstPage">optional object FirstPage</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.PageNumber Add(object pageNumberAlignment=null, object firstPage=null)
+		public NetOffice.WordApi.PageNumber Add(object pageNumberAlignment, object firstPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pageNumberAlignment, firstPage);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

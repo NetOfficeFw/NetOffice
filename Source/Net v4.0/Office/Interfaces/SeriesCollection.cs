@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Office", 12,14)]
-		public NetOffice.OfficeApi.IMsoSeries Add(object source, NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels=null, object categoryLabels=null, object replace=null)
+		public NetOffice.OfficeApi.IMsoSeries Add(object source, NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Rowcol">optional object Rowcol</param>
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
 		[SupportByLibrary("Office", 12,14)]
-		public object Extend(object source, object rowcol=null, object categoryLabels=null)
+		public object Extend(object source, object rowcol, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, categoryLabels);
 			object returnItem = Invoker.MethodReturn(this, "Extend", paramsArray);
@@ -224,7 +224,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Replace">optional object Replace</param>
 		/// <param name="NewSeries">optional object NewSeries</param>
 		[SupportByLibrary("Office", 12,14)]
-		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels=null, object categoryLabels=null, object replace=null, object newSeries=null)
+		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace, object newSeries)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels, categoryLabels, replace, newSeries);
 			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);

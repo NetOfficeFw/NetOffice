@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
 		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Subdocument AddFromFile(object name, object confirmConversions=null, object readOnly=null, object passwordDocument=null, object passwordTemplate=null, object revert=null, object writePasswordDocument=null, object writePasswordTemplate=null)
+		public NetOffice.WordApi.Subdocument AddFromFile(object name, object confirmConversions, object readOnly, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, confirmConversions, readOnly, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
 			object returnItem = Invoker.MethodReturn(this, "AddFromFile", paramsArray);
@@ -199,7 +199,7 @@ namespace NetOffice.WordApi
 		/// <param name="FirstSubdocument">optional object FirstSubdocument</param>
 		/// <param name="LastSubdocument">optional object LastSubdocument</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Merge(object firstSubdocument=null, object lastSubdocument=null)
+		public void Merge(object firstSubdocument, object lastSubdocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(firstSubdocument, lastSubdocument);
 			Invoker.Method(this, "Merge", paramsArray);

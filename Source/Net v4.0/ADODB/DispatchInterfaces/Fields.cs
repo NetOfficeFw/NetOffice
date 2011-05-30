@@ -117,7 +117,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="Attrib">NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib</param>
 		/// <param name="FieldValue">optional object FieldValue</param>
 		[SupportByLibrary("ADODB", 2.5)]
-		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib, object fieldValue=null)
+		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib, object fieldValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib, fieldValue);
 			Invoker.Method(this, "Append", paramsArray);

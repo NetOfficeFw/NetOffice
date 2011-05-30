@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="RefersToR1C1">optional object RefersToR1C1</param>
 		/// <param name="RefersToR1C1Local">optional object RefersToR1C1Local</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Name Add(object name=null, object refersTo=null, object visible=null, object macroType=null, object shortcutKey=null, object category=null, object nameLocal=null, object refersToLocal=null, object categoryLocal=null, object refersToR1C1=null, object refersToR1C1Local=null)
+		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1, object refersToR1C1Local)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1, refersToR1C1Local);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="RefersTo">optional object RefersTo</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.ExcelApi.Name this[object index=null, object indexLocal=null, object refersTo=null]
+		public NetOffice.ExcelApi.Name this[object index, object indexLocal, object refersTo]
 		{
 			get
 			{
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="IndexLocal">optional object IndexLocal</param>
 		/// <param name="RefersTo">optional object RefersTo</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Name _Default(object index=null, object indexLocal=null, object refersTo=null)
+		public NetOffice.ExcelApi.Name _Default(object index, object indexLocal, object refersTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, indexLocal, refersTo);
 			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);

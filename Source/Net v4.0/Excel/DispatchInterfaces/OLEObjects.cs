@@ -575,7 +575,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Select(object replace=null)
+		public object Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
@@ -756,7 +756,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType=null, object filename=null, object link=null, object displayAsIcon=null, object iconFileName=null, object iconIndex=null, object iconLabel=null, object left=null, object top=null, object width=null, object height=null)
+		public NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

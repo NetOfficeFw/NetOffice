@@ -1214,7 +1214,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void CollapseOutline(object range=null)
+		public void CollapseOutline(object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			Invoker.Method(this, "CollapseOutline", paramsArray);
@@ -1235,7 +1235,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ExpandOutline(object range=null)
+		public void ExpandOutline(object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			Invoker.Method(this, "ExpandOutline", paramsArray);

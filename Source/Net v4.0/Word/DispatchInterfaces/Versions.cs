@@ -152,7 +152,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Comment">optional object Comment</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Save(object comment=null)
+		public void Save(object comment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(comment);
 			Invoker.Method(this, "Save", paramsArray);

@@ -8,7 +8,7 @@
     <ProjectGuid>{F4A471A9-63BE-4453-9C3B-826BF620B61F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LateBindingApi.VBIDEApi</RootNamespace>
+    <RootNamespace>NetOffice.VBIDEApi</RootNamespace>
     <AssemblyName>VBIDEApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -152,7 +152,7 @@ namespace NetOffice.WordApi
 		/// <param name="KeyCode2">optional object KeyCode2</param>
 		/// <param name="CommandParameter">optional object CommandParameter</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.KeyBinding Add(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, Int32 keyCode, object keyCode2=null, object commandParameter=null)
+		public NetOffice.WordApi.KeyBinding Add(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, Int32 keyCode, object keyCode2, object commandParameter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCategory, command, keyCode, keyCode2, commandParameter);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
 		/// <param name="KeyCode">Int32 KeyCode</param>
 		/// <param name="KeyCode2">optional object KeyCode2</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.KeyBinding Key(Int32 keyCode, object keyCode2=null)
+		public NetOffice.WordApi.KeyBinding Key(Int32 keyCode, object keyCode2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
 			object returnItem = Invoker.MethodReturn(this, "Key", paramsArray);

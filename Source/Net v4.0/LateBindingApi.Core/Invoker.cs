@@ -15,54 +15,54 @@ namespace LateBindingApi.Core
         #region Method
 
         /// <summary>
-        /// perform method as latebind call 
+        /// perform method as latebind call without parameters 
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
         public static void Method(COMObject comObject, string name)
         {
             Method(comObject, name, null);
         }
 
         /// <summary>
-        /// perform method as latebind call
+        /// perform method as latebind call without parameters 
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
+        /// <param name="comObject">target proxy</param>
+        /// <param name="name">name of method</param>
         public static void Method(object comObject, string name)
         {
             Method(comObject, name, null);
         }
 
         /// <summary>
-        /// perform method as latebind call 
+        /// perform method as latebind call with parameters
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="paramsArray"></param>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
         public static void Method(COMObject comObject, string name, object[] paramsArray)
         {
             comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
         }
 
         /// <summary>
-        /// perform method as latebind call 
+        /// perform method as latebind call with parameters 
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="paramsArray"></param>
+        /// <param name="comObject">target proxy</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
         public static void Method(object comObject, string name, object[] paramsArray)
         {
             comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
         }
 
         /// <summary>
-        /// perform method as latebind call 
+        /// perform method as latebind call with parameters
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="paramsArray"></param>
-        /// <param name="paramModifiers"></param>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         public static void Method(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
@@ -71,9 +71,9 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform method as latebind call with return value
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <returns>any return value</returns>
         public static object MethodReturn(COMObject comObject, string name)
         {
             object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
@@ -83,10 +83,10 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform method as latebind call with return value
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="paramsArray"></param>
-        /// <returns></returns>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <returns>any return value</returns>
         public static object MethodReturn(COMObject comObject, string name, object[] paramsArray)
         {
             object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
@@ -96,11 +96,11 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform method as latebind call with return value
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="paramsArray"></param>
-        /// <param name="paramModifiers"></param>
-        /// <returns></returns>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        /// <returns>any return value</returns>
         public static object MethodReturn(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
@@ -114,9 +114,9 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform property get as latebind call with return value
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="comObject">target proxy</param>
+        /// <param name="name">name of property</param>
+        /// <returns>any return value</returns>
         public static object PropertyGet(object comObject, string name)
         {
             object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, null, Settings.ThreadCulture);
@@ -126,9 +126,9 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform property get as latebind call with return value
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of property</param>
+        /// <returns>any return value</returns>
         public static object PropertyGet(COMObject comObject, string name)
         {
             object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
@@ -138,10 +138,10 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform property get as latebind call with return value
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="paramsArray"></param>
-        /// <returns></returns>
+        /// <param name="comObject">target proxy</param>
+        /// <param name="name">name of property</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <returns>any return value</returns>
         public static object PropertyGet(object comObject, string name, object[] paramsArray)
         {
             object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
@@ -151,10 +151,10 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform property get as latebind call with return value
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="paramsArray"></param>
-        /// <returns></returns>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of property</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <returns>any return value</returns>
         public static object PropertyGet(COMObject comObject, string name, object[] paramsArray)
         {
             object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
@@ -164,11 +164,11 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform property get as latebind call with return value
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="paramsArray"></param>
-        /// <param name="paramModifiers"></param>
-        /// <returns></returns>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of property</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        /// <returns>any return value</returns>
         public static object PropertyGet(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
@@ -178,10 +178,10 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform property set as latebind call
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="paramsArray"></param>
-        /// <param name="value"></param>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of property</param>
+        /// <param name="paramsArray">array with parameters</param> 
+        /// <param name="value">value to be set</param>
         public static void PropertySet(COMObject comObject, string name, object[] paramsArray, object value)
         {
             object[] newParamsArray = new object[paramsArray.Length + 1];
@@ -195,11 +195,11 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform property set as latebind call
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="paramsArray"></param>
-        /// <param name="value"></param>
-        /// <param name="paramModifiers"></param>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of property</param>
+        /// <param name="paramsArray">array with parameters</param> 
+        /// <param name="value">value to be set</param>
+        /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>    
         public static void PropertySet(COMObject comObject, string name, object[] paramsArray, object value, ParameterModifier[] paramModifiers)
         {
             object[] newParamsArray = new object[paramsArray.Length + 1];
@@ -213,9 +213,9 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform property set as latebind call
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="value"></param>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of property</param>
+        /// <param name="value">value to be set</param>
         public static void PropertySet(COMObject comObject, string name, object value)
         {
             comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, Settings.ThreadCulture);
@@ -224,10 +224,10 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform property set as latebind call
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="value"></param>
-        /// <param name="paramModifiers"></param>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of property</param>
+        /// <param name="value">value to be set</param>
+        /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         public static void PropertySet(COMObject comObject, string name, object value, ParameterModifier[] paramModifiers)
         {
             comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, paramModifiers, Settings.ThreadCulture, null);
@@ -236,10 +236,10 @@ namespace LateBindingApi.Core
         /// <summary>
         /// perform property set as latebind call
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="value"></param>
-        /// <param name="paramModifiers"></param>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of property</param>
+        /// <param name="value">value array to be set</param>
+        /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         public static void PropertySet(COMObject comObject, string name, object[] value, ParameterModifier[] paramModifiers)
         {
             comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, paramModifiers, Settings.ThreadCulture, null);
@@ -263,7 +263,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// create parameter modifiers array
         /// </summary>
-        /// <param name="isRef"></param>
+        /// <param name="isRef">parameter is given as ref(ByRef in Visual Basic)</param>
         /// <returns></returns>
         public static ParameterModifier[] CreateParamModifiers(params bool[] isRef)
         {
@@ -286,8 +286,8 @@ namespace LateBindingApi.Core
         /// <summary>
         /// replace null with Type.Missing, replace COMObject with COMObject.UnderlyingObject
         /// </summary>
-        /// <param name="param"></param>
-        /// <returns></returns>
+        /// <param name="param">value to check</param>
+        /// <returns>validated value</returns>
         public static object ValidateParam(object param)
         {
             if (null != param)
@@ -308,8 +308,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// calls ValidateParam for every array item
         /// </summary>
-        /// <param name="paramsArray"></param>
-        /// <returns></returns>
+        /// <param name="paramsArray">array with parameters</param>
         public static object[] ValidateParamsArray(params object[] paramsArray)
         {
             if (null != paramsArray)
@@ -322,11 +321,10 @@ namespace LateBindingApi.Core
             else
                 return null;
         }
-        
+
         /// <summary>
         /// calls dipose in case if param is COMObject, calls Marshal.ReleaseComObject in case of param is a COM proxy
         /// </summary>
-        /// <param name="param"></param>
         public static void ReleaseParam(object param)
         {
             if (null != param)
@@ -348,7 +346,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// calls ReleaseParam for every array item
         /// </summary>
-        /// <param name="paramsArray"></param>
+        /// <param name="paramsArray">any value array</param>
         public static void ReleaseParamsArray(params object[] paramsArray)
         {
             if (null != paramsArray)
@@ -360,10 +358,10 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// creates an array with arrays
+        /// copy the param array or returns null if paramsArray not set
         /// </summary>
-        /// <param name="paramsArray"></param>
-        /// <returns></returns>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <returns>array copy or null</returns>
         public static object[] CreateEventParamsArray(params object[] paramsArray)
         {
             object[] returnArray = null;
@@ -377,13 +375,13 @@ namespace LateBindingApi.Core
             else
                 return null;
         }
-        
+
         /// <summary>
-        /// creates an array with arrays
+        /// copy the param array or returns null if paramsArray not set
         /// </summary>
-        /// <param name="paramsModifier"></param>
-        /// <param name="paramsArray"></param>
-        /// <returns></returns>
+        /// <param name="paramsModifier">ararry with modifiers correspond paramsArray</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <returns>array copy or null</returns>
         public static object[] CreateEventParamsArray(bool[] paramsModifier, params object[] paramsArray)
         {
             object[] returnArray = null;

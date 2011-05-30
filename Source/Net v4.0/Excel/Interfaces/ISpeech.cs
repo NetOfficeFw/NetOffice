@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SpeakXML">optional object SpeakXML</param>
 		/// <param name="Purge">optional object Purge</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public Int32 Speak(string text, object speakAsync=null, object speakXML=null, object purge=null)
+		public Int32 Speak(string text, object speakAsync, object speakXML, object purge)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, speakAsync, speakXML, purge);
 			object returnItem = Invoker.MethodReturn(this, "Speak", paramsArray);

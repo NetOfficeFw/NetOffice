@@ -169,7 +169,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Size">optional object Size</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Field CreateField(object name=null, object type=null, object size=null)
+		public NetOffice.DAOApi.Field CreateField(object name, object type, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, size);
 			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);

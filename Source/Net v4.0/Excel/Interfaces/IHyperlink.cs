@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Method">optional object Method</param>
 		/// <param name="HeaderInfo">optional object HeaderInfo</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 Follow(object newWindow=null, object addHistory=null, object extraInfo=null, object method=null, object headerInfo=null)
+		public Int32 Follow(object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method, headerInfo);
 			object returnItem = Invoker.MethodReturn(this, "Follow", paramsArray);

@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Formula1">optional object Formula1</param>
 		/// <param name="Formula2">optional object Formula2</param>
 		[SupportByLibrary("Excel", 9,10,11)]
-		public NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator=null, object formula1=null, object formula2=null)
+		public NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, formula1, formula2);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="DateOperator">optional object DateOperator</param>
 		/// <param name="ScopeType">optional object ScopeType</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public COMObject Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator=null, object formula1=null, object formula2=null, object _string=null, object textOperator=null, object dateOperator=null, object scopeType=null)
+		public COMObject Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator, object dateOperator, object scopeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, formula1, formula2, _string, textOperator, dateOperator, scopeType);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

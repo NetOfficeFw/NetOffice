@@ -269,7 +269,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="BeforeColumn">optional object BeforeColumn</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Column Add(object beforeColumn=null)
+		public NetOffice.WordApi.Column Add(object beforeColumn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeColumn);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

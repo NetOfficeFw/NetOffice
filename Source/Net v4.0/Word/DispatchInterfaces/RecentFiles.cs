@@ -153,7 +153,7 @@ namespace NetOffice.WordApi
 		/// <param name="Document">object Document</param>
 		/// <param name="ReadOnly">optional object ReadOnly</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.RecentFile Add(object document, object readOnly=null)
+		public NetOffice.WordApi.RecentFile Add(object document, object readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(document, readOnly);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

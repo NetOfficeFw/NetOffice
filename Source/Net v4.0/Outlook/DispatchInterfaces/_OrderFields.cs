@@ -148,7 +148,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="PropertyName">string PropertyName</param>
 		/// <param name="IsDescending">optional object IsDescending</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public NetOffice.OutlookApi.OrderField Add(string propertyName, object isDescending=null)
+		public NetOffice.OutlookApi.OrderField Add(string propertyName, object isDescending)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyName, isDescending);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -197,7 +197,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Index">object Index</param>
 		/// <param name="IsDescending">optional object IsDescending</param>
 		[SupportByLibrary("Outlook", 12,14)]
-		public NetOffice.OutlookApi.OrderField Insert(string propertyName, object index, object isDescending=null)
+		public NetOffice.OutlookApi.OrderField Insert(string propertyName, object index, object isDescending)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyName, index, isDescending);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);

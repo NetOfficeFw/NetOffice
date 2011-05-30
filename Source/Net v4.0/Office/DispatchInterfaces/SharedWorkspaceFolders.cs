@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="FolderName">string FolderName</param>
 		/// <param name="ParentFolder">optional object ParentFolder</param>
 		[SupportByLibrary("Office", 11,12,14)]
-		public NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName, object parentFolder=null)
+		public NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName, object parentFolder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(folderName, parentFolder);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

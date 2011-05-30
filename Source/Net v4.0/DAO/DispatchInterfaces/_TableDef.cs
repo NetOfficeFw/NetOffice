@@ -318,7 +318,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Options">optional object Options</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Recordset OpenRecordset(object type=null, object options=null)
+		public NetOffice.DAOApi.Recordset OpenRecordset(object type, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options);
 			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
@@ -355,7 +355,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Size">optional object Size</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Field CreateField(object name=null, object type=null, object size=null)
+		public NetOffice.DAOApi.Field CreateField(object name, object type, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, size);
 			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
@@ -380,7 +380,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Index CreateIndex(object name=null)
+		public NetOffice.DAOApi.Index CreateIndex(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "CreateIndex", paramsArray);
@@ -408,7 +408,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Value">optional object Value</param>
 		/// <param name="DDL">optional object DDL</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Property CreateProperty(object name=null, object type=null, object value=null, object dDL=null)
+		public NetOffice.DAOApi.Property CreateProperty(object name, object type, object value, object dDL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, value, dDL);
 			object returnItem = Invoker.MethodReturn(this, "CreateProperty", paramsArray);

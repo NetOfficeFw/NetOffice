@@ -148,7 +148,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public NetOffice.OutlookApi.OutlookBarGroup Add(string name, object index=null)
+		public NetOffice.OutlookApi.OutlookBarGroup Add(string name, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

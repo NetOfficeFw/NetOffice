@@ -196,7 +196,7 @@ namespace NetOffice.WordApi
 		/// <param name="Text">optional object Text</param>
 		/// <param name="PreserveFormatting">optional object PreserveFormatting</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Field Add(NetOffice.WordApi.Range range, object type=null, object text=null, object preserveFormatting=null)
+		public NetOffice.WordApi.Field Add(NetOffice.WordApi.Range range, object type, object text, object preserveFormatting)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, type, text, preserveFormatting);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

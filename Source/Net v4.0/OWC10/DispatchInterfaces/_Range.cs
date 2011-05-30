@@ -1237,7 +1237,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Criteria2">optional object Criteria2</param>
 		/// <param name="VisibleDropDown">optional object VisibleDropDown</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void AutoFilter(object field=null, object criteria1=null, object _operator=null, object criteria2=null, object visibleDropDown=null)
+		public void AutoFilter(object field, object criteria1, object _operator, object criteria2, object visibleDropDown)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, criteria1, _operator, criteria2, visibleDropDown);
 			Invoker.Method(this, "AutoFilter", paramsArray);
@@ -1271,7 +1271,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="ColorIndex">NetOffice.OWC10Api.Enums.XlColorIndex ColorIndex</param>
 		/// <param name="Color">optional object Color</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void BorderAround(object lineStyle, NetOffice.OWC10Api.Enums.XlBorderWeight weight, NetOffice.OWC10Api.Enums.XlColorIndex colorIndex, object color=null)
+		public void BorderAround(object lineStyle, NetOffice.OWC10Api.Enums.XlBorderWeight weight, NetOffice.OWC10Api.Enums.XlColorIndex colorIndex, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color);
 			Invoker.Method(this, "BorderAround", paramsArray);
@@ -1335,7 +1335,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Destination">optional object Destination</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Copy(object destination=null)
+		public void Copy(object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination);
 			Invoker.Method(this, "Copy", paramsArray);
@@ -1358,7 +1358,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="MaxRows">optional object MaxRows</param>
 		/// <param name="MaxColumns">optional object MaxColumns</param>
 		[SupportByLibrary("OWC10", 1)]
-		public Int32 CopyFromRecordset(object data, object maxRows=null, object maxColumns=null)
+		public Int32 CopyFromRecordset(object data, object maxRows, object maxColumns)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(data, maxRows, maxColumns);
 			object returnItem = Invoker.MethodReturn(this, "CopyFromRecordset", paramsArray);
@@ -1382,7 +1382,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Destination">optional object Destination</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Cut(object destination=null)
+		public void Cut(object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination);
 			Invoker.Method(this, "Cut", paramsArray);
@@ -1403,7 +1403,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Shift">optional object Shift</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Delete(object shift=null)
+		public void Delete(object shift)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shift);
 			Invoker.Method(this, "Delete", paramsArray);
@@ -1451,7 +1451,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="MatchCase">optional object MatchCase</param>
 		/// <param name="MatchByte">optional object MatchByte</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.OWC10Api.Enums.XlSearchDirection searchDirection, object matchCase=null, object matchByte=null)
+		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.OWC10Api.Enums.XlSearchDirection searchDirection, object matchCase, object matchByte)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -1482,7 +1482,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api._Range FindNext(object after=null)
+		public NetOffice.OWC10Api._Range FindNext(object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(after);
 			object returnItem = Invoker.MethodReturn(this, "FindNext", paramsArray);
@@ -1507,7 +1507,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("OWC10", 1)]
-		public NetOffice.OWC10Api._Range FindPrevious(object after=null)
+		public NetOffice.OWC10Api._Range FindPrevious(object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(after);
 			object returnItem = Invoker.MethodReturn(this, "FindPrevious", paramsArray);
@@ -1532,7 +1532,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Shift">optional object Shift</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Insert(object shift=null)
+		public void Insert(object shift)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shift);
 			Invoker.Method(this, "Insert", paramsArray);
@@ -1567,7 +1567,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Across">optional object Across</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void Merge(object across=null)
+		public void Merge(object across)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(across);
 			Invoker.Method(this, "Merge", paramsArray);

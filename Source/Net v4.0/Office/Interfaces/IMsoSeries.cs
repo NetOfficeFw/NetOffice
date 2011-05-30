@@ -899,7 +899,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="AutoText">optional object AutoText</param>
 		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
 		[SupportByLibrary("Office", 12,14)]
-		public object _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey=null, object autoText=null, object hasLeaderLines=null)
+		public object _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines);
 			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
@@ -981,7 +981,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 12,14)]
-		public COMObject DataLabels(object index=null)
+		public COMObject DataLabels(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "DataLabels", paramsArray);
@@ -1030,7 +1030,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Amount">optional object Amount</param>
 		/// <param name="MinusValues">optional object MinusValues</param>
 		[SupportByLibrary("Office", 12,14)]
-		public object ErrorBar(NetOffice.OfficeApi.Enums.XlErrorBarDirection direction, NetOffice.OfficeApi.Enums.XlErrorBarInclude include, NetOffice.OfficeApi.Enums.XlErrorBarType type, object amount=null, object minusValues=null)
+		public object ErrorBar(NetOffice.OfficeApi.Enums.XlErrorBarDirection direction, NetOffice.OfficeApi.Enums.XlErrorBarInclude include, NetOffice.OfficeApi.Enums.XlErrorBarType type, object amount, object minusValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(direction, include, type, amount, minusValues);
 			object returnItem = Invoker.MethodReturn(this, "ErrorBar", paramsArray);
@@ -1094,7 +1094,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 12,14)]
-		public COMObject Points(object index=null)
+		public COMObject Points(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Points", paramsArray);
@@ -1139,7 +1139,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Office", 12,14)]
-		public COMObject Trendlines(object index=null)
+		public COMObject Trendlines(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Trendlines", paramsArray);
@@ -1185,7 +1185,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="ShowBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="Separator">optional object Separator</param>
 		[SupportByLibrary("Office", 12,14)]
-		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey=null, object autoText=null, object hasLeaderLines=null, object showSeriesName=null, object showCategoryName=null, object showValue=null, object showPercentage=null, object showBubbleSize=null, object separator=null)
+		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);

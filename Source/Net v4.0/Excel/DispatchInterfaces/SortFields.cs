@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="CustomOrder">optional object CustomOrder</param>
 		/// <param name="DataOption">optional object DataOption</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn=null, object order=null, object customOrder=null, object dataOption=null)
+		public NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn, object order, object customOrder, object dataOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key, sortOn, order, customOrder, dataOption);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

@@ -73,7 +73,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Total">NetOffice.OWC10Api.PivotTotal Total</param>
 		/// <param name="Before">optional object Before</param>
 		[SupportByLibrary("OWC10", 1)]
-		public void InsertTotal(NetOffice.OWC10Api.PivotTotal total, object before=null)
+		public void InsertTotal(NetOffice.OWC10Api.PivotTotal total, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(total, before);
 			Invoker.Method(this, "InsertTotal", paramsArray);

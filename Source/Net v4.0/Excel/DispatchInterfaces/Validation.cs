@@ -360,7 +360,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Formula1">optional object Formula1</param>
 		/// <param name="Formula2">optional object Formula2</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle=null, object _operator=null, object formula1=null, object formula2=null)
+		public void Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator, object formula1, object formula2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, alertStyle, _operator, formula1, formula2);
 			Invoker.Method(this, "Add", paramsArray);
@@ -396,7 +396,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Formula1">optional object Formula1</param>
 		/// <param name="Formula2">optional object Formula2</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Modify(object type=null, object alertStyle=null, object _operator=null, object formula1=null, object formula2=null)
+		public void Modify(object type, object alertStyle, object _operator, object formula1, object formula2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, alertStyle, _operator, formula1, formula2);
 			Invoker.Method(this, "Modify", paramsArray);

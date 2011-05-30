@@ -448,7 +448,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Separator">optional object Separator</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range ConvertToTextOld(object separator=null)
+		public NetOffice.WordApi.Range ConvertToTextOld(object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(separator);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToTextOld", paramsArray);
@@ -474,7 +474,7 @@ namespace NetOffice.WordApi
 		/// <param name="Separator">optional object Separator</param>
 		/// <param name="NestedTables">optional object NestedTables</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Range ConvertToText(object separator=null, object nestedTables=null)
+		public NetOffice.WordApi.Range ConvertToText(object separator, object nestedTables)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(separator, nestedTables);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToText", paramsArray);

@@ -166,7 +166,7 @@ namespace NetOffice.WordApi
 		/// <param name="DefaultTableBehavior">optional object DefaultTableBehavior</param>
 		/// <param name="AutoFitBehavior">optional object AutoFitBehavior</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Table Add(NetOffice.WordApi.Range range, Int32 numRows, Int32 numColumns, object defaultTableBehavior=null, object autoFitBehavior=null)
+		public NetOffice.WordApi.Table Add(NetOffice.WordApi.Range range, Int32 numRows, Int32 numColumns, object defaultTableBehavior, object autoFitBehavior)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, numRows, numColumns, defaultTableBehavior, autoFitBehavior);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

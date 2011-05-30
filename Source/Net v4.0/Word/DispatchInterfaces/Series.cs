@@ -937,7 +937,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Word", 14)]
-		public COMObject DataLabels(object index=null)
+		public COMObject DataLabels(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "DataLabels", paramsArray);
@@ -986,7 +986,7 @@ namespace NetOffice.WordApi
 		/// <param name="Amount">optional object Amount</param>
 		/// <param name="MinusValues">optional object MinusValues</param>
 		[SupportByLibrary("Word", 14)]
-		public object ErrorBar(NetOffice.WordApi.Enums.XlErrorBarDirection direction, NetOffice.WordApi.Enums.XlErrorBarInclude include, NetOffice.WordApi.Enums.XlErrorBarType type, object amount=null, object minusValues=null)
+		public object ErrorBar(NetOffice.WordApi.Enums.XlErrorBarDirection direction, NetOffice.WordApi.Enums.XlErrorBarInclude include, NetOffice.WordApi.Enums.XlErrorBarType type, object amount, object minusValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(direction, include, type, amount, minusValues);
 			object returnItem = Invoker.MethodReturn(this, "ErrorBar", paramsArray);
@@ -1050,7 +1050,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Word", 14)]
-		public COMObject Points(object index=null)
+		public COMObject Points(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Points", paramsArray);
@@ -1095,7 +1095,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Word", 14)]
-		public COMObject Trendlines(object index=null)
+		public COMObject Trendlines(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Trendlines", paramsArray);
@@ -1140,7 +1140,7 @@ namespace NetOffice.WordApi
 		/// <param name="ShowBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="Separator">optional object Separator</param>
 		[SupportByLibrary("Word", 14)]
-		public object ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey=null, object autoText=null, object hasLeaderLines=null, object showSeriesName=null, object showCategoryName=null, object showValue=null, object showPercentage=null, object showBubbleSize=null, object separator=null)
+		public object ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);

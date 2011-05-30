@@ -89,7 +89,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="bstrFilename">string bstrFilename</param>
 		/// <param name="vIndex">optional object vIndex</param>
 		[SupportByLibrary("MSComctlLib", 6)]
-		public void Add(string bstrFilename, object vIndex=null)
+		public void Add(string bstrFilename, object vIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrFilename, vIndex);
 			Invoker.Method(this, "Add", paramsArray);

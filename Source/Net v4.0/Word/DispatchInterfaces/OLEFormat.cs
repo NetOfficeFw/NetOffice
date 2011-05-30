@@ -302,7 +302,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="VerbIndex">optional object VerbIndex</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void DoVerb(object verbIndex=null)
+		public void DoVerb(object verbIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(verbIndex);
 			Invoker.Method(this, "DoVerb", paramsArray);
@@ -327,7 +327,7 @@ namespace NetOffice.WordApi
 		/// <param name="IconIndex">optional object IconIndex</param>
 		/// <param name="IconLabel">optional object IconLabel</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void ConvertTo(object classType=null, object displayAsIcon=null, object iconFileName=null, object iconIndex=null, object iconLabel=null)
+		public void ConvertTo(object classType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, displayAsIcon, iconFileName, iconIndex, iconLabel);
 			Invoker.Method(this, "ConvertTo", paramsArray);

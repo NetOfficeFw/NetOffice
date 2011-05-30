@@ -1626,7 +1626,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object PivotItems(object index=null)
+		public object PivotItems(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "PivotItems", paramsArray);
@@ -1704,7 +1704,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PivotLine">optional object PivotLine</param>
 		/// <param name="CustomSubtotal">optional object CustomSubtotal</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public void AutoSort(Int32 order, string field, object pivotLine=null, object customSubtotal=null)
+		public void AutoSort(Int32 order, string field, object pivotLine, object customSubtotal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(order, field, pivotLine, customSubtotal);
 			Invoker.Method(this, "AutoSort", paramsArray);
@@ -1730,7 +1730,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Item">string Item</param>
 		/// <param name="ClearList">optional object ClearList</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public void AddPageItem(string item, object clearList=null)
+		public void AddPageItem(string item, object clearList)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, clearList);
 			Invoker.Method(this, "AddPageItem", paramsArray);

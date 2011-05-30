@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Start">optional object Start</param>
 		/// <param name="Overwrite">optional object Overwrite</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public string Text(object text=null, object start=null, object overwrite=null)
+		public string Text(object text, object start, object overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, start, overwrite);
 			object returnItem = Invoker.MethodReturn(this, "Text", paramsArray);

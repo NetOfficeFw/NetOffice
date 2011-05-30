@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Value">optional object Value</param>
 		/// <param name="LinkSource">optional object LinkSource</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type=null, object value=null, object linkSource=null)
+		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value, object linkSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent, type, value, linkSource);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

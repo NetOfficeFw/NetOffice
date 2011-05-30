@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Before">optional object Before</param>
 		/// <param name="Temporary">optional object Temporary</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.CommandBarControl Add(object type=null, object id=null, object parameter=null, object before=null, object temporary=null)
+		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter, object before, object temporary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id, parameter, before, temporary);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

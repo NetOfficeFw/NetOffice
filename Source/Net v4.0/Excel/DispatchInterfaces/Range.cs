@@ -2166,7 +2166,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="CopyToRange">optional object CopyToRange</param>
 		/// <param name="Unique">optional object Unique</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action, object criteriaRange=null, object copyToRange=null, object unique=null)
+		public object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action, object criteriaRange, object copyToRange, object unique)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action, criteriaRange, copyToRange, unique);
 			object returnItem = Invoker.MethodReturn(this, "AdvancedFilter", paramsArray);
@@ -2214,7 +2214,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Order">NetOffice.ExcelApi.Enums.XlApplyNamesOrder Order</param>
 		/// <param name="AppendLast">optional object AppendLast</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, NetOffice.ExcelApi.Enums.XlApplyNamesOrder order, object appendLast=null)
+		public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, NetOffice.ExcelApi.Enums.XlApplyNamesOrder order, object appendLast)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(names, ignoreRelativeAbsolute, useRowColumnNames, omitColumn, omitRow, order, appendLast);
 			object returnItem = Invoker.MethodReturn(this, "ApplyNames", paramsArray);
@@ -2319,7 +2319,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Criteria2">optional object Criteria2</param>
 		/// <param name="VisibleDropDown">optional object VisibleDropDown</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object AutoFilter(object field, object criteria1, NetOffice.ExcelApi.Enums.XlAutoFilterOperator _operator, object criteria2=null, object visibleDropDown=null)
+		public object AutoFilter(object field, object criteria1, NetOffice.ExcelApi.Enums.XlAutoFilterOperator _operator, object criteria2, object visibleDropDown)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, criteria1, _operator, criteria2, visibleDropDown);
 			object returnItem = Invoker.MethodReturn(this, "AutoFilter", paramsArray);
@@ -2389,7 +2389,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Pattern">optional object Pattern</param>
 		/// <param name="Width">optional object Width</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number=null, object font=null, object alignment=null, object border=null, object pattern=null, object width=null)
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number, object font, object alignment, object border, object pattern, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font, alignment, border, pattern, width);
 			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
@@ -2454,7 +2454,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ColorIndex">NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex</param>
 		/// <param name="Color">optional object Color</param>
 		[SupportByLibrary("Excel", 9,10,11,12)]
-		public object BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color=null)
+		public object BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color);
 			object returnItem = Invoker.MethodReturn(this, "BorderAround", paramsArray);
@@ -2479,7 +2479,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Color">optional object Color</param>
 		/// <param name="ThemeColor">optional object ThemeColor</param>
 		[SupportByLibrary("Excel", 14)]
-		public object BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color=null, object themeColor=null)
+		public object BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color, object themeColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color, themeColor);
 			object returnItem = Invoker.MethodReturn(this, "BorderAround", paramsArray);
@@ -2546,7 +2546,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
 		/// <param name="SpellLang">optional object SpellLang</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object CheckSpelling(object customDictionary=null, object ignoreUppercase=null, object alwaysSuggest=null, object spellLang=null)
+		public object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object spellLang)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, spellLang);
 			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
@@ -2704,7 +2704,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="LeftColumn">optional object LeftColumn</param>
 		/// <param name="CreateLinks">optional object CreateLinks</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Consolidate(object sources=null, object function=null, object topRow=null, object leftColumn=null, object createLinks=null)
+		public object Consolidate(object sources, object function, object topRow, object leftColumn, object createLinks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sources, function, topRow, leftColumn, createLinks);
 			object returnItem = Invoker.MethodReturn(this, "Consolidate", paramsArray);
@@ -2745,7 +2745,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Destination">optional object Destination</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Copy(object destination=null)
+		public object Copy(object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination);
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
@@ -2788,7 +2788,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="MaxRows">optional object MaxRows</param>
 		/// <param name="MaxColumns">optional object MaxColumns</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 CopyFromRecordset(object data, object maxRows=null, object maxColumns=null)
+		public Int32 CopyFromRecordset(object data, object maxRows, object maxColumns)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(data, maxRows, maxColumns);
 			object returnItem = Invoker.MethodReturn(this, "CopyFromRecordset", paramsArray);
@@ -2837,7 +2837,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Bottom">optional object Bottom</param>
 		/// <param name="Right">optional object Right</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object CreateNames(object top=null, object left=null, object bottom=null, object right=null)
+		public object CreateNames(object top, object left, object bottom, object right)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(top, left, bottom, right);
 			object returnItem = Invoker.MethodReturn(this, "CreateNames", paramsArray);
@@ -2883,7 +2883,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ContainsRTF">optional object ContainsRTF</param>
 		/// <param name="ContainsVALU">optional object ContainsVALU</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, object containsPICT=null, object containsBIFF=null, object containsRTF=null, object containsVALU=null)
+		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, object containsPICT, object containsBIFF, object containsRTF, object containsVALU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, containsPICT, containsBIFF, containsRTF, containsVALU);
 			object returnItem = Invoker.MethodReturn(this, "CreatePublisher", paramsArray);
@@ -2926,7 +2926,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Destination">optional object Destination</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Cut(object destination=null)
+		public object Cut(object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination);
 			object returnItem = Invoker.MethodReturn(this, "Cut", paramsArray);
@@ -2972,7 +2972,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Stop">optional object Stop</param>
 		/// <param name="Trend">optional object Trend</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object DataSeries(object rowcol, NetOffice.ExcelApi.Enums.XlDataSeriesType type, NetOffice.ExcelApi.Enums.XlDataSeriesDate date, object step=null, object stop=null, object trend=null)
+		public object DataSeries(object rowcol, NetOffice.ExcelApi.Enums.XlDataSeriesType type, NetOffice.ExcelApi.Enums.XlDataSeriesDate date, object step, object stop, object trend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type, date, step, stop, trend);
 			object returnItem = Invoker.MethodReturn(this, "DataSeries", paramsArray);
@@ -3016,7 +3016,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Shift">optional object Shift</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Delete(object shift=null)
+		public object Delete(object shift)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shift);
 			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
@@ -3083,7 +3083,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ChartSize">NetOffice.ExcelApi.Enums.XlPictureAppearance ChartSize</param>
 		/// <param name="Format">optional object Format</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlPictureAppearance chartSize, object format=null)
+		public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlPictureAppearance chartSize, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, option, name, reference, appearance, chartSize, format);
 			object returnItem = Invoker.MethodReturn(this, "EditionOptions", paramsArray);
@@ -3217,7 +3217,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="MatchCase">optional object MatchCase</param>
 		/// <param name="MatchByte">optional object MatchByte</param>
 		[SupportByLibrary("Excel", 9)]
-		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection, object matchCase=null, object matchByte=null)
+		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection, object matchCase, object matchByte)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -3238,7 +3238,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="MatchByte">optional object MatchByte</param>
 		/// <param name="SearchFormat">optional object SearchFormat</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection, object matchCase=null, object matchByte=null, object searchFormat=null)
+		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection, object matchCase, object matchByte, object searchFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte, searchFormat);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -3269,7 +3269,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Range FindNext(object after=null)
+		public NetOffice.ExcelApi.Range FindNext(object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(after);
 			object returnItem = Invoker.MethodReturn(this, "FindNext", paramsArray);
@@ -3294,7 +3294,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="After">optional object After</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Range FindPrevious(object after=null)
+		public NetOffice.ExcelApi.Range FindPrevious(object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(after);
 			object returnItem = Invoker.MethodReturn(this, "FindPrevious", paramsArray);
@@ -3355,7 +3355,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="By">optional object By</param>
 		/// <param name="Periods">optional object Periods</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Group(object start=null, object end=null, object by=null, object periods=null)
+		public object Group(object start, object end, object by, object periods)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, end, by, periods);
 			object returnItem = Invoker.MethodReturn(this, "Group", paramsArray);
@@ -3407,7 +3407,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Shift">optional object Shift</param>
 		[SupportByLibrary("Excel", 9)]
-		public object Insert(object shift=null)
+		public object Insert(object shift)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shift);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
@@ -3429,7 +3429,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Shift">optional object Shift</param>
 		/// <param name="CopyOrigin">optional object CopyOrigin</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object Insert(object shift=null, object copyOrigin=null)
+		public object Insert(object shift, object copyOrigin)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shift, copyOrigin);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
@@ -3510,7 +3510,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Across">optional object Across</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Merge(object across=null)
+		public void Merge(object across)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(across);
 			Invoker.Method(this, "Merge", paramsArray);
@@ -3543,7 +3543,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ArrowNumber">optional object ArrowNumber</param>
 		/// <param name="LinkNumber">optional object LinkNumber</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object NavigateArrow(object towardPrecedent=null, object arrowNumber=null, object linkNumber=null)
+		public object NavigateArrow(object towardPrecedent, object arrowNumber, object linkNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(towardPrecedent, arrowNumber, linkNumber);
 			object returnItem = Invoker.MethodReturn(this, "NavigateArrow", paramsArray);
@@ -3586,7 +3586,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Start">optional object Start</param>
 		/// <param name="Length">optional object Length</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public string NoteText(object text=null, object start=null, object length=null)
+		public string NoteText(object text, object start, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, start, length);
 			object returnItem = Invoker.MethodReturn(this, "NoteText", paramsArray);
@@ -3610,7 +3610,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ParseLine">optional object ParseLine</param>
 		/// <param name="Destination">optional object Destination</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Parse(object parseLine=null, object destination=null)
+		public object Parse(object parseLine, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parseLine, destination);
 			object returnItem = Invoker.MethodReturn(this, "Parse", paramsArray);
@@ -3654,7 +3654,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SkipBlanks">optional object SkipBlanks</param>
 		/// <param name="Transpose">optional object Transpose</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks=null, object transpose=null)
+		public object PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks, object transpose)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks, transpose);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -3703,7 +3703,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
 		[SupportByLibrary("Excel", 9,10,11)]
-		public object _PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null)
+		public object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
 			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
@@ -3731,7 +3731,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Collate">optional object Collate</param>
 		/// <param name="PrToFileName">optional object PrToFileName</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public object _PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null, object prToFileName=null)
+		public object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
 			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
@@ -3772,7 +3772,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="EnableChanges">optional object EnableChanges</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object PrintPreview(object enableChanges=null)
+		public object PrintPreview(object enableChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(enableChanges);
 			object returnItem = Invoker.MethodReturn(this, "PrintPreview", paramsArray);
@@ -3838,7 +3838,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="MatchCase">optional object MatchCase</param>
 		/// <param name="MatchByte">optional object MatchByte</param>
 		[SupportByLibrary("Excel", 9)]
-		public bool Replace(object what, object replacement, object lookAt=null, object searchOrder=null, object matchCase=null, object matchByte=null)
+		public bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase, object matchByte)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, replacement, lookAt, searchOrder, matchCase, matchByte);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
@@ -3857,7 +3857,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SearchFormat">optional object SearchFormat</param>
 		/// <param name="ReplaceFormat">optional object ReplaceFormat</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public bool Replace(object what, object replacement, object lookAt=null, object searchOrder=null, object matchCase=null, object matchByte=null, object searchFormat=null, object replaceFormat=null)
+		public bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase, object matchByte, object searchFormat, object replaceFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, replacement, lookAt, searchOrder, matchCase, matchByte, searchFormat, replaceFormat);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
@@ -3924,7 +3924,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Run(object arg1=null, object arg2=null, object arg3=null, object arg4=null, object arg5=null, object arg6=null, object arg7=null, object arg8=null, object arg9=null, object arg10=null, object arg11=null, object arg12=null, object arg13=null, object arg14=null, object arg15=null, object arg16=null, object arg17=null, object arg18=null, object arg19=null, object arg20=null, object arg21=null, object arg22=null, object arg23=null, object arg24=null, object arg25=null, object arg26=null, object arg27=null, object arg28=null, object arg29=null, object arg30=null)
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
@@ -4005,7 +4005,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Remove">optional object Remove</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object ShowDependents(object remove=null)
+		public object ShowDependents(object remove)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(remove);
 			object returnItem = Invoker.MethodReturn(this, "ShowDependents", paramsArray);
@@ -4066,7 +4066,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Remove">optional object Remove</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object ShowPrecedents(object remove=null)
+		public object ShowPrecedents(object remove)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(remove);
 			object returnItem = Invoker.MethodReturn(this, "ShowPrecedents", paramsArray);
@@ -4242,7 +4242,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Type">NetOffice.ExcelApi.Enums.XlCellType Type</param>
 		/// <param name="Value">optional object Value</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Range SpecialCells(NetOffice.ExcelApi.Enums.XlCellType type, object value=null)
+		public NetOffice.ExcelApi.Range SpecialCells(NetOffice.ExcelApi.Enums.XlCellType type, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, value);
 			object returnItem = Invoker.MethodReturn(this, "SpecialCells", paramsArray);
@@ -4317,7 +4317,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="RowInput">optional object RowInput</param>
 		/// <param name="ColumnInput">optional object ColumnInput</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object Table(object rowInput=null, object columnInput=null)
+		public object Table(object rowInput, object columnInput)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowInput, columnInput);
 			object returnItem = Invoker.MethodReturn(this, "Table", paramsArray);
@@ -4370,7 +4370,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="DecimalSeparator">optional object DecimalSeparator</param>
 		/// <param name="ThousandsSeparator">optional object ThousandsSeparator</param>
 		[SupportByLibrary("Excel", 9)]
-		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter=null, object tab=null, object semicolon=null, object comma=null, object space=null, object other=null, object otherChar=null, object fieldInfo=null, object decimalSeparator=null, object thousandsSeparator=null)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator, thousandsSeparator);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -4404,7 +4404,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ThousandsSeparator">optional object ThousandsSeparator</param>
 		/// <param name="TrailingMinusNumbers">optional object TrailingMinusNumbers</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter=null, object tab=null, object semicolon=null, object comma=null, object space=null, object other=null, object otherChar=null, object fieldInfo=null, object decimalSeparator=null, object thousandsSeparator=null, object trailingMinusNumbers=null)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator, thousandsSeparator, trailingMinusNumbers);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -4468,7 +4468,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Text">optional object Text</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public NetOffice.ExcelApi.Comment AddComment(object text=null)
+		public NetOffice.ExcelApi.Comment AddComment(object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
 			object returnItem = Invoker.MethodReturn(this, "AddComment", paramsArray);
@@ -4520,7 +4520,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Collate">optional object Collate</param>
 		/// <param name="PrToFileName">optional object PrToFileName</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null, object prToFileName=null)
+		public object PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
 			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
@@ -4564,7 +4564,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SkipBlanks">optional object SkipBlanks</param>
 		/// <param name="Transpose">optional object Transpose</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public object _PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks=null, object transpose=null)
+		public object _PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks, object transpose)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks, transpose);
 			object returnItem = Invoker.MethodReturn(this, "_PasteSpecial", paramsArray);
@@ -4618,7 +4618,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SpeakDirection">optional object SpeakDirection</param>
 		/// <param name="SpeakFormulas">optional object SpeakFormulas</param>
 		[SupportByLibrary("Excel", 10,11,12,14)]
-		public void Speak(object speakDirection=null, object speakFormulas=null)
+		public void Speak(object speakDirection, object speakFormulas)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(speakDirection, speakFormulas);
 			Invoker.Method(this, "Speak", paramsArray);
@@ -4645,7 +4645,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public object __PrintOut(object from=null, object to=null, object copies=null, object preview=null, object activePrinter=null, object printToFile=null, object collate=null)
+		public object __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
 			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
@@ -4706,7 +4706,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="OpenAfterPublish">optional object OpenAfterPublish</param>
 		/// <param name="FixedFormatExtClassPtr">optional object FixedFormatExtClassPtr</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public void ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename=null, object quality=null, object includeDocProperties=null, object ignorePrintAreas=null, object from=null, object to=null, object openAfterPublish=null, object fixedFormatExtClassPtr=null)
+		public void ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from, object to, object openAfterPublish, object fixedFormatExtClassPtr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, filename, quality, includeDocProperties, ignorePrintAreas, from, to, openAfterPublish, fixedFormatExtClassPtr);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -4751,7 +4751,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ColorIndex">NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex</param>
 		/// <param name="Color">optional object Color</param>
 		[SupportByLibrary("Excel", 14)]
-		public object _BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color=null)
+		public object _BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color);
 			object returnItem = Invoker.MethodReturn(this, "_BorderAround", paramsArray);

@@ -150,7 +150,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="AddToFolderFields">optional object AddToFolderFields</param>
 		/// <param name="DisplayFormat">optional object DisplayFormat</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public NetOffice.OutlookApi.UserProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields=null, object displayFormat=null)
+		public NetOffice.OutlookApi.UserProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields, object displayFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, addToFolderFields, displayFormat);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -178,7 +178,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Custom">optional object Custom</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public NetOffice.OutlookApi.UserProperty Find(string name, object custom=null)
+		public NetOffice.OutlookApi.UserProperty Find(string name, object custom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, custom);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);

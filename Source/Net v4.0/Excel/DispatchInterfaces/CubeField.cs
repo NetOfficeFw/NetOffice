@@ -567,7 +567,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Property">string Property</param>
 		/// <param name="PropertyOrder">optional object PropertyOrder</param>
 		[SupportByLibrary("Excel", 10,11)]
-		public void AddMemberPropertyField(string property, object propertyOrder=null)
+		public void AddMemberPropertyField(string property, object propertyOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(property, propertyOrder);
 			Invoker.Method(this, "AddMemberPropertyField", paramsArray);
@@ -580,7 +580,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PropertyOrder">optional object PropertyOrder</param>
 		/// <param name="PropertyDisplayedIn">optional object PropertyDisplayedIn</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public void AddMemberPropertyField(string property, object propertyOrder=null, object propertyDisplayedIn=null)
+		public void AddMemberPropertyField(string property, object propertyOrder, object propertyDisplayedIn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(property, propertyOrder, propertyDisplayedIn);
 			Invoker.Method(this, "AddMemberPropertyField", paramsArray);
@@ -613,7 +613,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Property">string Property</param>
 		/// <param name="PropertyOrder">optional object PropertyOrder</param>
 		[SupportByLibrary("Excel", 12,14)]
-		public void _AddMemberPropertyField(string property, object propertyOrder=null)
+		public void _AddMemberPropertyField(string property, object propertyOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(property, propertyOrder);
 			Invoker.Method(this, "_AddMemberPropertyField", paramsArray);

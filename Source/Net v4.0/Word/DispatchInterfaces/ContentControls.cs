@@ -134,7 +134,7 @@ namespace NetOffice.WordApi
 		/// <param name="Type">NetOffice.WordApi.Enums.WdContentControlType Type</param>
 		/// <param name="Range">optional object Range</param>
 		[SupportByLibrary("Word", 12,14)]
-		public NetOffice.WordApi.ContentControl Add(NetOffice.WordApi.Enums.WdContentControlType type, object range=null)
+		public NetOffice.WordApi.ContentControl Add(NetOffice.WordApi.Enums.WdContentControlType type, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, range);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

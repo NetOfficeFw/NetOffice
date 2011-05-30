@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="AddToMru">optional object AddToMru</param>
 		/// <param name="RepairMode">optional object RepairMode</param>
 		[SupportByLibrary("Excel", 14)]
-		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password=null, object addToMru=null, object repairMode=null)
+		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru, object repairMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, password, addToMru, repairMode);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);

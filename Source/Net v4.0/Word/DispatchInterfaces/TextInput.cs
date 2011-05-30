@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
 		/// <param name="Format">optional object Format</param>
 		/// <param name="Enabled">optional object Enabled</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void EditType(NetOffice.WordApi.Enums.WdTextFormFieldType type, object _default=null, object format=null, object enabled=null)
+		public void EditType(NetOffice.WordApi.Enums.WdTextFormFieldType type, object _default, object format, object enabled)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _default, format, enabled);
 			Invoker.Method(this, "EditType", paramsArray);

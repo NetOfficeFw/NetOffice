@@ -343,7 +343,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="Restrictions">optional object Restrictions</param>
 		/// <param name="SchemaID">optional object SchemaID</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Recordset OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema, object restrictions=null, object schemaID=null)
+		public NetOffice.ADODBApi._Recordset OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema, object restrictions, object schemaID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schema, restrictions, schemaID);
 			object returnItem = Invoker.MethodReturn(this, "OpenSchema", paramsArray);

@@ -123,7 +123,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Description">optional object Description</param>
 		/// <param name="DueDate">optional object DueDate</param>
 		[SupportByLibrary("Office", 11,12,14)]
-		public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status=null, object priority=null, object assignee=null, object description=null, object dueDate=null)
+		public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee, object description, object dueDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, status, priority, assignee, description, dueDate);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

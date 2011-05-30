@@ -736,7 +736,7 @@ namespace NetOffice.WordApi
 		/// <param name="ReplaceWith">optional object ReplaceWith</param>
 		/// <param name="Replace">optional object Replace</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool ExecuteOld(object findText=null, object matchCase=null, object matchWholeWord=null, object matchWildcards=null, object matchSoundsLike=null, object matchAllWordForms=null, object forward=null, object wrap=null, object format=null, object replaceWith=null, object replace=null)
+		public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
@@ -803,7 +803,7 @@ namespace NetOffice.WordApi
 		/// <param name="MatchAlefHamza">optional object MatchAlefHamza</param>
 		/// <param name="MatchControl">optional object MatchControl</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public bool Execute(object findText=null, object matchCase=null, object matchWholeWord=null, object matchWildcards=null, object matchSoundsLike=null, object matchAllWordForms=null, object forward=null, object wrap=null, object format=null, object replaceWith=null, object replace=null, object matchKashida=null, object matchDiacritics=null, object matchAlefHamza=null, object matchControl=null)
+		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
@@ -845,7 +845,7 @@ namespace NetOffice.WordApi
 		/// <param name="IgnorePunct">optional object IgnorePunct</param>
 		/// <param name="HanjaPhoneticHangul">optional object HanjaPhoneticHangul</param>
 		[SupportByLibrary("Word", 12,14)]
-		public bool HitHighlight(object findText, object highlightColor=null, object textColor=null, object matchCase=null, object matchWholeWord=null, object matchPrefix=null, object matchSuffix=null, object matchPhrase=null, object matchWildcards=null, object matchSoundsLike=null, object matchAllWordForms=null, object matchByte=null, object matchFuzzy=null, object matchKashida=null, object matchDiacritics=null, object matchAlefHamza=null, object matchControl=null, object ignoreSpace=null, object ignorePunct=null, object hanjaPhoneticHangul=null)
+		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object ignoreSpace, object ignorePunct, object hanjaPhoneticHangul)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl, ignoreSpace, ignorePunct, hanjaPhoneticHangul);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
@@ -899,7 +899,7 @@ namespace NetOffice.WordApi
 		/// <param name="IgnoreSpace">optional object IgnoreSpace</param>
 		/// <param name="IgnorePunct">optional object IgnorePunct</param>
 		[SupportByLibrary("Word", 12,14)]
-		public bool Execute2007(object findText=null, object matchCase=null, object matchWholeWord=null, object matchWildcards=null, object matchSoundsLike=null, object matchAllWordForms=null, object forward=null, object wrap=null, object format=null, object replaceWith=null, object replace=null, object matchKashida=null, object matchDiacritics=null, object matchAlefHamza=null, object matchControl=null, object matchPrefix=null, object matchSuffix=null, object matchPhrase=null, object ignoreSpace=null, object ignorePunct=null)
+		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix, object matchSuffix, object matchPhrase, object ignoreSpace, object ignorePunct)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix, matchPhrase, ignoreSpace, ignorePunct);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);

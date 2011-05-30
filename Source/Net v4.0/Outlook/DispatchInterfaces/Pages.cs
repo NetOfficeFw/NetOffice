@@ -147,7 +147,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public COMObject Add(object name=null)
+		public COMObject Add(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

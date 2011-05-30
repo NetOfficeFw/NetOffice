@@ -594,7 +594,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("PowerPoint", 14)]
-		public COMObject SeriesCollection(object index=null)
+		public COMObject SeriesCollection(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "SeriesCollection", paramsArray);

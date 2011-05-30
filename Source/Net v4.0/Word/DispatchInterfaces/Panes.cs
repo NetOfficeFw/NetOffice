@@ -133,7 +133,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="SplitVertical">optional object SplitVertical</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public NetOffice.WordApi.Pane Add(object splitVertical=null)
+		public NetOffice.WordApi.Pane Add(object splitVertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(splitVertical);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

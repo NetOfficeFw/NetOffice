@@ -317,7 +317,7 @@ namespace NetOffice.DAOApi
 		/// <param name="ReadOnly">optional object ReadOnly</param>
 		/// <param name="Connect">optional object Connect</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Database OpenDatabase(string name, object options=null, object readOnly=null, object connect=null)
+		public NetOffice.DAOApi.Database OpenDatabase(string name, object options, object readOnly, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
 			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
@@ -345,7 +345,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Connect">string Connect</param>
 		/// <param name="Option">optional object Option</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Database CreateDatabase(string name, string connect, object option=null)
+		public NetOffice.DAOApi.Database CreateDatabase(string name, string connect, object option)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, connect, option);
 			object returnItem = Invoker.MethodReturn(this, "CreateDatabase", paramsArray);
@@ -374,7 +374,7 @@ namespace NetOffice.DAOApi
 		/// <param name="PID">optional object PID</param>
 		/// <param name="Password">optional object Password</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.User CreateUser(object name=null, object pID=null, object password=null)
+		public NetOffice.DAOApi.User CreateUser(object name, object pID, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID, password);
 			object returnItem = Invoker.MethodReturn(this, "CreateUser", paramsArray);
@@ -400,7 +400,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Name">optional object Name</param>
 		/// <param name="PID">optional object PID</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Group CreateGroup(object name=null, object pID=null)
+		public NetOffice.DAOApi.Group CreateGroup(object name, object pID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID);
 			object returnItem = Invoker.MethodReturn(this, "CreateGroup", paramsArray);
@@ -428,7 +428,7 @@ namespace NetOffice.DAOApi
 		/// <param name="ReadOnly">optional object ReadOnly</param>
 		/// <param name="Connect">optional object Connect</param>
 		[SupportByLibrary("DAO", 6,12)]
-		public NetOffice.DAOApi.Connection OpenConnection(string name, object options=null, object readOnly=null, object connect=null)
+		public NetOffice.DAOApi.Connection OpenConnection(string name, object options, object readOnly, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
 			object returnItem = Invoker.MethodReturn(this, "OpenConnection", paramsArray);

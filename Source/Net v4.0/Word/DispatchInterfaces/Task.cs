@@ -229,7 +229,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Wait">optional object Wait</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Activate(object wait=null)
+		public void Activate(object wait)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wait);
 			Invoker.Method(this, "Activate", paramsArray);

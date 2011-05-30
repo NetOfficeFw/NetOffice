@@ -290,7 +290,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="HWnd">optional object HWnd</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public void Details(object hWnd=null)
+		public void Details(object hWnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd);
 			Invoker.Method(this, "Details", paramsArray);
@@ -313,7 +313,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="MinPerChar">Int32 MinPerChar</param>
 		/// <param name="CompleteFormat">optional object CompleteFormat</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public string GetFreeBusy(DateTime start, Int32 minPerChar, object completeFormat=null)
+		public string GetFreeBusy(DateTime start, Int32 minPerChar, object completeFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, minPerChar, completeFormat);
 			object returnItem = Invoker.MethodReturn(this, "GetFreeBusy", paramsArray);
@@ -339,7 +339,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="MakePermanent">optional object MakePermanent</param>
 		/// <param name="Refresh">optional object Refresh</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public void Update(object makePermanent=null, object refresh=null)
+		public void Update(object makePermanent, object refresh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(makePermanent, refresh);
 			Invoker.Method(this, "Update", paramsArray);

@@ -347,7 +347,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Url">string Url</param>
 		/// <param name="Overwrite">optional object Overwrite</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url, object overwrite=null)
+		public NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url, object overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, overwrite);
 			object returnItem = Invoker.MethodReturn(this, "Import", paramsArray);
@@ -372,7 +372,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="XmlData">string XmlData</param>
 		/// <param name="Overwrite">optional object Overwrite</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData, object overwrite=null)
+		public NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData, object overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xmlData, overwrite);
 			object returnItem = Invoker.MethodReturn(this, "ImportXml", paramsArray);
@@ -397,7 +397,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Url">string Url</param>
 		/// <param name="Overwrite">optional object Overwrite</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url, object overwrite=null)
+		public NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url, object overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, overwrite);
 			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);

@@ -243,7 +243,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Create">optional object Create</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public void Publish(object create=null)
+		public void Publish(object create)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(create);
 			Invoker.Method(this, "Publish", paramsArray);

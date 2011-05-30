@@ -164,7 +164,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Name">optional object Name</param>
 		/// <param name="Address">optional object Address</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public NetOffice.OutlookApi.AddressEntry Add(string type, object name=null, object address=null)
+		public NetOffice.OutlookApi.AddressEntry Add(string type, object name, object address)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, name, address);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -239,7 +239,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Property">optional object Property</param>
 		/// <param name="Order">optional object Order</param>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public void Sort(object property=null, object order=null)
+		public void Sort(object property, object order)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(property, order);
 			Invoker.Method(this, "Sort", paramsArray);

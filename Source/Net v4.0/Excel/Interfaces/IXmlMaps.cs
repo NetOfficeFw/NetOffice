@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Schema">string Schema</param>
 		/// <param name="RootElementName">optional object RootElementName</param>
 		[SupportByLibrary("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.XmlMap Add(string schema, object rootElementName=null)
+		public NetOffice.ExcelApi.XmlMap Add(string schema, object rootElementName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schema, rootElementName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

@@ -386,7 +386,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Text">string Text</param>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 AddItem(string text, object index=null)
+		public Int32 AddItem(string text, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, index);
 			object returnItem = Invoker.MethodReturn(this, "AddItem", paramsArray);
@@ -422,7 +422,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Index">Int32 Index</param>
 		/// <param name="Count">optional object Count</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public Int32 RemoveItem(Int32 index, object count=null)
+		public Int32 RemoveItem(Int32 index, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, count);
 			object returnItem = Invoker.MethodReturn(this, "RemoveItem", paramsArray);
@@ -446,7 +446,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public object List(object index=null)
+		public object List(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "List", paramsArray);

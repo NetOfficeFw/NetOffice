@@ -525,7 +525,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="ShiftCells">optional object ShiftCells</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Delete(object shiftCells=null)
+		public void Delete(object shiftCells)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shiftCells);
 			Invoker.Method(this, "Delete", paramsArray);
@@ -547,7 +547,7 @@ namespace NetOffice.WordApi
 		/// <param name="Formula">optional object Formula</param>
 		/// <param name="NumFormat">optional object NumFormat</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Formula(object formula=null, object numFormat=null)
+		public void Formula(object formula, object numFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formula, numFormat);
 			Invoker.Method(this, "Formula", paramsArray);
@@ -604,7 +604,7 @@ namespace NetOffice.WordApi
 		/// <param name="NumRows">optional object NumRows</param>
 		/// <param name="NumColumns">optional object NumColumns</param>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public void Split(object numRows=null, object numColumns=null)
+		public void Split(object numRows, object numColumns)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows, numColumns);
 			Invoker.Method(this, "Split", paramsArray);

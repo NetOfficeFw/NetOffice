@@ -2033,7 +2033,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrExpr">string bstrExpr</param>
 		/// <param name="ppsa">optional object[] ppsa</param>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public object _Evaluate(string bstrExpr, object[] ppsa=null)
+		public object _Evaluate(string bstrExpr, object[] ppsa)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
 			object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
@@ -2078,7 +2078,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
 		[SupportByLibrary("Access", 10,11,12,14)]
-		public void Move(object left, object top=null, object width=null, object height=null)
+		public void Move(object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			Invoker.Method(this, "Move", paramsArray);
