@@ -84,6 +84,7 @@ Public Class ExampleRibbonAddin
     <ComRegisterFunctionAttribute()> _
     Public Shared Sub RegisterFunction(ByVal type As Type)
         Try
+
             ' add codebase value
             Dim thisAssembly As Assembly = Assembly.GetAssembly(GetType(ExampleRibbonAddin))
             Dim key As RegistryKey = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\1.0.0.0")
