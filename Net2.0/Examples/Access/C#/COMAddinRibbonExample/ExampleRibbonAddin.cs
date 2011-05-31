@@ -36,6 +36,10 @@ namespace COMAddinRibbonExample
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
 
+                key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32");
+                key.SetValue("CodeBase", thisAssembly.CodeBase);
+                key.Close();
+
                 // add bypass key
                 // http://support.microsoft.com/kb/948461
                 key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}");

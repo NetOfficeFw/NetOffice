@@ -29,10 +29,14 @@ namespace COMAddinRibbonExample
         public static void RegisterFunction(Type type)
         {
             try
-            {   
+            {
                 // add codebase value
                 Assembly thisAssembly = Assembly.GetAssembly(typeof(ExampleRibbonAddin));
                 RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\1.0.0.0");
+                key.SetValue("CodeBase", thisAssembly.CodeBase);
+                key.Close();
+
+                key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32");
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows.Forms; 
 using Microsoft.Win32;
 using System.Runtime.CompilerServices;
@@ -29,6 +30,16 @@ namespace COMAddinRibbonExample
         {
             try
             {   
+                // add codebase value
+                Assembly thisAssembly = Assembly.GetAssembly(typeof(ExampleRibbonAddin));
+                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\1.0.0.0");
+                key.SetValue("CodeBase", thisAssembly.CodeBase);
+                key.Close();
+
+                key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32");
+                key.SetValue("CodeBase", thisAssembly.CodeBase);
+                key.Close();
+
                 // add bypass key
                 // http://support.microsoft.com/kb/948461
                 RegistryKey key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}");
