@@ -57,11 +57,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 209);
+            this.ClientSize = new System.Drawing.Size(403, 199);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Example1 - Cell Colors and Borders";
+            this.Text = "Example01 - Cell Colors and Borders";
             this.ResumeLayout(false);
             this.PerformLayout();
 

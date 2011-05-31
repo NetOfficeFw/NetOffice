@@ -24,6 +24,9 @@ namespace Example01
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Initialize Api COMObject Support
+            LateBindingApi.Core.Factory.Initialize();
+
             // start excel and turn off msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
