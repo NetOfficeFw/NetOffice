@@ -277,23 +277,22 @@ namespace LateBindingApi.Core
         /// <returns></returns>
         private static Guid GetParentLibraryGuid(object comProxy)
         {
-            Guid returnGuid = Guid.Empty; 
-
+        Guid returnGuid = Guid.Empty; 
+        
             IDispatch dispatcher = (IDispatch)comProxy;
             COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo(0, 0);
             COMTypes.ITypeLib parentTypeLib = null;
-
+ 
             int i = 0;
             typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
-            
+ 
             IntPtr attributesPointer = IntPtr.Zero;
             parentTypeLib.GetLibAttr(out attributesPointer);
-           
-            COMTypes.TYPEATTR attributes = (COMTypes.TYPEATTR)Marshal.PtrToStructure(attributesPointer, typeof(COMTypes.TYPEATTR));
-            returnGuid = attributes.guid;
 
-            Marshal.FreeHGlobal(attributesPointer); 
-            //parentTypeLib.ReleaseTLibAttr(attributesPointer);
+            COMTypes.TYPELIBATTR attributes = (COMTypes.TYPELIBATTR)Marshal.PtrToStructure(attributesPointer, typeof(COMTypes.TYPELIBATTR));
+            returnGuid = attributes.guid;
+                  
+            parentTypeLib.ReleaseTLibAttr(attributesPointer);
             Marshal.ReleaseComObject(parentTypeLib);
             Marshal.ReleaseComObject(typeInfo);
 
