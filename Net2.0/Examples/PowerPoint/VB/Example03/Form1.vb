@@ -81,9 +81,9 @@ Public Class Form1
 
         Dim version As Double = application.Version
         If (version >= 120.0) Then
-            Return ".xlsx"
+            Return ".pptx"
         Else
-            Return ".xls"
+            Return ".ppt"
         End If
 
     End Function
