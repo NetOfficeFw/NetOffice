@@ -52,6 +52,7 @@
             this.buttonOpenWorkbook.TabIndex = 3;
             this.buttonOpenWorkbook.Text = "Open Workbook";
             this.buttonOpenWorkbook.UseVisualStyleBackColor = true;
+            this.buttonOpenWorkbook.Click += new System.EventHandler(this.buttonOpenDocument_Click);
             // 
             // labelMessage
             // 

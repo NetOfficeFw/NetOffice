@@ -53,9 +53,9 @@ namespace Example01
             workSheet.get_Range(rangeAdressMouth).Interior.Color = ToDouble(Color.DarkGreen);
 
             // border the face with the border arround method
-            workSheet.get_Range(rangeAdressFace).BorderAround(XlLineStyle.xlDashDot, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexNone, Color.BlueViolet.ToArgb());
-            workSheet.get_Range(rangeAdressEyes).BorderAround(XlLineStyle.xlDashDot, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexNone, Color.BlueViolet.ToArgb());
-            workSheet.get_Range(rangeAdressNoise).BorderAround(XlLineStyle.xlDouble, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexNone, Color.BlueViolet.ToArgb());
+            workSheet.get_Range(rangeAdressFace).BorderAround(XlLineStyle.xlDashDot, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexAutomatic);
+            workSheet.get_Range(rangeAdressEyes).BorderAround(XlLineStyle.xlDashDot, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexAutomatic);
+            workSheet.get_Range(rangeAdressNoise).BorderAround(XlLineStyle.xlDouble, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexAutomatic);
 
             // border explicitly
             workSheet.get_Range(rangeAdressMouth).Borders[XlBordersIndex.xlEdgeBottom].LineStyle = XlLineStyle.xlDouble;
