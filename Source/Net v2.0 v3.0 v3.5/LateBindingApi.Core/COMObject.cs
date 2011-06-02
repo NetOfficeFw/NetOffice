@@ -51,6 +51,7 @@ namespace LateBindingApi.Core
         /// creates instance
         /// </summary>
         /// <param name="replacedObject"></param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(COMObject replacedObject)
         {
             // copy proxy
@@ -80,6 +81,7 @@ namespace LateBindingApi.Core
         /// creates instance
         /// </summary>
         /// <param name="comProxy"></param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(object comProxy)
         {
             _underlyingObject = comProxy;
@@ -93,6 +95,7 @@ namespace LateBindingApi.Core
         /// </summary>
         /// <param name="parentObject"></param>
         /// <param name="comProxy"></param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(COMObject parentObject, object comProxy)
         {
             _parentObject = parentObject;
@@ -111,6 +114,7 @@ namespace LateBindingApi.Core
         /// <param name="parentObject"></param>
         /// <param name="comProxy"></param>
         /// <param name="comProxyType"></param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(COMObject parentObject, object comProxy, Type comProxyType)
         {
             _parentObject = parentObject;
@@ -126,6 +130,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// creates instance
         /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject()
         {
             Factory.AddObjectToList(this);
@@ -149,6 +154,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// returns class name of native wrapped proxy
         /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string UnderlyingTypeName
         {
             get

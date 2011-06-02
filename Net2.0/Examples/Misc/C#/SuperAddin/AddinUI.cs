@@ -2,69 +2,9 @@
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Text;
-using SuperAddin.UIMapper;
  
 namespace SuperAddin
 {
-    public class ButtonClickArgs : EventArgs , IDisposable
-    {
-        #region Fields
-
-        private IRibbonControl _ribbonControl;
-        private NetOffice.OfficeApi.CommandBarButton _buttonControl;
-        
-        #endregion
-
-        #region Construction
-        
-        internal ButtonClickArgs(IRibbonControl ribbonControl)
-        {
-            _ribbonControl = ribbonControl;
-        }
-
-        internal ButtonClickArgs(NetOffice.OfficeApi.CommandBarButton buttonControl)
-        {
-            _buttonControl = buttonControl;
-        }
-
-        #endregion
-
-        #region Properties
-
-        public IRibbonControl RibbonControl
-        {
-            get 
-            {
-                return _ribbonControl;
-            }
-        }
-
-        public NetOffice.OfficeApi.CommandBarButton ButtonControl
-        {
-            get 
-            {
-                return _buttonControl;
-            }
-        }
-        
-        #endregion
-
-        #region IDisposable Members
-        
-        public void Dispose()
-        {
-            if (null != _ribbonControl)
-                Marshal.ReleaseComObject(_ribbonControl);
-
-            if (null != _buttonControl)
-                _buttonControl.Dispose();
-        }
-
-        #endregion
-    }
-
-    public delegate void ButtonClickEventHandler(ButtonClickArgs args);
-
     /// <summary>
     /// represents the addin user interace
     /// </summary>
@@ -73,8 +13,6 @@ namespace SuperAddin
         #region Fields
 
         HostApplication _application;
-        RibbonUI        _ribbonUI;
-        ClassicUI       _classicUI;
         bool            _ribbonActive;
 
         #endregion
@@ -83,8 +21,6 @@ namespace SuperAddin
 
         internal AddinUI(HostApplication application)
         {
-            _ribbonUI = new UIMapper.RibbonUI(this);
-            _classicUI = new UIMapper.ClassicUI(this);
             _application = application;
         }
         

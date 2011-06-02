@@ -13,7 +13,7 @@ using Outlook = NetOffice.OutlookApi;
 using PowerPoint = NetOffice.PowerPointApi;
 using Access = NetOffice.AccessApi;
 
-namespace SuperAddin
+namespace SuperAddinCSharp
 {
     /// <summary>
     /// represents the office host application
@@ -23,17 +23,7 @@ namespace SuperAddin
         #region Fields
 
         COMObject                 _hostApp;
-        DocumentEventsMapper      _docEvents;
 
-        #endregion
-
-        #region Events
-
-        public event BeforeSaveHandler  BeforeSave;
-        public event OpenHandler        BeforeOpen;
-        public event BeforeCloseHandler BeforeClose;
-        public event BeforePrintHandler BeforePrint;
-        
         #endregion
 
         #region Properties
@@ -52,7 +42,7 @@ namespace SuperAddin
         /// <summary>
         /// returns component host name of host app
         /// </summary>
-        public string Component
+        public string ComponentName
         {
             get
             {
@@ -114,8 +104,6 @@ namespace SuperAddin
                     _hostApp = new Access.Application(null, comProxy);
                     break;
             }
-
-            _docEvents = new DocumentEventsMapper(this);
         }
 
         #endregion
@@ -126,42 +114,6 @@ namespace SuperAddin
         {
             if (null != _hostApp)
                 _hostApp.Dispose();
-        }
-
-        #endregion
-
-        #region Event Hell Raiser
-
-        internal void RaiseBeforeSaveEvent(BeforeSaveArgs args, ref bool SaveAsUI, ref bool Cancel)
-        {
-            if (null != BeforeSave)
-                BeforeSave(args, ref SaveAsUI, ref Cancel);
-            else
-                args.Dispose();
-        }
-
-        internal void RaiseBeforeOpenEvent(OpenArgs args)
-        {
-            if (null != BeforeOpen)
-                BeforeOpen(args);
-            else
-                args.Dispose();
-        }
-
-        internal void RaiseBeforeCloseEvent(BeforeCloseArgs args, ref bool Cancel)
-        {
-            if (null != args)
-                BeforeClose(args, ref Cancel);
-            else
-                args.Dispose();
-        }
-
-        internal void RaiseBeforePrintEvent(BeforePrintArgs args, ref bool Cancel)
-        {
-            if (null != args)
-                BeforePrint(args, ref Cancel);
-            else
-                args.Dispose();
         }
 
         #endregion

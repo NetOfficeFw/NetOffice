@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace SuperAddin
+namespace SuperAddinCSharp
 {
     partial class FormShowError : Form
     {

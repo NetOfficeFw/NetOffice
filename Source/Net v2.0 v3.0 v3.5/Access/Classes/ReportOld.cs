@@ -41,7 +41,6 @@ namespace NetOffice.AccessApi
 
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ReportOld(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}

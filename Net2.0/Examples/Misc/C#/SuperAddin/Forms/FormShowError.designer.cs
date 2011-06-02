@@ -1,4 +1,4 @@
-﻿namespace SuperAddin
+﻿namespace SuperAddinCSharp
 {
     partial class FormShowError
     {

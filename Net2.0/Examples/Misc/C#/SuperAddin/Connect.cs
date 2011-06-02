@@ -6,26 +6,34 @@ using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
-
 using Extensibility;
 
-namespace SuperAddin
+using Office = NetOffice.OfficeApi;
+using Excel = NetOffice.ExcelApi;
+using Word = NetOffice.WordApi;
+using Outlook = NetOffice.OutlookApi;
+using PowerPoint = NetOffice.PowerPointApi;
+using Access = NetOffice.AccessApi;
+
+namespace SuperAddinCSharp
 { 
     /// <summary>
     /// the addin class
     /// </summary>
     [ComVisible(true)]
-    [GuidAttribute("90AF5E73-9671-4c96-8E96-CC01B3DB3886"), ProgId("SuperAddin.Connect")]
+    [GuidAttribute("8ED7D7E2-D084-4ba7-999E-5657147460DD"), ProgId("SuperAddinCSharp.Connect")]
     public class Connect : IDTExtensibility2, IRibbonExtensibility
     {
-        private static readonly string _prodId = "SuperAddin.Connect";
+        private static readonly string _addinName = "SuperAddinCSharp";
+        private static readonly string _prodId = "SuperAddinCSharp.Connect";
 
         #region Fields 
 
         private HostApplication _application;
-        private AddinUI         _userInterface;
         private TrayIcon        _trayIcon;
-         
+        
+        private bool            _isRibbonSupported;
+ 
         #endregion
 
         #region COM Register Functions
@@ -41,11 +49,11 @@ namespace SuperAddin
             {
                 // add codebase entry
                 Assembly thisAssembly = Assembly.GetAssembly(typeof(Connect));
-                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{90AF5E73-9671-4c96-8E96-CC01B3DB3886}\\InprocServer32\\1.0.0.0");
+                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\1.0.0.0");
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
 
-                key = Registry.ClassesRoot.CreateSubKey("CLSID\\{90AF5E73-9671-4c96-8E96-CC01B3DB3886}\\InprocServer32");
+                key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32");
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
 
@@ -59,15 +67,15 @@ namespace SuperAddin
 
                 Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
 
-                OfficeRegistry.CreateAddinKey(OfficeRegistry.Excel      + _prodId);
-                OfficeRegistry.CreateAddinKey(OfficeRegistry.Word       + _prodId);
-                OfficeRegistry.CreateAddinKey(OfficeRegistry.Outlook    + _prodId);
-                OfficeRegistry.CreateAddinKey(OfficeRegistry.PowerPoint + _prodId);
-                OfficeRegistry.CreateAddinKey(OfficeRegistry.Access     + _prodId);
+                OfficeRegistry.CreateAddinKey(_addinName, OfficeRegistry.Excel + _prodId);
+                OfficeRegistry.CreateAddinKey(_addinName, OfficeRegistry.Word + _prodId);
+                OfficeRegistry.CreateAddinKey(_addinName, OfficeRegistry.Outlook + _prodId);
+                OfficeRegistry.CreateAddinKey(_addinName, OfficeRegistry.PowerPoint + _prodId);
+                OfficeRegistry.CreateAddinKey(_addinName, OfficeRegistry.Access + _prodId);
             }
             catch (Exception throwedException)
             {
-                FormShowError errorForm = new FormShowError("An error ocurred while register COM Addin", 
+                FormShowError errorForm = new FormShowError("An error ocurred while register " + _addinName, 
                                                             throwedException.Message, throwedException);
                 errorForm.ShowDialog();
             }
@@ -97,7 +105,7 @@ namespace SuperAddin
             }
             catch (Exception throwedException)
             {
-                FormShowError errorForm = new FormShowError("An error ocurred while unregister COM Addin", 
+                FormShowError errorForm = new FormShowError("An error ocurred while unregister " + _addinName, 
                                                              throwedException.Message, throwedException);
                 errorForm.ShowDialog();
             }
@@ -105,7 +113,7 @@ namespace SuperAddin
         
         #endregion
 
-        #region IDTExtensibility2 Members/Trigger
+        #region IDTExtensibility2 Members
 
         /// <summary>
         /// The OnAddInsUpdate event occurs when the set of loaded COM add-ins changes. 
@@ -167,7 +175,6 @@ namespace SuperAddin
             }
         }
 
-         
         /// <summary>
         /// The OnDisconnection event occurs when the COM add-in is unloaded.
         /// </summary>
@@ -198,18 +205,8 @@ namespace SuperAddin
         {
             try
             {
-                // addin UI
-                _userInterface = new AddinUI(_application);
-                _userInterface.ButtonClick += new ButtonClickEventHandler(_userInterface_ButtonClick);
-
-                //excel and word document events
-                _application.BeforeOpen += new OpenHandler(_application_BeforeOpen);
-                _application.BeforeClose += new BeforeCloseHandler(_application_BeforeClose);
-                _application.BeforeSave += new BeforeSaveHandler(_application_BeforeSave);
-                _application.BeforePrint += new BeforePrintHandler(_application_BeforePrint); 
-
-                if((null != _userInterface) && (false == _userInterface.RibbonIsActive))
-                    _userInterface.ClassicUI.CreateUI(); 
+                if(! _isRibbonSupported)
+                    CreateClassicUI();
             }
             catch (Exception throwedException)
             {
@@ -225,7 +222,8 @@ namespace SuperAddin
         {
             try
             {
-                return _userInterface.RibbonUI.GetCustomUI(RibbonID);
+                _isRibbonSupported = true;
+                return ReadTextFileFromRessource("RibbonUI.xml");
             }
             catch (Exception throwedException)
             {
@@ -238,7 +236,9 @@ namespace SuperAddin
         {
             try
             {
-                _userInterface.RibbonUI.OnAction(control);
+                string message = string.Format("Thanks for click on a Ribbon.\r\nHostApp is {0}.{1} Version:{2}",
+                                             _application.ComponentName, _application.Name, _application.Version);
+                MessageBox.Show(message, "SuperAddin", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception throwedException)
             {
@@ -248,45 +248,151 @@ namespace SuperAddin
 
         #endregion
 
-        void _userInterface_ButtonClick(ButtonClickArgs args)
+        #region Classic UI
+
+        void commandBarBtn_ClickEvent(Office.CommandBarButton Ctrl, ref bool CancelDefault)
+        {     
+            string message = string.Format("Thanks for click on a button.\r\nHostApp is {0}.{1} Version:{2}",
+                                                _application.ComponentName, _application.Name, _application.Version);
+            MessageBox.Show(message, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+      
+            Ctrl.Dispose();
+        }
+   
+        /// <summary>
+        /// calls specific create method for office application type
+        /// note: all applications has the same code except outlook (active inspector)
+        /// </summary>
+        public void CreateClassicUI()
         {
-            // from ribbon
-            if (null != args.RibbonControl)
+
+            if (_application.Application is Excel.Application)
             {
-                string message = string.Format("Thanks for click on a Ribbon.\r\nHostApp is {0}.{1} Version:{2}",
-                                                _application.Component,  _application.Name, _application.Version);
-                MessageBox.Show(message, "SuperAddin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CreateExcelUI();
             }
-
-            // from commandbarbutton
-            if (null != args.ButtonControl)
+            else if (_application.Application is Word.Application)
             {
-                string message = string.Format("Thanks for click on a button.\r\nHostApp is {0}.{1} Version:{2}",
-                                                _application.Component, _application.Name, _application.Version);
-                MessageBox.Show(message, "SuperAddin" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CreateWordUI();
             }
-
-            args.Dispose();
+            else if (_application.Application is Outlook.Application)
+            {
+                CreateOutlookUI();
+            }
+            else if (_application.Application is PowerPoint.Application)
+            {
+                CreatePowerPointUI();
+            }
+            else if (_application.Application is Access.Application)
+            {
+                CreateAccessUI();
+            }
         }
 
-        void _application_BeforePrint(BeforePrintArgs args, ref bool Cancel)
-        {            
-            args.Dispose();
-        }
-
-        void _application_BeforeSave(BeforeSaveArgs args, ref bool SaveAsUI, ref bool Cancel)
+        private void CreateExcelUI()
         {
-            args.Dispose();
+            Excel.Application excelApp = _application.Application as Excel.Application;
+            Office.CommandBar commandBar = excelApp.CommandBars.Add(_addinName + "Commandbar", Office.Enums.MsoBarPosition.msoBarTop, false, true);
+            commandBar.Visible = true;
+
+            // add a button to the toolbar
+            Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(Office.Enums.MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
+            commandBarBtn.Style = Office.Enums.MsoButtonStyle.msoButtonIconAndCaption;
+            commandBarBtn.Caption = "ExcelButton";
+            commandBarBtn.FaceId = 2;
+            commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+
+            excelApp.DisposeChildInstances(false);
         }
 
-        void _application_BeforeClose(BeforeCloseArgs args, ref bool Cancel)
+        private void CreateOutlookUI()
         {
-            args.Dispose();
+            Outlook.Application outlookApp = _application.Application as Outlook.Application;
+            Office.CommandBar commandBar = outlookApp.ActiveExplorer().CommandBars.Add(_addinName + "CommandBar", Office.Enums.MsoBarPosition.msoBarTop, false, true);
+            commandBar.Visible = true;
+
+            // add a button to the toolbar
+            Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(Office.Enums.MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
+            commandBarBtn.Style = Office.Enums.MsoButtonStyle.msoButtonIconAndCaption;
+            commandBarBtn.Caption = "OutlookButton";
+            commandBarBtn.FaceId = 2;
+            commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+
+            outlookApp.DisposeChildInstances(false);
         }
 
-        void _application_BeforeOpen(OpenArgs args)
+        private void CreateWordUI()
         {
-            args.Dispose();
+            Word.Application wordApp = _application.Application as Word.Application;
+            Office.CommandBar commandBar = wordApp.CommandBars.Add(_addinName + "Commandbar", Office.Enums.MsoBarPosition.msoBarTop, false, true);
+            commandBar.Visible = true;
+
+            // add a button to the toolbar
+            Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(Office.Enums.MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
+            commandBarBtn.Style = Office.Enums.MsoButtonStyle.msoButtonIconAndCaption;
+            commandBarBtn.Caption = "WordButton";
+            commandBarBtn.FaceId = 2;
+            commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+
+            wordApp.DisposeChildInstances(false);
         }
+
+        private void CreatePowerPointUI()
+        {
+            PowerPoint.Application powerApp = _application.Application as PowerPoint.Application;
+            Office.CommandBar commandBar = powerApp.CommandBars.Add(_addinName + "CommandBar", Office.Enums.MsoBarPosition.msoBarTop, false, true);
+            commandBar.Visible = true;
+
+            // add a button to the toolbar
+            Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(Office.Enums.MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
+            commandBarBtn.Style = Office.Enums.MsoButtonStyle.msoButtonIconAndCaption;
+            commandBarBtn.Caption = "PowerButton";
+            commandBarBtn.FaceId = 2;
+            commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+
+            powerApp.DisposeChildInstances(false);
+        }
+
+        private void CreateAccessUI()
+        {
+            Access.Application accessApp = _application.Application as Access.Application;
+            Office.CommandBar commandBar = accessApp.CommandBars.Add(_addinName + "CommandBar", Office.Enums.MsoBarPosition.msoBarTop, false, true);
+            commandBar.Visible = true;
+
+            // add a button to the toolbar
+            Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(Office.Enums.MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
+            commandBarBtn.Style = Office.Enums.MsoButtonStyle.msoButtonIconAndCaption;
+            commandBarBtn.Caption = "AccessButton";
+            commandBarBtn.FaceId = 2;
+            commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent); ;
+
+            accessApp.DisposeChildInstances(false);
+        }
+
+        #endregion
+
+        #region private statice Helper 
+        
+        private static string ReadTextFileFromRessource(string fileName)
+        {
+            fileName =  _addinName + "." + fileName;
+
+            System.IO.Stream ressourceStream;
+            System.IO.StreamReader textStreamReader;
+
+            ressourceStream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName);
+            if (ressourceStream == null)
+                throw (new System.IO.IOException("Error accessing resource Stream."));
+
+            textStreamReader = new System.IO.StreamReader(ressourceStream);
+            if (textStreamReader == null)
+                throw (new System.IO.IOException("Error accessing resource File."));
+
+            string text = textStreamReader.ReadToEnd();
+            ressourceStream.Close();
+            textStreamReader.Close();
+            return text;
+        }
+
+        #endregion
     }
 }

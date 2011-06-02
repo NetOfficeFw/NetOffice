@@ -8,8 +8,8 @@
     <ProjectGuid>{D10C3CB1-2C0D-4BB7-A2D1-193A1AA4562E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SuperAddin</RootNamespace>
-    <AssemblyName>SuperAddin</AssemblyName>
+    <RootNamespace>SuperAddinCSharp</RootNamespace>
+    <AssemblyName>SuperAddinCSharp</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -97,7 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connect.cs" />
-    <Compile Include="DocEventsMapper\DocumentEventsMapper.cs" />
     <Compile Include="Forms\FormShowError.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,13 +104,10 @@
       <DependentUpon>FormShowError.cs</DependentUpon>
     </Compile>
     <Compile Include="HostApplication.cs" />
-    <Compile Include="Misc\IRibbonUI.cs" />
-    <Compile Include="Misc\OfficeRegistry.cs" />
-    <Compile Include="Misc\TrayIcon.cs" />
+    <Compile Include="IRibbonUI.cs" />
+    <Compile Include="OfficeRegistry.cs" />
+    <Compile Include="TrayIcon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AddinUI.cs" />
-    <Compile Include="UIMapper\ClassicUI.cs" />
-    <Compile Include="UIMapper\RibbonUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\FormShowError.resx">
@@ -122,7 +118,7 @@
     <EmbeddedResource Include="Properties\AddinIcon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="UIMapper\RibbonUI.xml" />
+    <EmbeddedResource Include="RibbonUI.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
