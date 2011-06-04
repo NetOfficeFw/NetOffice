@@ -165,8 +165,9 @@ namespace SuperAddinCSharp
         {
             try
             {
+                LateBindingApi.Core.Factory.Initialize();
+
                 _application = new HostApplication(Application, ConnectMode, AddInInst, ref custom);
-                
                 _trayIcon = new TrayIcon(true);
             }
             catch (Exception throwedException)

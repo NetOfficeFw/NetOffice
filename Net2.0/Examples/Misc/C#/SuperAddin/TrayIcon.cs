@@ -18,7 +18,7 @@ namespace SuperAddinCSharp
         public TrayIcon(bool visible)
         {
             _trayIcon = new NotifyIcon(new System.ComponentModel.Container());
-            System.IO.Stream iconStream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("SuperAddin.Properties.AddinIcon.ico");
+            System.IO.Stream iconStream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("SuperAddinCSharp.Properties.AddinIcon.ico");
             _trayIcon.Icon = new System.Drawing.Icon(iconStream);
             iconStream.Close();
             _trayIcon.Text = "SuperAdddin loaded.";

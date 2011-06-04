@@ -31,6 +31,7 @@ Public Class ExampleRibbonAddin
     End Sub
 
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
+
         Try
 
             ' initialize api
@@ -50,6 +51,7 @@ Public Class ExampleRibbonAddin
             rk.Close()
 
         End Try
+
     End Sub
 
     Public Sub OnDisconnection(ByVal RemoveMode As ext_DisconnectMode, ByRef custom As System.Array) Implements IDTExtensibility2.OnDisconnection
@@ -83,6 +85,7 @@ Public Class ExampleRibbonAddin
 
     <ComRegisterFunctionAttribute()> _
     Public Shared Sub RegisterFunction(ByVal type As Type)
+
         Try
 
             ' add codebase value
@@ -104,7 +107,7 @@ Public Class ExampleRibbonAddin
             End If
             key.Close()
 
-            ' add excel addin key
+            ' add word addin key
             Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable")
             Registry.CurrentUser.CreateSubKey(_addinRegistryKey + _prodId)
             Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, True)
@@ -119,6 +122,7 @@ Public Class ExampleRibbonAddin
             MessageBox.Show("An error occured." + details, "Register " + _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
+
     End Sub
 
     <ComUnregisterFunctionAttribute()> _
@@ -178,7 +182,7 @@ Public Class ExampleRibbonAddin
         Catch throwedException As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
-            MessageBox.Show("An error occured in OnAction." + details, "Unregister " + _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured in OnAction." + details, "OnAction " + _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
