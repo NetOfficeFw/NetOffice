@@ -22,6 +22,8 @@ namespace GetRunningOutlookInstance
 
             Outlook.Application application = null;
 
+            object testProxy = RunningObjectTable.GetRunningPowerPointInstanceFromROT();
+
             object nativeProxy = RunningObjectTable.GetRunningOutlookInstanceFromROT();
             if (null != nativeProxy)
             {

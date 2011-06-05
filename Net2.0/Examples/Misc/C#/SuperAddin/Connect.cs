@@ -298,7 +298,7 @@ namespace SuperAddinCSharp
             // add a button to the toolbar
             Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(Office.Enums.MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
             commandBarBtn.Style = Office.Enums.MsoButtonStyle.msoButtonIconAndCaption;
-            commandBarBtn.Caption = "ExcelButton";
+            commandBarBtn.Caption = _addinName + "ExcelButton";
             commandBarBtn.FaceId = 2;
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
@@ -314,7 +314,7 @@ namespace SuperAddinCSharp
             // add a button to the toolbar
             Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(Office.Enums.MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
             commandBarBtn.Style = Office.Enums.MsoButtonStyle.msoButtonIconAndCaption;
-            commandBarBtn.Caption = "OutlookButton";
+            commandBarBtn.Caption = _addinName + "OutlookButton";
             commandBarBtn.FaceId = 2;
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
@@ -330,7 +330,7 @@ namespace SuperAddinCSharp
             // add a button to the toolbar
             Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(Office.Enums.MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
             commandBarBtn.Style = Office.Enums.MsoButtonStyle.msoButtonIconAndCaption;
-            commandBarBtn.Caption = "WordButton";
+            commandBarBtn.Caption = _addinName + "WordButton";
             commandBarBtn.FaceId = 2;
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
@@ -346,7 +346,7 @@ namespace SuperAddinCSharp
             // add a button to the toolbar
             Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(Office.Enums.MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
             commandBarBtn.Style = Office.Enums.MsoButtonStyle.msoButtonIconAndCaption;
-            commandBarBtn.Caption = "PowerButton";
+            commandBarBtn.Caption = _addinName + "PowerButton";
             commandBarBtn.FaceId = 2;
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
@@ -362,7 +362,7 @@ namespace SuperAddinCSharp
             // add a button to the toolbar
             Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(Office.Enums.MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
             commandBarBtn.Style = Office.Enums.MsoButtonStyle.msoButtonIconAndCaption;
-            commandBarBtn.Caption = "AccessButton";
+            commandBarBtn.Caption = _addinName + "AccessButton";
             commandBarBtn.FaceId = 2;
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent); ;
 

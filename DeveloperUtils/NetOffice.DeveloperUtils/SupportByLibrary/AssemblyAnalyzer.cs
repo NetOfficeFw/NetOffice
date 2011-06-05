@@ -165,10 +165,11 @@ namespace NetOffice.DeveloperUtils.SupportByLibrary
                 if (paramDefintion.ParameterType.FullName.StartsWith(_apiName))
                 {
                     result = true;
-                    newMethodNode.Add(new XElement("Parameter",
+                }
+
+                newMethodNode.Add(new XElement("Parameter",
                                                     new XAttribute("Type", paramDefintion.ParameterType.FullName),
                                                     new XAttribute("Name", paramDefintion.Name)));
-                }
             }
 
             // returnvalue

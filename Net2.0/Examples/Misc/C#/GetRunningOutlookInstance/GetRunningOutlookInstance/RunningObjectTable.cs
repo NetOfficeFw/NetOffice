@@ -21,12 +21,27 @@ namespace GetRunningOutlookInstance
         // Win32-API-call to create binding
         [DllImport("ole32.dll")]
         private static extern int CreateBindCtx(uint reserved, out IBindCtx pctx);
- 
+
+
+        /// <summary>
+        /// returns native com proxy from power Point application object in Running Object Table
+        /// </summary>
+        /// <returns></returns>
+        public static object GetRunningPowerPointInstanceFromROT()
+        {
+            return GetApplicationInstannceFromROT("Microsoft PowerPoint", "Application");
+        }
+
         /// <summary>
         /// returns native com proxy from outlook application object in Running Object Table
         /// </summary>
         /// <returns></returns>
         public static object GetRunningOutlookInstanceFromROT()
+        {
+            return GetApplicationInstannceFromROT("Outlook", "Application");
+        }
+
+        private static object GetApplicationInstannceFromROT(string componentName, string className)
         {
             IEnumMoniker monikerList = null;
             IRunningObjectTable runningObjectTable = null;
@@ -56,7 +71,7 @@ namespace GetRunningOutlookInstance
                     runningObjectTable.GetObject(monikerContainer[0], out comInstance);
                     string name = TypeDescriptor.GetClassName(comInstance);
                     string component = TypeDescriptor.GetComponentName(comInstance, false);
-                    if ((component == "Outlook") && (name == "Application"))
+                    if ((component == componentName) && (name == className))
                     {
                         Marshal.ReleaseComObject(bindInfo);
                         return comInstance;
@@ -67,17 +82,18 @@ namespace GetRunningOutlookInstance
                     Marshal.ReleaseComObject(bindInfo);
                 }
 
-                // outlook is not running 
+                // not running 
                 return null;
             }
             finally
             {
                 // release proxies
-                if (runningObjectTable != null) 
+                if (runningObjectTable != null)
                     Marshal.ReleaseComObject(runningObjectTable);
-                if (monikerList != null) 
+                if (monikerList != null)
                     Marshal.ReleaseComObject(monikerList);
             }
-        } 
+        }
+
     }
 }
