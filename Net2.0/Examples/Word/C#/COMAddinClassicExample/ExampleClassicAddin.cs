@@ -186,8 +186,7 @@ namespace COMAddinClassicExample
         {
             foreach (Word.Template installedTemplate in _wordApplication.Templates)
             {
-                if( (installedTemplate.Name.Equals("normal.dot",StringComparison.InvariantCultureIgnoreCase)) || 
-                    (installedTemplate.Name.Equals("normal.dotx",StringComparison.InvariantCultureIgnoreCase)) )
+                if(installedTemplate.Name.StartsWith("normal", StringComparison.InvariantCultureIgnoreCase))
                 {
                     _normalDotTemplate = installedTemplate;
                     return;

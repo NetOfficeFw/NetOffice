@@ -178,8 +178,7 @@ Public Class ExampleClassicAddin
     Private Sub GetNormalDotTemplate()
 
         For Each installedTemplate As Word.Template In _wordApplication.Templates
-            If (installedTemplate.Name.Equals("normal.dot", StringComparison.InvariantCultureIgnoreCase) Or _
-                (installedTemplate.Name.Equals("normal.dotx", StringComparison.InvariantCultureIgnoreCase))) Then
+            If (installedTemplate.Name.StartsWith("normal", StringComparison.InvariantCultureIgnoreCase)) Then
 
                 _normalDotTemplate = installedTemplate
                 Return
