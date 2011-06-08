@@ -157,7 +157,7 @@ namespace COMAddinRibbonExample
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured in OnAction." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured in GetCustomUI." + details, _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "";
             }
 
@@ -202,7 +202,7 @@ namespace COMAddinRibbonExample
         /// <returns></returns>
         private static string ReadString(string fileName)
         {
-            fileName = _addinName + fileName;
+            fileName = "COMAddinRibbonExample." + fileName;
             
             System.IO.Stream ressourceStream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName);
             if (ressourceStream == null)

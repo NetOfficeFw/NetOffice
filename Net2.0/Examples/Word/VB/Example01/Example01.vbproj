@@ -56,11 +56,11 @@
   <ItemGroup>
     <Reference Include="LateBindingApi.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\LateBindingApi.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\LateBindingApi.Core.dll</HintPath>
     </Reference>
     <Reference Include="OfficeApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\OfficeApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -70,11 +70,11 @@
     <Reference Include="System.Xml" />
     <Reference Include="VBIDEApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\VBIDEApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
     </Reference>
     <Reference Include="WordApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\WordApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\WordApi.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

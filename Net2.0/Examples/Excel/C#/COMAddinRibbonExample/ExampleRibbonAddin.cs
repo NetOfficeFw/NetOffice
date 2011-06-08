@@ -42,7 +42,7 @@ namespace COMAddinRibbonExample
 
                 // add bypass key
                 // http://support.microsoft.com/kb/948461
-                RegistryKey key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}");
+                key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}");
                 string defaultValue = key.GetValue("") as string;
                 if (null == defaultValue)
                     key.SetValue("", "Office .NET Framework Lockback Bypass Key");

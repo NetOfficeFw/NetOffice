@@ -1,6 +1,6 @@
 ﻿Public Class Main
 
-    <MTAThread()> _
+    <STAThread()> _
    Public Shared Sub Main()
         Application.Run(New Form1)
     End Sub

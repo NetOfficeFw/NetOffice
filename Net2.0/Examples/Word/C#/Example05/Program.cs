@@ -9,7 +9,7 @@ namespace Example05
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
-        [MTAThread]
+        [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();

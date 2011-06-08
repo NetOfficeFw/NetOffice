@@ -34,19 +34,19 @@
   <ItemGroup>
     <Reference Include="AccessApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\AccessApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\AccessApi.dll</HintPath>
     </Reference>
     <Reference Include="ADODBApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\ADODBApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\ADODBApi.dll</HintPath>
     </Reference>
     <Reference Include="DAOApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\DAOApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\DAOApi.dll</HintPath>
     </Reference>
     <Reference Include="ExcelApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\ExcelApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\ExcelApi.dll</HintPath>
     </Reference>
     <Reference Include="extensibility, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <SpecificVersion>False</SpecificVersion>
@@ -55,31 +55,31 @@
     </Reference>
     <Reference Include="LateBindingApi.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\LateBindingApi.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\LateBindingApi.Core.dll</HintPath>
     </Reference>
     <Reference Include="MSComctlLibApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\MSComctlLibApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\MSComctlLibApi.dll</HintPath>
     </Reference>
     <Reference Include="MSDATASRCApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\MSDATASRCApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\MSDATASRCApi.dll</HintPath>
     </Reference>
     <Reference Include="OfficeApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\OfficeApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
     </Reference>
     <Reference Include="OutlookApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\OutlookApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\OutlookApi.dll</HintPath>
     </Reference>
     <Reference Include="OWC10Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\OWC10Api.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\OWC10Api.dll</HintPath>
     </Reference>
     <Reference Include="PowerPointApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\PowerPointApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\PowerPointApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -88,11 +88,11 @@
     <Reference Include="System.Xml" />
     <Reference Include="VBIDEApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\VBIDEApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
     </Reference>
     <Reference Include="WordApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\WordApi.dll</HintPath>
+      <HintPath>..\..\..\..\Assemblies\Any CPU\WordApi.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
