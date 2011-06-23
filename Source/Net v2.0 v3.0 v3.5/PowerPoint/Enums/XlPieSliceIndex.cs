@@ -13,64 +13,64 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlOuterCounterClockwisePoint = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlOuterCenterPoint = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlOuterClockwisePoint = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlMidClockwiseRadiusPoint = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlCenterPoint = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlMidCounterClockwiseRadiusPoint = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlInnerClockwisePoint = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlInnerCenterPoint = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlInnerCounterClockwisePoint = 9
 	}
 }

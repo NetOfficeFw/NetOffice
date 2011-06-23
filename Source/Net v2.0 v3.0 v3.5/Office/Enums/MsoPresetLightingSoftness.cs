@@ -13,29 +13,29 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-2</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>-2</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 msoPresetLightingSoftnessMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 msoLightingDim = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 msoLightingNormal = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 msoLightingBright = 3
 	}
 }

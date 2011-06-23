@@ -13,64 +13,64 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olModuleMail = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olModuleCalendar = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olModuleContacts = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olModuleTasks = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olModuleJournal = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olModuleNotes = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olModuleFolderList = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olModuleShortcuts = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Outlook", 14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Outlook", 14)]
 		 olModuleSolutions = 8
 	}
 }

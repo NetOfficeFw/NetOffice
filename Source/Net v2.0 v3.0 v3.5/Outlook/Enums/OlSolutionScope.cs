@@ -13,15 +13,15 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Outlook", 14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Outlook", 14)]
 		 olHideInDefaultModules = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Outlook", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Outlook", 14)]
 		 olShowInDefaultModules = 1
 	}
 }

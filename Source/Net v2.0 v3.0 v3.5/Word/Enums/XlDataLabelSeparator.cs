@@ -13,8 +13,8 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlDataLabelSeparatorDefault = 1
 	}
 }

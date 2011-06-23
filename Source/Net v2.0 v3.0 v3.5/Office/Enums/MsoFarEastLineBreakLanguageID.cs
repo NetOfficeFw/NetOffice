@@ -13,29 +13,29 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1041</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>1041</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 MsoFarEastLineBreakLanguageJapanese = 1041,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1042</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>1042</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 MsoFarEastLineBreakLanguageKorean = 1042,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2052</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>2052</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 MsoFarEastLineBreakLanguageSimplifiedChinese = 2052,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1028</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>1028</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 MsoFarEastLineBreakLanguageTraditionalChinese = 1028
 	}
 }

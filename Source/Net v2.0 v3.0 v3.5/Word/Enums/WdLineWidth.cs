@@ -13,64 +13,64 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdLineWidth025pt = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdLineWidth050pt = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdLineWidth075pt = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdLineWidth100pt = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdLineWidth150pt = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>18</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>18</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdLineWidth225pt = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>24</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>24</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdLineWidth300pt = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>36</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>36</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdLineWidth450pt = 36,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>48</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>48</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdLineWidth600pt = 48
 	}
 }

@@ -13,22 +13,22 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4137</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4137</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlMaximized = -4137,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4140</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4140</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlMinimized = -4140,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4143</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4143</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlNormal = -4143
 	}
 }

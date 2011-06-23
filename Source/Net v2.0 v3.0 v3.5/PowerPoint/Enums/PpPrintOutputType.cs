@@ -13,71 +13,71 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppPrintOutputSlides = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppPrintOutputTwoSlideHandouts = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppPrintOutputThreeSlideHandouts = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppPrintOutputSixSlideHandouts = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppPrintOutputNotesPages = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppPrintOutputOutline = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppPrintOutputBuildSlides = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppPrintOutputFourSlideHandouts = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppPrintOutputNineSlideHandouts = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>10</remarks>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		 /// <remarks>10</remarks>
+		 [SupportByLibrary("PowerPoint", 10,11,12,14)]
 		 ppPrintOutputOneSlideHandouts = 10
 	}
 }

@@ -13,15 +13,15 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>-4105</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>-4105</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 xlCalculationAutomatic = -4105,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>-4135</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>-4135</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 xlCalculationManual = -4135
 	}
 }

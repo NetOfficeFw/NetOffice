@@ -13,22 +13,22 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 wdNumberFormDefault = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 wdNumberFormLining = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 wdNumberFormOldStyle = 2
 	}
 }

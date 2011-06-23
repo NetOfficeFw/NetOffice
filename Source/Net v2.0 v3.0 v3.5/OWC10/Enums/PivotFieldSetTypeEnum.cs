@@ -13,29 +13,29 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 plFieldSetTypeTime = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 plFieldSetTypeOther = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 plFieldSetTypeUnknown = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 plFieldSetTypeUserDefined = 4
 	}
 }

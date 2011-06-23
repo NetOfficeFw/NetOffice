@@ -13,15 +13,15 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>-4105</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>-4105</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 xlColorIndexAutomatic = -4105,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>-4142</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>-4142</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 xlColorIndexNone = -4142
 	}
 }

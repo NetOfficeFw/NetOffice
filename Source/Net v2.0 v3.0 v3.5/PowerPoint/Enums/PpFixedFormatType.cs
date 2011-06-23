@@ -13,15 +13,15 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("PowerPoint", 12,14)]
 		 ppFixedFormatTypeXPS = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("PowerPoint", 12,14)]
 		 ppFixedFormatTypePDF = 2
 	}
 }

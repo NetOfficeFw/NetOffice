@@ -13,15 +13,15 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olFormatEnumBitmap = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olFormatEnumText = 2
 	}
 }

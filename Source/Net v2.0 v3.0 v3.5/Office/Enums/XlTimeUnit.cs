@@ -13,22 +13,22 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlDays = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlMonths = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlYears = 2
 	}
 }

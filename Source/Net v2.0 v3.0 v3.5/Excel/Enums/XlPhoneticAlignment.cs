@@ -13,29 +13,29 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlPhoneticAlignNoControl = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlPhoneticAlignLeft = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlPhoneticAlignCenter = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlPhoneticAlignDistributed = 3
 	}
 }

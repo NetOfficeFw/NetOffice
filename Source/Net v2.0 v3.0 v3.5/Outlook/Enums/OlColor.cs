@@ -13,120 +13,120 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olAutoColor = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorBlack = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorMaroon = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorGreen = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorOlive = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorNavy = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorPurple = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorTeal = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorGray = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorSilver = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>10</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>10</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorRed = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>11</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>11</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorLime = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorYellow = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>13</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>13</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorBlue = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>14</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>14</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorFuchsia = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>15</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>15</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorAqua = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>16</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>16</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olColorWhite = 16
 	}
 }

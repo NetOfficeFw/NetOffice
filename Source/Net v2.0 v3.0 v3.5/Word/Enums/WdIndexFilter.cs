@@ -13,50 +13,50 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdIndexFilterNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdIndexFilterAiueo = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdIndexFilterAkasatana = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdIndexFilterChosung = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdIndexFilterLow = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdIndexFilterMedium = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdIndexFilterFull = 6
 	}
 }

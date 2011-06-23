@@ -13,22 +13,22 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Outlook", 11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Outlook", 11,12,14)]
 		 olUnknown = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Outlook", 11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Outlook", 11,12,14)]
 		 olWindows = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Outlook", 11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Outlook", 11,12,14)]
 		 olPassport = 2
 	}
 }

@@ -13,57 +13,57 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdNormalView = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdOutlineView = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdPrintView = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdPrintPreview = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdMasterView = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdWebView = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Word", 11,12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Word", 11,12,14)]
 		 wdReadingView = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 wdConflictView = 8
 	}
 }

@@ -13,29 +13,29 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdKeepSourceFormatting = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdMatchDestinationFormatting = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdKeepTextOnly = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdUseDestinationStyles = 3
 	}
 }

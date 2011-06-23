@@ -13,50 +13,50 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 chFillSolid = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 chFillPatterned = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 chFillGradientOneColor = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 chFillGradientTwoColors = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 chFillGradientPresetColors = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 chFillTexturePreset = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 chFillTextureUserDefined = 7
 	}
 }

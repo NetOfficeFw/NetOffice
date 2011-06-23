@@ -13,15 +13,15 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>-4121</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>-4121</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 xlShiftDown = -4121,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>-4161</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>-4161</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 xlShiftToRight = -4161
 	}
 }

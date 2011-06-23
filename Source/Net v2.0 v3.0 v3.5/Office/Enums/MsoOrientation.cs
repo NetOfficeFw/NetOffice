@@ -13,22 +13,22 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-2</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>-2</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 msoOrientationMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 msoOrientationHorizontal = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 msoOrientationVertical = 2
 	}
 }

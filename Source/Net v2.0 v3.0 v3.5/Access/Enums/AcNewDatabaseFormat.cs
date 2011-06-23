@@ -13,29 +13,29 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Access", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Access", 12,14)]
 		 acNewDatabaseFormatUserDefault = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("Access", 12,14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("Access", 12,14)]
 		 acNewDatabaseFormatAccess2000 = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
-		/// <remarks>10</remarks>
-		[SupportByLibrary("Access", 12,14)]
+		 /// <remarks>10</remarks>
+		 [SupportByLibrary("Access", 12,14)]
 		 acNewDatabaseFormatAccess2002 = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Access", 12,14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Access", 12,14)]
 		 acNewDatabaseFormatAccess2007 = 12
 	}
 }

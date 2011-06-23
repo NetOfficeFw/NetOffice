@@ -13,43 +13,43 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdStyleTypeParagraph = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdStyleTypeCharacter = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Word", 10,11,12,14)]
 		 wdStyleTypeTable = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Word", 10,11,12,14)]
 		 wdStyleTypeList = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdStyleTypeParagraphOnly = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdStyleTypeLinked = 6
 	}
 }

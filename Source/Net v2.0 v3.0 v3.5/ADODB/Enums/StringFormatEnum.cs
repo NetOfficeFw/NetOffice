@@ -13,8 +13,8 @@ namespace NetOffice.ADODBApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("ADODB", 2.1,2.5)]
 		 adClipString = 2
 	}
 }

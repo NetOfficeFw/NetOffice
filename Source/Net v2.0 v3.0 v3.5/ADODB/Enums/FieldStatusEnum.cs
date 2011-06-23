@@ -13,211 +13,211 @@ namespace NetOffice.ADODBApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldOK = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldCantConvertValue = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldIsNull = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldTruncated = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldSignMismatch = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldDataOverflow = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldCantCreate = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldUnavailable = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldPermissionDenied = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>10</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>10</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldIntegrityViolation = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>11</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>11</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldSchemaViolation = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldBadStatus = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>13</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>13</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldDefault = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>15</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>15</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldIgnore = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>16</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>16</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldDoesNotExist = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>17</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>17</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldInvalidURL = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>18</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>18</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldResourceLocked = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>19</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>19</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldResourceExists = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>20</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>20</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldCannotComplete = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>21</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>21</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldVolumeNotFound = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>22</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>22</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldOutOfSpace = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>23</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>23</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldCannotDeleteSource = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>24</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>24</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldReadOnly = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>25</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>25</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldResourceOutOfScope = 25,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>26</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>26</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldAlreadyExists = 26,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>65536</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>65536</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldPendingInsert = 65536,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>131072</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>131072</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldPendingDelete = 131072,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>262144</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>262144</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldPendingChange = 262144,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>524288</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>524288</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldPendingUnknown = 524288,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.5, 
 		 /// </summary>
-		/// <remarks>1048576</remarks>
-		[SupportByLibrary("ADODB", 2.5)]
+		 /// <remarks>1048576</remarks>
+		 [SupportByLibrary("ADODB", 2.5)]
 		 adFieldPendingUnknownDelete = 1048576
 	}
 }

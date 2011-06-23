@@ -13,8 +13,8 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1480803660</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>1480803660</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlCreatorCode = 1480803660
 	}
 }

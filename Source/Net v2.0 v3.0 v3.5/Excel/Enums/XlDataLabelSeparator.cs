@@ -13,8 +13,8 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Excel", 10,11,12,14)]
 		 xlDataLabelSeparatorDefault = 1
 	}
 }

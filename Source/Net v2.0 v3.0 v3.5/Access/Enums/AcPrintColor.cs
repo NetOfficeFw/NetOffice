@@ -13,15 +13,15 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Access", 10,11,12,14)]
 		 acPRCMMonochrome = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Access", 10,11,12,14)]
 		 acPRCMColor = 2
 	}
 }

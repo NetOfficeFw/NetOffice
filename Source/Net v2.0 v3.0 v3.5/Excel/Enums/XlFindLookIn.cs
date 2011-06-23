@@ -13,22 +13,22 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4123</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4123</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlFormulas = -4123,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4144</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4144</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlComments = -4144,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4163</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4163</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlValues = -4163
 	}
 }

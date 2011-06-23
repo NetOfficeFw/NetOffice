@@ -13,8 +13,8 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>-4167</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>-4167</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 xlWorksheet = -4167
 	}
 }

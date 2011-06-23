@@ -13,36 +13,36 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4107</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4107</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlVAlignBottom = -4107,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4108</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4108</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlVAlignCenter = -4108,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4117</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4117</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlVAlignDistributed = -4117,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4130</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4130</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlVAlignJustify = -4130,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4160</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4160</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlVAlignTop = -4160
 	}
 }

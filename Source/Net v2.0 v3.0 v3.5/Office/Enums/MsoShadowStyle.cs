@@ -13,22 +13,22 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-2</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-2</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoShadowStyleMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoShadowStyleInnerShadow = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoShadowStyleOuterShadow = 2
 	}
 }

@@ -13,8 +13,8 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olFormatKeywordsText = 1
 	}
 }

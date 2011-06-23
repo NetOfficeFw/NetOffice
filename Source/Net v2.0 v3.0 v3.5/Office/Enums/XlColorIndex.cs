@@ -13,15 +13,15 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-4105</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-4105</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlColorIndexAutomatic = -4105,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-4142</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-4142</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlColorIndexNone = -4142
 	}
 }

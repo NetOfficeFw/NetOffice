@@ -13,29 +13,29 @@ namespace NetOffice.ADODBApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("ADODB", 2.1,2.5)]
 		 adPromptAlways = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("ADODB", 2.1,2.5)]
 		 adPromptComplete = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("ADODB", 2.1,2.5)]
 		 adPromptCompleteRequired = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("ADODB", 2.1,2.5)]
 		 adPromptNever = 4
 	}
 }

@@ -13,15 +13,15 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>17</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>17</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdExportFormatPDF = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>18</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>18</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdExportFormatXPS = 18
 	}
 }

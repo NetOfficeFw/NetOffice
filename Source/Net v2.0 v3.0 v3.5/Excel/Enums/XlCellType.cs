@@ -13,71 +13,71 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlCellTypeBlanks = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlCellTypeConstants = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4123</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4123</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlCellTypeFormulas = -4123,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>11</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>11</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlCellTypeLastCell = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4144</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4144</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlCellTypeComments = -4144,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlCellTypeVisible = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4172</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4172</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlCellTypeAllFormatConditions = -4172,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4173</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4173</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlCellTypeSameFormatConditions = -4173,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4174</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4174</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlCellTypeAllValidation = -4174,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4175</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4175</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlCellTypeSameValidation = -4175
 	}
 }

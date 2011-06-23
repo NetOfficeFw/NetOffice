@@ -13,36 +13,36 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-2</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-2</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoClipboardFormatMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoClipboardFormatNative = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoClipboardFormatHTML = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoClipboardFormatRTF = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoClipboardFormatPlainText = 4
 	}
 }

@@ -13,29 +13,29 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdRevisedLinesMarkNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdRevisedLinesMarkLeftBorder = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdRevisedLinesMarkRightBorder = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdRevisedLinesMarkOutsideBorder = 3
 	}
 }

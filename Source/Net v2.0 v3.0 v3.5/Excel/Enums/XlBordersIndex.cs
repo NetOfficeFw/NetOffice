@@ -13,57 +13,57 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlInsideHorizontal = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>11</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>11</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlInsideVertical = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDiagonalDown = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDiagonalUp = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlEdgeBottom = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlEdgeLeft = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>10</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>10</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlEdgeRight = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlEdgeTop = 8
 	}
 }

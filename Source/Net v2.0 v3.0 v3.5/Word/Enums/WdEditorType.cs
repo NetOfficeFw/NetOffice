@@ -13,29 +13,29 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-1</remarks>
-		[SupportByLibrary("Word", 11,12,14)]
+		 /// <remarks>-1</remarks>
+		 [SupportByLibrary("Word", 11,12,14)]
 		 wdEditorEveryone = -1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4</remarks>
-		[SupportByLibrary("Word", 11,12,14)]
+		 /// <remarks>-4</remarks>
+		 [SupportByLibrary("Word", 11,12,14)]
 		 wdEditorOwners = -4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-5</remarks>
-		[SupportByLibrary("Word", 11,12,14)]
+		 /// <remarks>-5</remarks>
+		 [SupportByLibrary("Word", 11,12,14)]
 		 wdEditorEditors = -5,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-6</remarks>
-		[SupportByLibrary("Word", 11,12,14)]
+		 /// <remarks>-6</remarks>
+		 [SupportByLibrary("Word", 11,12,14)]
 		 wdEditorCurrent = -6
 	}
 }

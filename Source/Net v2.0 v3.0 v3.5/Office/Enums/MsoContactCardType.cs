@@ -13,36 +13,36 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Office", 14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Office", 14)]
 		 msoContactCardTypeEnterpriseContact = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 14)]
 		 msoContactCardTypePersonalContact = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 14)]
 		 msoContactCardTypeUnknownContact = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Office", 14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Office", 14)]
 		 msoContactCardTypeEnterpriseGroup = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Office", 14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Office", 14)]
 		 msoContactCardTypePersonalDistributionList = 4
 	}
 }

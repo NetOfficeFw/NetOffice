@@ -13,22 +13,22 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbEditNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbEditInProgress = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbEditAdd = 2
 	}
 }

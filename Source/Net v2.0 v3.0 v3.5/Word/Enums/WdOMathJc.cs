@@ -13,36 +13,36 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdOMathJcCenterGroup = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdOMathJcCenter = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdOMathJcLeft = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdOMathJcRight = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdOMathJcInline = 7
 	}
 }

@@ -13,64 +13,64 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>-1</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>-1</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlConditionValueNone = -1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlConditionValueNumber = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlConditionValueLowestValue = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlConditionValueHighestValue = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlConditionValuePercent = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlConditionValueFormula = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlConditionValuePercentile = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlConditionValueAutomaticMin = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlConditionValueAutomaticMax = 7
 	}
 }

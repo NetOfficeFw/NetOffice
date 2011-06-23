@@ -13,22 +13,22 @@ namespace NetOffice.ADODBApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("ADODB", 2.1,2.5)]
 		 adBookmarkCurrent = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("ADODB", 2.1,2.5)]
 		 adBookmarkFirst = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary ADODB 2.1, 2.5, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("ADODB", 2.1,2.5)]
 		 adBookmarkLast = 2
 	}
 }

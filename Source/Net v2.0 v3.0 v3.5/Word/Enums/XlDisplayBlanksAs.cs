@@ -13,22 +13,22 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlInterpolated = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlNotPlotted = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlZero = 2
 	}
 }

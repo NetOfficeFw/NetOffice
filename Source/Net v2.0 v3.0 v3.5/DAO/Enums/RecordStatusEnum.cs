@@ -13,36 +13,36 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbRecordUnmodified = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbRecordModified = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbRecordNew = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbRecordDeleted = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbRecordDBDeleted = 4
 	}
 }

@@ -13,22 +13,22 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Excel", 10,11,12,14)]
 		 xlUpdateLinksUserSetting = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Excel", 10,11,12,14)]
 		 xlUpdateLinksNever = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Excel", 10,11,12,14)]
 		 xlUpdateLinksAlways = 3
 	}
 }

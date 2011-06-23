@@ -13,22 +13,22 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlCategoryScale = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlTimeScale = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-4105</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-4105</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlAutomaticScale = -4105
 	}
 }

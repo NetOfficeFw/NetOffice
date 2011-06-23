@@ -13,43 +13,43 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 plOrientationNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 plOrientationColumnAxis = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 plOrientationRowAxis = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 plOrientationFilterAxis = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 plOrientationDataAxis = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>16</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>16</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 plOrientationPageAxis = 16
 	}
 }

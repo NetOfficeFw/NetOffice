@@ -13,15 +13,15 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Excel", 11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Excel", 11,12,14)]
 		 xlXmlExportSuccess = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Excel", 11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Excel", 11,12,14)]
 		 xlXmlExportValidationFailed = 1
 	}
 }

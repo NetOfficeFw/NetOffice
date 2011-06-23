@@ -13,57 +13,57 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlContinuous = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>-4115</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>-4115</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlDash = -4115,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlDashDot = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlDashDotDot = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>-4118</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>-4118</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlDot = -4118,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>-4119</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>-4119</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlDouble = -4119,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>13</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>13</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlSlantDashDot = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>-4142</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>-4142</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 xlLineStyleNone = -4142
 	}
 }

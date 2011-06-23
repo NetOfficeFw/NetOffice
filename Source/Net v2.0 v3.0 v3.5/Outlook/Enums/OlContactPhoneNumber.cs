@@ -13,134 +13,134 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneAssistant = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneBusiness = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneBusiness2 = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneBusinessFax = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneCallback = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneCar = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneCompany = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneHome = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneHome2 = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneHomeFax = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>10</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>10</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneISDN = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>11</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>11</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneMobile = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneOther = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>13</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>13</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneOtherFax = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>14</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>14</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhonePager = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>15</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>15</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhonePrimary = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>16</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>16</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneRadio = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>17</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>17</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneTelex = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>18</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>18</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olContactPhoneTTYTTD = 18
 	}
 }

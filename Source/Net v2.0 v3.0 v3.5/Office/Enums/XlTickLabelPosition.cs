@@ -13,29 +13,29 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-4127</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-4127</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlTickLabelPositionHigh = -4127,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-4134</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-4134</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlTickLabelPositionLow = -4134,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlTickLabelPositionNextToAxis = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-4142</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-4142</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlTickLabelPositionNone = -4142
 	}
 }

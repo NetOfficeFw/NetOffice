@@ -13,22 +13,22 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdCheckInMinorVersion = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdCheckInMajorVersion = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Word", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Word", 12,14)]
 		 wdCheckInOverwriteVersion = 2
 	}
 }

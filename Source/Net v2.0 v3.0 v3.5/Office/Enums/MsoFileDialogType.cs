@@ -13,29 +13,29 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 10,11,12,14)]
 		 msoFileDialogOpen = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 10,11,12,14)]
 		 msoFileDialogSaveAs = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Office", 10,11,12,14)]
 		 msoFileDialogFilePicker = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Office", 10,11,12,14)]
 		 msoFileDialogFolderPicker = 4
 	}
 }

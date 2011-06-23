@@ -13,57 +13,57 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Office", 11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Office", 11,12,14)]
 		 msoSyncStatusNoSharedWorkspace = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 11,12,14)]
 		 msoSyncStatusLatest = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 11,12,14)]
 		 msoSyncStatusNewerAvailable = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Office", 11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Office", 11,12,14)]
 		 msoSyncStatusLocalChanges = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Office", 11,12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Office", 11,12,14)]
 		 msoSyncStatusConflict = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Office", 11,12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Office", 11,12,14)]
 		 msoSyncStatusSuspended = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Office", 11,12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Office", 11,12,14)]
 		 msoSyncStatusError = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoSyncStatusNotRoaming = 0
 	}
 }

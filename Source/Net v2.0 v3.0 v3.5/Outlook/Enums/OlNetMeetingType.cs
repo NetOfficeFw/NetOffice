@@ -13,29 +13,29 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
 		 olNetMeeting = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
 		 olNetShow = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 9, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Outlook", 9)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Outlook", 9)]
 		 olChat = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Outlook", 10,11,12,14)]
 		 olExchangeConferencing = 2
 	}
 }

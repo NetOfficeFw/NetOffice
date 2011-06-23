@@ -13,50 +13,50 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>9999999</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>9999999</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdUndefined = 9999999,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>9999998</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>9999998</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdToggle = 9999998,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1073741823</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>1073741823</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdForward = 1073741823,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-1073741823</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>-1073741823</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdBackward = -1073741823,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdAutoPosition = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdFirst = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1297307460</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>1297307460</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdCreatorCode = 1297307460
 	}
 }

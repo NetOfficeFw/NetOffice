@@ -13,15 +13,15 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Word", 11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Word", 11,12,14)]
 		 wdXMLValidationStatusOK = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-1072898048</remarks>
-		[SupportByLibrary("Word", 11,12,14)]
+		 /// <remarks>-1072898048</remarks>
+		 [SupportByLibrary("Word", 11,12,14)]
 		 wdXMLValidationStatusCustom = -1072898048
 	}
 }

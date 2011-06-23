@@ -13,22 +13,22 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("PowerPoint", 10,11,12,14)]
 		 ppRevisionInfoNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("PowerPoint", 10,11,12,14)]
 		 ppRevisionInfoBaseline = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("PowerPoint", 10,11,12,14)]
 		 ppRevisionInfoMerged = 2
 	}
 }

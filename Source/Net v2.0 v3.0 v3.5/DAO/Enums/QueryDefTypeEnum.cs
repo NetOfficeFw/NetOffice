@@ -13,92 +13,92 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQSelect = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>224</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>224</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQProcedure = 224,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>240</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>240</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQAction = 240,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>16</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>16</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQCrosstab = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>32</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>32</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQDelete = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>48</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>48</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQUpdate = 48,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>64</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>64</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQAppend = 64,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>80</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>80</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQMakeTable = 80,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>96</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>96</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQDDL = 96,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>112</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>112</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQSQLPassThrough = 112,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>128</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>128</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQSetOperation = 128,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>144</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>144</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQSPTBulk = 144,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>160</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>160</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbQCompound = 160
 	}
 }

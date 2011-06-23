@@ -13,22 +13,22 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Word", 9)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Word", 9)]
 		 emptyenum = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>150001</remarks>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		 /// <remarks>150001</remarks>
+		 [SupportByLibrary("Word", 10,11,12,14)]
 		 wdDialogFilePageSetupTabPaperSize = 150001,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>150002</remarks>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		 /// <remarks>150002</remarks>
+		 [SupportByLibrary("Word", 10,11,12,14)]
 		 wdDialogFilePageSetupTabPaperSource = 150002
 	}
 }

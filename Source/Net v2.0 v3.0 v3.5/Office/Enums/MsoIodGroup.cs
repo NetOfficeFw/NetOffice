@@ -13,22 +13,22 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Office", 14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Office", 14)]
 		 msoIodGroupPIAs = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 14)]
 		 msoIodGroupVSTOR35Mgd = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 14)]
 		 msoIodGroupVSTOR40Mgd = 2
 	}
 }

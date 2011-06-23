@@ -13,120 +13,120 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIComments = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIRemovePersonalInformation = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIEmailHeader = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIRoutingSlip = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDISendForReview = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIDocumentProperties = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>10</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>10</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIDocumentWorkspace = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>11</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>11</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIInkAnnotations = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIScenarioComments = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>13</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>13</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIPublishInfo = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>14</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>14</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIDocumentServerProperties = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>15</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>15</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIDocumentManagementPolicy = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>16</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>16</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIContentType = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>18</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>18</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIDefinedNameComments = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>19</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>19</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIInactiveDataConnections = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>20</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>20</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIPrinterPath = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>99</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>99</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlRDIAll = 99
 	}
 }

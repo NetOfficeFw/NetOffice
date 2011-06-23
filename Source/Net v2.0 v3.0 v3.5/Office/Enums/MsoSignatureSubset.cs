@@ -13,43 +13,43 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoSignatureSubsetSignaturesAllSigs = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoSignatureSubsetSignaturesNonVisible = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoSignatureSubsetSignatureLines = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoSignatureSubsetSignatureLinesSigned = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoSignatureSubsetSignatureLinesUnsigned = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoSignatureSubsetAll = 5
 	}
 }

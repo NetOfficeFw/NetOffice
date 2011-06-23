@@ -13,50 +13,50 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olCustomFoldersGroup = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olMyFoldersGroup = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olPeopleFoldersGroup = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olOtherFoldersGroup = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Outlook", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Outlook", 12,14)]
 		 olFavoriteFoldersGroup = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Outlook", 14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Outlook", 14)]
 		 olRoomsGroup = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Outlook", 14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Outlook", 14)]
 		 olReadOnlyGroup = 6
 	}
 }

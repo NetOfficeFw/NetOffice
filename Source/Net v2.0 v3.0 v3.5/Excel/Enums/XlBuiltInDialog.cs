@@ -13,1814 +13,1814 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOpen = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOpenLinks = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSaveAs = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFileDelete = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPageSetup = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPrint = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPrinterSetup = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogArrangeAll = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>13</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>13</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWindowSize = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>14</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>14</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWindowMove = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>17</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>17</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogRun = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>23</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>23</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSetPrintTitles = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>26</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>26</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFont = 26,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>27</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>27</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogDisplay = 27,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>28</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>28</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogProtectDocument = 28,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>32</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>32</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogCalculation = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>35</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>35</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogExtract = 35,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>36</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>36</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogDataDelete = 36,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>39</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>39</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSort = 39,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>40</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>40</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogDataSeries = 40,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>41</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>41</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogTable = 41,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>42</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>42</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormatNumber = 42,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>43</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>43</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogAlignment = 43,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>44</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>44</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogStyle = 44,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>45</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>45</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogBorder = 45,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>46</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>46</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogCellProtection = 46,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>47</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>47</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogColumnWidth = 47,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>52</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>52</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogClear = 52,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>53</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>53</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPasteSpecial = 53,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>54</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>54</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogEditDelete = 54,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>55</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>55</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogInsert = 55,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>58</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>58</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPasteNames = 58,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>61</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>61</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogDefineName = 61,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>62</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>62</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogCreateNames = 62,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>63</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>63</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormulaGoto = 63,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>64</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>64</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormulaFind = 64,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>67</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>67</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGalleryArea = 67,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>68</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>68</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGalleryBar = 68,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>69</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>69</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGalleryColumn = 69,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>70</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>70</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGalleryLine = 70,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>71</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>71</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGalleryPie = 71,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>72</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>72</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGalleryScatter = 72,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>73</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>73</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogCombination = 73,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>76</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>76</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGridlines = 76,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>78</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>78</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogAxes = 78,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>80</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>80</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogAttachText = 80,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>84</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>84</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPatterns = 84,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>85</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>85</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogMainChart = 85,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>86</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>86</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOverlay = 86,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>87</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>87</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogScale = 87,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>88</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>88</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormatLegend = 88,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>89</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>89</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormatText = 89,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>91</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>91</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogParse = 91,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>94</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>94</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogUnhide = 94,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>95</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>95</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkspace = 95,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>103</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>103</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogActivate = 103,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>108</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>108</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogCopyPicture = 108,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>110</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>110</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogDeleteName = 110,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>111</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>111</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogDeleteFormat = 111,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>119</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>119</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogNew = 119,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>127</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>127</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogRowHeight = 127,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>128</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>128</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormatMove = 128,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>129</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>129</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormatSize = 129,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>130</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>130</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormulaReplace = 130,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>132</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>132</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSelectSpecial = 132,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>133</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>133</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogApplyNames = 133,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>134</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>134</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogReplaceFont = 134,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>137</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>137</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSplit = 137,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>142</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>142</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOutline = 142,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>145</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>145</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSaveWorkbook = 145,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>147</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>147</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogCopyChart = 147,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>150</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>150</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormatFont = 150,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>154</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>154</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogNote = 154,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>159</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>159</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSetUpdateStatus = 159,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>161</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>161</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogColorPalette = 161,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>166</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>166</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogChangeLink = 166,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>170</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>170</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogAppMove = 170,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>171</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>171</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogAppSize = 171,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>185</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>185</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogMainChartType = 185,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>186</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>186</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOverlayChartType = 186,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>188</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>188</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOpenMail = 188,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>189</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>189</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSendMail = 189,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>190</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>190</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogStandardFont = 190,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>191</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>191</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogConsolidate = 191,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>192</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>192</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSortSpecial = 192,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>193</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>193</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGallery3dArea = 193,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>194</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>194</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGallery3dColumn = 194,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>195</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>195</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGallery3dLine = 195,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>196</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>196</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGallery3dPie = 196,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>197</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>197</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogView3d = 197,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>198</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>198</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGoalSeek = 198,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>199</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>199</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkgroup = 199,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>200</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>200</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFillGroup = 200,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>201</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>201</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogUpdateLink = 201,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>202</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>202</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPromote = 202,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>203</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>203</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogDemote = 203,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>204</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>204</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogShowDetail = 204,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>207</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>207</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogObjectProperties = 207,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>208</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>208</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSaveNewObject = 208,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>212</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>212</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogApplyStyle = 212,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>213</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>213</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogAssignToObject = 213,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>214</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>214</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogObjectProtection = 214,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>217</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>217</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogCreatePublisher = 217,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>218</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>218</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSubscribeTo = 218,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>220</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>220</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogShowToolbar = 220,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>222</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>222</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPrintPreview = 222,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>223</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>223</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogEditColor = 223,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>225</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>225</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormatMain = 225,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>226</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>226</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormatOverlay = 226,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>228</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>228</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogEditSeries = 228,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>229</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>229</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogDefineStyle = 229,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>249</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>249</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGalleryRadar = 249,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>251</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>251</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogEditionOptions = 251,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>256</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>256</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogZoom = 256,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>259</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>259</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogInsertObject = 259,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>261</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>261</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSize = 261,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>262</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>262</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogMove = 262,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>269</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>269</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormatAuto = 269,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>272</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>272</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGallery3dBar = 272,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>273</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>273</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGallery3dSurface = 273,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>276</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>276</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogCustomizeToolbar = 276,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>281</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>281</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkbookAdd = 281,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>282</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>282</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkbookMove = 282,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>283</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>283</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkbookCopy = 283,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>284</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>284</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkbookOptions = 284,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>285</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>285</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSaveWorkspace = 285,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>288</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>288</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogChartWizard = 288,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>293</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>293</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogAssignToTool = 293,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>300</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>300</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPlacement = 300,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>301</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>301</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFillWorkgroup = 301,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>302</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>302</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkbookNew = 302,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>305</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>305</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogScenarioCells = 305,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>307</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>307</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogScenarioAdd = 307,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>308</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>308</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogScenarioEdit = 308,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>311</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>311</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogScenarioSummary = 311,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>312</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>312</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPivotTableWizard = 312,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>313</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>313</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPivotFieldProperties = 313,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>318</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>318</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOptionsCalculation = 318,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>319</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>319</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOptionsEdit = 319,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>320</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>320</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOptionsView = 320,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>321</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>321</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogAddinManager = 321,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>322</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>322</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogMenuEditor = 322,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>323</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>323</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogAttachToolbars = 323,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>325</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>325</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOptionsChart = 325,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>328</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>328</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogVbaInsertFile = 328,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>330</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>330</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogVbaProcedureDefinition = 330,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>336</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>336</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogRoutingSlip = 336,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>339</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>339</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogMailLogon = 339,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>342</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>342</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogInsertPicture = 342,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>344</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>344</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGalleryDoughnut = 344,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>350</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>350</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogChartTrend = 350,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>354</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>354</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkbookInsert = 354,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>355</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>355</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOptionsTransition = 355,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>356</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>356</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOptionsGeneral = 356,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>370</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>370</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFilterAdvanced = 370,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>378</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>378</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogMailNextLetter = 378,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>379</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>379</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogDataLabel = 379,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>380</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>380</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogInsertTitle = 380,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>381</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>381</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFontProperties = 381,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>382</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>382</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogMacroOptions = 382,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>384</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>384</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkbookUnhide = 384,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>386</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>386</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkbookName = 386,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>388</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>388</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogGalleryCustom = 388,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>390</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>390</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogAddChartAutoformat = 390,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>392</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>392</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogChartAddData = 392,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>394</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>394</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogTabOrder = 394,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>398</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>398</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSubtotalCreate = 398,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>415</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>415</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkbookTabSplit = 415,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>417</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>417</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWorkbookProtect = 417,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>420</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>420</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogScrollbarProperties = 420,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>421</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>421</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPivotShowPages = 421,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>422</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>422</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogTextToColumns = 422,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>423</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>423</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormatCharttype = 423,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>433</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>433</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPivotFieldGroup = 433,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>434</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>434</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPivotFieldUngroup = 434,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>435</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>435</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogCheckboxProperties = 435,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>436</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>436</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogLabelProperties = 436,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>437</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>437</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogListboxProperties = 437,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>438</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>438</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogEditboxProperties = 438,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>441</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>441</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOpenText = 441,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>445</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>445</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPushbuttonProperties = 445,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>447</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>447</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFilter = 447,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>450</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>450</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFunctionWizard = 450,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>456</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>456</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSaveCopyAs = 456,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>458</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>458</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOptionsListsAdd = 458,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>460</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>460</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSeriesAxes = 460,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>461</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>461</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSeriesX = 461,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>462</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>462</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSeriesY = 462,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>463</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>463</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogErrorbarX = 463,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>464</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>464</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogErrorbarY = 464,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>465</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>465</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFormatChart = 465,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>466</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>466</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSeriesOrder = 466,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>470</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>470</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogMailEditMailer = 470,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>472</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>472</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogStandardWidth = 472,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>473</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>473</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogScenarioMerge = 473,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>474</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>474</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogProperties = 474,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>474</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>474</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSummaryInfo = 474,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>475</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>475</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFindFile = 475,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>476</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>476</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogActiveCellFont = 476,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>478</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>478</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogVbaMakeAddin = 478,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>481</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>481</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogFileSharing = 481,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>485</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>485</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogAutoCorrect = 485,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>493</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>493</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogCustomViews = 493,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>496</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>496</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogInsertNameLabel = 496,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>504</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>504</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSeriesShape = 504,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>505</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>505</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogChartOptionsDataLabels = 505,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>506</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>506</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogChartOptionsDataTable = 506,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>509</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>509</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSetBackgroundPicture = 509,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>525</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>525</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogDataValidation = 525,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>526</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>526</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogChartType = 526,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>527</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>527</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogChartLocation = 527,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>538</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>538</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 _xlDialogPhonetic = 538,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>540</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>540</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogChartSourceData = 540,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>541</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>541</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 _xlDialogChartSourceData = 541,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>557</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>557</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogSeriesOptions = 557,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>567</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>567</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPivotTableOptions = 567,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>568</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>568</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPivotSolveOrder = 568,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>570</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>570</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPivotCalculatedField = 570,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>572</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>572</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPivotCalculatedItem = 572,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>583</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>583</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogConditionalFormatting = 583,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>596</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>596</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogInsertHyperlink = 596,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>620</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>620</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogProtectSharing = 620,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>647</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>647</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogOptionsME = 647,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>653</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>653</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPublishAsWebPage = 653,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>656</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>656</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPhonetic = 656,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>667</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>667</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogNewWebQuery = 667,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>666</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>666</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogImportTextFile = 666,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>530</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>530</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogExternalDataProperties = 530,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>683</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>683</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWebOptionsGeneral = 683,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>684</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>684</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWebOptionsFiles = 684,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>685</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>685</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWebOptionsPictures = 685,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>686</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>686</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWebOptionsEncoding = 686,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>687</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>687</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogWebOptionsFonts = 687,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>689</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>689</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDialogPivotClientServerSet = 689,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>754</remarks>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		 /// <remarks>754</remarks>
+		 [SupportByLibrary("Excel", 10,11,12,14)]
 		 xlDialogPropertyFields = 754,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>731</remarks>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		 /// <remarks>731</remarks>
+		 [SupportByLibrary("Excel", 10,11,12,14)]
 		 xlDialogSearch = 731,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>709</remarks>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		 /// <remarks>709</remarks>
+		 [SupportByLibrary("Excel", 10,11,12,14)]
 		 xlDialogEvaluateFormula = 709,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>723</remarks>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		 /// <remarks>723</remarks>
+		 [SupportByLibrary("Excel", 10,11,12,14)]
 		 xlDialogDataLabelMultiple = 723,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>724</remarks>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		 /// <remarks>724</remarks>
+		 [SupportByLibrary("Excel", 10,11,12,14)]
 		 xlDialogChartOptionsDataLabelMultiple = 724,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>732</remarks>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		 /// <remarks>732</remarks>
+		 [SupportByLibrary("Excel", 10,11,12,14)]
 		 xlDialogErrorChecking = 732,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>773</remarks>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		 /// <remarks>773</remarks>
+		 [SupportByLibrary("Excel", 10,11,12,14)]
 		 xlDialogWebOptionsBrowsers = 773,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>796</remarks>
-		[SupportByLibrary("Excel", 11,12,14)]
+		 /// <remarks>796</remarks>
+		 [SupportByLibrary("Excel", 11,12,14)]
 		 xlDialogCreateList = 796,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>832</remarks>
-		[SupportByLibrary("Excel", 11,12,14)]
+		 /// <remarks>832</remarks>
+		 [SupportByLibrary("Excel", 11,12,14)]
 		 xlDialogPermission = 832,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>834</remarks>
-		[SupportByLibrary("Excel", 11,12,14)]
+		 /// <remarks>834</remarks>
+		 [SupportByLibrary("Excel", 11,12,14)]
 		 xlDialogMyPermission = 834,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>862</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>862</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlDialogDocumentInspector = 862,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>977</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>977</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlDialogNameManager = 977,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>978</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>978</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlDialogNewName = 978,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1133</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1133</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogSparklineInsertLine = 1133,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1134</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1134</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogSparklineInsertColumn = 1134,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1135</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1135</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogSparklineInsertWinLoss = 1135,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1179</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1179</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogSlicerSettings = 1179,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1182</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1182</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogSlicerCreation = 1182,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1184</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1184</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogSlicerPivotTableConnections = 1184,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1183</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1183</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogPivotTableSlicerConnections = 1183,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1153</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1153</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogPivotTableWhatIfAnalysisSettings = 1153,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1109</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1109</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogSetManager = 1109,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1208</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1208</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogSetMDXEditor = 1208,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1107</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1107</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogSetTupleEditorOnRows = 1107,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1108</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1108</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlDialogSetTupleEditorOnColumns = 1108
 	}
 }

@@ -13,22 +13,22 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-2</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>-2</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 msoExtrusionColorTypeMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 msoExtrusionColorAutomatic = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 9,10,11,12,14)]
 		 msoExtrusionColorCustom = 2
 	}
 }

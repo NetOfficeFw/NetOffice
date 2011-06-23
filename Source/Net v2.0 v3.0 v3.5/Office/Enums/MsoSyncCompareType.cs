@@ -13,15 +13,15 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Office", 11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Office", 11,12,14)]
 		 msoSyncCompareAndMerge = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 11,12,14)]
 		 msoSyncCompareSideBySide = 1
 	}
 }

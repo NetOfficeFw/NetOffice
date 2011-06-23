@@ -13,106 +13,106 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlDifferenceFrom = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlIndex = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-4143</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>-4143</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlNoAdditionalCalculation = -4143,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlPercentDifferenceFrom = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlPercentOf = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlPercentOfColumn = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlPercentOfRow = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlPercentOfTotal = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Excel", 9,10,11,12,14)]
 		 xlRunningTotal = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>10</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>10</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlPercentOfParentRow = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>11</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>11</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlPercentOfParentColumn = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlPercentOfParent = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>13</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>13</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlPercentRunningTotal = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>14</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>14</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlRankAscending = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>15</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>15</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlRankDecending = 15
 	}
 }

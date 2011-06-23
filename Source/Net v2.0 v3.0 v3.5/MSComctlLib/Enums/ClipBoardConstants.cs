@@ -13,57 +13,57 @@ namespace NetOffice.MSComctlLibApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("MSComctlLib", 6)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("MSComctlLib", 6)]
 		 ccCFText = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("MSComctlLib", 6)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("MSComctlLib", 6)]
 		 ccCFBitmap = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("MSComctlLib", 6)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("MSComctlLib", 6)]
 		 ccCFMetafile = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("MSComctlLib", 6)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("MSComctlLib", 6)]
 		 ccCFDIB = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("MSComctlLib", 6)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("MSComctlLib", 6)]
 		 ccCFPalette = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
-		/// <remarks>14</remarks>
-		[SupportByLibrary("MSComctlLib", 6)]
+		 /// <remarks>14</remarks>
+		 [SupportByLibrary("MSComctlLib", 6)]
 		 ccCFEMetafile = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
-		/// <remarks>15</remarks>
-		[SupportByLibrary("MSComctlLib", 6)]
+		 /// <remarks>15</remarks>
+		 [SupportByLibrary("MSComctlLib", 6)]
 		 ccCFFiles = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary MSComctlLib 6, 
 		 /// </summary>
-		/// <remarks>-16639</remarks>
-		[SupportByLibrary("MSComctlLib", 6)]
+		 /// <remarks>-16639</remarks>
+		 [SupportByLibrary("MSComctlLib", 6)]
 		 ccCFRTF = -16639
 	}
 }

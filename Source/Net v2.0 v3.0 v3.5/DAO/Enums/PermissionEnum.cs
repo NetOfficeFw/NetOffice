@@ -13,120 +13,120 @@ namespace NetOffice.DAOApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecNoAccess = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>1048575</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>1048575</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecFullAccess = 1048575,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>65536</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>65536</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecDelete = 65536,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>131072</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>131072</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecReadSec = 131072,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>262144</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>262144</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecWriteSec = 262144,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>524288</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>524288</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecWriteOwner = 524288,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecDBCreate = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecDBOpen = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecDBExclusive = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecDBAdmin = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecCreate = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecReadDef = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>65548</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>65548</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecWriteDef = 65548,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>20</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>20</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecRetrieveData = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>32</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>32</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecInsertData = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>64</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>64</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecReplaceData = 64,
 
 		 /// <summary>
 		 /// SupportByLibrary DAO 6, 12, 
 		 /// </summary>
-		/// <remarks>128</remarks>
-		[SupportByLibrary("DAO", 6,12)]
+		 /// <remarks>128</remarks>
+		 [SupportByLibrary("DAO", 6,12)]
 		 dbSecDeleteData = 128
 	}
 }

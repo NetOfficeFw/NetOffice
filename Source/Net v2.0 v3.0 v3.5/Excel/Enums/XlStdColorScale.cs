@@ -13,29 +13,29 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlColorScaleRYG = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlColorScaleGYR = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlColorScaleBlackWhite = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Excel", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Excel", 12,14)]
 		 xlColorScaleWhiteBlack = 4
 	}
 }

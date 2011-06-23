@@ -13,22 +13,22 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Outlook", 10,11,12,14)]
 		 olExcelWorkSheetItem = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("Outlook", 10,11,12,14)]
 		 olWordDocumentItem = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>10</remarks>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		 /// <remarks>10</remarks>
+		 [SupportByLibrary("Outlook", 10,11,12,14)]
 		 olPowerPointShowItem = 10
 	}
 }

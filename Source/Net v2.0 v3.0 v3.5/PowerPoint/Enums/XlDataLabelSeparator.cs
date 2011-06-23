@@ -13,8 +13,8 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlDataLabelSeparatorDefault = 1
 	}
 }

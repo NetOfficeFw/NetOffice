@@ -13,22 +13,22 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-5002</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-5002</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlContext = -5002,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-5003</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-5003</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlLTR = -5003,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-5004</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-5004</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlRTL = -5004
 	}
 }

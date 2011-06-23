@@ -13,15 +13,15 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-4105</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-4105</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlChartElementPositionAutomatic = -4105,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-4114</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-4114</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlChartElementPositionCustom = -4114
 	}
 }

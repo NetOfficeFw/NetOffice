@@ -13,15 +13,15 @@ namespace NetOffice.VBIDEApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("VBIDE", 5.3,12)]
 		 vbext_cv_ProcedureView = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary VBIDE 5.3, 12, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("VBIDE", 5.3,12)]
 		 vbext_cv_FullModuleView = 1
 	}
 }

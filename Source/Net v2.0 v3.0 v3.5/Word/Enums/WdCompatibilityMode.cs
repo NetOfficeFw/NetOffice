@@ -13,29 +13,29 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>11</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>11</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 wdWord2003 = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 wdWord2007 = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>14</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>14</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 wdWord2010 = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 14, 
 		 /// </summary>
-		/// <remarks>65535</remarks>
-		[SupportByLibrary("Word", 14)]
+		 /// <remarks>65535</remarks>
+		 [SupportByLibrary("Word", 14)]
 		 wdCurrent = 65535
 	}
 }

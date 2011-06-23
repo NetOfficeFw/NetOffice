@@ -13,29 +13,29 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 xlHairline = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 xlThin = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>-4138</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>-4138</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 xlMedium = -4138,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 xlThick = 4
 	}
 }

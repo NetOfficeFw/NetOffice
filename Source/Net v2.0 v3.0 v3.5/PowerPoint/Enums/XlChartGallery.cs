@@ -13,22 +13,22 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>21</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>21</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlBuiltIn = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>22</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>22</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlUserDefined = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>23</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>23</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlAnyGallery = 23
 	}
 }

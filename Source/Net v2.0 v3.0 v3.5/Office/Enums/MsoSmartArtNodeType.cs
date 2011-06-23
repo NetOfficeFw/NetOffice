@@ -13,15 +13,15 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 14)]
 		 msoSmartArtNodeTypeDefault = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 14)]
 		 msoSmartArtNodeTypeAssistant = 2
 	}
 }

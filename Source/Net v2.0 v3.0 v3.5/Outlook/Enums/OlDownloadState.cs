@@ -13,15 +13,15 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Outlook", 10,11,12,14)]
 		 olHeaderOnly = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Outlook", 10,11,12,14)]
 		 olFullItem = 1
 	}
 }

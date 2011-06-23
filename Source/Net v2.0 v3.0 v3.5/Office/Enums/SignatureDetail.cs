@@ -13,155 +13,155 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetLocalSigningTime = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetApplicationName = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetApplicationVersion = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetOfficeVersion = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetWindowsVersion = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetNumberOfMonitors = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetHorizResolution = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetVertResolution = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetColorDepth = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetSignedData = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>10</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>10</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetDocPreviewImg = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>11</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>11</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetIPFormHash = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetIPCurrentView = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>13</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>13</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetSignatureType = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>14</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>14</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetHashAlgorithm = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>15</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>15</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetShouldShowViewWarning = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>16</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>16</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetDelSuggSigner = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>17</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>17</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetDelSuggSignerSet = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>18</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>18</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetDelSuggSignerLine2 = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>19</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>19</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetDelSuggSignerLine2Set = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>20</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>20</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetDelSuggSignerEmail = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>21</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>21</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 sigdetDelSuggSignerEmailSet = 21
 	}
 }

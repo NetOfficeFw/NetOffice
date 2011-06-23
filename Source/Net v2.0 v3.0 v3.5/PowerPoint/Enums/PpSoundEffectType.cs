@@ -13,29 +13,29 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-2</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>-2</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppSoundEffectsMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppSoundNone = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppSoundStopPrevious = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("PowerPoint", 9,10,11,12,14)]
 		 ppSoundFile = 2
 	}
 }

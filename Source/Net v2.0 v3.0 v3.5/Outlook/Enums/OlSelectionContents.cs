@@ -13,8 +13,8 @@ namespace NetOffice.OutlookApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Outlook 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Outlook", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Outlook", 14)]
 		 olConversationHeaders = 1
 	}
 }

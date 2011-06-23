@@ -13,15 +13,15 @@ namespace NetOffice.OWC10Api.Enums
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>-1</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>-1</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 chNone = -1,
 
 		 /// <summary>
 		 /// SupportByLibrary OWC10 1, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("OWC10", 1)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("OWC10", 1)]
 		 chSolid = 0
 	}
 }

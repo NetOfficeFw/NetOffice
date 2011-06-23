@@ -13,43 +13,43 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlExponential = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-4132</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-4132</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlLinear = -4132,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-4133</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-4133</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlLogarithmic = -4133,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlMovingAvg = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlPolynomial = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 xlPower = 4
 	}
 }

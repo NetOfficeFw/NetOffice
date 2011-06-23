@@ -13,22 +13,22 @@ namespace NetOffice.ExcelApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlPortuguesePreReform = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlPortuguesePostReform = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Excel 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Excel", 14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Excel", 14)]
 		 xlPortugueseBoth = 3
 	}
 }

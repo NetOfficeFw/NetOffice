@@ -13,15 +13,15 @@ namespace NetOffice.AccessApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Access", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Access", 12,14)]
 		 acCursorOnHoverDefault = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Access 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Access", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Access", 12,14)]
 		 acCursorOnHoverHyperlinkHand = 1
 	}
 }

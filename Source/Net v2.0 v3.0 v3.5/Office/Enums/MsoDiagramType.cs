@@ -13,50 +13,50 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>-2</remarks>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		 /// <remarks>-2</remarks>
+		 [SupportByLibrary("Office", 10,11,12,14)]
 		 msoDiagramMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 10,11,12,14)]
 		 msoDiagramOrgChart = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 10,11,12,14)]
 		 msoDiagramCycle = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Office", 10,11,12,14)]
 		 msoDiagramRadial = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Office", 10,11,12,14)]
 		 msoDiagramPyramid = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Office", 10,11,12,14)]
 		 msoDiagramVenn = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Office", 10,11,12,14)]
 		 msoDiagramTarget = 6
 	}
 }

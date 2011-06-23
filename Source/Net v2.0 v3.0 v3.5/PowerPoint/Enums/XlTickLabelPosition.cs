@@ -13,29 +13,29 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>-4127</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>-4127</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlTickLabelPositionHigh = -4127,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>-4134</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>-4134</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlTickLabelPositionLow = -4134,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlTickLabelPositionNextToAxis = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>-4142</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>-4142</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlTickLabelPositionNone = -4142
 	}
 }

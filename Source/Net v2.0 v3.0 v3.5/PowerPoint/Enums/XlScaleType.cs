@@ -13,15 +13,15 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>-4132</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>-4132</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlScaleLinear = -4132,
 
 		 /// <summary>
 		 /// SupportByLibrary PowerPoint 14, 
 		 /// </summary>
-		/// <remarks>-4133</remarks>
-		[SupportByLibrary("PowerPoint", 14)]
+		 /// <remarks>-4133</remarks>
+		 [SupportByLibrary("PowerPoint", 14)]
 		 xlScaleLogarithmic = -4133
 	}
 }

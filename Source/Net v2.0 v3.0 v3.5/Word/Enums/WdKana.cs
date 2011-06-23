@@ -13,15 +13,15 @@ namespace NetOffice.WordApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdKanaKatakana = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("Word", 9,10,11,12,14)]
 		 wdKanaHiragana = 9
 	}
 }

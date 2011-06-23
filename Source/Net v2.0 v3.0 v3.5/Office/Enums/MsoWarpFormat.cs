@@ -13,260 +13,260 @@ namespace NetOffice.OfficeApi.Enums
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>-2</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>-2</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormatMixed = -2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>0</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>0</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat1 = 0,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>1</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>1</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat2 = 1,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>2</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>2</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat3 = 2,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>3</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>3</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat4 = 3,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>4</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>4</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat5 = 4,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>5</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>5</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat6 = 5,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>6</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>6</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat7 = 6,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>7</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>7</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat8 = 7,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>8</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>8</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat9 = 8,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>9</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>9</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat10 = 9,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>10</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>10</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat11 = 10,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>11</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>11</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat12 = 11,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>12</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>12</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat13 = 12,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>13</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>13</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat14 = 13,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>14</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>14</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat15 = 14,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>15</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>15</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat16 = 15,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>16</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>16</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat17 = 16,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>17</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>17</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat18 = 17,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>18</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>18</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat19 = 18,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>19</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>19</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat20 = 19,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>20</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>20</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat21 = 20,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>21</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>21</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat22 = 21,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>22</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>22</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat23 = 22,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>23</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>23</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat24 = 23,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>24</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>24</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat25 = 24,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>25</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>25</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat26 = 25,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>26</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>26</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat27 = 26,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>27</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>27</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat28 = 27,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>28</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>28</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat29 = 28,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>29</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>29</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat30 = 29,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>30</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>30</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat31 = 30,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>31</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>31</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat32 = 31,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>32</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>32</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat33 = 32,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>33</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>33</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat34 = 33,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>34</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>34</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat35 = 34,
 
 		 /// <summary>
 		 /// SupportByLibrary Office 12, 14, 
 		 /// </summary>
-		/// <remarks>35</remarks>
-		[SupportByLibrary("Office", 12,14)]
+		 /// <remarks>35</remarks>
+		 [SupportByLibrary("Office", 12,14)]
 		 msoWarpFormat36 = 35
 	}
 }
