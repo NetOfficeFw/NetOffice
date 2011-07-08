@@ -42,7 +42,14 @@ namespace LateBindingApi.Core
         /// <param name="paramsArray">array with parameters</param>
         public static void Method(COMObject comObject, string name, object[] paramsArray)
         {
-            comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+            try
+            {
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }
         }
 
         /// <summary>
@@ -53,11 +60,18 @@ namespace LateBindingApi.Core
         /// <param name="paramsArray">array with parameters</param>
         public static void Method(object comObject, string name, object[] paramsArray)
         {
-            comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
-        }
+            try
+            {
+                comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }
+         }
 
         /// <summary>
-        /// perform method as latebind call with parameters
+        /// perform method as latebind call with parameters and parameter modifiers to use ref parameter(s)
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -65,7 +79,14 @@ namespace LateBindingApi.Core
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         public static void Method(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
-            comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+            try
+            {
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }
         }
 
         /// <summary>
@@ -76,8 +97,15 @@ namespace LateBindingApi.Core
         /// <returns>any return value</returns>
         public static object MethodReturn(COMObject comObject, string name)
         {
-            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
-            return returnValue;
+            try
+            {
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }
         }
 
         /// <summary>
@@ -89,8 +117,15 @@ namespace LateBindingApi.Core
         /// <returns>any return value</returns>
         public static object MethodReturn(COMObject comObject, string name, object[] paramsArray)
         {
-            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
-            return returnValue;
+            try
+            {
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }
         }
 
         /// <summary>
@@ -103,8 +138,15 @@ namespace LateBindingApi.Core
         /// <returns>any return value</returns>
         public static object MethodReturn(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
-            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
-            return returnValue;
+            try
+            {
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }
         }
 
         #endregion
@@ -119,8 +161,15 @@ namespace LateBindingApi.Core
         /// <returns>any return value</returns>
         public static object PropertyGet(object comObject, string name)
         {
-            object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, null, Settings.ThreadCulture);
-            return returnValue;
+            try
+            {
+                object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, null, Settings.ThreadCulture);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }
         }
 
         /// <summary>
@@ -131,8 +180,15 @@ namespace LateBindingApi.Core
         /// <returns>any return value</returns>
         public static object PropertyGet(COMObject comObject, string name)
         {
-            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
-            return returnValue;
+            try
+            {
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }
         }
 
         /// <summary>
@@ -144,8 +200,15 @@ namespace LateBindingApi.Core
         /// <returns>any return value</returns>
         public static object PropertyGet(object comObject, string name, object[] paramsArray)
         {
-            object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
-            return returnValue;
+            try
+            {
+                object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }             
         }
 
         /// <summary>
@@ -157,8 +220,15 @@ namespace LateBindingApi.Core
         /// <returns>any return value</returns>
         public static object PropertyGet(COMObject comObject, string name, object[] paramsArray)
         {
-            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
-            return returnValue;
+            try
+            {
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }             
         }
 
         /// <summary>
@@ -171,8 +241,15 @@ namespace LateBindingApi.Core
         /// <returns>any return value</returns>
         public static object PropertyGet(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
-            object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
-            return returnValue;
+            try
+            {
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }           
         }
 
         /// <summary>
@@ -184,12 +261,19 @@ namespace LateBindingApi.Core
         /// <param name="value">value to be set</param>
         public static void PropertySet(COMObject comObject, string name, object[] paramsArray, object value)
         {
-            object[] newParamsArray = new object[paramsArray.Length + 1];
-            for (int i = 0; i < paramsArray.Length; i++)
-                newParamsArray[i] = paramsArray[i];
-            newParamsArray[newParamsArray.Length - 1] = value;
+            try
+            {
+                object[] newParamsArray = new object[paramsArray.Length + 1];
+                for (int i = 0; i < paramsArray.Length; i++)
+                    newParamsArray[i] = paramsArray[i];
+                newParamsArray[newParamsArray.Length - 1] = value;
 
-            comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray , Settings.ThreadCulture);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, Settings.ThreadCulture);
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            } 
         }
 
         /// <summary>
@@ -202,12 +286,19 @@ namespace LateBindingApi.Core
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>    
         public static void PropertySet(COMObject comObject, string name, object[] paramsArray, object value, ParameterModifier[] paramModifiers)
         {
-            object[] newParamsArray = new object[paramsArray.Length + 1];
-            for (int i = 0; i < paramsArray.Length; i++)
-                newParamsArray[i] = paramsArray[i];
-            newParamsArray[newParamsArray.Length - 1] = value;
+            try
+            {
+                object[] newParamsArray = new object[paramsArray.Length + 1];
+                for (int i = 0; i < paramsArray.Length; i++)
+                    newParamsArray[i] = paramsArray[i];
+                newParamsArray[newParamsArray.Length - 1] = value;
 
-            comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, paramModifiers, Settings.ThreadCulture, null);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, paramModifiers, Settings.ThreadCulture, null);
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            } 
         }
 
         /// <summary>
@@ -218,7 +309,14 @@ namespace LateBindingApi.Core
         /// <param name="value">value to be set</param>
         public static void PropertySet(COMObject comObject, string name, object value)
         {
-            comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, Settings.ThreadCulture);
+            try
+            {
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, Settings.ThreadCulture);
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }             
         }
 
         /// <summary>
@@ -230,7 +328,14 @@ namespace LateBindingApi.Core
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         public static void PropertySet(COMObject comObject, string name, object value, ParameterModifier[] paramModifiers)
         {
-            comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, paramModifiers, Settings.ThreadCulture, null);
+            try
+            {
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, paramModifiers, Settings.ThreadCulture, null);
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }
         }
 
         /// <summary>
@@ -242,7 +347,14 @@ namespace LateBindingApi.Core
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         public static void PropertySet(COMObject comObject, string name, object[] value, ParameterModifier[] paramModifiers)
         {
-            comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, paramModifiers, Settings.ThreadCulture, null);
+            try
+            {
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, paramModifiers, Settings.ThreadCulture, null);
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }
         }
 
         /// <summary>
@@ -253,7 +365,14 @@ namespace LateBindingApi.Core
         /// <param name="value"></param>
         public static void PropertySet(COMObject comObject, string name, object[] value)
         {
-            comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, Settings.ThreadCulture);
+            try
+            {
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, Settings.ThreadCulture);
+            }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            } 
         }
 
         #endregion
@@ -327,20 +446,27 @@ namespace LateBindingApi.Core
         /// </summary>
         public static void ReleaseParam(object param)
         {
-            if (null != param)
+            try
             {
-                if (param is COMObject)
+                if (null != param)
                 {
-                    COMObject comObject = param as COMObject;
-                    comObject.Dispose();
-                }
-                else
-                {
-                    Type paramType = param.GetType();
-                    if (true == paramType.IsCOMObject)
-                        Marshal.ReleaseComObject(param);
+                    if (param is COMObject)
+                    {
+                        COMObject comObject = param as COMObject;
+                        comObject.Dispose();
+                    }
+                    else
+                    {
+                        Type paramType = param.GetType();
+                        if (true == paramType.IsCOMObject)
+                            Marshal.ReleaseComObject(param);
+                    }
                 }
             }
+            catch (Exception throwedException)
+            {
+                throw new System.Runtime.InteropServices.COMException("", throwedException);
+            }             
         }
 
         /// <summary>

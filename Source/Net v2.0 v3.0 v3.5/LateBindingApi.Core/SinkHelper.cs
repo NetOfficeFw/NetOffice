@@ -40,35 +40,49 @@ namespace LateBindingApi.Core
         #region Static Methods
 
         /// <summary>
-        /// get supported connection point from comProxy
+        /// try to find connection point by FindConnectionPoint
         /// </summary>
-        /// <param name="comProxy"></param>
+        /// <param name="connectionPointContainer"></param>
         /// <param name="point"></param>
         /// <param name="sinkIds"></param>
         /// <returns></returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static string GetConnectionPoint(COMObject comProxy, ref IConnectionPoint point, params string[] sinkIds)
+        private static string FindConnectionPoint(IConnectionPointContainer connectionPointContainer, ref IConnectionPoint point, params string[] sinkIds)
         {
-            if (null == sinkIds)
-                return null;
-
-            IConnectionPointContainer connectionPointContainer = (IConnectionPointContainer)comProxy.UnderlyingObject;
-            IConnectionPoint[] points = new IConnectionPoint[1];
-            IEnumConnectionPoints enumPoints = null;
-
-            if (sinkIds.Length == 1)
+            try
             {
-                Guid refGuid = new Guid(sinkIds[0]);
-                IConnectionPoint refPoint = null;
-                connectionPointContainer.FindConnectionPoint(ref refGuid, out refPoint);
-                if (null != refPoint)
+                for (int i = sinkIds.Length; i > 0; i--)
                 {
-                    point = refPoint;
-                    return sinkIds[0];
+                    Guid refGuid = new Guid(sinkIds[i - 1]);
+                    IConnectionPoint refPoint = null;
+                    connectionPointContainer.FindConnectionPoint(ref refGuid, out refPoint);
+                    if (null != refPoint)
+                    {
+                        point = refPoint;
+                        return sinkIds[0];
+                    }
                 }
+
                 return null;
             }
-            else 
+            catch
+            {
+                return null;
+            }
+
+        }
+
+        /// <summary>
+        /// try to find connection point by EnumConnectionPoints
+        /// </summary>
+        /// <param name="connectionPointContainer"></param>
+        /// <param name="point"></param>
+        /// <param name="sinkIds"></param>
+        /// <returns></returns>
+        private static string EnumConnectionPoint(IConnectionPointContainer connectionPointContainer, ref IConnectionPoint point, params string[] sinkIds)
+        {
+            IConnectionPoint[] points = new IConnectionPoint[1];
+            IEnumConnectionPoints enumPoints = null;
+            try
             {
                 connectionPointContainer.EnumConnectionPoints(out enumPoints);
                 while (enumPoints.Next(1, points, IntPtr.Zero) == 0) // S_OK = 0 , S_FALSE = 1
@@ -94,6 +108,32 @@ namespace LateBindingApi.Core
                 Marshal.ReleaseComObject(enumPoints);
                 return null;
             }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// get supported connection point from comProxy
+        /// </summary>
+        /// <param name="comProxy"></param>
+        /// <param name="point"></param>
+        /// <param name="sinkIds"></param>
+        /// <returns></returns>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static string GetConnectionPoint(COMObject comProxy, ref IConnectionPoint point, params string[] sinkIds)
+        {
+            if (null == sinkIds)
+                return null;
+
+            IConnectionPointContainer connectionPointContainer = (IConnectionPointContainer)comProxy.UnderlyingObject;
+
+            string id = FindConnectionPoint(connectionPointContainer, ref point, sinkIds);
+            if(null == id)
+                    id = EnumConnectionPoint(connectionPointContainer,ref point, sinkIds);
+
+            return id;
         }
 
         /// <summary>
