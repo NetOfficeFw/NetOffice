@@ -58,7 +58,7 @@ namespace LateBindingApi.Core
                     if (null != refPoint)
                     {
                         point = refPoint;
-                        return sinkIds[0];
+                        return sinkIds[i-1];
                     }
                 }
 
@@ -99,7 +99,7 @@ namespace LateBindingApi.Core
                         if (true == sinkIds[i - 1].Equals(id, StringComparison.InvariantCultureIgnoreCase))
                         {
                             Marshal.ReleaseComObject(enumPoints);
-                            point = points[0];
+                            point = points[i-1];
                             return id;
                         }
                     }
