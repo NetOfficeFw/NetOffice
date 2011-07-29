@@ -99,7 +99,7 @@ namespace LateBindingApi.Core
                         if (true == sinkIds[i - 1].Equals(id, StringComparison.InvariantCultureIgnoreCase))
                         {
                             Marshal.ReleaseComObject(enumPoints);
-                            point = points[i-1];
+                            point = points[0];
                             return id;
                         }
                     }
