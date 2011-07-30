@@ -30,7 +30,7 @@ namespace Example01
             // start excel and turn off msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
-
+            excelApplication.Visible = true;
             // add a new workbook
             Excel.Workbook workBook = excelApplication.Workbooks.Add();
             Excel.Worksheet workSheet = (Excel.Worksheet)workBook.Worksheets[1];
