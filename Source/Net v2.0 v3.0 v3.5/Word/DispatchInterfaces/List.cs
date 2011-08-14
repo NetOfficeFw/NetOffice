@@ -16,6 +16,23 @@ namespace NetOffice.WordApi
 	public class List : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(List);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>

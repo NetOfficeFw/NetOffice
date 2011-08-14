@@ -16,6 +16,23 @@ namespace NetOffice.PowerPointApi
 	public class PPIcon : PPControl
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(PPIcon);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>

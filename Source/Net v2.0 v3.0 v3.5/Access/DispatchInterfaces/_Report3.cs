@@ -17,6 +17,23 @@ namespace NetOffice.AccessApi
 	public class _Report3 : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_Report3);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>

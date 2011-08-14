@@ -16,6 +16,23 @@ namespace NetOffice.PowerPointApi
 	public class ProtectedViewWindows : Collection
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ProtectedViewWindows);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -94,7 +111,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.ProtectedViewWindow;
+				NetOffice.PowerPointApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ProtectedViewWindow;
 				return newObject;
 			}
 		}
@@ -110,7 +127,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readPassword, openAndRepair);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.PowerPointApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			return newObject;
 		}
 

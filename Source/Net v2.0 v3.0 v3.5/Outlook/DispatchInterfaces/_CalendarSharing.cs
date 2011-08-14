@@ -16,6 +16,23 @@ namespace NetOffice.OutlookApi
 	public class _CalendarSharing : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_CalendarSharing);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -279,7 +296,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(mailFormat);
 			object returnItem = Invoker.MethodReturn(this, "ForwardAsICal", paramsArray);
-			NetOffice.OutlookApi.MailItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MailItem;
+			NetOffice.OutlookApi.MailItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.MailItem;
 			return newObject;
 		}
 

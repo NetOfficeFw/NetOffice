@@ -16,6 +16,23 @@ namespace NetOffice.OutlookApi
 	public class AddressEntries : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(AddressEntries);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -152,7 +169,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntry;
+				NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressEntry;
 				return newObject;
 			}
 		}
@@ -168,7 +185,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, name, address);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntry;
+			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressEntry;
 			return newObject;
 		}
 
@@ -181,7 +198,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntry;
+			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressEntry;
 			return newObject;
 		}
 
@@ -193,7 +210,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetFirst", paramsArray);
-			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntry;
+			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressEntry;
 			return newObject;
 		}
 
@@ -205,7 +222,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetLast", paramsArray);
-			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntry;
+			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressEntry;
 			return newObject;
 		}
 
@@ -217,7 +234,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetNext", paramsArray);
-			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntry;
+			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressEntry;
 			return newObject;
 		}
 
@@ -229,7 +246,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetPrevious", paramsArray);
-			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntry;
+			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressEntry;
 			return newObject;
 		}
 

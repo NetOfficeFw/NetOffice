@@ -16,6 +16,23 @@ namespace NetOffice.OutlookApi
 	public class _MeetingItem : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_MeetingItem);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -1255,7 +1272,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Forward", paramsArray);
-			NetOffice.OutlookApi.MeetingItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MeetingItem;
+			NetOffice.OutlookApi.MeetingItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.MeetingItem;
 			return newObject;
 		}
 
@@ -1268,7 +1285,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(addToCalendar);
 			object returnItem = Invoker.MethodReturn(this, "GetAssociatedAppointment", paramsArray);
-			NetOffice.OutlookApi.AppointmentItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AppointmentItem;
+			NetOffice.OutlookApi.AppointmentItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AppointmentItem;
 			return newObject;
 		}
 
@@ -1280,7 +1297,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Reply", paramsArray);
-			NetOffice.OutlookApi.MailItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MailItem;
+			NetOffice.OutlookApi.MailItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.MailItem;
 			return newObject;
 		}
 
@@ -1292,7 +1309,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ReplyAll", paramsArray);
-			NetOffice.OutlookApi.MailItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MailItem;
+			NetOffice.OutlookApi.MailItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.MailItem;
 			return newObject;
 		}
 
@@ -1324,7 +1341,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetConversation", paramsArray);
-			NetOffice.OutlookApi._Conversation newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._Conversation;
+			NetOffice.OutlookApi._Conversation newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Conversation;
 			return newObject;
 		}
 

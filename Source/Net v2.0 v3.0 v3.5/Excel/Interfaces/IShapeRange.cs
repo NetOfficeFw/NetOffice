@@ -16,6 +16,23 @@ namespace NetOffice.ExcelApi
 	public class IShapeRange : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(IShapeRange);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -880,7 +897,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Shape;
+				NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Shape;
 				return newObject;
 			}
 		}
@@ -894,7 +911,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Shape;
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Shape;
 			return newObject;
 		}
 
@@ -954,7 +971,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Duplicate", paramsArray);
-			NetOffice.ExcelApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ShapeRange;
+			NetOffice.ExcelApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ShapeRange;
 			return newObject;
 		}
 
@@ -1014,7 +1031,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Group", paramsArray);
-			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Shape;
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Shape;
 			return newObject;
 		}
 
@@ -1048,7 +1065,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Regroup", paramsArray);
-			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Shape;
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Shape;
 			return newObject;
 		}
 
@@ -1148,7 +1165,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Ungroup", paramsArray);
-			NetOffice.ExcelApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ShapeRange;
+			NetOffice.ExcelApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ShapeRange;
 			return newObject;
 		}
 

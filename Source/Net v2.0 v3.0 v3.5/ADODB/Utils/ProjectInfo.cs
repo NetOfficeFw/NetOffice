@@ -18,6 +18,7 @@ namespace ADODBApi.Utils
         private string   _namespace     = "NetOffice.ADODBApi";
         private Guid     _componentGuid = new Guid("00000201-0000-0010-8000-00AA006D2EA4");
         private Assembly _assembly;
+		private Type[]	 _exportedTypes;
 
         #endregion
 
@@ -32,6 +33,20 @@ namespace ADODBApi.Utils
 
         #region IFactoryInfo Members
 
+		public bool Contains(string className)
+		{
+			if(null == _exportedTypes)
+				_exportedTypes = Assembly.GetExportedTypes();
+			
+			foreach (Type item in _exportedTypes)
+            {
+				if (item.Name.EndsWith(className, StringComparison.InvariantCultureIgnoreCase))
+					return true;
+            }
+				
+			return false;			
+		}
+		
         public string Namespace
         {
             get

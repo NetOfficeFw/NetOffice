@@ -17,6 +17,23 @@ namespace NetOffice.OfficeApi
 	public class MetaProperties : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(MetaProperties);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -136,7 +153,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(internalName);
 			object returnItem = Invoker.MethodReturn(this, "GetItemByInternalName", paramsArray);
-			NetOffice.OfficeApi.MetaProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.MetaProperty;
+			NetOffice.OfficeApi.MetaProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.MetaProperty;
 			return newObject;
 		}
 

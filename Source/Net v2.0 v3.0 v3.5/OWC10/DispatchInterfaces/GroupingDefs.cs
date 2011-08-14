@@ -17,6 +17,23 @@ namespace NetOffice.OWC10Api
 	public class GroupingDefs : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(GroupingDefs);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -96,7 +113,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 
@@ -111,7 +128,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 
@@ -128,7 +145,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName, totalType, index);
 			object returnItem = Invoker.MethodReturn(this, "AddTotal", paramsArray);
-			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 
@@ -144,7 +161,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName, totalType);
 			object returnItem = Invoker.MethodReturn(this, "AddTotal", paramsArray);
-			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 

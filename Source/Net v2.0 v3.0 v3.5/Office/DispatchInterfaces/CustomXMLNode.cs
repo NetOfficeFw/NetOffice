@@ -16,6 +16,23 @@ namespace NetOffice.OfficeApi
 	public class CustomXMLNode : _IMsoDispObj
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(CustomXMLNode);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -430,7 +447,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
 			object returnItem = Invoker.MethodReturn(this, "SelectNodes", paramsArray);
-			NetOffice.OfficeApi.CustomXMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLNodes;
+			NetOffice.OfficeApi.CustomXMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLNodes;
 			return newObject;
 		}
 
@@ -443,7 +460,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
 			object returnItem = Invoker.MethodReturn(this, "SelectSingleNode", paramsArray);
-			NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLNode;
+			NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLNode;
 			return newObject;
 		}
 

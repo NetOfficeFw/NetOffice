@@ -32,7 +32,24 @@ namespace NetOffice.AccessApi
 		DispSubReportEvents_SinkHelper _dispSubReportEvents_SinkHelper;
 	
 		#endregion
-		
+
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(SubReport);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        		
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>

@@ -16,6 +16,23 @@ namespace NetOffice.OfficeApi
 	public class IMsoChartFormat : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(IMsoChartFormat);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -58,7 +75,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fill", paramsArray);
-				NetOffice.OfficeApi.FillFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.FillFormat;
+				NetOffice.OfficeApi.FillFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.FillFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.FillFormat;
 				return newObject;
 			}
 		}
@@ -88,7 +105,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Line", paramsArray);
-				NetOffice.OfficeApi.LineFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.LineFormat;
+				NetOffice.OfficeApi.LineFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.LineFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.LineFormat;
 				return newObject;
 			}
 		}
@@ -118,7 +135,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PictureFormat", paramsArray);
-				NetOffice.OfficeApi.PictureFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PictureFormat;
+				NetOffice.OfficeApi.PictureFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PictureFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.PictureFormat;
 				return newObject;
 			}
 		}
@@ -133,7 +150,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shadow", paramsArray);
-				NetOffice.OfficeApi.ShadowFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ShadowFormat;
+				NetOffice.OfficeApi.ShadowFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ShadowFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.ShadowFormat;
 				return newObject;
 			}
 		}
@@ -163,7 +180,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextFrame2", paramsArray);
-				NetOffice.OfficeApi.TextFrame2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextFrame2;
+				NetOffice.OfficeApi.TextFrame2 newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.TextFrame2.LateBindingApiWrapperType) as NetOffice.OfficeApi.TextFrame2;
 				return newObject;
 			}
 		}
@@ -178,7 +195,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ThreeD", paramsArray);
-				NetOffice.OfficeApi.ThreeDFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ThreeDFormat;
+				NetOffice.OfficeApi.ThreeDFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ThreeDFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.ThreeDFormat;
 				return newObject;
 			}
 		}

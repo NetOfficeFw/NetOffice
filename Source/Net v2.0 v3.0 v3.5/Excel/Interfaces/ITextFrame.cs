@@ -15,6 +15,23 @@ namespace NetOffice.ExcelApi
 	public class ITextFrame : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ITextFrame);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -333,7 +350,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Characters", paramsArray);
-			NetOffice.ExcelApi.Characters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Characters;
+			NetOffice.ExcelApi.Characters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Characters;
 			return newObject;
 		}
 
@@ -345,7 +362,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Characters", paramsArray);
-			NetOffice.ExcelApi.Characters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Characters;
+			NetOffice.ExcelApi.Characters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Characters;
 			return newObject;
 		}
 

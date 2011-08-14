@@ -16,6 +16,23 @@ namespace NetOffice.OutlookApi
 	public class AddressList : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(AddressList);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -247,7 +264,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetContactsFolder", paramsArray);
-			NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.MAPIFolder;
 			return newObject;
 		}
 

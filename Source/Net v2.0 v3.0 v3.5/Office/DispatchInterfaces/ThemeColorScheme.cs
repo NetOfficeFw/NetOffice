@@ -17,6 +17,23 @@ namespace NetOffice.OfficeApi
 	public class ThemeColorScheme : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ThemeColorScheme);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -91,7 +108,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Colors", paramsArray);
-			NetOffice.OfficeApi.ThemeColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.ThemeColor;
+			NetOffice.OfficeApi.ThemeColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ThemeColor;
 			return newObject;
 		}
 

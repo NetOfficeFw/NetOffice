@@ -16,6 +16,23 @@ namespace NetOffice.PowerPointApi
 	public class CustomLayout : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(CustomLayout);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -402,7 +419,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Duplicate", paramsArray);
-			NetOffice.PowerPointApi.CustomLayout newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.CustomLayout;
+			NetOffice.PowerPointApi.CustomLayout newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.CustomLayout;
 			return newObject;
 		}
 

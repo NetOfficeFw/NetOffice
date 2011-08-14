@@ -15,6 +15,23 @@ namespace NetOffice.ExcelApi
 	public class IPivotCache : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(IPivotCache);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -719,7 +736,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tableDestination, tableName, readData);
 			object returnItem = Invoker.MethodReturn(this, "CreatePivotTable", paramsArray);
-			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotTable;
 			return newObject;
 		}
 
@@ -735,7 +752,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tableDestination, tableName, readData, defaultVersion);
 			object returnItem = Invoker.MethodReturn(this, "CreatePivotTable", paramsArray);
-			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotTable;
 			return newObject;
 		}
 
@@ -748,7 +765,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tableDestination);
 			object returnItem = Invoker.MethodReturn(this, "CreatePivotTable", paramsArray);
-			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotTable;
 			return newObject;
 		}
 

@@ -17,6 +17,23 @@ namespace NetOffice.AccessApi
 	public class Pages : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Pages);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -93,7 +110,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi.Page newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi.Page;
+			NetOffice.AccessApi.Page newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Page;
 			return newObject;
 		}
 
@@ -105,7 +122,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi.Page newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi.Page;
+			NetOffice.AccessApi.Page newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Page;
 			return newObject;
 		}
 

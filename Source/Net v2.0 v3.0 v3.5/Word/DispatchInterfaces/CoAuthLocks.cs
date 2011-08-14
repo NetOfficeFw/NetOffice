@@ -17,6 +17,23 @@ namespace NetOffice.WordApi
 	public class CoAuthLocks : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(CoAuthLocks);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -123,7 +140,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.CoAuthLock newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.CoAuthLock;
+				NetOffice.WordApi.CoAuthLock newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.CoAuthLock;
 				return newObject;
 			}
 		}
@@ -138,7 +155,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.CoAuthLock newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.CoAuthLock;
+			NetOffice.WordApi.CoAuthLock newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.CoAuthLock;
 			return newObject;
 		}
 

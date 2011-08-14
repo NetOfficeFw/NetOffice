@@ -16,6 +16,23 @@ namespace NetOffice.OfficeApi
 	public class PickerDialog : _IMsoDispObj
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(PickerDialog);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -113,7 +130,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreatePickerResults", paramsArray);
-			NetOffice.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.PickerResults;
+			NetOffice.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PickerResults;
 			return newObject;
 		}
 
@@ -127,7 +144,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(isMultiSelect, existingResults);
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			NetOffice.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.PickerResults;
+			NetOffice.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PickerResults;
 			return newObject;
 		}
 
@@ -141,7 +158,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tokenText, duplicateDlgMode);
 			object returnItem = Invoker.MethodReturn(this, "Resolve", paramsArray);
-			NetOffice.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.PickerResults;
+			NetOffice.OfficeApi.PickerResults newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.PickerResults;
 			return newObject;
 		}
 

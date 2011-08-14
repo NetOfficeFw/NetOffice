@@ -17,6 +17,23 @@ namespace NetOffice.AccessApi
 	public class ImportExportSpecifications : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ImportExportSpecifications);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -124,7 +141,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, specificationDefinition);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi.ImportExportSpecification newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi.ImportExportSpecification;
+			NetOffice.AccessApi.ImportExportSpecification newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.ImportExportSpecification;
 			return newObject;
 		}
 

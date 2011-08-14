@@ -16,6 +16,23 @@ namespace NetOffice.PowerPointApi
 	public class _Application : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_Application);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -1027,7 +1044,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "FileDialog", paramsArray);
-			NetOffice.PowerPointApi.FileDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.FileDialog;
+			NetOffice.PowerPointApi.FileDialog newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.FileDialog;
 			return newObject;
 		}
 

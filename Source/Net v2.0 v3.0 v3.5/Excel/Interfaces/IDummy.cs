@@ -15,6 +15,23 @@ namespace NetOffice.ExcelApi
 	public class IDummy : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(IDummy);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -145,7 +162,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sigProv);
 			object returnItem = Invoker.MethodReturn(this, "AddSignatureLine", paramsArray);
-			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Signature;
+			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.Signature;
 			return newObject;
 		}
 
@@ -158,7 +175,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sigProv);
 			object returnItem = Invoker.MethodReturn(this, "AddNonVisibleSignature", paramsArray);
-			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.Signature;
+			NetOffice.OfficeApi.Signature newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.Signature;
 			return newObject;
 		}
 

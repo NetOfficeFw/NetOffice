@@ -17,6 +17,23 @@ namespace NetOffice.ExcelApi
 	public class PivotFormulas : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(PivotFormulas);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -133,7 +150,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formula);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.PivotFormula newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.PivotFormula;
+			NetOffice.ExcelApi.PivotFormula newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotFormula;
 			return newObject;
 		}
 
@@ -147,7 +164,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formula, useStandardFormula);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.PivotFormula newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.PivotFormula;
+			NetOffice.ExcelApi.PivotFormula newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotFormula;
 			return newObject;
 		}
 
@@ -163,7 +180,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.ExcelApi.PivotFormula newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.PivotFormula;
+				NetOffice.ExcelApi.PivotFormula newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotFormula;
 				return newObject;
 			}
 		}
@@ -177,7 +194,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formula);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.ExcelApi.PivotFormula newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.PivotFormula;
+			NetOffice.ExcelApi.PivotFormula newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotFormula;
 			return newObject;
 		}
 

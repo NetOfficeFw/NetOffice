@@ -17,6 +17,23 @@ namespace NetOffice.OfficeApi
 	public class HTMLProjectItems : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(HTMLProjectItems);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -94,7 +111,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OfficeApi.HTMLProjectItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.HTMLProjectItem;
+				NetOffice.OfficeApi.HTMLProjectItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.HTMLProjectItem;
 				return newObject;
 			}
 		}

@@ -16,6 +16,23 @@ namespace NetOffice.WordApi
 	public class XMLChildNodeSuggestion : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(XMLChildNodeSuggestion);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -148,7 +165,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			NetOffice.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLNode;
+			NetOffice.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.XMLNode;
 			return newObject;
 		}
 
@@ -160,7 +177,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			NetOffice.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLNode;
+			NetOffice.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.XMLNode;
 			return newObject;
 		}
 

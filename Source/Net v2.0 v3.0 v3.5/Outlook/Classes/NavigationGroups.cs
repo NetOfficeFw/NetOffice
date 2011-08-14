@@ -32,7 +32,24 @@ namespace NetOffice.OutlookApi
 		NavigationGroupsEvents_12_SinkHelper _navigationGroupsEvents_12_SinkHelper;
 	
 		#endregion
-		
+
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(NavigationGroups);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        		
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>

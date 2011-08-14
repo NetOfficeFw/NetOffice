@@ -16,6 +16,23 @@ namespace NetOffice.PowerPointApi
 	public class Comments : Collection
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Comments);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -94,7 +111,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.Comment newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Comment;
+				NetOffice.PowerPointApi.Comment newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Comment;
 				return newObject;
 			}
 		}
@@ -112,7 +129,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, author, authorInitials, text);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Comment newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Comment;
+			NetOffice.PowerPointApi.Comment newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Comment;
 			return newObject;
 		}
 

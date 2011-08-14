@@ -17,6 +17,23 @@ namespace NetOffice.ExcelApi
 	public class CubeFields : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(CubeFields);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -151,7 +168,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, caption);
 			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray);
-			NetOffice.ExcelApi.CubeField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CubeField;
+			NetOffice.ExcelApi.CubeField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.CubeField;
 			return newObject;
 		}
 

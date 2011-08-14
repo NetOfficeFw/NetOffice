@@ -16,6 +16,23 @@ namespace NetOffice.ExcelApi
 	public class IListRows : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(IListRows);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -149,7 +166,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.ListRow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListRow;
+			NetOffice.ExcelApi.ListRow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ListRow;
 			return newObject;
 		}
 
@@ -163,7 +180,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, alwaysInsert);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.ListRow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListRow;
+			NetOffice.ExcelApi.ListRow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ListRow;
 			return newObject;
 		}
 
@@ -175,7 +192,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.ListRow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListRow;
+			NetOffice.ExcelApi.ListRow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ListRow;
 			return newObject;
 		}
 
@@ -188,7 +205,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.ExcelApi.ListRow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListRow;
+			NetOffice.ExcelApi.ListRow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ListRow;
 			return newObject;
 		}
 
@@ -200,7 +217,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.ExcelApi.ListRow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListRow;
+			NetOffice.ExcelApi.ListRow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ListRow;
 			return newObject;
 		}
 

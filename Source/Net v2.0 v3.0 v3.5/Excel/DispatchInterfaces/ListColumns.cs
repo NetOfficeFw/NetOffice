@@ -17,6 +17,23 @@ namespace NetOffice.ExcelApi
 	public class ListColumns : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ListColumns);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -150,7 +167,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListColumn;
+			NetOffice.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ListColumn;
 			return newObject;
 		}
 
@@ -162,7 +179,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ListColumn;
+			NetOffice.ExcelApi.ListColumn newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ListColumn;
 			return newObject;
 		}
 

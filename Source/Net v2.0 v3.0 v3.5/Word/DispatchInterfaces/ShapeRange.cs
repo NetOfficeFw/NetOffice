@@ -17,6 +17,23 @@ namespace NetOffice.WordApi
 	public class ShapeRange : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ShapeRange);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -1087,7 +1104,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
+				NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Shape;
 				return newObject;
 			}
 		}
@@ -1144,7 +1161,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Duplicate", paramsArray);
-			NetOffice.WordApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ShapeRange;
+			NetOffice.WordApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ShapeRange;
 			return newObject;
 		}
 
@@ -1200,7 +1217,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Group", paramsArray);
-			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
+			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Shape;
 			return newObject;
 		}
 
@@ -1222,7 +1239,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Regroup", paramsArray);
-			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Shape;
+			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Shape;
 			return newObject;
 		}
 
@@ -1301,7 +1318,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Ungroup", paramsArray);
-			NetOffice.WordApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ShapeRange;
+			NetOffice.WordApi.ShapeRange newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ShapeRange;
 			return newObject;
 		}
 
@@ -1324,7 +1341,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ConvertToFrame", paramsArray);
-			NetOffice.WordApi.Frame newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Frame;
+			NetOffice.WordApi.Frame newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Frame;
 			return newObject;
 		}
 
@@ -1336,7 +1353,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ConvertToInlineShape", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 

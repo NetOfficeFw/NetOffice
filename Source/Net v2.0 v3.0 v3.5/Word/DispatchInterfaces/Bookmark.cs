@@ -16,6 +16,23 @@ namespace NetOffice.WordApi
 	public class Bookmark : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Bookmark);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -234,7 +251,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			NetOffice.WordApi.Bookmark newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Bookmark;
+			NetOffice.WordApi.Bookmark newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Bookmark;
 			return newObject;
 		}
 

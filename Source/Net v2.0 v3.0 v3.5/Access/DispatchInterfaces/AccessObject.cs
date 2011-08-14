@@ -16,6 +16,23 @@ namespace NetOffice.AccessApi
 	public class AccessObject : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(AccessObject);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -248,7 +265,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetDependencyInfo", paramsArray);
-			NetOffice.AccessApi._DependencyInfo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi._DependencyInfo;
+			NetOffice.AccessApi._DependencyInfo newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._DependencyInfo;
 			return newObject;
 		}
 

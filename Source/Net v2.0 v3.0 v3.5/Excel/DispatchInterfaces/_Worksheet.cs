@@ -16,6 +16,23 @@ namespace NetOffice.ExcelApi
 	public class _Worksheet : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_Worksheet);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -2048,7 +2065,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache, pageFieldOrder, pageFieldWrapCount, readData, connection);
 			object returnItem = Invoker.MethodReturn(this, "PivotTableWizard", paramsArray);
-			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotTable;
 			return newObject;
 		}
 
@@ -2060,7 +2077,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "PivotTableWizard", paramsArray);
-			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PivotTable;
 			return newObject;
 		}
 
@@ -2394,7 +2411,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, selectionNamespaces, map);
 			object returnItem = Invoker.MethodReturn(this, "XmlDataQuery", paramsArray);
-			NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -2407,7 +2424,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
 			object returnItem = Invoker.MethodReturn(this, "XmlDataQuery", paramsArray);
-			NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -2422,7 +2439,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, selectionNamespaces, map);
 			object returnItem = Invoker.MethodReturn(this, "XmlMapQuery", paramsArray);
-			NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -2435,7 +2452,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
 			object returnItem = Invoker.MethodReturn(this, "XmlMapQuery", paramsArray);
-			NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 

@@ -17,6 +17,23 @@ namespace NetOffice.ExcelApi
 	public class Workbooks : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Workbooks);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -150,7 +167,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -162,7 +179,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -197,7 +214,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -224,7 +241,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru, local, corruptLoad);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -237,7 +254,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -396,7 +413,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru);
 			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -409,7 +426,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -465,7 +482,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, commandText, commandType, backgroundQuery, importDataAs);
 			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -478,7 +495,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -515,7 +532,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, stylesheets);
 			object returnItem = Invoker.MethodReturn(this, "OpenXML", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -530,7 +547,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, stylesheets, loadOption);
 			object returnItem = Invoker.MethodReturn(this, "OpenXML", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -543,7 +560,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "OpenXML", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -557,7 +574,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, stylesheets);
 			object returnItem = Invoker.MethodReturn(this, "_OpenXML", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -570,7 +587,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "_OpenXML", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 

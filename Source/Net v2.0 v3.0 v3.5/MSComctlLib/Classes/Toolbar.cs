@@ -44,7 +44,24 @@ namespace NetOffice.MSComctlLibApi
 		IToolbarEvents_SinkHelper _iToolbarEvents_SinkHelper;
 	
 		#endregion
-		
+
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Toolbar);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        		
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>

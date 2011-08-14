@@ -18,6 +18,7 @@ namespace VBIDEApi.Utils
         private string   _namespace     = "NetOffice.VBIDEApi";
         private Guid     _componentGuid = new Guid("0002E157-0000-0000-C000-000000000046");
         private Assembly _assembly;
+		private Type[]	 _exportedTypes;
 
         #endregion
 
@@ -32,6 +33,20 @@ namespace VBIDEApi.Utils
 
         #region IFactoryInfo Members
 
+		public bool Contains(string className)
+		{
+			if(null == _exportedTypes)
+				_exportedTypes = Assembly.GetExportedTypes();
+			
+			foreach (Type item in _exportedTypes)
+            {
+				if (item.Name.EndsWith(className, StringComparison.InvariantCultureIgnoreCase))
+					return true;
+            }
+				
+			return false;			
+		}
+		
         public string Namespace
         {
             get

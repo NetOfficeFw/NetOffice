@@ -16,6 +16,23 @@ namespace NetOffice.PowerPointApi
 	public class Designs : Collection
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Designs);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -94,7 +111,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.Design newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Design;
+				NetOffice.PowerPointApi.Design newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Design;
 				return newObject;
 			}
 		}
@@ -109,7 +126,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(designName, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Design newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Design;
+			NetOffice.PowerPointApi.Design newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Design;
 			return newObject;
 		}
 
@@ -123,7 +140,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templateName, index);
 			object returnItem = Invoker.MethodReturn(this, "Load", paramsArray);
-			NetOffice.PowerPointApi.Design newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Design;
+			NetOffice.PowerPointApi.Design newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Design;
 			return newObject;
 		}
 
@@ -137,7 +154,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pOriginal, index);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
-			NetOffice.PowerPointApi.Design newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Design;
+			NetOffice.PowerPointApi.Design newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Design;
 			return newObject;
 		}
 

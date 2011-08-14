@@ -16,6 +16,23 @@ namespace NetOffice.OutlookApi
 	public class _Application : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_Application);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -358,7 +375,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ActiveExplorer", paramsArray);
-			NetOffice.OutlookApi._Explorer newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._Explorer;
+			NetOffice.OutlookApi._Explorer newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Explorer;
 			return newObject;
 		}
 
@@ -370,7 +387,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ActiveInspector", paramsArray);
-			NetOffice.OutlookApi._Inspector newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._Inspector;
+			NetOffice.OutlookApi._Inspector newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Inspector;
 			return newObject;
 		}
 
@@ -436,7 +453,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "GetNamespace", paramsArray);
-			NetOffice.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._NameSpace;
+			NetOffice.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
 			return newObject;
 		}
 
@@ -488,7 +505,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scope, filter, searchSubFolders, tag);
 			object returnItem = Invoker.MethodReturn(this, "AdvancedSearch", paramsArray);
-			NetOffice.OutlookApi.Search newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Search;
+			NetOffice.OutlookApi.Search newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.Search;
 			return newObject;
 		}
 
@@ -501,7 +518,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scope);
 			object returnItem = Invoker.MethodReturn(this, "AdvancedSearch", paramsArray);
-			NetOffice.OutlookApi.Search newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Search;
+			NetOffice.OutlookApi.Search newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.Search;
 			return newObject;
 		}
 

@@ -31,7 +31,24 @@ namespace NetOffice.OutlookApi
 		OutlookBarPaneEvents_SinkHelper _outlookBarPaneEvents_SinkHelper;
 	
 		#endregion
-		
+
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(OutlookBarPane);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        		
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>

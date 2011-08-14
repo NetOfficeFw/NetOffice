@@ -16,6 +16,23 @@ namespace NetOffice.ExcelApi
 	public class IButtons : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(IButtons);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -1030,7 +1047,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Button newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Button;
+			NetOffice.ExcelApi.Button newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Button;
 			return newObject;
 		}
 
@@ -1042,7 +1059,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Group", paramsArray);
-			NetOffice.ExcelApi.GroupObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.GroupObject;
+			NetOffice.ExcelApi.GroupObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.GroupObject;
 			return newObject;
 		}
 

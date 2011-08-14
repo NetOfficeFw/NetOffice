@@ -16,6 +16,23 @@ namespace NetOffice.OutlookApi
 	public class Selection : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Selection);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -165,7 +182,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selectionContents);
 			object returnItem = Invoker.MethodReturn(this, "GetSelection", paramsArray);
-			NetOffice.OutlookApi.Selection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Selection;
+			NetOffice.OutlookApi.Selection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.Selection;
 			return newObject;
 		}
 

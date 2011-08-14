@@ -36,6 +36,9 @@ Public Class Form1
         ' add a new document
         _wordApplication.Documents.Add()
 
+        Dim normalDotTemplate As Word.Template = GetNormalDotTemplate()
+        _wordApplication.CustomizationContext = normalDotTemplate
+
         ' add a commandbar popup
         Dim commandBarPopup As Office.CommandBarPopup = _wordApplication.CommandBars("Menu Bar").Controls.Add( _
                                                                                 MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, True)
@@ -93,6 +96,8 @@ Public Class Form1
         clickHandler = AddressOf Me.commandBarBtn_Click
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
+        normalDotTemplate.Saved = True
+
         ' make visible & set buttons
         _wordApplication.Visible = MsoTriState.msoTrue
         button1.Enabled = False
@@ -102,6 +107,7 @@ Public Class Form1
 
     Private Sub button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button2.Click
 
+        _wordApplication.DisposeChildInstances(True)
         _wordApplication.Quit()
         _wordApplication.Dispose()
 
@@ -122,5 +128,22 @@ Public Class Form1
         textBoxEvents.AppendText(message & vbNewLine)
 
     End Sub
+
+    ''' <summary>
+    ''' returns normal.dot template (normal.dotm in modern word versions)
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Function GetNormalDotTemplate() As Word.Template
+
+        For Each installedTemplate As Word.Template In _wordApplication.Templates
+            If (installedTemplate.Name.StartsWith("normal", StringComparison.InvariantCultureIgnoreCase)) Then
+
+                Return installedTemplate
+            End If
+        Next
+
+        Throw New IndexOutOfRangeException("Template not found.")
+
+    End Function
 
 End Class

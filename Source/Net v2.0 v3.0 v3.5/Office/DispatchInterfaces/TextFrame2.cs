@@ -16,6 +16,23 @@ namespace NetOffice.OfficeApi
 	public class TextFrame2 : _IMsoDispObj
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(TextFrame2);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -301,7 +318,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ThreeD", paramsArray);
-				NetOffice.OfficeApi.ThreeDFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ThreeDFormat;
+				NetOffice.OfficeApi.ThreeDFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ThreeDFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.ThreeDFormat;
 				return newObject;
 			}
 		}

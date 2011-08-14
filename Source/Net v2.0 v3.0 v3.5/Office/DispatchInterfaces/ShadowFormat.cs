@@ -16,6 +16,23 @@ namespace NetOffice.OfficeApi
 	public class ShadowFormat : _IMsoDispObj
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ShadowFormat);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -73,7 +90,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ForeColor", paramsArray);
-				NetOffice.OfficeApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ColorFormat;
+				NetOffice.OfficeApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ColorFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.ColorFormat;
 				return newObject;
 			}
 			set

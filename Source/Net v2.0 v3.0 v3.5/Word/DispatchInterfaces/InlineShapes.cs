@@ -17,6 +17,23 @@ namespace NetOffice.WordApi
 	public class InlineShapes : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(InlineShapes);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -123,7 +140,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+				NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 				return newObject;
 			}
 		}
@@ -140,7 +157,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, range);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -153,7 +170,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -173,7 +190,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, range);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -185,7 +202,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -199,7 +216,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, range);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEControl", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -211,7 +228,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddOLEControl", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -224,7 +241,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "New", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -238,7 +255,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range);
 			object returnItem = Invoker.MethodReturn(this, "AddHorizontalLine", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -251,7 +268,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "AddHorizontalLine", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -264,7 +281,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "AddHorizontalLineStandard", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -276,7 +293,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddHorizontalLineStandard", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -290,7 +307,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range);
 			object returnItem = Invoker.MethodReturn(this, "AddPictureBullet", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -303,7 +320,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "AddPictureBullet", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -317,7 +334,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, range);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -330,7 +347,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -344,7 +361,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, range);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 
@@ -357,7 +374,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
-			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.InlineShape;
+			NetOffice.WordApi.InlineShape newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
 

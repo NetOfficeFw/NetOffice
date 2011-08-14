@@ -17,6 +17,23 @@ namespace NetOffice.ExcelApi
 	public class CalculatedMembers : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(CalculatedMembers);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -153,7 +170,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -172,7 +189,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, dynamic, displayFolder, hierarchizeDistinct);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -186,7 +203,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -200,7 +217,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -216,7 +233,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -230,7 +247,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 

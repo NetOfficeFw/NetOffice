@@ -16,6 +16,23 @@ namespace NetOffice.OutlookApi
 	public class _OutlookBarShortcuts : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_OutlookBarShortcuts);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -137,7 +154,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OutlookApi.OutlookBarShortcut newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.OutlookBarShortcut;
+				NetOffice.OutlookApi.OutlookBarShortcut newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.OutlookBarShortcut;
 				return newObject;
 			}
 		}
@@ -153,7 +170,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, name, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OutlookApi.OutlookBarShortcut newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.OutlookBarShortcut;
+			NetOffice.OutlookApi.OutlookBarShortcut newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.OutlookBarShortcut;
 			return newObject;
 		}
 
@@ -167,7 +184,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OutlookApi.OutlookBarShortcut newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.OutlookBarShortcut;
+			NetOffice.OutlookApi.OutlookBarShortcut newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.OutlookBarShortcut;
 			return newObject;
 		}
 

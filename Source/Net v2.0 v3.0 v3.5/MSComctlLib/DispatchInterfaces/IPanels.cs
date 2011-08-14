@@ -17,6 +17,23 @@ namespace NetOffice.MSComctlLibApi
 	public class IPanels : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(IPanels);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -126,7 +143,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, style, picture);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IPanel;
+			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IPanel;
 			return newObject;
 		}
 
@@ -138,7 +155,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IPanel;
+			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IPanel;
 			return newObject;
 		}
 

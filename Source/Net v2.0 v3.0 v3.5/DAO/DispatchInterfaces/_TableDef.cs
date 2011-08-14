@@ -16,6 +16,23 @@ namespace NetOffice.DAOApi
 	public class _TableDef : _DAO
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_TableDef);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -322,7 +339,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options);
 			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 
@@ -334,7 +351,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 
@@ -359,7 +376,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, size);
 			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Field;
+			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Field;
 			return newObject;
 		}
 
@@ -371,7 +388,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Field;
+			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Field;
 			return newObject;
 		}
 
@@ -384,7 +401,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "CreateIndex", paramsArray);
-			NetOffice.DAOApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Index;
+			NetOffice.DAOApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Index;
 			return newObject;
 		}
 
@@ -396,7 +413,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateIndex", paramsArray);
-			NetOffice.DAOApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Index;
+			NetOffice.DAOApi.Index newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Index;
 			return newObject;
 		}
 
@@ -412,7 +429,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, value, dDL);
 			object returnItem = Invoker.MethodReturn(this, "CreateProperty", paramsArray);
-			NetOffice.DAOApi.Property newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Property;
+			NetOffice.DAOApi.Property newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Property;
 			return newObject;
 		}
 
@@ -424,7 +441,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateProperty", paramsArray);
-			NetOffice.DAOApi.Property newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.DAOApi.Property;
+			NetOffice.DAOApi.Property newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Property;
 			return newObject;
 		}
 

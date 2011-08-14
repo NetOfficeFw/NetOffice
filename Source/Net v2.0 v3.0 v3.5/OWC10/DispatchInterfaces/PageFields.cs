@@ -17,6 +17,23 @@ namespace NetOffice.OWC10Api
 	public class PageFields : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(PageFields);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -108,7 +125,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PageField;
+			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageField;
 			return newObject;
 		}
 
@@ -124,7 +141,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PageField;
+			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageField;
 			return newObject;
 		}
 
@@ -141,7 +158,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
 			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PageField;
+			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageField;
 			return newObject;
 		}
 
@@ -157,7 +174,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType);
 			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PageField;
+			NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PageField;
 			return newObject;
 		}
 

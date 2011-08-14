@@ -17,6 +17,23 @@ namespace NetOffice.OWC10Api
 	public class ChCharts : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ChCharts);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -108,7 +125,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.ChChart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.ChChart;
+			NetOffice.OWC10Api.ChChart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChChart;
 			return newObject;
 		}
 

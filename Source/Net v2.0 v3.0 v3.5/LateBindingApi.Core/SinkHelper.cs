@@ -185,12 +185,13 @@ namespace LateBindingApi.Core
                     _connectionPoint.Unadvise(_connectionCookie);
                     Marshal.ReleaseComObject(_connectionPoint);
                 }
-                catch (System.Runtime.InteropServices.COMException loE)
+                catch (System.Runtime.InteropServices.COMException)
                 {
-                    // -2147023174 hex: 0x800706BA = RPC server is unavailable means already dead
-                    // 0x80010108 = RPC server is disconnected
-                    if ((loE.ErrorCode != -2147023174) && ((uint)loE.ErrorCode != 0x80010108))
-                        throw (loE);
+                    ; // RPC server is disconnected or dead
+                }
+                catch (Exception throwedException)
+                {
+                    throw (throwedException);
                 }
 
                 _connectionPoint = null;

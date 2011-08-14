@@ -16,6 +16,23 @@ namespace NetOffice.PowerPointApi
 	public class SlideShowSettings : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(SlideShowSettings);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -348,7 +365,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
-			NetOffice.PowerPointApi.SlideShowWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.SlideShowWindow;
 			return newObject;
 		}
 

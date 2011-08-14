@@ -16,6 +16,23 @@ namespace NetOffice.OWC10Api
 	public class PageField : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(PageField);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -263,7 +280,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefDest, index);
 			object returnItem = Invoker.MethodReturn(this, "MoveGrouping", paramsArray);
-			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 
@@ -276,7 +293,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefDest);
 			object returnItem = Invoker.MethodReturn(this, "MoveGrouping", paramsArray);
-			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupingDef;
+			NetOffice.OWC10Api.GroupingDef newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.GroupingDef;
 			return newObject;
 		}
 

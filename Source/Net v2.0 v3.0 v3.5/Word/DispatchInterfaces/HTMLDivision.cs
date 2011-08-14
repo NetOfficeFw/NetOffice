@@ -16,6 +16,23 @@ namespace NetOffice.WordApi
 	public class HTMLDivision : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(HTMLDivision);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -226,7 +243,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(levelsUp);
 			object returnItem = Invoker.MethodReturn(this, "HTMLDivisionParent", paramsArray);
-			NetOffice.WordApi.HTMLDivision newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.HTMLDivision;
+			NetOffice.WordApi.HTMLDivision newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.HTMLDivision;
 			return newObject;
 		}
 
@@ -238,7 +255,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "HTMLDivisionParent", paramsArray);
-			NetOffice.WordApi.HTMLDivision newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.HTMLDivision;
+			NetOffice.WordApi.HTMLDivision newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.HTMLDivision;
 			return newObject;
 		}
 

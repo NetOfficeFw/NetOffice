@@ -17,6 +17,23 @@ namespace NetOffice.WordApi
 	public class Rows : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Rows);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -544,7 +561,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.Row newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Row;
+				NetOffice.WordApi.Row newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Row;
 				return newObject;
 			}
 		}
@@ -558,7 +575,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeRow);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Row newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Row;
+			NetOffice.WordApi.Row newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Row;
 			return newObject;
 		}
 
@@ -570,7 +587,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Row newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Row;
+			NetOffice.WordApi.Row newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Row;
 			return newObject;
 		}
 
@@ -627,7 +644,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(separator);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToTextOld", paramsArray);
-			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 			return newObject;
 		}
 
@@ -639,7 +656,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ConvertToTextOld", paramsArray);
-			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 			return newObject;
 		}
 
@@ -663,7 +680,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(separator, nestedTables);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToText", paramsArray);
-			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 			return newObject;
 		}
 
@@ -675,7 +692,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ConvertToText", paramsArray);
-			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 			return newObject;
 		}
 

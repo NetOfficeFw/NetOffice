@@ -16,6 +16,23 @@ namespace NetOffice.WordApi
 	public class ChartFormat : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ChartFormat);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -163,7 +180,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextFrame2", paramsArray);
-				NetOffice.OfficeApi.TextFrame2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TextFrame2;
+				NetOffice.OfficeApi.TextFrame2 newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.TextFrame2.LateBindingApiWrapperType) as NetOffice.OfficeApi.TextFrame2;
 				return newObject;
 			}
 		}

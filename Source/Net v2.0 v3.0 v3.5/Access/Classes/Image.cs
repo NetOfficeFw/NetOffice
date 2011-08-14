@@ -35,7 +35,24 @@ namespace NetOffice.AccessApi
 		DispImageEvents_SinkHelper _dispImageEvents_SinkHelper;
 	
 		#endregion
-		
+
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Image);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        		
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>

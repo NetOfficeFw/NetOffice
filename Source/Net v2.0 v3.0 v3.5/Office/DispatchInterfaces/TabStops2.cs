@@ -17,6 +17,23 @@ namespace NetOffice.OfficeApi
 	public class TabStops2 : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(TabStops2);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -113,7 +130,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OfficeApi.TabStop2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TabStop2;
+				NetOffice.OfficeApi.TabStop2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TabStop2;
 				return newObject;
 			}
 		}
@@ -128,7 +145,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.TabStop2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.TabStop2;
+			NetOffice.OfficeApi.TabStop2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.TabStop2;
 			return newObject;
 		}
 

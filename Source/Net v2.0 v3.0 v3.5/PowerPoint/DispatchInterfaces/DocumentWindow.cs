@@ -16,6 +16,23 @@ namespace NetOffice.PowerPointApi
 	public class DocumentWindow : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(DocumentWindow);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -426,7 +443,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NewWindow", paramsArray);
-			NetOffice.PowerPointApi.DocumentWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.DocumentWindow;
+			NetOffice.PowerPointApi.DocumentWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.DocumentWindow;
 			return newObject;
 		}
 

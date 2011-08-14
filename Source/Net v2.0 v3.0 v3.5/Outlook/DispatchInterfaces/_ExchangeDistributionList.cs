@@ -16,6 +16,23 @@ namespace NetOffice.OutlookApi
 	public class _ExchangeDistributionList : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_ExchangeDistributionList);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -420,7 +437,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetContact", paramsArray);
-			NetOffice.OutlookApi._ContactItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._ContactItem;
+			NetOffice.OutlookApi._ContactItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._ContactItem;
 			return newObject;
 		}
 
@@ -432,7 +449,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetExchangeUser", paramsArray);
-			NetOffice.OutlookApi.ExchangeUser newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.ExchangeUser;
+			NetOffice.OutlookApi.ExchangeUser newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.ExchangeUser;
 			return newObject;
 		}
 
@@ -444,7 +461,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetExchangeDistributionList", paramsArray);
-			NetOffice.OutlookApi.ExchangeDistributionList newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.ExchangeDistributionList;
+			NetOffice.OutlookApi.ExchangeDistributionList newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.ExchangeDistributionList;
 			return newObject;
 		}
 
@@ -456,7 +473,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetMemberOfList", paramsArray);
-			NetOffice.OutlookApi.AddressEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntries;
+			NetOffice.OutlookApi.AddressEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressEntries;
 			return newObject;
 		}
 
@@ -468,7 +485,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetExchangeDistributionListMembers", paramsArray);
-			NetOffice.OutlookApi.AddressEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntries;
+			NetOffice.OutlookApi.AddressEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressEntries;
 			return newObject;
 		}
 
@@ -480,7 +497,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetOwners", paramsArray);
-			NetOffice.OutlookApi.AddressEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntries;
+			NetOffice.OutlookApi.AddressEntries newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressEntries;
 			return newObject;
 		}
 

@@ -16,6 +16,23 @@ namespace NetOffice.ExcelApi
 	public class _Chart : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_Chart);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -2383,7 +2400,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(where, name);
 			object returnItem = Invoker.MethodReturn(this, "Location", paramsArray);
-			NetOffice.ExcelApi.Chart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Chart;
+			NetOffice.ExcelApi.Chart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Chart;
 			return newObject;
 		}
 
@@ -2396,7 +2413,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(where);
 			object returnItem = Invoker.MethodReturn(this, "Location", paramsArray);
-			NetOffice.ExcelApi.Chart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Chart;
+			NetOffice.ExcelApi.Chart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Chart;
 			return newObject;
 		}
 

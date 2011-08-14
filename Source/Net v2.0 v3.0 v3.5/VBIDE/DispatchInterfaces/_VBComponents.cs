@@ -16,6 +16,23 @@ namespace NetOffice.VBIDEApi
 	public class _VBComponents : _VBComponents_Old
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_VBComponents);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -61,7 +78,7 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(progId);
 			object returnItem = Invoker.MethodReturn(this, "AddCustom", paramsArray);
-			NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBComponent;
+			NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBComponent;
 			return newObject;
 		}
 
@@ -74,7 +91,7 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "AddMTDesigner", paramsArray);
-			NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBComponent;
+			NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBComponent;
 			return newObject;
 		}
 

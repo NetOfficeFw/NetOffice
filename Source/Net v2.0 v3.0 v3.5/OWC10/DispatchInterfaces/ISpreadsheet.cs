@@ -16,6 +16,23 @@ namespace NetOffice.OWC10Api
 	public class ISpreadsheet : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ISpreadsheet);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -1391,7 +1408,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range1, range2);
 			object returnItem = Invoker.MethodReturn(this, "RectIntersect", paramsArray);
-			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 			return newObject;
 		}
 
@@ -1405,7 +1422,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range1, range2);
 			object returnItem = Invoker.MethodReturn(this, "RectUnion", paramsArray);
-			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api._Range;
 			return newObject;
 		}
 

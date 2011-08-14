@@ -16,6 +16,23 @@ namespace NetOffice.OfficeApi
 	public class DiagramNode : _IMsoDispObj
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(DiagramNode);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -73,7 +90,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Children", paramsArray);
-				NetOffice.OfficeApi.DiagramNodeChildren newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.DiagramNodeChildren;
+				NetOffice.OfficeApi.DiagramNodeChildren newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.DiagramNodeChildren.LateBindingApiWrapperType) as NetOffice.OfficeApi.DiagramNodeChildren;
 				return newObject;
 			}
 		}
@@ -103,7 +120,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Root", paramsArray);
-				NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.DiagramNode;
+				NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.OfficeApi.DiagramNode;
 				return newObject;
 			}
 		}
@@ -171,7 +188,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.DiagramNode;
+			NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.OfficeApi.DiagramNode;
 			return newObject;
 		}
 
@@ -231,7 +248,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode, pos);
 			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);
-			NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.DiagramNode;
+			NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.OfficeApi.DiagramNode;
 			return newObject;
 		}
 
@@ -254,7 +271,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NextNode", paramsArray);
-			NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.DiagramNode;
+			NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.OfficeApi.DiagramNode;
 			return newObject;
 		}
 
@@ -266,7 +283,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "PrevNode", paramsArray);
-			NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.DiagramNode;
+			NetOffice.OfficeApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.OfficeApi.DiagramNode;
 			return newObject;
 		}
 

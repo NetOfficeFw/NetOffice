@@ -18,6 +18,7 @@ namespace PowerPointApi.Utils
         private string   _namespace     = "NetOffice.PowerPointApi";
         private Guid     _componentGuid = new Guid("91493440-5A91-11CF-8700-00AA0060263B");
         private Assembly _assembly;
+		private Type[]	 _exportedTypes;
 
         #endregion
 
@@ -32,6 +33,20 @@ namespace PowerPointApi.Utils
 
         #region IFactoryInfo Members
 
+		public bool Contains(string className)
+		{
+			if(null == _exportedTypes)
+				_exportedTypes = Assembly.GetExportedTypes();
+			
+			foreach (Type item in _exportedTypes)
+            {
+				if (item.Name.EndsWith(className, StringComparison.InvariantCultureIgnoreCase))
+					return true;
+            }
+				
+			return false;			
+		}
+		
         public string Namespace
         {
             get

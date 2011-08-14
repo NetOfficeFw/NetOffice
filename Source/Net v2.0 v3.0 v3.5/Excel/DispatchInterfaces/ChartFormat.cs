@@ -16,6 +16,23 @@ namespace NetOffice.ExcelApi
 	public class ChartFormat : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ChartFormat);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -102,7 +119,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fill", paramsArray);
-				NetOffice.ExcelApi.FillFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.FillFormat;
+				NetOffice.ExcelApi.FillFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.FillFormat.LateBindingApiWrapperType) as NetOffice.ExcelApi.FillFormat;
 				return newObject;
 			}
 		}
@@ -132,7 +149,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Line", paramsArray);
-				NetOffice.ExcelApi.LineFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.LineFormat;
+				NetOffice.ExcelApi.LineFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.LineFormat.LateBindingApiWrapperType) as NetOffice.ExcelApi.LineFormat;
 				return newObject;
 			}
 		}
@@ -147,7 +164,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PictureFormat", paramsArray);
-				NetOffice.ExcelApi.PictureFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.PictureFormat;
+				NetOffice.ExcelApi.PictureFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PictureFormat.LateBindingApiWrapperType) as NetOffice.ExcelApi.PictureFormat;
 				return newObject;
 			}
 		}
@@ -162,7 +179,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shadow", paramsArray);
-				NetOffice.ExcelApi.ShadowFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ShadowFormat;
+				NetOffice.ExcelApi.ShadowFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ShadowFormat.LateBindingApiWrapperType) as NetOffice.ExcelApi.ShadowFormat;
 				return newObject;
 			}
 		}
@@ -192,7 +209,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextFrame2", paramsArray);
-				NetOffice.ExcelApi.TextFrame2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.TextFrame2;
+				NetOffice.ExcelApi.TextFrame2 newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.TextFrame2.LateBindingApiWrapperType) as NetOffice.ExcelApi.TextFrame2;
 				return newObject;
 			}
 		}
@@ -207,7 +224,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ThreeD", paramsArray);
-				NetOffice.ExcelApi.ThreeDFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ThreeDFormat;
+				NetOffice.ExcelApi.ThreeDFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ThreeDFormat.LateBindingApiWrapperType) as NetOffice.ExcelApi.ThreeDFormat;
 				return newObject;
 			}
 		}

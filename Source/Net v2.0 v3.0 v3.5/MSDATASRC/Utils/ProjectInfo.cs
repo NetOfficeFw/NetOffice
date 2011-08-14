@@ -18,6 +18,7 @@ namespace MSDATASRCApi.Utils
         private string   _namespace     = "NetOffice.MSDATASRCApi";
         private Guid     _componentGuid = new Guid("7C0FFAB0-CD84-11D0-949A-00A0C91110ED");
         private Assembly _assembly;
+		private Type[]	 _exportedTypes;
 
         #endregion
 
@@ -32,6 +33,20 @@ namespace MSDATASRCApi.Utils
 
         #region IFactoryInfo Members
 
+		public bool Contains(string className)
+		{
+			if(null == _exportedTypes)
+				_exportedTypes = Assembly.GetExportedTypes();
+			
+			foreach (Type item in _exportedTypes)
+            {
+				if (item.Name.EndsWith(className, StringComparison.InvariantCultureIgnoreCase))
+					return true;
+            }
+				
+			return false;			
+		}
+		
         public string Namespace
         {
             get

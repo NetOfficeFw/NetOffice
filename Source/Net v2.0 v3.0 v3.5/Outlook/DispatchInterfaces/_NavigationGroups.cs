@@ -16,6 +16,23 @@ namespace NetOffice.OutlookApi
 	public class _NavigationGroups : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_NavigationGroups);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -137,7 +154,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OutlookApi._NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi._NavigationGroup;
+				NetOffice.OutlookApi._NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NavigationGroup;
 				return newObject;
 			}
 		}
@@ -151,7 +168,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupDisplayName);
 			object returnItem = Invoker.MethodReturn(this, "Create", paramsArray);
-			NetOffice.OutlookApi.NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.NavigationGroup;
+			NetOffice.OutlookApi.NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.NavigationGroup;
 			return newObject;
 		}
 
@@ -175,7 +192,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultFolderGroup);
 			object returnItem = Invoker.MethodReturn(this, "GetDefaultNavigationGroup", paramsArray);
-			NetOffice.OutlookApi.NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.NavigationGroup;
+			NetOffice.OutlookApi.NavigationGroup newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.NavigationGroup;
 			return newObject;
 		}
 

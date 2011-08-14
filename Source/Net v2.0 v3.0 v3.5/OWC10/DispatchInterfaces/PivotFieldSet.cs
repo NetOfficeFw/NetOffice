@@ -16,6 +16,23 @@ namespace NetOffice.OWC10Api
 	public class PivotFieldSet : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(PivotFieldSet);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -425,7 +442,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, caption, dataField, expression);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedField", paramsArray);
-			NetOffice.OWC10Api.PivotField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PivotField;
+			NetOffice.OWC10Api.PivotField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotField;
 			return newObject;
 		}
 
@@ -440,7 +457,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, caption, before);
 			object returnItem = Invoker.MethodReturn(this, "AddCustomGroupField", paramsArray);
-			NetOffice.OWC10Api.PivotField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PivotField;
+			NetOffice.OWC10Api.PivotField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotField;
 			return newObject;
 		}
 

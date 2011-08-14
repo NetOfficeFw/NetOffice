@@ -16,6 +16,23 @@ namespace NetOffice.OfficeApi
 	public class ICTPFactory : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ICTPFactory);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -63,7 +80,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle, cTPParentWindow);
 			object returnItem = Invoker.MethodReturn(this, "CreateCTP", paramsArray);
-			NetOffice.OfficeApi._CustomTaskPane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
 			return newObject;
 		}
 
@@ -77,7 +94,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle);
 			object returnItem = Invoker.MethodReturn(this, "CreateCTP", paramsArray);
-			NetOffice.OfficeApi._CustomTaskPane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
 			return newObject;
 		}
 

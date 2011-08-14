@@ -38,16 +38,18 @@ namespace Example07
 
             // start word and turn off msg boxes
             _wordApplication = new Word.Application();
-            _wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone; 
+            _wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
             // add a new document
             _wordApplication.Documents.Add();
+
+            Word.Template normalDotTemplate = GetNormalDotTemplate();
+            _wordApplication.CustomizationContext = normalDotTemplate;
 
             // add a commandbar popup
             Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_wordApplication.CommandBars["Menu Bar"].Controls.Add(
                                                                                 MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, true);
             commandBarPopup.Caption = "commandBarPopup";
-
 
             #region few words, how to access the picture
             /*
@@ -115,6 +117,8 @@ namespace Example07
 
             #endregion
 
+            normalDotTemplate.Saved = true;
+
             // make visible & set buttons
             _wordApplication.Visible = true;
             button1.Enabled = false;
@@ -123,11 +127,12 @@ namespace Example07
 
         private void button2_Click(object sender, EventArgs e)
         {
+            _wordApplication.DisposeChildInstances(true);
             _wordApplication.Quit();
             _wordApplication.Dispose();
 
             button1.Enabled = true;
-            button2.Enabled = false;   
+            button2.Enabled = false;
         }
 
         void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
@@ -140,5 +145,23 @@ namespace Example07
         {
             textBoxEvents.AppendText(Message + "\r\n");
         }
+
+        /// <summary>
+        /// returns normal.dot template (normal.dotm in modern word versions)
+        /// </summary>
+        private Word.Template GetNormalDotTemplate()
+        {
+            foreach (Word.Template installedTemplate in _wordApplication.Templates)
+            {
+                if (installedTemplate.Name.StartsWith("normal", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return installedTemplate;
+                }
+                installedTemplate.Dispose();
+            }
+
+            throw new IndexOutOfRangeException("Template not found.");
+        }
+
     }
 }

@@ -16,6 +16,23 @@ namespace NetOffice.OutlookApi
 	public class _Account : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_Account);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -276,7 +293,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iD);
 			object returnItem = Invoker.MethodReturn(this, "GetAddressEntryFromID", paramsArray);
-			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.AddressEntry;
+			NetOffice.OutlookApi.AddressEntry newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.AddressEntry;
 			return newObject;
 		}
 
@@ -289,7 +306,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(entryID);
 			object returnItem = Invoker.MethodReturn(this, "GetRecipientFromID", paramsArray);
-			NetOffice.OutlookApi.Recipient newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.Recipient;
+			NetOffice.OutlookApi.Recipient newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.Recipient;
 			return newObject;
 		}
 

@@ -16,6 +16,23 @@ namespace NetOffice.PowerPointApi
 	public class SlideShowView : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(SlideShowView);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -539,7 +556,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shapeId);
 			object returnItem = Invoker.MethodReturn(this, "Player", paramsArray);
-			NetOffice.PowerPointApi.Player newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.Player;
+			NetOffice.PowerPointApi.Player newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Player;
 			return newObject;
 		}
 

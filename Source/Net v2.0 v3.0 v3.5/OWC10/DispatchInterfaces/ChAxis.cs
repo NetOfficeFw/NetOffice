@@ -16,6 +16,23 @@ namespace NetOffice.OWC10Api
 	public class ChAxis : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ChAxis);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -775,7 +792,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
 			object returnItem = Invoker.MethodReturn(this, "ValueToPoint", paramsArray);
-			NetOffice.OWC10Api.Coordinate newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.Coordinate;
+			NetOffice.OWC10Api.Coordinate newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Coordinate;
 			return newObject;
 		}
 

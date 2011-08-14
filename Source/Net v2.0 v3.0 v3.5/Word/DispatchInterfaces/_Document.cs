@@ -16,6 +16,23 @@ namespace NetOffice.WordApi
 	public class _Document : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_Document);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -3814,7 +3831,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, end);
 			object returnItem = Invoker.MethodReturn(this, "Range", paramsArray);
-			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 			return newObject;
 		}
 
@@ -3826,7 +3843,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Range", paramsArray);
-			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 			return newObject;
 		}
 
@@ -3873,7 +3890,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, which, count, name);
 			object returnItem = Invoker.MethodReturn(this, "GoTo", paramsArray);
-			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 			return newObject;
 		}
 
@@ -3885,7 +3902,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GoTo", paramsArray);
-			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 			return newObject;
 		}
 
@@ -4087,7 +4104,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetLetterContent", paramsArray);
-			NetOffice.WordApi.LetterContent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.LetterContent;
+			NetOffice.WordApi.LetterContent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.LetterContent;
 			return newObject;
 		}
 
@@ -4223,7 +4240,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(length, mode, updateProperties);
 			object returnItem = Invoker.MethodReturn(this, "AutoSummarize", paramsArray);
-			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 			return newObject;
 		}
 
@@ -4235,7 +4252,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AutoSummarize", paramsArray);
-			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Range;
 			return newObject;
 		}
 
@@ -4611,7 +4628,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dateFormat, includeHeaderFooter, pageDesign, letterStyle, letterhead, letterheadLocation, letterheadSize, recipientName, recipientAddress, salutation, salutationType, recipientReference, mailingInstructions, attentionLine, subject, cCList, returnAddress, senderName, closing, senderCompany, senderJobTitle, senderInitials, enclosureNumber, infoBlock, recipientCode, recipientGender, returnAddressShortForm, senderCity, senderCode, senderGender, senderReference);
 			object returnItem = Invoker.MethodReturn(this, "CreateLetterContent", paramsArray);
-			NetOffice.WordApi.LetterContent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.LetterContent;
+			NetOffice.WordApi.LetterContent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.LetterContent;
 			return newObject;
 		}
 
@@ -4646,7 +4663,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dateFormat, includeHeaderFooter, pageDesign, letterStyle, letterhead, letterheadLocation, letterheadSize, recipientName, recipientAddress, salutation, salutationType, recipientReference, mailingInstructions, attentionLine, subject, cCList, returnAddress, senderName, closing, senderCompany, senderJobTitle, senderInitials, enclosureNumber);
 			object returnItem = Invoker.MethodReturn(this, "CreateLetterContent", paramsArray);
-			NetOffice.WordApi.LetterContent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.LetterContent;
+			NetOffice.WordApi.LetterContent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.LetterContent;
 			return newObject;
 		}
 
@@ -5256,7 +5273,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping, fastSearchSkippingTextNodes);
 			object returnItem = Invoker.MethodReturn(this, "SelectSingleNode", paramsArray);
-			NetOffice.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLNode;
+			NetOffice.WordApi.XMLNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.XMLNode;
 			return newObject;
 		}
 
@@ -5271,7 +5288,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping, fastSearchSkippingTextNodes);
 			object returnItem = Invoker.MethodReturn(this, "SelectNodes", paramsArray);
-			NetOffice.WordApi.XMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.XMLNodes;
+			NetOffice.WordApi.XMLNodes newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.XMLNodes;
 			return newObject;
 		}
 
@@ -5341,7 +5358,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetWorkflowTasks", paramsArray);
-			NetOffice.OfficeApi.WorkflowTasks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.WorkflowTasks;
+			NetOffice.OfficeApi.WorkflowTasks newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.WorkflowTasks;
 			return newObject;
 		}
 
@@ -5353,7 +5370,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetWorkflowTemplates", paramsArray);
-			NetOffice.OfficeApi.WorkflowTemplates newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.WorkflowTemplates;
+			NetOffice.OfficeApi.WorkflowTemplates newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.WorkflowTemplates;
 			return newObject;
 		}
 
@@ -5424,7 +5441,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node);
 			object returnItem = Invoker.MethodReturn(this, "SelectLinkedControls", paramsArray);
-			NetOffice.WordApi.ContentControls newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ContentControls;
+			NetOffice.WordApi.ContentControls newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ContentControls;
 			return newObject;
 		}
 
@@ -5437,7 +5454,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stream);
 			object returnItem = Invoker.MethodReturn(this, "SelectUnlinkedControls", paramsArray);
-			NetOffice.WordApi.ContentControls newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ContentControls;
+			NetOffice.WordApi.ContentControls newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ContentControls;
 			return newObject;
 		}
 
@@ -5450,7 +5467,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title);
 			object returnItem = Invoker.MethodReturn(this, "SelectContentControlsByTitle", paramsArray);
-			NetOffice.WordApi.ContentControls newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ContentControls;
+			NetOffice.WordApi.ContentControls newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ContentControls;
 			return newObject;
 		}
 
@@ -5552,7 +5569,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tag);
 			object returnItem = Invoker.MethodReturn(this, "SelectContentControlsByTag", paramsArray);
-			NetOffice.WordApi.ContentControls newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.ContentControls;
+			NetOffice.WordApi.ContentControls newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ContentControls;
 			return newObject;
 		}
 

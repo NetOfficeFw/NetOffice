@@ -17,6 +17,23 @@ namespace NetOffice.OfficeApi
 	public class _CustomXMLSchemaCollection : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_CustomXMLSchemaCollection);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -123,7 +140,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName, installForAllUsers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CustomXMLSchema newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLSchema;
+			NetOffice.OfficeApi.CustomXMLSchema newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLSchema;
 			return newObject;
 		}
 

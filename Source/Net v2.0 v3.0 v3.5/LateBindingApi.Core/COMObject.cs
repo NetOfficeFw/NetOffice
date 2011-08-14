@@ -48,7 +48,8 @@ namespace LateBindingApi.Core
         #region Construction
 
         /// <summary>
-        /// creates instance
+        /// creates instance and replace the given replacedObject in proxy management
+        /// all created childs from replacedObject are now childs from the new instance
         /// </summary>
         /// <param name="replacedObject"></param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -78,7 +79,7 @@ namespace LateBindingApi.Core
         }
         
         /// <summary>
-        /// creates instance
+        /// creates new instance with given proxy
         /// </summary>
         /// <param name="comProxy"></param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -91,7 +92,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// creates instance
+        /// creates new instance with given proxy and parent info
         /// </summary>
         /// <param name="parentObject"></param>
         /// <param name="comProxy"></param>
@@ -109,7 +110,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// creates instance
+        /// creates new instance with given proxy, type info and parent info
         /// </summary>
         /// <param name="parentObject"></param>
         /// <param name="comProxy"></param>
@@ -128,7 +129,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// creates instance
+        /// not usable stub constructor
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject()
@@ -403,7 +404,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// dispose all child instances
         /// </summary>
-        /// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
+        /// <param name="disposeEventBinding">dispose proxies with events and one or more event recipients</param>
         public void DisposeChildInstances(bool disposeEventBinding)
         {
             // release all childs and clear list

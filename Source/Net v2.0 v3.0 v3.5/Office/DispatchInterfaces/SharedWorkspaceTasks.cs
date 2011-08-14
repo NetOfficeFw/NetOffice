@@ -17,6 +17,23 @@ namespace NetOffice.OfficeApi
 	public class SharedWorkspaceTasks : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(SharedWorkspaceTasks);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -127,7 +144,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, status, priority, assignee, description, dueDate);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceTask newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SharedWorkspaceTask;
 			return newObject;
 		}
 
@@ -140,7 +157,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceTask newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.SharedWorkspaceTask;
 			return newObject;
 		}
 

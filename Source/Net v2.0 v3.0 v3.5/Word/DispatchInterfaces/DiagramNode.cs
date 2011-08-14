@@ -16,6 +16,23 @@ namespace NetOffice.WordApi
 	public class DiagramNode : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(DiagramNode);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -200,7 +217,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.DiagramNode;
+			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.DiagramNode;
 			return newObject;
 		}
 
@@ -260,7 +277,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode, pos);
 			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.DiagramNode;
+			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.DiagramNode;
 			return newObject;
 		}
 
@@ -283,7 +300,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NextNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.DiagramNode;
+			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.DiagramNode;
 			return newObject;
 		}
 
@@ -295,7 +312,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "PrevNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.DiagramNode;
+			NetOffice.WordApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.DiagramNode;
 			return newObject;
 		}
 

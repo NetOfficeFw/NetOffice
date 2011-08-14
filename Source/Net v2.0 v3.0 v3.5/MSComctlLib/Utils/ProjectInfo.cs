@@ -18,6 +18,7 @@ namespace MSComctlLibApi.Utils
         private string   _namespace     = "NetOffice.MSComctlLibApi";
         private Guid     _componentGuid = new Guid("831FDD16-0C5C-11D2-A9FC-0000F8754DA1");
         private Assembly _assembly;
+		private Type[]	 _exportedTypes;
 
         #endregion
 
@@ -32,6 +33,20 @@ namespace MSComctlLibApi.Utils
 
         #region IFactoryInfo Members
 
+		public bool Contains(string className)
+		{
+			if(null == _exportedTypes)
+				_exportedTypes = Assembly.GetExportedTypes();
+			
+			foreach (Type item in _exportedTypes)
+            {
+				if (item.Name.EndsWith(className, StringComparison.InvariantCultureIgnoreCase))
+					return true;
+            }
+				
+			return false;			
+		}
+		
         public string Namespace
         {
             get

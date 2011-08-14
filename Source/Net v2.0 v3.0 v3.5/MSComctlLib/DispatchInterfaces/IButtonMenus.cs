@@ -17,6 +17,23 @@ namespace NetOffice.MSComctlLibApi
 	public class IButtonMenus : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(IButtonMenus);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -145,7 +162,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IButtonMenu newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IButtonMenu;
+			NetOffice.MSComctlLibApi.IButtonMenu newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButtonMenu;
 			return newObject;
 		}
 
@@ -157,7 +174,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IButtonMenu newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IButtonMenu;
+			NetOffice.MSComctlLibApi.IButtonMenu newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButtonMenu;
 			return newObject;
 		}
 

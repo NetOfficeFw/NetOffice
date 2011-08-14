@@ -17,6 +17,23 @@ namespace NetOffice.AccessApi
 	public class FormatConditions : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(FormatConditions);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -126,7 +143,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, expression1, expression2);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi._FormatCondition newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi._FormatCondition;
+			NetOffice.AccessApi._FormatCondition newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._FormatCondition;
 			return newObject;
 		}
 
@@ -140,7 +157,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi._FormatCondition newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi._FormatCondition;
+			NetOffice.AccessApi._FormatCondition newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._FormatCondition;
 			return newObject;
 		}
 

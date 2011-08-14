@@ -17,6 +17,23 @@ namespace NetOffice.OfficeApi
 	public class _CustomXMLParts : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_CustomXMLParts);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -109,7 +126,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xML, schemaCollection);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLPart;
 			return newObject;
 		}
 
@@ -122,7 +139,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xML);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLPart;
 			return newObject;
 		}
 
@@ -135,7 +152,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id);
 			object returnItem = Invoker.MethodReturn(this, "SelectByID", paramsArray);
-			NetOffice.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLPart;
 			return newObject;
 		}
 
@@ -148,7 +165,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI);
 			object returnItem = Invoker.MethodReturn(this, "SelectByNamespace", paramsArray);
-			NetOffice.OfficeApi.CustomXMLParts newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.CustomXMLParts;
+			NetOffice.OfficeApi.CustomXMLParts newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CustomXMLParts;
 			return newObject;
 		}
 

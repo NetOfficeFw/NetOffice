@@ -16,6 +16,23 @@ namespace NetOffice.ExcelApi
 	public class ProtectedViewWindow : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ProtectedViewWindow);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -292,7 +309,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(writeResPassword, updateLinks);
 			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -304,7 +321,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 

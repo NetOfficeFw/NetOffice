@@ -16,6 +16,23 @@ namespace NetOffice.VBIDEApi
 	public class _VBProjects : _VBProjects_Old
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_VBProjects);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -61,7 +78,7 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBProject;
+			NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBProject;
 			return newObject;
 		}
 
@@ -85,7 +102,7 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrPath);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBProject;
+			NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBProject;
 			return newObject;
 		}
 

@@ -16,6 +16,23 @@ namespace NetOffice.OutlookApi
 	public class _TimelineView : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_TimelineView);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -461,7 +478,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, saveOption);
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			NetOffice.OutlookApi.View newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OutlookApi.View;
+			NetOffice.OutlookApi.View newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.View;
 			return newObject;
 		}
 

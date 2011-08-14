@@ -16,6 +16,23 @@ namespace NetOffice.OWC10Api
 	public class IDataSourceControl : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(IDataSourceControl);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -896,7 +913,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, executeOption, fetchType);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi.Recordset;
+			NetOffice.ADODBApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Recordset;
 			return newObject;
 		}
 
@@ -977,7 +994,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(element);
 			object returnItem = Invoker.MethodReturn(this, "GetContainingSection", paramsArray);
-			NetOffice.OWC10Api.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.Section;
+			NetOffice.OWC10Api.Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.Section;
 			return newObject;
 		}
 

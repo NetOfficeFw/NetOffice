@@ -17,6 +17,23 @@ namespace NetOffice.OfficeApi
 	public class MsoDebugOptions_UTs : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(MsoDebugOptions_UTs);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -93,7 +110,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrCollectionName);
 			object returnItem = Invoker.MethodReturn(this, "GetUnitTestsInCollection", paramsArray);
-			NetOffice.OfficeApi.MsoDebugOptions_UTs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.MsoDebugOptions_UTs;
+			NetOffice.OfficeApi.MsoDebugOptions_UTs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.MsoDebugOptions_UTs;
 			return newObject;
 		}
 
@@ -107,7 +124,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrCollectionName, bstrUnitTestName);
 			object returnItem = Invoker.MethodReturn(this, "GetUnitTest", paramsArray);
-			NetOffice.OfficeApi.MsoDebugOptions_UT newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.MsoDebugOptions_UT;
+			NetOffice.OfficeApi.MsoDebugOptions_UT newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.MsoDebugOptions_UT;
 			return newObject;
 		}
 
@@ -121,7 +138,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrCollectionName, bstrUnitTestNameFilter);
 			object returnItem = Invoker.MethodReturn(this, "GetMatchingUnitTestsInCollection", paramsArray);
-			NetOffice.OfficeApi.MsoDebugOptions_UTs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OfficeApi.MsoDebugOptions_UTs;
+			NetOffice.OfficeApi.MsoDebugOptions_UTs newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.MsoDebugOptions_UTs;
 			return newObject;
 		}
 

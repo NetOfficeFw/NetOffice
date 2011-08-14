@@ -17,6 +17,23 @@ namespace NetOffice.MSComctlLibApi
 	public class IListSubItems : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(IListSubItems);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -115,7 +132,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, reportIcon, toolTipText);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IListSubItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
+			NetOffice.MSComctlLibApi.IListSubItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
 			return newObject;
 		}
 
@@ -127,7 +144,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IListSubItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
+			NetOffice.MSComctlLibApi.IListSubItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
 			return newObject;
 		}
 

@@ -18,6 +18,7 @@ namespace OfficeApi.Utils
         private string   _namespace     = "NetOffice.OfficeApi";
         private Guid     _componentGuid = new Guid("2DF8D04C-5BFA-101B-BDE5-00AA0044DE52");
         private Assembly _assembly;
+		private Type[]	 _exportedTypes;
 
         #endregion
 
@@ -32,6 +33,20 @@ namespace OfficeApi.Utils
 
         #region IFactoryInfo Members
 
+		public bool Contains(string className)
+		{
+			if(null == _exportedTypes)
+				_exportedTypes = Assembly.GetExportedTypes();
+			
+			foreach (Type item in _exportedTypes)
+            {
+				if (item.Name.EndsWith(className, StringComparison.InvariantCultureIgnoreCase))
+					return true;
+            }
+				
+			return false;			
+		}
+		
         public string Namespace
         {
             get

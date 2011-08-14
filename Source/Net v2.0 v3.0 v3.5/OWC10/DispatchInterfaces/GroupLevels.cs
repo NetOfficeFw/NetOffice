@@ -17,6 +17,23 @@ namespace NetOffice.OWC10Api
 	public class GroupLevels : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(GroupLevels);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -94,7 +111,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordSource, failIfThere);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.GroupLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.GroupLevel;
+			NetOffice.OWC10Api.GroupLevel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.GroupLevel;
 			return newObject;
 		}
 

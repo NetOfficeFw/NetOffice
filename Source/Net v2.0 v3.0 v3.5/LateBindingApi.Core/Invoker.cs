@@ -11,7 +11,9 @@ namespace LateBindingApi.Core
     /// invoke helper functions
     /// </summary>
     public static class Invoker
-    { 
+    {
+        private static readonly string _exceptionMessage = "See inner exception for details.";
+
         #region Method
 
         /// <summary>
@@ -48,7 +50,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
 
@@ -66,7 +68,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
          }
 
@@ -85,7 +87,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
 
@@ -104,7 +106,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
 
@@ -124,7 +126,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
 
@@ -145,7 +147,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
 
@@ -168,7 +170,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
 
@@ -187,7 +189,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
 
@@ -207,7 +209,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }             
         }
 
@@ -227,7 +229,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }             
         }
 
@@ -248,7 +250,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }           
         }
 
@@ -272,7 +274,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             } 
         }
 
@@ -297,7 +299,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             } 
         }
 
@@ -315,7 +317,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }             
         }
 
@@ -334,7 +336,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
 
@@ -353,7 +355,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
 
@@ -371,7 +373,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             } 
         }
 

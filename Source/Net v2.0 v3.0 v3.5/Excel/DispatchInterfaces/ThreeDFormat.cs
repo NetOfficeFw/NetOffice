@@ -16,6 +16,23 @@ namespace NetOffice.ExcelApi
 	public class ThreeDFormat : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ThreeDFormat);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -92,7 +109,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ExtrusionColor", paramsArray);
-				NetOffice.ExcelApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ColorFormat;
+				NetOffice.ExcelApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ColorFormat.LateBindingApiWrapperType) as NetOffice.ExcelApi.ColorFormat;
 				return newObject;
 			}
 		}
@@ -491,7 +508,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ContourColor", paramsArray);
-				NetOffice.ExcelApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ColorFormat;
+				NetOffice.ExcelApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ColorFormat.LateBindingApiWrapperType) as NetOffice.ExcelApi.ColorFormat;
 				return newObject;
 			}
 		}

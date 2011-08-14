@@ -16,6 +16,23 @@ namespace NetOffice.ADODBApi
 	public class Command15 : _ADO
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Command15);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -193,7 +210,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected, parameters, options);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
@@ -210,7 +227,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size, value);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 
@@ -226,7 +243,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 

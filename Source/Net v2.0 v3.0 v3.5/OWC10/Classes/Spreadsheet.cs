@@ -60,7 +60,24 @@ namespace NetOffice.OWC10Api
 		ISpreadsheetEventSink_SinkHelper _iSpreadsheetEventSink_SinkHelper;
 	
 		#endregion
-		
+
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Spreadsheet);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        		
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>

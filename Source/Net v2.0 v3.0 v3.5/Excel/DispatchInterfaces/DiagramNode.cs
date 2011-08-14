@@ -16,6 +16,23 @@ namespace NetOffice.ExcelApi
 	public class DiagramNode : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(DiagramNode);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -73,7 +90,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Children", paramsArray);
-				NetOffice.ExcelApi.DiagramNodeChildren newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.DiagramNodeChildren;
+				NetOffice.ExcelApi.DiagramNodeChildren newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.DiagramNodeChildren.LateBindingApiWrapperType) as NetOffice.ExcelApi.DiagramNodeChildren;
 				return newObject;
 			}
 		}
@@ -103,7 +120,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Root", paramsArray);
-				NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.DiagramNode;
+				NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.ExcelApi.DiagramNode;
 				return newObject;
 			}
 		}
@@ -171,7 +188,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.DiagramNode;
+			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.ExcelApi.DiagramNode;
 			return newObject;
 		}
 
@@ -231,7 +248,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, pTargetNode, pos);
 			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);
-			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.DiagramNode;
+			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.ExcelApi.DiagramNode;
 			return newObject;
 		}
 
@@ -254,7 +271,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NextNode", paramsArray);
-			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.DiagramNode;
+			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.ExcelApi.DiagramNode;
 			return newObject;
 		}
 
@@ -266,7 +283,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "PrevNode", paramsArray);
-			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.DiagramNode;
+			NetOffice.ExcelApi.DiagramNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.ExcelApi.DiagramNode;
 			return newObject;
 		}
 

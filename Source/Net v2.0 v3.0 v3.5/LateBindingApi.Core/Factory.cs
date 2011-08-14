@@ -39,10 +39,22 @@ namespace LateBindingApi.Core
         private static List<COMObject> _globalObjectList = new List<COMObject>();
         private static List<IFactoryInfo> _factoryList = new List<IFactoryInfo>();
         private static Dictionary<string, Type> _typeCache = new Dictionary<string, Type>();
+        private static Dictionary<Guid, Guid> _hostCache = new Dictionary<Guid, Guid>();
 
         #endregion
 
         #region Properties
+        
+        /// <summary>
+        /// returns an array about currently loaded LateBindingApi assemblies
+        /// </summary>
+        public static IFactoryInfo[] Assemblies
+        {
+            get 
+            {
+                return _factoryList.ToArray();
+            }
+        }
 
         /// <summary>
         /// Returns count count of open proxies
@@ -108,9 +120,6 @@ namespace LateBindingApi.Core
                     }
                 }
             }
-
-            if (!Settings.EnableMessageFilter)
-                Settings.EnableMessageFilter = true;
         }
 
         /// <summary>
@@ -124,7 +133,45 @@ namespace LateBindingApi.Core
         #endregion
 
         #region Create COMObject Methods
-  
+
+        /// <summary>
+        /// creates a new COMObject based on wrapperClassType
+        /// </summary>
+        /// <param name="caller"></param>
+        /// <param name="comProxy"></param>
+        /// <param name="wrapperClassType"></param>
+        /// <returns></returns>
+        public static COMObject CreateKnownObjectFromComProxy(COMObject caller, object comProxy, Type wrapperClassType)
+        {
+            if (null == comProxy)
+                return null;
+
+            Type comProxyType = comProxy.GetType();            
+            COMObject newClass = (COMObject)Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxy, comProxyType });
+            return newClass;
+        }
+
+        /// <summary>
+        /// creates a new COMObject array based on wrapperClassType
+        /// </summary>
+        /// <param name="caller"></param>
+        /// <param name="comProxyArray"></param>
+        /// <param name="wrapperClassType"></param>
+        /// <returns></returns>
+        public static COMObject[] CreateKnownObjectArrayFromComProxy(COMObject caller, object[] comProxyArray, Type wrapperClassType)
+        {
+            if (null == comProxyArray)
+                return null;
+
+            Type comVariantType = null;
+            COMObject[] newVariantArray = new COMObject[comProxyArray.Length];
+            for (int i = 0; i < comProxyArray.Length; i++)
+            {
+                newVariantArray[i] = (COMObject)Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxyArray[i], comVariantType });
+            }
+            return newVariantArray;
+        }
+
         /// <summary>
         /// creates a new COMObject based on classType of comProxy 
         /// </summary>
@@ -237,9 +284,7 @@ namespace LateBindingApi.Core
         public static void DisposeAllCOMProxies()
         {
             while (_globalObjectList.Count > 0)
-            {
                 _globalObjectList[0].Dispose();
-            }
         }
 
         /// <summary>
@@ -271,32 +316,53 @@ namespace LateBindingApi.Core
         #region Private Methods
 
         /// <summary>
+        /// returns id of an interface
+        /// </summary>
+        /// <param name="typeInfo"></param>
+        /// <returns></returns>
+        private static Guid GetTypeGuid(COMTypes.ITypeInfo typeInfo)
+        {
+            IntPtr attribPtr = IntPtr.Zero;
+            typeInfo.GetTypeAttr(out attribPtr);
+            COMTypes.TYPEATTR Attributes = (COMTypes.TYPEATTR)Marshal.PtrToStructure(attribPtr, typeof(COMTypes.TYPEATTR));
+            Guid typeGuid = Attributes.guid;
+            typeInfo.ReleaseTypeAttr(attribPtr);
+            return typeGuid;
+        }
+
+        /// <summary>
         /// get the guid from type lib there is the type defined
         /// </summary>
         /// <param name="comProxy"></param>
         /// <returns></returns>
         private static Guid GetParentLibraryGuid(object comProxy)
-        {
-            Guid returnGuid = Guid.Empty;
-
-            IDispatch dispatcher = (IDispatch)comProxy;
+        {             
+            IDispatch dispatcher = comProxy as IDispatch;
             COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo(0, 0);
             COMTypes.ITypeLib parentTypeLib = null;
 
-            int i = 0;
-            typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
+            Guid typeGuid = GetTypeGuid(typeInfo);
+            Guid parentGuid = Guid.Empty;
 
-            IntPtr attributesPointer = IntPtr.Zero;
-            parentTypeLib.GetLibAttr(out attributesPointer);
+            if (!_hostCache.TryGetValue(typeGuid, out parentGuid))
+            {
+                int i = 0;
+                typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
 
-            COMTypes.TYPELIBATTR attributes = (COMTypes.TYPELIBATTR)Marshal.PtrToStructure(attributesPointer, typeof(COMTypes.TYPELIBATTR));
-            returnGuid = attributes.guid;
+                IntPtr attributesPointer = IntPtr.Zero;
+                parentTypeLib.GetLibAttr(out attributesPointer);
 
-            parentTypeLib.ReleaseTLibAttr(attributesPointer);
-            Marshal.ReleaseComObject(parentTypeLib);
+                COMTypes.TYPELIBATTR attributes = (COMTypes.TYPELIBATTR)Marshal.PtrToStructure(attributesPointer, typeof(COMTypes.TYPELIBATTR));
+                parentGuid = attributes.guid;
+                parentTypeLib.ReleaseTLibAttr(attributesPointer);
+                Marshal.ReleaseComObject(parentTypeLib);
+
+                _hostCache.Add(typeGuid, parentGuid); 
+            }
+
             Marshal.ReleaseComObject(typeInfo);
 
-            return returnGuid;
+            return parentGuid;
         }
         
         /// <summary>
@@ -307,18 +373,34 @@ namespace LateBindingApi.Core
         private static IFactoryInfo GetFactoryInfo(object comProxy)
         {
             if (_factoryList.Count == 0)
-                throw (new LateBindingApiException("Factory are not initialized with generated LateBindingApi assemblies."));
-            
-            Guid targetGuid = GetParentLibraryGuid(comProxy);
-        
-            foreach (IFactoryInfo item in _factoryList)
             {
-                if (true == targetGuid.Equals(item.ComponentGuid))
-                    return item;
-
+                string notInitMessage = "Factory are not initialized with LateBindingApi assemblies." + Environment.NewLine;
+                notInitMessage = "Please call LateBindingApi.Core.Factory.Initialize()";
+                throw new LateBindingApiException(notInitMessage);
             }
 
-            throw new LateBindingApiException(TypeDescriptor.GetClassName(comProxy) + " class not found in LateBindingApi.");
+            string className = TypeDescriptor.GetClassName(comProxy);
+            Guid hostGuid  = GetParentLibraryGuid(comProxy);
+        
+            foreach (IFactoryInfo item in _factoryList)
+            {              
+                if (true == hostGuid.Equals(item.ComponentGuid))
+                    return item;
+            }
+
+            // failback
+            foreach (IFactoryInfo item in _factoryList)
+            {
+                if(item.Contains(className))
+                    return item;
+            }
+
+            string message = string.Format("class {0}:{1} not found in loaded LateBindingApi Assemblies{2}", hostGuid, className, Environment.NewLine);
+            message += string.Format("Currently loaded LateBindingApi Assemblies{0}", Environment.NewLine);
+            foreach (IFactoryInfo item in _factoryList)
+                message += string.Format("Loaded LateBindingApi Assembly:{0} {1}{2}", item.ComponentGuid, item.Assembly.FullName, Environment.NewLine);
+
+            throw new LateBindingApiException(message);
         }
 
         #endregion

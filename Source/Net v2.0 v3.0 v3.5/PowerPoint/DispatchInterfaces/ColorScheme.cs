@@ -16,6 +16,23 @@ namespace NetOffice.PowerPointApi
 	public class ColorScheme : Collection
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ColorScheme);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -91,7 +108,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemeColor);
 			object returnItem = Invoker.MethodReturn(this, "Colors", paramsArray);
-			NetOffice.PowerPointApi.RGBColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.PowerPointApi.RGBColor;
+			NetOffice.PowerPointApi.RGBColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.RGBColor;
 			return newObject;
 		}
 

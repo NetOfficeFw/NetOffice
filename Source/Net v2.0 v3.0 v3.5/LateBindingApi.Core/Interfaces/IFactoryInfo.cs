@@ -25,5 +25,12 @@ namespace LateBindingApi.Core
         /// assembly info of lateBinding assembly
         /// </summary>
         Assembly Assembly { get; }
+
+        /// <summary>
+        /// returns info a class with given name exists in lateBinding assembly
+        /// </summary>
+        /// <param name="className"></param>
+        /// <returns></returns>
+        bool Contains(string className);
     }
 }

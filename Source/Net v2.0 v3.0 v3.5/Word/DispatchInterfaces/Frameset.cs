@@ -17,6 +17,23 @@ namespace NetOffice.WordApi
 	public class Frameset : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Frameset);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -390,7 +407,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(where);
 			object returnItem = Invoker.MethodReturn(this, "AddNewFrame", paramsArray);
-			NetOffice.WordApi.Frameset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Frameset;
+			NetOffice.WordApi.Frameset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Frameset;
 			return newObject;
 		}
 

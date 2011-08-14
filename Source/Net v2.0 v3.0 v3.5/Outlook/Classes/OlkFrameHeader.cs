@@ -29,7 +29,24 @@ namespace NetOffice.OutlookApi
 		OlkFrameHeaderEvents_SinkHelper _olkFrameHeaderEvents_SinkHelper;
 	
 		#endregion
-		
+
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(OlkFrameHeader);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        		
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>

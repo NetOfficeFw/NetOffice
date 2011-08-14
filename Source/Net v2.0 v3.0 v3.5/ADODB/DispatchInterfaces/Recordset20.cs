@@ -16,6 +16,23 @@ namespace NetOffice.ADODBApi
 	public class Recordset20 : Recordset15
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Recordset20);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -200,7 +217,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lockType);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 

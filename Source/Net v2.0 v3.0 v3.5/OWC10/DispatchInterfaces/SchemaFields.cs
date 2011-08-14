@@ -17,6 +17,23 @@ namespace NetOffice.OWC10Api
 	public class SchemaFields : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(SchemaFields);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -95,7 +112,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType, length);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaField;
+			NetOffice.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaField;
 			return newObject;
 		}
 
@@ -109,7 +126,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.SchemaField;
+			NetOffice.OWC10Api.SchemaField newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.SchemaField;
 			return newObject;
 		}
 

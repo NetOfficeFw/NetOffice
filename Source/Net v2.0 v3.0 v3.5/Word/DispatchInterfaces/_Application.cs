@@ -16,6 +16,23 @@ namespace NetOffice.WordApi
 	public class _Application : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_Application);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -2547,7 +2564,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
 			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.SpellingSuggestions;
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.SpellingSuggestions;
 			return newObject;
 		}
 
@@ -2560,7 +2577,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word);
 			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.SpellingSuggestions;
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.SpellingSuggestions;
 			return newObject;
 		}
 
@@ -2623,7 +2640,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NewWindow", paramsArray);
-			NetOffice.WordApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Window;
+			NetOffice.WordApi.Window newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Window;
 			return newObject;
 		}
 
@@ -3033,7 +3050,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "DefaultWebOptions", paramsArray);
-			NetOffice.WordApi.DefaultWebOptions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.DefaultWebOptions;
+			NetOffice.WordApi.DefaultWebOptions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.DefaultWebOptions;
 			return newObject;
 		}
 
@@ -3280,7 +3297,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, revisedAuthor, ignoreAllComparisonWarnings);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
-			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Document;
 			return newObject;
 		}
 
@@ -3309,7 +3326,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, originalAuthor, revisedAuthor, formatFrom);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
-			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Document;
 			return newObject;
 		}
 

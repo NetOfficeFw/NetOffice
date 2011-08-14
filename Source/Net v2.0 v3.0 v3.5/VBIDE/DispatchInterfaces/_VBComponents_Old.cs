@@ -17,6 +17,23 @@ namespace NetOffice.VBIDEApi
 	public class _VBComponents_Old : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_VBComponents_Old);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -109,7 +126,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBComponent;
+				NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBComponent;
 				return newObject;
 			}
 		}
@@ -134,7 +151,7 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(componentType);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBComponent;
+			NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBComponent;
 			return newObject;
 		}
 
@@ -147,7 +164,7 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "Import", paramsArray);
-			NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.VBIDEApi.VBComponent;
+			NetOffice.VBIDEApi.VBComponent newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBComponent;
 			return newObject;
 		}
 

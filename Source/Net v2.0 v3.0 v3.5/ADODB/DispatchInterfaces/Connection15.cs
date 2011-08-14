@@ -16,6 +16,23 @@ namespace NetOffice.ADODBApi
 	public class Connection15 : _ADO
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Connection15);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -287,7 +304,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commandText, recordsAffected, options);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
@@ -347,7 +364,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schema, restrictions, schemaID);
 			object returnItem = Invoker.MethodReturn(this, "OpenSchema", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
@@ -360,7 +377,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schema);
 			object returnItem = Invoker.MethodReturn(this, "OpenSchema", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 

@@ -16,6 +16,23 @@ namespace NetOffice.OWC10Api
 	public class PivotView : COMObject
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(PivotView);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -873,7 +890,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, field, function);
 			object returnItem = Invoker.MethodReturn(this, "AddTotal", paramsArray);
-			NetOffice.OWC10Api.PivotTotal newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PivotTotal;
+			NetOffice.OWC10Api.PivotTotal newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotTotal;
 			return newObject;
 		}
 
@@ -897,7 +914,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "AddFieldSet", paramsArray);
-			NetOffice.OWC10Api.PivotFieldSet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PivotFieldSet;
+			NetOffice.OWC10Api.PivotFieldSet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotFieldSet;
 			return newObject;
 		}
 
@@ -935,7 +952,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, caption, expression, solveOrder);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedTotal", paramsArray);
-			NetOffice.OWC10Api.PivotTotal newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.OWC10Api.PivotTotal;
+			NetOffice.OWC10Api.PivotTotal newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotTotal;
 			return newObject;
 		}
 

@@ -15,6 +15,23 @@ namespace NetOffice.ADODBApi
 	public class ADOConnectionConstruction : ADOConnectionConstruction15
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(ADOConnectionConstruction);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>

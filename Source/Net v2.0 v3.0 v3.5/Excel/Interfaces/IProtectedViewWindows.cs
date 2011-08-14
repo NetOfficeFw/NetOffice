@@ -16,6 +16,23 @@ namespace NetOffice.ExcelApi
 	public class IProtectedViewWindows : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(IProtectedViewWindows);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -152,7 +169,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, password, addToMru, repairMode);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.ExcelApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ProtectedViewWindow;
+			NetOffice.ExcelApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ProtectedViewWindow;
 			return newObject;
 		}
 
@@ -165,7 +182,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.ExcelApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.ExcelApi.ProtectedViewWindow;
+			NetOffice.ExcelApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ProtectedViewWindow;
 			return newObject;
 		}
 

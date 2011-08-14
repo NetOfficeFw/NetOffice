@@ -17,6 +17,23 @@ namespace NetOffice.AccessApi
 	public class _SmartTagProperties : COMObject ,IEnumerable
 	{
 		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(_SmartTagProperties);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
 		#region Construction
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -124,7 +141,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi._SmartTagProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as NetOffice.AccessApi._SmartTagProperty;
+			NetOffice.AccessApi._SmartTagProperty newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._SmartTagProperty;
 			return newObject;
 		}
 
