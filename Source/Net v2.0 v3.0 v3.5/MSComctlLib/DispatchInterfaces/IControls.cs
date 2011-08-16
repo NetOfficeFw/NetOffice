@@ -58,7 +58,13 @@ namespace NetOffice.MSComctlLibApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IControls()
+		public IControls() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IControls(string progId) : base(progId)
 		{
 		}
 		
@@ -68,6 +74,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 Count
@@ -82,6 +89,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get Property
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]

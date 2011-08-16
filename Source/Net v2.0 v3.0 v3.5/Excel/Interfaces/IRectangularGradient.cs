@@ -56,7 +56,13 @@ namespace NetOffice.ExcelApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRectangularGradient()
+		public IRectangularGradient() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IRectangularGradient(string progId) : base(progId)
 		{
 		}
 		
@@ -66,6 +72,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Application Application
@@ -74,13 +81,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -95,6 +103,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public COMObject Parent
@@ -110,6 +119,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.ColorStops ColorStops
@@ -118,13 +128,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColorStops", paramsArray);
-				NetOffice.ExcelApi.ColorStops newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.ColorStops;
+				NetOffice.ExcelApi.ColorStops newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ColorStops.LateBindingApiWrapperType) as NetOffice.ExcelApi.ColorStops;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public Double RectangleTop
@@ -144,6 +155,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public Double RectangleBottom
@@ -163,6 +175,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public Double RectangleLeft
@@ -182,6 +195,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public Double RectangleRight

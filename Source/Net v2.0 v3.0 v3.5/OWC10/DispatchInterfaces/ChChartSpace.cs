@@ -57,7 +57,13 @@ namespace NetOffice.OWC10Api
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChChartSpace()
+		public ChChartSpace() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public ChChartSpace(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartChartLayoutEnum ChartLayout
@@ -86,6 +93,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 ChartWrapCount
@@ -105,6 +113,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool EnableEvents
@@ -124,6 +133,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool HasChartSpaceLegend
@@ -143,6 +153,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 MajorVersion
@@ -157,6 +168,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string MinorVersion
@@ -171,6 +183,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string BuildNumber
@@ -185,6 +198,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool ScreenUpdating
@@ -204,6 +218,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChBorder Border
@@ -212,13 +227,14 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Border", paramsArray);
-				NetOffice.OWC10Api.ChBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChBorder;
+				NetOffice.OWC10Api.ChBorder newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChBorder.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChBorder;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChCharts Charts
@@ -227,13 +243,14 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Charts", paramsArray);
-				NetOffice.OWC10Api.ChCharts newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChCharts;
+				NetOffice.OWC10Api.ChCharts newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChCharts.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChCharts;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.MSDATASRCApi.DataSource DataSource
@@ -242,7 +259,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataSource", paramsArray);
-				NetOffice.MSDATASRCApi.DataSource newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSDATASRCApi.DataSource;
+				NetOffice.MSDATASRCApi.DataSource newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSDATASRCApi.DataSource.LateBindingApiWrapperType) as NetOffice.MSDATASRCApi.DataSource;
 				return newObject;
 			}
 			set
@@ -254,6 +271,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string DataMember
@@ -273,6 +291,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartDataSourceTypeEnum DataSourceType
@@ -287,6 +306,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool HasChartSpaceTitle
@@ -306,6 +326,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChInterior Interior
@@ -314,13 +335,14 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Interior", paramsArray);
-				NetOffice.OWC10Api.ChInterior newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChInterior;
+				NetOffice.OWC10Api.ChInterior newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChInterior.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChInterior;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChLegend ChartSpaceLegend
@@ -329,13 +351,14 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ChartSpaceLegend", paramsArray);
-				NetOffice.OWC10Api.ChLegend newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChLegend;
+				NetOffice.OWC10Api.ChLegend newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChLegend.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChLegend;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public COMObject Selection
@@ -351,6 +374,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartSelectionsEnum SelectionType
@@ -365,6 +389,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartSelectionMarksEnum HasSelectionMarks
@@ -384,6 +409,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool DisplayPropertyToolbox
@@ -403,6 +429,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChTitle ChartSpaceTitle
@@ -411,13 +438,14 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ChartSpaceTitle", paramsArray);
-				NetOffice.OWC10Api.ChTitle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChTitle;
+				NetOffice.OWC10Api.ChTitle newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChTitle.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChTitle;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string Version
@@ -432,6 +460,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string XMLData
@@ -451,6 +480,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public COMObject Constants
@@ -466,6 +496,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool CanUndo
@@ -480,6 +511,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool AllowLayoutEvents
@@ -499,6 +531,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool AllowRenderEvents
@@ -518,6 +551,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool AllowPointRenderEvents
@@ -537,6 +571,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool Enabled
@@ -556,6 +591,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string RevisionNumber
@@ -570,6 +606,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Double PrintQuality3D
@@ -589,6 +626,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool DisplayScreenTips
@@ -608,6 +646,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string ConnectionString
@@ -627,6 +666,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string CommandText
@@ -646,6 +686,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public COMObject InternalPivotTable
@@ -661,6 +702,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool HasSeriesByRows
@@ -680,6 +722,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartPlotAggregatesEnum PlotAllAggregates
@@ -699,6 +742,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool HasMultipleCharts
@@ -718,6 +762,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool DisplayFieldList
@@ -737,6 +782,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool HasPassiveAlerts
@@ -756,6 +802,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string DataSourceName
@@ -775,6 +822,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool DisplayFieldButtons
@@ -794,6 +842,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public object SelectionList
@@ -802,10 +851,9 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SelectionList", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -817,6 +865,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool HasPlotDetails
@@ -836,6 +885,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool AllowScreenTipEvents
@@ -855,6 +905,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.OCCommands Commands
@@ -863,13 +914,14 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Commands", paramsArray);
-				NetOffice.OWC10Api.OCCommands newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.OCCommands;
+				NetOffice.OWC10Api.OCCommands newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.OCCommands.LateBindingApiWrapperType) as NetOffice.OWC10Api.OCCommands;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool AllowPropertyToolbox
@@ -889,6 +941,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool AllowGrouping
@@ -908,6 +961,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool AllowFiltering
@@ -927,6 +981,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Top
@@ -941,6 +996,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Left
@@ -955,6 +1011,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Bottom
@@ -969,6 +1026,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Right
@@ -983,6 +1041,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool HasUnifiedScales
@@ -1002,6 +1061,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool DisplayToolbar
@@ -1021,6 +1081,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.MSComctlLibApi.IToolbar Toolbar
@@ -1029,13 +1090,14 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Toolbar", paramsArray);
-				NetOffice.MSComctlLibApi.IToolbar newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IToolbar;
+				NetOffice.MSComctlLibApi.IToolbar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSComctlLibApi.IToolbar.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IToolbar;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool ViewOnlyMode
@@ -1050,6 +1112,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool IsDirty
@@ -1069,6 +1132,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -1076,10 +1140,9 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "International", paramsArray);
-			Type returnItemType = Invoker.GetObjectType(returnItem);
-			if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -1090,6 +1153,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.OWCLanguageSettings LanguageSettings
@@ -1098,13 +1162,14 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LanguageSettings", paramsArray);
-				NetOffice.OWC10Api.OWCLanguageSettings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.OWCLanguageSettings;
+				NetOffice.OWC10Api.OWCLanguageSettings newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.OWCLanguageSettings.LateBindingApiWrapperType) as NetOffice.OWC10Api.OWCLanguageSettings;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public COMObject Parent
@@ -1120,6 +1185,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool HasRuntimeSelection
@@ -1139,6 +1205,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool DisplayBranding
@@ -1158,6 +1225,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool DisplayOfficeLogo
@@ -1177,6 +1245,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartSelectionsEnum ObjectType
@@ -1347,7 +1416,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dz);
 			object returnItem = Invoker.MethodReturn(this, "DropZones", paramsArray);
-			NetOffice.OWC10Api.ChDropZone newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ChDropZone;
+			NetOffice.OWC10Api.ChDropZone newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.ChDropZone.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChDropZone;
 			return newObject;
 		}
 
@@ -1397,10 +1466,9 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filterName, width, height);
 			object returnItem = Invoker.MethodReturn(this, "GetPicture", paramsArray);
-			Type returnItemType = Invoker.GetObjectType(returnItem);
-			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

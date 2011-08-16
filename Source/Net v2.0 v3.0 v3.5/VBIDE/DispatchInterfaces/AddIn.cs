@@ -57,7 +57,13 @@ namespace NetOffice.VBIDEApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public AddIn()
+		public AddIn() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public AddIn(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string Description
@@ -86,6 +93,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -94,13 +102,14 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Addins Collection
@@ -109,13 +118,14 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Collection", paramsArray);
-				NetOffice.VBIDEApi.Addins newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Addins;
+				NetOffice.VBIDEApi.Addins newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.Addins.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Addins;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string ProgId
@@ -130,6 +140,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string Guid
@@ -144,6 +155,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public bool Connect
@@ -163,6 +175,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public COMObject Object

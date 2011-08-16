@@ -57,7 +57,13 @@ namespace NetOffice.WordApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public AxisTitle()
+		public AxisTitle() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public AxisTitle(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string Caption
@@ -86,6 +93,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		/// <param name="Start">optional object Start</param>
 		/// <param name="Length">optional object Length</param>
@@ -94,12 +102,13 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-			NetOffice.WordApi.ChartCharacters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartCharacters;
+			NetOffice.WordApi.ChartCharacters newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartCharacters.LateBindingApiWrapperType) as NetOffice.WordApi.ChartCharacters;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartCharacters Characters
@@ -108,13 +117,14 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-				NetOffice.WordApi.ChartCharacters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartCharacters;
+				NetOffice.WordApi.ChartCharacters newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartCharacters.LateBindingApiWrapperType) as NetOffice.WordApi.ChartCharacters;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartFont Font
@@ -123,13 +133,14 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				NetOffice.WordApi.ChartFont newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartFont;
+				NetOffice.WordApi.ChartFont newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartFont.LateBindingApiWrapperType) as NetOffice.WordApi.ChartFont;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object HorizontalAlignment
@@ -138,10 +149,9 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HorizontalAlignment", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -158,6 +168,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Double Left
@@ -177,6 +188,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object Orientation
@@ -185,10 +197,9 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -205,6 +216,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool Shadow
@@ -224,6 +236,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string Text
@@ -243,6 +256,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Double Top
@@ -262,6 +276,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object VerticalAlignment
@@ -270,10 +285,9 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VerticalAlignment", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -290,6 +304,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 ReadingOrder
@@ -309,6 +324,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public object AutoScaleFont
@@ -317,10 +333,9 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AutoScaleFont", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -337,6 +352,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Interior Interior
@@ -345,13 +361,14 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Interior", paramsArray);
-				NetOffice.WordApi.Interior newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.Interior;
+				NetOffice.WordApi.Interior newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Interior.LateBindingApiWrapperType) as NetOffice.WordApi.Interior;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartFillFormat Fill
@@ -360,13 +377,14 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fill", paramsArray);
-				NetOffice.WordApi.ChartFillFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartFillFormat;
+				NetOffice.WordApi.ChartFillFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartFillFormat.LateBindingApiWrapperType) as NetOffice.WordApi.ChartFillFormat;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartBorder Border
@@ -375,13 +393,14 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Border", paramsArray);
-				NetOffice.WordApi.ChartBorder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartBorder;
+				NetOffice.WordApi.ChartBorder newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartBorder.LateBindingApiWrapperType) as NetOffice.WordApi.ChartBorder;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string Name
@@ -396,6 +415,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public COMObject Parent
@@ -411,6 +431,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool IncludeInLayout
@@ -430,6 +451,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Enums.XlChartElementPosition Position
@@ -449,6 +471,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ChartFormat Format
@@ -457,13 +480,14 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				NetOffice.WordApi.ChartFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.WordApi.ChartFormat;
+				NetOffice.WordApi.ChartFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartFormat.LateBindingApiWrapperType) as NetOffice.WordApi.ChartFormat;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public COMObject Application
@@ -479,6 +503,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Creator
@@ -493,6 +518,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Double Height
@@ -507,6 +533,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Double Width
@@ -521,6 +548,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string Formula
@@ -540,6 +568,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string FormulaR1C1
@@ -559,6 +588,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string FormulaLocal
@@ -578,6 +608,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string FormulaR1C1Local
@@ -607,10 +638,9 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			Type returnItemType = Invoker.GetObjectType(returnItem);
-			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -627,10 +657,9 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
-			Type returnItemType = Invoker.GetObjectType(returnItem);
-			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

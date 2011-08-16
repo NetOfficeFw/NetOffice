@@ -57,7 +57,13 @@ namespace NetOffice.AccessApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _AutoCorrect()
+		public _AutoCorrect() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public _AutoCorrect(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 11,12,14)]
 		public bool DisplayAutoCorrectOptions

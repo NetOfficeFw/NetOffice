@@ -57,7 +57,13 @@ namespace NetOffice.VBIDEApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Component()
+		public _Component() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public _Component(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Application Application
@@ -82,6 +89,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Components Parent
@@ -90,13 +98,14 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VBIDEApi.Components newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Components;
+				NetOffice.VBIDEApi.Components newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.Components.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Components;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public bool IsDirty
@@ -116,6 +125,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string Name

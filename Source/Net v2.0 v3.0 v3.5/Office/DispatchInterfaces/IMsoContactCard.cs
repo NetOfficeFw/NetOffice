@@ -57,7 +57,13 @@ namespace NetOffice.OfficeApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IMsoContactCard()
+		public IMsoContactCard() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IMsoContactCard(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public string Address
@@ -81,6 +88,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.Enums.MsoContactCardAddressType AddressType
@@ -95,6 +103,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.Enums.MsoContactCardType CardType
@@ -109,6 +118,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public COMObject Parent

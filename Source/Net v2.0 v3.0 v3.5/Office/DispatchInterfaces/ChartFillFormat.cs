@@ -57,7 +57,13 @@ namespace NetOffice.OfficeApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartFillFormat()
+		public ChartFillFormat() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public ChartFillFormat(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ChartColorFormat BackColor
@@ -75,13 +82,14 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BackColor", paramsArray);
-				NetOffice.OfficeApi.ChartColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ChartColorFormat;
+				NetOffice.OfficeApi.ChartColorFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ChartColorFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.ChartColorFormat;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ChartColorFormat ForeColor
@@ -90,13 +98,14 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ForeColor", paramsArray);
-				NetOffice.OfficeApi.ChartColorFormat newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ChartColorFormat;
+				NetOffice.OfficeApi.ChartColorFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ChartColorFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.ChartColorFormat;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 GradientColorType
@@ -111,6 +120,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Single GradientDegree
@@ -125,6 +135,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 GradientStyle
@@ -139,6 +150,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 GradientVariant
@@ -153,6 +165,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 Pattern
@@ -167,6 +180,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 PresetGradientType
@@ -181,6 +195,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 PresetTexture
@@ -195,6 +210,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string TextureName
@@ -209,6 +225,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 TextureType
@@ -223,6 +240,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 Type
@@ -237,6 +255,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Int32 Visible
@@ -256,6 +275,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public COMObject Application
@@ -271,6 +291,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Int32 Creator
@@ -285,6 +306,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public COMObject Parent

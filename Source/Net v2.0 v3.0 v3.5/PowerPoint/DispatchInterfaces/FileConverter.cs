@@ -57,7 +57,13 @@ namespace NetOffice.PowerPointApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public FileConverter()
+		public FileConverter() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public FileConverter(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -75,13 +82,14 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool CanOpen
@@ -96,6 +104,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool CanSave
@@ -110,6 +119,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string ClassName
@@ -124,6 +134,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.FileConverters Creator
@@ -132,13 +143,14 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				NetOffice.PowerPointApi.FileConverters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.FileConverters;
+				NetOffice.PowerPointApi.FileConverters newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.FileConverters.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileConverters;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Extensions
@@ -153,6 +165,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string FormatName
@@ -167,6 +180,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Name
@@ -181,6 +195,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.FileConverters Parent
@@ -189,13 +204,14 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.PowerPointApi.FileConverters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.FileConverters;
+				NetOffice.PowerPointApi.FileConverters newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.FileConverters.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileConverters;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Path
@@ -210,6 +226,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 OpenFormat
@@ -224,6 +241,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 SaveFormat

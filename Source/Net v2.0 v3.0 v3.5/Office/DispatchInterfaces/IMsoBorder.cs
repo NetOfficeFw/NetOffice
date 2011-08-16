@@ -57,7 +57,13 @@ namespace NetOffice.OfficeApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IMsoBorder()
+		public IMsoBorder() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IMsoBorder(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public object Color
@@ -75,10 +82,9 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Color", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -95,6 +101,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public object ColorIndex
@@ -103,10 +110,9 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColorIndex", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -123,6 +129,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public object LineStyle
@@ -131,10 +138,9 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LineStyle", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -151,6 +157,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public object Weight
@@ -159,10 +166,9 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Weight", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -179,6 +185,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public COMObject Application
@@ -194,6 +201,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Int32 Creator
@@ -208,6 +216,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public COMObject Parent

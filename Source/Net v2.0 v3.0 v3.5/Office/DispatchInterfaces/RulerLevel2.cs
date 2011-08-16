@@ -57,7 +57,13 @@ namespace NetOffice.OfficeApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public RulerLevel2()
+		public RulerLevel2() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public RulerLevel2(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public COMObject Parent
@@ -82,6 +89,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Single FirstMargin
@@ -101,6 +109,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Single LeftMargin

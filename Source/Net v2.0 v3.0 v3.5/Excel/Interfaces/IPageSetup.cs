@@ -56,7 +56,13 @@ namespace NetOffice.ExcelApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPageSetup()
+		public IPageSetup() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IPageSetup(string progId) : base(progId)
 		{
 		}
 		
@@ -66,6 +72,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
@@ -74,13 +81,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -95,6 +103,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject Parent
@@ -110,6 +119,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool BlackAndWhite
@@ -129,6 +139,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double BottomMargin
@@ -148,6 +159,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string CenterFooter
@@ -167,6 +179,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string CenterHeader
@@ -186,6 +199,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool CenterHorizontally
@@ -205,6 +219,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool CenterVertically
@@ -224,6 +239,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlObjectSize ChartSize
@@ -243,6 +259,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool Draft
@@ -262,6 +279,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 FirstPageNumber
@@ -281,6 +299,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object FitToPagesTall
@@ -289,10 +308,9 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FitToPagesTall", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -309,6 +327,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object FitToPagesWide
@@ -317,10 +336,9 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FitToPagesWide", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -337,6 +355,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double FooterMargin
@@ -356,6 +375,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double HeaderMargin
@@ -375,6 +395,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string LeftFooter
@@ -394,6 +415,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string LeftHeader
@@ -413,6 +435,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double LeftMargin
@@ -432,6 +455,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlOrder Order
@@ -451,6 +475,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlPageOrientation Orientation
@@ -470,6 +495,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlPaperSize PaperSize
@@ -489,6 +515,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string PrintArea
@@ -508,6 +535,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool PrintGridlines
@@ -527,6 +555,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool PrintHeadings
@@ -546,6 +575,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool PrintNotes
@@ -565,6 +595,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -572,10 +603,9 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "PrintQuality", paramsArray);
-			Type returnItemType = Invoker.GetObjectType(returnItem);
-			if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -586,6 +616,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -597,6 +628,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object PrintQuality
@@ -605,10 +637,9 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PrintQuality", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -625,6 +656,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string PrintTitleColumns
@@ -644,6 +676,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string PrintTitleRows
@@ -663,6 +696,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string RightFooter
@@ -682,6 +716,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string RightHeader
@@ -701,6 +736,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double RightMargin
@@ -720,6 +756,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Double TopMargin
@@ -739,6 +776,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Zoom
@@ -747,10 +785,9 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Zoom", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -767,6 +804,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlPrintLocation PrintComments
@@ -786,6 +824,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlPrintErrors PrintErrors
@@ -805,6 +844,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Graphic CenterHeaderPicture
@@ -813,13 +853,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CenterHeaderPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Graphic CenterFooterPicture
@@ -828,13 +869,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CenterFooterPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Graphic LeftHeaderPicture
@@ -843,13 +885,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LeftHeaderPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Graphic LeftFooterPicture
@@ -858,13 +901,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LeftFooterPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Graphic RightHeaderPicture
@@ -873,13 +917,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RightHeaderPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Graphic RightFooterPicture
@@ -888,13 +933,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RightFooterPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool OddAndEvenPagesHeaderFooter
@@ -914,6 +960,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool DifferentFirstPageHeaderFooter
@@ -933,6 +980,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool ScaleWithDocHeaderFooter
@@ -952,6 +1000,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool AlignMarginsHeaderFooter
@@ -971,6 +1020,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Pages Pages
@@ -979,13 +1029,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Pages", paramsArray);
-				NetOffice.ExcelApi.Pages newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Pages;
+				NetOffice.ExcelApi.Pages newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Pages.LateBindingApiWrapperType) as NetOffice.ExcelApi.Pages;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Page EvenPage
@@ -994,13 +1045,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EvenPage", paramsArray);
-				NetOffice.ExcelApi.Page newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Page;
+				NetOffice.ExcelApi.Page newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Page.LateBindingApiWrapperType) as NetOffice.ExcelApi.Page;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Page FirstPage
@@ -1009,7 +1061,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FirstPage", paramsArray);
-				NetOffice.ExcelApi.Page newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Page;
+				NetOffice.ExcelApi.Page newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Page.LateBindingApiWrapperType) as NetOffice.ExcelApi.Page;
 				return newObject;
 			}
 		}

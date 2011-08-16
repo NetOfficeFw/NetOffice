@@ -32,7 +32,7 @@ namespace NetOffice.PowerPointApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		public PowerRex()
+		/// <summary>
+        /// creates a new instance of PowerRex 
+        /// </summary>		
+		public PowerRex():base("PowerPoint.PowerRex")
 		{
-			CreateFromProgId("PowerPoint.PowerRex");
 		}
 		
-		/// <param name="progId">progId</param>
-		public PowerRex(string progId)
+		/// <summary>
+        /// creates a new instance of PowerRex
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public PowerRex(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

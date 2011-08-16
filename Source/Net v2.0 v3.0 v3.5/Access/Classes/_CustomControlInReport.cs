@@ -34,7 +34,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -70,15 +70,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public _CustomControlInReport()
+		/// <summary>
+        /// creates a new instance of _CustomControlInReport 
+        /// </summary>		
+		public _CustomControlInReport():base("Access._CustomControlInReport")
 		{
-			CreateFromProgId("Access._CustomControlInReport");
 		}
 		
-		/// <param name="progId">progId</param>
-		public _CustomControlInReport(string progId)
+		/// <summary>
+        /// creates a new instance of _CustomControlInReport
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public _CustomControlInReport(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

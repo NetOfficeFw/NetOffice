@@ -57,7 +57,13 @@ namespace NetOffice.OfficeApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public COMAddIn()
+		public COMAddIn() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public COMAddIn(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string Description
@@ -86,6 +93,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string ProgId
@@ -100,6 +108,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public string Guid
@@ -114,6 +123,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public bool Connect
@@ -133,6 +143,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public COMObject Object
@@ -153,6 +164,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
 		public COMObject Parent

@@ -58,7 +58,13 @@ namespace NetOffice.OfficeApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DocumentLibraryVersions()
+		public DocumentLibraryVersions() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public DocumentLibraryVersions(string progId) : base(progId)
 		{
 		}
 		
@@ -68,6 +74,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
+		/// Get Property
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[SupportByLibrary("Office", 11,12,14)]
@@ -78,13 +85,14 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.DocumentLibraryVersion newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.DocumentLibraryVersion;
+			NetOffice.OfficeApi.DocumentLibraryVersion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.DocumentLibraryVersion.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentLibraryVersion;
 			return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public Int32 Count
@@ -99,6 +107,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public COMObject Parent
@@ -114,6 +123,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public bool IsVersioningEnabled

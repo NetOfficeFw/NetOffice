@@ -56,7 +56,13 @@ namespace NetOffice.PowerPointApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MouseTracker()
+		public MouseTracker() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public MouseTracker(string progId) : base(progId)
 		{
 		}
 		

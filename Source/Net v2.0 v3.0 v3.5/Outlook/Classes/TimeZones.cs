@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public TimeZones()
+		/// <summary>
+        /// creates a new instance of TimeZones 
+        /// </summary>		
+		public TimeZones():base("Outlook.TimeZones")
 		{
-			CreateFromProgId("Outlook.TimeZones");
 		}
 		
-		/// <param name="progId">progId</param>
-		public TimeZones(string progId)
+		/// <summary>
+        /// creates a new instance of TimeZones
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public TimeZones(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

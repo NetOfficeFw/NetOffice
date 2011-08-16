@@ -57,7 +57,13 @@ namespace NetOffice.OfficeApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public OfficeTheme()
+		public OfficeTheme() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public OfficeTheme(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public COMObject Parent
@@ -82,6 +89,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ThemeColorScheme ThemeColorScheme
@@ -90,13 +98,14 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ThemeColorScheme", paramsArray);
-				NetOffice.OfficeApi.ThemeColorScheme newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ThemeColorScheme;
+				NetOffice.OfficeApi.ThemeColorScheme newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ThemeColorScheme.LateBindingApiWrapperType) as NetOffice.OfficeApi.ThemeColorScheme;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ThemeFontScheme ThemeFontScheme
@@ -105,13 +114,14 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ThemeFontScheme", paramsArray);
-				NetOffice.OfficeApi.ThemeFontScheme newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ThemeFontScheme;
+				NetOffice.OfficeApi.ThemeFontScheme newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ThemeFontScheme.LateBindingApiWrapperType) as NetOffice.OfficeApi.ThemeFontScheme;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ThemeEffectScheme ThemeEffectScheme
@@ -120,7 +130,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ThemeEffectScheme", paramsArray);
-				NetOffice.OfficeApi.ThemeEffectScheme newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.ThemeEffectScheme;
+				NetOffice.OfficeApi.ThemeEffectScheme newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ThemeEffectScheme.LateBindingApiWrapperType) as NetOffice.OfficeApi.ThemeEffectScheme;
 				return newObject;
 			}
 		}

@@ -57,7 +57,13 @@ namespace NetOffice.ExcelApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SlicerCache()
+		public SlicerCache() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public SlicerCache(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
@@ -75,13 +82,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -96,6 +104,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public COMObject Parent
@@ -111,6 +120,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Int32 Index
@@ -125,6 +135,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public bool OLAP
@@ -139,6 +150,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType
@@ -153,6 +165,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
@@ -161,13 +174,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WorkbookConnection", paramsArray);
-				NetOffice.ExcelApi.WorkbookConnection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.WorkbookConnection;
+				NetOffice.ExcelApi.WorkbookConnection newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Slicers Slicers
@@ -176,13 +190,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Slicers", paramsArray);
-				NetOffice.ExcelApi.Slicers newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Slicers;
+				NetOffice.ExcelApi.Slicers newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Slicers.LateBindingApiWrapperType) as NetOffice.ExcelApi.Slicers;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SlicerPivotTables PivotTables
@@ -191,13 +206,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotTables", paramsArray);
-				NetOffice.ExcelApi.SlicerPivotTables newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerPivotTables;
+				NetOffice.ExcelApi.SlicerPivotTables newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerPivotTables.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerPivotTables;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SlicerCacheLevels SlicerCacheLevels
@@ -206,13 +222,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SlicerCacheLevels", paramsArray);
-				NetOffice.ExcelApi.SlicerCacheLevels newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerCacheLevels;
+				NetOffice.ExcelApi.SlicerCacheLevels newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerCacheLevels.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCacheLevels;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string Name
@@ -232,6 +249,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SlicerItems VisibleSlicerItems
@@ -240,13 +258,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VisibleSlicerItems", paramsArray);
-				NetOffice.ExcelApi.SlicerItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerItems;
+				NetOffice.ExcelApi.SlicerItems newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerItems.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerItems;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object VisibleSlicerItemsList
@@ -255,10 +274,9 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VisibleSlicerItemsList", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -275,6 +293,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SlicerItems SlicerItems
@@ -283,13 +302,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SlicerItems", paramsArray);
-				NetOffice.ExcelApi.SlicerItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SlicerItems;
+				NetOffice.ExcelApi.SlicerItems newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerItems.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerItems;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlSlicerCrossFilterType CrossFilterType
@@ -309,6 +329,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlSlicerSort SortItems
@@ -328,6 +349,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string SourceName
@@ -342,6 +364,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public bool SortUsingCustomLists
@@ -361,6 +384,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public bool ShowAllItems

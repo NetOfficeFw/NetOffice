@@ -56,7 +56,13 @@ namespace NetOffice.ADODBApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ADOCommandConstruction()
+		public ADOCommandConstruction() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public ADOCommandConstruction(string progId) : base(progId)
 		{
 		}
 		
@@ -66,6 +72,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public COMObject OLEDBCommand

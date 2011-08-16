@@ -48,7 +48,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -84,15 +84,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public _OptionButtonInOption()
+		/// <summary>
+        /// creates a new instance of _OptionButtonInOption 
+        /// </summary>		
+		public _OptionButtonInOption():base("Access._OptionButtonInOption")
 		{
-			CreateFromProgId("Access._OptionButtonInOption");
 		}
 		
-		/// <param name="progId">progId</param>
-		public _OptionButtonInOption(string progId)
+		/// <summary>
+        /// creates a new instance of _OptionButtonInOption
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public _OptionButtonInOption(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

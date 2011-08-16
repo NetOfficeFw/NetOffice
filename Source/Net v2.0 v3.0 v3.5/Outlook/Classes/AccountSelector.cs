@@ -34,7 +34,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -70,15 +70,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public AccountSelector()
+		/// <summary>
+        /// creates a new instance of AccountSelector 
+        /// </summary>		
+		public AccountSelector():base("Outlook.AccountSelector")
 		{
-			CreateFromProgId("Outlook.AccountSelector");
 		}
 		
-		/// <param name="progId">progId</param>
-		public AccountSelector(string progId)
+		/// <summary>
+        /// creates a new instance of AccountSelector
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public AccountSelector(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

@@ -56,7 +56,13 @@ namespace NetOffice.ExcelApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ISparkPoints()
+		public ISparkPoints() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public ISparkPoints(string progId) : base(progId)
 		{
 		}
 		
@@ -66,6 +72,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
@@ -74,13 +81,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -95,6 +103,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public COMObject Parent
@@ -110,6 +119,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SparkColor Negative
@@ -118,13 +128,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Negative", paramsArray);
-				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SparkColor;
+				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SparkColor.LateBindingApiWrapperType) as NetOffice.ExcelApi.SparkColor;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SparkColor Markers
@@ -133,13 +144,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Markers", paramsArray);
-				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SparkColor;
+				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SparkColor.LateBindingApiWrapperType) as NetOffice.ExcelApi.SparkColor;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SparkColor Highpoint
@@ -148,13 +160,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Highpoint", paramsArray);
-				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SparkColor;
+				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SparkColor.LateBindingApiWrapperType) as NetOffice.ExcelApi.SparkColor;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SparkColor Lowpoint
@@ -163,13 +176,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Lowpoint", paramsArray);
-				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SparkColor;
+				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SparkColor.LateBindingApiWrapperType) as NetOffice.ExcelApi.SparkColor;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SparkColor Firstpoint
@@ -178,13 +192,14 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Firstpoint", paramsArray);
-				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SparkColor;
+				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SparkColor.LateBindingApiWrapperType) as NetOffice.ExcelApi.SparkColor;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SparkColor Lastpoint
@@ -193,7 +208,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Lastpoint", paramsArray);
-				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.SparkColor;
+				NetOffice.ExcelApi.SparkColor newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SparkColor.LateBindingApiWrapperType) as NetOffice.ExcelApi.SparkColor;
 				return newObject;
 			}
 		}

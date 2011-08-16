@@ -44,7 +44,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -80,15 +80,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public OlkContactPhoto()
+		/// <summary>
+        /// creates a new instance of OlkContactPhoto 
+        /// </summary>		
+		public OlkContactPhoto():base("Outlook.OlkContactPhoto")
 		{
-			CreateFromProgId("Outlook.OlkContactPhoto");
 		}
 		
-		/// <param name="progId">progId</param>
-		public OlkContactPhoto(string progId)
+		/// <summary>
+        /// creates a new instance of OlkContactPhoto
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public OlkContactPhoto(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

@@ -57,7 +57,13 @@ namespace NetOffice.PowerPointApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPDropDownEdit()
+		public PPDropDownEdit() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public PPDropDownEdit(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPStrings Strings
@@ -75,13 +82,14 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Strings", paramsArray);
-				NetOffice.PowerPointApi.PPStrings newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.PPStrings;
+				NetOffice.PowerPointApi.PPStrings newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.PPStrings.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPStrings;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 FocusItem
@@ -101,6 +109,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public string OnSelectionChange
@@ -120,6 +129,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public string OnEdit

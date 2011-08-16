@@ -32,7 +32,7 @@ namespace NetOffice.OWC10Api
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		public NumberFormat()
+		/// <summary>
+        /// creates a new instance of NumberFormat 
+        /// </summary>		
+		public NumberFormat():base("OWC10.NumberFormat")
 		{
-			CreateFromProgId("OWC10.NumberFormat");
 		}
 		
-		/// <param name="progId">progId</param>
-		public NumberFormat(string progId)
+		/// <summary>
+        /// creates a new instance of NumberFormat
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public NumberFormat(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

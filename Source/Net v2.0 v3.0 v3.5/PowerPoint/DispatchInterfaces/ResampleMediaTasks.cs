@@ -57,7 +57,13 @@ namespace NetOffice.PowerPointApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ResampleMediaTasks()
+		public ResampleMediaTasks() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public ResampleMediaTasks(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 PercentComplete
@@ -95,7 +102,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.ResampleMediaTask newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.ResampleMediaTask;
+				NetOffice.PowerPointApi.ResampleMediaTask newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.ResampleMediaTask.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ResampleMediaTask;
 				return newObject;
 			}
 		}

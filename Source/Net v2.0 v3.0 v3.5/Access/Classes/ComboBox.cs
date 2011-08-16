@@ -52,7 +52,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -88,15 +88,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public ComboBox()
+		/// <summary>
+        /// creates a new instance of ComboBox 
+        /// </summary>		
+		public ComboBox():base("Access.ComboBox")
 		{
-			CreateFromProgId("Access.ComboBox");
 		}
 		
-		/// <param name="progId">progId</param>
-		public ComboBox(string progId)
+		/// <summary>
+        /// creates a new instance of ComboBox
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public ComboBox(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

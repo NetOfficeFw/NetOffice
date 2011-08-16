@@ -57,7 +57,13 @@ namespace NetOffice.ExcelApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ProtectedViewWindow()
+		public ProtectedViewWindow() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public ProtectedViewWindow(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string _Default
@@ -81,6 +88,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string Caption
@@ -100,6 +108,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public bool EnableResize
@@ -119,6 +128,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Double Height
@@ -138,6 +148,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Double Left
@@ -157,6 +168,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Double Top
@@ -176,6 +188,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Double Width
@@ -195,6 +208,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public bool Visible
@@ -214,6 +228,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string SourceName
@@ -228,6 +243,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string SourcePath
@@ -242,6 +258,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlProtectedViewWindowState WindowState
@@ -261,6 +278,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Workbook Workbook
@@ -269,7 +287,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Workbook", paramsArray);
-				NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
+				NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
 				return newObject;
 			}
 		}
@@ -309,7 +327,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(writeResPassword, updateLinks);
 			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 
@@ -321,7 +339,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ExcelApi.Workbook;
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
 			return newObject;
 		}
 

@@ -32,7 +32,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public MacroError()
+		/// <summary>
+        /// creates a new instance of MacroError 
+        /// </summary>		
+		public MacroError():base("Access.MacroError")
 		{
-			CreateFromProgId("Access.MacroError");
 		}
 		
-		/// <param name="progId">progId</param>
-		public MacroError(string progId)
+		/// <summary>
+        /// creates a new instance of MacroError
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public MacroError(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

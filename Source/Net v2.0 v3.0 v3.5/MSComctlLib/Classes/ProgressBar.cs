@@ -43,7 +43,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -79,15 +79,19 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		public ProgressBar()
+		/// <summary>
+        /// creates a new instance of ProgressBar 
+        /// </summary>		
+		public ProgressBar():base("MSComctlLib.ProgressBar")
 		{
-			CreateFromProgId("MSComctlLib.ProgressBar");
 		}
 		
-		/// <param name="progId">progId</param>
-		public ProgressBar(string progId)
+		/// <summary>
+        /// creates a new instance of ProgressBar
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public ProgressBar(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

@@ -35,7 +35,7 @@ namespace NetOffice.OfficeApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -71,15 +71,19 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		public CustomTaskPane()
+		/// <summary>
+        /// creates a new instance of CustomTaskPane 
+        /// </summary>		
+		public CustomTaskPane():base("Office.CustomTaskPane")
 		{
-			CreateFromProgId("Office.CustomTaskPane");
 		}
 		
-		/// <param name="progId">progId</param>
-		public CustomTaskPane(string progId)
+		/// <summary>
+        /// creates a new instance of CustomTaskPane
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public CustomTaskPane(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

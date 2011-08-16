@@ -56,7 +56,13 @@ namespace NetOffice.OfficeApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IDocumentInspector()
+		public IDocumentInspector() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IDocumentInspector(string progId) : base(progId)
 		{
 		}
 		

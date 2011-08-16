@@ -46,7 +46,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -82,15 +82,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public OlkCheckBox()
+		/// <summary>
+        /// creates a new instance of OlkCheckBox 
+        /// </summary>		
+		public OlkCheckBox():base("Outlook.OlkCheckBox")
 		{
-			CreateFromProgId("Outlook.OlkCheckBox");
 		}
 		
-		/// <param name="progId">progId</param>
-		public OlkCheckBox(string progId)
+		/// <summary>
+        /// creates a new instance of OlkCheckBox
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public OlkCheckBox(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

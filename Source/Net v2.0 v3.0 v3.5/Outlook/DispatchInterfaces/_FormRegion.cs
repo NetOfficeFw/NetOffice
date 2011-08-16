@@ -57,7 +57,13 @@ namespace NetOffice.OutlookApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _FormRegion()
+		public _FormRegion() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public _FormRegion(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
@@ -82,6 +89,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -96,6 +104,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -111,6 +120,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public COMObject Parent
@@ -126,6 +136,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public bool IsExpanded
@@ -140,6 +151,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public COMObject Form
@@ -155,6 +167,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string Detail
@@ -174,6 +187,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public COMObject Item
@@ -189,6 +203,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Inspector Inspector
@@ -204,6 +219,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlFormRegionMode FormRegionMode
@@ -218,6 +234,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public Int32 Language
@@ -232,6 +249,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string DisplayName
@@ -246,6 +264,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string InternalName
@@ -260,6 +279,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public bool SuppressControlReplacement
@@ -279,6 +299,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public bool EnableAutoLayout
@@ -298,6 +319,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public bool Visible

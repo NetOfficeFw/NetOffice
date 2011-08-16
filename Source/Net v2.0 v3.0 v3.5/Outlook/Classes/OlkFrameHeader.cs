@@ -33,7 +33,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -69,15 +69,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public OlkFrameHeader()
+		/// <summary>
+        /// creates a new instance of OlkFrameHeader 
+        /// </summary>		
+		public OlkFrameHeader():base("Outlook.OlkFrameHeader")
 		{
-			CreateFromProgId("Outlook.OlkFrameHeader");
 		}
 		
-		/// <param name="progId">progId</param>
-		public OlkFrameHeader(string progId)
+		/// <summary>
+        /// creates a new instance of OlkFrameHeader
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public OlkFrameHeader(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

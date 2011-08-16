@@ -54,7 +54,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -90,15 +90,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public WebBrowserControl()
+		/// <summary>
+        /// creates a new instance of WebBrowserControl 
+        /// </summary>		
+		public WebBrowserControl():base("Access.WebBrowserControl")
 		{
-			CreateFromProgId("Access.WebBrowserControl");
 		}
 		
-		/// <param name="progId">progId</param>
-		public WebBrowserControl(string progId)
+		/// <summary>
+        /// creates a new instance of WebBrowserControl
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public WebBrowserControl(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

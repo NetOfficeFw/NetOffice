@@ -59,7 +59,7 @@ namespace NetOffice.OWC10Api
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -95,15 +95,19 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		public ChartSpace()
+		/// <summary>
+        /// creates a new instance of ChartSpace 
+        /// </summary>		
+		public ChartSpace():base("OWC10.ChartSpace")
 		{
-			CreateFromProgId("OWC10.ChartSpace");
 		}
 		
-		/// <param name="progId">progId</param>
-		public ChartSpace(string progId)
+		/// <summary>
+        /// creates a new instance of ChartSpace
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public ChartSpace(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

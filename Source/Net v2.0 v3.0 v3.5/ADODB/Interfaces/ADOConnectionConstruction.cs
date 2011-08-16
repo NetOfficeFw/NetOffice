@@ -56,7 +56,13 @@ namespace NetOffice.ADODBApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ADOConnectionConstruction()
+		public ADOConnectionConstruction() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public ADOConnectionConstruction(string progId) : base(progId)
 		{
 		}
 		

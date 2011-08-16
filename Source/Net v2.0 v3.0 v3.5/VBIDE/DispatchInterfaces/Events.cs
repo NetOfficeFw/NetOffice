@@ -57,7 +57,13 @@ namespace NetOffice.VBIDEApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Events()
+		public Events() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Events(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get Property
 		/// </summary>
 		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -74,12 +81,13 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
 			object returnItem = Invoker.PropertyGet(this, "ReferencesEvents", paramsArray);
-			NetOffice.VBIDEApi.ReferencesEvents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.ReferencesEvents;
+			NetOffice.VBIDEApi.ReferencesEvents newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.ReferencesEvents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.ReferencesEvents;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
+		/// Get Property
 		/// </summary>
 		/// <param name="CommandBarControl">object CommandBarControl</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -87,7 +95,7 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commandBarControl);
 			object returnItem = Invoker.PropertyGet(this, "CommandBarEvents", paramsArray);
-			NetOffice.VBIDEApi.CommandBarEvents newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.CommandBarEvents;
+			NetOffice.VBIDEApi.CommandBarEvents newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.CommandBarEvents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CommandBarEvents;
 			return newObject;
 		}
 

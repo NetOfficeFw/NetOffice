@@ -55,7 +55,7 @@ namespace NetOffice.OWC10Api
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -91,15 +91,19 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		public DataSourceControl()
+		/// <summary>
+        /// creates a new instance of DataSourceControl 
+        /// </summary>		
+		public DataSourceControl():base("OWC10.DataSourceControl")
 		{
-			CreateFromProgId("OWC10.DataSourceControl");
 		}
 		
-		/// <param name="progId">progId</param>
-		public DataSourceControl(string progId)
+		/// <summary>
+        /// creates a new instance of DataSourceControl
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public DataSourceControl(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

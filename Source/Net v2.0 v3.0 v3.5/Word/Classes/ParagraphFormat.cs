@@ -32,7 +32,7 @@ namespace NetOffice.WordApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		public ParagraphFormat()
+		/// <summary>
+        /// creates a new instance of ParagraphFormat 
+        /// </summary>		
+		public ParagraphFormat():base("Word.ParagraphFormat")
 		{
-			CreateFromProgId("Word.ParagraphFormat");
 		}
 		
-		/// <param name="progId">progId</param>
-		public ParagraphFormat(string progId)
+		/// <summary>
+        /// creates a new instance of ParagraphFormat
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public ParagraphFormat(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

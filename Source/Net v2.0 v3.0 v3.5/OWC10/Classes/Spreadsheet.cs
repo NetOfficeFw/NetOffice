@@ -64,7 +64,7 @@ namespace NetOffice.OWC10Api
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -100,15 +100,19 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		public Spreadsheet()
+		/// <summary>
+        /// creates a new instance of Spreadsheet 
+        /// </summary>		
+		public Spreadsheet():base("OWC10.Spreadsheet")
 		{
-			CreateFromProgId("OWC10.Spreadsheet");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Spreadsheet(string progId)
+		/// <summary>
+        /// creates a new instance of Spreadsheet
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Spreadsheet(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

@@ -57,7 +57,13 @@ namespace NetOffice.PowerPointApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPSpinner()
+		public PPSpinner() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public PPSpinner(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 Minimum
@@ -86,6 +93,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 Maximum
@@ -105,6 +113,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 Increment
@@ -124,6 +133,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 PageChange
@@ -143,6 +153,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 CurrentValue
@@ -162,6 +173,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public string OnAChange

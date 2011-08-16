@@ -36,7 +36,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -72,15 +72,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public SubForm()
+		/// <summary>
+        /// creates a new instance of SubForm 
+        /// </summary>		
+		public SubForm():base("Access.SubForm")
 		{
-			CreateFromProgId("Access.SubForm");
 		}
 		
-		/// <param name="progId">progId</param>
-		public SubForm(string progId)
+		/// <summary>
+        /// creates a new instance of SubForm
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public SubForm(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

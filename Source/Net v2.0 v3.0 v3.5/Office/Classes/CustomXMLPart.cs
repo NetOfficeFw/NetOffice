@@ -36,7 +36,7 @@ namespace NetOffice.OfficeApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -72,15 +72,19 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		public CustomXMLPart()
+		/// <summary>
+        /// creates a new instance of CustomXMLPart 
+        /// </summary>		
+		public CustomXMLPart():base("Office.CustomXMLPart")
 		{
-			CreateFromProgId("Office.CustomXMLPart");
 		}
 		
-		/// <param name="progId">progId</param>
-		public CustomXMLPart(string progId)
+		/// <summary>
+        /// creates a new instance of CustomXMLPart
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public CustomXMLPart(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

@@ -35,7 +35,7 @@ namespace LateBindingApi.Core
         {
             Method(comObject, name, null);
         }
-
+               
         /// <summary>
         /// perform method as latebind call with parameters
         /// </summary>
@@ -53,7 +53,7 @@ namespace LateBindingApi.Core
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
-
+       
         /// <summary>
         /// perform method as latebind call with parameters 
         /// </summary>
@@ -529,24 +529,6 @@ namespace LateBindingApi.Core
                 return null;
         }
 
-        #endregion
-
-        #region Type
-
-        /// <summary>
-        /// returns the Type for expression or null if param not set
-        /// </summary>
-        /// <param name="expression"></param>
-        /// <returns></returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type GetObjectType(object expression)
-        {
-            if (null == expression)
-                return null;
-            else
-                return expression.GetType();
-        }
-
-        #endregion
+        #endregion      
     }
 }

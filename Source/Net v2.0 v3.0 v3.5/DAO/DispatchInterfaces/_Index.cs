@@ -57,7 +57,13 @@ namespace NetOffice.DAOApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Index()
+		public _Index() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public _Index(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Name
@@ -86,6 +93,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Foreign
@@ -100,6 +108,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Unique
@@ -119,6 +128,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Clustered
@@ -138,6 +148,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Required
@@ -157,6 +168,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool IgnoreNulls
@@ -176,6 +188,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Primary
@@ -195,6 +208,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 DistinctCount
@@ -209,6 +223,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object Fields
@@ -217,10 +232,9 @@ namespace NetOffice.DAOApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -250,7 +264,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, size);
 			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Field;
+			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
 			return newObject;
 		}
 
@@ -262,7 +276,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Field;
+			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
 			return newObject;
 		}
 

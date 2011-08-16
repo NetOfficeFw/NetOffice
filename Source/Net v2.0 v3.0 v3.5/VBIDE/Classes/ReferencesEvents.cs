@@ -35,7 +35,7 @@ namespace NetOffice.VBIDEApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -71,15 +71,19 @@ namespace NetOffice.VBIDEApi
 		{
 		}
 		
-		public ReferencesEvents()
+		/// <summary>
+        /// creates a new instance of ReferencesEvents 
+        /// </summary>		
+		public ReferencesEvents():base("VBIDE.ReferencesEvents")
 		{
-			CreateFromProgId("VBIDE.ReferencesEvents");
 		}
 		
-		/// <param name="progId">progId</param>
-		public ReferencesEvents(string progId)
+		/// <summary>
+        /// creates a new instance of ReferencesEvents
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public ReferencesEvents(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

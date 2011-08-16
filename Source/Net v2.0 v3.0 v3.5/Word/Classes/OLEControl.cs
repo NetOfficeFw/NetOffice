@@ -35,7 +35,7 @@ namespace NetOffice.WordApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -71,15 +71,19 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		public OLEControl()
+		/// <summary>
+        /// creates a new instance of OLEControl 
+        /// </summary>		
+		public OLEControl():base("Word.OLEControl")
 		{
-			CreateFromProgId("Word.OLEControl");
 		}
 		
-		/// <param name="progId">progId</param>
-		public OLEControl(string progId)
+		/// <summary>
+        /// creates a new instance of OLEControl
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public OLEControl(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

@@ -48,7 +48,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -84,15 +84,19 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		public Toolbar()
+		/// <summary>
+        /// creates a new instance of Toolbar 
+        /// </summary>		
+		public Toolbar():base("MSComctlLib.Toolbar")
 		{
-			CreateFromProgId("MSComctlLib.Toolbar");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Toolbar(string progId)
+		/// <summary>
+        /// creates a new instance of Toolbar
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Toolbar(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

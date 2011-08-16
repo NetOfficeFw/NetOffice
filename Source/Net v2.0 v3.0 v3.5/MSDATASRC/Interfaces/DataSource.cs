@@ -56,7 +56,13 @@ namespace NetOffice.MSDATASRCApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DataSource()
+		public DataSource() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public DataSource(string progId) : base(progId)
 		{
 		}
 		

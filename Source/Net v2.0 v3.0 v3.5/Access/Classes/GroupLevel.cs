@@ -32,7 +32,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public GroupLevel()
+		/// <summary>
+        /// creates a new instance of GroupLevel 
+        /// </summary>		
+		public GroupLevel():base("Access.GroupLevel")
 		{
-			CreateFromProgId("Access.GroupLevel");
 		}
 		
-		/// <param name="progId">progId</param>
-		public GroupLevel(string progId)
+		/// <summary>
+        /// creates a new instance of GroupLevel
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public GroupLevel(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

@@ -45,7 +45,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -81,15 +81,19 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		public ImageCombo()
+		/// <summary>
+        /// creates a new instance of ImageCombo 
+        /// </summary>		
+		public ImageCombo():base("MSComctlLib.ImageCombo")
 		{
-			CreateFromProgId("MSComctlLib.ImageCombo");
 		}
 		
-		/// <param name="progId">progId</param>
-		public ImageCombo(string progId)
+		/// <summary>
+        /// creates a new instance of ImageCombo
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public ImageCombo(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

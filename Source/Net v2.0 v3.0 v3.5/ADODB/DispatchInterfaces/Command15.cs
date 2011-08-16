@@ -57,7 +57,13 @@ namespace NetOffice.ADODBApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Command15()
+		public Command15() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Command15(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Connection ActiveConnection
@@ -75,7 +82,7 @@ namespace NetOffice.ADODBApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveConnection", paramsArray);
-				NetOffice.ADODBApi._Connection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Connection;
+				NetOffice.ADODBApi._Connection newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi._Connection.LateBindingApiWrapperType) as NetOffice.ADODBApi._Connection;
 				return newObject;
 			}
 			set
@@ -87,6 +94,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string CommandText
@@ -106,6 +114,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 CommandTimeout
@@ -125,6 +134,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public bool Prepared
@@ -144,6 +154,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Parameters Parameters
@@ -152,13 +163,14 @@ namespace NetOffice.ADODBApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parameters", paramsArray);
-				NetOffice.ADODBApi.Parameters newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi.Parameters;
+				NetOffice.ADODBApi.Parameters newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Parameters.LateBindingApiWrapperType) as NetOffice.ADODBApi.Parameters;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.CommandTypeEnum CommandType
@@ -178,6 +190,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string Name
@@ -210,7 +223,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected, parameters, options);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
@@ -227,7 +240,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size, value);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 
@@ -243,7 +256,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 

@@ -59,7 +59,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -95,15 +95,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public MailItem()
+		/// <summary>
+        /// creates a new instance of MailItem 
+        /// </summary>		
+		public MailItem():base("Outlook.MailItem")
 		{
-			CreateFromProgId("Outlook.MailItem");
 		}
 		
-		/// <param name="progId">progId</param>
-		public MailItem(string progId)
+		/// <summary>
+        /// creates a new instance of MailItem
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public MailItem(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

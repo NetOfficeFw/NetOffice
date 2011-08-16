@@ -44,7 +44,7 @@ namespace NetOffice.ADODBApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -80,15 +80,19 @@ namespace NetOffice.ADODBApi
 		{
 		}
 		
-		public Recordset()
+		/// <summary>
+        /// creates a new instance of Recordset 
+        /// </summary>		
+		public Recordset():base("ADODB.Recordset")
 		{
-			CreateFromProgId("ADODB.Recordset");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Recordset(string progId)
+		/// <summary>
+        /// creates a new instance of Recordset
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Recordset(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

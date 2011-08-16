@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public NotesModule()
+		/// <summary>
+        /// creates a new instance of NotesModule 
+        /// </summary>		
+		public NotesModule():base("Outlook.NotesModule")
 		{
-			CreateFromProgId("Outlook.NotesModule");
 		}
 		
-		/// <param name="progId">progId</param>
-		public NotesModule(string progId)
+		/// <summary>
+        /// creates a new instance of NotesModule
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public NotesModule(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

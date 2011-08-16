@@ -48,7 +48,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -84,15 +84,19 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		public Slider()
+		/// <summary>
+        /// creates a new instance of Slider 
+        /// </summary>		
+		public Slider():base("MSComctlLib.Slider")
 		{
-			CreateFromProgId("MSComctlLib.Slider");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Slider(string progId)
+		/// <summary>
+        /// creates a new instance of Slider
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Slider(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

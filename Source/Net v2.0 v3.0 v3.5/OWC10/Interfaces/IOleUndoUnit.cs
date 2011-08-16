@@ -56,7 +56,13 @@ namespace NetOffice.OWC10Api
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IOleUndoUnit()
+		public IOleUndoUnit() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IOleUndoUnit(string progId) : base(progId)
 		{
 		}
 		

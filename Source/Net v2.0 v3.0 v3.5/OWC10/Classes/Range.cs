@@ -34,7 +34,7 @@ namespace NetOffice.OWC10Api
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -70,15 +70,19 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		public Range()
+		/// <summary>
+        /// creates a new instance of Range 
+        /// </summary>		
+		public Range():base("OWC10.Range")
 		{
-			CreateFromProgId("OWC10.Range");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Range(string progId)
+		/// <summary>
+        /// creates a new instance of Range
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Range(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

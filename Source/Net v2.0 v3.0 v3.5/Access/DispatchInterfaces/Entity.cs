@@ -57,7 +57,13 @@ namespace NetOffice.AccessApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Entity()
+		public Entity() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Entity(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public COMObject Parent
@@ -82,6 +89,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string Name
@@ -96,6 +104,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.Operations Operations
@@ -104,7 +113,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Operations", paramsArray);
-				NetOffice.AccessApi.Operations newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Operations;
+				NetOffice.AccessApi.Operations newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Operations.LateBindingApiWrapperType) as NetOffice.AccessApi.Operations;
 				return newObject;
 			}
 		}

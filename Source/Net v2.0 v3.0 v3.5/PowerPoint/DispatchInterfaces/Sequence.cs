@@ -57,7 +57,13 @@ namespace NetOffice.PowerPointApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sequence()
+		public Sequence() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Sequence(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -75,13 +82,14 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public COMObject Parent
@@ -111,7 +119,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Effect;
+				NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Effect;
 				return newObject;
 			}
 		}
@@ -129,7 +137,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shape, effectId, level, trigger, index);
 			object returnItem = Invoker.MethodReturn(this, "AddEffect", paramsArray);
-			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
@@ -143,7 +151,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, index);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
-			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
@@ -156,7 +164,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shape);
 			object returnItem = Invoker.MethodReturn(this, "FindFirstAnimationFor", paramsArray);
-			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
@@ -169,7 +177,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(click);
 			object returnItem = Invoker.MethodReturn(this, "FindFirstAnimationForClick", paramsArray);
-			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
@@ -183,7 +191,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, level);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToBuildLevel", paramsArray);
-			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
@@ -199,7 +207,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, after, dimColor, dimSchemeColor);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToAfterEffect", paramsArray);
-			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
@@ -213,7 +221,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, animateBackground);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToAnimateBackground", paramsArray);
-			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
@@ -227,7 +235,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, animateInReverse);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToAnimateInReverse", paramsArray);
-			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
@@ -241,7 +249,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, unitEffect);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToTextUnitEffect", paramsArray);
-			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 
@@ -259,7 +267,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pShape, effectId, trigger, pTriggerShape, bookmark, level);
 			object returnItem = Invoker.MethodReturn(this, "AddTriggerEffect", paramsArray);
-			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.Effect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Effect;
 			return newObject;
 		}
 

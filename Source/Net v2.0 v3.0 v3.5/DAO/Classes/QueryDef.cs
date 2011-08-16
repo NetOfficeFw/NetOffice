@@ -32,7 +32,7 @@ namespace NetOffice.DAOApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.DAOApi
 		{
 		}
 		
-		public QueryDef()
+		/// <summary>
+        /// creates a new instance of QueryDef 
+        /// </summary>		
+		public QueryDef():base("DAO.QueryDef")
 		{
-			CreateFromProgId("DAO.QueryDef");
 		}
 		
-		/// <param name="progId">progId</param>
-		public QueryDef(string progId)
+		/// <summary>
+        /// creates a new instance of QueryDef
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public QueryDef(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

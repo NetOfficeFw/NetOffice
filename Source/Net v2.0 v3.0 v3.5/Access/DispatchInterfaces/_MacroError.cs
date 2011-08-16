@@ -57,7 +57,13 @@ namespace NetOffice.AccessApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _MacroError()
+		public _MacroError() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public _MacroError(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string Condition
@@ -81,6 +88,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string ActionName
@@ -95,6 +103,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string Arguments
@@ -109,6 +118,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string Description
@@ -123,6 +133,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public Int32 Number
@@ -137,6 +148,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string MacroName

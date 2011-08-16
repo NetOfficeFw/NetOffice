@@ -56,7 +56,13 @@ namespace NetOffice.OWC10Api
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IDataPageDesigner()
+		public IDataPageDesigner() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IDataPageDesigner(string progId) : base(progId)
 		{
 		}
 		

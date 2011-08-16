@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public SelectNamesDialog()
+		/// <summary>
+        /// creates a new instance of SelectNamesDialog 
+        /// </summary>		
+		public SelectNamesDialog():base("Outlook.SelectNamesDialog")
 		{
-			CreateFromProgId("Outlook.SelectNamesDialog");
 		}
 		
-		/// <param name="progId">progId</param>
-		public SelectNamesDialog(string progId)
+		/// <summary>
+        /// creates a new instance of SelectNamesDialog
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public SelectNamesDialog(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

@@ -57,7 +57,13 @@ namespace NetOffice.MSComctlLibApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IListItem()
+		public IListItem() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IListItem(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string Default
@@ -86,6 +93,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string Text
@@ -105,6 +113,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Ghosted
@@ -124,6 +133,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Height
@@ -143,6 +153,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public object Icon
@@ -151,10 +162,9 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Icon", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -171,6 +181,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 Index
@@ -190,6 +201,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string Key
@@ -209,6 +221,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Left
@@ -228,6 +241,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Selected
@@ -247,6 +261,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public object SmallIcon
@@ -255,10 +270,9 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmallIcon", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -275,6 +289,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public object Tag
@@ -283,10 +298,9 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Tag", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -303,6 +317,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Top
@@ -322,6 +337,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Width
@@ -341,6 +357,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		/// <param name="Index">Int16 Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -353,6 +370,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		/// <param name="Index">Int16 Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -364,6 +382,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListSubItems ListSubItems
@@ -372,7 +391,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListSubItems", paramsArray);
-				NetOffice.MSComctlLibApi.IListSubItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItems;
+				NetOffice.MSComctlLibApi.IListSubItems newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSComctlLibApi.IListSubItems.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IListSubItems;
 				return newObject;
 			}
 			set
@@ -384,6 +403,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Checked
@@ -403,6 +423,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 ForeColor
@@ -422,6 +443,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string ToolTipText
@@ -441,6 +463,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Bold

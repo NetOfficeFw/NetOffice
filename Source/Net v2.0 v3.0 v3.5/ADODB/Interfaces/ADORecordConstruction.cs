@@ -56,7 +56,13 @@ namespace NetOffice.ADODBApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ADORecordConstruction()
+		public ADORecordConstruction() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public ADORecordConstruction(string progId) : base(progId)
 		{
 		}
 		
@@ -66,6 +72,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public COMObject Row
@@ -86,6 +93,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public COMObject ParentRow

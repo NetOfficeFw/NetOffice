@@ -34,7 +34,7 @@ namespace NetOffice.OfficeApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -70,15 +70,19 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		public CommandBars()
+		/// <summary>
+        /// creates a new instance of CommandBars 
+        /// </summary>		
+		public CommandBars():base("Office.CommandBars")
 		{
-			CreateFromProgId("Office.CommandBars");
 		}
 		
-		/// <param name="progId">progId</param>
-		public CommandBars(string progId)
+		/// <summary>
+        /// creates a new instance of CommandBars
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public CommandBars(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

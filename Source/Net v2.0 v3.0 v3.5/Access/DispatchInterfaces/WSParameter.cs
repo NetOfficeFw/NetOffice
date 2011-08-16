@@ -57,7 +57,13 @@ namespace NetOffice.AccessApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public WSParameter()
+		public WSParameter() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public WSParameter(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public COMObject Parent
@@ -82,6 +89,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string Name
@@ -96,6 +104,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 Type

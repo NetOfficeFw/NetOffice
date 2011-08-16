@@ -57,7 +57,13 @@ namespace NetOffice.AccessApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _WebBrowserControl()
+		public _WebBrowserControl() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public _WebBrowserControl(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.Application Application
@@ -75,13 +82,14 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Application.LateBindingApiWrapperType) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public COMObject Parent
@@ -97,6 +105,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public object OldValue
@@ -105,10 +114,9 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OldValue", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -120,6 +128,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.Properties Properties
@@ -128,13 +137,14 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				NetOffice.AccessApi.Properties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Properties;
+				NetOffice.AccessApi.Properties newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Properties.LateBindingApiWrapperType) as NetOffice.AccessApi.Properties;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.Children Controls
@@ -143,13 +153,14 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Controls", paramsArray);
-				NetOffice.AccessApi.Children newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Children;
+				NetOffice.AccessApi.Children newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Children.LateBindingApiWrapperType) as NetOffice.AccessApi.Children;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi._Hyperlink Hyperlink
@@ -165,6 +176,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public object Value
@@ -173,10 +185,9 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-				Type returnItemType = Invoker.GetObjectType(returnItem);
-				if ((null != returnItemType) && (true == returnItemType.IsCOMObject))
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -193,6 +204,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string ControlSource
@@ -212,6 +224,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte DisplayWhen
@@ -231,6 +244,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public bool Enabled
@@ -250,6 +264,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.Enums.AcWebBrowserState ReadyState
@@ -264,6 +279,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int32 Progress
@@ -278,6 +294,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.Enums.AcWebBrowserScrollBars ScrollBars
@@ -297,6 +314,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int32 ScrollTop
@@ -316,6 +334,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int32 ScrollLeft
@@ -335,6 +354,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string Transform
@@ -354,6 +374,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string LocationURL
@@ -368,6 +389,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public COMObject Object
@@ -383,6 +405,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 Left
@@ -402,6 +425,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 Top
@@ -421,6 +445,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 Width
@@ -440,6 +465,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 Height
@@ -459,6 +485,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 SpecialEffect
@@ -478,6 +505,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte BorderStyle
@@ -497,6 +525,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int32 BorderColor
@@ -516,6 +545,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte BorderWidth
@@ -535,6 +565,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte BorderLineStyle
@@ -554,6 +585,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 Section
@@ -573,6 +605,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnMouseDown
@@ -592,6 +625,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnMouseMove
@@ -611,6 +645,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnMouseUp
@@ -630,6 +665,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnKeyDown
@@ -649,6 +685,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnKeyUp
@@ -668,6 +705,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnKeyPress
@@ -687,6 +725,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string Name
@@ -706,6 +745,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.Enums.AcLayoutType Layout
@@ -720,6 +760,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 LeftPadding
@@ -739,6 +780,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 TopPadding
@@ -758,6 +800,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 RightPadding
@@ -777,6 +820,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 BottomPadding
@@ -796,6 +840,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte GridlineStyleLeft
@@ -815,6 +860,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte GridlineStyleTop
@@ -834,6 +880,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte GridlineStyleRight
@@ -853,6 +900,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte GridlineStyleBottom
@@ -872,6 +920,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte GridlineWidthLeft
@@ -891,6 +940,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte GridlineWidthTop
@@ -910,6 +960,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte GridlineWidthRight
@@ -929,6 +980,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte GridlineWidthBottom
@@ -948,6 +1000,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int32 GridlineColor
@@ -967,6 +1020,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
@@ -986,6 +1040,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
@@ -1005,6 +1060,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnClickMacro
@@ -1024,6 +1080,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnDblClickMacro
@@ -1043,6 +1100,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnMouseDownMacro
@@ -1062,6 +1120,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnMouseMoveMacro
@@ -1081,6 +1140,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnMouseUpMacro
@@ -1100,6 +1160,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnKeyDownMacro
@@ -1119,6 +1180,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnKeyUpMacro
@@ -1138,6 +1200,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnKeyPressMacro
@@ -1157,6 +1220,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int32 LayoutID
@@ -1171,6 +1235,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnBeforeNavigate
@@ -1190,6 +1255,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnDocumentComplete
@@ -1209,6 +1275,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnNavigateError
@@ -1228,6 +1295,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnProgressChange
@@ -1247,6 +1315,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnUpdated
@@ -1266,6 +1335,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnBeforeNavigateMacro
@@ -1285,6 +1355,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnDocumentCompleteMacro
@@ -1304,6 +1375,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnNavigateErrorMacro
@@ -1323,6 +1395,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnProgressChangeMacro
@@ -1342,6 +1415,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string OnUpdatedMacro
@@ -1361,6 +1435,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public bool TabStop
@@ -1380,6 +1455,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int16 TabIndex
@@ -1399,6 +1475,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public bool Visible
@@ -1418,6 +1495,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public bool InSelection
@@ -1437,6 +1515,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public byte ControlType
@@ -1456,6 +1535,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int32 BorderThemeColorIndex
@@ -1475,6 +1555,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Single BorderTint
@@ -1494,6 +1575,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Single BorderShade
@@ -1513,6 +1595,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int32 GridlineThemeColorIndex
@@ -1532,6 +1615,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Single GridlineTint
@@ -1551,6 +1635,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Single GridlineShade
@@ -1570,6 +1655,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string StatusBarText
@@ -1589,6 +1675,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string ControlTipText
@@ -1608,6 +1695,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string EventProcPrefix
@@ -1627,6 +1715,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int32 HelpContextId
@@ -1646,6 +1735,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public string Tag
@@ -1727,10 +1817,9 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
 			object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
-			Type returnItemType = Invoker.GetObjectType(returnItem);
-			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -1748,10 +1837,9 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr);
 			object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
-			Type returnItemType = Invoker.GetObjectType(returnItem);
-			if ((null != returnItem) && (true == returnItemType.IsCOMObject))
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem, returnItemType);
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

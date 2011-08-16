@@ -56,7 +56,13 @@ namespace NetOffice.OutlookApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _IPageWrapCtrl()
+		public _IPageWrapCtrl() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public _IPageWrapCtrl(string progId) : base(progId)
 		{
 		}
 		
@@ -66,6 +72,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 10
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 10)]
 		public Int32 BackColor

@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public CalendarSharing()
+		/// <summary>
+        /// creates a new instance of CalendarSharing 
+        /// </summary>		
+		public CalendarSharing():base("Outlook.CalendarSharing")
 		{
-			CreateFromProgId("Outlook.CalendarSharing");
 		}
 		
-		/// <param name="progId">progId</param>
-		public CalendarSharing(string progId)
+		/// <summary>
+        /// creates a new instance of CalendarSharing
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public CalendarSharing(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

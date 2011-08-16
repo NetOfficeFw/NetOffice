@@ -32,7 +32,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public WizHook()
+		/// <summary>
+        /// creates a new instance of WizHook 
+        /// </summary>		
+		public WizHook():base("Access.WizHook")
 		{
-			CreateFromProgId("Access.WizHook");
 		}
 		
-		/// <param name="progId">progId</param>
-		public WizHook(string progId)
+		/// <summary>
+        /// creates a new instance of WizHook
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public WizHook(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

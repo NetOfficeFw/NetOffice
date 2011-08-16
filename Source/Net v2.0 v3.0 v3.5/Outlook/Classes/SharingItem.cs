@@ -58,7 +58,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -94,15 +94,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public SharingItem()
+		/// <summary>
+        /// creates a new instance of SharingItem 
+        /// </summary>		
+		public SharingItem():base("Outlook.SharingItem")
 		{
-			CreateFromProgId("Outlook.SharingItem");
 		}
 		
-		/// <param name="progId">progId</param>
-		public SharingItem(string progId)
+		/// <summary>
+        /// creates a new instance of SharingItem
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public SharingItem(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

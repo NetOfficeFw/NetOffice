@@ -32,7 +32,7 @@ namespace NetOffice.VBIDEApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.VBIDEApi
 		{
 		}
 		
-		public Windows()
+		/// <summary>
+        /// creates a new instance of Windows 
+        /// </summary>		
+		public Windows():base("VBIDE.Windows")
 		{
-			CreateFromProgId("VBIDE.Windows");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Windows(string progId)
+		/// <summary>
+        /// creates a new instance of Windows
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Windows(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

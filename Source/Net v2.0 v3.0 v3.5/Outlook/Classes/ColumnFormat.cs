@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public ColumnFormat()
+		/// <summary>
+        /// creates a new instance of ColumnFormat 
+        /// </summary>		
+		public ColumnFormat():base("Outlook.ColumnFormat")
 		{
-			CreateFromProgId("Outlook.ColumnFormat");
 		}
 		
-		/// <param name="progId">progId</param>
-		public ColumnFormat(string progId)
+		/// <summary>
+        /// creates a new instance of ColumnFormat
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public ColumnFormat(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

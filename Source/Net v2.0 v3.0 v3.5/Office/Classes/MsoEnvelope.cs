@@ -35,7 +35,7 @@ namespace NetOffice.OfficeApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -71,15 +71,19 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		public MsoEnvelope()
+		/// <summary>
+        /// creates a new instance of MsoEnvelope 
+        /// </summary>		
+		public MsoEnvelope():base("Office.MsoEnvelope")
 		{
-			CreateFromProgId("Office.MsoEnvelope");
 		}
 		
-		/// <param name="progId">progId</param>
-		public MsoEnvelope(string progId)
+		/// <summary>
+        /// creates a new instance of MsoEnvelope
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public MsoEnvelope(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

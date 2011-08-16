@@ -32,7 +32,7 @@ namespace NetOffice.WordApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		public Global()
+		/// <summary>
+        /// creates a new instance of Global 
+        /// </summary>		
+		public Global():base("Word.Global")
 		{
-			CreateFromProgId("Word.Global");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Global(string progId)
+		/// <summary>
+        /// creates a new instance of Global
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Global(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

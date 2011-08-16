@@ -32,7 +32,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public Application()
+		/// <summary>
+        /// creates a new instance of Application 
+        /// </summary>		
+		public Application():base("Access.Application")
 		{
-			CreateFromProgId("Access.Application");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Application(string progId)
+		/// <summary>
+        /// creates a new instance of Application
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Application(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

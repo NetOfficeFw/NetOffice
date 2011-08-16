@@ -56,7 +56,13 @@ namespace NetOffice.VBIDEApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _VBProjectsEvents()
+		public _VBProjectsEvents() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public _VBProjectsEvents(string progId) : base(progId)
 		{
 		}
 		

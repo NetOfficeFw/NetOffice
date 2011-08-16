@@ -57,7 +57,13 @@ namespace NetOffice.OWC10Api
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotClassFactory()
+		public PivotClassFactory() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public PivotClassFactory(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		/// <param name="DetailCell">NetOffice.OWC10Api.PivotDetailCell DetailCell</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -80,6 +87,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		/// <param name="Aggregate">NetOffice.OWC10Api.PivotAggregate Aggregate</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -93,6 +101,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		/// <param name="RowMember">NetOffice.OWC10Api.PivotRowMember RowMember</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -106,6 +115,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		/// <param name="ColumnMember">NetOffice.OWC10Api.PivotColumnMember ColumnMember</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -119,6 +129,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
+		/// Get Property
 		/// </summary>
 		/// <param name="Cell">NetOffice.OWC10Api.PivotCell Cell</param>
 		[SupportByLibrary("OWC10", 1)]

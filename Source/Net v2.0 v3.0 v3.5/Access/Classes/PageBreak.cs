@@ -34,7 +34,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -70,15 +70,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public PageBreak()
+		/// <summary>
+        /// creates a new instance of PageBreak 
+        /// </summary>		
+		public PageBreak():base("Access.PageBreak")
 		{
-			CreateFromProgId("Access.PageBreak");
 		}
 		
-		/// <param name="progId">progId</param>
-		public PageBreak(string progId)
+		/// <summary>
+        /// creates a new instance of PageBreak
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public PageBreak(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

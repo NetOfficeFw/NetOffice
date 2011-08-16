@@ -32,7 +32,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		public Tabs()
+		/// <summary>
+        /// creates a new instance of Tabs 
+        /// </summary>		
+		public Tabs():base("MSComctlLib.Tabs")
 		{
-			CreateFromProgId("MSComctlLib.Tabs");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Tabs(string progId)
+		/// <summary>
+        /// creates a new instance of Tabs
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Tabs(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

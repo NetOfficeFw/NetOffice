@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public ViewFont()
+		/// <summary>
+        /// creates a new instance of ViewFont 
+        /// </summary>		
+		public ViewFont():base("Outlook.ViewFont")
 		{
-			CreateFromProgId("Outlook.ViewFont");
 		}
 		
-		/// <param name="progId">progId</param>
-		public ViewFont(string progId)
+		/// <summary>
+        /// creates a new instance of ViewFont
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public ViewFont(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

@@ -14,6 +14,8 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+        bool _cancel;
+
         public Form1()
         {
             InitializeComponent();
@@ -23,31 +25,32 @@ namespace WindowsFormsApplication1
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            // start outlook
-            Outlook.Application outlookApplication = new Outlook.Application();
-           
+        {           
+            Outlook.Application application = new Outlook.Application();
+
             // Get inbox 
-            Outlook._NameSpace outlookNS = outlookApplication.GetNamespace("MAPI");
+            Outlook._NameSpace outlookNS = application.GetNamespace("MAPI");
             Outlook.MAPIFolder inboxFolder = outlookNS.GetDefaultFolder(OlDefaultFolders.olFolderInbox);
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 1; i <= 100; i++)
             {
-                // fetch inbox
-                labelCurrentCount.Text = string.Format("Currently:{0}", (i + 1));
-                ListInBoxFolder(outlookApplication, inboxFolder);
-
-                this.Refresh();
+                labelCurrentCount.Text = "Step " + i.ToString(); 
+                Application.DoEvents();
+                if (_cancel)
+                    break;
+                 
+                // fetch inbox                
+                ListInBoxFolder(inboxFolder);
             }
 
+            labelCurrentCount.Text = "Done!"; 
+
             // close outlook and dispose
-            outlookApplication.Quit();
-            outlookApplication.Dispose();
-
-            labelCurrentCount.Text = "Done!";
+            application.Quit();
+            application.Dispose();
         }
-
-        private void ListInBoxFolder(Outlook.Application outlookApplication, Outlook.MAPIFolder inboxFolder)
+            
+        private void ListInBoxFolder(Outlook.MAPIFolder inboxFolder)
         {
             // setup gui
             listView1.Items.Clear();
@@ -59,7 +62,11 @@ namespace WindowsFormsApplication1
             do
             {
                 if (null == item)
+                { 
                     item = items.GetFirst();
+                    if (null == item)
+                        break;
+                }
 
                 // not every item is a mail item
                 Outlook.MailItem mailItem = item as Outlook.MailItem;
@@ -76,6 +83,11 @@ namespace WindowsFormsApplication1
 
             // dipsose items and childs
             items.Dispose();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _cancel = true;
         }
     }
 }

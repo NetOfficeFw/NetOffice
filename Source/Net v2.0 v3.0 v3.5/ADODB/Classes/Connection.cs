@@ -42,7 +42,7 @@ namespace NetOffice.ADODBApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -78,15 +78,19 @@ namespace NetOffice.ADODBApi
 		{
 		}
 		
-		public Connection()
+		/// <summary>
+        /// creates a new instance of Connection 
+        /// </summary>		
+		public Connection():base("ADODB.Connection")
 		{
-			CreateFromProgId("ADODB.Connection");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Connection(string progId)
+		/// <summary>
+        /// creates a new instance of Connection
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Connection(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

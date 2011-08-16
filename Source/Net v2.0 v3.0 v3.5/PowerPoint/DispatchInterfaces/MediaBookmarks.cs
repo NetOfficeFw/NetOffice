@@ -57,7 +57,13 @@ namespace NetOffice.PowerPointApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MediaBookmarks()
+		public MediaBookmarks() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public MediaBookmarks(string progId) : base(progId)
 		{
 		}
 		
@@ -81,7 +87,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.MediaBookmark newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.MediaBookmark;
+				NetOffice.PowerPointApi.MediaBookmark newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.MediaBookmark.LateBindingApiWrapperType) as NetOffice.PowerPointApi.MediaBookmark;
 				return newObject;
 			}
 		}
@@ -96,7 +102,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.MediaBookmark newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.MediaBookmark;
+			NetOffice.PowerPointApi.MediaBookmark newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.MediaBookmark.LateBindingApiWrapperType) as NetOffice.PowerPointApi.MediaBookmark;
 			return newObject;
 		}
 

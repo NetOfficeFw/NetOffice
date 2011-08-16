@@ -33,7 +33,7 @@ namespace NetOffice.PowerPointApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -69,15 +69,19 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		public Master()
+		/// <summary>
+        /// creates a new instance of Master 
+        /// </summary>		
+		public Master():base("PowerPoint.Master")
 		{
-			CreateFromProgId("PowerPoint.Master");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Master(string progId)
+		/// <summary>
+        /// creates a new instance of Master
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Master(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

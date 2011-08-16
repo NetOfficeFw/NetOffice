@@ -53,7 +53,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -89,15 +89,19 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		public TreeView()
+		/// <summary>
+        /// creates a new instance of TreeView 
+        /// </summary>		
+		public TreeView():base("MSComctlLib.TreeView")
 		{
-			CreateFromProgId("MSComctlLib.TreeView");
 		}
 		
-		/// <param name="progId">progId</param>
-		public TreeView(string progId)
+		/// <summary>
+        /// creates a new instance of TreeView
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public TreeView(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

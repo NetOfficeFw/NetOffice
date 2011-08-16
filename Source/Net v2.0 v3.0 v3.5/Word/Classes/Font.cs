@@ -32,7 +32,7 @@ namespace NetOffice.WordApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		public Font()
+		/// <summary>
+        /// creates a new instance of Font 
+        /// </summary>		
+		public Font():base("Word.Font")
 		{
-			CreateFromProgId("Word.Font");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Font(string progId)
+		/// <summary>
+        /// creates a new instance of Font
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Font(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

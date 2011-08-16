@@ -35,7 +35,7 @@ namespace NetOffice.ExcelApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -71,15 +71,19 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		public QueryTable()
+		/// <summary>
+        /// creates a new instance of QueryTable 
+        /// </summary>		
+		public QueryTable():base("Excel.QueryTable")
 		{
-			CreateFromProgId("Excel.QueryTable");
 		}
 		
-		/// <param name="progId">progId</param>
-		public QueryTable(string progId)
+		/// <summary>
+        /// creates a new instance of QueryTable
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public QueryTable(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

@@ -47,7 +47,7 @@ namespace NetOffice.ExcelApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -83,15 +83,19 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		public Worksheet()
+		/// <summary>
+        /// creates a new instance of Worksheet 
+        /// </summary>		
+		public Worksheet():base("Excel.Worksheet")
 		{
-			CreateFromProgId("Excel.Worksheet");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Worksheet(string progId)
+		/// <summary>
+        /// creates a new instance of Worksheet
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Worksheet(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

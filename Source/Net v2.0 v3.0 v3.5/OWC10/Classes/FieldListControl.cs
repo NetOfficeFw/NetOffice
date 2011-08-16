@@ -32,7 +32,7 @@ namespace NetOffice.OWC10Api
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		public FieldListControl()
+		/// <summary>
+        /// creates a new instance of FieldListControl 
+        /// </summary>		
+		public FieldListControl():base("OWC10.FieldListControl")
 		{
-			CreateFromProgId("OWC10.FieldListControl");
 		}
 		
-		/// <param name="progId">progId</param>
-		public FieldListControl(string progId)
+		/// <summary>
+        /// creates a new instance of FieldListControl
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public FieldListControl(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

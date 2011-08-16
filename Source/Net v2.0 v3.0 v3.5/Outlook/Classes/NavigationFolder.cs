@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public NavigationFolder()
+		/// <summary>
+        /// creates a new instance of NavigationFolder 
+        /// </summary>		
+		public NavigationFolder():base("Outlook.NavigationFolder")
 		{
-			CreateFromProgId("Outlook.NavigationFolder");
 		}
 		
-		/// <param name="progId">progId</param>
-		public NavigationFolder(string progId)
+		/// <summary>
+        /// creates a new instance of NavigationFolder
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public NavigationFolder(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

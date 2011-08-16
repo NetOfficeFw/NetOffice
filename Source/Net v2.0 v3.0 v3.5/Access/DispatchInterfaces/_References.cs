@@ -58,7 +58,13 @@ namespace NetOffice.AccessApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _References()
+		public _References() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public _References(string progId) : base(progId)
 		{
 		}
 		
@@ -68,6 +74,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public COMObject Parent
@@ -83,6 +90,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 Count
@@ -111,7 +119,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(var);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Reference;
+				NetOffice.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.AccessApi.Reference.LateBindingApiWrapperType) as NetOffice.AccessApi.Reference;
 				return newObject;
 			}
 		}
@@ -127,7 +135,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(guid, major, minor);
 			object returnItem = Invoker.MethodReturn(this, "AddFromGuid", paramsArray);
-			NetOffice.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Reference;
+			NetOffice.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.AccessApi.Reference.LateBindingApiWrapperType) as NetOffice.AccessApi.Reference;
 			return newObject;
 		}
 
@@ -140,7 +148,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "AddFromFile", paramsArray);
-			NetOffice.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi.Reference;
+			NetOffice.AccessApi.Reference newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.AccessApi.Reference.LateBindingApiWrapperType) as NetOffice.AccessApi.Reference;
 			return newObject;
 		}
 

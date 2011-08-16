@@ -32,7 +32,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public SmartTags()
+		/// <summary>
+        /// creates a new instance of SmartTags 
+        /// </summary>		
+		public SmartTags():base("Access.SmartTags")
 		{
-			CreateFromProgId("Access.SmartTags");
 		}
 		
-		/// <param name="progId">progId</param>
-		public SmartTags(string progId)
+		/// <summary>
+        /// creates a new instance of SmartTags
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public SmartTags(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

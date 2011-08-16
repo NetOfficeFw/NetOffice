@@ -129,6 +129,17 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
+        /// creates a new instace with progid
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public COMObject(string progId)
+        {
+            CreateFromProgId(progId);
+            Factory.AddObjectToList(this);
+        }
+
+        /// <summary>
         /// not usable stub constructor
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

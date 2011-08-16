@@ -57,7 +57,13 @@ namespace NetOffice.OutlookApi
 		}
 		
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DInspectorCtrl()
+		public _DInspectorCtrl() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public _DInspectorCtrl(string progId) : base(progId)
 		{
 		}
 		
@@ -67,6 +73,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 10
+		/// Get/Set Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 10)]
 		public string URL
@@ -86,6 +93,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 10
+		/// Get Property
 		/// </summary>
 		[SupportByLibrary("Outlook", 10)]
 		public COMObject Item

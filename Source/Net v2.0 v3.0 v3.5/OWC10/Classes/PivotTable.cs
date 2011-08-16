@@ -62,7 +62,7 @@ namespace NetOffice.OWC10Api
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -98,15 +98,19 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		public PivotTable()
+		/// <summary>
+        /// creates a new instance of PivotTable 
+        /// </summary>		
+		public PivotTable():base("OWC10.PivotTable")
 		{
-			CreateFromProgId("OWC10.PivotTable");
 		}
 		
-		/// <param name="progId">progId</param>
-		public PivotTable(string progId)
+		/// <summary>
+        /// creates a new instance of PivotTable
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public PivotTable(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

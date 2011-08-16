@@ -13,7 +13,9 @@ namespace LateBindingApi.Core
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     internal interface IDispatch
     {
+
         int GetTypeInfoCount();
+
         System.Runtime.InteropServices.ComTypes.ITypeInfo GetTypeInfo([MarshalAs(UnmanagedType.U4)] int iTInfo,[MarshalAs(UnmanagedType.U4)] int lcid);
 
         [PreserveSig]
@@ -38,7 +40,8 @@ namespace LateBindingApi.Core
         
         private static List<COMObject> _globalObjectList = new List<COMObject>();
         private static List<IFactoryInfo> _factoryList = new List<IFactoryInfo>();
-        private static Dictionary<string, Type> _typeCache = new Dictionary<string, Type>();
+        private static Dictionary<string, Type> _proxyTypeCache = new Dictionary<string, Type>();
+        private static Dictionary<string, Type> _wrapperTypeCache = new Dictionary<string, Type>();
         private static Dictionary<Guid, Guid> _hostCache = new Dictionary<Guid, Guid>();
 
         #endregion
@@ -146,8 +149,15 @@ namespace LateBindingApi.Core
             if (null == comProxy)
                 return null;
 
-            Type comProxyType = comProxy.GetType();            
-            COMObject newClass = (COMObject)Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxy, comProxyType });
+            // create new proxyType
+            Type comProxyType = null;
+            if (false == _proxyTypeCache.TryGetValue(wrapperClassType.FullName, out comProxyType))
+            {
+                comProxyType = comProxy.GetType();
+                _proxyTypeCache.Add(wrapperClassType.FullName, comProxyType);
+            }
+
+            COMObject newClass = Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxy, comProxyType }) as COMObject;
             return newClass;
         }
 
@@ -166,9 +176,8 @@ namespace LateBindingApi.Core
             Type comVariantType = null;
             COMObject[] newVariantArray = new COMObject[comProxyArray.Length];
             for (int i = 0; i < comProxyArray.Length; i++)
-            {
-                newVariantArray[i] = (COMObject)Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxyArray[i], comVariantType });
-            }
+                newVariantArray[i] = Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxyArray[i], comVariantType }) as COMObject;
+
             return newVariantArray;
         }
 
@@ -188,10 +197,15 @@ namespace LateBindingApi.Core
             string className = TypeDescriptor.GetClassName(comProxy);
             string fullClassName = factoryInfo.Namespace + "." + className;
 
-            // create new classType
-            Type comProxyType = comProxy.GetType();
-            COMObject newObject = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
-            
+            // create new proxyType
+            Type comProxyType = null;
+            if (false == _proxyTypeCache.TryGetValue(fullClassName, out comProxyType))
+            {
+                comProxyType = comProxy.GetType();
+                _proxyTypeCache.Add(fullClassName, comProxyType); 
+            }
+
+            COMObject newObject = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);            
             return newObject;
         }
 
@@ -214,7 +228,6 @@ namespace LateBindingApi.Core
 
             // create new classType
             COMObject newObject = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
-
             return newObject;
         }
 
@@ -231,11 +244,11 @@ namespace LateBindingApi.Core
         public static COMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, COMObject caller, object comProxy, Type comProxyType, string className, string fullClassName)
         {
             Type classType = null;
-            if (true == _typeCache.TryGetValue(fullClassName, out classType))
+            if (true == _wrapperTypeCache.TryGetValue(fullClassName, out classType))
             {
                 // cached classType
                 object newClass = Activator.CreateInstance(classType, new object[] { caller, comProxy });
-                return (COMObject)newClass;
+                return newClass as COMObject;
             }
             else
             {
@@ -244,8 +257,8 @@ namespace LateBindingApi.Core
                 if (null == classType)
                     throw new ArgumentException("Class not exists: " + fullClassName);
 
-                _typeCache.Add(fullClassName, classType);
-                COMObject newClass = (COMObject)Activator.CreateInstance(classType, new object[] { caller, comProxy, comProxyType });
+                _wrapperTypeCache.Add(fullClassName, classType);
+                COMObject newClass = Activator.CreateInstance(classType, new object[] { caller, comProxy, comProxyType }) as COMObject;
                 return newClass;
             }
         }
@@ -401,6 +414,35 @@ namespace LateBindingApi.Core
                 message += string.Format("Loaded LateBindingApi Assembly:{0} {1}{2}", item.ComponentGuid, item.Assembly.FullName, Environment.NewLine);
 
             throw new LateBindingApiException(message);
+        }
+
+        #endregion
+
+        #region Type
+
+        /// <summary>
+        /// returns the Type for comProxy or null if param not set
+        /// </summary>
+        /// <param name="comProxy"></param>
+        /// <returns></returns>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static Type GetObjectType(object comProxy)
+        {
+            if (null == comProxy)
+                return null;
+            else
+            {
+                IFactoryInfo factoryInfo = GetFactoryInfo(comProxy);
+                string className = TypeDescriptor.GetClassName(comProxy);
+                string fullClassName = factoryInfo.Namespace + "." + className;
+                Type proxyType = null;
+                if (!_proxyTypeCache.TryGetValue(fullClassName, out proxyType))
+                {
+                    proxyType = comProxy.GetType();
+                    _proxyTypeCache.Add(fullClassName, proxyType);
+                }
+                return proxyType;
+            }
         }
 
         #endregion

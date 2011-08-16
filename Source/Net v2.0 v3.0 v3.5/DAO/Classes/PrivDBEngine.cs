@@ -32,7 +32,7 @@ namespace NetOffice.DAOApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.DAOApi
 		{
 		}
 		
-		public PrivDBEngine()
+		/// <summary>
+        /// creates a new instance of PrivDBEngine 
+        /// </summary>		
+		public PrivDBEngine():base("DAO.PrivDBEngine")
 		{
-			CreateFromProgId("DAO.PrivDBEngine");
 		}
 		
-		/// <param name="progId">progId</param>
-		public PrivDBEngine(string progId)
+		/// <summary>
+        /// creates a new instance of PrivDBEngine
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public PrivDBEngine(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

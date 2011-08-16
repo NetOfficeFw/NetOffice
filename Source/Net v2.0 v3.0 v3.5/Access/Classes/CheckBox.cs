@@ -48,7 +48,7 @@ namespace NetOffice.AccessApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -84,15 +84,19 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		public CheckBox()
+		/// <summary>
+        /// creates a new instance of CheckBox 
+        /// </summary>		
+		public CheckBox():base("Access.CheckBox")
 		{
-			CreateFromProgId("Access.CheckBox");
 		}
 		
-		/// <param name="progId">progId</param>
-		public CheckBox(string progId)
+		/// <summary>
+        /// creates a new instance of CheckBox
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public CheckBox(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

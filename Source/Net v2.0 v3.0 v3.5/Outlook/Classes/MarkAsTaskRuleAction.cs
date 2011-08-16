@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public MarkAsTaskRuleAction()
+		/// <summary>
+        /// creates a new instance of MarkAsTaskRuleAction 
+        /// </summary>		
+		public MarkAsTaskRuleAction():base("Outlook.MarkAsTaskRuleAction")
 		{
-			CreateFromProgId("Outlook.MarkAsTaskRuleAction");
 		}
 		
-		/// <param name="progId">progId</param>
-		public MarkAsTaskRuleAction(string progId)
+		/// <summary>
+        /// creates a new instance of MarkAsTaskRuleAction
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public MarkAsTaskRuleAction(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

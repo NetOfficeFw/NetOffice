@@ -47,7 +47,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -83,15 +83,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public OlkComboBox()
+		/// <summary>
+        /// creates a new instance of OlkComboBox 
+        /// </summary>		
+		public OlkComboBox():base("Outlook.OlkComboBox")
 		{
-			CreateFromProgId("Outlook.OlkComboBox");
 		}
 		
-		/// <param name="progId">progId</param>
-		public OlkComboBox(string progId)
+		/// <summary>
+        /// creates a new instance of OlkComboBox
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public OlkComboBox(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

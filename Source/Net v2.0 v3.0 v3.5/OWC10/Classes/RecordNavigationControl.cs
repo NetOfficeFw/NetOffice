@@ -34,7 +34,7 @@ namespace NetOffice.OWC10Api
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -70,15 +70,19 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		public RecordNavigationControl()
+		/// <summary>
+        /// creates a new instance of RecordNavigationControl 
+        /// </summary>		
+		public RecordNavigationControl():base("OWC10.RecordNavigationControl")
 		{
-			CreateFromProgId("OWC10.RecordNavigationControl");
 		}
 		
-		/// <param name="progId">progId</param>
-		public RecordNavigationControl(string progId)
+		/// <summary>
+        /// creates a new instance of RecordNavigationControl
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public RecordNavigationControl(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

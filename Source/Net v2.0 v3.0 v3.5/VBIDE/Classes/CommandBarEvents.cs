@@ -34,7 +34,7 @@ namespace NetOffice.VBIDEApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -70,15 +70,19 @@ namespace NetOffice.VBIDEApi
 		{
 		}
 		
-		public CommandBarEvents()
+		/// <summary>
+        /// creates a new instance of CommandBarEvents 
+        /// </summary>		
+		public CommandBarEvents():base("VBIDE.CommandBarEvents")
 		{
-			CreateFromProgId("VBIDE.CommandBarEvents");
 		}
 		
-		/// <param name="progId">progId</param>
-		public CommandBarEvents(string progId)
+		/// <summary>
+        /// creates a new instance of CommandBarEvents
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public CommandBarEvents(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

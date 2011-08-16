@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public ToOrFromRuleCondition()
+		/// <summary>
+        /// creates a new instance of ToOrFromRuleCondition 
+        /// </summary>		
+		public ToOrFromRuleCondition():base("Outlook.ToOrFromRuleCondition")
 		{
-			CreateFromProgId("Outlook.ToOrFromRuleCondition");
 		}
 		
-		/// <param name="progId">progId</param>
-		public ToOrFromRuleCondition(string progId)
+		/// <summary>
+        /// creates a new instance of ToOrFromRuleCondition
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public ToOrFromRuleCondition(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

@@ -39,7 +39,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -75,15 +75,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public Reminders()
+		/// <summary>
+        /// creates a new instance of Reminders 
+        /// </summary>		
+		public Reminders():base("Outlook.Reminders")
 		{
-			CreateFromProgId("Outlook.Reminders");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Reminders(string progId)
+		/// <summary>
+        /// creates a new instance of Reminders
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Reminders(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

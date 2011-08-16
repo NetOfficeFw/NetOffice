@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -68,15 +68,19 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		public DoNotUseMeFolder()
+		/// <summary>
+        /// creates a new instance of DoNotUseMeFolder 
+        /// </summary>		
+		public DoNotUseMeFolder():base("Outlook.DoNotUseMeFolder")
 		{
-			CreateFromProgId("Outlook.DoNotUseMeFolder");
 		}
 		
-		/// <param name="progId">progId</param>
-		public DoNotUseMeFolder(string progId)
+		/// <summary>
+        /// creates a new instance of DoNotUseMeFolder
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public DoNotUseMeFolder(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion

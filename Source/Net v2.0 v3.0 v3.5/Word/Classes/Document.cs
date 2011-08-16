@@ -47,7 +47,7 @@ namespace NetOffice.WordApi
 		#region Type Information
 
         private static Type _type;
-
+		
         public static Type LateBindingApiWrapperType
         {
             get
@@ -83,15 +83,19 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		public Document()
+		/// <summary>
+        /// creates a new instance of Document 
+        /// </summary>		
+		public Document():base("Word.Document")
 		{
-			CreateFromProgId("Word.Document");
 		}
 		
-		/// <param name="progId">progId</param>
-		public Document(string progId)
+		/// <summary>
+        /// creates a new instance of Document
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Document(string progId):base(progId)
 		{
-			CreateFromProgId(progId);
 		}
 
 		#endregion
