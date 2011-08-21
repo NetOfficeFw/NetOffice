@@ -36,8 +36,7 @@ namespace Example09
          
             // add a new workbook
             Excel.Workbook workBook = _excelApplication.Workbooks.Add();
-             
-           
+                        
             // add a commandbar popup
             Office.CommandBarPopup  commandBarPopup = (Office.CommandBarPopup)_excelApplication.CommandBars["Worksheet Menu Bar"].Controls.Add(
                                                                                 MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, true);

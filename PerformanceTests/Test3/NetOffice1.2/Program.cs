@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Excel = NetOffice.ExcelApi;
-using  NetOffice.ExcelApi.Enums;
+using NetOffice.ExcelApi.Enums;
 
 namespace NetOffice1._2
 {
