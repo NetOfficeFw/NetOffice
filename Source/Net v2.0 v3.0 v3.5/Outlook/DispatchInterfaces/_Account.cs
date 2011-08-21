@@ -73,7 +73,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -104,7 +104,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -120,7 +120,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public COMObject Parent
@@ -136,7 +136,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlAccountType AccountType
@@ -151,7 +151,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string DisplayName
@@ -166,7 +166,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string UserName
@@ -181,7 +181,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string SmtpAddress
@@ -196,7 +196,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public NetOffice.OutlookApi.Enums.OlAutoDiscoverConnectionMode AutoDiscoverConnectionMode
@@ -211,7 +211,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public NetOffice.OutlookApi.Recipient CurrentUser
@@ -227,7 +227,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public string AutoDiscoverXml
@@ -242,7 +242,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public NetOffice.OutlookApi.Store DeliveryStore
@@ -258,7 +258,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public NetOffice.OutlookApi.Enums.OlExchangeConnectionMode ExchangeConnectionMode
@@ -273,7 +273,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public string ExchangeMailboxServerName
@@ -288,7 +288,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public string ExchangeMailboxServerVersion

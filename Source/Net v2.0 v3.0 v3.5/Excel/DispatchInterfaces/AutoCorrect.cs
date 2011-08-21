@@ -73,7 +73,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject Parent
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool CapitalizeNamesOfDays
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -161,7 +161,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object ReplacementList
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool ReplaceText
@@ -221,7 +221,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool TwoInitialCapitals
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool CorrectSentenceCap
@@ -261,7 +261,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool CorrectCapsLock
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool DisplayAutoCorrectOptions
@@ -301,7 +301,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public bool AutoExpandListRange
@@ -321,7 +321,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool AutoFillFormulasInLists

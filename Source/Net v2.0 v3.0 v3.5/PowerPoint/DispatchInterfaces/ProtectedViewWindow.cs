@@ -73,7 +73,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject Parent
@@ -105,7 +105,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Presentation Presentation
@@ -121,7 +121,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Active
@@ -136,7 +136,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.PpWindowState WindowState
@@ -156,7 +156,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Caption
@@ -171,7 +171,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string SourcePath
@@ -186,7 +186,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string SourceName
@@ -201,7 +201,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Single Left
@@ -221,7 +221,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Single Top
@@ -241,7 +241,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Single Width
@@ -261,7 +261,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Single Height
@@ -281,7 +281,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 HWND

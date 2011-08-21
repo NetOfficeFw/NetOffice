@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public COMObject Parent
@@ -89,7 +89,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Bold
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Italic
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTextStrike Strike
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTextCaps Caps
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState AutorotateNumbers
@@ -189,7 +189,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Single BaselineOffset
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Single Kerning
@@ -229,7 +229,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Single Size
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Single Spacing
@@ -269,7 +269,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTextUnderlineType UnderlineStyle
@@ -289,7 +289,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Allcaps
@@ -309,7 +309,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState DoubleStrikeThrough
@@ -329,7 +329,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Equalize
@@ -349,7 +349,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.FillFormat Fill
@@ -365,7 +365,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.GlowFormat Glow
@@ -381,7 +381,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ReflectionFormat Reflection
@@ -397,7 +397,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.LineFormat Line
@@ -413,7 +413,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ShadowFormat Shadow
@@ -429,7 +429,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ColorFormat Highlight
@@ -445,7 +445,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ColorFormat UnderlineColor
@@ -461,7 +461,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Smallcaps
@@ -481,7 +481,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoSoftEdgeType SoftEdgeFormat
@@ -501,7 +501,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState StrikeThrough
@@ -521,7 +521,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Subscript
@@ -541,7 +541,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Superscript
@@ -561,7 +561,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoPresetTextEffect WordArtformat
@@ -581,7 +581,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Embeddable
@@ -596,7 +596,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Embedded
@@ -611,7 +611,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string Name
@@ -631,7 +631,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string NameAscii
@@ -651,7 +651,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string NameComplexScript
@@ -671,7 +671,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string NameFarEast
@@ -691,7 +691,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string NameOther

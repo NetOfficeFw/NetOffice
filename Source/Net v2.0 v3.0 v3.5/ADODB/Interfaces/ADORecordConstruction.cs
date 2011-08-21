@@ -72,7 +72,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public COMObject Row
@@ -93,7 +93,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public COMObject ParentRow

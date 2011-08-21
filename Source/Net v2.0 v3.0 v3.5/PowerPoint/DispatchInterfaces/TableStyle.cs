@@ -73,7 +73,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		public string Name
@@ -88,7 +88,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 12,14)]
 		public string Id

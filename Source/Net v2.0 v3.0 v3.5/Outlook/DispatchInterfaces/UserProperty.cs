@@ -73,7 +73,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -104,7 +104,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -120,7 +120,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public COMObject Parent
@@ -136,7 +136,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public string Formula
@@ -156,7 +156,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public string Name
@@ -171,7 +171,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlUserPropertyType Type
@@ -186,7 +186,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public string ValidationFormula
@@ -206,7 +206,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public string ValidationText
@@ -226,7 +226,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public object Value
@@ -254,7 +254,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public bool IsUserProperty

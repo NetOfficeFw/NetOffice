@@ -73,7 +73,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public object Color
@@ -101,7 +101,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public object DefaultColor
@@ -124,7 +124,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public object BackColor
@@ -152,7 +152,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartPatternTypeEnum Pattern
@@ -167,7 +167,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartFillTypeEnum FillType
@@ -182,7 +182,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartPresetGradientTypeEnum PresetGradientType
@@ -197,7 +197,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle
@@ -212,7 +212,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant
@@ -227,7 +227,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Double GradientDegree
@@ -242,7 +242,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartPresetTextureEnum PresetTexture
@@ -257,7 +257,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string TextureName
@@ -272,7 +272,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartTextureFormatEnum TextureFormat
@@ -287,7 +287,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Double TextureStackUnit
@@ -302,7 +302,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartTexturePlacementEnum TexturePlacement

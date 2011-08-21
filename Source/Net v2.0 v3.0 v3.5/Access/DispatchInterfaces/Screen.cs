@@ -73,7 +73,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public COMObject Parent
@@ -105,7 +105,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Form ActiveDatasheet
@@ -121,7 +121,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Control ActiveControl
@@ -137,7 +137,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Control PreviousControl
@@ -153,7 +153,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Form ActiveForm
@@ -169,7 +169,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Report ActiveReport
@@ -185,7 +185,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 MousePointer
@@ -205,7 +205,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.DataAccessPage ActiveDataAccessPage

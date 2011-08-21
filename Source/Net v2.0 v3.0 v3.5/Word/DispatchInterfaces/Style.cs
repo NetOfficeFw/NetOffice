@@ -73,7 +73,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
@@ -104,7 +104,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
@@ -120,7 +120,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string NameLocal
@@ -140,7 +140,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public object BaseStyle
@@ -168,7 +168,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string Description
@@ -183,7 +183,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdStyleType Type
@@ -198,7 +198,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool BuiltIn
@@ -213,7 +213,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public object NextParagraphStyle
@@ -241,7 +241,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool InUse
@@ -256,7 +256,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Shading Shading
@@ -272,7 +272,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Borders Borders
@@ -293,7 +293,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ParagraphFormat ParagraphFormat
@@ -314,7 +314,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Font Font
@@ -335,7 +335,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Frame Frame
@@ -351,7 +351,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageID
@@ -371,7 +371,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool AutomaticallyUpdate
@@ -391,7 +391,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ListTemplate ListTemplate
@@ -407,7 +407,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 ListLevelNumber
@@ -422,7 +422,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageIDFarEast
@@ -442,7 +442,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool Hidden
@@ -462,7 +462,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 NoProofing
@@ -482,7 +482,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public object LinkStyle
@@ -510,7 +510,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public bool Visibility
@@ -530,7 +530,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public bool NoSpaceBetweenParagraphsOfSameStyle
@@ -550,7 +550,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.TableStyle Table
@@ -566,7 +566,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 11,12,14)]
 		public bool Locked
@@ -586,7 +586,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public Int32 Priority
@@ -606,7 +606,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public bool UnhideWhenUsed
@@ -626,7 +626,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public bool QuickStyle
@@ -646,7 +646,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public bool Linked

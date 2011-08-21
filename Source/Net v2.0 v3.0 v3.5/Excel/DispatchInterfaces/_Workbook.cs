@@ -73,7 +73,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject Parent
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool AcceptLabelsInFormulas
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Chart ActiveChart
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject ActiveSheet
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Author
@@ -192,7 +192,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 AutoUpdateFrequency
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool AutoUpdateSaveChanges
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 ChangeHistoryDuration
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject BuiltinDocumentProperties
@@ -268,7 +268,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Sheets Charts
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string CodeName
@@ -299,7 +299,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string _CodeName
@@ -319,7 +319,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -340,7 +340,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object Colors
@@ -380,7 +380,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
@@ -396,7 +396,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Comments
@@ -416,7 +416,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlSaveConflictResolution ConflictResolution
@@ -436,7 +436,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject Container
@@ -452,7 +452,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool CreateBackup
@@ -467,7 +467,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject CustomDocumentProperties
@@ -483,7 +483,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool Date1904
@@ -503,7 +503,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Sheets DialogSheets
@@ -519,7 +519,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.xlDisplayDrawingObjects DisplayDrawingObjects
@@ -539,7 +539,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlFileFormat FileFormat
@@ -554,7 +554,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string FullName
@@ -569,7 +569,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool HasMailer
@@ -589,7 +589,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool HasPassword
@@ -604,7 +604,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool HasRoutingSlip
@@ -624,7 +624,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool IsAddin
@@ -644,7 +644,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Keywords
@@ -664,7 +664,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Mailer Mailer
@@ -680,7 +680,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Sheets Modules
@@ -696,7 +696,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool MultiUserEditing
@@ -711,7 +711,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Name
@@ -726,7 +726,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Names Names
@@ -742,7 +742,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string OnSave
@@ -762,7 +762,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string OnSheetActivate
@@ -782,7 +782,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string OnSheetDeactivate
@@ -802,7 +802,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Path
@@ -817,7 +817,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool PersonalViewListSettings
@@ -837,7 +837,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool PersonalViewPrintSettings
@@ -857,7 +857,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool PrecisionAsDisplayed
@@ -877,7 +877,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool ProtectStructure
@@ -892,7 +892,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool ProtectWindows
@@ -907,7 +907,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool ReadOnly
@@ -922,7 +922,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool ReadOnlyRecommended
@@ -942,7 +942,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 RevisionNumber
@@ -957,7 +957,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool Routed
@@ -972,7 +972,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.RoutingSlip RoutingSlip
@@ -988,7 +988,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool Saved
@@ -1008,7 +1008,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool SaveLinkValues
@@ -1028,7 +1028,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Sheets Sheets
@@ -1044,7 +1044,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool ShowConflictHistory
@@ -1064,7 +1064,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Styles Styles
@@ -1080,7 +1080,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Subject
@@ -1100,7 +1100,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string Title
@@ -1120,7 +1120,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool UpdateRemoteReferences
@@ -1140,7 +1140,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool UserControl
@@ -1160,7 +1160,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public object UserStatus
@@ -1183,7 +1183,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.CustomViews CustomViews
@@ -1199,7 +1199,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Windows Windows
@@ -1215,7 +1215,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Sheets Worksheets
@@ -1231,7 +1231,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool WriteReserved
@@ -1246,7 +1246,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public string WriteReservedBy
@@ -1261,7 +1261,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Sheets Excel4IntlMacroSheets
@@ -1277,7 +1277,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Sheets Excel4MacroSheets
@@ -1293,7 +1293,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool TemplateRemoveExtData
@@ -1313,7 +1313,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool HighlightChangesOnScreen
@@ -1333,7 +1333,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool KeepChangeHistory
@@ -1353,7 +1353,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool ListChangesOnNewSheet
@@ -1373,7 +1373,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.VBIDEApi.VBProject VBProject
@@ -1389,7 +1389,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool IsInplace
@@ -1404,7 +1404,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PublishObjects PublishObjects
@@ -1420,7 +1420,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.WebOptions WebOptions
@@ -1436,7 +1436,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.HTMLProject HTMLProject
@@ -1452,7 +1452,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool EnvelopeVisible
@@ -1472,7 +1472,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 CalculationVersion
@@ -1487,7 +1487,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public bool VBASigned
@@ -1502,7 +1502,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool _ReadOnlyRecommended
@@ -1517,7 +1517,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool ShowPivotTableFieldList
@@ -1537,7 +1537,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlUpdateLinks UpdateLinks
@@ -1557,7 +1557,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool EnableAutoRecover
@@ -1577,7 +1577,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool RemovePersonalInformation
@@ -1597,7 +1597,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string FullNameURLEncoded
@@ -1612,7 +1612,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string Password
@@ -1632,7 +1632,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string WritePassword
@@ -1652,7 +1652,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string PasswordEncryptionProvider
@@ -1667,7 +1667,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public string PasswordEncryptionAlgorithm
@@ -1682,7 +1682,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public Int32 PasswordEncryptionKeyLength
@@ -1697,7 +1697,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public bool PasswordEncryptionFileProperties
@@ -1712,7 +1712,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.SmartTagOptions SmartTagOptions
@@ -1728,7 +1728,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.OfficeApi.Permission Permission
@@ -1744,7 +1744,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspace SharedWorkspace
@@ -1760,7 +1760,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.OfficeApi.Sync Sync
@@ -1776,7 +1776,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.XmlNamespaces XmlNamespaces
@@ -1792,7 +1792,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.XmlMaps XmlMaps
@@ -1808,7 +1808,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.OfficeApi.SmartDocument SmartDocument
@@ -1824,7 +1824,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.OfficeApi.DocumentLibraryVersions DocumentLibraryVersions
@@ -1840,7 +1840,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public bool InactiveListBorderVisible
@@ -1860,7 +1860,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public bool DisplayInkComments
@@ -1880,7 +1880,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.OfficeApi.MetaProperties ContentTypeProperties
@@ -1896,7 +1896,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Connections Connections
@@ -1912,7 +1912,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.OfficeApi.SignatureSet Signatures
@@ -1928,7 +1928,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.OfficeApi.ServerPolicy ServerPolicy
@@ -1944,7 +1944,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.OfficeApi.DocumentInspectors DocumentInspectors
@@ -1960,7 +1960,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.ServerViewableItems ServerViewableItems
@@ -1976,7 +1976,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.TableStyles TableStyles
@@ -1992,7 +1992,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public object DefaultTableStyle
@@ -2020,7 +2020,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public object DefaultPivotTableStyle
@@ -2048,7 +2048,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool CheckCompatibility
@@ -2068,7 +2068,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool HasVBProject
@@ -2083,7 +2083,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.OfficeApi.CustomXMLParts CustomXMLParts
@@ -2099,7 +2099,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool Final
@@ -2119,7 +2119,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Research Research
@@ -2135,7 +2135,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.OfficeApi.OfficeTheme Theme
@@ -2151,7 +2151,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool Excel8CompatibilityMode
@@ -2166,7 +2166,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool ConnectionsDisabled
@@ -2181,7 +2181,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool ShowPivotChartActiveFields
@@ -2201,7 +2201,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.IconSets IconSets
@@ -2217,7 +2217,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public string EncryptionProvider
@@ -2237,7 +2237,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool DoNotPromptForConvert
@@ -2257,7 +2257,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool ForceFullCalculation
@@ -2277,7 +2277,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.SlicerCaches SlicerCaches
@@ -2293,7 +2293,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Slicer ActiveSlicer
@@ -2309,7 +2309,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public object DefaultSlicerStyle
@@ -2337,7 +2337,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Int32 AccuracyVersion

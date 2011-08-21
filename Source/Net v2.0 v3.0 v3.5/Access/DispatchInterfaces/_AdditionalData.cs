@@ -74,7 +74,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 11,12,14)]
 		public string Name
@@ -94,7 +94,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("Access", 11,12,14)]
@@ -112,7 +112,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 11,12,14)]
 		public Int32 Count

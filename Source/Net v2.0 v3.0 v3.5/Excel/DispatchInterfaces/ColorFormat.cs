@@ -73,7 +73,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public COMObject Parent
@@ -89,7 +89,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 RGB
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public Int32 SchemeColor
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoColorType Type
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 10,11,12,14)]
 		public Single TintAndShade
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoThemeColorIndex ObjectThemeColor
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Single Brightness

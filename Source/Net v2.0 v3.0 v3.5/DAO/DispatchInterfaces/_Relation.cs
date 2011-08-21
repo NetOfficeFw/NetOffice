@@ -73,7 +73,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Name
@@ -93,7 +93,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Table
@@ -113,7 +113,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string ForeignTable
@@ -133,7 +133,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 Attributes
@@ -153,7 +153,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Fields Fields
@@ -169,7 +169,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool PartialReplica

@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public COMObject Parent
@@ -89,7 +89,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType OrgChartLayout
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.ShapeRange Shapes
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.TextFrame2 TextFrame2
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Int32 Level
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Hidden
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.SmartArtNodes Nodes
@@ -187,7 +187,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.SmartArtNode ParentNode
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.Enums.MsoSmartArtNodeType Type

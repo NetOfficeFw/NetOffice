@@ -73,7 +73,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string Name
@@ -88,7 +88,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string Source
@@ -108,7 +108,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.RecordsetDef RecordsetDef
@@ -124,7 +124,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PageFields PageFields
@@ -140,7 +140,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.LookupRelationships LookupRelationships

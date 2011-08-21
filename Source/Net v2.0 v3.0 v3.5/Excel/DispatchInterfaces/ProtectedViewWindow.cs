@@ -73,7 +73,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string _Default
@@ -88,7 +88,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string Caption
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public bool EnableResize
@@ -128,7 +128,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Double Height
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Double Left
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Double Top
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public Double Width
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public bool Visible
@@ -228,7 +228,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string SourceName
@@ -243,7 +243,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string SourcePath
@@ -258,7 +258,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlProtectedViewWindowState WindowState
@@ -278,7 +278,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public NetOffice.ExcelApi.Workbook Workbook

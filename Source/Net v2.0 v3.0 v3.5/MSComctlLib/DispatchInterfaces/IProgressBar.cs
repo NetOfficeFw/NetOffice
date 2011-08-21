@@ -73,7 +73,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single ControlDefault
@@ -93,7 +93,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Max
@@ -113,7 +113,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Min
@@ -133,7 +133,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer
@@ -153,7 +153,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public stdole.Picture MouseIcon
@@ -174,7 +174,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Value
@@ -194,7 +194,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
@@ -214,7 +214,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.AppearanceConstants Appearance
@@ -234,7 +234,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.BorderStyleConstants BorderStyle
@@ -254,7 +254,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Enabled
@@ -274,7 +274,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 hWnd
@@ -289,7 +289,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.OrientationConstants Orientation
@@ -309,7 +309,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.ScrollingConstants Scrolling

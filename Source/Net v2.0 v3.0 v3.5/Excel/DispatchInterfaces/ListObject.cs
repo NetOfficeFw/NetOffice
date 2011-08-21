@@ -73,7 +73,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public COMObject Parent
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public string _Default
@@ -135,7 +135,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public bool Active
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Range DataBodyRange
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public bool DisplayRightToLeft
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Range HeaderRowRange
@@ -197,7 +197,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Range InsertRowRange
@@ -213,7 +213,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.ListColumns ListColumns
@@ -229,7 +229,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.ListRows ListRows
@@ -245,7 +245,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public string Name
@@ -265,7 +265,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.QueryTable QueryTable
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Range Range
@@ -297,7 +297,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public bool ShowAutoFilter
@@ -317,7 +317,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public bool ShowTotals
@@ -337,7 +337,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Range TotalsRowRange
@@ -368,7 +368,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public string SharePointURL
@@ -383,7 +383,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.XmlMap XmlMap
@@ -399,7 +399,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public string DisplayName
@@ -419,7 +419,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool ShowHeaders
@@ -439,7 +439,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.AutoFilter AutoFilter
@@ -455,7 +455,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public object TableStyle
@@ -483,7 +483,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool ShowTableStyleFirstColumn
@@ -503,7 +503,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool ShowTableStyleLastColumn
@@ -523,7 +523,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool ShowTableStyleRowStripes
@@ -543,7 +543,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public bool ShowTableStyleColumnStripes
@@ -563,7 +563,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public NetOffice.ExcelApi.Sort Sort
@@ -579,7 +579,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 12,14)]
 		public string Comment
@@ -599,7 +599,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string AlternativeText
@@ -619,7 +619,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByLibrary Excel 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Excel", 14)]
 		public string Summary

@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public string ConnectString
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public string Table
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public string DataSource
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public COMObject Columns
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public Int32 RowCount
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public COMObject Filters

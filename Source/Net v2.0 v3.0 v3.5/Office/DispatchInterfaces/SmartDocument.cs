@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public string SolutionID
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 11,12,14)]
 		public string SolutionURL

@@ -73,7 +73,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 Number
@@ -88,7 +88,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Source
@@ -103,7 +103,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Description
@@ -118,7 +118,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string HelpFile
@@ -133,7 +133,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 HelpContext

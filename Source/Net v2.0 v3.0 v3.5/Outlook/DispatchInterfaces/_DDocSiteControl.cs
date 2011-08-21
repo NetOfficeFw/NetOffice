@@ -73,7 +73,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public bool ReadOnly
@@ -93,7 +93,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public Int16 SuppressAttachments

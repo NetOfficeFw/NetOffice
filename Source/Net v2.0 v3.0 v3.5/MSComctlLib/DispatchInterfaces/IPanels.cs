@@ -74,7 +74,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int16 Count
@@ -94,7 +94,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -102,13 +102,13 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
-			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSComctlLibApi.IPanel.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IPanel;
+			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IPanel;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -120,7 +120,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -131,7 +131,7 @@ namespace NetOffice.MSComctlLibApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSComctlLibApi.IPanel.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IPanel;
+			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IPanel;
 			return newObject;
 			}
 		}
@@ -153,7 +153,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, style, picture);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSComctlLibApi.IPanel.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IPanel;
+			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IPanel;
 			return newObject;
 		}
 
@@ -165,7 +165,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSComctlLibApi.IPanel.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IPanel;
+			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IPanel;
 			return newObject;
 		}
 

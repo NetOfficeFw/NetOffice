@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public COMObject Parent
@@ -89,7 +89,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Single MarginBottom
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Single MarginLeft
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Single MarginRight
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Single MarginTop
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation
@@ -189,7 +189,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoHorizontalAnchor HorizontalAnchor
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoVerticalAnchor VerticalAnchor
@@ -229,7 +229,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoPathFormat PathFormat
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoWarpFormat WarpFormat
@@ -269,7 +269,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoPresetTextEffect WordArtformat
@@ -289,7 +289,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState WordWrap
@@ -309,7 +309,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoAutoSize AutoSize
@@ -329,7 +329,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ThreeDFormat ThreeD
@@ -345,7 +345,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState HasText
@@ -360,7 +360,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.TextRange2 TextRange
@@ -376,7 +376,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.TextColumn2 Column
@@ -392,7 +392,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.Ruler2 Ruler
@@ -408,7 +408,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState NoTextRotation

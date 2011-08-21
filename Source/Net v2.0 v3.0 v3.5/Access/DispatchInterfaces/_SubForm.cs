@@ -73,7 +73,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public COMObject Parent
@@ -105,7 +105,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Form Form
@@ -121,7 +121,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Report Report
@@ -137,7 +137,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Properties Properties
@@ -153,7 +153,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Controls Controls
@@ -169,7 +169,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string EventProcPrefix
@@ -189,7 +189,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string _Name
@@ -209,7 +209,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte ControlType
@@ -229,7 +229,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string SourceObject
@@ -249,7 +249,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string LinkChildFields
@@ -269,7 +269,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string LinkMasterFields
@@ -289,7 +289,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string StatusBarText
@@ -309,7 +309,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool Visible
@@ -329,7 +329,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte DisplayWhen
@@ -349,7 +349,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool Enabled
@@ -369,7 +369,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool Locked
@@ -389,7 +389,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool TabStop
@@ -409,7 +409,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 TabIndex
@@ -429,7 +429,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool CanGrow
@@ -449,7 +449,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool CanShrink
@@ -469,7 +469,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 Left
@@ -489,7 +489,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 Top
@@ -509,7 +509,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 Width
@@ -529,7 +529,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 Height
@@ -549,7 +549,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte SpecialEffect
@@ -569,7 +569,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte BorderStyle
@@ -589,7 +589,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte OldBorderStyle
@@ -609,7 +609,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte BorderWidth
@@ -629,7 +629,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte BorderLineStyle
@@ -649,7 +649,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int32 BorderColor
@@ -669,7 +669,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool AutoLabel
@@ -689,7 +689,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool AddColon
@@ -709,7 +709,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 LabelX
@@ -729,7 +729,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 LabelY
@@ -749,7 +749,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public byte LabelAlign
@@ -769,7 +769,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public Int16 Section
@@ -789,7 +789,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string ControlName
@@ -809,7 +809,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string Tag
@@ -829,7 +829,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool IsVisible
@@ -849,7 +849,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool InSelection
@@ -869,7 +869,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string OnEnter
@@ -889,7 +889,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string OnExit
@@ -909,7 +909,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string Name
@@ -929,7 +929,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string OnEnterMacro
@@ -949,7 +949,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public string OnExitMacro
@@ -969,7 +969,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcLayoutType Layout
@@ -984,7 +984,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public Int16 LeftPadding
@@ -1004,7 +1004,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public Int16 TopPadding
@@ -1024,7 +1024,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public Int16 RightPadding
@@ -1044,7 +1044,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public Int16 BottomPadding
@@ -1064,7 +1064,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineStyleLeft
@@ -1084,7 +1084,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineStyleTop
@@ -1104,7 +1104,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineStyleRight
@@ -1124,7 +1124,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineStyleBottom
@@ -1144,7 +1144,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineWidthLeft
@@ -1164,7 +1164,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineWidthTop
@@ -1184,7 +1184,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineWidthRight
@@ -1204,7 +1204,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public byte GridlineWidthBottom
@@ -1224,7 +1224,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public Int32 GridlineColor
@@ -1244,7 +1244,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
@@ -1264,7 +1264,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
@@ -1284,7 +1284,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public bool FilterOnEmptyMaster
@@ -1304,7 +1304,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 12,14)]
 		public Int32 LayoutID
@@ -1319,7 +1319,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int32 BorderThemeColorIndex
@@ -1339,7 +1339,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Single BorderTint
@@ -1359,7 +1359,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Single BorderShade
@@ -1379,7 +1379,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Int32 GridlineThemeColorIndex
@@ -1399,7 +1399,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Single GridlineTint
@@ -1419,7 +1419,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 14)]
 		public Single GridlineShade

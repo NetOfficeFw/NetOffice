@@ -73,7 +73,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string ElementID
@@ -93,7 +93,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool ConsumesRecordset
@@ -113,7 +113,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string AlternateDataSource
@@ -133,7 +133,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string ListRowSource
@@ -153,7 +153,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string ListBoundField
@@ -173,7 +173,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string ListDisplayField
@@ -193,7 +193,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string ChildLabel
@@ -213,7 +213,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType
@@ -233,7 +233,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string DefaultValue
@@ -253,7 +253,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string RecordSource
@@ -273,7 +273,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string ControlSource
@@ -293,7 +293,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string UniqueTable
@@ -313,7 +313,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string ResyncCommand
@@ -333,7 +333,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string ServerFilter
@@ -353,7 +353,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string Format
@@ -373,7 +373,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string RecordsetLabel

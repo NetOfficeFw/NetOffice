@@ -73,7 +73,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChBorder Border
@@ -89,7 +89,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChDataLabelsCollection DataLabelsCollection
@@ -105,7 +105,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChPoints Points
@@ -121,7 +121,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string Caption
@@ -141,7 +141,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Explosion
@@ -161,7 +161,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Thickness
@@ -181,7 +181,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChErrorBarsCollection ErrorBarsCollection
@@ -197,7 +197,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Index
@@ -217,7 +217,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChInterior Interior
@@ -233,7 +233,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChLine Line
@@ -249,7 +249,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChMarker Marker
@@ -265,7 +265,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChChart Parent
@@ -281,7 +281,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string Name
@@ -301,7 +301,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Dimension">NetOffice.OWC10Api.Enums.ChartDimensionsEnum Dimension</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -315,7 +315,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChTrendlines Trendlines
@@ -331,7 +331,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartChartTypeEnum Type
@@ -351,7 +351,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 ZOrder
@@ -371,7 +371,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public COMObject PivotObject
@@ -387,7 +387,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 GapWidth
@@ -407,7 +407,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Overlap
@@ -427,7 +427,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.ChFormatMap FormatMap
@@ -443,7 +443,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public string TipText
@@ -463,7 +463,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Top
@@ -478,7 +478,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Left
@@ -493,7 +493,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Bottom
@@ -508,7 +508,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Right
@@ -523,7 +523,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 LayerIndex
@@ -538,7 +538,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 TypeFlags
@@ -553,7 +553,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartSelectionsEnum ObjectType

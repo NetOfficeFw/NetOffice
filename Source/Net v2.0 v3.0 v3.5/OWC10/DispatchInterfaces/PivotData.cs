@@ -73,7 +73,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotView View
@@ -89,7 +89,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotResultRowAxis RowAxis
@@ -105,7 +105,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotResultColumnAxis ColumnAxis
@@ -121,7 +121,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotResultFilterAxis FilterAxis
@@ -137,7 +137,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotResultDataAxis DataAxis
@@ -153,7 +153,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotColumnMember Left
@@ -174,7 +174,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotRowMember Top
@@ -195,7 +195,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Row">NetOffice.OWC10Api.PivotRowMember Row</param>
 		/// <param name="Column">NetOffice.OWC10Api.PivotColumnMember Column</param>
@@ -210,7 +210,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Column">NetOffice.OWC10Api.PivotColumnMember Column</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -223,7 +223,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Column">NetOffice.OWC10Api.PivotColumnMember Column</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -235,7 +235,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="TopLeft">NetOffice.OWC10Api.PivotCell TopLeft</param>
 		/// <param name="BottomRight">NetOffice.OWC10Api.PivotCell BottomRight</param>
@@ -250,7 +250,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Left2
@@ -265,7 +265,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 Top2
@@ -280,7 +280,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotResultLabel Label
@@ -296,7 +296,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.IPivotControl Control
@@ -305,14 +305,14 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Control", paramsArray);
-				NetOffice.OWC10Api.IPivotControl newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.IPivotControl.LateBindingApiWrapperType) as NetOffice.OWC10Api.IPivotControl;
+				NetOffice.OWC10Api.IPivotControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.IPivotControl;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotRowMembers RowMembers
@@ -328,7 +328,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotColumnMembers ColumnMembers
@@ -344,7 +344,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotCell CurrentCell
@@ -360,7 +360,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 LeftOffset
@@ -380,7 +380,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 TopOffset
@@ -400,7 +400,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 ViewportTop
@@ -420,7 +420,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public Int32 ViewportLeft
@@ -440,7 +440,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Row">NetOffice.OWC10Api.PivotRowMember Row</param>
 		/// <param name="Column">NetOffice.OWC10Api.PivotColumnMember Column</param>
@@ -456,7 +456,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotResultPageAxis PageAxis
@@ -472,7 +472,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public NetOffice.ADODBApi.Recordset Recordset
@@ -488,7 +488,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public bool IsConsistent

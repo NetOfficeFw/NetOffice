@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string Id
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string Name
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string Description
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string DocumentLibraryName
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string DocumentLibraryURL

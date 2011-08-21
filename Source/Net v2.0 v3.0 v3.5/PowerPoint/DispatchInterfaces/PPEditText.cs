@@ -73,7 +73,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState MultiLine
@@ -93,7 +93,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState VerticalScrollBar
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState WordWrap
@@ -133,7 +133,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState ReadOnly
@@ -153,7 +153,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public string Text
@@ -173,7 +173,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public Int32 MaxLength
@@ -193,7 +193,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 9)]
 		public string OnAChange

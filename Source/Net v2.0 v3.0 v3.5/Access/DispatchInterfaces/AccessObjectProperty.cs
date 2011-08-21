@@ -73,7 +73,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object _Value
@@ -96,7 +96,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string Name
@@ -111,7 +111,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public object Value

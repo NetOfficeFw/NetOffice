@@ -73,7 +73,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -104,7 +104,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -120,7 +120,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public COMObject Parent
@@ -136,7 +136,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string Language
@@ -156,7 +156,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public bool LockUserChanges
@@ -176,7 +176,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string Name
@@ -196,7 +196,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlViewSaveOption SaveOption
@@ -211,7 +211,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public bool Standard
@@ -226,7 +226,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlViewType ViewType
@@ -241,7 +241,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string XML
@@ -261,7 +261,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string Filter
@@ -281,7 +281,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string StartField
@@ -301,7 +301,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public string EndField
@@ -321,7 +321,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlCalendarViewMode CalendarViewMode
@@ -341,7 +341,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlDayWeekTimeScale DayWeekTimeScale
@@ -361,7 +361,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public bool MonthShowEndTime
@@ -381,7 +381,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public bool BoldDatesWithItems
@@ -401,7 +401,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.ViewFont DayWeekTimeFont
@@ -417,7 +417,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.ViewFont DayWeekFont
@@ -433,7 +433,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.ViewFont MonthFont
@@ -449,7 +449,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.AutoFormatRules AutoFormatRules
@@ -465,7 +465,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public Int32 DaysInMultiDayMode
@@ -485,7 +485,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public object DisplayedDates
@@ -508,7 +508,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public bool BoldSubjects
@@ -528,7 +528,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public DateTime SelectedStartTime
@@ -543,7 +543,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public DateTime SelectedEndTime

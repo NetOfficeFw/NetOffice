@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public string Name
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public COMObject Parent
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.IMsoBorder Border
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ChartFont Font
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public bool Shadow
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Double Height
@@ -176,7 +176,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.IMsoInterior Interior
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.ChartFillFormat Fill
@@ -208,7 +208,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Double Left
@@ -228,7 +228,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Double Top
@@ -248,7 +248,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public Double Width
@@ -268,7 +268,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public object AutoScaleFont
@@ -296,7 +296,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 12,14)]
 		public NetOffice.OfficeApi.IMsoChartFormat Format
@@ -312,7 +312,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public bool RoundedCorners
@@ -332,7 +332,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public COMObject Application
@@ -348,7 +348,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 14)]
 		public Int32 Creator

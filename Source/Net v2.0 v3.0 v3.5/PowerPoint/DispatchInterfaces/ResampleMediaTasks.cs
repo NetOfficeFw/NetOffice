@@ -73,7 +73,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 PercentComplete

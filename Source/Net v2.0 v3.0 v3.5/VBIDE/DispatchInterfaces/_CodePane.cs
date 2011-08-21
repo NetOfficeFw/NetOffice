@@ -73,7 +73,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.CodePanes Collection
@@ -89,7 +89,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -105,7 +105,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Window Window
@@ -121,7 +121,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 TopLine
@@ -141,7 +141,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 CountOfVisibleLines
@@ -156,7 +156,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.CodeModule CodeModule
@@ -172,7 +172,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Enums.vbext_CodePaneview CodePaneView

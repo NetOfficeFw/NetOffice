@@ -73,7 +73,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public COMObject Parent
@@ -105,7 +105,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Enums.AcColorIndex HyperlinkColor
@@ -125,7 +125,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Enums.AcColorIndex FollowedHyperlinkColor
@@ -145,7 +145,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool UnderlineHyperlinks
@@ -165,7 +165,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool OrganizeInFolder
@@ -185,7 +185,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool UseLongFileNames
@@ -205,7 +205,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool CheckIfOfficeIsHTMLEditor
@@ -225,7 +225,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool DownloadComponents
@@ -245,7 +245,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string LocationOfComponents
@@ -265,7 +265,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoEncoding Encoding
@@ -285,7 +285,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public bool AlwaysSaveInDefaultEncoding
@@ -305,7 +305,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Access", 9,10,11,12,14)]
 		public string FolderSuffix
@@ -320,7 +320,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByLibrary Access 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Access", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTargetBrowser TargetBrowser

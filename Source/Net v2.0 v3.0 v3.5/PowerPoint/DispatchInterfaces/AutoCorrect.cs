@@ -73,7 +73,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public bool DisplayAutoCorrectOptions
@@ -93,7 +93,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 10,11,12,14)]
 		public bool DisplayAutoLayoutOptions

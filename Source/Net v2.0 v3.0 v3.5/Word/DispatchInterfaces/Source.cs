@@ -73,7 +73,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public Int32 Creator
@@ -104,7 +104,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public COMObject Parent
@@ -120,7 +120,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public string Tag
@@ -135,7 +135,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("Word", 12,14)]
@@ -148,7 +148,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		[SupportByLibrary("Word", 12,14)]
@@ -160,7 +160,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public string XML
@@ -175,7 +175,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public bool Cited

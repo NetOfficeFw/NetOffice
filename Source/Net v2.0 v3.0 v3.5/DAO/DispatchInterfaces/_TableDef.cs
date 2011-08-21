@@ -73,7 +73,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 Attributes
@@ -93,7 +93,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Connect
@@ -113,7 +113,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object DateCreated
@@ -136,7 +136,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object LastUpdated
@@ -159,7 +159,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Name
@@ -179,7 +179,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string SourceTableName
@@ -199,7 +199,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Updatable
@@ -214,7 +214,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string ValidationText
@@ -234,7 +234,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string ValidationRule
@@ -254,7 +254,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 RecordCount
@@ -269,7 +269,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Fields Fields
@@ -285,7 +285,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Indexes Indexes
@@ -301,7 +301,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string ConflictTable
@@ -316,7 +316,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object ReplicaFilter
@@ -356,7 +356,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options);
 			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Recordset.LateBindingApiWrapperType) as NetOffice.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 
@@ -368,7 +368,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Recordset.LateBindingApiWrapperType) as NetOffice.DAOApi.Recordset;
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
 		}
 

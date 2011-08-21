@@ -73,7 +73,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public Int32 Creator
@@ -104,7 +104,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public COMObject Parent
@@ -120,7 +120,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.OMath Sub
@@ -136,7 +136,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.OMath Sup
@@ -152,7 +152,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.OMath E

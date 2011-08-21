@@ -73,7 +73,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public Int32 Size
@@ -88,7 +88,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public bool EOS
@@ -103,7 +103,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public Int32 Position
@@ -123,7 +123,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.StreamTypeEnum Type
@@ -143,7 +143,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.LineSeparatorEnum LineSeparator
@@ -163,7 +163,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.ObjectStateEnum State
@@ -178,7 +178,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.ConnectModeEnum Mode
@@ -198,7 +198,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public string Charset

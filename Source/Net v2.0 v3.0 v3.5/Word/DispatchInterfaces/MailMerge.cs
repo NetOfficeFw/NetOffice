@@ -73,7 +73,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 Creator
@@ -104,7 +104,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public COMObject Parent
@@ -120,7 +120,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdMailMergeMainDocType MainDocumentType
@@ -140,7 +140,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdMailMergeState State
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdMailMergeDestination Destination
@@ -175,7 +175,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.MailMergeDataSource DataSource
@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.MailMergeFields Fields
@@ -207,7 +207,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public Int32 ViewMailMergeFieldCodes
@@ -227,7 +227,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool SuppressBlankLines
@@ -247,7 +247,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public bool MailAsAttachment
@@ -267,7 +267,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string MailAddressFieldName
@@ -287,7 +287,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 9,10,11,12,14)]
 		public string MailSubject
@@ -307,7 +307,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public bool HighlightMergeFields
@@ -327,7 +327,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdMailMergeMailFormat MailFormat
@@ -347,7 +347,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public string ShowSendToCustom
@@ -367,7 +367,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 10,11,12,14)]
 		public Int32 WizardState

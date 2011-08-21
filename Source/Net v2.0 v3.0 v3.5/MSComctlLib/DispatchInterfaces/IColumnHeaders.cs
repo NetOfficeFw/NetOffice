@@ -74,7 +74,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 Count
@@ -94,7 +94,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -102,13 +102,13 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IColumnHeader;
+			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -119,7 +119,7 @@ namespace NetOffice.MSComctlLibApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IColumnHeader;
+			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
 			return newObject;
 			}
 		}
@@ -141,7 +141,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment);
 			object returnItem = Invoker.MethodReturn(this, "Add_PreVB98", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IColumnHeader;
+			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
 			return newObject;
 		}
 
@@ -153,7 +153,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add_PreVB98", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IColumnHeader;
+			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
 			return newObject;
 		}
 
@@ -192,7 +192,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment, icon);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IColumnHeader;
+			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
 			return newObject;
 		}
 
@@ -204,7 +204,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IColumnHeader;
+			NetOffice.MSComctlLibApi.IColumnHeader newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
 			return newObject;
 		}
 

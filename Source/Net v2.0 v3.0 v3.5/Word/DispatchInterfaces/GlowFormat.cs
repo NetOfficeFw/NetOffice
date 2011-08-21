@@ -73,7 +73,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public Single Radius
@@ -93,7 +93,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 12,14)]
 		public NetOffice.WordApi.ColorFormat Color
@@ -109,7 +109,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Application Application
@@ -125,7 +125,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Creator
@@ -140,7 +140,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public COMObject Parent
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Single Transparency

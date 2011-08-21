@@ -73,7 +73,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public COMObject Parent
@@ -89,7 +89,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Name
@@ -104,7 +104,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartBorder Border
@@ -120,7 +120,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Interior Interior
@@ -136,7 +136,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartFillFormat Fill
@@ -152,7 +152,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Caption
@@ -172,7 +172,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Start">optional object Start</param>
 		/// <param name="Length">optional object Length</param>
@@ -187,7 +187,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartCharacters Characters
@@ -203,7 +203,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartFont Font
@@ -219,7 +219,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object HorizontalAlignment
@@ -247,7 +247,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Double Left
@@ -267,7 +267,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object Orientation
@@ -295,7 +295,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool Shadow
@@ -315,7 +315,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Text
@@ -335,7 +335,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Double Top
@@ -355,7 +355,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object VerticalAlignment
@@ -383,7 +383,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 ReadingOrder
@@ -403,7 +403,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object AutoScaleFont
@@ -431,7 +431,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool AutoText
@@ -451,7 +451,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string NumberFormat
@@ -471,7 +471,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool NumberFormatLinked
@@ -491,7 +491,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object NumberFormatLocal
@@ -519,7 +519,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowLegendKey
@@ -539,7 +539,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object Type
@@ -567,7 +567,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlDataLabelPosition Position
@@ -587,7 +587,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowSeriesName
@@ -607,7 +607,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowCategoryName
@@ -627,7 +627,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowValue
@@ -647,7 +647,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowPercentage
@@ -667,7 +667,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public bool ShowBubbleSize
@@ -687,7 +687,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public object Separator
@@ -715,7 +715,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartFormat Format
@@ -731,7 +731,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Int32 Creator
@@ -746,7 +746,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
@@ -762,7 +762,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Double Height
@@ -777,7 +777,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public Double Width
@@ -792,7 +792,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string Formula
@@ -812,7 +812,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string FormulaR1C1
@@ -832,7 +832,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string FormulaLocal
@@ -852,7 +852,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("PowerPoint", 14)]
 		public string FormulaR1C1Local

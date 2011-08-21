@@ -74,7 +74,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
@@ -90,7 +90,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -105,7 +105,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -121,7 +121,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject Parent
@@ -137,7 +137,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public Int32 Count
@@ -166,7 +166,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OutlookApi._Reminder newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi._Reminder.LateBindingApiWrapperType) as NetOffice.OutlookApi._Reminder;
+				NetOffice.OutlookApi._Reminder newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Reminder;
 				return newObject;
 			}
 		}

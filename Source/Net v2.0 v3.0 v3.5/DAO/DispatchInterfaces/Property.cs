@@ -73,7 +73,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object Value
@@ -101,7 +101,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Name
@@ -121,7 +121,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int16 Type
@@ -141,7 +141,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Inherited

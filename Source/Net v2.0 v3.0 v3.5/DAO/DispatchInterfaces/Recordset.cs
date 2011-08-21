@@ -73,7 +73,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool BOF
@@ -88,7 +88,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public byte[] Bookmark
@@ -108,7 +108,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Bookmarkable
@@ -123,7 +123,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object DateCreated
@@ -146,7 +146,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool EOF
@@ -161,7 +161,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Filter
@@ -181,7 +181,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Index
@@ -201,7 +201,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public byte[] LastModified
@@ -216,7 +216,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object LastUpdated
@@ -239,7 +239,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool LockEdits
@@ -259,7 +259,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Name
@@ -274,7 +274,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool NoMatch
@@ -289,7 +289,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string Sort
@@ -309,7 +309,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Transactions
@@ -324,7 +324,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int16 Type
@@ -339,7 +339,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 RecordCount
@@ -354,7 +354,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Updatable
@@ -369,7 +369,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool Restartable
@@ -384,7 +384,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string ValidationText
@@ -399,7 +399,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public string ValidationRule
@@ -414,7 +414,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public byte[] CacheStart
@@ -434,7 +434,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 CacheSize
@@ -454,7 +454,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Single PercentPosition
@@ -474,7 +474,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 AbsolutePosition
@@ -494,7 +494,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int16 EditMode
@@ -509,7 +509,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 ODBCFetchCount
@@ -524,7 +524,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 ODBCFetchDelay
@@ -539,7 +539,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Database Parent
@@ -555,7 +555,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Fields Fields
@@ -571,7 +571,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Indexes Indexes
@@ -587,7 +587,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Item">object Item</param>
 		[SupportByLibrary("DAO", 6,12)]
@@ -608,7 +608,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Item">object Item</param>
 		[SupportByLibrary("DAO", 6,12)]
@@ -620,7 +620,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 hStmt
@@ -635,7 +635,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public bool StillExecuting
@@ -650,7 +650,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 BatchSize
@@ -670,7 +670,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 BatchCollisionCount
@@ -685,7 +685,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public object BatchCollisions
@@ -708,7 +708,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public NetOffice.DAOApi.Connection Connection
@@ -729,7 +729,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int16 RecordStatus
@@ -744,7 +744,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("DAO", 6,12)]
 		public Int32 UpdateOptions

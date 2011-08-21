@@ -73,7 +73,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]

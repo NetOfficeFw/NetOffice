@@ -73,7 +73,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Creator
@@ -104,7 +104,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public COMObject Parent
@@ -120,7 +120,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string Caption
@@ -140,7 +140,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Document Document
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Left
@@ -176,7 +176,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Top
@@ -196,7 +196,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Width
@@ -216,7 +216,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Height
@@ -236,7 +236,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.Enums.WdWindowState WindowState
@@ -256,7 +256,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool Active
@@ -271,7 +271,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Index
@@ -286,7 +286,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public bool Visible
@@ -306,7 +306,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string SourceName
@@ -321,7 +321,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public string SourcePath

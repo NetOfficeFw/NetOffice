@@ -74,7 +74,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE Parent
@@ -90,7 +90,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -106,7 +106,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 Count
@@ -121,7 +121,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.CodePane Current

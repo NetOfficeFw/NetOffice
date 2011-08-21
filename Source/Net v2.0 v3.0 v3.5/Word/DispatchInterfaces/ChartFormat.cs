@@ -73,7 +73,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.FillFormat Fill
@@ -89,7 +89,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.GlowFormat Glow
@@ -105,7 +105,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.LineFormat Line
@@ -121,7 +121,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public COMObject Parent
@@ -137,7 +137,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.PictureFormat PictureFormat
@@ -153,7 +153,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ShadowFormat Shadow
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.SoftEdgeFormat SoftEdge
@@ -185,7 +185,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.OfficeApi.TextFrame2 TextFrame2
@@ -201,7 +201,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public NetOffice.WordApi.ThreeDFormat ThreeD
@@ -217,7 +217,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public COMObject Application
@@ -233,7 +233,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByLibrary Word 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Word", 14)]
 		public Int32 Creator

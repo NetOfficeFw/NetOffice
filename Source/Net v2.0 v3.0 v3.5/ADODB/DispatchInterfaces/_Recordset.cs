@@ -73,7 +73,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Properties Properties
@@ -89,7 +89,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.PositionEnum AbsolutePosition
@@ -109,7 +109,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public COMObject ActiveConnection
@@ -130,7 +130,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public bool BOF
@@ -145,7 +145,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public object Bookmark
@@ -173,7 +173,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 CacheSize
@@ -193,7 +193,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType
@@ -213,7 +213,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public bool EOF
@@ -228,7 +228,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Fields Fields
@@ -244,7 +244,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.LockTypeEnum LockType
@@ -264,7 +264,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 MaxRecords
@@ -284,7 +284,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 RecordCount
@@ -299,7 +299,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public COMObject Source
@@ -320,7 +320,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.PositionEnum AbsolutePage
@@ -340,7 +340,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.EditModeEnum EditMode
@@ -355,7 +355,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public object Filter
@@ -383,7 +383,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 PageCount
@@ -398,7 +398,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 PageSize
@@ -418,7 +418,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string Sort
@@ -438,7 +438,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 Status
@@ -453,7 +453,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 State
@@ -468,7 +468,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.CursorLocationEnum CursorLocation
@@ -488,7 +488,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
@@ -509,7 +509,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
@@ -521,7 +521,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.MarshalOptionsEnum MarshalOptions
@@ -541,7 +541,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1)]
 		public string Index
@@ -561,7 +561,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public COMObject DataSource
@@ -582,7 +582,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public COMObject ActiveCommand
@@ -598,7 +598,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public bool StayInSync
@@ -618,7 +618,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.5)]
 		public string DataMember

@@ -73,7 +73,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.AppearanceConstants Appearance
@@ -93,7 +93,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool AllowCustomize
@@ -113,7 +113,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IButtons Buttons
@@ -122,7 +122,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Buttons", paramsArray);
-				NetOffice.MSComctlLibApi.IButtons newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSComctlLibApi.IButtons.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IButtons;
+				NetOffice.MSComctlLibApi.IButtons newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButtons;
 				return newObject;
 			}
 			set
@@ -134,7 +134,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IControls Controls
@@ -143,14 +143,14 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Controls", paramsArray);
-				NetOffice.MSComctlLibApi.IControls newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSComctlLibApi.IControls.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IControls;
+				NetOffice.MSComctlLibApi.IControls newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IControls;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Enabled
@@ -170,7 +170,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 hWnd
@@ -190,7 +190,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public stdole.Picture MouseIcon
@@ -211,7 +211,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer
@@ -231,7 +231,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public COMObject ImageList
@@ -252,7 +252,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool ShowTips
@@ -272,7 +272,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.BorderStyleConstants BorderStyle
@@ -292,7 +292,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Wrappable
@@ -312,7 +312,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single ButtonHeight
@@ -332,7 +332,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single ButtonWidth
@@ -352,7 +352,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 HelpContextID
@@ -372,7 +372,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string HelpFile
@@ -392,7 +392,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
@@ -412,7 +412,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public COMObject DisabledImageList
@@ -433,7 +433,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public COMObject HotImageList
@@ -454,7 +454,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.ToolbarStyleConstants Style
@@ -474,7 +474,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.ToolbarTextAlignConstants TextAlignment

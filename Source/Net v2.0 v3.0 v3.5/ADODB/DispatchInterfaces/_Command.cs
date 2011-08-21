@@ -73,7 +73,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Properties Properties
@@ -89,7 +89,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 State

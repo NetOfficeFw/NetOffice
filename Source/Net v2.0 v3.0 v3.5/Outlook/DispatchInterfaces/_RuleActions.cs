@@ -73,7 +73,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -104,7 +104,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -120,7 +120,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public COMObject Parent
@@ -136,7 +136,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public Int32 Count
@@ -151,7 +151,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.MoveOrCopyRuleAction CopyToFolder
@@ -167,7 +167,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.RuleAction DeletePermanently
@@ -183,7 +183,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.RuleAction Delete
@@ -199,7 +199,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.RuleAction DesktopAlert
@@ -215,7 +215,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.RuleAction NotifyDelivery
@@ -231,7 +231,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.RuleAction NotifyRead
@@ -247,7 +247,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.RuleAction Stop
@@ -263,7 +263,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.MoveOrCopyRuleAction MoveToFolder
@@ -279,7 +279,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.SendRuleAction CC
@@ -295,7 +295,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.SendRuleAction Forward
@@ -311,7 +311,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.SendRuleAction ForwardAsAttachment
@@ -327,7 +327,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.SendRuleAction Redirect
@@ -343,7 +343,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.AssignToCategoryRuleAction AssignToCategory
@@ -359,7 +359,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.PlaySoundRuleAction PlaySound
@@ -375,7 +375,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.MarkAsTaskRuleAction MarkAsTask
@@ -391,7 +391,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.NewItemAlertRuleAction NewItemAlert
@@ -407,7 +407,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi.RuleAction ClearCategories
@@ -437,7 +437,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OutlookApi._RuleAction newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi._RuleAction.LateBindingApiWrapperType) as NetOffice.OutlookApi._RuleAction;
+				NetOffice.OutlookApi._RuleAction newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._RuleAction;
 				return newObject;
 			}
 		}

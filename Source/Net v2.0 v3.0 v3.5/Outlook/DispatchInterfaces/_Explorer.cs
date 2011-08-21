@@ -73,7 +73,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
@@ -89,7 +89,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -104,7 +104,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -120,7 +120,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public COMObject Parent
@@ -136,7 +136,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
@@ -152,7 +152,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.MAPIFolder CurrentFolder
@@ -173,7 +173,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public string Caption
@@ -188,7 +188,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public object CurrentView
@@ -216,7 +216,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public Int32 Height
@@ -236,7 +236,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public Int32 Left
@@ -256,7 +256,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Panes Panes
@@ -272,7 +272,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Selection Selection
@@ -288,7 +288,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public Int32 Top
@@ -308,7 +308,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public Int32 Width
@@ -328,7 +328,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlWindowState WindowState
@@ -348,7 +348,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 9,10,11,12,14)]
 		public COMObject Views
@@ -364,7 +364,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 10,11,12,14)]
 		public COMObject HTMLDocument
@@ -380,7 +380,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NavigationPane NavigationPane
@@ -389,14 +389,14 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NavigationPane", paramsArray);
-				NetOffice.OutlookApi._NavigationPane newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi._NavigationPane.LateBindingApiWrapperType) as NetOffice.OutlookApi._NavigationPane;
+				NetOffice.OutlookApi._NavigationPane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NavigationPane;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public NetOffice.OutlookApi._AccountSelector AccountSelector
@@ -405,14 +405,14 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AccountSelector", paramsArray);
-				NetOffice.OutlookApi._AccountSelector newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi._AccountSelector.LateBindingApiWrapperType) as NetOffice.OutlookApi._AccountSelector;
+				NetOffice.OutlookApi._AccountSelector newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._AccountSelector;
 				return newObject;
 			}
 		}
 
 		/// <summary>
 		/// SupportByLibrary Outlook 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Outlook", 14)]
 		public NetOffice.OutlookApi._AttachmentSelection AttachmentSelection

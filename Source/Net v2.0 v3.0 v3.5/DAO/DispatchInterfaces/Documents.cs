@@ -73,7 +73,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Item">object Item</param>
 		[SupportByLibrary("DAO", 6,12)]

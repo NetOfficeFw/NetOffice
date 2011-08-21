@@ -73,7 +73,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public object Value
@@ -101,7 +101,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index1">object Index1</param>
 		/// <param name="Index2">optional object Index2</param>
@@ -125,7 +125,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index1">object Index1</param>
 		/// <param name="Index2">optional object Index2</param>
@@ -140,7 +140,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index1">object Index1</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -161,7 +161,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index1">object Index1</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -173,7 +173,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int16 NumIndices
@@ -188,7 +188,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Application Application
@@ -204,7 +204,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Properties Parent
@@ -220,7 +220,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string Name
@@ -235,7 +235,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -251,7 +251,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Properties Collection
@@ -267,7 +267,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public COMObject Object

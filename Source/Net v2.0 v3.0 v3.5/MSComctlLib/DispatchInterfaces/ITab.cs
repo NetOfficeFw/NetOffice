@@ -73,7 +73,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string _ObjectDefault
@@ -93,7 +93,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string Caption
@@ -113,7 +113,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public object Tag
@@ -141,7 +141,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int16 Index
@@ -161,7 +161,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string Key
@@ -181,7 +181,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public string ToolTipText
@@ -201,7 +201,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Width
@@ -221,7 +221,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Height
@@ -241,7 +241,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Top
@@ -261,7 +261,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Single Left
@@ -281,7 +281,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool Selected
@@ -301,7 +301,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public object Image
@@ -329,7 +329,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public bool HighLighted

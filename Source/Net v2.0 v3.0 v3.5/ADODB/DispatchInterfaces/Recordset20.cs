@@ -73,7 +73,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Properties Properties
@@ -89,7 +89,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public COMObject DataSource
@@ -110,7 +110,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public COMObject ActiveCommand
@@ -126,7 +126,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public bool StayInSync
@@ -146,7 +146,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string DataMember

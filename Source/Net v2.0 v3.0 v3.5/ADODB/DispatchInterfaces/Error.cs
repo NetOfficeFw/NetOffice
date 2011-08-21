@@ -73,7 +73,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 Number
@@ -88,7 +88,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string Source
@@ -103,7 +103,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string Description
@@ -118,7 +118,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string HelpFile
@@ -133,7 +133,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 HelpContext
@@ -148,7 +148,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string SQLState
@@ -163,7 +163,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 NativeError

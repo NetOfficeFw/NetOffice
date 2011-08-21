@@ -74,7 +74,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int16 Count
@@ -94,7 +94,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -102,13 +102,13 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
-			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IImage;
+			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
 			return newObject;
 		}
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -120,7 +120,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -131,7 +131,7 @@ namespace NetOffice.MSComctlLibApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IImage;
+			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
 			return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, picture);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IImage;
+			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
 			return newObject;
 		}
 
@@ -163,7 +163,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IImage;
+			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
 			return newObject;
 		}
 

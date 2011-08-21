@@ -73,7 +73,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public object Value
@@ -101,7 +101,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public string Name
@@ -116,7 +116,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Enums.DataTypeEnum Type
@@ -131,7 +131,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("ADODB", 2.1,2.5)]
 		public Int32 Attributes

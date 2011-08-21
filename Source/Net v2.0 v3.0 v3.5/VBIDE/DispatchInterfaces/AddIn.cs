@@ -73,7 +73,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string Description
@@ -93,7 +93,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -109,7 +109,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Addins Collection
@@ -125,7 +125,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string ProgId
@@ -140,7 +140,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string Guid
@@ -155,7 +155,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public bool Connect
@@ -175,7 +175,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public COMObject Object

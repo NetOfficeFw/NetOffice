@@ -73,7 +73,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -89,7 +89,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Windows Collection
@@ -105,7 +105,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public string Caption
@@ -120,7 +120,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public bool Visible
@@ -140,7 +140,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 Left
@@ -160,7 +160,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 Top
@@ -180,7 +180,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 Width
@@ -200,7 +200,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 Height
@@ -220,7 +220,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Enums.vbext_WindowState WindowState
@@ -240,7 +240,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Enums.vbext_WindowType Type
@@ -255,7 +255,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.LinkedWindows LinkedWindows
@@ -271,7 +271,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Window LinkedWindowFrame
@@ -287,7 +287,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("VBIDE", 5.3,12)]
 		public Int32 HWnd

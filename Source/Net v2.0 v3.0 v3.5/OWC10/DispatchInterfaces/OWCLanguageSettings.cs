@@ -73,7 +73,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("OWC10", 1)]
 		public COMObject Application
@@ -89,7 +89,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="id">NetOffice.OWC10Api.Enums.MsoAppLanguageID id</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -102,7 +102,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="lid">NetOffice.OWC10Api.Enums.MsoLanguageID lid</param>
 		[SupportByLibrary("OWC10", 1)]

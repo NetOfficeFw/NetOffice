@@ -74,7 +74,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -88,7 +88,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]
@@ -100,7 +100,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 Count
@@ -120,7 +120,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get/Set Property
+		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]

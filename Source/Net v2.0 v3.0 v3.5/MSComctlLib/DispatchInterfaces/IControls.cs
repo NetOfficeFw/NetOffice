@@ -74,7 +74,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public Int32 Count
@@ -89,7 +89,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		[SupportByLibrary("MSComctlLib", 6)]

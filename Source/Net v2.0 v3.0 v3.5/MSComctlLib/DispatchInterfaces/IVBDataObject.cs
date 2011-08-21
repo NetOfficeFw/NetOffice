@@ -73,7 +73,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IVBDataObjectFiles Files
@@ -82,7 +82,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Files", paramsArray);
-				NetOffice.MSComctlLibApi.IVBDataObjectFiles newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSComctlLibApi.IVBDataObjectFiles.LateBindingApiWrapperType) as NetOffice.MSComctlLibApi.IVBDataObjectFiles;
+				NetOffice.MSComctlLibApi.IVBDataObjectFiles newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IVBDataObjectFiles;
 				return newObject;
 			}
 		}

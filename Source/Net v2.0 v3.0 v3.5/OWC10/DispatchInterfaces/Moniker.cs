@@ -73,7 +73,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="RelativeTo">object RelativeTo</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -86,7 +86,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Moniker">string Moniker</param>
 		[SupportByLibrary("OWC10", 1)]

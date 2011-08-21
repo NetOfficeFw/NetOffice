@@ -73,7 +73,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]
@@ -87,7 +87,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="CommandBarControl">object CommandBarControl</param>
 		[SupportByLibrary("VBIDE", 5.3,12)]

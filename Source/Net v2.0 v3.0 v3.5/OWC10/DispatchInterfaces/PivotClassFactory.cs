@@ -73,7 +73,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="DetailCell">NetOffice.OWC10Api.PivotDetailCell DetailCell</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -87,7 +87,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Aggregate">NetOffice.OWC10Api.PivotAggregate Aggregate</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -101,7 +101,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="RowMember">NetOffice.OWC10Api.PivotRowMember RowMember</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -115,7 +115,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="ColumnMember">NetOffice.OWC10Api.PivotColumnMember ColumnMember</param>
 		[SupportByLibrary("OWC10", 1)]
@@ -129,7 +129,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByLibrary OWC10 1
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Cell">NetOffice.OWC10Api.PivotCell Cell</param>
 		[SupportByLibrary("OWC10", 1)]

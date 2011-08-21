@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="Id">NetOffice.OfficeApi.Enums.MsoAppLanguageID Id</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		/// <param name="lid">NetOffice.OfficeApi.Enums.MsoLanguageID lid</param>
 		[SupportByLibrary("Office", 9,10,11,12,14)]
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
-		/// Get Property
+		/// Get
 		/// </summary>
 		[SupportByLibrary("Office", 10,11,12,14)]
 		public COMObject Parent
