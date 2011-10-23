@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B6C8DAB-83ED-4C92-8491-BFF9B8984D4B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetOffice.DeveloperToolbox</RootNamespace>
+    <AssemblyName>NetOffice.DeveloperToolbox</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cecil, Version=0.6.8.8607, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddinGuard\NotificationType.cs" />
+    <Compile Include="AddinGuard\NotifyKind.cs" />
+    <Compile Include="AddinGuard\RegistryChangeInfo.cs" />
+    <Compile Include="ColorLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorLabel.Designer.cs">
+      <DependentUpon>ColorLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HexBox\ByteCharConverters.cs" />
+    <Compile Include="HexBox\ByteCollection.cs" />
+    <Compile Include="HexBox\BytePositionInfo.cs" />
+    <Compile Include="HexBox\DataBlock.cs" />
+    <Compile Include="HexBox\DataMap.cs" />
+    <Compile Include="HexBox\DynamicByteProvider.cs" />
+    <Compile Include="HexBox\FileDataBlock.cs" />
+    <Compile Include="HexBox\HexBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HexBox\HexCasing.cs" />
+    <Compile Include="HexBox\IByteProvider.cs" />
+    <Compile Include="HexBox\MemoryDataBlock.cs" />
+    <Compile Include="HexBox\NativeMethods.cs" />
+    <Compile Include="HexBox\Util.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoLayer\InfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InfoLayer\InfoControl.Designer.cs">
+      <DependentUpon>InfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IToolboxControl.cs" />
+    <Compile Include="ApplicationObserver\HotKey.cs" />
+    <Compile Include="ApplicationObserver\OfficeProcessKiller.cs" />
+    <Compile Include="ApplicationObserver\ApplicationObserverControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationObserver\ApplicationObserverControl.Designer.cs">
+      <DependentUpon>ApplicationObserverControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeCompatibility\CustomTableLayoutControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OfficeCompatibility\CustomTableLayoutControl.Designer.cs">
+      <DependentUpon>CustomTableLayoutControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeCompatibility\NetOfficeSupportTable.cs" />
+    <Compile Include="OfficeCompatibility\ReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OfficeCompatibility\ReportControl.Designer.cs">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutlookSecurity\OutlookSecurityControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OutlookSecurity\OutlookSecurityControl.Designer.cs">
+      <DependentUpon>OutlookSecurityControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Translator.cs" />
+    <EmbeddedResource Include="ColorLabel.resx">
+      <DependentUpon>ColorLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexBox\HexBox.resx">
+      <DependentUpon>HexBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationObserver\ApplicationObserverControl.resx">
+      <DependentUpon>ApplicationObserverControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeCompatibility\ReportControl.resx">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutlookSecurity\OutlookSecurityControl.resx">
+      <DependentUpon>OutlookSecurityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ApplicationObserver\Info1031.rtf" />
+    <EmbeddedResource Include="ApplicationObserver\Info1033.rtf" />
+    <EmbeddedResource Include="AddinGuard\Info1031.rtf" />
+    <EmbeddedResource Include="AddinGuard\Info1033.rtf" />
+    <EmbeddedResource Include="OutlookSecurity\Info1031.rtf" />
+    <EmbeddedResource Include="OutlookSecurity\Info1033.rtf" />
+    <EmbeddedResource Include="OfficeCompatibility\Info1031.rtf" />
+    <EmbeddedResource Include="OfficeCompatibility\Info1033.rtf" />
+    <None Include="app.config" />
+    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\Access.Description.xml.gz" />
+    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\Excel.Description.xml.gz" />
+    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\Office.Description.xml.gz" />
+    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\Outlook.Description.xml.gz" />
+    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\PowerPoint.Description.xml.gz" />
+    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\Word.Description.xml.gz" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AddinGuard\AddinKeyValue.cs" />
+    <Compile Include="AddinGuard\DisabledItems.cs" />
+    <Compile Include="AddinGuard\DisabledKey.cs" />
+    <Compile Include="AddinGuard\DisabledValue.cs" />
+    <Compile Include="RegistryEditor\ChangeBinaryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistryEditor\ChangeBinaryDialog.Designer.cs">
+      <DependentUpon>ChangeBinaryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistryEditor\ChangeDWordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistryEditor\ChangeDWordDialog.Designer.cs">
+      <DependentUpon>ChangeDWordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistryEditor\ChangeNameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistryEditor\ChangeNameDialog.Designer.cs">
+      <DependentUpon>ChangeNameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistryEditor\ChangeStringDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistryEditor\ChangeStringDialog.Designer.cs">
+      <DependentUpon>ChangeStringDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistryEditor\RegistryEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegistryEditor\RegistryEditorControl.Designer.cs">
+      <DependentUpon>RegistryEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registry\UtilsRegistry.cs" />
+    <Compile Include="Registry\UtilsRegistryEntries.cs" />
+    <Compile Include="Registry\UtilsRegistryEntry.cs" />
+    <Compile Include="Registry\UtilsRegistryKey.cs" />
+    <Compile Include="Registry\UtilsRegistryKeys.cs" />
+    <Compile Include="AddinGuard\AddinGuardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddinGuard\AddinGuardControl.Designer.cs">
+      <DependentUpon>AddinGuardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddinGuard\WatchController.cs" />
+    <Compile Include="AddinGuard\AddinsKey.cs" />
+    <Compile Include="AddinGuard\AddinItems.cs" />
+    <Compile Include="AddinGuard\AddinKey.cs" />
+    <Compile Include="AddinGuard\WatchNotify.cs" />
+    <Compile Include="OfficeCompatibility\AssemblyAnalyzer.cs" />
+    <Compile Include="OfficeCompatibility\OfficeCompatibilityControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OfficeCompatibility\OfficeCompatibilityControl.Designer.cs">
+      <DependentUpon>OfficeCompatibilityControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegistryEditor\Info1031.rtf" />
+    <EmbeddedResource Include="RegistryEditor\Info1033.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ApplicationObserver\IconsAndConfig\NotRunning.ico" />
+    <EmbeddedResource Include="ApplicationObserver\IconsAndConfig\Running.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultConfiguration.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="InfoLayer\InfoControl.resx">
+      <DependentUpon>InfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationObserver\IconsAndConfig\DefaultConfiguration.xml" />
+    <EmbeddedResource Include="RegistryEditor\ChangeBinaryDialog.resx">
+      <DependentUpon>ChangeBinaryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistryEditor\ChangeDWordDialog.resx">
+      <DependentUpon>ChangeDWordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistryEditor\ChangeNameDialog.resx">
+      <DependentUpon>ChangeNameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistryEditor\ChangeStringDialog.resx">
+      <DependentUpon>ChangeStringDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistryEditor\RegistryEditorControl.resx">
+      <DependentUpon>RegistryEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddinGuard\AddinGuardControl.resx">
+      <DependentUpon>AddinGuardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeCompatibility\OfficeCompatibilityControl.resx">
+      <DependentUpon>OfficeCompatibilityControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddinGuard\Messages.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OfficeCompatibility\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddinGuard\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ApplicationObserver\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RegistryEditor\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OutlookSecurity\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ApplicationObserver\MessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RegistryEditor\MessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddinGuard\MessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetOffice.OutlookSecurity\NetOffice.OutlookSecurity.csproj">
+      <Project>{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}</Project>
+      <Name>NetOffice.OutlookSecurity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OutlookSecurity\MessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RegistryEditor\ChangeBinaryDialogMessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RegistryEditor\ChangeDWordDialogMessageTable.txt" />
+    <EmbeddedResource Include="RegistryEditor\ChangeNameDialogMessageTable.txt" />
+    <EmbeddedResource Include="RegistryEditor\ChangeStringDialogMessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ErrorFormMessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OfficeCompatibility\MessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OfficeCompatibility\ReportMessageTable.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
