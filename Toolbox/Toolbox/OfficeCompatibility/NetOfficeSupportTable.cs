@@ -192,6 +192,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
         public static string GetLibrary(string fullQualifiedName)
         {
             string[] array = fullQualifiedName.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+            if (array[1].Length < 3)
+                return null;
             string documentName = array[1].Substring(0, array[1].Length - 3);
             return documentName;
         }

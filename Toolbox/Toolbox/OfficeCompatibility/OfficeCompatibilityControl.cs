@@ -101,7 +101,6 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             try
             {
                 OpenFileDialog dialog = new OpenFileDialog();
-dialog.InitialDirectory = @"D:\Workbench\Sebastian\OfficeCompatibilityTest\Test1\Test1\bin\Release";            
                 dialog.Filter = "*.exe|*.exe|*.dll|*.dll|All Files|*.*";        
                 if (DialogResult.OK  != dialog.ShowDialog(this))
                     return;

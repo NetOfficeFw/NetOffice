@@ -457,8 +457,11 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             bool fieldSetCalls = AnalyzeMethodFieldSets(methodDefinition, entity, newMethodNode);
             bool fieldSetLocalCalls = AnalyzeMethodLocalFieldSets(methodDefinition, entity, newMethodNode);
 
-            if ((result) || (resultVariables) || (resultNewObjects) || (resultCalls) || (fieldSetCalls) || (fieldSetCalls)) 
+            if ((result) || (resultVariables) || (resultNewObjects) || (resultCalls) || (fieldSetCalls) || (fieldSetCalls))
+            { 
                 entity.Element("Methods").Add(newMethodNode);
+                result = true;
+            }
 
             return result;
         }
@@ -471,7 +474,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             {
                 foreach (Instruction itemInstruction in body.Instructions)
                 {
-                    if (itemInstruction.OpCode.Name.StartsWith("stloc"))
+                    if ((itemInstruction.OpCode.Name.StartsWith("stloc")) && (!itemInstruction.OpCode.Name.StartsWith("stloc.s")) )
                     {
                         Mono.Cecil.Cil.Instruction methodInstruction = itemInstruction as Mono.Cecil.Cil.Instruction;
                         VariableDefinition variableDefinition = GetLocalVariableDefinition(methodDefinition, itemInstruction);

@@ -82,14 +82,15 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                         }
 
                         if (filterPassed)
-                        { 
+                        {
                             TreeNode methodNode = classNode.Nodes.Add(itemMethod.Attribute("Name").Value);
                             methodNode.ImageIndex = 3;
                             methodNode.SelectedImageIndex = 3;
                             methodNode.Tag = itemMethod;
                         }
-                    }
 
+                    }
+                    
                 }
             }
             panelView.Dock = DockStyle.Fill;
@@ -117,25 +118,24 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     if (type.IndexOf("::", StringComparison.InvariantCultureIgnoreCase) > -1)
                         type = type.Substring(type.IndexOf("::", StringComparison.InvariantCultureIgnoreCase) + 2);
 
-                    if (!FilterPassed(item.Element("SupportByLibrary")))
-                        return;
-
-                    ListViewItem paramViewItem = listView1.Items.Add(name);
-                    paramViewItem.SubItems.Add(type);
-                    foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
-                    {
-                        ListViewItem versionViewItem = listView1.Items.Add("");
-                        versionViewItem.SubItems.Add("");
-                        versionViewItem.SubItems.Add(itemVersion.Value);
+                    if (FilterPassed(item.Element("SupportByLibrary")))
+                    { 
+                        ListViewItem paramViewItem = listView1.Items.Add(name);
+                        paramViewItem.SubItems.Add(type);
+                        foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
+                        {
+                            ListViewItem versionViewItem = listView1.Items.Add("");
+                            versionViewItem.SubItems.Add("");
+                            versionViewItem.SubItems.Add(itemVersion.Value);
+                        }
                     }
-
                     XElement itemParameters = item.Element("Parameters");
                     if (null != itemParameters)
                     {
                         foreach (XElement paramItem in itemParameters.Elements("Parameter"))
 	                    {
                             if (!FilterPassed(paramItem.Element("SupportByLibrary")))
-                                return;
+                                continue;
 
                             ListViewItem paramViewItem2 = listView1.Items.Add("Parameter");
                             paramViewItem2.SubItems.Add(paramItem.Element("SupportByLibrary").Attribute("Name").Value);
@@ -162,7 +162,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 foreach (XElement item in parametersNode.Elements("Field"))
                 {
                     if (!FilterPassed(item.Element("SupportByLibrary")))
-                        return;
+                        continue;
 
                     ListViewItem paramViewItem = listView1.Items.Add(item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Element("SupportByLibrary").Attribute("Name").Value);
@@ -187,10 +187,35 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 foreach (XElement item in parametersNode.Elements("Field"))
                 {
                     if (!FilterPassed(item.Element("SupportByLibrary")))
-                        return;
+                        continue;
 
                     ListViewItem paramViewItem = listView1.Items.Add(item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Element("SupportByLibrary").Attribute("Name").Value);
+                    foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
+                    {
+                        ListViewItem versionViewItem = listView1.Items.Add("");
+                        versionViewItem.SubItems.Add("");
+                        versionViewItem.SubItems.Add(itemVersion.Value);
+                    }
+                }
+            }
+        }
+
+        private void SetNewObjects(XElement element)
+        {
+            XElement parametersNode = element.Element("NewObjects");
+            if ((null != parametersNode) && (parametersNode.Elements("Entity").Count() > 0))
+            {
+                ListViewItem viewItem = listView1.Items.Add("Create ");
+                viewItem.Font = new Font(viewItem.Font, FontStyle.Bold);
+
+                foreach (XElement item in parametersNode.Elements("Entity"))
+                {
+                    if (!FilterPassed(item.Element("SupportByLibrary")))
+                        continue;
+
+                    ListViewItem paramViewItem = listView1.Items.Add(".ctor");
+                    paramViewItem.SubItems.Add(item.Attribute("Type").Value);
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
                     {
                         ListViewItem versionViewItem = listView1.Items.Add("");
@@ -212,7 +237,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 foreach (XElement item in parametersNode.Elements("Entity"))
                 {
                     if (!FilterPassed(item.Element("SupportByLibrary")))
-                        return;
+                        continue;
 
                     ListViewItem paramViewItem = listView1.Items.Add(item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Attribute("Type").Value);
@@ -237,7 +262,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 foreach (XElement item in parametersNode.Elements("Entity"))
                 {
                     if (!FilterPassed(item.Element("SupportByLibrary")))
-                        return;
+                        continue;
 
                     ListViewItem paramViewItem = listView1.Items.Add(item.Attribute("Type").Value);
                     paramViewItem.SubItems.Add(item.Attribute("Name").Value);
@@ -402,6 +427,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     SetMethodVariables(element);
                     SetMethodLocalFieldSets(element);
                     SetMethodFieldSets(element);
+                    SetNewObjects(element);
                     SetMethodCalls(element);
                     break;
                 default:
