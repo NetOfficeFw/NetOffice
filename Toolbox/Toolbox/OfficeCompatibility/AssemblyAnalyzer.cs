@@ -107,7 +107,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             SetupSupportInfo(_excel, "Excel");
             SetupSupportInfo(_word, "Word");
             SetupSupportInfo(_outlook, "Outlook");
-            SetupSupportInfo(_powerPoint, "Power Point");
+            SetupSupportInfo(_powerPoint, "PowerPoint");
             SetupSupportInfo(_access, "Access");
         }
 

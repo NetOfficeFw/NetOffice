@@ -46,6 +46,7 @@ namespace NetOffice.DeveloperToolbox
 
                 // setup about
                 labelVersionText.Text = String.Format("Version {0}", AssemblyVersion);
+                labelVersionHint.Text = String.Format("Version {0}", AssemblyVersion);
                 labelCopyrightText.Text = AssemblyCopyright;
                 linkLabelCompany.Text = AssemblyCompany;
 

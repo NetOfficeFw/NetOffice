@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.imageListTabMain = new System.Windows.Forms.ImageList(this.components);
             this.tabPageApplication = new System.Windows.Forms.TabPage();
-            this.colorLabelTitle = new NetOffice.DeveloperToolbox.ColorLabel();
             this.panelMainLeft = new System.Windows.Forms.Panel();
             this.labelBeginTitle = new System.Windows.Forms.Label();
             this.labelBeginBottom = new System.Windows.Forms.Label();
@@ -96,6 +95,8 @@
             this.labelStallmanSays = new System.Windows.Forms.Label();
             this.labelNetOfficeIsFree = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.labelVersionHint = new System.Windows.Forms.Label();
+            this.colorLabelTitle = new NetOffice.DeveloperToolbox.ColorLabel();
             this.tabPageApplication.SuspendLayout();
             this.panelMainLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -127,6 +128,7 @@
             // 
             // tabPageApplication
             // 
+            this.tabPageApplication.Controls.Add(this.labelVersionHint);
             this.tabPageApplication.Controls.Add(this.colorLabelTitle);
             this.tabPageApplication.Controls.Add(this.panelMainLeft);
             this.tabPageApplication.Controls.Add(this.checkBoxStartAppWithWindows);
@@ -144,15 +146,6 @@
             this.tabPageApplication.TabIndex = 2;
             this.tabPageApplication.Text = "Willkommen";
             this.tabPageApplication.UseVisualStyleBackColor = true;
-            // 
-            // colorLabelTitle
-            // 
-            this.colorLabelTitle.ColorBackShiftFactor = -5;
-            this.colorLabelTitle.ColorShift = NetOffice.DeveloperToolbox.ColorShift.Red;
-            this.colorLabelTitle.Location = new System.Drawing.Point(142, 30);
-            this.colorLabelTitle.Name = "colorLabelTitle";
-            this.colorLabelTitle.Size = new System.Drawing.Size(495, 30);
-            this.colorLabelTitle.TabIndex = 75;
             // 
             // panelMainLeft
             // 
@@ -855,6 +848,27 @@
             this.label11.TabIndex = 82;
             this.label11.Text = "- Richard Stallman";
             // 
+            // labelVersionHint
+            // 
+            this.labelVersionHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelVersionHint.AutoSize = true;
+            this.labelVersionHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersionHint.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelVersionHint.Location = new System.Drawing.Point(659, 36);
+            this.labelVersionHint.Name = "labelVersionHint";
+            this.labelVersionHint.Size = new System.Drawing.Size(123, 16);
+            this.labelVersionHint.TabIndex = 91;
+            this.labelVersionHint.Text = "labelVersionHint";
+            // 
+            // colorLabelTitle
+            // 
+            this.colorLabelTitle.ColorBackShiftFactor = -5;
+            this.colorLabelTitle.ColorShift = NetOffice.DeveloperToolbox.ColorShift.Red;
+            this.colorLabelTitle.Location = new System.Drawing.Point(142, 30);
+            this.colorLabelTitle.Name = "colorLabelTitle";
+            this.colorLabelTitle.Size = new System.Drawing.Size(495, 30);
+            this.colorLabelTitle.TabIndex = 75;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -968,6 +982,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabelMono;
+        private System.Windows.Forms.Label labelVersionHint;
     }
 }
 

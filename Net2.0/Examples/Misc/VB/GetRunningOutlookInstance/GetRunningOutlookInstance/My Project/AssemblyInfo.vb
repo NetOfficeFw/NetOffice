@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("GetRunningOutlookInstance")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Ministerium für Staatssicherheit")> 
+<Assembly: AssemblyCompany("NetOffice")> 
 <Assembly: AssemblyProduct("GetRunningOutlookInstance")> 
-<Assembly: AssemblyCopyright("Copyright © Ministerium für Staatssicherheit 2011")> 
+<Assembly: AssemblyCopyright("Copyright © 2011")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
