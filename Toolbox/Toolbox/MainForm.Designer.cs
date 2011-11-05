@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.imageListTabMain = new System.Windows.Forms.ImageList(this.components);
             this.tabPageApplication = new System.Windows.Forms.TabPage();
+            this.labelVersionHint = new System.Windows.Forms.Label();
             this.panelMainLeft = new System.Windows.Forms.Panel();
             this.labelBeginTitle = new System.Windows.Forms.Label();
             this.labelBeginBottom = new System.Windows.Forms.Label();
@@ -95,7 +96,6 @@
             this.labelStallmanSays = new System.Windows.Forms.Label();
             this.labelNetOfficeIsFree = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.labelVersionHint = new System.Windows.Forms.Label();
             this.colorLabelTitle = new NetOffice.DeveloperToolbox.ColorLabel();
             this.tabPageApplication.SuspendLayout();
             this.panelMainLeft.SuspendLayout();
@@ -146,6 +146,18 @@
             this.tabPageApplication.TabIndex = 2;
             this.tabPageApplication.Text = "Willkommen";
             this.tabPageApplication.UseVisualStyleBackColor = true;
+            // 
+            // labelVersionHint
+            // 
+            this.labelVersionHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelVersionHint.AutoSize = true;
+            this.labelVersionHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersionHint.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelVersionHint.Location = new System.Drawing.Point(659, 36);
+            this.labelVersionHint.Name = "labelVersionHint";
+            this.labelVersionHint.Size = new System.Drawing.Size(123, 16);
+            this.labelVersionHint.TabIndex = 91;
+            this.labelVersionHint.Text = "labelVersionHint";
             // 
             // panelMainLeft
             // 
@@ -561,7 +573,7 @@
             // labelZyan
             // 
             this.labelZyan.AutoSize = true;
-            this.labelZyan.Location = new System.Drawing.Point(180, 75);
+            this.labelZyan.Location = new System.Drawing.Point(180, 76);
             this.labelZyan.Name = "labelZyan";
             this.labelZyan.Size = new System.Drawing.Size(267, 13);
             this.labelZyan.TabIndex = 98;
@@ -847,18 +859,6 @@
             this.label11.Size = new System.Drawing.Size(109, 15);
             this.label11.TabIndex = 82;
             this.label11.Text = "- Richard Stallman";
-            // 
-            // labelVersionHint
-            // 
-            this.labelVersionHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelVersionHint.AutoSize = true;
-            this.labelVersionHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVersionHint.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelVersionHint.Location = new System.Drawing.Point(659, 36);
-            this.labelVersionHint.Name = "labelVersionHint";
-            this.labelVersionHint.Size = new System.Drawing.Size(123, 16);
-            this.labelVersionHint.TabIndex = 91;
-            this.labelVersionHint.Text = "labelVersionHint";
             // 
             // colorLabelTitle
             // 

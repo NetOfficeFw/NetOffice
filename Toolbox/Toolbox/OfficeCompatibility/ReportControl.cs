@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Drawing;
 using System.Data;
 using System.Linq;
@@ -30,11 +31,49 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             _currentLanguageID = currentLanguageID;
             comboBoxFilter.SelectedIndex = 0;
             Translator.TranslateControls(this, "OfficeCompatibility.ReportMessageTable.txt", _currentLanguageID);
+
+            pictureBoxField.Image = imageList1.Images[3];
+            pictureBoxProperty.Image = imageList1.Images[7];
+            pictureBoxMethod.Image = imageList1.Images[5];
         }
         
         #endregion
 
         #region Methods
+
+        private int GetImageClassIndex(XElement itemClass)
+        {
+            if (itemClass.Attribute("IsPublic").Value.Equals("true", StringComparison.InvariantCultureIgnoreCase))
+                return 1;
+            else
+                return 2;
+        }
+
+        private int GetImageFieldIndex(XElement itemField)
+        {
+            if (itemField.Attribute("IsPublic").Value.Equals("true", StringComparison.InvariantCultureIgnoreCase))
+                return 3;
+            else
+                return 4;
+        }
+
+        private int GetImageMethodIndex(XElement itemMethod)
+        {
+            if (itemMethod.Attribute("IsProperty").Value.Equals("true", StringComparison.InvariantCultureIgnoreCase))
+            {
+                if (itemMethod.Attribute("IsPublic").Value.Equals("true", StringComparison.InvariantCultureIgnoreCase))
+                    return 7;
+                else
+                    return 8;
+            }
+            else
+            {
+                if (itemMethod.Attribute("IsPublic").Value.Equals("true", StringComparison.InvariantCultureIgnoreCase))
+                    return 5;
+                else
+                    return 6;
+            }
+        }
 
         private void ShowAssembly()
         {
@@ -52,8 +91,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 foreach (XElement itemClass in item.Element("Classes").Elements("Class"))
                 {
                     TreeNode classNode = node.Nodes.Add(itemClass.Attribute("Name").Value);
-                    classNode.ImageIndex = 1;
-                    classNode.SelectedImageIndex = 1;
+                    classNode.ImageIndex = GetImageClassIndex(itemClass);
+                    classNode.SelectedImageIndex = GetImageClassIndex(itemClass);
                     classNode.Tag = itemClass;
 
 
@@ -62,8 +101,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                         if (FilterPassed(itemField.Element("SupportByLibrary")))
                         { 
                             TreeNode fieldNode = classNode.Nodes.Add(itemField.Attribute("Name").Value);
-                            fieldNode.ImageIndex = 2;
-                            fieldNode.SelectedImageIndex = 2;
+                            fieldNode.ImageIndex = GetImageFieldIndex(itemField);
+                            fieldNode.SelectedImageIndex = GetImageFieldIndex(itemField);
                             fieldNode.Tag = itemField;
                         }
                     }
@@ -84,8 +123,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                         if (filterPassed)
                         {
                             TreeNode methodNode = classNode.Nodes.Add(itemMethod.Attribute("Name").Value);
-                            methodNode.ImageIndex = 3;
-                            methodNode.SelectedImageIndex = 3;
+                            methodNode.ImageIndex = GetImageMethodIndex(itemMethod);
+                            methodNode.SelectedImageIndex = GetImageMethodIndex(itemMethod);
                             methodNode.Tag = itemMethod;
                         }
 
@@ -105,9 +144,6 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             XElement parametersNode = element.Element("Calls");
             if ((null != parametersNode) && (parametersNode.Elements("Entity").Count() > 0))
             {
-                ListViewItem viewItem = listView1.Items.Add("Calls");
-                viewItem.Font = new Font(viewItem.Font, FontStyle.Bold);
-
                 foreach (XElement item in parametersNode.Elements("Entity"))
                 {
                     string name = item.Attribute("Name").Value;
@@ -122,12 +158,11 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     { 
                         ListViewItem paramViewItem = listView1.Items.Add(name);
                         paramViewItem.SubItems.Add(type);
+                        string supportText = "";
                         foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
-                        {
-                            ListViewItem versionViewItem = listView1.Items.Add("");
-                            versionViewItem.SubItems.Add("");
-                            versionViewItem.SubItems.Add(itemVersion.Value);
-                        }
+                            supportText += itemVersion.Value + " ";
+                        paramViewItem.SubItems.Add(supportText);
+
                     }
                     XElement itemParameters = item.Element("Parameters");
                     if (null != itemParameters)
@@ -139,16 +174,16 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
                             ListViewItem paramViewItem2 = listView1.Items.Add("Parameter");
                             paramViewItem2.SubItems.Add(paramItem.Element("SupportByLibrary").Attribute("Name").Value);
+                            string supportText = "";
                             foreach (XElement itemVersionParam in paramItem.Element("SupportByLibrary").Elements("Version"))
-                            {
-                                  ListViewItem paramViewVersionItem2 = listView1.Items.Add("");
-                                  paramViewVersionItem2.SubItems.Add("");
-                                  paramViewVersionItem2.SubItems.Add(itemVersionParam.Value);
-                            }
+                                supportText += itemVersionParam.Value + " ";
+                            paramViewItem2.SubItems.Add(supportText);
+
 	                    }
                         
                     }
                 }
+                listView1.Items.Add("");
             }
         }
 
@@ -157,22 +192,19 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             XElement parametersNode = element.Element("LocalFieldSets");
             if ((null != parametersNode) && (parametersNode.Elements("Field").Count() > 0))
             {
-                ListViewItem viewItem = listView1.Items.Add("LocalFieldSets");
-                viewItem.Font = new Font(viewItem.Font, FontStyle.Bold);
                 foreach (XElement item in parametersNode.Elements("Field"))
                 {
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add(item.Attribute("Name").Value);
+                    ListViewItem paramViewItem = listView1.Items.Add("Field " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Element("SupportByLibrary").Attribute("Name").Value);
+                    string supportText = "";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
-                    {
-                        ListViewItem versionViewItem = listView1.Items.Add("");
-                        versionViewItem.SubItems.Add("");
-                        versionViewItem.SubItems.Add(itemVersion.Value);
-                    }
+                        supportText += itemVersion.Value + " ";
+                    paramViewItem.SubItems.Add(supportText);
                 }
+                listView1.Items.Add("");
             }
         }
 
@@ -181,23 +213,19 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             XElement parametersNode = element.Element("FieldSets");
             if ((null != parametersNode) && (parametersNode.Elements("Field").Count() > 0))
             {
-                ListViewItem viewItem = listView1.Items.Add("FieldSets");
-                viewItem.Font = new Font(viewItem.Font, FontStyle.Bold);
-
                 foreach (XElement item in parametersNode.Elements("Field"))
                 {
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add(item.Attribute("Name").Value);
+                    ListViewItem paramViewItem = listView1.Items.Add("Field " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Element("SupportByLibrary").Attribute("Name").Value);
+                    string supportText = "";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
-                    {
-                        ListViewItem versionViewItem = listView1.Items.Add("");
-                        versionViewItem.SubItems.Add("");
-                        versionViewItem.SubItems.Add(itemVersion.Value);
-                    }
+                        supportText += itemVersion.Value + " ";
+                    paramViewItem.SubItems.Add(supportText);
                 }
+                listView1.Items.Add("");
             }
         }
 
@@ -206,23 +234,19 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             XElement parametersNode = element.Element("NewObjects");
             if ((null != parametersNode) && (parametersNode.Elements("Entity").Count() > 0))
             {
-                ListViewItem viewItem = listView1.Items.Add("Create ");
-                viewItem.Font = new Font(viewItem.Font, FontStyle.Bold);
-
                 foreach (XElement item in parametersNode.Elements("Entity"))
                 {
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add(".ctor");
+                    ListViewItem paramViewItem = listView1.Items.Add("new " + item.Attribute("Type").Value + "()");
                     paramViewItem.SubItems.Add(item.Attribute("Type").Value);
+                    string supportText = "";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
-                    {
-                        ListViewItem versionViewItem = listView1.Items.Add("");
-                        versionViewItem.SubItems.Add("");
-                        versionViewItem.SubItems.Add(itemVersion.Value);
-                    }
+                        supportText += itemVersion.Value + " ";
+                    paramViewItem.SubItems.Add(supportText);
                 }
+                listView1.Items.Add("");
             }
         }
 
@@ -231,23 +255,19 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             XElement parametersNode = element.Element("Variables");
             if ((null != parametersNode) && (parametersNode.Elements("Entity").Count() > 0))
             {
-                ListViewItem viewItem = listView1.Items.Add("Variables");
-                viewItem.Font = new Font(viewItem.Font, FontStyle.Bold);
-
                 foreach (XElement item in parametersNode.Elements("Entity"))
                 {
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add(item.Attribute("Name").Value);
+                    ListViewItem paramViewItem = listView1.Items.Add("Variable " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Attribute("Type").Value);
+                    string supportText = "";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
-                    {
-                        ListViewItem versionViewItem = listView1.Items.Add("");
-                        versionViewItem.SubItems.Add("");
-                        versionViewItem.SubItems.Add(itemVersion.Value);
-                    }
+                        supportText += itemVersion.Value + " ";
+                    paramViewItem.SubItems.Add(supportText);
                 }
+                listView1.Items.Add("");
             }
         }
 
@@ -256,23 +276,20 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             XElement parametersNode = element.Element("Parameters");
             if ((null != parametersNode) && (parametersNode.Elements("Entity").Count() > 0))
             {
-                ListViewItem viewItem = listView1.Items.Add("Parameters");
-                viewItem.Font = new Font(viewItem.Font, FontStyle.Bold);
-
                 foreach (XElement item in parametersNode.Elements("Entity"))
                 {
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add(item.Attribute("Type").Value);
-                    paramViewItem.SubItems.Add(item.Attribute("Name").Value);
+                    ListViewItem paramViewItem = listView1.Items.Add("Parameter " + item.Attribute("Name").Value);
+                    paramViewItem.SubItems.Add(item.Attribute("Type").Value);
+                    string supportText = "";
+
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
-                    {
-                        ListViewItem versionViewItem = listView1.Items.Add("");
-                        versionViewItem.SubItems.Add("");
-                        versionViewItem.SubItems.Add(itemVersion.Value);
-                    }
+                        supportText += itemVersion.Value + " ";
+                    paramViewItem.SubItems.Add(supportText);
                 }
+                listView1.Items.Add("");
             }
         }
 
@@ -284,18 +301,16 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 if (!FilterPassed(returnValueNode.Element("Entity").Element("SupportByLibrary")))
                     return;
 
-                string valType = returnValueNode.Element("Entity").Attribute("Type").Value;
+                string valType = returnValueNode.Element("Entity").Attribute("FullType").Value;
                 ListViewItem viewItem = listView1.Items.Add("Return Value");
-                viewItem.Font = new Font(viewItem.Font, FontStyle.Bold);
 
                 viewItem.SubItems.Add(valType);
+                string supportText = "";
                 foreach (XElement versionItem in returnValueNode.Element("Entity").Element("SupportByLibrary").Elements("Version"))
-                {
-                    ListViewItem versionViewItem = listView1.Items.Add("");
-                    versionViewItem.SubItems.Add("");
-                    versionViewItem.SubItems.Add(versionItem.Value);
-                }
+                    supportText += versionItem.Value + " ";
+                viewItem.SubItems.Add(supportText);
 
+                listView1.Items.Add("");
             }
         }
 
@@ -361,7 +376,17 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             return true;
         }
 
+        private string  GetLogFileContent()
+        {
+            return _report.Report.ToString();
+        }
+
         #endregion
+
+        private int GetPercent(int value, int percent)
+        {
+            return value / 100 * percent;
+        }
 
         #region Trigger
 
@@ -385,34 +410,43 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     listView1.Items.Clear();
                     listView1.Columns.Clear();
                     listView1.Columns.Add("");
-                    listView1.Columns[0].Width = 200;
+                    listView1.Columns[0].Width = listView1.Width-50;
+                    listView1.Columns[0].Text = "Assenbly";
                     listView1.Items.Add(element.Attribute("Name").Value);
                     break;
                 case "Class":
                     listView1.Items.Clear();
                     listView1.Columns.Clear();
                     listView1.Columns.Add("");
-                    listView1.Columns[0].Width = 200;
+                    listView1.Columns[0].Width = listView1.Width - 50;
+                    listView1.Columns[0].Text = "Class";
                     listView1.Items.Add(element.Attribute("Name").Value);
                     break;
                 case "Entity":
+
                     listView1.Items.Clear();
                     listView1.Columns.Clear();
-                    listView1.Columns.Add("");
-                    listView1.Columns.Add("");
+
+                    listView1.Columns.Add("Name");
+                    listView1.Columns.Add("Type");
                     listView1.Columns.Add("Support");
-                    listView1.Columns[0].Width = 200;
-                    listView1.Columns[1].Width = 200;
+
+                    listView1.Columns[0].Width = GetPercent(listView1.Width, 25);
+                    listView1.Columns[1].Width = GetPercent(listView1.Width, 50);
+                    listView1.Columns[2].Width = GetPercent(listView1.Width, 25);
+
                     if (!FilterPassed(element.Element("SupportByLibrary")))
                         break;
+
                     listView1.Items.Add(element.Attribute("Name").Value);
                     listView1.Items[0].SubItems.Add(element.Attribute("Type").Value);
+
+                    string supportText = "";
                     foreach (XElement item in element.Element("SupportByLibrary").Elements("Version"))
-                    {
-                        ListViewItem viewItem = listView1.Items.Add("");
-                        viewItem.SubItems.Add("");
-                        viewItem.SubItems.Add(item.Value);
-                    }
+                        supportText += item.Value + " ";
+
+                    listView1.Items[0].SubItems.Add(supportText);
+
                     break;
                 case "Method":
                     listView1.Items.Clear();
@@ -420,8 +454,11 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     listView1.Columns.Add("");
                     listView1.Columns.Add("");
                     listView1.Columns.Add("Support");
-                    listView1.Columns[0].Width = 200;
-                    listView1.Columns[1].Width = 200;
+
+                    listView1.Columns[0].Width = GetPercent(listView1.Width, 25);
+                    listView1.Columns[1].Width = GetPercent(listView1.Width, 50);
+                    listView1.Columns[2].Width = GetPercent(listView1.Width, 25);
+
                     SetMethodReturnValue(element);
                     SetMethodParameters(element);
                     SetMethodVariables(element);
@@ -466,6 +503,28 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 errorForm.ShowDialog(this);
             }
            
+        }
+
+        private void buttonSaveReport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SaveFileDialog dialog = new SaveFileDialog();
+                dialog.Filter = "*.txt|*.txt";
+                if(DialogResult.OK == dialog.ShowDialog(this))
+                {
+                    if (File.Exists(dialog.FileName))
+                        File.Delete(dialog.FileName);
+
+                    string logFileContent = GetLogFileContent();
+                    File.AppendAllText(dialog.FileName, logFileContent);
+                }
+            }
+            catch (Exception exception)
+            {
+                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
+                errorForm.ShowDialog(this);
+            }
         }
 
         #endregion
