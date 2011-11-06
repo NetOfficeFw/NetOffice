@@ -122,10 +122,31 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
                         if (filterPassed)
                         {
-                            TreeNode methodNode = classNode.Nodes.Add(itemMethod.Attribute("Name").Value);
-                            methodNode.ImageIndex = GetImageMethodIndex(itemMethod);
-                            methodNode.SelectedImageIndex = GetImageMethodIndex(itemMethod);
-                            methodNode.Tag = itemMethod;
+                            string methodName = itemMethod.Attribute("Name").Value;
+                            if(methodName.StartsWith("get_"))
+                            {
+                                methodName = methodName.Substring(4);
+                                TreeNode methodNode = classNode.Nodes.Add(methodName, methodName);
+                                methodNode.ImageIndex = GetImageMethodIndex(itemMethod);
+                                methodNode.SelectedImageIndex = GetImageMethodIndex(itemMethod);
+                                methodNode.Tag = itemMethod;
+                            }
+                            else if( methodName.StartsWith("set_"))
+                            {
+                                methodName = methodName.Substring(4);
+                                List<XElement> list = new List<XElement>();
+                                TreeNode getNode = classNode.Nodes[methodName];
+                                list.Add(getNode.Tag as XElement);
+                                list.Add(itemMethod);
+                                getNode.Tag = list;
+                            }
+                            else
+                            {
+                                TreeNode methodNode = classNode.Nodes.Add(methodName);
+                                methodNode.ImageIndex = GetImageMethodIndex(itemMethod);
+                                methodNode.SelectedImageIndex = GetImageMethodIndex(itemMethod);
+                                methodNode.Tag = itemMethod;
+                            }
                         }
 
                     }
@@ -156,7 +177,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
                     if (FilterPassed(item.Element("SupportByLibrary")))
                     { 
-                        ListViewItem paramViewItem = listView1.Items.Add(name);
+                        ListViewItem paramViewItem = listView1.Items.Add("Call Method: " + name);
                         paramViewItem.SubItems.Add(type);
                         string supportText = "";
                         foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
@@ -172,7 +193,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                             if (!FilterPassed(paramItem.Element("SupportByLibrary")))
                                 continue;
 
-                            ListViewItem paramViewItem2 = listView1.Items.Add("Parameter");
+                            ListViewItem paramViewItem2 = listView1.Items.Add("   Parameter");
                             paramViewItem2.SubItems.Add(paramItem.Element("SupportByLibrary").Attribute("Name").Value);
                             string supportText = "";
                             foreach (XElement itemVersionParam in paramItem.Element("SupportByLibrary").Elements("Version"))
@@ -197,7 +218,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add("Field " + item.Attribute("Name").Value);
+                    ListViewItem paramViewItem = listView1.Items.Add("Set Local Variable " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Element("SupportByLibrary").Attribute("Name").Value);
                     string supportText = "";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
@@ -218,7 +239,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add("Field " + item.Attribute("Name").Value);
+                    ListViewItem paramViewItem = listView1.Items.Add("Set Class Field " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Element("SupportByLibrary").Attribute("Name").Value);
                     string supportText = "";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
@@ -260,7 +281,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add("Variable " + item.Attribute("Name").Value);
+                    ListViewItem paramViewItem = listView1.Items.Add("Locale Variable " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Attribute("Type").Value);
                     string supportText = "";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
@@ -376,7 +397,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             return true;
         }
 
-        private string  GetLogFileContent()
+        private string GetLogFileContent()
         {
             return _report.Report.ToString();
         }
@@ -395,22 +416,21 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             this.Hide();
         }
 
-        private void treeViewReport_AfterSelect(object sender, TreeViewEventArgs e)
+        private void ShowDetails(List<XElement> elements)
         {
-            if (null == treeViewReport.SelectedNode)
-            {
-                textBoxReport.Text = "";
-                return;
-            }
+            listView1.Items.Clear();
+            foreach (XElement element in elements)
+                ShowDetails(element, false);
+        }
 
-            XElement element = treeViewReport.SelectedNode.Tag as XElement;
+        private void ShowDetails(XElement element, bool clearOldItems)
+        {
             switch (element.Name.ToString())
             {
                 case "Assembly":
-                    listView1.Items.Clear();
                     listView1.Columns.Clear();
                     listView1.Columns.Add("");
-                    listView1.Columns[0].Width = listView1.Width-50;
+                    listView1.Columns[0].Width = listView1.Width - 50;
                     listView1.Columns[0].Text = "Assenbly";
                     listView1.Items.Add(element.Attribute("Name").Value);
                     break;
@@ -432,8 +452,11 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     listView1.Columns.Add("Support");
 
                     listView1.Columns[0].Width = GetPercent(listView1.Width, 25);
+                    listView1.Columns[0].Tag = 25;
                     listView1.Columns[1].Width = GetPercent(listView1.Width, 50);
+                    listView1.Columns[1].Tag = 50;
                     listView1.Columns[2].Width = GetPercent(listView1.Width, 25);
+                    listView1.Columns[2].Tag = 25;
 
                     if (!FilterPassed(element.Element("SupportByLibrary")))
                         break;
@@ -449,15 +472,19 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
                     break;
                 case "Method":
-                    listView1.Items.Clear();
+                    if (clearOldItems)
+                        listView1.Items.Clear();
                     listView1.Columns.Clear();
                     listView1.Columns.Add("");
                     listView1.Columns.Add("");
                     listView1.Columns.Add("Support");
 
                     listView1.Columns[0].Width = GetPercent(listView1.Width, 25);
+                    listView1.Columns[0].Tag = 25;
                     listView1.Columns[1].Width = GetPercent(listView1.Width, 50);
+                    listView1.Columns[1].Tag = 50;
                     listView1.Columns[2].Width = GetPercent(listView1.Width, 25);
+                    listView1.Columns[2].Tag = 25;
 
                     SetMethodReturnValue(element);
                     SetMethodParameters(element);
@@ -474,6 +501,26 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             }
 
             textBoxReport.Text = element.ToString();
+        }
+
+        private void treeViewReport_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (null == treeViewReport.SelectedNode)
+            {
+                textBoxReport.Text = "";
+                return;
+            }
+            
+            XElement element = treeViewReport.SelectedNode.Tag as XElement;
+            if (null != element)
+            {
+                ShowDetails(element, true);
+            }
+            else
+            {
+                List<XElement> elements = treeViewReport.SelectedNode.Tag as List<XElement>;
+                ShowDetails(elements);            
+            }
         }
 
         private void checkBoxNativeView_CheckedChanged(object sender, EventArgs e)
@@ -505,6 +552,18 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
            
         }
 
+        private void listView1_Resize(object sender, EventArgs e)
+        {
+            foreach (ColumnHeader item in listView1.Columns)
+            {
+                if (item.Tag != null)
+                {
+                    int percentValue = Convert.ToInt32(item.Tag);
+                    item.Width = GetPercent(listView1.Width, percentValue);
+                }
+            }
+        }
+
         private void buttonSaveReport_Click(object sender, EventArgs e)
         {
             try
@@ -528,5 +587,6 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
         }
 
         #endregion
+        
     }
 }

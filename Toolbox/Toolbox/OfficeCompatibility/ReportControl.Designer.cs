@@ -39,11 +39,11 @@
             this.textBoxReport = new System.Windows.Forms.TextBox();
             this.panelView = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.checkBoxNativeView = new System.Windows.Forms.CheckBox();
             this.buttonClose2 = new System.Windows.Forms.Button();
             this.labelFilterCaption = new System.Windows.Forms.Label();
             this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.labelFilterHint = new System.Windows.Forms.Label();
-            this.checkBoxNativeView = new System.Windows.Forms.CheckBox();
             this.pictureBoxField = new System.Windows.Forms.PictureBox();
             this.labelFieldHint = new System.Windows.Forms.Label();
             this.labelPropertyHint = new System.Windows.Forms.Label();
@@ -79,7 +79,6 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panelNativeView);
             this.splitContainer1.Panel2.Controls.Add(this.panelView);
-            this.splitContainer1.Panel2.Controls.Add(this.checkBoxNativeView);
             this.splitContainer1.Size = new System.Drawing.Size(797, 385);
             this.splitContainer1.SplitterDistance = 265;
             this.splitContainer1.TabIndex = 0;
@@ -89,6 +88,7 @@
             this.treeViewReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.treeViewReport.HideSelection = false;
             this.treeViewReport.ImageIndex = 0;
             this.treeViewReport.ImageList = this.imageList1;
             this.treeViewReport.Location = new System.Drawing.Point(0, 15);
@@ -177,6 +177,20 @@
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.Resize += new System.EventHandler(this.listView1_Resize);
+            // 
+            // checkBoxNativeView
+            // 
+            this.checkBoxNativeView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxNativeView.AutoSize = true;
+            this.checkBoxNativeView.Location = new System.Drawing.Point(652, 0);
+            this.checkBoxNativeView.Name = "checkBoxNativeView";
+            this.checkBoxNativeView.Size = new System.Drawing.Size(95, 17);
+            this.checkBoxNativeView.TabIndex = 73;
+            this.checkBoxNativeView.Text = "Native Ansicht";
+            this.checkBoxNativeView.UseVisualStyleBackColor = true;
+            this.checkBoxNativeView.Visible = false;
+            this.checkBoxNativeView.CheckedChanged += new System.EventHandler(this.checkBoxNativeView_CheckedChanged);
             // 
             // buttonClose2
             // 
@@ -221,24 +235,12 @@
             // 
             this.labelFilterHint.BackColor = System.Drawing.Color.Khaki;
             this.labelFilterHint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelFilterHint.Location = new System.Drawing.Point(471, 12);
+            this.labelFilterHint.Location = new System.Drawing.Point(474, 12);
             this.labelFilterHint.Name = "labelFilterHint";
             this.labelFilterHint.Size = new System.Drawing.Size(276, 26);
             this.labelFilterHint.TabIndex = 71;
             this.labelFilterHint.Text = "Nutzen Sie den Filter um nur Funktionalitäten anzuzeigen die eine bestimmte Versi" +
                 "on nicht unterstützen.";
-            // 
-            // checkBoxNativeView
-            // 
-            this.checkBoxNativeView.AutoSize = true;
-            this.checkBoxNativeView.Location = new System.Drawing.Point(19, 323);
-            this.checkBoxNativeView.Name = "checkBoxNativeView";
-            this.checkBoxNativeView.Size = new System.Drawing.Size(95, 17);
-            this.checkBoxNativeView.TabIndex = 73;
-            this.checkBoxNativeView.Text = "Native Ansicht";
-            this.checkBoxNativeView.UseVisualStyleBackColor = true;
-            this.checkBoxNativeView.Visible = false;
-            this.checkBoxNativeView.CheckedChanged += new System.EventHandler(this.checkBoxNativeView_CheckedChanged);
             // 
             // pictureBoxField
             // 
@@ -303,6 +305,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelFilterCaption);
             this.Controls.Add(this.labelMethodHint);
+            this.Controls.Add(this.checkBoxNativeView);
             this.Controls.Add(this.comboBoxFilter);
             this.Controls.Add(this.pictureBoxMethod);
             this.Controls.Add(this.labelFilterHint);
@@ -316,7 +319,6 @@
             this.Size = new System.Drawing.Size(800, 429);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panelNativeView.ResumeLayout(false);

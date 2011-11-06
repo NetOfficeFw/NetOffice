@@ -498,7 +498,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                                         XElement newParameter = new XElement("Field", new XAttribute("Name", variableDefinition.ToString()));
                                         string componentName = NetOfficeSupportTable.GetLibrary(variableDefinition.VariableType.FullName);
                                         XElement supportByNode = new XElement("SupportByLibrary", new XAttribute("Api", componentName));
-                                        supportByNode.Add(new XAttribute("Name", variableDefinition.VariableType.Name + "." + GetOperatorValue(paramInstruction).ToString()));
+                                        string memberName = _netOfficeSupportTable.GetEnumMemberNameFromValue(variableDefinition.VariableType.FullName, opValue);
+                                        supportByNode.Add(new XAttribute("Name", variableDefinition.VariableType.FullName + "." + memberName));
                                         foreach (string item in supportByLibrary)
                                             supportByNode.Add(new XElement("Version", item));
                                         newParameter.Add(supportByNode);
@@ -521,7 +522,6 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             Mono.Cecil.Cil.MethodBody body = methodDefinition.Body;
             if (null != body)
             {
-
                 foreach (Instruction itemInstruction in body.Instructions)
                 {
                     if (itemInstruction.OpCode.Name.StartsWith("stfld") || itemInstruction.OpCode.Name.StartsWith("stsfld"))
@@ -543,7 +543,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                                         XElement newParameter = new XElement("Field", new XAttribute("Name", fieldDefinition.Name));
                                         string componentName = NetOfficeSupportTable.GetLibrary(fieldDefinition.FieldType.FullName);
                                         XElement supportByNode = new XElement("SupportByLibrary", new XAttribute("Api", componentName));
-                                        supportByNode.Add(new XAttribute("Name", fieldDefinition.FieldType + "." + GetOperatorValue(paramInstruction).ToString()));
+                                        string memberName = _netOfficeSupportTable.GetEnumMemberNameFromValue(fieldDefinition.FieldType.FullName, opValue);
+                                        supportByNode.Add(new XAttribute("Name", fieldDefinition.FieldType + "." + memberName));
                                         foreach (string item in supportByLibrary)
                                             supportByNode.Add(new XElement("Version", item));
                                         newParameter.Add(supportByNode);
@@ -627,7 +628,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                          result = true;
 
                          XElement newVar = new XElement("Entity",
-                                                 new XAttribute("Type", typeName),
+                                                 new XAttribute("Type", itemVariable.VariableType.FullName),
                                                  new XAttribute("Name", itemVariable.ToString()),
                                                  new XAttribute("Api", componentName));
 

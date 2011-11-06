@@ -64,6 +64,29 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             _access = Decompress(stream);
         }
 
+        public string GetEnumMemberNameFromValue(string fullQualifiedName, int value)
+        {
+            string library = GetLibrary(fullQualifiedName);
+            string typeName = GetName(fullQualifiedName);
+            XDocument document = GetDocument(library);
+            if (null == document)
+                return null;
+
+            XElement enumNode = (from a in document.Element("Assembly").Element("Enums").Elements("Enum")
+                                 where a.Attribute("Name").Value.Equals(typeName)
+                                 select a).FirstOrDefault();
+            if (null == enumNode)
+                return null;
+
+            XElement memberNode = (from a in enumNode.Element("Members").Elements("Member")
+                                   where a.Attribute("Value").Value.Equals(value.ToString())
+                                   select a).FirstOrDefault();
+            if (null == memberNode)
+                return null;
+
+            return memberNode.Attribute("Name").Value;
+        }
+
         public string[] GetEnumMemberSupport(string fullQualifiedName, int value)
         {
             string library = GetLibrary(fullQualifiedName);
@@ -206,7 +229,14 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             array = part.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < array.Length; i++)
                 array[i] = array[i].Replace("(", "").Replace(")", "");
-            return array;
+
+            List<string> validateList = new List<string>();
+            foreach (string item in array)
+            {
+                if (!string.IsNullOrEmpty(item))
+                    validateList.Add(item);
+            }
+            return validateList.ToArray();
         }
 
         public static string GetTypeName(string fullQualifiedName)
