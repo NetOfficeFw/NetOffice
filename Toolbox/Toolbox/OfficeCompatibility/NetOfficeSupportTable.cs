@@ -131,15 +131,16 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                                  where a.Attribute("Name").Value.Equals(typeName)
                                  select a).FirstOrDefault();
 
-            XElement methodNode = null;
+            IEnumerable<XElement> methodNodes;
             if (typeNode.Element("Methods") != null)
             {
-                methodNode = (from a in typeNode.Element("Methods").Elements("Method")
+                methodNodes = (from a in typeNode.Element("Methods").Elements("Method")
                               where a.Attribute("Name").Value.Equals(methodName)
-                              select a).FirstOrDefault();
+                              select a);
 
-                foreach (XElement itemParameters in methodNode.Elements("Parameters"))
+                foreach (XElement itemMethod in methodNodes)
                 {
+                    XElement itemParameters = itemMethod.Element("Parameters");
                     int count = itemParameters.Elements("Parameter").Count();
                     if (count == parameters.Count())
                     {
@@ -158,7 +159,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             else
             {
                 methodName = methodName.Substring(0, methodName.Length - 5);
-                methodNode = (from a in typeNode.Element("Events").Elements("Event")
+                XElement methodNode = (from a in typeNode.Element("Events").Elements("Event")
                               where a.Attribute("Name").Value.Equals(methodName)
                               select a).FirstOrDefault();
 

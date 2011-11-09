@@ -837,16 +837,21 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 {
                     result = true;
                     Mono.Cecil.Cil.Instruction parameterInstruction = GetParameterInstruction(itemInstruction, i);
-                    if (itemParameter.ParameterType.IsValueType)
+                    if (itemParameter.ParameterType.IsValueType)    
                     {
-
                         string[] supportByLibrary = _netOfficeSupportTable.GetEnumMemberSupport(itemParameter.ParameterType.FullName, GetOperatorValue(parameterInstruction));
                         if (null != supportByLibrary)
                         {
                             XElement newParameter = new XElement("Parameter");
                             string componentName = NetOfficeSupportTable.GetLibrary(itemParameter.ParameterType.FullName);
                             XElement supportByNode = new XElement("SupportByLibrary", new XAttribute("Api", componentName));
-                            supportByNode.Add(new XAttribute("Name", paramType + "." + GetOperatorValue(parameterInstruction).ToString()));
+
+                            string enumMemberName = _netOfficeSupportTable.GetEnumMemberNameFromValue(itemParameter.ParameterType.FullName, GetOperatorValue(parameterInstruction));
+                            if(null != enumMemberName)
+                                supportByNode.Add(new XAttribute("Name", paramType + "." + enumMemberName));
+                            else
+                                supportByNode.Add(new XAttribute("Name", paramType + "." +   GetOperatorValue(parameterInstruction).ToString()));
+
                             foreach (string item in supportByLibrary)
                                 supportByNode.Add(new XElement("Version", item));
                             newParameter.Add(supportByNode);

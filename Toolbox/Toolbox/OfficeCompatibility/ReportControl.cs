@@ -179,7 +179,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     { 
                         ListViewItem paramViewItem = listView1.Items.Add("Call Method: " + name);
                         paramViewItem.SubItems.Add(type);
-                        string supportText = "";
+                        string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
                         foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
                             supportText += itemVersion.Value + " ";
                         paramViewItem.SubItems.Add(supportText);
@@ -195,7 +195,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
                             ListViewItem paramViewItem2 = listView1.Items.Add("   Parameter");
                             paramViewItem2.SubItems.Add(paramItem.Element("SupportByLibrary").Attribute("Name").Value);
-                            string supportText = "";
+                            string supportText = paramItem.Element("SupportByLibrary").Attribute("Api").Value + " ";
                             foreach (XElement itemVersionParam in paramItem.Element("SupportByLibrary").Elements("Version"))
                                 supportText += itemVersionParam.Value + " ";
                             paramViewItem2.SubItems.Add(supportText);
@@ -220,7 +220,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
                     ListViewItem paramViewItem = listView1.Items.Add("Set Local Variable " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Element("SupportByLibrary").Attribute("Name").Value);
-                    string supportText = "";
+                    string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
                         supportText += itemVersion.Value + " ";
                     paramViewItem.SubItems.Add(supportText);
@@ -241,7 +241,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
                     ListViewItem paramViewItem = listView1.Items.Add("Set Class Field " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Element("SupportByLibrary").Attribute("Name").Value);
-                    string supportText = "";
+                    string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
                         supportText += itemVersion.Value + " ";
                     paramViewItem.SubItems.Add(supportText);
@@ -262,7 +262,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
                     ListViewItem paramViewItem = listView1.Items.Add("new " + item.Attribute("Type").Value + "()");
                     paramViewItem.SubItems.Add(item.Attribute("Type").Value);
-                    string supportText = "";
+                    string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
                         supportText += itemVersion.Value + " ";
                     paramViewItem.SubItems.Add(supportText);
@@ -283,7 +283,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
                     ListViewItem paramViewItem = listView1.Items.Add("Locale Variable " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Attribute("Type").Value);
-                    string supportText = "";
+                    string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
                         supportText += itemVersion.Value + " ";
                     paramViewItem.SubItems.Add(supportText);
@@ -304,8 +304,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
                     ListViewItem paramViewItem = listView1.Items.Add("Parameter " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Attribute("Type").Value);
-                    string supportText = "";
 
+                    string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
                         supportText += itemVersion.Value + " ";
                     paramViewItem.SubItems.Add(supportText);
@@ -326,7 +326,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 ListViewItem viewItem = listView1.Items.Add("Return Value");
 
                 viewItem.SubItems.Add(valType);
-                string supportText = "";
+                string supportText = returnValueNode.Element("Entity").Element("SupportByLibrary").Attribute("Api").Value + " ";
                 foreach (XElement versionItem in returnValueNode.Element("Entity").Element("SupportByLibrary").Elements("Version"))
                     supportText += versionItem.Value + " ";
                 viewItem.SubItems.Add(supportText);
@@ -464,7 +464,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     listView1.Items.Add(element.Attribute("Name").Value);
                     listView1.Items[0].SubItems.Add(element.Attribute("Type").Value);
 
-                    string supportText = "";
+                    string supportText = element.Element("SupportByLibrary").Attribute("Api").Value + " ";
                     foreach (XElement item in element.Element("SupportByLibrary").Elements("Version"))
                         supportText += item.Value + " ";
 
